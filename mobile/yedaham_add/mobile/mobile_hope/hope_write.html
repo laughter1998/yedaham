@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>예다함에게 바랍니다.</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" href="../../css/mobile_join.css">
+
+</head>
+<body class="foot-space">
+    <div class="mainContent" >
+        <div class="content-exp hope">
+            <p class="content-title">예다함은<br /> <span>고객님의 말씀</span>에 귀를 기울입니다.</p>
+            <p class="mt-5 f350">예다함에 <span class="f400">문의 및 제안, 건의, 불편사항</span> 등이 있으시면 <br />아래에 내용을 남겨주시기 바랍니다.</p>
+        </div>
+
+        <section class="box mb-20 board-notice">
+            <span class="f400">이름과 연락처 정보</span>는 기존에 작성하신 글을 확인 시 필요한 정보입니다.  꼭 기억해 주시기 바랍니다.
+        </section>
+
+        <section class="box">
+            <div class="tit-area">
+                <h5></h5>
+                <p class="txt-require">필수입력 항목입니다.</p>
+            </div>
+            <div class="form-group">
+                <p class="form-title required" >상담유형</p>
+                <div class="select-box custom-select email-select " >
+                    <div class="options-container ">
+
+                        <div class="option">
+                            <input type="radio" class="radio" id="type1" name="counsel_type">
+                            <label for="type1">문의</label>
+                        </div>
+
+                        <div class="option">
+                            <input type="radio" class="radio" id="type2" name="counsel_type">
+                            <label for="type2">건의</label>
+                        </div>
+
+                        <div class="option">
+                            <input type="radio" class="radio" id="type3" name="counsel_type">
+                            <label for="type3">불편</label>
+                        </div>
+
+                        <div class="option">
+                            <input type="radio" class="radio" id="type4" name="counsel_type">
+                            <label for="type4">사업제안</label>
+                        </div>
+
+                    </div>
+
+                    <div class="selected">
+                        <input type="text" value="상담유형을 선택하세요.">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <p class="form-title " >이름</p>
+                <input type="text" name="t.person_name"  value="홍길동" disabled>
+            </div>
+            <div class="form-group">
+                <p class="form-title " >연락처</p>
+                <div class="form-inline flex-start">
+                    <div class="select-box custom-select mr-24" >
+                        <div class="options-container ">
+                            <div class="option ">
+                                <input type="radio" class="radio" id="phone1" name="phone_type">
+                                <label for="phone1">휴대전화</label>
+                            </div>
+
+                            <div class="option ">
+                                <input type="radio" class="radio" id="phone2" name="phone_type">
+                                <label for="phone2">자택전화</label>
+                            </div>
+
+                            <div class="option ">
+                                <input type="radio" class="radio" id="phone3" name="phone_type">
+                                <label for="phone3">직장전화</label>
+                            </div>
+                        </div>
+                        <div class="selected"><input type="text"  value="휴대전화" disabled></div>
+                    </div>
+                    <input type="text" name="t.phone1" value="01033339999" disabled>
+                </div>
+            </div>
+            <div class="form-group">
+                <p class="form-title required">이메일</p>
+                <div class="form-inline">
+                    <input type="text" name="" class="email01" value="" placeholder="">
+                    <div class="email-at"> @ </div>
+                    <input type="text" name="" class="email02" id="email02" value="" placeholder="">
+                </div>
+                <div class="select-box custom-select email-select mt-10" >
+                    <div class="options-container ">
+                        <div class="option" >
+                            <input type="radio" class="radio" id="r0" name="category">
+                            <label for="r0" >직접 입력</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" class="radio" id="r1" name="category">
+                            <label for="r1">hanmail.net</label>
+                        </div>
+
+                        <div class="option">
+                            <input type="radio" class="radio" id="r2" name="category">
+                            <label for="r2">naver.com</label>
+                        </div>
+
+                        <div class="option">
+                            <input type="radio" class="radio" id="r3" name="category">
+                            <label for="r3">google.com</label>
+                        </div>
+
+                        <div class="option">
+                            <input type="radio" class="radio" id="r4" name="category">
+                            <label for="r4">hotmail.com</label>
+                        </div>
+
+                        <div class="option">
+                            <input type="radio" class="radio" id="r5" name="category">
+                            <label for="r5">yahoo.co.kr</label>
+                        </div>
+
+                        <div class="option">
+                            <input type="radio" class="radio" id="r6" name="category">
+                            <label for="r6">lycos.co.kr</label>
+                        </div>
+                    </div>
+
+                    <div class="selected">
+                        <input type="text" value="선택">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <p class="form-title " >제목</p>
+                <input type="text" name="t.title"  >
+            </div>
+            <div class="form-group">
+                <p class="form-title " >내용</p>
+                <textarea name="t.content" class="mt-15"placeholder="여기에 바라는 점을 해 주세요." onKeyUp="javascript:fnChkByte(this,'3000')"  ></textarea>
+                <p class="text-right roboto mt-10"><span id="lengthValue" class="robotoB main-color">0</span> / 3,000 byte</p>
+            </div>
+        </section>
+
+
+        <div class="board-btns">
+            <button class="btn board-btn01" onclick="history.go(-1)">취소</button>
+            <button class="btn board-btn02" onclick="location.href='hope_list.html';">목록</button>
+            <button class="btn board-btn02" onclick="location.href='hope_list.html';">등록</button>
+            <!--button class="btn board-btn02" onclick="location.href='hope_list.html';">수정</button-->
+        </div>
+
+
+
+        <a href="javascript:openModalConfirm('변경된 정보를 저장하시겠습니까?');" style="border:1px solid red;">변경된 정보를 저장하시겠습니까?</a><br />
+        <a href="javascript:openModalConfirm('입력된 정보는 삭제됩니다.<br />취소하시겠습니까?');" style="border:1px solid red;">입력된 정보는 삭제됩니다. 취소하시겠습니까?</a><br />
+
+    </div><!--  class="mainContent" -->
+
+    <footer id="footer">
+        <div class="sns">
+            <a href="https://www.facebook.com/yedaham.co.kr" target="_blank"><img src="../../images/mobile_join/icon_facebook.png"  alt="페이스북"></a>
+            <a href="https://www.youtube.com/channel/UCIc7RDIHPg6p8y9Ycxundaw/ " target="_blank"><img src="../../images/mobile_join/icon_youtube.png"  alt="유튜브"></a>
+            <a href="javascript:alert('카카오톡');" target="_blank"><img src="../../images/mobile_join/icon_kakao_grey.png"  alt="카카오톡"></a>
+        </div>
+        <div class="utList">
+            <a href="https://www.yedaham.co.kr/customer/agreement/agreement.do" target="_blank">이용약관 </a>
+            <a href="https://www.yedaham.co.kr/customer/agreement/pps.do" target="_blank">개인정보처리방침</a><br />
+            <a href="https://www.yedaham.co.kr/customer/agreement_vod/pps_vod.do " target="_blank">영상정보처리기기 운영관리지침</a>
+            <a href="https://www.yedaham.co.kr/customer/agreement/important.do " target="_blank">중요정보고시사항</a>
+        </div>
+
+        <div class="telList ">
+            <div>
+                대표전화<a href="tel:1566-6644">1566-6644</a>
+            </div>
+            <div>
+                장례접수(상황센터)<a href="tel:1566-0119">1566-0119</a>
+            </div>
+        </div>
+        <div class="yedaham-addr ">
+            서울특별시 마포구 마포대로86, 14층(도화동, 창강빌딩)<br />The-K예다함상조㈜ 대표이사 홍승표
+        </div>
+        <ul class="yedaham-number ">
+            <li>사업자등록번호 101-86-49300</li>
+            <li>통신판매업 신고번호 제2014-서울마포-0712호</li>
+            <li>전화권유판매업 신고번호 제2014-서울마포-0012호</li>
+        </ul>
+
+        <div class="brochure">
+            <div ><a href="https://www.yedaham.co.kr/main.do" target="_blank">BRAND SITE</a></div>
+            <div><a href="../../download/200319_yedaham_brochure.pdf">2020 BROCHURE</a></div>
+        </div>
+
+
+        <div class="selectLink-wrap">
+			<a href="javascript:void(0);" onclick="familySite();">We are The-K group</a>
+            <ul>
+                <li><a href="https://www.ktcu.or.kr/"target="_blank" >The-K한국교직원공제회</a></li>
+                <li><a href="http://www.thek-hotel.co.kr/main_sh.asp?" target="_blank" >The-K호텔서울</a></li>
+                <li><a href="http://www.ramadajeju.co.kr/" target="_blank" >라마다 프라자 제주호텔</a></li>
+                <li><a href="http://thek-hotel.co.kr/gyeongju/main_sh.asp?" target="_blank" >The-K호텔경주</a></li>
+                <li><a href="http://thek-hotel.co.kr/jirisan/main_sh.asp?" target="_blank" >The-K지리산가족호텔</a></li>
+                <li><a href="http://thek-hotel.co.kr/seoraksan/main_sh.asp?" target="_blank" >The-K설악산가족호텔</a></li>
+                <li><a href="https://www.thekbank.co.kr/main/main.do" target="_blank" >The-K저축은행</a></li>
+                <li><a href="https://www.sophiagreen.co.kr/index.asp" target="_blank" >The-K소피아그린</a></li>
+                <li><a href="https://www.third-age.co.kr/" target="_blank" >The-K서드에이지</a></li>
+                <li><a href="http://www.thekmall.co.kr/" target="_blank" >The-K교직원나라</a></li>
+            </ul>
+		</div>
+        <div class="copyright ">Copyright© The-K Yedaham Co. Ltd <br />ALL Right Reserved</div>
+        <button id="top-btn" onclick="backToTop()"><img src="../../images/mobile_join/btn_scroll_top.png"  alt=""></button>
+    </footer>
+
+
+    <div class="modal-alert" id="modalAlert">
+        <div class="modal-content" >내용</div>
+        <button  class="btn-alert" onclick="closeModalAlert();" >확인</button>
+    </div><!-- class="modal" -->
+
+    <div class="modal-alert" id="modalConfirm">
+        <div class="modal-content" >내용</div>
+        <p class="flex">
+            <button  class="btn-cancel" onclick="closeModalConfirm();" >취소</button>
+            <button  class="btn-alert" onclick="closeModalConfirm();" >확인</button>
+        </p>
+    </div><!-- class="modal" -->
+     <div id="overlay"></div>
+
+
+
+    <script type="text/javascript" src="../../js/mobile_join_script.js"></script>
+
+
+</body>
+</html>

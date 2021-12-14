@@ -1,0 +1,31 @@
+/* 로그인 */
+
+.login_wrap {position:relative;width:524px;margin:0 auto;margin-top:75px;}
+.login_wrap button.btn_login {position:absolute;right:0;top:5px;}
+
+p.login_txt_info {margin:75px 0 0 0;color:#aaaaaa;font-size:11px;line-height:18px;text-align:center;}
+
+
+/* */
+p.search_com {padding:20px 0 80px 0;color:#494233;font-size:14px;text-align:center;font-weight:bold;line-height:24px;}
+p.search_com span{color:#c87c1e;}
+
+/* 회원가입페이지 약관 */
+.login_pps_area {height:200px;overflow:auto;padding:10px;background:#fdfbf8;border:1px solid #dedbd8;color:#444444;line-height:20px;}
+.login_pps_area h5 {font-size:16px;font-weight:bold;}
+.login_pps_area strong {font-weight:bold;}
+
+.login_pps_area2 {padding:10px;background:#fdfbf8;border:1px solid #dedbd8;color:#444444;line-height:20px;}
+
+
+.join_process {overflow:hidden;padding:30px 0 23px 0;border-bottom:2px solid #c87c1e;}
+
+.join_txt_etc {padding:25px 0;color:#c87c1e;}
+
+
+.complete_wrap {margin-top:75px;text-align:center;}
+.complete_wrap p.complete_txt {padding:20px 0 80px 0;color:#494233;font-size:14px;text-align:center;font-weight:bold;line-height:24px;}
+.complete_wrap p.complete_txt span {color:#c87c1e;}
+
+
+/* */

@@ -1,0 +1,4 @@
+mobile_join_script.js
+
+셀렉트박스  소스
+181~220번째줄입니다.

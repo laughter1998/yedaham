@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+
+.content-exp.booking {
+    height: 175px;
+}
+
+.grid-container-map {
+    margin-left:-12px;
+    margin-right:-12px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-row-gap: 12px;
+    grid-column-gap: 6px;
+}

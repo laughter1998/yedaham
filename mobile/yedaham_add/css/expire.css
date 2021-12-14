@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+body.foot-space footer#footer {
+    padding-bottom: 92px !important;
+}
+
+body.foot-space #top-btn {
+    bottom: 80px;
+}
+
+div.expire-wrap .event-vis {
+    position: fixed;
+    left:0;
+    top: 0px;
+    width: 100%;
+}
+.expire-wrap .move-content {
+    margin-top: calc(100vh - 300px);
+    margin-bottom: -40px;
+    padding-bottom: 40px;
+}
+
+.move-content {
+    position: relative;
+    background: #fafafa;
+	 border-top-left-radius: 18px;
+    border-top-right-radius: 18px
+}
+
+.expire-wrap article.benefit-exp {
+    position: relative;
+    padding: 20px;
+    border-radius: 18px;
+    background: #fcf8f8;
+    border:1px solid #f9eaea;
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    font-weight: 400;
+    color:#a06551;
+}
+section.box {
+    background-color: #fff;
+}
+section.box.box-title {
+    padding: 30px 24px 50px 24px;
+    border: 1px solid #a06551;
+    border-radius: 18px;
+    border-bottom-left-radius : 0px !important;
+    border-bottom-right-radius : 0px !important;
+    box-shadow: none !important;
+    background-color:#a06551;
+    color:#fff;
+}
+
+section.box.box-title + section.box {
+    position: relative;
+    background-color: #ffffff;
+    margin-top:-20px;
+}
+
+#expire footer#footer {
+    position:relative;
+}

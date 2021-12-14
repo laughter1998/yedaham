@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+
+.content-exp.inquiry3 {
+    height: 250px;
+
+
+}
+
+/* ==========  구성안내  ========== */
+article.item {
+    margin-bottom: 15px;
+    padding: 30px 24px;
+    border:1px solid #f2f2f2;
+    border-radius: 18px;
+    box-shadow: 0 5px 5px rgba(242, 242, 242, 0.5);
+    color:#a06551;
+}
+article.item .item-tit{
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom:5px;
+
+}
+article.item .item-cotent{
+    font-size: 1.4rem;
+    font-weight: 350;
+}
+/* ========== 2. 구성안내  ========== */

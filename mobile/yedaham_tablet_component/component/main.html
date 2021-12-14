@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>예다함</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+<body >
+    <style>
+    table.basic {
+
+    }
+    table.basic  tr.line >  td{
+        border:1px solid #000;
+        padding:10px;
+    }
+    </style>
+    <table class="basic">
+        <tr class="line">
+            <td colspan="2">
+                이미지 폴더 :  /images/common/
+                폰트 : /font/ 폴더의 NotoSansKR 사용하시거나 아래의 url 적용하셔도 됩니다. <br />
+                Noto Sans : https://fonts.google.com/specimen/Noto+Sans+KR?query=noto+sans <br />
+            </td>
+
+        </tr>
+        <tr class="line">
+            <td>기본</td>
+            <td>
+                <pre>
+                    font-family: 'NotoSansKR', sans-serif;
+                    font-size:18px;
+                    color:#333;
+                    border-radius: 20px;
+                </pre>
+            </td>
+        </tr>
+        <tr class="line">
+            <td><section class="main-summary" style="width:200px;">
+                <ul>
+                    <li>
+                        <h5>의전번호 (증서번호)</h5>
+                        <span>2020001234</span>
+                    </li>
+
+                </ul>
+            </section></td>
+            <td>
+                <pre>
+                    section.main-summary {
+                        background: #a06551;
+                    }
+                    section.main-summary ul li h5 {
+                        color: #c6a89f;
+                        font-size: 14px;
+                        font-weight: 350;
+                    }
+                    section.main-summary ul li span {
+                        color: #fff;
+                        font-size: 20px;
+                        line-height: 54px;
+                        border-bottom: 1px solid #a77260;
+                    }
+                </pre>
+            </td>
+        </tr>
+        <tr class="line">
+            <td><h3>의전진행관리</h3></td>
+            <td>
+                <pre>
+                    h3 {
+                        font-size: 22px;
+                        font-weight: 700;
+                    }
+                </pre>
+            </td>
+        </tr>
+        <tr class="line">
+            <td><ul class="main-info-list ">
+                <li><a href="#"><img src="../images/common/icon_info01.png" alt="상품정보"><span>상품정보</span></a></li>
+                <!--li><a href="../info/info_customer.html"><img src="../images/common/icon_info02.png" alt="고객정보"><span>고객정보</span></a></li>
+                <li><a href="../info/info_corporation.html"><img src="../images/common/icon_info03.png" alt="법인정보"><span>법인정보</span></a></li>
+                <li><a href="../info/info_contract.html"><img src="../images/common/icon_info04.png" alt="계약상세정보"><span>계약상세정보</span></a></li>
+                <li><a href="../info/info_payment.html"><img src="../images/common/icon_info05.png" alt="납입정보"><span>납입정보</span></a></li>
+                <li><a href="../info/info_ceremony.html"><img src="../images/common/icon_info06.png" alt="의전정보"><span>의전정보</span></a></li-->
+            </ul></td>
+            <td>
+                <pre>
+                    ul.main-info-list li {
+                        border: 1px solid #f2f2f2;
+                        box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.05);
+                        border-radius: 20px;
+                    }
+                    ul.main-info-list li span {
+                        font-size: 20px;
+                        font-weight: 350;
+                    }
+                </pre>
+            </td>
+        </tr>
+        <tr class="line">
+            <td>
+                <table class="normal-table">
+                    <colgroup>
+                        <col style="width:100px;"><col style="width:100px;">
+                    </colgroup>
+                    <tr>
+                        <th>계약자</th>
+                        <td>홍길동</td>
+                    </tr>
+
+                </table>
+            </td>
+            <td>
+                <pre>
+                    table.normal-table th {
+                        color: #a06551;
+                        background: #fcf8f8;
+                        border: 1px solid #f9eaea;
+                    }
+                    table.normal-table td {
+                        background: #fff;
+                        font-weight: 350;
+                        border: 1px solid #f9eaea;
+                    }
+                </pre>
+            </td>
+        </tr>
+        <tr class="line">
+            <td><button class="btn btn-white" >이전화면</button><button class="btn btn-white" >취소</button></td>
+            <td>
+                <pre>
+                    button.btn.btn-white {
+                        background: #fff;
+                        border: 1px solid #f2f2f2;
+                        font-weight: 350;
+                        color: #666666;
+                        font-size: 22px;
+                    }
+                </pre>
+            </td>
+        </tr>
+        <tr class="line">
+            <td><button class="btn btn-brown" >저장</button></td>
+            <td>
+                <pre>
+                    button.btn.btn-white {
+                        background: #a06551;
+                        border: none;
+                        font-weight: 700;
+                        color:#fff;
+                        font-size: 22px;
+                    }
+                </pre>
+            </td>
+        </tr>
+        <tr class="line">
+            <td><button class="btn btn-white" >이전화면</button></td>
+            <td>
+                <pre>
+                    button.btn.btn-white {
+                        background: #fff;
+                        border: 1px solid #f2f2f2;
+                        font-weight: 350;
+                        color: #666666;
+                        font-size: 22px;
+                    }
+                </pre>
+            </td>
+        </tr>
+        <tr class="line">
+            <td><button class="btn-small">모두 펼침</button></td>
+            <td>
+                <pre>
+                     button.btn-small {
+                        background: #fff;
+                        border: 1px solid #f2f2f2;
+                        font-weight: 350;
+                        color: #666;
+                        font-size: 18px;
+                    }
+                </pre>
+            </td>
+        </tr>
+        <tr class="line">
+            <td>
+                <section class="box mt-20 show">
+                <h4 class="main-color btn-dropdown">가입상품</h4>
+                <div class="table-wrap">
+                    <table class="scope-down-table mt-25 mb-15">
+                    <colgroup>
+                        <col style="width:auto;"><col style="width:auto;">
+                    </colgroup>
+                    <tbody><tr>
+                        <th>No.</th>
+                    <th>상품</th>
+
+                    </tr>
+                    <tr>
+                        <td>2 </td>
+                        <td>자율선택법인 </td>
+                    </tr>
+                    <tr>
+                        <td>2 </td>
+                        <td><span class="highlight">연체</span> </td>
+                    </tr>
+                </tbody></table>
+                </div>
+                </section>
+            </td>
+            <td>
+                <pre>
+                    section.box {
+                        border: 1px solid #f9eaea;
+                        border-radius: 20px;
+                        box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.02);
+                    }
+                    h4 {
+                        color:##a06551;
+                        font-size: 20px;
+                        font-weight: 700;
+                    }
+                    table.scope-down-table th {
+                        color: #a06551;
+                        background: #fcf8f8;
+                        border:1px solid #f9eaea;
+                    }
+                    table.scope-down-table td {
+                        font-weight: 350;
+                        border-bottom: 1px solid #f9eaea;
+                    }
+                    .highlight {
+                        font-weight: 700;
+                    }
+                    <img src="../images/common/bg_highlight.png" alt=""> bg_highlight.png
+                    <img src="../images/common/btn_arrow.png" alt=""> btn_arrow.png
+                </pre>
+            </td>
+        </tr>
+        <tr class="line">
+            <td><button class="btn btn-more">더보기 <p><span>1</span>/90</p></button></td>
+            <td>
+                <pre>
+                    .btn-more {
+                        background-color: #fafafa;
+                        color: #333333;
+                        font-weight: 350;
+                        font-size: 18px;
+                        border: none;
+                    }
+                    .btn-more p {
+                        font-weight: 400;
+                    }
+                    .btn-more p span {
+                        font-weight: 700;
+                    }
+                    <img src="../images/common/btn_arrow_black.png" alt=""> btn_arrow_black.png
+                </pre>
+            </td>
+        </tr>
+        <tr class="line">
+            <td><img src="../images/sample/input_search.png"  alt=""></td>
+            <td>
+                <pre>
+                    color:#d0d0d0;
+                    font-weight:350;
+                    <img src="../images/common/icon_search.png" alt=""> icon_search.png
+                </pre>
+            </td>
+        </tr>
+        <tr class="line">
+            <td><button class="btn-gradient">의전시작문자발송</button></td>
+            <td>
+                <pre>
+                    button.btn-gradient {
+                        padding:0 20px;
+                        height: 48px;
+                        border-radius: 24px;
+                        color: #fff;
+                        letter-spacing: -1px;
+                        font-weight: 700;
+                        font-size: 18px;
+                        background-image: linear-gradient(to right, #f9cb22,#c87c1e);
+                    }
+                </pre>
+            </td>
+        </tr>
+        <tr class="line">
+            <td>
+                <span class="bar active"></span>
+                <span class="bar "></span>
+            </td>
+            <td>
+                <pre>
+                    span.bar {
+                        display:inline-block;
+                        width: 18px;
+                        height: 4px;
+                        border-radius: 2px;
+                        background-color: #e0e0e0;
+                    }
+                    span.bar.active {
+
+                        background-image: linear-gradient(to right, #f9cb22,#c87c1e);
+                    }
+                </pre>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    
+
+</body>
+</html>

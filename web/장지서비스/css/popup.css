@@ -1,0 +1,111 @@
+@charset "utf-8";
+body.popup_body {background:#ffffff;}
+#popup_wrapper {background:#f7f4f1;width:540px;height:600px;}
+#popup_wrapper_email {background:#ffffff;width:540px;height:338px;}
+.pop_etc_txt {margin:9px 0 0 0;color:#494233;}
+.popup_title {height:62px;background:#c87c1e;overflow:hidden;}
+.popup_title img.popup_tit {float:left;margin:20px 0 0 30px;}
+.popup_title img.popup_tit2 {float:left;margin:20px 0 0 20px;}
+.popup_title h3 {float:right;margin:18px 27px 0 0;}
+
+/* 팝업 내용 box*/
+.popup_p10 {padding:0 10px;}
+.pop_box {padding:15px 20px;background:#ffffff;border:1px solid #dedbd8;color:#412900;overflow:auto;}
+.pop_box p.title {font-weight:bold;font-size:14px;}
+.pop_box p.con {line-height:20px;color:#111111;}
+
+.pop_terms {height:436px;overflow:auto;margin:10px;padding:15px 5px; 15px 20px;border:1px solid #dedbd8;color:#111111;background:#ffffff;line-height:20px;font-size:12px;}
+.pop_terms p {font-weight:bold;}
+.pop_terms p.title {font-size:14px;}
+
+.pop_terms02 {height:70px;overflow:auto;padding:15px 0px 15px 20px;border:1px solid #dedbd8;color:#111111;background:#ffffff;line-height:20px;font-size:12px;}
+.pop_terms02 p {padding:0 10px 0 0;}
+.pop_terms02 p.title {font-size:12px;font-weight:bold;}
+
+.all_chk_wrap {padding:5px 10px 4px 10px;width:80px;border:1px solid #c1bdb6;}
+.all_chk_wrap span.agr_txt {font-weight:normal;} 
+.agree_title03 {line-height:22px;}
+.agree_title04 {line-height:20px;}
+
+.pop_table_wrap {padding:10px;width:520px;height:576px;overflow:auto;}
+table.info_table04 {width:100%;}
+table.info_table04 tr th, table.info_table04 tr td {border:1px solid #dfdcd9;}
+table.info_table04 tr th{font-weight:bold;height:36px;line-height:14px;background-color:#fbf6ef;color:#494233;padding:0 0 0 10px;font-size:14px;}
+table.info_table04 tr td{line-height:16px;padding:10px 0 10px 10px;background:#ffffff;color:#494233;}
+
+
+table.terms_table {margin:5px 0;border:1px solid #ffffff;border-bottom:1px solid #aca9a6;width:100%;}
+table.terms_table tr th {background-color:#aca9a6;color:#ffffff;font-size:12px;font-weight:bold;padding:4px 0;border:1px solid #ffffff;text-align:center;}
+table.terms_table tr td {padding:4px 5px;border:1px solid #aca9a6;font-size:11px;line-height:14px;}
+
+/* 우편번호 찾기*/
+
+.popup_p10 ul.zip_tap {overflow:hidden;}
+.popup_p10 ul.zip_tap li {float:left;width:50%;font-size:16px;text-align:center;}
+.popup_p10 ul.zip_tap li a {display:block;padding:10px 0;color:#865d15;border-bottom:2px solid #d7c5a6;}
+.popup_p10 ul.zip_tap li.current a {color:#865d15;border-bottom:2px solid #9b6c1b}
+.popup_p10 .addr01 {height:354px;}
+.popup_p10 .addr02 {height:235px;}
+.popup_p10 .addr_wrap {overflow:auto;border:1px solid #dedbd8;background:#ffffff;}
+.popup_p10 .addr_wrap ul.addr_list {}
+.popup_p10 .addr_wrap ul.addr_list li{position:relative;padding:5px 10px;border-top:1px solid #dedbd8;}
+.popup_p10 .addr_wrap ul.addr_list li:first-child {border-top:none;}
+.popup_p10 .addr_wrap ul.addr_list li span.zip_num {position:absolute;right:10px;top:5px;}
+
+
+.popup_p10 table.zip_table {width:435px;}
+.popup_p10 table.zip_table tr {}
+.popup_p10 table.zip_table tr th {padding:0 0 0 8px;font-size:14px;color:#494233;font-weight:bold;letter-spacing:-0.06em;}
+.popup_p10 table.zip_table tr td {padding:3px 0;}
+.popup_p10 table.zip_table tr td input,table.input_table tr td select {margin:2px 0;}
+span.zip_btn_hide {display:inline-block;width:168px;height:40px;line-height:38px;
+background:#c87c1e;text-align:center;color:#ffffff;vertical-align:middle;font-weight:bold;
+filter:alpha(opacity=50); opacity: 0.5; -moz-opacity:0.5;}
+
+/* 회원 탈퇴*/
+.withdraw_reason {padding:20px 0 20px 20px;border:1px solid #dedbd8;background:#ffffff;}
+.withdraw_reason ul {overflow:hidden;}
+.withdraw_reason ul li {float:left;padding:2px 0;}
+.withdraw_reason ul li.first {width:160px;}
+.withdraw_reason ul li.center {width:200px;}
+
+.widthdraw_member_confirm {padding:10px 0 10px 20px;border:1px solid #dedbd8;background:#ffffff;}
+
+
+/* 부가서비스 신청 주소록*/
+.addr_group {padding:17px 0;border:1px solid #dedbd8;background:#ffffff;}
+.addr_group ul {overflow:hidden;font-size:14px;}
+.addr_group ul li {float:left;padding:0 20px;border-left:1px solid #dedbd8;text-align:center;}
+.addr_group ul li:first-child{border:none;}
+.addr_group ul li.current a{color:#c87c1e;font-weight:bold;}
+.addr_group ul li a {color:#494233;}
+.addr_group ul li a span.num {color:#c87c1e;font-weight:bold;}
+
+
+.pop_addr_con {padding:17px 20px;border:1px solid #dedbd8;background:#ffffff;}
+.pop_addr_con2 {padding:8px 20px 10px 20px;border:1px solid #dedbd8;background:#ffffff;}
+.pop_addr_con3 {padding:0;background:#ffffff;}
+/* 주소록 일괄등록 */
+ul.info_all_write {}
+ul.info_all_write li {line-height:22px;}
+ul.info_all_write li span{font-weight:bold;}
+
+
+p.pop_etc01 {color:#c87c1e;font-size:14px;font-weight:bold;}
+p.pop_etc01 span {font-weight:normal;}
+
+.counsel_agree_pop {font-size:12px;color:#494233;line-height:16px;}
+.counsel_agree_pop span.tbold {font-weight:bold;}
+
+
+table.input_table0518 {width:100%;}
+table.input_table0518  tr th,table.input_table0518  tr td{border:1px solid #dedbd8;}
+table.input_table0518  tr th{padding:0 0 0 13px;color:#494233;font-size:14px;font-weight:bold;background:#f8f3ec;min-height:50px;}
+table.input_table0518  tr td {padding:5px;height:40px;}
+table.input_table0518  tr th span {font-size:11px;font-weight:normal;display:block;}
+table.input_table0518  tr td textarea {margin:0;padding:15px;height:90px;border:1px solid #dedbd8;}
+table.input_table0518  tr td.join_pic {text-align:center;color:#494233;font-size:14px;font-weight:bold;}
+table.input_table0518  tr td .pic_exp {color:#c87c1e;font-size:11px;line-height:18px;}
+table.input_table0518  tr .tl {border-left:none;}
+table.input_table0518  tr .tr {border-right:none;}
+

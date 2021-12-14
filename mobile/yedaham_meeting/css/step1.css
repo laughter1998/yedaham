@@ -1,0 +1,117 @@
+@charset "UTF-8";
+
+
+.content-exp.stpe1 {
+    height: 175px;
+}
+
+
+
+/* 약관동의 체크박스*/
+.agree-chk-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+.unit-check {
+
+}
+
+.agree-chk-wrap a {
+    position: relative;
+    padding-right:14px;
+    color:#a06551;
+}
+.agree-chk-wrap a:after {
+    display:block;
+    content:'';
+    position: absolute;
+    right:0;
+    top:5px;
+    width:6px;
+    height:6px;
+    border-style: solid;
+    border-color: #a06551;
+    border-width: 2px 2px 0 0;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg) ;
+}
+.unit-check input[type="checkbox"]{
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.unit-check label {
+    display:block;
+	font-weight: 350;
+	font-size: 1.4rem;
+    line-height: 2.2rem;
+}
+
+
+
+.unit-check input[type="checkbox"] + label {
+    position: relative;
+    cursor:pointer;
+    padding-left: 35px;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.unit-check input[type="checkbox"] +  label:before{
+    box-sizing: border-box;
+    content: '';
+    color: #a06551;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    margin-top: 0px;
+    border: 1px solid #f9eaea;
+    text-align: center;
+    border-radius: 12px;
+}
+.unit-check input[type="checkbox"] + label:after {
+    box-sizing: border-box;
+    content: '';
+    position: absolute;
+    background-color: #a06551;
+    top: 7px;
+    left: 7px;
+    width: 10px;
+    height: 6px;
+    border-style: solid;
+    border-color: #ffffff;
+    border-width: 0 0 2px 2px;
+    -webkit-border-image: none;
+    -o-border-image: none;
+    border-image: none;
+    -webkit-transform: rotate(-45deg) scale(0);
+    transform: rotate(-45deg) scale(0);
+    -webkit-transition: none;
+    transition: none;
+}
+
+.unit-check input[type="checkbox"]:checked +  label:after {
+    content: '';
+    -webkit-transform: rotate(-45deg) scale(1);
+    transform: rotate(-45deg) scale(1);
+    -webkit-transition: -webkit-transform 200ms ease-out;
+    transition: -webkit-transform 200ms ease-out;
+    transition: transform 200ms ease-out;
+    transition: transform 200ms ease-out, -webkit-transform 200ms ease-out;
+}
+
+.unit-check input[type="checkbox"]:checked +  label:before{
+    -webkit-animation: borderscale 300ms ease-in;
+    animation: borderscale 300ms ease-in;
+    background-color: #a06551;
+}
