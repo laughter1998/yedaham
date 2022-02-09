@@ -1,0 +1,4631 @@
+@charset "utf-8";
+@import "cyber_center.css";
+@import "customer.css";
+@import "login_center.css";
+@import "supplementary_service.css";
+@import "about.css";
+@import "product.css";
+@import "information.css";
+@import "popup.css";
+
+@font-face {
+	font-family: ngwoff;
+	src: url("/font/NanumGothic.woff");
+}
+
+@font-face {
+	font-family: ngeot;
+	src: url("/font/NanumGothic.eot");
+}
+
+/* reset */
+html,
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+a {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+}
+
+img {
+	vertical-align: top;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin: 0;
+	padding: 0;
+}
+
+fieldset,
+img {
+	border: 0;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+	font-style: normal;
+	font-weight: normal;
+}
+
+ul,
+li {
+	list-style: none;
+}
+
+caption,
+th {
+	text-align: left;
+}
+
+caption {
+	visibility: hidden;
+	width: 0px;
+	height: 0px;
+	line-height: 0;
+	overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: normal;
+}
+
+abbr,
+acronym {
+	border: 0;
+}
+
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary {
+	display: block;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: "";
+	content: none;
+}
+
+/* Fontss */
+
+body {
+	font-size: 12px;
+	color: #494233;
+	background: #fff;
+	font-family: "나눔고딕", "NanumGothic", ngwoff, ngeot, sans-serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover,
+a:active,
+a:focus {
+	text-decoration: none;
+}
+
+button {
+	cursor: pointer;
+	padding: 0;
+}
+
+/* placholder */
+input[placeholder],
+[placeholder],
+*[placeholder] {
+	color: #aaaaaa !important;
+}
+
+::-webkit-input-placeholder {
+	color: #aaaaaa !important;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="file"],
+input[type="number"],
+textarea,
+button {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	font: 12px;
+}
+
+input[type="file"] {
+	background: none;
+}
+
+/* gnb*/
+#gnb {
+	width: 180px;
+	height: 100%;
+	float: left;
+	background: #fbf8f6;
+	/*background: rgba( 255, 255, 255, 0.8 );*/
+
+	z-index: 101;
+}
+
+h1.logo {
+	padding: 18px 0 0 20px;
+}
+
+ul.dep01_wrap {
+	margin: 25px 0 0 0;
+}
+
+ul.dep01_wrap li.dep01 {
+	height: 39px;
+}
+
+ul.dep01_wrap li.dep01 a.dep01_a {
+	display: block;
+	height: 34px;
+	text-indent: -9999px;
+}
+
+ul.dep01_wrap li.dep01_navi01 a.dep01_navi01_a {
+	background: url("https://www.yedaham.co.kr/images/common/navi01.png") no-repeat 20px center;
+}
+
+ul.dep01_wrap li.dep01_navi01 a.dep01_navi01_a.current,
+ul.dep01_wrap li.dep01_navi01:hover a.dep01_navi01_a {
+	background: url("https://www.yedaham.co.kr/images/common/navi01_on.png") no-repeat 20px center;
+}
+
+ul.dep01_wrap li.dep01_navi02 a.dep01_navi02_a {
+	background: url("https://www.yedaham.co.kr/images/common/navi02.png") no-repeat 20px center;
+}
+
+ul.dep01_wrap li.dep01_navi02 a.dep01_navi02_a.current,
+ul.dep01_wrap li.dep01_navi02:hover a.dep01_navi02_a {
+	background: url("https://www.yedaham.co.kr/images/common/navi02_on.png") no-repeat 20px center;
+}
+
+ul.dep01_wrap li.dep01_navi03 a.dep01_navi03_a {
+	background: url("https://www.yedaham.co.kr/images/common/navi03.png") no-repeat 20px center;
+}
+
+ul.dep01_wrap li.dep01_navi03 a.dep01_navi03_a.current,
+ul.dep01_wrap li.dep01_navi03:hover a.dep01_navi03_a {
+	background: url("https://www.yedaham.co.kr/images/common/navi03_on.png") no-repeat 20px center;
+}
+
+ul.dep01_wrap li.dep01_navi04 a.dep01_navi04_a {
+	background: url("https://www.yedaham.co.kr/images/common/navi04.png") no-repeat 20px center;
+}
+
+ul.dep01_wrap li.dep01_navi04 a.dep01_navi04_a.current,
+ul.dep01_wrap li.dep01_navi04:hover a.dep01_navi04_a {
+	background: url("https://www.yedaham.co.kr/images/common/navi04_on.png") no-repeat 20px center;
+}
+
+ul.dep01_wrap li.dep01_navi05 a.dep01_navi05_a {
+	background: url("https://www.yedaham.co.kr/images/common/navi05.png") no-repeat 20px center;
+}
+
+ul.dep01_wrap li.dep01_navi05 a.dep01_navi05_a.current,
+ul.dep01_wrap li.dep01_navi05:hover a.dep01_navi05_a {
+	background: url("https://www.yedaham.co.kr/images/common/navi05_on.png") no-repeat 20px center;
+}
+
+ul.dep01_wrap li.dep01_navi06 a.dep01_navi06_a {
+	background: url("https://www.yedaham.co.kr/images/common/navi06.png") no-repeat 20px center;
+}
+
+ul.dep01_wrap li.dep01_navi06 a.dep01_navi06_a.current,
+ul.dep01_wrap li.dep01_navi06:hover a.dep01_navi06_a {
+	background: url("https://www.yedaham.co.kr/images/common/navi06_on.png") no-repeat 20px center;
+}
+
+ul.dep01_wrap li.dep01_navi08 a.dep01_navi08_a {
+	background: url("https://www.yedaham.co.kr/images/common/navi08.png") no-repeat 20px center;
+}
+
+ul.dep01_wrap li.dep01_navi08 a.dep01_navi08_a.current,
+ul.dep01_wrap li.dep01_navi08:hover a.dep01_navi08_a {
+	background: url("https://www.yedaham.co.kr/images/common/navi08_on.png") no-repeat 20px center;
+}
+
+ul.dep01_wrap li.dep01_navi09 a.dep01_navi09_a {
+	background: url("https://www.yedaham.co.kr/images/common/navi09.png") no-repeat 20px center;
+}
+
+ul.dep01_wrap li.dep01_navi09 a.dep01_navi09_a.current,
+ul.dep01_wrap li.dep01_navi09:hover a.dep01_navi09_a {
+	background: url("https://www.yedaham.co.kr/images/common/navi09_on.png") no-repeat 20px center;
+}
+
+ul.dep01_wrap li#sub_step_0411 {
+	padding: 5px 0;
+}
+
+ul.dep01_wrap li#sub_step_0411 a {
+	line-height: 16px;
+}
+
+ul.dep01_wrap li.dep01_navi01 a.dep01_navi01_a:focus {
+	background: url("https://www.yedaham.co.kr/images/common/navi01_on.png") no-repeat 20px center;
+}
+
+ul.dep01_wrap li.dep01_navi02 a.dep01_navi02_a:focus {
+	background: url("https://www.yedaham.co.kr/images/common/navi02_on.png") no-repeat 20px center;
+}
+
+ul.dep01_wrap li.dep01_navi03 a.dep01_navi03_a:focus {
+	background: url("https://www.yedaham.co.kr/images/common/navi03_on.png") no-repeat 20px center;
+}
+
+ul.dep01_wrap li.dep01_navi04 a.dep01_navi04_a:focus {
+	background: url("https://www.yedaham.co.kr/images/common/navi04_on.png") no-repeat 20px center;
+}
+
+ul.dep01_wrap li.dep01_navi05 a.dep01_navi05_a:focus {
+	background: url("https://www.yedaham.co.kr/images/common/navi05_on.png") no-repeat 20px center;
+}
+
+ul.dep01_wrap li.dep01_navi06 a.dep01_navi06_a:focus {
+	background: url("https://www.yedaham.co.kr/images/common/navi06_on.png") no-repeat 20px center;
+}
+
+ul.dep01_wrap li.dep01_navi08 a.dep01_navi08_a:focus {
+	background: url("https://www.yedaham.co.kr/images/common/navi08_on.png") no-repeat 20px center;
+}
+
+span.sub_tit {
+	display: block;
+	width: 80px;
+	height: 100%;
+}
+
+.submn_depth2 {
+	width: 0px;
+	height: 100%;
+	position: fixed;
+	left: 180px;
+	top: 0;
+	background: #90723e;
+	/*background: rgba( 144, 114, 62, 0.9 );*/
+	filter: alpha(opacity=90);
+	-moz-opacity: 0.9;
+	-khtml-opacity: 0.9;
+	opacity: 0.9;
+	z-index: 10001;
+}
+
+.submn_depth2 p.navi_title {
+	padding: 20px 0 30px 20px;
+}
+
+.submn_depth2 ul {
+	padding: 0 0 0 20px;
+	width: 160px;
+}
+
+.submn_depth2 ul li a {
+	color: #e8dfd4;
+	font-size: 14px;
+	line-height: 32px;
+	font-weight: bold;
+}
+
+.submn_depth2 ul li.current a {
+	color: #ffffff;
+}
+
+.submn_depth2 ul li a:hover,
+.submn_depth2 ul li a:focus {
+	color: #ffffff;
+}
+
+.submn_depth2 .submn_depth_con {
+	display: none;
+}
+
+.floating_menu {
+	margin: 0px 0 0 0;
+}
+
+.floating_menu .quick_navi {
+	padding: 0 0 0 20px;
+}
+
+.floating_menu .quick_navi ul li {
+	height: 30px;
+}
+
+.floating_menu .quick_navi ul li a {
+	display: block;
+	height: 22px;
+	text-indent: -9999px;
+}
+
+.floating_menu .quick_navi ul li.qnavi01 a {
+	background: url("https://www.yedaham.co.kr/images/common/navi_counsel.png") no-repeat left center;
+}
+
+.floating_menu .quick_navi ul li.qnavi02 a {
+	background: url("https://www.yedaham.co.kr/images/common/navi_inquiry.png") no-repeat left center;
+}
+
+.floating_menu .quick_navi ul li.qnavi03 a {
+	background: url("https://www.yedaham.co.kr/images/common/navi_faq.png") no-repeat left center;
+}
+
+.floating_menu .quick_navi ul li.qnavi01 a.current {
+	background: url("https://www.yedaham.co.kr/images/common/navi_counsel.png") no-repeat left center;
+}
+
+.floating_menu .quick_navi ul li.qnavi02 a.current {
+	background: url("https://www.yedaham.co.kr/images/common/navi_inquiry.png") no-repeat left center;
+}
+
+.floating_menu .quick_navi ul li.qnavi03 a.current {
+	background: url("https://www.yedaham.co.kr/images/common/navi_faq.png") no-repeat left center;
+}
+
+.floating_menu .quick_navi ul li.qnavi01 a:hover,
+.floating_menu .quick_navi ul li.qnavi01 a:focus {
+	background: url("https://www.yedaham.co.kr/images/common/navi_counsel_on.png") no-repeat left center;
+}
+
+.floating_menu .quick_navi ul li.qnavi02 a:hover,
+.floating_menu .quick_navi ul li.qnavi02 a:focus {
+	background: url("https://www.yedaham.co.kr/images/common/navi_inquiry_on.png") no-repeat left center;
+}
+
+.floating_menu .quick_navi ul li.qnavi03 a:hover,
+.floating_menu .quick_navi ul li.qnavi03 a:focus {
+	background: url("https://www.yedaham.co.kr/images/common/navi_faq_on.png") no-repeat left center;
+}
+
+.floating_menu .etc_navi02 {
+	padding: 0 0 0 20px;
+}
+
+.floating_menu .etc_navi02 li {
+	margin: 10px 0 0 0;
+}
+
+.floating_menu .etc_navi {
+	padding: 0px;
+}
+
+.floating_menu .etc_navi ul {
+	padding: 0 0 0 0;
+}
+
+.floating_menu .etc_navi ul li {
+	height: 25px;
+}
+
+.floating_menu .etc_navi ul li a {
+	text-indent: -9999px;
+	display: block;
+}
+
+.floating_menu .etc_navi ul li.etcnavi01 a {
+	background: url("https://www.yedaham.co.kr/images/common/btn_login.png") no-repeat left center;
+}
+
+.floating_menu .etc_navi ul li.etcnavi02 a {
+	background: url("https://www.yedaham.co.kr/images/common/btn_logout.png") no-repeat left center;
+}
+
+.floating_menu .etc_navi ul li.etcnavi03 a {
+	background: url("https://www.yedaham.co.kr/images/common/btn_sitemap.png") no-repeat left center;
+}
+
+.floating_menu .etc_navi ul li.etcnavi03 a.current {
+	background: url("https://www.yedaham.co.kr/images/common/btn_sitemap_on.png") no-repeat left center;
+}
+
+.floating_menu .etc_navi ul li.etcnavi01 a:hover,
+.floating_menu .etc_navi ul li.etcnavi01 a:focus {
+	background: url("https://www.yedaham.co.kr/images/common/btn_login_on.png") no-repeat left center;
+}
+
+.floating_menu .etc_navi ul li.etcnavi03 a:hover,
+.floating_menu .etc_navi ul li.etcnavi03 a:focus {
+	background: url("https://www.yedaham.co.kr/images/common/btn_sitemap_on.png") no-repeat left center;
+}
+
+.floating_menu .member_navi {
+	padding: 0px;
+	padding: 40px 0 16px 20px;
+}
+
+.floating_menu .member_navi ul {
+	overflow: hidden;
+}
+
+.floating_menu .member_navi ul li {
+	float: left;
+	margin: 0 4px 4px 0;
+	width: 140px;
+	height: 26px;
+}
+
+.floating_menu .member_navi ul li a {
+	text-indent: -9999px;
+	display: block;
+	height: 26px;
+}
+
+.floating_menu .member_navi ul li.mnavi01 {
+	width: 68px;
+}
+
+.floating_menu .member_navi ul li.mnavi02 {
+	width: 68px;
+}
+
+.floating_menu .member_navi ul li.mnavi11 {
+	width: 68px;
+}
+
+.floating_menu .member_navi ul li.mnavi12 {
+	width: 68px;
+}
+
+.floating_menu .member_navi ul li.mnavi01 a {
+	background: url("https://www.yedaham.co.kr/images/common/lnb_bg_login.png") no-repeat center center;
+}
+
+.floating_menu .member_navi ul li.mnavi02 a {
+	background: url("https://www.yedaham.co.kr/images/common/lnb_bg_join.png") no-repeat center center;
+}
+
+.floating_menu .member_navi ul li.mnavi03 a {
+	background: url("https://www.yedaham.co.kr/images/common/lnb_bg_find.png") no-repeat center center;
+}
+
+.floating_menu .member_navi ul li.mnavi05 a {
+	background: url("https://www.yedaham.co.kr/images/common/lnb_bg_find02.png") no-repeat center center;
+}
+
+.floating_menu .member_navi ul li.mnavi04 a {
+	background: url("https://www.yedaham.co.kr/images/common/lnb_bg_sitemap.png") no-repeat center center;
+}
+
+.floating_menu .member_navi ul li.mnavi06 a {
+	background: url("https://www.yedaham.co.kr/images/common/lnb_bg_withdrawal") no-repeat center center;
+}
+
+.floating_menu .member_navi ul li.mnavi11 a {
+	background: url("https://www.yedaham.co.kr/images/common/lnb_bg_logout.png") no-repeat center center;
+}
+
+.floating_menu .member_navi ul li.mnavi12 a {
+	background: url("https://www.yedaham.co.kr/images/common/lnb_bg_modify.png") no-repeat center center;
+}
+
+.floating_menu .member_navi ul li.mnavi01 a.current {
+	background: url("https://www.yedaham.co.kr/images/common/lnb_bg_login_on.png") no-repeat center center;
+}
+
+.floating_menu .member_navi ul li.mnavi02 a.current {
+	background: url("https://www.yedaham.co.kr/images/common/lnb_bg_join_on.png") no-repeat center center;
+}
+
+.floating_menu .member_navi ul li.mnavi03 a.current {
+	background: url("https://www.yedaham.co.kr/images/common/lnb_bg_find_on.png") no-repeat center center;
+}
+
+.floating_menu .member_navi ul li.mnavi05 a.current {
+	background: url("https://www.yedaham.co.kr/images/common/lnb_bg_find02_on.png") no-repeat center center;
+}
+
+.floating_menu .member_navi ul li.mnavi04 a.current {
+	background: url("https://www.yedaham.co.kr/images/common/lnb_bg_sitemap_on.png") no-repeat center center;
+}
+
+.floating_menu .member_navi ul li.mnavi06 a.current {
+	background: url("https://www.yedaham.co.kr/images/common/lnb_bg_withdrawal_on.png") no-repeat center center;
+}
+
+.floating_menu .member_navi ul li.mnavi11 a.current {
+	background: url("https://www.yedaham.co.kr/images/common/lnb_bg_logout_on.png") no-repeat center center;
+}
+
+.floating_menu .member_navi ul li.mnavi12 a.current {
+	background: url("https://www.yedaham.co.kr/images/common/lnb_bg_modify_on.png") no-repeat center center;
+}
+
+.floating_menu .member_navi ul li.mnavi01 a:hover,
+.floating_menu .member_navi ul li.mnavi01 a:focus {
+	background: url("https://www.yedaham.co.kr/images/common/lnb_bg_login_on.png") no-repeat center center;
+}
+
+.floating_menu .member_navi ul li.mnavi02 a:hover,
+.floating_menu .member_navi ul li.mnavi02 a:focus {
+	background: url("https://www.yedaham.co.kr/images/common/lnb_bg_join_on.png") no-repeat center center;
+}
+
+.floating_menu .member_navi ul li.mnavi03 a:hover,
+.floating_menu .member_navi ul li.mnavi03 a:focus {
+	background: url("https://www.yedaham.co.kr/images/common/lnb_bg_find_on.png") no-repeat center center;
+}
+
+.floating_menu .member_navi ul li.mnavi05 a:hover,
+.floating_menu .member_navi ul li.mnavi05 a:focus {
+	background: url("https://www.yedaham.co.kr/images/common/lnb_bg_find02_on.png") no-repeat center center;
+}
+
+.floating_menu .member_navi ul li.mnavi04 a:hover,
+.floating_menu .member_navi ul li.mnavi04 a:focus {
+	background: url("https://www.yedaham.co.kr/images/common/lnb_bg_sitemap_on.png") no-repeat center center;
+}
+
+.floating_menu .member_navi ul li.mnavi11 a:hover,
+.floating_menu .member_navi ul li.mnavi11 a:focus {
+	background: url("https://www.yedaham.co.kr/images/common/lnb_bg_logout_on.png") no-repeat center center;
+}
+
+.floating_menu .member_navi ul li.mnavi12 a:hover,
+.floating_menu .member_navi ul li.mnavi12 a:focus {
+	background: url("https://www.yedaham.co.kr/images/common/lnb_bg_modify_on.png") no-repeat center center;
+}
+
+.floating_menu .member_navi p.log_name {
+	height: 30px;
+	color: #494233;
+	font-size: 13px;
+	font-weight: bold;
+}
+
+.floating_menu .member_navi p.log_name span {
+	color: #c87c1e;
+}
+
+.floating_menu .tel_center {
+	padding: 30px 0 30px 10px;
+	border-top: 1px solid #d8d5d3;
+}
+
+#skipnavi {
+	margin: 0;
+	padding: 0;
+}
+
+#skipnavi li {
+	font-size: 0;
+	line-height: 0;
+}
+
+#skipnavi li a {
+	position: absolute;
+	left: 0;
+	top: -100px;
+	z-index: 5000;
+	display: block;
+	padding: 8px 0 7px;
+	width: 100%;
+	background: #1179ea;
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+}
+
+#skipnavi li a:active,
+#skipnavi li a:focus {
+	top: 0;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 1.5;
+}
+
+#sub_wrapper {
+	background: #f7f4f1;
+}
+
+/* 엠블럼 없을때 height:91px*/
+#footer {
+	height: 280px;
+	min-width: 830px;
+	position: relative;
+	background: #fff;
+	border-top: 1px solid #ddd;
+}
+
+#footer:before {
+	content: "";
+	display: block;
+	width: 180px;
+	height: 100%;
+	background-color: #fbf8f6;
+	border-right: 1px solid #ddd;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+#footer h2 {
+	position: absolute;
+	left: 19px;
+	top: 37px;
+	margin: 0 0 0 180px;
+}
+
+#footer p.txt {
+	margin: 0 0 0 181px;
+	padding: 20px 0 0 20px;
+	color: #a4a199;
+	font-size: 11px;
+	line-height: 16px;
+	border-top: 5px solid #cbb099;
+}
+
+#footer p.txt span {
+	display: block;
+	margin: 0 0 5px 0;
+	color: #666;
+}
+
+#footer p.txt span a {
+	color: #666;
+}
+
+#footer p.txt span a:hover {
+	text-decoration: underline;
+}
+
+#footer .family_site {
+	position: absolute;
+	left: 0;
+	top: 0px;
+	width: 181px;
+}
+
+#footer .family_site p.logo_family a {
+	display: block;
+	height: 91px;
+}
+
+#footer .family_site p.logo_family a img {
+	margin: 35px 0 0 20px;
+}
+
+#footer .logo_area {
+	position: absolute;
+	left: 20px;
+	top: 40px;
+}
+
+#footer .logo_area .logo1 {
+	margin-bottom: 113px;
+}
+
+#footer .info {
+	padding-left: 201px;
+	padding-top: 40px;
+}
+
+#footer .info .family_list {
+	width: 712px;
+}
+
+#footer .info .family_list:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+#footer .info .family_list li {
+	float: left;
+	border: 1px solid #ddd;
+	margin-left: -1px;
+	margin-top: -1px;
+}
+
+#footer .info .address {
+	margin-top: 38px;
+	font-size: 11px;
+	line-height: 18px;
+}
+
+#footer .info .address a {
+	color: #666;
+}
+
+#footer .info .address a strong {
+	font-weight: bold;
+	color: #5b80d3;
+}
+
+#footer .info .address a strong.vod {
+	font-weight: bold;
+	color: #bd495f;
+}
+
+#footer .info .address p {
+	margin-top: 2px;
+}
+
+#footer .ccm-footer {
+	position: absolute;
+	left: 842px;
+	top: 174px;
+}
+
+/* 메인  레이아웃 */
+.main_container {
+	margin: 0 0 0 181px;
+	width: 1099px;
+}
+
+/* 서브 페이지 레이아웃 */
+.sub_container {
+	margin: 0 0 0 180px;
+	padding: 0 0 26px 26px;
+	width: 813px;
+	min-height: 868px;
+	border-left: 1px solid #dedbd8;
+}
+
+.sub_top {
+	overflow: hidden;
+	height: 72px;
+}
+
+.sub_top p.sub_title {
+	float: left;
+	margin: 26px 0 0 0;
+	color: #82683b;
+	letter-spacing: -0.06em;
+}
+
+.sub_top p.sub_title img {
+	margin: 0 16px 0 0;
+	vertical-align: middle;
+}
+
+.sub_top .location_wrap {
+	float: right;
+}
+
+.sub_top p.doc_location {
+	display: inline-block;
+	margin: 26px 0 0 0;
+	font-size: 11px;
+	color: #a78d73;
+	line-height: 20px;
+}
+
+.sub_top p.doc_location a {
+	color: #a78d73;
+}
+
+.sub_top p.doc_location span {
+	color: #754c24;
+}
+
+.sub_top .loca_arrow {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	z-index: 101;
+}
+
+.sub_top .loca_arrow p a {
+	display: block;
+	width: 20px;
+	height: 20px;
+	background: url("https://www.yedaham.co.kr/images/common/location_open.png") no-repeat center center;
+}
+
+.sub_top .loca_arrow p a.on {
+	background: url("https://www.yedaham.co.kr/images/common/location_close.png") no-repeat center center;
+}
+
+.sub_top .loca_arrow .loca_list {
+	display: none;
+	position: fixed;
+	left: 930px;
+	top: 37px;
+	width: 120px;
+	padding: 19px 0 0 0;
+	background: url("https://www.yedaham.co.kr/images/common/bg_location.png") no-repeat center 10px;
+}
+
+.sub_top .loca_arrow .loca_list ul {
+	border: 1px solid #c7b19b;
+	border-top: none;
+	background: #ffffff;
+	border-radius: 2px 2px 2px 2px;
+	-moz-border-radius: 2px 2px 2px 2px;
+	-webkit-border-radius: 2px 2px 2px 2px;
+}
+
+.sub_top .loca_arrow .loca_list ul li {
+	border-top: 1px solid #e9e0d7;
+}
+
+.sub_top .loca_arrow .loca_list ul li:first-child {
+	border-top: none;
+}
+
+.sub_top .loca_arrow .loca_list ul li a {
+	display: block;
+	padding: 7px 10px;
+	font-size: 11px;
+	color: #754c24;
+	line-height: 16px;
+}
+
+.sub_top .loca_arrow .loca_list ul li a.current,
+.sub_top .loca_arrow .loca_list ul li a:hover {
+	color: #c87c1e;
+	font-weight: bold;
+}
+
+.sub_box_wrap {
+	padding: 0px 30px 30px 30px;
+	border: 1px solid #dedbd8;
+	background: #ffffff;
+}
+
+.sub_box_wrap .title_area {
+	position: relative;
+	height: 160px;
+	border-bottom: 2px solid #c87c1e;
+}
+
+.sub_box_wrap .title_area h3 {
+	padding: 29px 0 0 0;
+}
+
+.sub_box_wrap .title_area p {
+	position: absolute;
+	left: 1px;
+	bottom: 38px;
+	text-align: left;
+	font-size: 14px;
+	line-height: 20px;
+	letter-spacing: -0.02em;
+}
+
+.sub_box_wrap .title_area p.line3 {
+	position: absolute;
+	left: 1px;
+	bottom: 28px;
+	text-align: left;
+	font-size: 14px;
+	line-height: 20px;
+	letter-spacing: -0.02em;
+}
+
+.sub_box_wrap .title_area p span {
+	color: #c87c1e;
+}
+
+.sub_box_wrap .title_area02 {
+	position: relative;
+	height: 150px;
+	border-bottom: 2px solid #c87c1e;
+}
+
+.sub_box_wrap .title_area02 h3 {
+	padding: 29px 0 0 0;
+}
+
+.sub_box_wrap .title_area02 p {
+	position: absolute;
+	left: 1px;
+	bottom: 20px;
+	text-align: left;
+	line-height: 18px;
+	letter-spacing: -0.02em;
+}
+
+.sub_box_wrap .title_area02 p span {
+	color: #c87c1e;
+}
+
+.sub_box_wrap .title_area03 {
+	position: relative;
+}
+
+.sub_box_wrap .title_area03 h3 {
+	padding: 29px 0 0 0;
+}
+
+.sub_box_wrap .title_area03 p {
+	position: relative;
+	margin-top: 20px;
+	text-align: left;
+	font-size: 14px;
+	line-height: 20px;
+	letter-spacing: -0.02em;
+}
+
+.sub_box_wrap .title_area03 p span {
+	color: #c87c1e;
+}
+
+.sub_box_wrap .title_area03 span.add7 {
+	position: relative;
+	margin-top: 20px;
+	display: inline-block;
+	padding: 0 14px;
+	line-height: 28px;
+	color: #c87c1e;
+	font-weight: bold;
+	font-size: 12px;
+	background: #f9f2e8;
+}
+
+/* 소제목 */
+.process_part_top {
+	overflow: hidden;
+}
+
+.process_part_top p {
+	float: left;
+	padding: 2px 0 0 16px;
+	background: url("https://www.yedaham.co.kr/images/common/bul_circle.png") no-repeat left center;
+	color: #aaaaaa;
+	font-size: 11px;
+	letter-spacing: -0.06em;
+}
+
+.process_part_top p span {
+	display: inline-block;
+	color: #412900;
+	font-size: 16px;
+	font-weight: bold;
+	vertical-align: middle;
+}
+
+.process_part_top button {
+	vertical-align: middle;
+}
+
+.process_part_top .agree_select {
+	float: right;
+	height: 22px;
+}
+
+.process_part_top .agree_chk {
+	float: right;
+	height: 22px;
+}
+h5.title-color {
+	font-size: 16px;
+	color:#c87c1e;
+	
+	font-weight: bold;
+	
+}
+/* 게시판 리스트 */
+.board_wrap .board_list {
+	overflow: hidden;
+	position: relative;
+	padding: 20px 0;
+	border-bottom: 1px solid #dedbd8;
+}
+
+.board_wrap .board_list .board_thum {
+	float: left;
+}
+
+.board_wrap .board_list a.board_con_thum {
+	display: block;
+	margin-left: 160px;
+	width: 590px;
+	height: 100px;
+	color: #666666;
+	font-size: 14px;
+	line-height: 22px;
+}
+
+.board_wrap .board_list a.board_con {
+	display: block;
+	width: 750px;
+	max-height: 100px;
+	color: #666666;
+	font-size: 14px;
+	line-height: 22px;
+}
+
+.board_wrap .board_list a:hover {
+	text-decoration: underline;
+}
+
+.board_wrap .board_list h5 {
+	padding: 0px 0 12px 0;
+	font-size: 16px;
+	color: #754c24;
+	font-weight: bold;
+}
+
+.board_wrap .board_list p {
+	position: absolute;
+	right: 0;
+	top: 20px;
+	font-size: 12px;
+	color: #999999;
+	line-height: 22px;
+}
+
+.board_wrap .board_list p span {
+	display: inline-block;
+	margin: 0 4px;
+}
+
+/* 입찰공고 게시판*/
+.board_wrap .board_list04 {
+	overflow: hidden;
+	position: relative;
+	padding: 20px 0;
+	border-bottom: 1px solid #dedbd8;
+}
+
+.board_wrap .board_list04 .board_thum {
+	float: left;
+}
+
+.board_wrap .board_list04 a.board_con_thum {
+	display: block;
+	margin-left: 160px;
+	width: 590px;
+	height: 100px;
+	color: #666666;
+	font-size: 14px;
+	line-height: 22px;
+}
+
+.board_wrap .board_list04 a.board_con {
+	color: #666666;
+	font-size: 14px;
+	line-height: 22px;
+}
+
+.board_wrap .board_list04 a:hover {
+	text-decoration: underline;
+}
+
+.board_wrap .board_list04 h5 {
+	display: inline-block;
+	font-size: 16px;
+	color: #754c24;
+	font-weight: bold;
+}
+
+.board_wrap .board_list04 p {
+	position: absolute;
+	right: 0;
+	top: 20px;
+	font-size: 12px;
+	color: #999999;
+	line-height: 22px;
+}
+
+.board_wrap .board_list04 p span {
+	display: inline-block;
+	margin: 0 4px;
+}
+
+/* 채용정보 게시판*/
+.board_wrap .recruit_list {
+	overflow: hidden;
+	position: relative;
+	padding: 20px 0 18px 0;
+	border-bottom: 1px solid #dedbd8;
+}
+
+.board_wrap .recruit_list a {
+	color: #666666;
+	font-size: 14px;
+	line-height: 22px;
+}
+
+.board_wrap .recruit_list h5 {
+	padding: 0px;
+	font-size: 16px;
+	color: #754c24;
+	font-weight: bold;
+}
+
+.board_wrap .recruit_list p {
+	position: absolute;
+	right: 0;
+	top: 20px;
+	font-size: 12px;
+	color: #999999;
+	line-height: 22px;
+}
+
+.board_wrap .recruit_list p span {
+	display: inline-block;
+	margin: 0 4px;
+}
+
+.board_wrap .recruit_list .board_recru {
+	overflow: hidden;
+}
+
+.board_wrap .recruit_list .board_recru dl {
+	float: left;
+	overflow: hidden;
+	width: 660px;
+	color: #444444;
+	font-size: 14px;
+	line-height: 22px;
+}
+
+.board_wrap .recruit_list .board_recru dl dt {
+	float: left;
+}
+
+.board_wrap .recruit_list .board_recru dl dd {
+	margin: 0 0 0 60px;
+}
+
+.board_wrap .recruit_list .board_recru .icon_rec {
+	float: right;
+	width: 70px;
+}
+
+.board_wrap .recruit_list .board_recru .icon_rec span.rec {
+	margin: 0 0 4px 0;
+}
+
+.board_wrap span.rec {
+	display: inline-block;
+	width: 68px;
+	height: 28px;
+	line-height: 28px;
+	font-size: 12px;
+	text-align: center;
+	border: 1px solid #dedbd8;
+}
+
+.board_wrap span.icon_rec01 {
+	background: #ffffff;
+	color: #c87c1e;
+}
+
+.board_wrap span.icon_rec02 {
+	background: #f7f6f5;
+	color: #999999;
+}
+
+/* 입찰 공고 */
+.bid_board {
+	position: relative;
+}
+
+.bid_board a.board_con_thum {
+	width: 500px !important;
+}
+
+.bid_board h5 {
+	margin-left: 80px;
+	max-width: 370px !important;
+}
+
+.bid_board span.rec {
+	position: absolute;
+	left: 0;
+	top: 18px;
+}
+
+.icon_bid {
+	position: absolute;
+	right: 0;
+	top: 70px;
+}
+
+/* 게시판 상세보기 */
+
+.board_wrap .board_view .tit_area {
+	overflow: hidden;
+}
+
+.board_wrap .board_view h5 {
+	float: left;
+	height: 50px;
+	line-height: 50px;
+	font-size: 16px;
+	color: #754c24;
+	font-weight: bold;
+	margin: 0 10px 0 0;
+}
+
+.board_wrap .board_view h5 span.rec {
+	font-weight: normal;
+	line-height: 28px;
+	font-size: 12px;
+}
+
+.board_wrap .board_view p.view_title {
+	float: right;
+	margin: 18px 0 0 0;
+	font-size: 12px;
+	color: #999999;
+	text-align: right;
+}
+
+.board_wrap .board_view p.view_title span {
+	display: inline-block;
+	margin: 0 4px;
+}
+
+.board_wrap .board_view .board_view_con {
+	padding: 10px 0 0 0;
+	color: #444444;
+	border-top: 1px solid #dedbd8;
+	font-size: 14px;
+	line-height: 22px;
+}
+
+.board_wrap .board_view .board_view_con img {
+	max-width: 100%;
+}
+
+.view_move_wrap {
+	margin: 10px 0 0 0;
+	overflow: hidden;
+}
+
+.view_move_wrap ul.prevNext {
+	float: left;
+	width: 703px;
+	background: #ffffff;
+	border-top: 1px solid #dedbd8;
+}
+
+.view_move_wrap ul.prevNext li {
+	overflow: hidden;
+	border: 1px solid #dedbd8;
+	border-top: none;
+	height: 48px;
+	font-size: 14px;
+}
+
+.view_move_wrap ul.prevNext li span.first {
+	display: block;
+	float: left;
+	width: 75px;
+	padding: 0 0 0 19px;
+	border-right: 1px solid #dedbd8;
+	color: #754c24;
+	font-weight: bold;
+	line-height: 48px;
+}
+
+.view_move_wrap ul.prevNext li a {
+	display: block;
+	float: left;
+	width: 468px;
+	padding: 0 10px 0 19px;
+	color: #222222;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	line-height: 48px;
+}
+
+.view_move_wrap ul.prevNext li a:hover {
+	text-decoration: underline;
+}
+
+.view_move_wrap ul.prevNext li span.reg_date {
+	float: left;
+	display: block;
+	font-size: 12px;
+	color: #999999;
+	line-height: 48px;
+}
+
+.view_move_wrap ul.prevNext li.prev span.first {
+	background: url("https://www.yedaham.co.kr/images/common/arrow_up.png") no-repeat 69px center;
+}
+
+.view_move_wrap ul.prevNext li.next span.first {
+	background: url("https://www.yedaham.co.kr/images/common/arrow_down.png") no-repeat 69px center;
+}
+
+.view_move_wrap img.move_list {
+	float: right;
+}
+
+.view_move_wrap ul.recr_move li a {
+	width: 360px;
+}
+
+/* 테이블*/
+.table_wrap {
+	overflow: hidden;
+}
+
+table.info_table01 {
+	width: 100%;
+	border-top: 2px solid #494233;
+	border-bottom: 2px solid #494233;
+}
+
+table.info_table01 tr th,
+table.info_table01 tr td {
+	text-align: center;
+	color: #494233;
+	background: url("https://www.yedaham.co.kr/images/common/bg_table_bar.png") repeat-y left top;
+}
+
+table.info_table01 tr th {
+	font-weight: bold;
+	padding: 5px 0;
+	min-height: 40px;
+	line-height: 16px;
+	background-color: #f8f3ec;
+}
+
+table.info_table01 tr > :first-child {
+	background-image: none;
+}
+
+table.info_table01 tr td {
+	line-height: 16px;
+	padding: 5px 0;
+	min-height: 40px;
+	border-top: 1px solid #dedbd8;
+	background: #ffffff url("https://www.yedaham.co.kr/images/common/bg_table_bar.png") repeat-y left top;
+}
+
+table.info_table01 tr td.line {
+	line-height: 16px;
+	height: 40px;
+	border-top: 1px solid #dedbd8;
+	background: #ffffff url("https://www.yedaham.co.kr/images/common/bg_table_bar.png") repeat-y left top;
+}
+
+table.info_table01 tr td a.btn_view {
+	color: #c87c1e;
+	text-decoration: underline;
+}
+
+table.info_table01 tfoot th,
+table.info_table01 tfoot td {
+	border-top: 2px solid #494233;
+}
+
+table.info_table01 tr td span {
+	font-size: 14px;
+	font-weight: bold;
+	color: #c87c1e;
+}
+
+table.info_table01 tr td span.group_name {
+	display: block;
+	font-size: 12px;
+	line-height: 22px;
+	font-weight: normal;
+	color: #494233;
+}
+
+table.info_table01 tr td span.under01 {
+	display: block;
+	font-size: 12px;
+	line-height: 22px;
+	font-weight: normal;
+	color: #c87c1e;
+	text-decoration: underline;
+}
+
+table.info_table01 tr td span.yel {
+	color: #c87c1e;
+	font-weight: normal;
+	font-size: 12px;
+}
+
+table.info_table01 tr td span.yelb {
+	color: #c87c1e;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+table.info_table01 tr td span.redb {
+	color: #f2381a;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+table.info_table01 tr td span.blueb {
+	color: #21409a;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+table.info_table01 tr td.addr_group_td {
+	padding: 14px 0;
+}
+
+table.info_table01 tr td.textL {
+	text-align: left;
+}
+
+table.info_table01 tr td p.oflow {
+	width: 370px;
+	padding: 0 10px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+table.info_table01 tr td.bg_l {
+	background: url("https://www.yedaham.co.kr/images/common/bg_table_bar.png") repeat-y left top;
+}
+
+table.info_table01 tr td.bg_c {
+	background-color: #f8f3ec;
+}
+
+table.info_table01 tr td ul.line24 {
+	padding: 6px 0;
+}
+
+table.info_table01 tr td ul.line24 li {
+	line-height: 24px;
+}
+
+table.info_table01 tr td.li20 {
+	padding: 6px 0;
+	line-height: 20px;
+}
+
+table.info_table01 tr td a {
+	color: #494233;
+}
+
+table.info_table03 {
+	width: 100%;
+	border-top: 2px solid #494233;
+	border-bottom: 2px solid #494233;
+}
+
+table.info_table03 tr th,
+table.info_table03 tbody tr td {
+	text-align: center;
+	color: #494233;
+	background: url("https://www.yedaham.co.kr/images/common/bg_table_bar.png") repeat-y right top;
+	border-top: 1px solid #dedbd8;
+}
+
+table.info_table03 tr th {
+	font-weight: bold;
+	height: 40px;
+	line-height: 16px;
+	background-color: #f8f3ec;
+	border-top: 1px solid #dedbd8;
+}
+
+table.info_table03 tr td {
+	line-height: 16px;
+	height: 40px;
+}
+
+table.info_table03 tr .last {
+	background-image: none;
+}
+
+table.info_table02 {
+	width: 100%;
+}
+
+table.info_table02 thead tr th,
+table.info_table02 tbody tr td {
+	text-align: center;
+}
+
+table.info_table02 thead tr th {
+	font-weight: bold;
+	height: 36px;
+	line-height: 34px;
+	background-color: #6d685c;
+	color: #ffffff;
+	border: 1px solid #5d594f;
+}
+
+table.info_table02 tbody tr td {
+	line-height: 16px;
+	padding: 10px 0;
+	background: #ffffff;
+	color: #494233;
+	border: 1px solid #dedbd8;
+}
+
+table.info_table05 {
+	width: 100%;
+	border-top: 2px solid #494233;
+	border-bottom: 2px solid #494233;
+	font-size: 14px;
+}
+
+table.info_table05 tr th,
+table.info_table05 tbody tr td {
+	color: #494233;
+	background: url("https://www.yedaham.co.kr/images/common/bg_table_bar.png") repeat-y right top;
+	border-top: 1px solid #dedbd8;
+}
+
+table.info_table05 tr.long th,
+table.info_table05 tbody tr.long td {
+	height: 80px;
+}
+
+table.info_table05 tr th {
+	font-weight: bold;
+	height: 50px;
+	line-height: 20px;
+	background-color: #f8f3ec;
+	border-top: 1px solid #dedbd8;
+	text-align: center;
+}
+
+table.info_table05 tr td {
+	line-height: 20px;
+	height: 50px;
+	text-align: left;
+	padding: 0 0 0 15px;
+}
+
+table.info_table05 tr td span.bold {
+	font-weight: bold;
+}
+
+table.info_table05 tr .last {
+	background-image: none;
+}
+
+table.info_table05 tr td a {
+	color: #0089e9;
+	text-decoration: underline;
+}
+
+table.info_table07 {
+	width: 100%;
+	border-top: 2px solid #494233;
+	border-bottom: 2px solid #494233;
+	font-size: 12px;
+}
+
+table.info_table07 tr th,
+table.info_table07 tbody tr td {
+	color: #494233;
+	background: url("https://www.yedaham.co.kr/images/common/bg_table_bar.png") repeat-y right top;
+	border-top: 1px solid #dedbd8;
+}
+
+table.info_table07 tr.long th,
+table.info_table07 tbody tr.long td {
+	height: 80px;
+}
+
+table.info_table07 tr th {
+	font-weight: bold;
+	line-height: 20px;
+	background-color: #f8f3ec;
+	border-top: 1px solid #dedbd8;
+	text-align: center;
+}
+
+table.info_table07 tr td {
+	line-height: 20px;
+	text-align: left;
+	padding: 10px 0 10px 15px;
+	color: #c87c1e;
+}
+
+table.info_table07 tr td span.nor {
+	font-weight: normal;
+}
+
+table.info_table07 tr .last {
+	background-image: none;
+}
+
+table.info_table06 {
+	width: 100%;
+}
+
+table.info_table06 tr th,
+table.info_table06 tr td {
+	border: 1px solid #dedbd8;
+	color: #412900;
+	height: 40px;
+}
+
+table.info_table06 tr th {
+	font-size: 14px;
+	padding: 0 0 0 15px;
+	font-weight: bold;
+	border-right: none;
+}
+
+table.info_table06 tr td {
+	font-size: 13px;
+	border-left: none;
+}
+
+/* 금액 테이블*/
+table.table_prd_price {
+	width: 100%;
+	border-bottom: 2px solid #c87c1e;
+}
+
+table.table_prd_price tr th,
+table.table_prd_price tr td {
+	text-align: center;
+	color: #494233;
+	background: url("https://www.yedaham.co.kr/images/common/bg_table_bar.png") repeat-y right top;
+}
+
+table.table_prd_price tr th {
+	background-color: #f8f3ec;
+	height: 39px;
+	border-top: 2px solid #c87c1e;
+	border-bottom: 1px solid #dedbd8;
+	font-weight: bold;
+}
+
+table.table_prd_price tr td {
+	line-height: 16px;
+	padding: 12px 0;
+}
+
+table.table_prd_price tr td span {
+	font-size: 14px;
+	font-weight: bold;
+	color: #c87c1e;
+}
+
+table.table_prd_price tr .last {
+	background-image: none;
+}
+
+/* 어코디언 게시판*/
+.acco_wrap {
+	width: 100%;
+	margin: 20px 0 0 0;
+}
+
+ul.acco_tab {
+	overflow: hidden;
+}
+
+ul.acco_tab li {
+	float: left;
+	width: 100px;
+	text-align: center;
+	border-top: 1px solid #dedbd8;
+}
+
+ul.acco_tab li.navi_space {
+	width: 0px;
+	height: 42px;
+	border-right: 1px solid #dedbd8;
+}
+
+ul.acco_tab li.current {
+	border-top: 1px solid #494233;
+	background: #494233;
+}
+
+ul.acco_tab li.current a {
+	color: #ffffff;
+}
+
+ul.acco_tab li a {
+	display: block;
+	height: 42px;
+	line-height: 42px;
+	color: #494233;
+}
+
+.acco_wrap .acco_wrap_con {
+	border-top: 2px solid #494233;
+	border-bottom: 2px solid #494233;
+}
+
+.acco_wrap .acco_wrap_con .question {
+	overflow: hidden;
+	width: 100%;
+	border-top: 1px solid #dedbd8;
+	background: url("https://www.yedaham.co.kr/images/common/acco_open.png") no-repeat 700px center;
+}
+
+.acco_wrap .acco_wrap_con .question:first-child {
+	border: none;
+}
+
+.acco_wrap .acco_wrap_con .question:hover {
+	cursor: pointer;
+}
+
+.acco_wrap .acco_wrap_con .question.active {
+	background: url("https://www.yedaham.co.kr/images/common/acco_close.png") no-repeat 700px center;
+}
+
+.acco_wrap .acco_wrap_con .question a {
+	font-size: 14px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.acco_wrap .acco_wrap_con .question span {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.acco_wrap .acco_wrap_con .question span.q_category {
+	float: left;
+	width: 124px;
+	height: 100%;
+	text-align: center;
+	line-height: 40px;
+}
+
+.acco_wrap .acco_wrap_con .question span.q_tit {
+	padding: 0 19px 0px 19px;
+	color: #444444;
+	width: 520px;
+}
+
+.acco_wrap .acco_wrap_con .question.active span.q_tit {
+	color: #c87c1e;
+	font-weight: bold;
+}
+
+.acco_wrap .acco_wrap_con .question p {
+	margin-left: 124px;
+	position: relative;
+	margin-left: 124px;
+	padding: 10px 0 10px 19px;
+	border-left: 1px solid #dedbd8;
+	line-height: 20px;
+}
+
+.acco_wrap .acco_wrap_con .question p span b {
+	position: absolute;
+	left: 19px;
+	top: 10px;
+}
+
+.acco_wrap .acco_wrap_con .answer {
+	display: none;
+	padding: 10px 0;
+	background: #fbf9f5;
+	border-top: 1px solid #dedbd8;
+	color: #444444;
+	font-size: 14px;
+	line-height: 22px;
+}
+
+.acco_wrap .acco_wrap_con .answer .a_txt {
+	position: relative;
+	width: 570px;
+	margin: 0 0 0 145px;
+	padding: 0 0 0 20px;
+	line-height: 22px;
+}
+
+.acco_wrap .acco_wrap_con .answer .a_txt span.ans {
+	position: absolute;
+	left: 0;
+	top: 0;
+	font-weight: bold;
+}
+
+.acco_wrap .acco_wrap_con .answer .a_txt02 {
+	position: relative;
+	padding: 0 0 0 20px;
+}
+
+/* 검색 박스*/
+.search_wrap {
+	position: relative;
+}
+
+.search_wrap input[type="text"] {
+	width: 665px;
+	height: 40px;
+	line-height: 40px;
+	padding: 0 15px;
+	border: 1px solid #dedbd8;
+}
+
+.search_wrap input[type="button"] {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 80px;
+	height: 40px;
+	color: #ffffff;
+	background: #c87c1e;
+	border: none;
+	font-size: 14px;
+}
+
+.search_wrap input[type="submit"] {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 80px;
+	height: 40px;
+	color: #ffffff;
+	background: #c87c1e;
+	border: none;
+	font-size: 14px;
+}
+
+.search_wrap input[type="button"].b2 {
+	position: static;
+	width: 80px;
+	height: 40px;
+	color: #ffffff;
+	background: #c87c1e;
+	border: none;
+	font-size: 14px;
+	vertical-align: middle;
+}
+
+.search_wrap input[type="submit"].b2 {
+	position: static;
+	width: 80px;
+	height: 40px;
+	color: #ffffff;
+	background: #c87c1e;
+	border: none;
+	font-size: 14px;
+	vertical-align: middle;
+}
+
+.search_wrap span.txt_con {
+	display: inline-block;
+	width: 85px;
+	font-weight: bold;
+	vertical-align: middle;
+}
+
+.search_wrap span.left_txt {
+	display: inline-block;
+	width: 40px;
+	font-weight: bold;
+	vertical-align: middle;
+	font-size: 14px;
+}
+
+/* 글쓰기 동의 */
+.write_agree_box {
+	overflow: hidden;
+	padding: 15px 20px;
+	border: 1px solid #dedbd8;
+	font-weight: bold;
+	color: #494233;
+	line-height: 20px;
+}
+
+.write_agree_box p {
+	float: left;
+	width: 560px;
+}
+
+/* 페이징 */
+.paging {
+	position: relative;
+	margin: 20px 0 0 0;
+	text-align: center;
+	height: 38px;
+}
+
+.paging a {
+	display: inline-block;
+	width: 38px;
+	height: 38px;
+	line-height: 38px;
+	border: 1px solid #dedbd8;
+	border-left: none;
+	color: #494233;
+	background: #ffffff;
+}
+
+.paging a.current,
+.paging a:hover {
+	color: #ffffff;
+	font-weight: bold;
+	background: #c87a14;
+}
+
+.paging a.page01 {
+	border-left: 1px solid #dedbd8;
+}
+
+.paging .paging_left {
+	position: absolute;
+	left: 0;
+	top: 0;
+	border-left: 1px solid #dedbd8;
+}
+
+.paging .paging_right {
+	position: absolute;
+	right: 0;
+	top: 0;
+	border-left: 1px solid #dedbd8;
+}
+
+.paging .paging_left a {
+	display: inline-block;
+	width: 38px;
+	height: 38px;
+}
+
+.paging .paging_right a {
+	display: inline-block;
+	width: 38px;
+	height: 38px;
+}
+
+/* 라디오 박스 선택 */
+.input_radio {
+	position: relative;
+	width: 20px;
+	height: 21px;
+	margin: 0 8px 0 0;
+	display: inline-block;
+}
+
+.input_radio input {
+	position: absolute;
+	left: 3px;
+	top: 3px;
+	vertical-align: middle;
+}
+
+.input_radio label {
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	top: 0px;
+	width: 20px;
+	height: 21px;
+	background: url("https://www.yedaham.co.kr/images/common/bg_input.png") left bottom no-repeat;
+}
+
+.input_radio label.on {
+	background: url("https://www.yedaham.co.kr/images/common/bg_input_on.png") left bottom no-repeat;
+}
+
+.input_radio input:checked + label {
+	background: url("https://www.yedaham.co.kr/images/common/bg_input_on.png") left bottom no-repeat;
+}
+
+span.agr_txt {
+	display: inline-block;
+	vertical-align: top;
+	color: #494233;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 21px;
+}
+
+span.agr_txt2 {
+	display: inline-block;
+	vertical-align: top;
+	color: #494233;
+	font-size: 40px;
+	font-weight: bold;
+	line-height: 70px;
+}
+
+span.option_txt {
+	display: inline-block;
+	vertical-align: top;
+	color: #c87c1e;
+	font-size: 12px;
+	padding: 6px 0 0 0;
+}
+
+span.pop_agr_txt {
+	display: inline-block;
+	vertical-align: top;
+	color: #494233;
+	font-size: 12px;
+	padding: 4px 0 0 0;
+}
+
+span.pip_zip_txt {
+	display: inline-block;
+	vertical-align: top;
+	color: #494233;
+	font-size: 12px;
+	line-height: 20px;
+}
+
+/* 체크 박스 선택 */
+.input_chk {
+	position: relative;
+	width: 20px;
+	height: 21px;
+	margin: 0 8px 0 0;
+	display: inline-block;
+}
+
+.input_chk input {
+	position: absolute;
+	left: 3px;
+	top: 3px;
+	vertical-align: middle;
+}
+
+.input_chk label {
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	top: 0px;
+	width: 20px;
+	height: 21px;
+	background: url("https://www.yedaham.co.kr/images/common/bg_chk.png") left bottom no-repeat;
+}
+
+.input_chk label.on {
+	background: url("https://www.yedaham.co.kr/images/common/bg_chk_on.png") left bottom no-repeat;
+}
+
+.input_chk input:checked + label {
+	background: url("https://www.yedaham.co.kr/images/common/bg_chk_on.png") left bottom no-repeat;
+}
+
+/* 탭 메뉴*/
+ul.tab_menu02 {
+	overflow: hidden;
+	border-bottom: 2px solid #c87c1e;
+}
+
+ul.tab_menu02 li {
+	float: left;
+	width: 374px;
+	height: 42px;
+	text-align: center;
+	border-top: 1px solid #dedbd8;
+	font-weight: bold;
+}
+
+ul.tab_menu02 li a {
+	display: block;
+	color: #494233;
+	padding: 12px 0;
+	line-height: 18px;
+}
+
+ul.tab_menu02 li.current {
+	background: #c87c1e;
+	border-top: 1px solid #c87c1e;
+	vertical-align: middle;
+}
+
+ul.tab_menu02 li.current a {
+	color: #ffffff;
+}
+
+ul.tab_menu02 li.hov {
+	background: #c87c1e;
+	border-top: 1px solid #c87c1e;
+}
+
+ul.tab_menu02 li.hov a {
+	color: #ffffff;
+}
+
+ul.tab_menu02 li.navi_space {
+	width: 1px;
+	background: #dedbd8;
+}
+
+/* 탭 메뉴 - 예다함 상품*/
+ul.tab_menu03 {
+	overflow: hidden;
+	border-left: 1px solid #dedbd8;
+}
+
+ul.tab_menu03 li {
+	float: left;
+	width: 270px;
+	height: 50px;
+	background: #fbf9f8 url("https://www.yedaham.co.kr/images/common/bg_tabmenu03.png") repeat-x left top;
+	text-align: center;
+	border-bottom: 1px solid #dedbd8;
+	border-right: 1px solid #dedbd8;
+	font-weight: bold;
+}
+
+ul.tab_menu03 li:first-child {
+	width: 269px;
+}
+
+ul.tab_menu03 li a {
+	display: block;
+	color: #494233;
+	height: 50px;
+	line-height: 50px;
+}
+
+ul.tab_menu03 li.current {
+	background: #ffffff url("https://www.yedaham.co.kr/images/common/bg_tabmenu03_on.png") repeat-x left top;
+}
+
+ul.tab_menu03 li.current a {
+	color: #c87c1e;
+}
+
+/* 탭 메뉴 - 예다함 상품 수정 150828*/
+ul.tab_menu04 {
+	overflow: hidden;
+	border-left: 1px solid #dedbd8;
+}
+
+ul.tab_menu04 li {
+	float: left;
+	width: 405px;
+	height: 50px;
+	background: #fbf9f8 url("https://www.yedaham.co.kr/images/common/bg_tabmenu03.png") repeat-x left top;
+	text-align: center;
+	border-bottom: 1px solid #dedbd8;
+	border-right: 1px solid #dedbd8;
+	font-weight: bold;
+}
+
+ul.tab_menu04 li:first-child {
+	width: 405px;
+}
+
+ul.tab_menu04 li a {
+	display: block;
+	color: #494233;
+	height: 50px;
+	line-height: 50px;
+}
+
+ul.tab_menu04 li.current {
+	background: #ffffff url("https://www.yedaham.co.kr/images/common/bg_tabmenu03_on.png") repeat-x left top;
+}
+
+ul.tab_menu04 li.current a {
+	color: #c87c1e;
+}
+
+/* 탭 메뉴 - 사회공헌*/
+ul.tab_menu05 {
+	overflow: hidden;
+	border-left: 1px solid #dedbd8;
+}
+
+ul.tab_menu05 li {
+	float: left;
+	width: 202px;
+	height: 50px;
+	background: #fbf9f8 url("https://www.yedaham.co.kr/images/common/bg_tabmenu03.png") repeat-x left top;
+	text-align: center;
+	border-bottom: 1px solid #dedbd8;
+	border-right: 1px solid #dedbd8;
+	font-weight: bold;
+}
+
+ul.tab_menu05 li:first-child {
+	width: 202px;
+}
+
+ul.tab_menu05 li a {
+	display: block;
+	color: #494233;
+	height: 50px;
+	line-height: 50px;
+	font-size: 14px;
+}
+
+ul.tab_menu05 li.current {
+	background: #ffffff url("https://www.yedaham.co.kr/images/common/bg_tabmenu03_on.png") repeat-x left top;
+	border-bottom: 1px solid #ffffff;
+}
+
+ul.tab_menu05 li.current a {
+	color: #c87c1e;
+}
+
+/* 약관 */
+.terms {
+	height: 274px;
+	overflow: auto;
+	padding: 13px;
+	border: 1px solid #dedbd8;
+	background: #fdfbf8;
+	color: #111111;
+	line-height: 20px;
+}
+
+.terms p {
+	font-weight: bold;
+}
+
+/* 약관 페이지 */
+.pps_area {
+	background: #ffffff;
+	color: #444444;
+	line-height: 20px;
+	font-size: 12px;
+}
+
+.pps_area h5 {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.pps_area strong {
+	display: inline-block;
+	padding: 32px 0 8px 0;
+	font-weight: bold;
+	font-size: 13px;
+}
+
+.pps_area p.pps_t {
+	font-size: 13px;
+}
+
+.pps_area p.pps_num {
+	padding: 6px 0 0 0;
+}
+
+.pps_area p.pps_txt {
+	padding: 0 0 0 15px;
+}
+
+.pps_area table.info_table04 {
+	margin: 12px 0 0 0;
+}
+
+.pps_area table.info_table04 th {
+	text-align: center;
+}
+
+.pps_area table.info_table04 td {
+	text-align: center;
+}
+
+.pps_area table.pps_table05 {
+	width: 100%;
+	margin: 28px 0 0 0;
+}
+
+.pps_area table.pps_table05 td {
+	padding: 0 0 0 13px;
+	color: #494233;
+	border: 1px solid #dedbd8;
+	height: 40px;
+}
+
+.pps_area table.pps_table05 td span {
+	display: inline-block;
+	margin: 0 5px 0 0;
+	font-weight: bold;
+}
+
+.pps_area p.pp_etc_a {
+	padding: 4px 0 0px 0;
+	color: #666666;
+}
+
+.pps_area p.pp_etc_a2 {
+	padding: 4px 0 0px 0;
+	color: #a3a3a3;
+}
+
+.pps_area table.pps_table06 {
+	width: 100%;
+}
+
+.pps_area table.pps_table06 th,
+.pps_area table.pps_table06 td {
+	text-align: center;
+	color: #494233;
+}
+
+.pps_area table.pps_table06 th {
+	font-weight: bold;
+	color: #ffffff;
+	height: 28px;
+	background: #514a3c url("https://www.yedaham.co.kr/images/common/bg_table_bar03.png") repeat-y left top;
+}
+
+.pps_area table.pps_table06 td {
+	padding: 6px 0;
+	color: #666666;
+	border-bottom: 1px solid #e3e3e3;
+	background: url("https://www.yedaham.co.kr/images/common/bg_table_bar02.png") repeat-y left top;
+}
+
+.pps_area table.pps_table06 tr > :first-child {
+	background-image: none;
+}
+
+table.info_table01 {
+	width: 100%;
+	border-top: 2px solid #494233;
+	border-bottom: 2px solid #494233;
+}
+
+table.info_table01 tr th,
+table.info_table01 tr td {
+	text-align: center;
+	color: #494233;
+	background: url("https://www.yedaham.co.kr/images/common/bg_table_bar.png") repeat-y left top;
+}
+
+table.info_table01 tr th {
+	font-weight: bold;
+	height: 40px;
+	line-height: 16px;
+	background-color: #f8f3ec;
+}
+
+table.info_table01 tr > :first-child {
+	background-image: none;
+}
+
+table.info_table01 tr td {
+	line-height: 16px;
+	height: 40px;
+	border-top: 1px solid #dedbd8;
+	background: #ffffff url("https://www.yedaham.co.kr/images/common/bg_table_bar.png") repeat-y left top;
+}
+
+table.info_table01 tr td.line {
+	line-height: 16px;
+	height: 40px;
+	border-top: 1px solid #dedbd8;
+	background: #ffffff url("https://www.yedaham.co.kr/images/common/bg_table_bar.png") repeat-y left top;
+}
+
+/* 영상정보처리기기 운영관리지침*/
+.pps_area table.terms_table {
+	width: 100%;
+}
+
+.pps_area table.terms_table tr th,
+.pps_area table.terms_table tr td {
+	border: 1px solid #dfdcd9;
+}
+
+.pps_area table.terms_table tr th {
+	font-weight: bold;
+	height: 36px;
+	line-height: 14px;
+	background-color: #fbf6ef;
+	color: #494233;
+	font-size: 14px;
+}
+
+.pps_area table.terms_table tr td {
+	line-height: 16px;
+	padding: 10px 0;
+	background: #ffffff;
+	color: #494233;
+	text-align: center;
+}
+
+.pps_area table.terms_table tr td.cleft {
+	text-align: left;
+	padding-left: 10px;
+}
+
+/* 메뉴별 상단 백그라운드*/
+.bg_cyber_center {
+	background: url("https://www.yedaham.co.kr/images/cyber_center/bg_cyber_center.png") no-repeat right bottom;
+}
+
+.bg_cyber_center03 {
+	background: url("https://www.yedaham.co.kr/images/cyber_center/bg_cyber_center.png") no-repeat right 18px;
+}
+
+.bg_customer {
+	background: url("https://www.yedaham.co.kr/images/customer/bg_customer.png") no-repeat right bottom;
+}
+
+.bg_login_center {
+	background: url("https://www.yedaham.co.kr/images/login_center/bg_login_center.png") no-repeat right bottom;
+}
+
+.bg_greeting {
+	background: url("https://www.yedaham.co.kr/images/about/bg_greeting.png") no-repeat right bottom;
+}
+
+.bg_information {
+	background: url("https://www.yedaham.co.kr/images/information/bg_information.png") no-repeat right bottom;
+}
+
+.bg_sitemap {
+	background: url("https://www.yedaham.co.kr/images/etc/sitemap/bg_sitemap.png") no-repeat right bottom;
+}
+
+.bg_modify {
+	background: url("https://www.yedaham.co.kr/images/cyber_center/bg_cyber_center.png") no-repeat right bottom;
+}
+
+.bg_contract {
+	background: url("https://www.yedaham.co.kr/images/contract/bg_contract.png") no-repeat right bottom;
+}
+
+.bg_about {
+	background: url("https://www.yedaham.co.kr/images/about/bg_about.png") no-repeat right bottom;
+}
+
+.bg_product {
+	background: url("https://www.yedaham.co.kr/images/product/bg_product.png") no-repeat right bottom;
+}
+
+.bg_supplementary_service {
+	background: url("https://www.yedaham.co.kr/images/supplementary_service/bg_supplementary_service.png") no-repeat right bottom;
+}
+
+/* 인풋 스타일*/
+.form-input {
+	border: 1px solid #dedbd8;
+	width: 100%;
+	line-height: 40px;
+	vertical-align: middle;
+	height: 40px;
+}
+
+.form-input02 {
+	border: 1px solid #dedbd8;
+	width: 100%;
+	line-height: 16px;
+	padding: 12px 10px;
+	vertical-align: middle;
+	background: #f7f6f5;
+}
+
+/* 본인 인증*/
+p.authentication_e​xplanation {
+	text-align: center;
+	font-size: 14px;
+	color: #494233;
+	font-weight: bold;
+	line-height: 24px;
+	letter-spacing: -0.02em;
+}
+
+p.authentication_e​xplanation span {
+	color: #c87c1e;
+}
+
+.authentication_select {
+	overflow: hidden;
+	margin: 60px 0;
+	background: url("https://www.yedaham.co.kr/images/common/bg_center_bar.png") repeat-y center center;
+}
+
+.authentication_select .auth01 {
+	float: left;
+}
+
+.authentication_select .auth02 {
+	float: right;
+}
+
+.authentication_select .auth_list {
+	width: 375px;
+	text-align: center;
+	color: #7f7a70;
+	line-height: 18px;
+}
+
+.authentication_select .auth_list img {
+	margin: 0 0 29px 0;
+}
+
+.authentication_select .auth_list span {
+	display: block;
+	margin: 0 0 13px 0;
+	font-weight: bold;
+	font-size: 16px;
+	color: #494233;
+}
+
+.authentication_select .auth_list button {
+	display: block;
+	margin: 0 auto;
+	margin-top: 28px;
+	width: 170px;
+	height: 40px;
+	background: #494233;
+	border: none;
+	color: #ffffff;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.auth_caution {
+	padding: 21px 23px;
+	background: #f9f2e8;
+}
+
+.auth_caution p {
+	color: #c87c1e;
+	font-weight: bold;
+	line-height: 20px;
+}
+
+.auth_caution ul {
+	margin: 13px 0 0 0;
+}
+
+.auth_caution ul li {
+	color: #6c6557;
+	font-size: 11px;
+	line-height: 18px;
+}
+
+.auth_download_file {
+	overflow: hidden;
+	margin: 10px 0 0 0;
+}
+
+.auth_download_file .down01 {
+	float: left;
+}
+
+.auth_download_file .down02 {
+	float: right;
+}
+
+.auth_download_file .down_file {
+	width: 369px;
+	height: 60px;
+	border: 1px solid #c87c1e;
+	text-align: center;
+	font-size: 11px;
+	color: #8d8679;
+}
+
+.auth_download_file .down_file a {
+	display: inline-block;
+	margin: 14px 0 7px 0;
+	font-size: 12px;
+	font-weight: bold;
+	color: #c87c1e;
+}
+
+.auth_download_file .down_file a:hover {
+	text-decoration: underline;
+}
+
+.auth_download_file .down_file2 {
+	width: 366px;
+	border: 2px solid #c87c1e;
+	text-align: center;
+	font-size: 12px;
+	color: #f4e5d2;
+}
+
+.auth_download_file .down_file2 p {
+	height: 74px;
+	border: 1px solid #ffffff;
+	background-color: #c87c1e;
+}
+
+.auth_download_file .down_file2 a {
+	display: inline-block;
+	margin: 16px 0 10px 0;
+	font-size: 16px;
+	font-weight: bold;
+	color: #ffffff;
+}
+
+.auth_download_file .down_file2 a:hover {
+	text-decoration: underline;
+}
+
+p.ie9 {
+	padding: 10px 0 0 0;
+	text-align: center;
+	font-size: 14px;
+	color: #494233;
+	line-height: 20px;
+}
+
+p.ie9 span {
+	font-weight: bold;
+}
+
+/* 회원가입 수정 2017-01-12*/
+.authentication_select2 {
+	position: relative;
+	overflow: hidden;
+	margin: 60px 0;
+	background: url("https://www.yedaham.co.kr/images/common/bg_center_bar.png") repeat-y 251px center;
+}
+
+.authentication_select2 .auth01 {
+	width: 250px;
+	float: left;
+}
+
+.authentication_select2 .auth02 {
+	width: 275px;
+	margin-left: 251px;
+}
+
+.authentication_select2 .auth_list {
+	font-size: 14px;
+	text-align: center;
+	color: #7f7a70;
+	line-height: 20px;
+}
+
+.authentication_select2 .auth_list img {
+	margin: 0 0 29px 0;
+}
+
+.authentication_select2 .auth_list span {
+	display: block;
+	margin: 0 0 13px 0;
+	font-weight: bold;
+	font-size: 16px;
+	color: #494233;
+}
+
+.authentication_select2 .auth_list button {
+	display: block;
+	margin: 0 auto;
+	margin-top: 28px;
+	width: 170px;
+	height: 40px;
+	background: #494233;
+	border: none;
+	color: #ffffff;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.authentication_select2 .auth_list_right {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 180px;
+	height: 236px;
+	padding: 0 0 0 36px;
+	background: url("https://www.yedaham.co.kr/images/login_center/bg_auth_right.png") no-repeat left top;
+}
+
+.authentication_select2 .auth_list_right p.au_right_tit {
+	margin-top: 23px;
+	color: #494233;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 18px;
+}
+
+.authentication_select2 .auth_list_right p.au_right_txt {
+	margin-top: 15px;
+	color: #666666;
+	font-size: 12px;
+	line-height: 18px;
+}
+
+.authentication_select2 .auth_list_right a {
+	margin-top: 38px;
+	display: block;
+	width: 160px;
+	height: 30px;
+	line-height: 30px;
+	background: #ffffff;
+	text-align: center;
+	font-weight: bold;
+	color: #494233;
+	font-size: 12px;
+	border: 1px solid #d4d4d4;
+}
+
+/* 선택 페이지*/
+.area_select {
+	overflow: hidden;
+	margin: 60px 0;
+	padding: 0 87px;
+	background: url("https://www.yedaham.co.kr/images/common/bg_center_bar.png") repeat-y center center;
+}
+
+.area_select .area01 {
+	float: left;
+}
+
+.area_select .area02 {
+	float: right;
+}
+
+.area_select .area_list {
+	width: 220px;
+	text-align: center;
+	color: #7f7a70;
+	line-height: 18px;
+	font-size: 12px;
+}
+
+.area_select .area_list img {
+	margin: 0 0 29px 0;
+}
+
+.area_select .area_list span.title {
+	display: block;
+	margin: 0 0 13px 0;
+	font-weight: bold;
+	font-size: 16px;
+	color: #494233;
+}
+
+.area_select .area_list span.tel {
+	display: block;
+	margin: 13px 0 0 0;
+	font-size: 14px;
+	color: #c87c1e;
+}
+
+.area_select .area_list a {
+	display: inline-block;
+	margin: 28px 0 0 0;
+	width: 170px;
+	height: 40px;
+	background: #494233;
+	border: none;
+	color: #ffffff;
+	font-weight: bold;
+	line-height: 38px;
+}
+
+/* 입력폼 테이블*/
+table.input_table {
+	width: 100%;
+}
+
+table.input_table tr th {
+	font-size: 14px;
+	color: #494233;
+	font-weight: bold;
+	letter-spacing: -0.06em;
+}
+
+table.input_table tr th.vtop {
+	vertical-align: top;
+	padding-top: 10px;
+}
+
+table.input_table tr td {
+	padding: 3px 0;
+}
+
+table.input_table tr td input,
+table.input_table tr td select {
+	margin: 2px 0;
+}
+
+table.input_table tr.line td {
+	height: 25px;
+	background: url("https://www.yedaham.co.kr/images/cyber_center/application/bg_table_line.png") repeat-x center center;
+}
+
+table.input_table tr span.info_show {
+	display: inline-block;
+	min-width: 190px;
+	margin: 2px 0;
+	padding: 14px 15px 12px 15px;
+	line-height: 14px;
+	background: #f7f6f5;
+	font-size: 14px;
+}
+
+table.input_table tr span.info_show02 {
+	display: inline-block;
+	width: 590px;
+	margin: 2px 0;
+	padding: 14px 15px 12px 15px;
+	line-height: 22px;
+	background: #f7f6f5;
+	font-size: 14px;
+}
+
+table.input_table tr th.sub_tit {
+	font-size: 12px;
+}
+
+table.input_table tr td .agree_select_disabled {
+	padding: 9px 0 10px 0;
+	height: 21px;
+}
+
+table.input_table tr td.input_txt_etc {
+	overflow: hidden;
+	font-size: 11px;
+	color: #aaaaaa;
+}
+
+table.input_table tr td.input_txt_etc span {
+	color: #c87c1e;
+	font-weight: bold;
+}
+
+table.input_table tr td span.pass_info {
+	display: inline-block;
+	margin: 0 0 0 13px;
+	color: #999999;
+	font-size: 11px;
+	line-height: 16px;
+	letter-spacing: -0.06em;
+	vertical-align: middle;
+}
+
+table.input_table tr th.bul_star {
+	padding: 0 0 0 10px;
+	background: url("https://www.yedaham.co.kr/images/common/bg_bul_star.png") no-repeat left center;
+}
+
+/* 라디오,체트박스 선택 리스트 */
+ul.select_list_wrap {
+	border-top: 1px solid #dedbd8;
+}
+
+ul.select_list_wrap li {
+	overflow: hidden;
+	height: 50px;
+	border: 1px solid #dedbd8;
+	border-top: none;
+}
+
+ul.select_list_wrap li p {
+	float: left;
+	padding: 19px 0 0 19px;
+	font-weight: bold;
+	color: #494233;
+	letter-spacing: -0.05em;
+}
+
+ul.select_list_wrap li .agree_select,
+ul.select_list_wrap li .agree_chk {
+	float: right;
+	margin: 14px 19px 0 0;
+}
+
+ul.select_list_wrap li .agree_select,
+ul.select_list_wrap li .agr_txt {
+	font-weight: normal;
+}
+
+ul.select_list_wrap li .agree_select_disabled {
+	float: right;
+	margin: 14px 19px 0 0;
+}
+
+ul.select_list_wrap02 li {
+	overflow: hidden;
+	height: 50px;
+}
+
+ul.select_list_wrap02 li p {
+	float: left;
+	padding: 19px 0 0 19px;
+	font-weight: bold;
+	color: #494233;
+	letter-spacing: -0.05em;
+}
+
+ul.select_list_wrap02 li .agree_select,
+ul.select_list_wrap02 li .agree_chk {
+	float: right;
+	margin: 14px 19px 0 0;
+}
+
+ul.select_list_wrap02 li .agree_select,
+ul.select_list_wrap02 li .agr_txt {
+	font-weight: normal;
+}
+
+ul.select_list_wrap02 li .agree_select_disabled {
+	float: right;
+	margin: 14px 19px 0 0;
+}
+
+/* 사이버창구 온라인 상품가입*/
+ul.select_list_wrap03 {
+	border-top: 1px solid #dedbd8;
+}
+
+ul.select_list_wrap03 li {
+	overflow: hidden;
+	height: 50px;
+	border: 1px solid #dedbd8;
+	border-top: none;
+}
+
+ul.select_list_wrap03 li p {
+	float: left;
+	padding: 19px 0 0 19px;
+	font-weight: bold;
+	color: #494233;
+	letter-spacing: -0.05em;
+}
+
+ul.select_list_wrap03 li .agree_select {
+	padding: 0 0 0 30px;
+}
+
+ul.select_list_wrap03 li .agree_select span.agr_txt {
+	margin: 0 35px 0 0;
+}
+
+ul.select_list_wrap03 li .agree_select,
+ul.select_list_wrap03 li .agree_chk {
+	margin: 14px 19px 0 0;
+}
+
+ul.select_list_wrap03 li .agree_select,
+ul.select_list_wrap03 li .agr_txt {
+	font-weight: normal;
+}
+
+ul.select_list_wrap03 li .agree_select_disabled {
+	float: right;
+	margin: 14px 19px 0 0;
+}
+
+/* 소제목*/
+.info_title {
+	position: relative;
+	padding: 15px 0 12px 16px;
+	background: url("https://www.yedaham.co.kr/images/common/bul_circle.png") no-repeat left center;
+	color: #412900;
+	font-size: 16px;
+	font-weight: bold;
+	letter-spacing: -0.02em;
+}
+
+.info_title span {
+	display: inline-block;
+	margin: 0 0 0 14px;
+	color: #c87c1e;
+	font-size: 12px;
+	font-weight: normal;
+	letter-spacing: 0em;
+	vertical-align: middle;
+}
+
+.info_title span.txt02 {
+	display: inline-block;
+	margin: 0 0 0 10px;
+	color: #6c6659;
+	font-size: 11px;
+	font-weight: normal;
+	letter-spacing: 0em;
+	vertical-align: middle;
+}
+
+.info_title span.txt03 {
+	display: inline-block;
+	margin: 0 0 0 14px;
+	color: #c87c1e;
+	font-size: 14px;
+	font-weight: normal;
+	letter-spacing: 0em;
+	vertical-align: middle;
+}
+
+.info_title p.btns {
+	position: absolute;
+	right: 0;
+	top: 8px;
+}
+
+.info_title a.btn02 {
+	position: absolute;
+	right: 0;
+	top: 0px;
+}
+
+.info_title span.abr {
+	position: absolute;
+	right: 0;
+	top: 17px;
+	font-size: 12px;
+	color: #494233;
+}
+
+.info_title02 {
+	color: #412900;
+	font-size: 14px;
+	font-weight: bold;
+	letter-spacing: -0.02em;
+}
+
+.info_title03 {
+	padding: 0 0 0 16px;
+	background: url("https://www.yedaham.co.kr/images/common/bul_circle.png") no-repeat left center;
+	color: #412900;
+	font-size: 16px;
+	font-weight: bold;
+	letter-spacing: -0.02em;
+}
+
+.info_title04 {
+	padding: 0 0 0 16px;
+	background: url("https://www.yedaham.co.kr/images/common/bul_circle.png") no-repeat left 8px;
+	color: #412900;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.info_title05 {
+	color: #412900;
+	font-size: 26px;
+	font-weight: bold;
+	letter-spacing: -0.02em;
+}
+
+.info_title06 {
+	color: #412900;
+	font-size: 45px;
+	font-weight: bold;
+	letter-spacing: -0.02em;
+}
+
+/* 주의 영역*/
+.attention_box {
+	position: relative;
+	padding: 15px 15px;
+	background: #f9f2e8;
+	font-size: 14px;
+}
+
+.attention_box p {
+	color: #c87c1e;
+	font-weight: bold;
+	line-height: 20px;
+	font-size: 14px;
+}
+
+.attention_box p.big {
+	font-size: 14px;
+	text-align: center;
+}
+
+.attention_box p.big span {
+	color: #494233;
+}
+
+.attention_box p.big a {
+	position: static;
+}
+
+.attention_box ul {
+	width: 500px;
+}
+
+.attention_box ul.long {
+	width: 100%;
+}
+
+.attention_box ul li {
+	color: #494233;
+	line-height: 24px;
+	font-size: 14px;
+}
+
+.attention_box ul li span {
+	color: #c87c1e;
+	font-weight: bold;
+}
+
+.attention_box ul li span.under {
+	text-decoration: underline;
+	color: #c87c1e;
+	font-weight: bold;
+}
+
+.attention_box a {
+	position: absolute;
+	right: 20px;
+	top: 0px;
+}
+
+.attention_box span.tip {
+	color: #c87c1e;
+	font-weight: bold;
+}
+
+.attention_box p.cent {
+	color: #494233;
+	font-size: 11px;
+	text-align: center;
+	font-weight: normal;
+	line-height: 16px;
+}
+
+.attention_box ul.program li {
+	color: #494233;
+	line-height: 20px;
+	font-size: 12px;
+}
+
+.attention_box ul.program li span {
+	color: #494233;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+/* 덧글*/
+.reply_wrap {
+	padding: 9px;
+	background: #f7f4f1;
+	border: 1px solid #dedbd8;
+}
+
+.reply_wrap .reply_write {
+	position: relative;
+}
+
+.reply_wrap .reply_write button {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.reply_wrap .reply_write p {
+	text-align: right;
+	margin: 5px 90px 0 0;
+	font-size: 11px;
+	color: #aaaaaa;
+}
+
+.reply_wrap .reply_write p span {
+	color: #c87c1e;
+	font-weight: bold;
+}
+
+.reply_wrap ul.reply_list li {
+	padding: 17px 0 17px 10px;
+	border-top: 1px solid #dedbd8;
+	position: relative;
+}
+
+.reply_wrap ul.reply_list li:first-child {
+	border-top: none;
+}
+
+.reply_wrap ul.reply_list .re_id {
+	margin: 0 0 5px 0;
+	color: #999999;
+	font-size: 11px;
+}
+
+.reply_wrap ul.reply_list .re_id span {
+	color: #494233;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.reply_wrap ul.reply_list .re_id button {
+	display: inline-block;
+	width: 9px;
+	height: 8px;
+	background: url("https://www.yedaham.co.kr/images/common/delete_reply.png") no-repeat center center;
+	border: none;
+	text-indent: -9999px;
+	vertical-align: middle;
+}
+
+.reply_wrap ul.reply_list .re_txt {
+	color: #444444;
+	line-height: 18px;
+}
+
+.reply_wrap ul.reply_list .re_modi {
+	position: absolute;
+	right: 0;
+	top: 17px;
+	color: #999999;
+	font-size: 12px;
+}
+
+.reply_wrap ul.reply_list .re_modi button {
+	color: #999999;
+	font-size: 12px;
+	border: none;
+	background-color: #f7f4f1;
+}
+
+.reply_wrap ul.reply_list .re_modi a {
+	color: #999999;
+	font-size: 12px;
+}
+
+.reply_wrap ul.reply_list .reply_textarea {
+	padding: 0 0 0 30px;
+	background: url("https://www.yedaham.co.kr/images/icon/icon_reply.png") no-repeat left 5px;
+}
+
+/* 관련사, 호텔 ,예다함 상품 리스트*/
+ul.img_family_list {
+	overflow: hidden;
+	width: 764px;
+}
+
+ul.img_family_list li {
+	float: left;
+	width: 372px;
+	margin: 0 9px 9px 0;
+}
+
+ul.img_family_list li p {
+	position: relative;
+	padding: 15px 0 14px 14px;
+	border: 1px solid #dedbd8;
+	border-top: none;
+	font-size: 16px;
+	line-height: 30px;
+	font-weight: bold;
+	color: #444444;
+}
+
+ul.img_family_list li p img {
+	margin: 0 10px 0 0;
+}
+
+ul.img_family_list li p span {
+	position: absolute;
+	right: 14px;
+	top: 15px;
+	font-size: 12px;
+	font-weight: normal;
+	color: #999999;
+}
+
+ul.img_family_list02 {
+	overflow: hidden;
+	width: 764px;
+}
+
+ul.img_family_list02 li {
+	float: left;
+	width: 244px;
+	margin: 0 10px 10px 0;
+}
+
+ul.img_family_list02 li p {
+	position: relative;
+	padding: 15px 0 12px 10px;
+	border: 1px solid #dedbd8;
+	border-top: none;
+	font-size: 14px;
+	line-height: 25px;
+	font-weight: bold;
+	color: #444444;
+}
+
+ul.img_family_list02 li p img {
+	margin: 0 10px 0 0;
+}
+
+.family_top {
+	overflow: hidden;
+	margin: 20px 0 0 0;
+}
+
+.family_top img.family_img {
+	float: left;
+}
+
+.family_top .top_info {
+	float: right;
+	position: relative;
+	width: 360px;
+	height: 240px;
+}
+
+.family_top p.family_title {
+	padding: 10px 0 0 0;
+	font-size: 16px;
+	line-height: 25px;
+	font-weight: bold;
+	color: #444444;
+}
+
+.family_top p.family_title img {
+	margin: 0 10px 0 0;
+}
+
+.family_top p.family_txt {
+	margin: 15px 0 0 0;
+	font-size: 12px;
+	line-height: 18px;
+	color: #444444;
+}
+
+.family_top .top_info p.hotel_btn {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+
+/*서비스 프로세스 */
+ul.service_infol_process {
+	overflow: hidden;
+}
+
+ul.service_infol_process li {
+	position: relative;
+	float: left;
+	width: 244px;
+	height: 160px;
+	margin: 0 0 0 6px;
+	background: url("https://www.yedaham.co.kr/images/common/bg_service_process_line.png") repeat-x left bottom;
+	text-align: center;
+	border-left: 1px solid #e9caa5;
+	border-right: 1px solid #e9caa5;
+}
+
+ul.service_infol_process li:first-child {
+	margin: 0;
+}
+
+ul.service_infol_process li:before {
+	display: block;
+	width: 100%;
+	height: 4px;
+	content: "";
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	background: url("https://www.yedaham.co.kr/images/common/bg_service_process_line.png") repeat-x left top;
+}
+
+ul.service_infol_process li:after {
+	display: block;
+	width: 30px;
+	height: 100%;
+	content: "";
+	position: absolute;
+	left: -18px;
+	top: 0px;
+	background: url("https://www.yedaham.co.kr/images/common/bg_service_arrow.png") no-repeat left center;
+}
+
+ul.service_infol_process li:first-child:after {
+	display: none;
+}
+
+ul.service_infol_process li p.pr01 {
+	margin: 24px 0 0 0;
+	font-size: 12px;
+	font-weight: bold;
+	color: #c87c1e;
+}
+
+ul.service_infol_process li p.pr02 {
+	margin: 5px 0 0 0;
+	font-size: 16px;
+	font-weight: bold;
+	color: #412900;
+	line-height: 20px;
+}
+
+ul.service_infol_process li p.pr02 span {
+	color: #c87c1e;
+}
+
+ul.service_infol_process li p.pr03 {
+	margin: 10px 0 0 0;
+	font-size: 14px;
+	line-height: 22px;
+	color: #412900;
+}
+
+ul.service_infol_process li p.pr_img {
+	height: 80px;
+}
+
+ul.service_infol_process li p.bg01 {
+	background: url("https://www.yedaham.co.kr/images/about/recruit/icon01.png") no-repeat center 24px;
+}
+
+ul.service_infol_process li p.bg02 {
+	background: url("https://www.yedaham.co.kr/images/about/recruit/icon02.png") no-repeat center 24px;
+}
+
+ul.service_infol_process li p.bg03 {
+	background: url("https://www.yedaham.co.kr/images/about/recruit/icon03.png") no-repeat center 28px;
+}
+
+ul.service_infol_process li p.bg04 {
+	background: url("https://www.yedaham.co.kr/images/about/recruit/icon04.png") no-repeat center 24px;
+}
+
+ul.service_infol_process li p.bg05 {
+	background: url("https://www.yedaham.co.kr/images/about/recruit/icon05.png") no-repeat center 26px;
+}
+
+ul.h120 li {
+	width: 143px;
+	height: 120px !important;
+}
+
+ul.h120 li p.pr01 {
+	margin: 30px 0 0 0 !important;
+}
+
+ul.h100 li {
+	width: 143px;
+	height: 100px !important;
+}
+
+ul.h100 li p.pr01 {
+	margin: 30px 0 0 0 !important;
+}
+
+ul.h180 li {
+	width: 244px;
+	height: 180px !important;
+}
+
+ul.h180 li p.pr01 {
+	margin: 20px 0 0 0 !important;
+}
+
+ul.h180 li p.pr03 span {
+	font-size: 12px;
+	color: #c87c1e;
+}
+
+/* 에러 페이지 */
+.error_wrap {
+	padding: 195px 0;
+	text-align: center;
+}
+
+.error_wrap .p1 {
+	color: #494233;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.error_wrap .p2 {
+	color: #494233;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+p.etc_info_txt {
+	font-size: 14px;
+	color: #494233;
+	line-height: 22px;
+}
+
+p.etc_info_txt span.fb {
+	color: #494233;
+	font-weight: bold;
+}
+
+p.etc_info_txt span {
+	color: #c87c1e;
+}
+
+p.info_txt {
+	font-size: 14px;
+	color: #412900;
+	line-height: 22px;
+}
+
+p.info_txt span.fb {
+	color: #412900;
+	font-weight: bold;
+}
+
+p.info_txt span {
+	color: #c87c1e;
+}
+
+p.info_txt span.space {
+	display: inline-block;
+	width: 35px;
+}
+
+p.info_txt02 {
+	font-size: 14px;
+	color: #412900;
+	line-height: 30px;
+	font-weight: bold;
+}
+
+p.info_txt02 span {
+	color: #c87c1e;
+}
+
+/* 만족도 평가*/
+.evaluation_area02 {
+	padding: 20px 0 20px 0;
+	background: #ffffff;
+	border: 1px solid #c87c1e;
+}
+
+.evaluation_area02 p.title {
+	color: #c87c1e;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.evaluation_area02 p.title img {
+	margin: 0 14px 0 0;
+	vertical-align: middle;
+}
+
+.evaluation_area02 p.txt {
+	color: #494233;
+	font-size: 14px;
+	text-align: center;
+}
+
+.evaluation_area02 ul.stars_list {
+	overflow: hidden;
+	margin: 25px 0 15px 0;
+}
+
+.evaluation_area02 ul.stars_list li {
+	margin: 0 0 10px 0;
+	width: 50%;
+	float: left;
+}
+
+.evaluation_area02 ul.stars_list li .input_radio {
+	margin: 0 0 0 60px;
+	vertical-align: middle;
+}
+
+.evaluation_area02 ul.stars_list li img {
+	margin: 0 8px;
+	vertical-align: middle;
+}
+
+.evaluation_area02 p.button_a {
+	text-align: center;
+}
+
+.evaluation_area03 {
+	padding: 20px 0 20px 0;
+	background: #ffffff;
+	border: 1px solid #c87c1e;
+}
+
+.evaluation_area03 p.title {
+	color: #c87c1e;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.evaluation_area03 p.txt {
+	color: #494233;
+	font-size: 14px;
+	text-align: center;
+}
+
+.evaluation_area03 ul.stars_list {
+	overflow: hidden;
+	margin: 25px 0 10px 0;
+	padding: 0 0 0 76px;
+	height: 64px;
+	background: url("https://www.yedaham.co.kr/images/product/product/bg_evaluation.png") no-repeat center center;
+}
+
+.evaluation_area03 ul.stars_list li {
+	margin: 20px 0 0 0;
+	width: 60px;
+	float: left;
+	color: #ffffff;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 22px;
+}
+
+.evaluation_area03 ul.stars_list li .input_radio {
+	vertical-align: middle;
+}
+
+.evaluation_area03 p.button_a {
+	text-align: center;
+}
+
+.evaluation_area03 .eva_jus {
+	overflow: hidden;
+	margin: 0 0 15px 0;
+}
+
+.evaluation_area03 .eva_jus span {
+	display: inline-block;
+	padding: 0 30px;
+	color: #494233;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.evaluation_area {
+	padding: 30px;
+	background: #ffffff;
+	border: 1px solid #c87c1e;
+}
+
+.evaluation_area p.title {
+	color: #c87c1e;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.evaluation_area p.txt {
+	color: #494233;
+	font-size: 14px;
+	text-align: center;
+}
+
+.evaluation_area .star_score {
+	position: relative;
+}
+
+.evaluation_area .star_score .eva_logo {
+	position: absolute;
+	left: 0;
+	top: 10px;
+}
+
+.evaluation_area .star_score .stars {
+	padding: 10px 0 0 0;
+}
+
+.star_wrap {
+	margin: 0 0 0 296px;
+	overflow: hidden;
+	width: 160px;
+}
+
+.star_wrap span.star {
+	float: left;
+	display: inline-block;
+	width: 16px;
+	height: 30px;
+}
+
+.star_wrap span.starL {
+	background: url("https://www.yedaham.co.kr/images/common/bg_starL.png") no-repeat left top;
+}
+
+.star_wrap span.starR {
+	background: url("https://www.yedaham.co.kr/images/common/bg_starR.png") no-repeat left top;
+}
+
+.star_wrap span.starL.on {
+	background: url("https://www.yedaham.co.kr/images/common/bg_starL_on.png") no-repeat left top;
+}
+
+.star_wrap span.starR.on {
+	background: url("https://www.yedaham.co.kr/images/common/bg_starR_on.png") no-repeat left top;
+}
+
+.star_wrap span button {
+	display: block;
+	width: 16px;
+	height: 30px;
+	text-indent: -9999px;
+	border: none;
+	background: none;
+}
+
+/* 사랑 다함 상세 페이지*/
+.contribution_top {
+	overflow: hidden;
+}
+
+.contribution_top .contribution_visual {
+	float: left;
+}
+
+.contribution_top .contribution_count_area {
+	float: right;
+}
+
+.contribution_container {
+	padding: 0px 30px 50px 30px;
+	background: #ffffff;
+	border: 1px solid #dedbd8;
+	border-top: none;
+}
+
+/* 사랑다함 누적 건수&기부액*/
+.m4_count_area {
+	position: absolute;
+	left: 576px;
+	top: 155px;
+}
+
+.m4_count_area .count_view {
+	width: 352px;
+	height: 86px;
+	padding: 20px;
+	background: #fffefa;
+	border: 1px solid #e5cb79;
+}
+
+.contribution_count_area .count_view {
+	width: 352px;
+	height: 86px;
+	padding: 20px;
+	background: #fffefa;
+	border: 1px solid #dedbd8;
+}
+
+.count_view .count_tit {
+	position: relative;
+}
+
+.count_view .count_tit .img_right {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+
+.count_view .comma {
+	margin: 0 5px 0 4px;
+}
+
+.count_view .n_unit {
+	float: right;
+}
+
+.contr_img {
+	padding: 30px 0 0 0;
+	overflow: hidden;
+}
+
+.contr_img .img_title {
+	width: 400px;
+	padding: 5px 0 0 0px;
+	font-size: 16px;
+	color: #412900;
+	line-height: 22px;
+	font-weight: bold;
+	text-align: left;
+}
+
+.contr_img .img_txt {
+	width: 400px;
+	padding: 10px 0 0 0px;
+	font-size: 14px;
+	color: #412900;
+	line-height: 22px;
+	letter-spacing: -0.03em;
+}
+
+span.contribution_yellow {
+	display: inline-block;
+	margin: 0px;
+	color: #c87c1e;
+	font-size: 16px;
+	font-weight: bold;
+	letter-spacing: 0em;
+	vertical-align: top;
+}
+
+.contr_img ul {
+	padding: 10px 0 0 0px;
+	font-size: 14px;
+	color: #412900;
+	font-weight: bold;
+	line-height: 22px;
+}
+
+.contr_img ul li {
+	position: relative;
+	padding: 0 0 0 12px;
+	background: url("https://www.yedaham.co.kr/images/common/bul_circle.png") no-repeat left center;
+}
+
+.contr_img ul li span {
+	color: #c87c1e;
+	text-decoration: none;
+}
+
+.contr_img ul li a.btn_news {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	display: block;
+	width: 66px;
+	height: 24px;
+	line-height: 24px;
+	border: 1px solid #d9d9d9;
+	color: #494233;
+	font-size: 12px;
+	text-align: center;
+}
+
+/* 기타 사회공헌 활동*/
+.contr_img2 {
+	overflow: hidden;
+}
+
+.contr_img2 .img_txt {
+	width: 400px;
+	font-size: 14px;
+	color: #412900;
+	line-height: 22px;
+	letter-spacing: -0.03em;
+}
+
+body#print_wrap .btn_area_right {
+	display: none;
+}
+
+/* 버튼 css*/
+p.btn_area {
+	text-align: center;
+	position: relative;
+}
+
+p.btn_area_right {
+	text-align: right;
+	position: relative;
+}
+
+p.btn_area_left {
+	text-align: left;
+	position: relative;
+}
+
+p.btn_area_right .btn_left {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+p.btn_area a {
+	margin: 0 1px;
+}
+
+a.btn_type01 {
+	display: inline-block;
+	width: 170px;
+	height: 40px;
+	line-height: 40px;
+	vertical-align: middle;
+	background: #c87c1e;
+	text-align: center;
+	color: #ffffff;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+a.btn_white {
+	display: inline-block;
+	width: 168px;
+	height: 38px;
+	line-height: 38px;
+	vertical-align: middle;
+	background: #ffffff;
+	text-align: center;
+	color: #706857;
+	border: 1px solid #c1bdb6;
+	font-size: 14px;
+}
+
+a.btn_white_small {
+	margin: 3px 0;
+	display: inline-block;
+	width: 78px;
+	height: 30px;
+	line-height: 30px;
+	vertical-align: middle;
+	background: #ffffff;
+	text-align: center;
+	color: #706857;
+	border: 1px solid #c1bdb6;
+	font-size: 12px;
+}
+
+a.btn_white02 {
+	display: inline-block;
+	width: 120px;
+	height: 38px;
+	line-height: 38px;
+	vertical-align: middle;
+	background: #ffffff;
+	text-align: center;
+	color: #706857;
+	border: 1px solid #c1bdb6;
+	font-size: 14px;
+}
+
+a.btn_white03 {
+	display: inline-block;
+	width: 188px;
+	height: 38px;
+	line-height: 38px;
+	vertical-align: middle;
+	background: #ffffff;
+	text-align: center;
+	color: #c87c1e;
+	border: 1px solid #c87c1e;
+	font-size: 14px;
+}
+
+a.btn_brown {
+	display: inline-block;
+	width: 170px;
+	height: 40px;
+	line-height: 40px;
+	vertical-align: middle;
+	background: #494233;
+	text-align: center;
+	color: #ffffff;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+a.btn_brown02 {
+	display: inline-block;
+	width: 170px;
+	height: 40px;
+	line-height: 40px;
+	vertical-align: middle;
+	background: #836c55;
+	text-align: center;
+	color: #ffffff;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+a.btn_brown04 {
+	display: inline-block;
+	width: 170px;
+	height: 40px;
+	line-height: 40px;
+	vertical-align: middle;
+	background: #7b5a35;
+	text-align: center;
+	color: #ffffff;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+a.btn_gray {
+	display: inline-block;
+	width: 118px;
+	height: 38px;
+	line-height: 38px;
+	vertical-align: middle;
+	background: #f7f6f5;
+	text-align: center;
+	color: #706857;
+	border: 1px solid #c1bdb6;
+	font-size: 14px;
+}
+
+.ab_R {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+/* 계산 중 이미지*/
+#progress_img {
+	display: none;
+	margin: 0 1px;
+}
+
+button.btn_type01 {
+	display: inline-block;
+	width: 168px;
+	height: 40px;
+	line-height: 38px;
+	background: #c87c1e;
+	text-align: center;
+	color: #ffffff;
+	border: 1px solid #c87c1e;
+	vertical-align: middle;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+button.btn_type02 {
+	display: inline-block;
+	width: 168px;
+	height: 40px;
+	line-height: 38px;
+	background: #c87c1e;
+	text-align: center;
+	color: #ffffff;
+	border: 1px solid #c87c1e;
+	vertical-align: middle;
+	font-weight: bold;
+	font-size: 46px;
+}
+
+button.btn_white {
+	display: inline-block;
+	width: 168px;
+	height: 40px;
+	line-height: 40px;
+	background: #ffffff;
+	text-align: center;
+	color: #706857;
+	border: 1px solid #c1bdb6;
+	vertical-align: middle;
+	font-size: 14px;
+}
+
+button.btn_white_small {
+	display: inline-block;
+	width: 68px;
+	height: 30px;
+	line-height: 28px;
+	background: #ffffff;
+	text-align: center;
+	color: #706857;
+	border: 1px solid #c1bdb6;
+	vertical-align: middle;
+	font-size: 14px;
+}
+
+button.square {
+	display: inline-block;
+	width: 80px;
+	height: 80px;
+	line-height: 18px;
+	background: #c87c1e;
+	text-align: center;
+	color: #ffffff;
+	border: none;
+	vertical-align: middle;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+button.btn_delete {
+	display: inline-block;
+	width: 120px;
+	height: 40px;
+	border: none;
+	background: url("https://www.yedaham.co.kr/images/common/bg_delete_btn.png") no-repeat center center;
+	text-indent: -9999px;
+}
+
+/* 빈공간 점선*/
+.space_line {
+	height: 1px;
+	background: url("https://www.yedaham.co.kr/images/cyber_center/application/bg_table_line.png") repeat-x center center;
+}
+
+/* 부가설명 */
+span.etc_exp {
+	font-size: 11px;
+	color: #999999;
+}
+
+span.etc_exp02 {
+	font-size: 11px;
+	color: #494233;
+}
+
+.image_none {
+	padding: 100px 0;
+	background: #f7f6f5;
+	text-align: center;
+	font-weight: bold;
+}
+
+#overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: #000000;
+	z-index: 1000;
+}
+
+.eli {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.txt_line {
+	text-decoration: underline;
+}
+
+ul.sitemap_wrap {
+	overflow: hidden;
+	width: 760px;
+}
+
+ul.sitemap_wrap li.m01 {
+	float: left;
+	margin: 0 10px 40px 0;
+	width: 180px;
+}
+
+ul.sitemap_wrap li.m01 ul li {
+	padding: 11px 0;
+	border-bottom: 1px solid #dedbd8;
+	text-align: center;
+}
+
+ul.sitemap_wrap li.m01 ul li a {
+	color: #494233;
+	font-size: 14px;
+	line-height: 18px;
+}
+
+ul.sitemap_wrap li.m01 ul li a:hover {
+	text-decoration: underline;
+}
+
+/* 법인가입 상담신청*/
+.counsel_view_table {
+	width: 100%;
+	border-bottom: 1px solid #efede9;
+}
+
+.counsel_view_table tr.first {
+	background: #fbf9f5;
+	height: 44px;
+}
+
+.counsel_view_table tr.first th {
+	text-align: center;
+	font-size: 14px;
+	color: #494233;
+	font-weight: bold;
+}
+
+.counsel_view_table tr.first td {
+	font-size: 14px;
+	color: #444444;
+}
+
+/* 고객센터 안내 팝업 */
+.total_custcenter_popup {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.75);
+	z-index: 10000;
+}
+
+.total_custcenter_popup .main_contents {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: 500px;
+	height: 330px;
+	margin: -165px 0 0 -250px;
+	background-color: #f7f4f1;
+}
+
+.total_custcenter_popup .main_contents p {
+	text-align: center;
+	margin-top: 5px;
+	font-size: 16px;
+}
+
+.total_custcenter_popup .head {
+	height: 25px;
+	padding: 13px 15px;
+	background-color: #c87c1e;
+}
+
+.total_custcenter_popup .title {
+	display: inline-block;
+	font-size: 20px;
+	font-weight: bold;
+	color: white;
+}
+
+.total_custcenter_popup .logo {
+	position: absolute;
+	right: 15px;
+}
+
+.total_custcenter_popup .sch_icon {
+	position: relative;
+	top: 13px;
+	left: 50%;
+	width: 160px;
+	height: 105px;
+	margin-left: -80px;
+}
+
+.total_custcenter_popup .contents {
+	position: relative;
+	margin-top: 37px;
+}
+
+.total_custcenter_popup .btn {
+	position: relative;
+	left: 50%;
+	margin-left: -85px;
+	margin-top: 15px;
+	cursor: pointer;
+}
+
+
+/* 장지서비스 이용절차 */
+ul.diss-process {
+    display: flex;
+}
+ul.diss-process li {
+    position: relative;
+    vertical-align: top;
+    width: calc(25% - 15px);
+    height: 214px;
+    margin-right: 15px;
+    padding-left: 18px;
+    padding-right: 18px;
+    border-radius: 18px;
+    background: #fcf8f8;
+    border:1px solid #f9eaea;
+    color:#a06551;
+}
+ul.diss-process li::after {
+    display: block;
+    content: "";
+    width:17px;
+    height:17px;
+    background: #fcf8f8;
+    border-width: 1px 1px 0 0;
+    border-color: #f9eaea;
+    border-style: solid;
+    transform: rotate(45deg) translate(5px, -50%);
+    position: absolute;
+    right:0;
+    top:50%;
+    z-index: 1;
+}
+ul.diss-process li:last-child {
+
+    margin-right: 0px;
+}
+ul.diss-process li:last-child::after {
+    display:none;
+}
+ul.diss-process li span.num {
+    display: block;
+    margin-top: 25px;
+    font-size: 22px;
+    font-weight: bold;
+}
+ul.diss-process li p.tit {
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: bold;
+}
+ul.diss-process li p.txt {
+    margin-top: 20px;
+    font-size: 12px;
+    line-height: 18px;
+	letter-spacing: -0.05em;
+}
+
+
+/* 공통 시작 */
+
+/* margin-top */
+.mt0 {
+	margin-top: 0px !important;
+}
+.mt5 {
+	margin-top: 5px !important;
+}
+.mt10 {
+	margin-top: 10px !important;
+}
+.mt15 {
+	margin-top: 15px !important;
+}
+.mt20 {
+	margin-top: 20px !important;
+}
+.mt25 {
+	margin-top: 25px !important;
+}
+.mt30 {
+	margin-top: 30px !important;
+}
+.mt35 {
+	margin-top: 35px !important;
+}
+.mt40 {
+	margin-top: 40px !important;
+}
+.mt45 {
+	margin-top: 45px !important;
+}
+.mt50 {
+	margin-top: 50px !important;
+}
+.mt55 {
+	margin-top: 55px !important;
+}
+.mt60 {
+	margin-top: 60px !important;
+}
+.mt80 {
+	margin-top: 80px !important;
+}
+
+/* margin-bottom */
+.mb5 {
+	margin-bottom: 5px !important;
+}
+.mb10 {
+	margin-bottom: 10px !important;
+}
+.mb15 {
+	margin-bottom: 15px !important;
+}
+.mb20 {
+	margin-bottom: 20px !important;
+}
+.mb25 {
+	margin-bottom: 25px !important;
+}
+.mb30 {
+	margin-bottom: 30px !important;
+}
+.mb35 {
+	margin-bottom: 35px !important;
+}
+.mb40 {
+	margin-bottom: 40px !important;
+}
+
+/* margin-left */
+.ml5 {
+	margin-left: 5px !important;
+}
+.ml10 {
+	margin-left: 10px !important;
+}
+.ml15 {
+	margin-left: 15px !important;
+}
+.ml20 {
+	margin-left: 20px !important;
+}
+.ml25 {
+	margin-left: 25px !important;
+}
+.ml30 {
+	margin-left: 30px !important;
+}
+
+/* margin-right */
+.mr5 {
+	margin-right: 5px !important;
+}
+.mr10 {
+	margin-right: 10px !important;
+}
+.mr15 {
+	margin-right: 15px !important;
+}
+.mr20 {
+	margin-right: 20px !important;
+}
+.mr25 {
+	margin-right: 25px !important;
+}
+.mr30 {
+	margin-right: 30px !important;
+}
+
+/* padding-top */
+.pt5 {
+	padding-top: 5px !important;
+}
+.pt10 {
+	padding-top: 10px !important;
+}
+.pt15 {
+	padding-top: 15px !important;
+}
+.pt20 {
+	padding-top: 20px !important;
+}
+.pt25 {
+	padding-top: 25px !important;
+}
+.pt30 {
+	padding-top: 30px !important;
+}
+.pt35 {
+	padding-top: 35px !important;
+}
+.pt40 {
+	padding-top: 40px !important;
+}
+.pt240 {
+	padding-top: 240px !important;
+}
+
+/* padding-left */
+.pl5 {
+	padding-left: 5px !important;
+}
+.pl10 {
+	padding-left: 10px !important;
+}
+.pl15 {
+	padding-left: 15px !important;
+}
+.pl20 {
+	padding-left: 20px !important;
+}
+.pl25 {
+	padding-left: 25px !important;
+}
+.pl30 {
+	padding-left: 30px !important;
+}
+.pl35 {
+	padding-left: 35px !important;
+}
+.pl40 {
+	padding-left: 40px !important;
+}
+
+/* float */
+.clearfix:after {
+	display: block;
+    content: "";
+    clear: both;
+}
+
+.flowL {
+	float: left;
+}
+.flowR {
+	float: right;
+}
+
+/* font-weight */
+.fnormal {
+	font-weight: normal !important;
+}
+.fbold {
+	font-weight: bold !important;
+}
+
+/* text-align */
+.tCenter {
+	text-align: center !important;
+}
+.tLeft {
+	text-align: left !important;
+}
+.tRight {
+	text-align: right !important;
+}
+
+.bo_no {
+	border: none !important;
+}
+.boB_no {
+	border-bottom: none !important;
+}
+
+/* display */
+.dBlock {
+	display: block !important;
+}
+.dNone {
+	display: block !important;
+}
+
+/* color */
+.yellow {
+	color: #c87c1e !important;
+}
+
+/* font-size */
+.fs12 {
+	font-size: 12px !important;
+}
+.fs13 {
+	font-size: 13px !important;
+}
+.fs14 {
+	font-size: 14px !important;
+}
+.fs15 {
+	font-size: 15px !important;
+}
+.fs16 {
+	font-size: 16px !important;
+}
+.fs17 {
+	font-size: 17px !important;
+}
+.fs18 {
+	font-size: 18px !important;
+}
+.fs18 {
+	font-size: 19px !important;
+}
+.fs20 {
+	font-size: 20px !important;
+}
+
+/* 공통 끝 */

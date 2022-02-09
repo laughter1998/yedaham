@@ -1,0 +1,164 @@
+@charset "UTF-8";
+
+
+nav.pr-nav {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom:20px;
+}
+nav.pr-nav a {
+    width: 100%;
+    display: block;
+    text-align: center;
+    line-height: 55px;
+    color: #a06551;
+    border-top:1px solid #f0e2e2;
+    border-bottom:1px solid #f0e2e2;
+}
+nav.pr-nav a.current {
+    color: #fff;
+    border-top:1px solid #a06551;
+    border-bottom:1px solid #a06551;
+    background-color: #a06551;
+}
+
+section.pr-list {
+    margin-bottom: 15px;
+}
+section.pr-list .pr-thumbnail {
+    position: relative;
+}
+section.pr-list .pr-thumbnail::after {
+    content:'';
+    background: url('../images/about/icon_play.png');
+    background-size: 52px 52px;
+    height: 52px;
+    width: 52px;
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    z-index:11;
+}
+section.pr-list .pr-thumbnail img {
+    width: 100%;
+    border-top-left-radius : 18px ;
+    border-top-right-radius : 18px;
+}
+
+section.pr-list .pr-print-img-wrap {
+    position: relative;
+    padding-top: 40px;
+    text-align: center;
+    border:1px solid #f9eaea;
+    border-bottom: none;
+    border-top-left-radius : 18px ;
+    border-top-right-radius : 18px;
+    background-color: #fcf8f8;
+}
+section.pr-list .pr-print-img-wrap img {
+    width: 200px;
+    box-shadow: 57px 82px 73px 0px rgba(0, 0, 0, 0.15);
+}
+
+section.pr-list .ad_ex{
+    padding: 20px 24px 24px 24px;
+    border: 1px solid #f2f2f2;
+    border-bottom-left-radius : 18px ;
+    border-bottom-right-radius : 18px;
+    box-shadow: 0 5px 5px rgb(242 242 242 / 50%);
+
+}
+section.pr-list .ad_ex .ad_tit {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color:#333;
+}
+section.pr-list .ad_ex .ad_txt {
+    margin-top: 10px;
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    font-weight: 400;
+    color:#666;
+}
+
+.pr-view-top {
+    padding: 50px 10px;
+}
+.pr-view-top h5 {
+    font-family: 'Youth', sans-serif;
+    font-size: 2.8rem;
+    letter-spacing: 0rem;
+    text-align: center;
+}
+.pr-view-top p{
+    margin-top: 10px;
+    text-align: center;
+    font-weight: 350;
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    color: #666666;
+}
+.video-wrap {
+    position: relative;
+    padding-bottom: 56.25%;
+    overflow:hidden;
+}
+.video-wrap iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+}
+
+.ad_slides_wrap {
+	background-color: #a06551;
+}
+.ad_slides_wrap .slides  div.imgWrap {
+
+	padding: 80px 70px;
+	text-align: center;
+}
+.ad_slides_wrap .slides  div.imgWrap img {
+	width: 100%;
+	box-shadow:
+		20px 29px 45px 0px rgba(0, 0, 0, 0.15);;
+}
+
+
+.ad_slides_wrap .slides .slidesjs-previous {
+	width: 32px !important;
+    height: 55px !important;
+	top: 50% !important;
+	transform: translateY(-50%);
+	background: url("https://www.yedaham.co.kr/images/main/vis_arr_prev.png") no-repeat left top;
+}
+.ad_slides_wrap .slides .slidesjs-next {
+	width: 32px !important;
+    height: 55px !important;
+	top: 50% !important;
+	transform: translateY(-50%);
+	background: url("https://www.yedaham.co.kr/images/main/vis_arr_next.png") no-repeat left top;
+}
+#pr-print-view nav#nav-bot {
+    background-color: #a06551 !important;
+}
+nav#nav-bot a {
+    display: block;
+    width: 50%;
+    height: 100%;
+    line-height: 55px;
+    color: #fff;
+    border-left: 1px solid #b38474;
+}
+nav#nav-bot a:first-child{
+    border-left:none;
+}
+body.foot-space #top-btn {
+    bottom: 80px;
+}
+body.foot-space footer#footer {
+    padding-bottom: 92px !important;
+}
