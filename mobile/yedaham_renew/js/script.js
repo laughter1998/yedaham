@@ -322,7 +322,7 @@ if (backToTopButton != null) {
         tablinks[i].className = tablinks[i].className.replace(" active", "");
       }
       document.getElementById(tabContentName).style.display = "block";
-      evt.currentTarget.className += " active";
+      evt.currentTarget.className += " active"; 
 
     }
 
