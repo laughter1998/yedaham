@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>예다함</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="The-K 예다함 상조">
+    <meta property="og:description" content="한국교직원공제회가 100% 출자, 설립한 The-K예다함상조">
+    <meta property="og:image" content="https://www.yedaham.com/images/common/logo_withCCM.png">
+    <meta property="og:url" content="https://www.yedaham.com">
+    <link rel="stylesheet" href="../css/mobile.css">
+    <link rel="stylesheet" href="../css/swiper-bundle.css">
+      <script src="http://211.198.148.158:9000/static/js/jquery/jquery-1.12.4.min.js"></script>
+</head>
+
+
+
+<body id="main" class="foot-space">
+
+
+
+</body>
+<script>
+$(document).ready(function(){
+   receiveData();
+   // setInterval(receiveData, 2000); // 2초마다 실행
+ });
+
+ function receiveData(){
+
+
+
+    $.ajax({
+      type : "POST",
+      url:'https://www.econ-net.com/include/puzone_search.php',
+      success : function(data){
+
+        recvData = data;
+        console.log(data);
+        bReceived = 1;
+
+        redrawData();
+
+      },
+      error : function(xhr, status, error){
+        var err = status + ' \r\n'   + error;
+        console.log( "Request Failed: " + err);
+      }
+
+    });
+
+  }
+
+</script>
+</html>
