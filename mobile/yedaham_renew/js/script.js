@@ -1,4 +1,4 @@
-/* ========== �ъ씠�� 硫붾돱 ========== */
+/* ========== 사이드 메뉴 ========== */
 (function(){
 // Slide In Panel - by CodyHouse.co
 const panelTriggers = document.getElementsByClassName('js-cd-panel-trigger');
@@ -21,7 +21,7 @@ if( panelTriggers.length > 0 ) {
                     removeClass(panel, 'cd-panel--is-visible');
                     console.log('2');
                     body.classList.remove('openModal');
-                    // 2�곸뒪 硫붾돱 �リ린
+                    // 2뎁스 메뉴 닫기
                     const hasChildren = document.querySelectorAll(".has-children");
                     hasChildren.forEach(button => {
                         const depthTWoAll = button.querySelector("ul");
@@ -71,19 +71,21 @@ depthTwoClose.forEach(button => {
         depthTwo.classList.toggle("is-hidden")
     });
 });
-/* ========== �ъ씠�� 硫붾돱 ========== */
+/* ========== 사이드 메뉴 ========== */
 
-/* ========== �щ씪�대뱶 �대룞 ========== */
+/* ========== 슬라이드 이동 ========== */
 const dropdown = document.querySelector(".dropdown-trigger");
 if (dropdown ){
     dropdown.addEventListener('click', () => {
+
         if(!dropdown.classList.contains("dropdown-page-move")){
             event.preventDefault();
         }
+
         dropdown.classList.toggle('dropdown-is-active');
     });
 }else {
-    console.log('硫붾돱 �놁뼱��');
+    console.log('메뉴 없어요');
 }
 
 
@@ -102,9 +104,9 @@ function slideToIndex(moveTo){
      })
 
 }
-/* ========== �щ씪�대뱶 �대룞 ========== */
+/* ========== 슬라이드 이동 ========== */
 
-/* ========== �덈떎�� 硫ㅻ쾭�� �꾪솕�곷떞�섍린 �덉씠�� ========== */
+/* ========== 예다함 멤버싑 전화상담하기 레이어 ========== */
 function phoneCall(){
     event.preventDefault();
     window.scrollTo(0,0);
@@ -113,7 +115,7 @@ function phoneCall(){
 }
 
 
-/* ========== 紐⑤떖 �앹뾽 ========== */
+/* ========== 모달 팝업 ========== */
 
 const openModalButtons = document.querySelectorAll('[data-modal-target]');
 const closeModalButtons = document.querySelectorAll('[data-close-button]');
@@ -174,14 +176,14 @@ function closeModalAlert() {
    body.classList.remove('openModal');
    html.classList.remove('openModal');
 }
-/* ========== 紐⑤떖 �앹뾽 ========== */
+/* ========== 모달 팝업 ========== */
 
 
 
 
 
 function selectedEmail(){
-    /* ========== �대찓�� ���됲듃 諛뺤뒪 ========== */
+    /* ========== 이메일 셀렉트 박스 ========== */
     const selected = document.querySelector(".selected");
     const optionsContainer = document.querySelector(".options-container");
 
@@ -203,10 +205,10 @@ function selectedEmail(){
         }
       });
     });
-    /* ========== ���됲듃 諛뺤뒪 ========== */
+    /* ========== 셀렉트 박스 ========== */
 }
 
-// ===== 媛쒖씤(�좎슜)�뺣낫泥섎━ �꾩닔 �숈쓽 =====
+// ===== 개인(신용)정보처리 필수 동의 =====
 function check_agree() {
    const selectAll = document.querySelector("#all-check01");
    selectAll.addEventListener('click', function(){
@@ -263,7 +265,7 @@ function familySite(){
     selectLink.classList.toggle('on');
 }
 
-// ==========  �곷떒 �� �대룞  ==========
+// ==========  상단 탑 이동  ==========
 function backToTop(){
     window.scrollTo(0,0);
 }
@@ -291,7 +293,7 @@ if (backToTopButton != null) {
       }
     }
 
-// �� 硫붾돱
+// 탭 메뉴
     function openState(evt, tabContentName) {
       let i, tabcontent, tablinks;
       tabcontent = document.getElementsByClassName("tabcontent");
@@ -322,19 +324,6 @@ if (backToTopButton != null) {
         tablinks[i].className = tablinks[i].className.replace(" active", "");
       }
       document.getElementById(tabContentName).style.display = "block";
-      evt.currentTarget.className += " active"; 
+      evt.currentTarget.className += " active";
 
     }
-
-
-// ==========  �대깽�� 醫낅즺  ==========
-const endEvent = document.querySelectorAll(".end-event");
-if (endEvent){
-	endEvent.forEach(button => {
-	  button.addEventListener('click', () => {
-			event.preventDefault();
-			alert ('蹂� �대깽�멸� 醫낅즺�섏뿀�듬땲��. \n媛먯궗�⑸땲��.');
-		});
-	});
-
-}

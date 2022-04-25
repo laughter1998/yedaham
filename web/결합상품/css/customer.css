@@ -1,0 +1,90 @@
+/* 이벤트 */
+
+ul.event_tab {overflow:hidden;border-bottom:2px solid #c87c1e;}
+ul.event_tab li {float:left;width:249px;height:42px;text-align:center;border-top:1px solid #dedbd8;font-weight:bold;}
+ul.event_tab li a {display:block;color:#494233;height:42px;line-height:42px;}
+ul.event_tab li.current {background:#c87c1e;border-top:1px solid #c87c1e;}
+ul.event_tab li.current a {color:#ffffff;}
+ul.event_tab li.hov {background:#c87c1e;border-top:1px solid #c87c1e;}
+ul.event_tab li.hov a {color:#ffffff;}
+ul.event_tab li.navi_space {width:1px;background:#dedbd8;}
+
+ul.event_list {overflow:hidden;width:760px;}
+ul.event_list li{float:left;width:246px;margin:0 6px 6px 0;}
+ul.event_list li p {padding:0 13px;height:59px;border:1px solid #dedbd8;border-top:none;background:#ffffff;}
+ul.event_list li span {display:block;}
+ul.event_list li span.title {padding:12px 0 0 0;color:#444444;font-weight:bold;}
+ul.event_list li span.date {margin:7px 0 0 0;color:#999999;}
+
+.event_view_wrap {}
+.event_view_wrap  .event_view_h {overflow:hidden;margin:0 0 10px 0;padding:17px 0 18px 0;border-bottom:1px solid #dedbd8;}
+.event_view_wrap  .event_view_h span.title {float:left;color:#754c24;font-size:14px;font-weight:bold;}
+.event_view_wrap  .event_view_h span.date {float:right;color:#999999;font-size:11px;}
+
+/* 개인 정보 처리 (취급)방침*/
+
+.pps_select {margin:20px 0 0 0;}
+.pps_select span.pps_pr_t{margin:0 20px 0 0;display:inline-block;height:40px;color:#494233;font-size:14px;font-weight:bold;line-height:40px;}
+.pps_select select option {}
+
+/* 이벤트 당첨자 발표*/
+.winner_txt {}
+.winner_txt h3 {margin:25px 0 17px 0;padding:0 0 0 20px;background:url('https://www.yedaham.co.kr/images/common/bul_circle.png') no-repeat left center;color:#412900;font-size:16px;font-weight:bold;letter-spacing:-0.02em;}
+.winner_txt ul.wt_li {}
+.winner_txt ul.wt_li li{padding:0 0 4px 0;line-height:22px;font-size:14px;}
+.winner_txt span.col_d {color:#de6647;font-weight:bold;}
+.winner_txt .win_tip {padding:0 0 0 20px;height:50px;line-height:50px;font-size:14px;background:#f9f2e8;}
+.winner_txt .win_tip span.tip1 {color:#c87c1e;font-weight:bold;}
+.winner_txt .win_tip span.tip2 {color:#de6647;font-weight:bold;}
+.winner_txt .winner_list_wrap {margin:20px 0 0 0;padding:2px 0 0 0;width:751px;height:235px;background:url('https://www.yedaham.co.kr/images/with/event/bg_winner_list.png') no-repeat left top;}
+.winner_txt .winner_list_wrap .w_name {width:735px;height:233px;padding:0 0 0 15px;overflow:auto;}
+.winner_txt .winner_list_wrap .e_name {margin:20px 0 20px 0;font-weight:bold;font-size:14px;color:#de6647;}
+.winner_txt .winner_list_wrap p.winner_tits {margin:0 0 20px 0;color:#1c3a58;font-weight:bold;}
+.winner_txt .winner_list_wrap ul {overflow:hidden;margin:0 0 30px 0;}
+.winner_txt .winner_list_wrap ul li{float:left;width:230px;height:20px;line-height:20px;color:#111111;}
+.winner_txt .winner_list_wrap ul li span.winner_name {display:inline-block;width:45px;}
+.winner_txt .winner_list_wrap ul li span.winner_tel {display:inline-block;margin-left:10px;}	
+
+
+/* 예다함에게 바랍니다. 게시판*/
+.board_wrap {}
+.board_wrap .wish_list {overflow:hidden;position:relative;padding:10px 0 10px 0;border-bottom:1px solid #dedbd8;}
+.board_wrap .wish_list a, .board_wrap .wish_list div.v_tit {display:inline-block;color:#754c24;font-size:16px;line-height:28px;font-weight:bold;max-width:360px;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+
+.board_wrap .wish_list p {position:absolute;right:0;top:12px;font-size:12px;color:#999999;line-height:22px;}
+.board_wrap .wish_list p span {display:inline-block;margin:0 4px;}
+.board_wrap .wish_list span.wish_tit {display:inline-block;width:420px;}
+.board_wrap .wish_list  span.rec {margin:0 15px 0 0;}
+.board_wrap .wish_list span.rec{display:inline-block;
+	width:68px;height:28px;line-height:28px;font-size:12px;text-align:center;border:1px solid #dedbd8;
+	vertical-align:top;
+	}
+.board_wrap .wish_list span.icon_rec01 {background:#ffffff;color:#c87c1e;}
+.board_wrap .wish_list span.icon_rec02 {background:#f7f6f5;color:#999999;}
+.board_wrap .wish_list span.icon_rec03 {background:#ffffff;color:#494233;}
+
+.wish_att {margin:50px 0 35px 0;text-align:center;font-size:14px;color:#494233;line-height:24px;font-weight:bold;}
+.wish_att span {color:#c87c1e;}
+.wish_table01 {padding:0 0 0 130px;}
+.wish_table01 table{}
+
+.wish_conf_box {padding:15px 0;background:#f9f2e8;text-align:center;font-size:14px;font-weight:bold;color:#494233;}
+.wish_conf_box span {color:#c87c1e;}
+
+/* */
+table.cguide_table {}
+table.cguide_table tr td{line-height:20px;}
+.cu_guide_txt {line-height:22px;}
+
+.wish_view_table {width:100%;}
+	.wish_view_table tr {}
+	.wish_view_table tr.first {background:#fbf9f5 url('https://www.yedaham.co.kr/images/cyber_center/application/bg_table_line.png') repeat-x bottom center;;height:44px;}
+	.wish_view_table tr.first th {text-align:center;font-size:14px;color:#494233;font-weight:bold;}
+	.wish_view_table tr.first td {font-size:14px;color:#444444;}
+	.wish_view_table tr.sec td {border-top:min-height:190px;padding:20px 10px;font-size:14px;color:#494233;line-height:24px;border-bottom:1px solid #dedbd8;}
+	.wish_view_table02 {width:100%;}
+	.wish_view_table02 tr th{padding:10px 0 10px 20px;background:#fbf9f5;font-size:14px;color:#494233;font-weight:bold;vertical-align:top;
+	border-bottom:1px solid #dedbd8;border-right:1px solid #dedbd8;}
+	.wish_view_table02 tr td{padding:10px 0 10px 20px;font-size:14px;color:#494233;line-height:24px;
+	border-bottom:1px solid #dedbd8;}
+
