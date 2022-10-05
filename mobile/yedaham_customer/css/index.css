@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+body#intro {
+    position: relative;
+
+}
+body#intro header{
+    position: fixed;
+    width:100%;
+    height:56px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    border-bottom: none;
+}
+body#intro header h1{
+    margin: 20px 0 0 20px
+}
+body#intro header div.ccm{
+    margin: 0px 20px 0 0;
+}
+body#intro .introContent {
+
+    height: 100vh;
+    border-top-right-radius: 20px ;
+    border-top-left-radius: 20px;
+    background: url(../images/bg_intro.png) no-repeat center 56px;
+    background-size: cover;
+}
+body#intro .introContent .btns {
+    position: fixed;
+    left:0px;
+    bottom:24px;
+    width:100%;
+    padding: 0 24px 0 24px;
+}
+body#intro .introContent .btns a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 25px;
+    font-size: 1.6rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+body#intro .introContent .btns a:active {
+    box-shadow: 0 0 0;
+}
+body#intro .introContent .btns a.join-move {
+    margin-top:-4px;
+    background: linear-gradient(to right, #facc23, #c87c1e);
+    font-weight: 700;
+    color:#fff;
+}
+body#intro .introContent .btns a.join-move:active {
+    background: linear-gradient(to right, #e1b71f, #b46f1b);
+}
+body#intro .introContent .btns a.home-move {
+    margin-top:12px;
+    border:1px solid #f2f2f2;
+    background-color: #fff;
+    font-weight: 350;
+    color:#333;
+}
+body#intro .introContent .btns a.home-move:active {
+    background-color: #fafafa;
+
+}

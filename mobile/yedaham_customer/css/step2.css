@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+
+.content-exp.step2 {
+    height: 230px;
+}
+
+
+/* 본인인증 선택 */
+.certification-selector {
+    display: flex;
+    justify-content: space-between;
+}
+.certification-selector > div{
+    width: 50%;
+}
+.certification-selector > div a {
+    display:block;
+    text-align: center;
+    height:220px;
+    background-color:#fcf8f8;
+    border:1px solid #faeeee;
+    border-radius: 18px;
+}
+
+.certification-selector > div:first-child a {
+    margin-right: 6px;
+}
+.certification-selector > div:last-child a {
+    margin-left: 6px;
+}
+.certification-selector > div a img {
+    width: 56px;
+    margin-top:45px;
+}
+.certification-selector > div a p {
+    margin-top:25px;
+    color:#a06551;
+    font-size:1.8rem;
+    font-weight: 350;
+    line-height: 2.6rem;
+}

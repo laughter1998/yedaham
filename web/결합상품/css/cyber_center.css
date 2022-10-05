@@ -1,0 +1,50 @@
+/* 온라인 상품가입 */
+.process_img {padding:21px 0 23px 0;border-bottom:2px solid #c87c1e;text-align:center;}
+.process01_wrap {padding:55px 0 0 0;}
+.process02_wrap {padding:27px 0 0 0;}
+.process04_wrap {padding:15px 0 0 0;}
+.process05_wrap {padding:15px 0 0 0;}
+
+
+.process04_wrap .info_change {position:relative;padding:20px 15px;background:#f9f2e8;}
+.process04_wrap .info_change p {color:#c87c1e;font-weight:bold;line-height:20px;}
+.process04_wrap .info_change ul {width:500px;margin:5px 0 0 0;}
+.process04_wrap .info_change ul li{color:#494233;line-height:18px;}
+.process04_wrap .info_change a {position:absolute;right:20px;top:40px;}
+
+.process05_wrap .prd_selected_area {position:relative;margin:27px 0 15px 0;color:#494233;font-weight:bold;letter-spacing:-0.02em;}
+.process05_wrap .prd_selected_area span {display:inline-block;margin:0 12px 0 0;color:#c87c1e;}
+.process05_wrap .prd_selected_area p {position:absolute;right:0;bottom:0;color:#999999;font-weight:normal;font-size:11px;}
+.process05_wrap .caution_box {margin:20px 0 0 0;padding:20px;background:#f9f2e8;}
+.process05_wrap .caution_box p {color:#c87c1e;font-weight:bold;}
+.process05_wrap .caution_box ul {margin:10px 0 15px 0;}
+.process05_wrap .caution_box ul li{color:#494233;line-height:18px;}
+
+.process06_wrap {padding:15px 0 0 0;}
+.process06_wrap .prd_app_confirm {padding:24px 0 22px 0;background:#f9f2e8;color:#c87c1e;font-weight:bold;text-align:center;}
+.process06_wrap .prd_app_print_info {padding:24px 0 22px 0;background:#f9f2e8;text-align:center;}
+.process06_wrap .prd_app_print_info span {color:#c87c1e;font-weight:bold;}
+.process06_wrap .process_com_box {margin:0 0 0 0;padding:10px;height:630px;background:#f7f6f5;border:1px solid #dedbd8;}
+
+.process07_wrap .process_complete {margin:80px 0 70px 0;text-align:center;}
+.process07_wrap .process_complete p {margin:23px 0 0 0;font-weight:bold;font-size:14px;color:#494233;letter-spacing:-0.06em;}
+.process07_wrap .process_complete p span {display:block;margin:0 0 9px 0;color:#ca8126;}
+.process07_wrap .process_com_box {margin:25px 0 0 0;padding:10px;height:630px;background:#f7f6f5;border:1px solid #dedbd8;}
+
+.process08_wrap .process_complete {margin:80px 0 70px 0;text-align:center;}
+.process08_wrap .process_complete p {margin:23px 0 0 0;font-weight:bold;font-size:14px;color:#494233;line-height:24px;}
+.process08_wrap .process_complete p span {margin:0 0 9px 0;color:#ca8126;}
+.process08_wrap .process08_box {background:#f9f2e8;text-align:center;padding:20px 0;color:#c87c1e;font-weight:bold;}
+
+ul.online_prd_select {overflow:hidden;margin:20px 0;}
+ul.online_prd_select li{float:left;width:244px;height:170px;margin:0 9px 10px 0;}
+ul.online_prd_select li.last {margin:0 0 10px 0;}
+ul.online_prd_select li p {padding:14px 0 10px 14px;border:1px solid #dedbd8;border-top:none;}
+ul.online_prd_select li p span.agr_txt {font-size:14px !important;line-height:21px;vertical-align:top;}
+
+/* 문자 발송 알리*/
+.noti_etc {overflow:hidden;}
+.noti_etc span.noti_char {float:left;line-height:22px;}
+.noti_etc p {margin-left:18px;color:#494233;font-size:14px;line-height:22px;}
+.noti_etc p span {color:#c87c1e;} 
+

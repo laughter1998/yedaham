@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>가입상담신청</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link rel="stylesheet" href="../../css/ptns_style.css">
+
+</head>
+<body >
+    <div class="mainContent ptns-wrap " >
+        <div class="ptns-vis"><img src="../../images/with/hidden/ptns/thefirst_top.png" alt=""></div>
+        <div class="move-content">
+            <section class="box border-bot-none">
+                <div class="benefit-list">
+                    <p class="b-title">혜택 01</p>
+                    <p class="b-text mt-20">예다함상품 4회차 납입 면제 혜택</p>
+                    <p class="b-text mt-10">- 3회차 납입시 5만원</p>
+                    <p class="b-text">- 6회차 납입시 5만원</p>
+                    <p class="b-etc mt-15">※ 마지막 회차부터 역순</p>
+                    <div class="b-coupon-wrap mt-25">
+                        <div class="b-coupon">
+                            <p class="coupon-name "><span class="shinsegae">신세계상품</span></p>
+                            <p class="coupon-content mt-10"><span class="roboto">100,000</span>원</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="benefit-list mt-80">
+                    <p class="b-title">혜택 02</p>
+                    <p class="b-text mt-20">예다함상품 5회차 납입 면제 혜택</p>
+                    <p class="b-etc mt-15">※ 마지막 회차부터 역순</p>
+                    <div class="b-coupon-wrap mt-25">
+                        <div class="b-coupon">
+                            <p class="coupon-name">납입면제 혜택쿠폰</p>
+                            <p class="coupon-content mt-15"><span class="roboto">5</span>회차</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="sub-title-bg ">
+                상담을 위해, 고객정보를 입력해 주세요.
+            </div>
+            <section class="box mb-20 up">
+                <div class="tit-area">
+                    <h5>고객입력정보</h5>
+                    <p class="txt-require">필수입력 항목입니다.</p>
+                </div>
+                <div class="form-group">
+                    <p class="form-title required" >이름</p>
+                    <input type="text" name="name"  >
+                </div>
+
+                <div class="form-group">
+                    <p class="form-title required">휴대전화</p>
+                    <div class="form-inline">
+                        <input type="number" name="tel1" maxlength="3">&nbsp;&nbsp;&nbsp;
+                        <input type="number" name="tel2" maxlength="4">&nbsp;&nbsp;&nbsp;
+                        <input type="number" name="tel3" maxlength="4">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <p class="form-title">상담희망시간</p>
+
+                    <div class="select-box custom-select" >
+                        <div class="options-container ">
+                            <div class="option ">
+                            <input type="radio" class="radio" id="time1" name="category">
+                            <label for="time1">상시(아무때나)</label>
+                            </div>
+
+                            <div class="option ">
+                            <input type="radio" class="radio" id="time2" name="category">
+                            <label for="time2">am 09:00 ~ am 10:00</label>
+                            </div>
+
+                            <div class="option ">
+                            <input type="radio" class="radio" id="time3" name="category">
+                            <label for="time3">am 10:00 ~ am 11:00</label>
+                            </div>
+
+                            <div class="option ">
+                            <input type="radio" class="radio" id="time4" name="category">
+                            <label for="time4">am 11:00 ~ am 12:00</label>
+                            </div>
+
+                            <div class="option ">
+                            <input type="radio" class="radio" id="time5" name="category">
+                            <label for="time5">am 12:00 ~ pm 01:00</label>
+                            </div>
+
+                            <div class="option ">
+                            <input type="radio" class="radio" id="time6" name="category">
+                            <label for="time6">pm 01:00 ~ pm 02:00</label>
+                            </div>
+
+                            <div class="option ">
+                            <input type="radio" class="radio" id="time7" name="category">
+                            <label for="time7">pm 02:00 ~ pm 03:00</label>
+                            </div>
+
+                            <div class="option ">
+                            <input type="radio" class="radio" id="time8" name="category">
+                            <label for="time8">pm 03:00 ~ pm 04:00</label>
+                            </div>
+
+                            <div class="option ">
+                            <input type="radio" class="radio" id="time9" name="category">
+                            <label for="time9">pm 04:00 ~ pm 05:00</label>
+                            </div>
+                        </div>
+
+                        <div class="selected  ">
+                            <input type="text" value="상시(아무때나)">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <p class="form-title">상담요청사항</p>
+                    <textarea name="t.content" class="mt-15"placeholder="작성은 3,000byte까지 입력 가능합니다." onKeyUp="javascript:fnChkByte(this,'3000')"  ></textarea>
+                       <p class="text-right roboto mt-10"><span id="lengthValue" class="robotoB main-color">0</span> / 3,000 byte</p>
+                </div>
+
+
+            </section>
+
+            <section class="box mb-20">
+                <h5>개인정보의 수집 및 이용동의</h5>
+                <div class="text-area">The-K예다함상조㈜ 개인정보 이용에 대한 안내에<br />모두 동의해주셔야 가입상담신청이 가능합니다.</div>
+                <div class="text-right mt-25">
+                    <div class="all-agree-box">
+                        <input type="checkbox" class="checkbox" id="all-check01" >
+                        <label class="option_item" for="all-check01">
+                            <div class="option_inner">전체동의하기</div>
+                        </label>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="box mb-20">
+                <h5>개인정보제공동의</h5>
+                <div class="text-area">
+                    <div class="pop_terms02 mt10 mCustomScrollbar">
+						<p class="title">1. 개인정보의 수집 • 이용 목적</p>
+						<p class="yellow">- 본인여부 확인 및 상담예약 관련 업무</p>
+						<br />
+						<p class="title">2. 수집 • 이용할 개인정보의 항목(필수)</p>
+						<p class="yellow">- 성명, 연락처, 상담희망시간</p>
+						<br />
+						<p class="title">3. 개인정보 보유 및 이용기간</p>
+						<p class="yellow">- 가입 상담 종료 후 3개월 까지 보유 및 이용할 수 있음 </p>
+						<br />
+						<p class="title ">4. 개인정보 수집 이용 제공에 대한 동의 거부</p>
+						<p >- 위 개인정보 수집·이용에 대해 거부할 수 있으나,<br />&nbsp;&nbsp;&nbsp;동의하지 않을 경우 회신, 안내, 기타 상담 등의 서비스를 받을 수 없음. </p>
+					</div>
+                </div>
+                <div class="text-right mt-25">
+                        <span class="unit-check inline-block">
+                            <input type="checkbox" name="" id="unit-check11" class="chk1" >
+                            <label for="unit-check11" >동의합니다.</label>
+                        </span>
+                </div>
+            </section>
+
+            <section class="box">
+                <h5>개인정보처리 업무의 위탁 제공 동의</h5>
+                <div class="text-area">
+                    <div class="pop_terms02 mt10 mCustomScrollbar">
+						<p class="title">1. 제공받는 자</p>
+						<p class="yellow">- 유베이스㈜</p>
+						<br />
+						<p class="title">2. 이용업무의 목적</p>
+						<p class="yellow">- 본인여부 확인 및 상담예약 관련 업무</p>
+						<br />
+						<p class="title">3. 제공할 개인정보의 항목</p>
+						<p class="yellow">- 성명, 연락처, 상담희망시간</p>
+						<br />
+						<p class="title">4. 제공받는 자의 개인정보 보유 및 이용 기간</p>
+						<p class="yellow">- 가입 상담 종료 후 3개월까지 보유 및 이용할 수 있음</p>
+						<br />
+						<p class="title">5. 동의를 거부할 권리 및 동의를 거부할 경우의 불이익</p>
+						<p class="yellow">- 위 개인정보 동의를 거부할 권리가 있으나, 위 사항에 동의하지 않으실 경우 거래관계의 설정 또는 유지가 불가능할 수 있음</p>
+						<br />
+						<p class="title">6. 개인정보 제공 동의 여부</p>
+						<p class="yellow">- 위와 같이 본인의 개인정보를 제공하는 것에 동의합니다</p>
+					</div>
+                </div>
+                <div class="text-right mt-25">
+                    <span class="unit-check inline-block">
+                        <input type="checkbox" name="" id="unit-check12" class="chk1">
+                        <label for="unit-check12" >동의합니다</label>
+                    </span>
+                </div>
+            </section>
+
+            <article class="bg-exp mt-20">
+                상담원의 상담업무가 밀려 있을 경우 상담시간이 지연될 수 있습니다.
+            </article>
+
+            <div class="prd-img mt-20">
+                <img src="../../images/with/hidden/ptns/ptns_prd_530.png" alt="">
+            </div>
+            <section class="box up">
+                <div class="tit-area">
+                    <h5>월납입액</h5>
+                </div>
+                <ul class="diss-process prd-process mt-10">
+                    <li>
+                        <div>
+                            <p><span>125</span>회</p>
+                            <p>월 <span>42,400</span>원</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <p><span>152</span>회</p>
+                            <p>월 <span>35,000</span>원</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <p><span>177</span>회</p>
+                            <p>월 <span>30,000</span>원</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <p><span>200</span>회</p>
+                            <p>월 <span>26,500</span>원</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <p><span>268</span>회</p>
+                            <p>월 <span>19,800</span>원</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <p><span>279</span>회</p>
+                            <p>월 <span>19,000</span>원</p>
+                        </div>
+                    </li>
+                </ul>
+                <div class="tit-area mt-50">
+                    <h5>구성품목내역</h5>
+                </div>
+                <div class="m-reset">
+                    <div class="swiper-container prd-slide prd-swiper" >
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" ><!-- 장례지도사 -->
+                            <section class="prd-item">
+                                <img src="../../images/with/hidden/ptns/prd_item01.png" alt="장례지도사">
+                                <div class="prd-item-txt">
+                                    <p>장례지도사</p>
+                                    <span>장례진행 1명, 염습지원 1명</span>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="swiper-slide" ><!-- 장례도우미 -->
+                            <section class="prd-item">
+                                <img src="../../images/with/hidden/ptns/prd_item02.png" alt="장례도우미">
+                                <div class="prd-item-txt">
+                                    <p>장례도우미</p>
+                                    <span>장례기간 중 총 7명(1인, 1일 8시간 지원)</span>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="swiper-slide" ><!-- 관(매장 시) 오동나무 1단관 1.5이하-->
+                            <section class="prd-item">
+                                <img src="../../images/with/hidden/ptns/prd_item11_01.png" alt="관(매장 시)오동나무 1단관 1.5이하  ">
+                                <div class="prd-item-txt">
+                                    <p>관(매장 시) </p>
+                                    <span>오동나무 1단관 1.5이하</span>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="swiper-slide" ><!-- 관(화장 시)  오동나무 1단관 1.0이하-->
+                            <section class="prd-item">
+                                <img src="../../images/with/hidden/ptns/prd_item11_02.png" alt="관(화장 시) 오동나무 1단관 1.0이하 ">
+                                <div class="prd-item-txt">
+                                    <p>관(화장 시)  </p>
+                                    <span>오동나무 1단관 1.0이하</span>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="swiper-slide" ><!-- 수의 대마 기계직수의 1호(중국산, 국내 기계직) -->
+                            <section class="prd-item">
+                                <img src="../../images/with/hidden/ptns/prd_item12_01.png" alt="수의 대마 기계직수의 1호(중국산, 국내 기계직) ">
+                                <div class="prd-item-txt">
+                                    <p>수의</p>
+                                    <span>대마 기계직수의 1호(중국산, 국내 기계직)</span>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="swiper-slide" ><!-- 옥스포드 관보 생화 -->
+                            <section class="prd-item">
+                                <img src="../../images/with/hidden/ptns/prd_item09_01.png" alt="옥스포드 관보 (생화)">
+                                <div class="prd-item-txt">
+                                    <p>관보</p>
+                                    <span>옥스포드 관보 (생화)</span>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="swiper-slide" ><!-- 옥스포드 관보 천주교-->
+                            <section class="prd-item">
+                                <img src="../../images/with/hidden/ptns/prd_item09_04.png" alt="옥스포드 관보 천주교">
+                                <div class="prd-item-txt">
+                                    <p>관보</p>
+                                    <span>옥스포드 관보(천주교)</span>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="swiper-slide" ><!-- 옥스포드 관보 전통식-->
+                            <section class="prd-item">
+                                <img src="../../images/with/hidden/ptns/prd_item09_03.png" alt="옥스포드 관보 (전통식)">
+                                <div class="prd-item-txt">
+                                    <p>관보</p>
+                                    <span>옥스포드 관보 (전통식)</span>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="swiper-slide" ><!-- 옥스포드 관보 기독교-->
+                            <section class="prd-item">
+                                <img src="../../images/with/hidden/ptns/prd_item09_02.png" alt="옥스포드 관보 (기독교)">
+                                <div class="prd-item-txt">
+                                    <p>관보</p>
+                                    <span>옥스포드 관보 (기독교)</span>
+                                </div>
+                            </section>
+                        </div>
+
+                        <div class="swiper-slide" ><!-- 입관용품 일체 -->
+                            <section class="prd-item">
+                                <img src="../../images/with/hidden/ptns/prd_item03.png" alt="입관용품 일체">
+                                <div class="prd-item-txt">
+                                    <p>입관용품 일체</p>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="swiper-slide" ><!-- 전통식 상복 -->
+                            <section class="prd-item">
+                                <img src="../../images/with/hidden/ptns/prd_item07.png" alt="전통식 상복">
+                                <div class="prd-item-txt">
+                                    <p>전통식 상복</p>
+                                    <span>필요수량만큼 제공</span>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="swiper-slide" ><!-- 현대식 상복 -->
+                            <section class="prd-item">
+                                <img src="../../images/with/hidden/ptns/prd_item07_02.png" alt="현대식 상복">
+                                <div class="prd-item-txt">
+                                    <p>현대식 상복</p>
+                                    <span>(남성) 양복 5벌/(여성) 개량한복 5벌</span>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="swiper-slide" ><!-- 고인이송차량 -->
+                            <section class="prd-item">
+                                <img src="../../images/with/hidden/ptns/prd_item04.png" alt="고인이송차량">
+                                <div class="prd-item-txt">
+                                    <p>고인이송차량</p>
+                                    <span>비용발생 시, 최대 8만원 지급</span>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="swiper-slide" ><!-- 버스 -->
+                            <section class="prd-item">
+                                <img src="../../images/with/hidden/ptns/prd_item05.png" alt="버스">
+                                <div class="prd-item-txt">
+                                    <p>버스</p>
+                                    <span>전국무료</span>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="swiper-slide" ><!-- 리무진 -->
+                            <section class="prd-item">
+                                <img src="../../images/with/hidden/ptns/prd_item06.png" alt="리무진">
+                                <div class="prd-item-txt">
+                                    <p>리무진</p>
+                                    <span>전국무료 (화장장 또는 1차 장지까지 운행)</span>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="swiper-slide" ><!-- 봉안함(화장 시)_530 -->
+                            <section class="prd-item">
+                                <img src="../../images/with/hidden/ptns/prd_item08_02.png" alt="봉안함(화장 시)">
+                                <div class="prd-item-txt">
+                                    <p>봉안함(화장 시)</p>
+                                    <span>금전사 송학 봉안함</span>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="swiper-slide" ><!-- 횡대(매장 시) 오동나무-->
+                            <section class="prd-item">
+                                <img src="../../images/with/hidden/ptns/prd_item10_01.png" alt="횡대(매장 시) 오동나무 ">
+                                <div class="prd-item-txt">
+                                    <p>횡대(매장 시)</p>
+                                    <span>오동나무 횡대 1.5이하 </span>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="swiper-slide" ><!-- 제단장식 제단장식 3호 또는 30만원 지급-->
+                            <section class="prd-item">
+                                <img src="../../images/with/hidden/ptns/prd_item13_01.png" alt="제단장식 제단장식 3호 또는 30만원 지급">
+                                <div class="prd-item-txt">
+                                    <p>제단장식</p>
+                                    <span>제단장식 3호 또는 30만원 지급</span>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="swiper-slide" ><!-- 헌화 헌화꽃 50송이 제공 -->
+                            <section class="prd-item">
+                                <img src="../../images/with/hidden/ptns/prd_item14.png" alt="헌화 헌화꽃 200송이 제공 ">
+                                <div class="prd-item-txt">
+                                    <p>헌화</p>
+                                    <span>헌화꽃 50송이 제공 </span>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="swiper-slide" ><!-- 일회용품  일회용품세트 300인분(1세트) 제공 -->
+                            <section class="prd-item">
+                                <img src="../../images/with/hidden/ptns/prd_item15.png" alt="일회용품일회용품세트 300인분(1세트) 제공  ">
+                                <div class="prd-item-txt">
+                                    <p>일회용품</p>
+                                    <span>일회용품세트 300인분(1세트) 제공 </span>
+                                </div>
+                            </section>
+                        </div>
+                    </div><!-- class="sswiper-wrapper" -->
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="textWrap"></div>
+                </div><!-- class="swiper-container" -->
+                </div>
+            </section>
+
+            <div class="sub-title-bg sec mt-20">
+                예다함 <br />특장점
+            </div>
+
+            <section class="box up">
+                <div class="y-advantage">
+                    <div class="advantage-top bg_adv01">
+                        <span class="adv-num">01</span>
+                        <p class="adv-summary">
+                            <span>국내 유일!</span>
+                            교육부 산하기관인 <br />한국교직원공제회의<br />연대지급보증
+                        </p>
+                        <img src="../../images/with/hidden/ptns/bg_adv01.png" alt="">
+                    </div>
+                    <div class="advantage-txt">
+                        시중 1금융권 은행사의 지급보증에 대해 모기업인 한국교직원공제회의 연대지급보증으로 고객납입금에 대한 2중 안전책임망을 구축하였습니다.
+                    </div>
+                </div>
+                <div class="y-advantage">
+                    <div class="advantage-top">
+                        <span class="adv-num">02</span>
+                        <p class="adv-summary">
+                            <span>국내 최대!</span>
+                            500억원의<br />자본금
+                        </p>
+                        <img src="../../images/with/hidden/ptns/bg_adv02.png" alt="">
+                    </div>
+                    <div class="advantage-txt">
+                        예다함은 한국교직원공제회에서 국내 최대, 자본금 500억원을 전액 출자하여 설립한 프리미엄상조서비스로 매우 탄탄한 자본력을 자랑합니다.
+                    </div>
+                </div>
+                <div class="y-advantage">
+                    <div class="advantage-top">
+                        <span class="adv-num">03</span>
+                        <p class="adv-summary">
+                            <span>국내 유일!</span>
+                            국정감사,<br />감사원 수감기관
+                        </p>
+                        <img src="../../images/with/hidden/ptns/bg_adv03.png" alt="">
+                    </div>
+                    <div class="advantage-txt">
+                        예다함은 국정감사, 감사원 수감기관인 한국교직원공제회의 자회사로서 부정행위가 원칙적으로 불가능, 단 1원도 고객에게 손해가 가지 않습니다.
+                    </div>
+                </div>
+                <div class="y-advantage">
+                    <div class="advantage-top">
+                        <span class="adv-num">04</span>
+                        <p class="adv-summary">
+                            <span>국내 최다!</span>
+                            6개 은행사<br />지급보증계약 체결
+                        </p>
+                        <img src="../../images/with/hidden/ptns/bg_adv04.png" alt="">
+                    </div>
+                    <div class="advantage-txt">
+                        고객 납입금에 대한 철저한 보호를 위해 업계에서 가장 많은 6개 은행사(신한은행, 하나은행, 우리은행, 전북은행,수협은행, SC제일은행)와 지급보증 계약을 체결하였습니다.
+                    </div>
+                </div>
+            </section>
+
+            <div class="sub-title-bg sec mt-20">
+                예다함만의 차별화된 <br />통합시스템
+            </div>
+
+            <section class="box up">
+                <div class="y-system">
+                    <p class="s-title">상품만족 <br />서비스</p>
+                    <ul>
+                        <li>1:1 밀착케어 시스템</li>
+                        <li>페이백(Pay-back) 시스템</li>
+                        <li>전국직영운영 시스템</li>
+                        <li>The-K 멤버십 시스템</li>
+                    </ul>
+                </div>
+                <div class="y-system">
+                    <p class="s-title">고객안전 <br />서비스</p>
+                    <ul>
+                        <li>100% 환불 시스템</li>
+                        <li>부당행위보호 시스템</li>
+                        <li>품질보증 시스템</li>
+                        <li>장례지도사 정직원 채용 시스템</li>
+                    </ul>
+                </div>
+                <div class="y-system">
+                    <p class="s-title">기업책임 <br />서비스</p>
+                    <ul>
+                        <li>자산관리 시스템</li>
+                        <li>고객납입금 안전운용 시스템</li>
+                        <li>투명경영 감독 시스템</li>
+                        <li>상조납입금 안전책임 시스템</li>
+                        <li>사회공헌 시스템</li>
+                    </ul>
+                </div>
+            </section>
+        </div><!--  class="move-content" -->
+
+    </div><!--  class="mainContent" -->
+
+    <footer id="footer" style="padding-bottom:80px;">
+        <div class="sns">
+            <a href="https://www.facebook.com/yedaham.co.kr" target="_blank"><img src="https://www.yedaham.co.kr/images/mobile/join/icon_facebook.png"  alt="페이스북"></a>
+            <a href="https://www.youtube.com/channel/UCIc7RDIHPg6p8y9Ycxundaw/ " target="_blank"><img src="https://www.yedaham.co.kr/images/mobile/join/icon_youtube.png"  alt="유튜브"></a>
+        </div>
+        <div class="utList">
+            <a href="https://www.yedaham.co.kr/customer/agreement/agreement.do" target="_blank">이용약관 </a>
+            <a href="https://www.yedaham.co.kr/customer/agreement/pps.do" target="_blank">개인정보처리방침</a><br />
+            <a href="https://www.yedaham.co.kr/customer/agreement_vod/pps_vod.do " target="_blank">영상정보처리기기 운영관리지침</a>
+            <a href="https://www.yedaham.co.kr/customer/agreement/important.do " target="_blank">중요정보고시사항</a>
+        </div>
+
+        <div class="telList ">
+            <div>
+                대표전화<a href="tel:1566-6644">1566-6644</a>
+            </div>
+            <div>
+                장례접수(상황센터)<a href="tel:1566-0119">1566-0119</a>
+            </div>
+        </div>
+        <div class="yedaham-addr ">
+            서울특별시 마포구 마포대로86, 14층(도화동, 창강빌딩)<br />The-K예다함상조㈜ 대표이사 오승찬
+        </div>
+        <ul class="yedaham-number ">
+            <li>사업자등록번호 101-86-49300</li>
+            <li>통신판매업 신고번호 제2014-서울마포-0712호</li>
+            <li>전화권유판매업 신고번호 제2014-서울마포-0012호</li>
+        </ul>
+
+        <div class="brochure">
+            <div ><a href="https://www.yedaham.co.kr/main.do" target="_blank">BRAND SITE</a></div>
+            <div><a href="/download/200319_yedaham_brochure.pdf">2020 BROCHURE</a></div>
+        </div>
+
+
+        <div class="selectLink-wrap">
+			<a href="javascript:void(0);" onclick="familySite();">We are The-K group</a>
+            <ul>
+                <li><a href="https://www.ktcu.or.kr/"target="_blank" >The-K한국교직원공제회</a></li>
+                <li><a href="http://www.thek-hotel.co.kr/main_sh.asp?" target="_blank" >The-K호텔서울</a></li>
+                <li><a href="http://www.ramadajeju.co.kr/" target="_blank" >라마다 프라자 제주호텔</a></li>
+                <li><a href="http://thek-hotel.co.kr/gyeongju/main_sh.asp?" target="_blank" >The-K호텔경주</a></li>
+                <li><a href="http://thek-hotel.co.kr/jirisan/main_sh.asp?" target="_blank" >The-K지리산가족호텔</a></li>
+                <li><a href="http://thek-hotel.co.kr/seoraksan/main_sh.asp?" target="_blank" >The-K설악산가족호텔</a></li>
+                <li><a href="https://www.thekbank.co.kr/main/main.do" target="_blank" >The-K저축은행</a></li>
+                <li><a href="https://www.sophiagreen.co.kr/index.asp" target="_blank" >The-K소피아그린</a></li>
+                <li><a href="https://www.third-age.co.kr/" target="_blank" >The-K서드에이지</a></li>
+                <li><a href="http://www.thekmall.co.kr/" target="_blank" >The-K교직원나라</a></li>
+            </ul>
+		</div>
+        <div class="copyright ">Copyright© The-K Yedaham Co. Ltd <br />ALL Right Reserved</div>
+        <button id="top-btn" onclick="backToTop()"><img src="https://www.yedaham.co.kr/images/mobile/join/btn_scroll_top.png" alt=""></button>
+    </footer>
+    <nav id="nav-bot">
+        <a href="#" class="nav-back one-btn text-center">상담신청하기</a>
+    </nav>
+
+
+
+    <div class="modal-alert" id="modalAlert">
+        <div class="modal-content" ></div>
+        <button  class="btn-alert" onclick="closeModalAlert();" >확인</button>
+    </div><!-- class="modal" -->
+     <div id="overlay"></div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="../../js/ptns_script.js"></script>
+    <script>
+    let prdSwiper = new Swiper('.prd-swiper', {
+
+        // autoHeight: true,
+        loop: true,
+        pagination: {
+       el: '.swiper-pagination',
+       type: 'progressbar',
+     },
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+    prdSwiper.on('slideChange', function (){
+        const abc = document.querySelectorAll('.prd-item-txt');
+        abc.forEach(function (node, index, nodeList) {
+            if(index == prdSwiper.activeIndex ){
+                node.classList.add( 'active' );
+            } else {
+                node.classList.remove( 'active' );
+            }
+        });
+
+    });
+    prdSwiper.on('slideChangeTransitionEnd', function (){
+        const abc = document.querySelector('.prd-item-txt');
+        abc.classList.add( 'active' );
+        console.log(prdSwiper.realIndex);
+    });
+
+    /* ==========  상담 요청사항  바이트 체크 ========== */
+    function fnChkByte(obj, maxByte){
+        var str = obj.value;
+        var str_len = str.length;
+        var rbyte = 0;
+        var rlen = 0;
+        var one_char = "";
+        var str2 = "";
+
+        for(var i=0; i<str_len; i++){
+             one_char = str.charAt(i);
+             if(escape(one_char).length > 4)
+             {
+                 rbyte += 3;  //한글3Byte
+            } else {
+             rbyte++;  //영문 등 나머지 1Byte
+            }
+         if(rbyte <= maxByte) {
+             rlen = i+1;  //return할 문자열 갯수
+            }
+        }
+
+
+        if(rbyte > maxByte){
+
+            alert("내용은 " + maxByte + "byte 이내로 작성해주세요.")
+            str2 = str.substr(0,rlen);                                  //문자열 자르기
+            obj.value = str2;
+            fnChkByte(obj, maxByte);
+        } else {
+            document.getElementById('lengthValue').innerText = rbyte;
+        }
+    }
+    </script>
+
+
+</body>
+</html>

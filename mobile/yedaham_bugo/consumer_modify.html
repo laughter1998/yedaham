@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>부고</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="The-K 예다함 상조">
+    <meta property="og:description" content="한국교직원공제회가 100% 출자, 설립한 The-K예다함상조">
+    <meta property="og:image" content="https://www.yedaham.com/images/common/logo_withCCM.png">
+    <meta property="og:url" content="https://www.yedaham.com">
+    <link rel="stylesheet" href="./css/mobile_bugo.css">
+
+</head>
+<body id="consumer">
+    <header class="header">
+        <a href="javascript:history.go(-1);" class="page-back">뒤로 가기</a>
+        <h3>정보 변경</h3>
+        <a href="./index.html" class="page-home"><img src="./images/icon_home.png"  alt="home"></a>
+    </header>
+    <main>
+        <div class="main-title">고인의 명복을 빕니다.</div>
+        <div class="content-top">
+            <p class="youth">상주와 유가족 정보 <br /><span>추가 및 수정</span>이 가능합니다.</p>
+        </div>
+        <section class="box mtup-18">
+            <h5 class="box-title">상주 정보</h5>
+            <div class="form-group mt-30" data-error>
+                <p class="form-title required">성함</p>
+                <input type="text" name="" id="userName" value="" >
+            </div>
+
+            <div class="form-group mt-30" data-error="">
+                <p class="form-title required">관계</p>
+                <div class="grid-container-map mt-20">
+                    <div class="input-item radio-basic ">
+                        <input type="radio" class="radio" id="relationship01" name="relationship" value="1">
+                        <label class="radio_item" for="relationship01">
+                            <div class="radio_inner">상주</div>
+                        </label>
+                    </div>
+                    <div class="input-item radio-basic">
+                        <input type="radio" class="radio" id="relationship02" name="relationship" value="2">
+                        <label class="radio_item" for="relationship02">
+                            <div class="radio_inner">자부</div>
+                        </label>
+                    </div>
+                    <div class="input-item radio-basic">
+                        <input type="radio" class="radio" id="relationship03" name="relationship" value="3">
+                        <label class="radio_item" for="relationship03">
+                            <div class="radio_inner">사위</div>
+                        </label>
+                    </div>
+                    <div class="input-item radio-basic">
+                        <input type="radio" class="radio" id="relationship04" name="relationship" value="4">
+                        <label class="radio_item" for="relationship04">
+                            <div class="radio_inner">손자</div>
+                        </label>
+                    </div>
+                    <div class="input-item radio-basic">
+                        <input type="radio" class="radio" id="relationship05" name="relationship" value="5">
+                        <label class="radio_item" for="relationship05">
+                            <div class="radio_inner">친지</div>
+                        </label>
+                    </div>
+                    <div class="input-item radio-basic">
+                        <input type="radio" class="radio" id="relationship06" name="relationship" value="6">
+                        <label class="radio_item" for="relationship06">
+                            <div class="radio_inner">배우자</div>
+                        </label>
+                    </div>
+                    <div class="input-item radio-basic">
+                        <input type="radio" class="radio" id="relationship07" name="relationship" value="7">
+                        <label class="radio_item" for="relationship07">
+                            <div class="radio_inner">기타</div>
+                        </label>
+                    </div>
+                    
+                </div>
+                <input type="text" name="" class="hide mt-10" id="etc" value="" placeholder="기타내용">
+            </div>
+            
+            <div class="form-group mt-30" >
+                <p class="form-title">연락처</p>
+                <input type="number" id="phoneNumber" name="" placeholder="숫자만 입력해 주세요."/>
+            </div>
+        </section>
+
+        <section class="box mt-20">
+            <h5 class="box-title account-title">
+                계좌 정보
+                <span class="unit-check ">
+                    <input type="checkbox" name="" id="accountShow" >
+                    <label for="accountShow"></label>
+                </span>
+            </h5>
+            <div class="account-form-wrap hide">
+                <div class="form-group mt-30" data-error="">
+                    <p class="form-title required">은행</p>
+                    <input type="text" name="" id="bank" value="" >
+                </div>
+                <div class="form-group mt-30" data-error="">
+                    <p class="form-title required">예금주</p>
+                    <input type="text" name="" id="depositor" value="" >
+                </div>
+                <div class="form-group mt-30" data-error="">
+                    <p class="form-title required">계좌번호</p>
+                    <input type="number" name="" id="accountNumber" value="" >
+                </div>
+                <h5 class="box-title">계좌 인증</h5>
+                <ul class="etc-list mt-25">
+                    <li>※ 계좌 인증번호 전송은 일 최대 3회까지 가능합니다.</li>
+                    <li>※ 성함과 등록하신 계좌의 이름이 일치해야 계좌인증이 가능합니다.</li>
+                    <li>※ 은행별 서버 점검 시간에는 계좌인증이 불가능합니다.</li>
+                </ul>
+                <div class="text-right mt-25 auth-btn-wrap "><button type="button" class="btn btn-brown" onclick="authAccount()">계좌 인증하기</button></div>
+                <div class="auth-complete mt-25">
+                    <span>인증이 되었습니다.</span>
+                </div>
+            </div>
+        </section>
+
+
+        <div class="btns-wrap">
+            <button class="btn btn-cancel" onclick="infoCancel()">취소</button>
+            <button class="btn btn-reg" data-customer-num="2" onclick="infoSave(this)">저장</button>
+            <!-- 파라미터 있을 때 data-customer-num="2" , 파라미터 없을때 data-customer-num="" -->
+        </div>
+    </main>
+
+  
+    <div class="modal-alert" id="modalAlert">
+        <div class="modal-content" >내용</div>
+        <div class="modal-footer">
+            <button  class="btn-alert btn-yes" data-ok-num onclick="okNum(this);" >예</button>
+            <button  class="btn-alert" onclick="closeModalAlert();" >아니오</button>
+        </div>
+    </div><!-- class="modal" -->
+    <div class="modal-alert" id="modalAlert2">
+        <div class="modal-content" >내용</div>
+        <div class="modal-footer">
+            <button  class="btn-alert btn-yes" onclick="okCancel(this);" >예</button>
+            <button  class="btn-alert" onclick="closeModalAlert2();" >아니오</button>
+        </div>
+    </div><!-- class="modal" -->
+    <div id="overlay"></div>
+    
+
+    <script type="text/javascript" src="./js/mobile_bugo_script.js"></script>
+    <script>
+        
+       function infoSave(e){
+            const userName = document.getElementById('userName');
+            const userNameValue = userName.value.trim();
+            // ===== 에러메시지 =====
+            if(userNameValue === '') {
+                setErrorFor(userName, '성함을 입력해 주세요');
+                userName.focus()
+                return;
+            }
+
+            var relationshipValue;
+            const relationship = document.getElementsByName('relationship');
+            const relationshipRadio = document.getElementById('relationship01');
+            const relationshipEtc = document.getElementById('etc');
+            const relationshipEtcValue = relationshipEtc.value.trim();
+            relationship.forEach(e => {
+                if(e.checked) {
+                    relationshipValue = e.value;
+                }
+            });
+            // ===== 에러메시지 =====
+            if(!relationshipValue) {
+                setErrorFor(relationshipRadio, '관계를 선택해주세요.');
+                relationshipRadio.focus()
+                return;
+            }
+            console.log(relationshipEtcValue);
+            if(relationshipValue === "7" && relationshipEtcValue === '') {
+                setErrorFor(relationshipRadio, '기타내용을 입력해주세요.');
+                relationshipEtc.focus()
+                return;
+            }
+
+            const phoneNumber = document.getElementById('phoneNumber');
+            const phoneNumberValue = phoneNumber.value.trim();
+            if(phoneNumberValue){
+                var regPhone = /^01([0|1|6|7|8|9])-?([0-9]{3,4})-?([0-9]{4})$/;
+                if (regPhone.test(phoneNumberValue) !== true) {
+                    setErrorFor(phoneNumber, '올바른 휴대폰 번호가 아닙니다.');
+                    phoneNumber.focus()
+                    return;
+                }
+            }
+
+            const okBtn = document.querySelector("#modalAlert .modal-footer button.btn-yes");
+
+            //삭제하려는 번호 팝업에 넘겨주기
+            okBtn.dataset.okNum = e.dataset.customerNum;
+            openModalAlert('저장 하시겠습니까?');
+
+          
+       }
+
+       function infoCancel(){
+            const userName = document.getElementById('userName');
+            const userNameValue = userName.value.trim();
+            const relationshipEtc = document.getElementById('etc');
+            const relationshipEtcValue = relationshipEtc.value.trim();
+            const bank = document.getElementById('bank');
+            const depositor = document.getElementById('depositor');
+            const depositorValue = depositor.value.trim();
+            const bankValue = bank.value.trim();
+            const accountNumber = document.getElementById('accountNumber');
+            const accountNumberValue = accountNumber.value.trim();
+            console.log(userNameValue || relationshipEtcValue || depositorValue );
+            if( userNameValue || relationshipEtcValue || depositorValue || bankValue || accountNumberValue){
+                openModalAlert2('입력된 정보가 삭제됩니다. <br /> 취소 하시겠습니까?');
+                return;
+            }
+            closeModalAlert2();
+            history.go(-1);
+       }
+
+       function okNum(e){
+            if(e.dataset.okNum){
+                alert(`${e.dataset.okNum}번 수정 완료`);
+            } else {
+                alert("저장 완료");
+            }
+            closeModalAlert();
+        }
+        function okCancel(e){
+            closeModalAlert2();
+            history.go(-1);
+            // closeModalAlert2();
+        }
+
+       function authAccount(){
+            const bank = document.getElementById('bank');
+            const bankValue = bank.value.trim();
+            // ===== 에러메시지 =====
+            if(bankValue === '') {
+                setErrorFor(bank, '은행을 입력해 주세요');
+                return;
+            }
+            const depositor = document.getElementById('depositor');
+            const depositorValue = depositor.value.trim();
+            // ===== 에러메시지 =====
+            if(depositorValue === '') {
+                setErrorFor(depositor, '예금주를 입력해 주세요');
+                return;
+            }
+            const accountNumber = document.getElementById('accountNumber');
+            const accountNumberValue = accountNumber.value.trim();
+            // ===== 에러메시지 =====
+            if(accountNumberValue === '') {
+                setErrorFor(accountNumber, '계좌번호를 입력해 주세요');
+                return;
+            }
+
+            const authBtn = document.querySelector(".auth-btn-wrap");
+            const authComplete = document.querySelector(".auth-complete");
+            authBtn.classList.add("hide");
+            authComplete.classList.add("show");
+       }
+    </script>
+    
+</body>
+</html>

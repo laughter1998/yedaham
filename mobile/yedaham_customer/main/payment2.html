@@ -1,0 +1,657 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>모바일 고객센터</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="The-K 예다함 상조">
+    <meta property="og:description" content="한국교직원공제회가 100% 출자, 설립한 The-K예다함상조">
+    <meta property="og:image" content="https://www.yedaham.com/images/common/logo_withCCM.png">
+    <meta property="og:url" content="https://www.yedaham.com">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/payment2.css">
+</head>
+
+<body >
+
+    <header class="header">
+        <a href="javascript:history.go(-1);" class="page-back">뒤로 가기</a>
+        <h2>납입방법변경</h2>
+    </header>
+
+
+    <div class="mainContent">
+        <div class="content-exp payment2">
+            <p class="content-title  ">결제 정보를<br />입력해 주세요.</p>
+        </div>
+
+        <section class="box_bg">
+            <ul class="x-list main-color">
+                <li class="mb-10">변경 시 본인 소유의 계좌 및 카드만 변경 가능합니다. <br> (계약자와 예금주가 동일)</li>
+                <li>자동이체 청구 중일 경우 납부방법변경이 불가합니다.</li>
+            </ul>
+        </section>
+
+        <section class="box mt-20">
+            <div class="form-group">
+                <p class="form-title">결제방법</p>
+                <div class="form-inline">
+                    <span class="unit-check w-50" onclick="openTab('tab11' ,'tab21' )">
+                        <input type="radio" name="sex" id="unit-check11" checked value="남">
+                        <label for="unit-check11">카드결제</label>
+                    </span>
+                    <span class="unit-check w-50" onclick="openTab('tab12' ,'tab22')">
+                        <input type="radio" name="sex" id="unit-check12" value="여">
+                        <label for="unit-check12">계좌이체</label>
+                    </span>
+                </div>
+            </div>
+
+            <div id="tab11" class="tabcontent1 mt-30">
+                <div class="form-group">
+                    <p class="form-title">카드사</p>
+                    <div class="form-inline">
+                        <input type="text" name="" value="" placeholder="" class="cardNameInput">
+                        <button type="button" class="btn btn-brown" data-modal-target="#modalCard">선택</button>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <p class="form-title">카드번호 ('-' 없이 숫자만 입력)</p>
+                    <input type="number" name="" value="" placeholder="3738274605030420">
+                </div>
+                <div class="form-group">
+                    <p class="form-title">유효기간</p>
+                    <div class="form-inline">
+                        <input type="number" name="" value="" class="mr-5">
+                        <input type="number" name="" value="" class="ml-5">
+                    </div>
+
+                </div>
+
+                <div class="form-group">
+                    <p class="form-title">비밀번호 (앞자리 2자리만 입력)</p>
+                    <input type="password" name="" value="" >
+                </div>
+
+                <div class="form-group">
+                    <p class="form-title">예금주 성명</p>
+                    <input type="text" name="" value="" >
+                </div>
+
+                <div class="form-group">
+                    <p class="form-title">생년월일 (예시, 19800101)</p>
+                    <input type="text" name="" value=""  placeholer="19800101">
+                </div>
+
+
+                <div class="form-group">
+                    <p class="form-title">휴대전화</p>
+                    <input type="text" name="" value="" >
+                </div>
+            </div><!-- id="tab11"-->
+
+            <div id="tab12"  class="tabcontent1 hide mt-30">
+                <div class="form-group">
+                    <p class="form-title">계좌번호</p>
+                    <input type="number" name="" value="" placeholder="3738274605030420">
+                </div>
+
+                <div class="form-group">
+                    <p class="form-title">결제은행</p>
+                    <div class="form-inline">
+                        <input type="text" name="" value="" placeholder="" class="bankNameInput">
+                        <button type="button" class="btn btn-brown" data-modal-target="#modalBank">선택</button>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <p class="form-title">이체일자</p>
+                    <div class="form-inline">
+                        <span class="unit-check w-50" >
+                            <input type="radio" name="date" id="date-check1" checked value="5일">
+                            <label for="date-check1">5일</label>
+                        </span>
+                        <span class="unit-check w-50" >
+                            <input type="radio" name="date" id="date-check2" checked value="10일">
+                            <label for="date-check2">10일</label>
+                        </span>
+                        <span class="unit-check w-50" >
+                            <input type="radio" name="date" id="date-check3" checked value="17일">
+                            <label for="date-check3">17일</label>
+                        </span>
+                        <span class="unit-check w-50" >
+                            <input type="radio" name="date" id="date-check4" checked value="22일">
+                            <label for="date-check4">22일</label>
+                        </span>
+
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <p class="form-title">예금주 성명</p>
+                    <input type="text" name="" value="" >
+                </div>
+
+                <div class="form-group">
+                    <p class="form-title">생년월일 (예시, 19800101)</p>
+                    <input type="text" name="" value=""  placeholer="19800101">
+                </div>
+
+
+                <div class="form-group">
+                    <p class="form-title">휴대전화</p>
+                    <input type="text" name="" value="" >
+                </div>
+            </div><!-- id="tab12"-->
+
+        </section>
+
+        <section class="box mt-20">
+            <h5>유의사항</h5>
+            <ul class="num-list tabcontent2" id="tab21">
+                <li class="mb-20">정보 변경 후 맨 하단의 <span class="f400">'변경하기'</span> 버튼을 클릭하셔야만 변경된 정보가 저장됩니다.</li>
+                <li class="mb-20">카드납부는 매월 5일 일괄 승인되며, 미승인 시 10일 17일, 22일, 27일 순으로 재승인 됩니다.</li>
+            </ul>
+            <ul class="num-list tabcontent2 hide" id="tab22">
+                <li class="mb-20">정보 변경 후 맨 하단의 <span class="f400">'변경하기'</span> 버튼을 클릭하셔야만 변경된 정보가 저장됩니다.</li>
+                <li class="mb-20">계좌납부는 이체일에 출금되며, 미출금 시 다음 출금일에 재출금 진행되니 잔고관리를 요청드립니다.</li>
+            </ul>
+
+        </section>
+
+
+        <a href="javascript:openModalAlert('이름을 입력해주세요.');" style="border:1px solid red;">이름을 입력해주세요.</a><br />
+        <a href="javascript:openModalAlert('휴대전화를 입력해주세요.');" style="border:1px solid red;">휴대전화를 입력해주세요.</a><br />
+
+    </div><!--  class="mainContent" -->
+
+    <!-- Footer -->
+		<footer id="footer">
+	<div class="sns">
+		<a href="https://www.facebook.com/yedaham.co.kr" target="_blank"><img src="../images/icon_facebook.png"  alt="페이스북"></a>
+		<a href="https://www.youtube.com/channel/UCIc7RDIHPg6p8y9Ycxundaw/ " target="_blank"><img src="../images/icon_youtube.png"  alt="유튜브"></a>
+	</div>
+	<div class="utList">
+		<a href="https://www.yedaham.co.kr/customer/agreement/agreement.do" target="_blank">이용약관 </a>
+		<a href="https://www.yedaham.co.kr/customer/agreement/pps.do" target="_blank">개인정보처리방침</a><br />
+		<a href="https://www.yedaham.co.kr/customer/agreement_vod/pps_vod.do " target="_blank">영상정보처리기기 운영관리지침</a>
+		<a href="https://www.yedaham.co.kr/customer/agreement/important.do " target="_blank">중요정보고시사항</a>
+	</div>
+
+	<div class="telList ">
+		<div>
+			대표전화<a href="tel:1566-6644">1566-6644</a>
+		</div>
+		<div>
+			장례접수(상황센터)<a href="tel:1566-0119">1566-0119</a>
+		</div>
+	</div>
+	<div class="yedaham-addr ">
+		서울특별시 마포구 마포대로86, 16층(도화동, 창강빌딩)<br />The-K예다함상조㈜&nbsp;&nbsp; 대표이사 홍승표
+	</div>
+	<ul class="yedaham-number ">
+		<li>사업자등록번호 101-86-49300</li>
+		<li>통신판매업 신고번호 제2014-서울마포-0712호</li>
+		<li>전화권유판매업 신고번호 제2014-서울마포-0012호</li>
+	</ul>
+
+	<div class="brochure">
+		<div ><a href="https://www.yedaham.co.kr/main.do" target="_blank">BRAND SITE</a></div>
+		<div><a href="../download/200319_yedaham_brochure.pdf">2020 BROCHURE</a></div>
+	</div>
+
+
+	<div class="selectLink-wrap">
+		<a href="javascript:void(0);" onclick="familySite();">We are The-K group</a>
+		<ul>
+			<li><a href="https://www.ktcu.or.kr/"target="_blank" >The-K한국교직원공제회</a></li>
+			<li><a href="https://www.thek-hotel.co.kr/skmh/index.do" target="_blank" >The-K호텔서울</a></li>
+			<li><a href="http://www.ramadajeju.co.kr/" target="_blank" >라마다 프라자 제주호텔</a></li>
+			<li><a href="https://www.thek-hotel.co.kr/gjmh/index.do" target="_blank" >The-K호텔경주</a></li>
+			<li><a href="http://www.thek-hotel.co.kr/jrmh/index.do" target="_blank" >The-K지리산가족호텔</a></li>
+			<li><a href="https://www.thek-hotel.co.kr/srmh/index.do" target="_blank" >The-K설악산가족호텔</a></li>
+			<li><a href="www.thekbank.co.kr/" target="_blank" >The-K저축은행</a></li>
+			<li><a href="https://www.sophiagreen.co.kr/index.asp" target="_blank" >The-K소피아그린</a></li>
+			<li><a href="https://www.third-age.co.kr/" target="_blank" >The-K서드에이지</a></li>
+			<li><a href="http://www.thekmall.co.kr/" target="_blank" >The-K교직원나라</a></li>
+		</ul>
+	</div>
+	<div class="copyright ">Copyrightⓒ The-K Yedaham Co. Ltd <br />ALL Right Reserved</div>
+	<button id="top-btn" onclick="backToTop()"><img src="../images/btn_scroll_top.png"  alt=""></button>
+    <a href="#"><img src="../images/btn_counsel.png"  class="btn-counsel-img" alt="실시간 상담"></a></footer>
+</footer>
+
+	<!--// Footer -->
+
+
+    <nav id="nav-bot">
+        <a href="javascript:history.go(-1);" class="nav-back">취소</a>
+        <a href="payment3.html" class="nav-next ">2/3 변경하기 </a>
+    </nav>
+
+    <!-- 카드사 팝업-->
+    <div class="modal" id="modalCard">
+        <div class="modal-header">
+            <div class="title">카드사를 <br />선택해주세요</div>
+            <p class="pop_close"><button data-close-button class="close-button"><em class="hide_txt">닫기</em></button></p>
+        </div>
+        <div class="modal-body " >
+            <div  class="content" >
+                <div class="grid-container-menu">
+                    <div class="select-img-wrap">
+                        <input type="radio" class="chk-img-input" id="card01" name="card" value="1">
+                        <label class="chk-img" for="card01" data-close-button onclick="cardName('비씨')">
+                            <img src="../images/card01.png" alt="비씨">
+                        </label>
+                    </div>
+
+                    <div class="select-img-wrap">
+                        <input type="radio" class="chk-img-input" id="card02" name="card" value="2">
+                        <label class="chk-img" for="card02" data-close-button onclick="cardName('국민')">
+                            <img src="../images/card02.png" alt="국민">
+                        </label>
+                    </div>
+
+                    <div class="select-img-wrap">
+                        <input type="radio" class="chk-img-input" id="card03" name="card" value="3">
+                        <label class="chk-img" for="card03" data-close-button onclick="cardName('신한')">
+                            <img src="../images/card03.png" alt="신한">
+                        </label>
+                    </div>
+
+                    <div class="select-img-wrap">
+                        <input type="radio" class="chk-img-input" id="card04" name="card" value="4">
+                        <label class="chk-img" for="card04" data-close-button onclick="cardName('현대')">
+                            <img src="../images/card04.png" alt="현대">
+                        </label>
+                    </div>
+
+                    <div class="select-img-wrap">
+                        <input type="radio" class="chk-img-input" id="card05" name="card" value="5">
+                        <label class="chk-img" for="card05" data-close-button onclick="cardName('롯데')">
+                            <img src="../images/card05.png" alt="롯데">
+                        </label>
+                    </div>
+
+                    <div class="select-img-wrap">
+                        <input type="radio" class="chk-img-input" id="card06" name="card" value="6">
+                        <label class="chk-img" for="card06" data-close-button onclick="cardName('삼성')">
+                            <img src="../images/card06.png" alt="삼성">
+                        </label>
+                    </div>
+
+                    <div class="select-img-wrap">
+                        <input type="radio" class="chk-img-input" id="card07" name="card" value="7">
+                        <label class="chk-img" for="card07" data-close-button onclick="cardName('하나(외환)')">
+                            <img src="../images/card07.png" alt="하나(외환)">
+                        </label>
+                    </div>
+
+                    <div class="select-img-wrap">
+                        <input type="radio" class="chk-img-input" id="card08" name="card" value="8">
+                        <label class="chk-img" for="card08" data-close-button onclick="cardName('NH농협')">
+                            <img src="../images/card08.png" alt="NH농협">
+                        </label>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+    </div><!-- class="modal" -->
+
+    <!-- 은행 팝업-->
+    <div class="modal" id="modalBank">
+        <div class="modal-header">
+            <div class="title">은행 또는 증권사를 <br />선택해주세요</div>
+            <p class="pop_close"><button data-close-button class="close-button"><em class="hide_txt">닫기</em></button></p>
+        </div>
+        <div class="modal-body " >
+            <div  class="content" >
+                <div class="pl-24 f350 main-color">은행 선택</div>
+                <div class="grid-container-menu mt-15">
+                    <div class="select-img-wrap">
+                        <input type="radio" class="chk-img-input" id="bank01" name="bank" value="1">
+                        <label class="chk-img" for="bank01" data-close-button onclick="bankName('경남')">
+                            <img src="../images/bank01.png" alt="경남">
+                        </label>
+                    </div>
+
+                    <div class="select-img-wrap">
+                        <input type="radio" class="chk-img-input" id="bank02" name="bank" value="2">
+                        <label class="chk-img" for="bank02" data-close-button onclick="bankName('수협')">
+                            <img src="../images/bank02.png" alt="수협">
+                        </label>
+                    </div>
+
+                    <div class="select-img-wrap">
+                        <input type="radio" class="chk-img-input" id="bank03" name="bank" value="3">
+                        <label class="chk-img" for="bank03" data-close-button onclick="bankName('광주')">
+                            <img src="../images/bank03.png" alt="광주">
+                        </label>
+                    </div>
+
+                    <div class="select-img-wrap">
+                        <input type="radio" class="chk-img-input" id="bank04" name="bank" value="4">
+                        <label class="chk-img" for="bank04" data-close-button onclick="bankName('신용협동조합')">
+                            <img src="../images/bank04.png" alt="신용협동조합">
+                        </label>
+                    </div>
+
+                    <div class="select-img-wrap">
+                        <input type="radio" class="chk-img-input" id="bank05" name="bank" value="5">
+                        <label class="chk-img" for="bank05" data-close-button onclick="bankName('국민')">
+                            <img src="../images/bank05.png" alt="국민">
+                        </label>
+                    </div>
+
+
+                    <div class="select-img-wrap">
+                        <input type="radio" class="chk-img-input" id="bank06" name="bank" value="6">
+                        <label class="chk-img" for="bank06" data-close-button onclick="bankName('신한')">
+                            <img src="../images/bank06.png" alt="신한">
+                        </label>
+                    </div>
+
+                    <div class="select-img-wrap">
+                        <input type="radio" class="chk-img-input" id="bank07" name="bank" value="7">
+                        <label class="chk-img" for="bank07" data-close-button onclick="bankName('기업')">
+                            <img src="../images/bank07.png" alt="기업">
+                        </label>
+                    </div>
+
+                    <div class="select-img-wrap">
+                        <input type="radio" class="chk-img-input" id="bank08" name="bank" value="8">
+                        <label class="chk-img" for="bank08" data-close-button onclick="bankName('우리')">
+                            <img src="../images/bank08.png" alt="우리">
+                        </label>
+                    </div>
+
+                    <div class="select-img-wrap">
+                        <input type="radio" class="chk-img-input" id="bank09" name="bank" value="9">
+                        <label class="chk-img" for="bank09" data-close-button onclick="bankName('단위농협')">
+                            <img src="../images/bank09.png" alt="단위농협">
+                        </label>
+                    </div>
+
+                    <div class="select-img-wrap">
+                        <input type="radio" class="chk-img-input" id="bank10" name="bank" value="10">
+                        <label class="chk-img" for="bank10" data-close-button onclick="bankName('우체국')">
+                            <img src="../images/bank10.png" alt="우체국">
+                        </label>
+                    </div>
+
+
+                    <div class="select-img-wrap">
+                        <input type="radio" class="chk-img-input" id="bank11" name="bank" value="11">
+                        <label class="chk-img" for="bank11" data-close-button onclick="bankName('농협')">
+                            <img src="../images/bank11.png" alt="농협">
+                        </label>
+                    </div>
+
+                    <div class="select-img-wrap">
+                        <input type="radio" class="chk-img-input" id="bank12" name="bank" value="12">
+                        <label class="chk-img" for="bank12" data-close-button onclick="bankName('전북')">
+                            <img src="../images/bank12.png" alt="전북">
+                        </label>
+                    </div>
+
+                    <div class="select-img-wrap">
+                        <input type="radio" class="chk-img-input" id="bank13" name="bank" value="13">
+                        <label class="chk-img" for="bank13" data-close-button onclick="bankName('대구')">
+                            <img src="../images/bank13.png" alt="대구">
+                        </label>
+                    </div>
+
+                    <div class="select-img-wrap">
+                        <input type="radio" class="chk-img-input" id="bank14" name="bank" value="14">
+                        <label class="chk-img" for="bank14" data-close-button onclick="bankName('제일')">
+                            <img src="../images/bank14.png" alt="제일">
+                        </label>
+                    </div>
+
+                    <div class="select-img-wrap">
+                        <input type="radio" class="chk-img-input" id="bank15" name="bank" value="15">
+                        <label class="chk-img" for="bank15" data-close-button onclick="bankName('부산')">
+                            <img src="../images/bank15.png" alt="부산">
+                        </label>
+                    </div>
+
+                    <div class="select-img-wrap">
+                        <input type="radio" class="chk-img-input" id="bank16" name="bank" value="16">
+                        <label class="chk-img" for="bank16" data-close-button onclick="bankName('제주')">
+                            <img src="../images/bank16.png" alt="제주">
+                        </label>
+                    </div>
+
+                    <div class="select-img-wrap">
+                        <input type="radio" class="chk-img-input" id="bank17" name="bank" value="17">
+                        <label class="chk-img" for="bank17" data-close-button onclick="bankName('산림조합중앙회')">
+                            <img src="../images/bank17.png" alt="산림조합중앙회">
+                        </label>
+                    </div>
+
+                    <div class="select-img-wrap">
+                        <input type="radio" class="chk-img-input" id="bank18" name="bank" value="18">
+                        <label class="chk-img" for="bank18" data-close-button onclick="bankName('하나')">
+                            <img src="../images/bank18.png" alt="하나">
+                        </label>
+                    </div>
+
+                    <div class="select-img-wrap">
+                        <input type="radio" class="chk-img-input" id="bank19" name="bank" value="19">
+                        <label class="chk-img" for="bank19" data-close-button onclick="bankName('산업')">
+                            <img src="../images/bank19.png" alt="산업">
+                        </label>
+                    </div>
+
+                    <div class="select-img-wrap">
+                        <input type="radio" class="chk-img-input" id="bank20" name="bank" value="20">
+                        <label class="chk-img" for="bank20" data-close-button onclick="bankName('상호저축')">
+                            <img src="../images/bank20.png" alt="상호저축">
+                        </label>
+                    </div>
+
+                    <div class="select-img-wrap">
+                        <input type="radio" class="chk-img-input" id="bank21" name="bank" value="21">
+                        <label class="chk-img" for="bank21" data-close-button onclick="bankName('새마을금고')">
+                            <img src="../images/bank21.png" alt="새마을금고">
+                        </label>
+                    </div>
+
+                    <div class="select-img-wrap">
+                        <input type="radio" class="chk-img-input" id="bank22" name="bank" value="22">
+                        <label class="chk-img" for="bank22" data-close-button onclick="bankName('한국씨티은행')">
+                            <img src="../images/bank22.png" alt="한국씨티은행">
+                        </label>
+                    </div>
+
+                    <div class="select-img-wrap">
+                        <input type="radio" class="chk-img-input" id="bank23" name="bank" value="23">
+                        <label class="chk-img" for="bank23" data-close-button onclick="bankName('케이뱅크')">
+                            <img src="../images/bank23.png" alt="케이뱅크">
+                        </label>
+                    </div>
+
+                    <div class="select-img-wrap">
+                        <input type="radio" class="chk-img-input" id="bank24" name="bank" value="24">
+                        <label class="chk-img" for="bank24" data-close-button onclick="bankName('카카오뱅크')">
+                            <img src="../images/bank24.png" alt="카카오뱅크">
+                        </label>
+                    </div>
+                </div>
+
+                <div class="pl-24 mt-40 f350 main-color">증권사 선택</div>
+                <div class="grid-container-menu mt-15">
+                    <div class="select-img-wrap">
+                        <input type="radio" class="chk-img-input" id="bank101" name="bank" value="101">
+                        <label class="chk-img" for="bank101" data-close-button onclick="bankName('교보')">
+                            <img src="../images/bank101.png" alt="교보">
+                        </label>
+                    </div>
+                    <div class="select-img-wrap">
+                        <input type="radio" class="chk-img-input" id="bank102" name="bank" value="102">
+                        <label class="chk-img" for="bank102" data-close-button onclick="bankName('유진투자')">
+                            <img src="../images/bank102.png" alt="유진투자">
+                        </label>
+                    </div>
+                    <div class="select-img-wrap">
+                        <input type="radio" class="chk-img-input" id="bank103" name="bank" value="103">
+                        <label class="chk-img" for="bank103" data-close-button onclick="bankName('신한금융투자')">
+                            <img src="../images/bank103.png" alt="신한금융투자">
+                        </label>
+                    </div>
+                    <div class="select-img-wrap">
+                        <input type="radio" class="chk-img-input" id="bank104" name="bank" value="104">
+                        <label class="chk-img" for="bank104" data-close-button onclick="bankName('이트레이드')">
+                            <img src="../images/bank104.png" alt="이트레이드">
+                        </label>
+                    </div>
+                    <div class="select-img-wrap">
+                        <input type="radio" class="chk-img-input" id="bank105" name="bank" value="105">
+                        <label class="chk-img" for="bank105" data-close-button onclick="bankName('대신')">
+                            <img src="../images/bank105.png" alt="대신">
+                        </label>
+                    </div>
+                    <div class="select-img-wrap">
+                        <input type="radio" class="chk-img-input" id="bank106" name="bank" value="106">
+                        <label class="chk-img" for="bank106" data-close-button onclick="bankName('키움')">
+                            <img src="../images/bank106.png" alt="키움">
+                        </label>
+                    </div>
+                    <div class="select-img-wrap">
+                        <input type="radio" class="chk-img-input" id="bank107" name="bank" value="107">
+                        <label class="chk-img" for="bank107" data-close-button onclick="bankName('대우')">
+                            <img src="../images/bank107.png" alt="대우">
+                        </label>
+                    </div>
+                    <div class="select-img-wrap">
+                        <input type="radio" class="chk-img-input" id="bank108" name="bank" value="108">
+                        <label class="chk-img" for="bank108" data-close-button onclick="bankName('하나대투')">
+                            <img src="../images/bank108.png" alt="하나대투">
+                        </label>
+                    </div>
+                    <div class="select-img-wrap">
+                        <input type="radio" class="chk-img-input" id="bank109" name="bank" value="109">
+                        <label class="chk-img" for="bank109" data-close-button onclick="bankName('동부')">
+                            <img src="../images/bank109.png" alt="동부">
+                        </label>
+                    </div>
+                    <div class="select-img-wrap">
+                        <input type="radio" class="chk-img-input" id="bank110" name="bank" value="110">
+                        <label class="chk-img" for="bank110" data-close-button onclick="bankName('하이투자')">
+                            <img src="../images/bank110.png" alt="하이투자">
+                        </label>
+                    </div>
+                    <div class="select-img-wrap">
+                        <input type="radio" class="chk-img-input" id="bank111" name="bank" value="111">
+                        <label class="chk-img" for="bank111" data-close-button onclick="bankName('동양종금')">
+                            <img src="../images/bank111.png" alt="동양종금">
+                        </label>
+                    </div>
+                    <div class="select-img-wrap">
+                        <input type="radio" class="chk-img-input" id="bank112" name="bank" value="112">
+                        <label class="chk-img" for="bank112" data-close-button onclick="bankName('한국투자')">
+                            <img src="../images/bank112.png" alt="한국투자">
+                        </label>
+                    </div>
+                    <div class="select-img-wrap">
+                        <input type="radio" class="chk-img-input" id="bank113" name="bank" value="113">
+                        <label class="chk-img" for="bank113" data-close-button onclick="bankName('메리츠')">
+                            <img src="../images/bank113.png" alt="메리츠">
+                        </label>
+                    </div>
+                    <div class="select-img-wrap">
+                        <input type="radio" class="chk-img-input" id="bank114" name="bank" value="114">
+                        <label class="chk-img" for="bank114" data-close-button onclick="bankName('한화')">
+                            <img src="../images/bank114.png" alt="한화">
+                        </label>
+                    </div>
+                    <div class="select-img-wrap">
+                        <input type="radio" class="chk-img-input" id="bank115" name="bank" value="115">
+                        <label class="chk-img" for="bank115" data-close-button onclick="bankName('부국')">
+                            <img src="../images/bank115.png" alt="부국">
+                        </label>
+                    </div>
+                    <div class="select-img-wrap">
+                        <input type="radio" class="chk-img-input" id="bank116" name="bank" value="116">
+                        <label class="chk-img" for="bank116" data-close-button onclick="bankName('현대')">
+                            <img src="../images/bank116.png" alt="현대">
+                        </label>
+                    </div>
+                    <div class="select-img-wrap">
+                        <input type="radio" class="chk-img-input" id="bank117" name="bank" value="117">
+                        <label class="chk-img" for="bank117" data-close-button onclick="bankName('삼성')">
+                            <img src="../images/bank117.png" alt="삼성">
+                        </label>
+                    </div>
+                    <div class="select-img-wrap">
+                        <input type="radio" class="chk-img-input" id="bank118" name="bank" value="118">
+                        <label class="chk-img" for="bank118" data-close-button onclick="bankName('HMC투자')">
+                            <img src="../images/bank118.png" alt="HMC투자">
+                        </label>
+                    </div>
+                    <div class="select-img-wrap">
+                        <input type="radio" class="chk-img-input" id="bank119" name="bank" value="119">
+                        <label class="chk-img" for="bank119" data-close-button onclick="bankName('솔로몬투자')">
+                            <img src="../images/bank119.png" alt="솔로몬투자">
+                        </label>
+                    </div>
+                    <div class="select-img-wrap">
+                        <input type="radio" class="chk-img-input" id="bank120" name="bank" value="120">
+                        <label class="chk-img" for="bank120" data-close-button onclick="bankName('LIG투자')">
+                            <img src="../images/bank120.png" alt="LIG투자">
+                        </label>
+                    </div>
+                    <div class="select-img-wrap">
+                        <input type="radio" class="chk-img-input" id="bank121" name="bank" value="121">
+                        <label class="chk-img" for="bank121" data-close-button onclick="bankName('신영')">
+                            <img src="../images/bank121.png" alt="신영">
+                        </label>
+                    </div>
+                    <div class="select-img-wrap">
+                        <input type="radio" class="chk-img-input" id="bank122" name="bank" value="122">
+                        <label class="chk-img" for="bank122" data-close-button onclick="bankName('SK')">
+                            <img src="../images/bank122.png" alt="SK">
+                        </label>
+                    </div>
+                    <div class="select-img-wrap">
+                        <input type="radio" class="chk-img-input" id="bank123" name="bank" value="123">
+                        <label class="chk-img" for="bank123" data-close-button onclick="bankName('우리투자')">
+                            <img src="../images/bank123.png" alt="우리투자">
+                        </label>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div><!-- class="modal" -->
+
+
+    <div class="modal-alert" id="modalAlert">
+         <div class="modal-content" >내용</div>
+         <button  class="btn-alert" onclick="closeModalAlert();" >확인</button>
+     </div><!-- class="modal" -->
+     <div id="overlay"></div>
+
+    <script type="text/javascript" src="../js/script.js"></script>
+    <script>
+        function cardName(name){
+            const cardNameInput = document.querySelector(".cardNameInput");
+            cardNameInput.value = name ;
+        }
+        function bankName(name){
+            const cardNameInput = document.querySelector(".bankNameInput");
+            cardNameInput.value = name ;
+        }
+    </script>
+</body>
+</html>

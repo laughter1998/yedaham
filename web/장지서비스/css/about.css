@@ -1,0 +1,303 @@
+
+/* 인사말*/ 
+/* 190124 수정 시작 */
+.greeting_con {font-size:14px;color:#444444;line-height:22px;}
+.greeting_con h5 {font-size:16px;color:#494233;font-weight:bold;}
+.greeting_con h5 span{color:#c87a14;}
+.greeting_con p.ceo_name {text-align:right;color: #666;font-size: 16px;letter-spacing:-0.06em;}
+.greeting_con p.ceo_name img {margin:0 0 0 22px;vertical-align:middle;}
+
+.sub_box_wrap .title_area.greeting{height: 270px;background: none;}
+.sub_box_wrap .title_area.greeting p{bottom: auto;top: 85px;}
+.sub_box_wrap .title_area.greeting .img1{position:absolute;left:1px;top:157px}
+.sub_box_wrap .title_area.greeting .img2{position: absolute;right: 52px;bottom:0;}
+/* 190124 수정 끝 */
+
+
+/* ci, bi*/
+.ci_wrap {position:relative;font-size:14px;line-height:24px;}
+.ci_wrap p.ci_sub_tit {margin:15px 0 10px 0;font-weight:bold;}
+.ci_wrap ul.color_list {overflow:hidden;width:760px;}
+.ci_wrap ul.color_list li {float:left;margin:0 6px 0 0;width:224px;height:153px;padding:10px;border:1px solid #dedbd8;}
+.ci_wrap ul.color_list li p.color_box {height:99px;color:#ffffff;text-align:center;}
+.ci_wrap ul.color_list li p.color_box span {display:inline-block;margin:30px;color:#ffffff;line-height:20px;}
+.ci_wrap ul.color_list li p.color_exp {margin:10px 0 0 0;line-height:20px;}
+.ci_wrap ul.color_list li p.color_exp span{font-weight:bold;}
+.ci_wrap ul.color_list li p.b213f9a {background:#213f9a;}
+.ci_wrap ul.color_list li p.bed1a2d {background:#ed1a2d;}
+.ci_wrap ul.color_list li p.b82673a {background:#82673a;}
+.ci_wrap ul.color_list li p.b824119 {background:#824119;}
+.ci_wrap ul.color_list li p.bbb8545 {background:#bb8545;}
+
+.ci_wrap ul.bi_list {overflow:hidden;width:760px;}
+.ci_wrap ul.bi_list li{position:relative;float:left;margin:0 6px 0 0;width:246px;}
+.ci_wrap ul.bi_list li a {margin:6px 0 0 0;}
+.ci_wrap ul.bi_list li span {position:absolute;left:18px;top:10px;color:#412900;font-size:12px;font-weight:bold;}
+
+.ci_wrap .ai_wrap {position:absolute;right:0px;top:20px;width:300px;}
+.ci_wrap .ai_wrap a {margin:10px 0 0 0;}
+
+
+/* 맵*/
+.map_info_area {}
+.map_info_area p {font-size:14px;color:#412900;line-height:24px;}
+p.way_tit {margin:10px 0 5px 0;color:#c87c1e;font-weight:bold;}
+
+/* 채용정보*/
+ul.welfare_list {overflow:hidden;border-left:1px solid #d9af7b;border-top:1px solid #d9af7b;}
+ul.welfare_list li {float:left;width:249px;height:180px;border-right:1px solid #d9af7b;border-bottom:1px solid #d9af7b;}
+ul.welfare_list li img {margin:20px 0 0 19px;}
+ul.welfare_list li p {padding:15px 0 0 20px;color:#412900;font-size:13px;line-height:20px;}
+ul.welfare_list li.welfare01 {background:url('https://www.yedaham.co.kr/images/about/recruit/bg_welfare01.png') no-repeat right bottom;}
+ul.welfare_list li.welfare02 {background:url('https://www.yedaham.co.kr/images/about/recruit/bg_welfare02.png') no-repeat right bottom;}
+ul.welfare_list li.welfare03 {background:url('https://www.yedaham.co.kr/images/about/recruit/bg_welfare03.png') no-repeat right bottom;}
+ul.welfare_list li.welfare04 {background:url('https://www.yedaham.co.kr/images/about/recruit/bg_welfare04.png') no-repeat right bottom;}
+ul.welfare_list li.welfare05 {background:url('https://www.yedaham.co.kr/images/about/recruit/bg_welfare05.png') no-repeat right bottom;}
+ul.welfare_list li.welfare06 {background:url('https://www.yedaham.co.kr/images/about/recruit/bg_welfare06.png') no-repeat right bottom;}
+
+/* 윤리경영*/
+.info_img_wrap {overflow:hidden;}
+.sendBack {width:340px;height:268px;background:url('https://www.yedaham.co.kr/images/about/ethic/bg_sendback.png') no-repeat left top;text-align:center;font-size:12px;color:#494233;line-height:20px;}
+.sendBack img {margin:25px 0 10px 0;}
+
+.ethic_top {overflow:hidden;margin:20px 0 0 0;}
+.ethic_top img.ethic_img {float:left;}
+.ethic_top .top_info {float:right;position:relative;width:360px;height:240px;}
+.ethic_top p.ethic_title {padding:10px 0 0 0;font-size:16px;line-height:30px;font-weight:bold;color:#444444;}
+.ethic_top p.ethic_title img {margin:0 10px 0 0;}
+.ethic_top p.ethic_txt {margin:15px 0 0 0;font-size:12px;line-height:18px;color:#444444;letter-spacing:-0.05em;}
+
+
+
+ul.state_info_list {border-top:2px solid #494233;border-bottom:2px solid #494233;}
+ul.state_info_list li {overflow:hidden;padding:15px 20px;border-top:1px solid #dedbd8;font-size:14px;color:#444444;line-height:20px;}
+ul.state_info_list li:first-child {border:none;}
+ul.state_info_list li p {float:left;width:390px;}
+ul.state_info_list li p span{color:#999999;font-size:12px;}
+ul.state_info_list li a{float:right;color:#c87c1e;text-decoration:underline;}
+
+.yac_main {margin:30px 0 30px 0;padding:0 30px;border:1px solid #dedbd8;background:#fbf9f8 url('https://www.yedaham.co.kr/images/about/ethic/bg_yac_main.png') no-repeat left top;text-align:center;font-size:14px;}
+.yac_main h5 {margin:90px 0 25px 0;}
+.yac_main span.top01 {color:#c87c1e;font-weight:bold;}
+.yac_main p.top02 {margin:10px 0 20px 0;color:#494233;font-weight:bold;line-height:22px;}
+.cau_info {padding:10px 18px 20px 18px;border:1px solid #dedbd8;background:#ffffff;text-align:left;line-height:24px;}
+
+
+
+.ccm_info {
+	text-align: center;
+	font-size: 16px;
+    font-weight: bold;
+    letter-spacing: -0.02em;
+    line-height:28px;
+    margin: 70px 0 0 0;
+    padding: 0 0 30px 0;
+}
+.ccm_info img {
+	margin-bottom:40px;
+}
+.ccm_info span {
+	color:#c87c1e;
+}
+
+
+ul.ccm_authentication {
+	overflow:hidden;
+}
+ul.ccm_authentication li {
+	float:left;
+}
+ul.ccm_authentication li:first-child {
+	margin-right: 15px;
+}
+
+.history-list {}
+.history-list dl{
+  margin:0;
+  position:relative;
+  background: url(https://www.yedaham.co.krhttps://www.yedaham.co.kr/images/about/history/ic_bar02.png) repeat-y 105px 0px;
+}
+.history-list dl dt{
+	position:absolute;
+	left:0;
+	top:0;
+	padding-top:8px;
+    font-size:30px;
+    color:#c87c1e;
+    font-weight:bold;
+}
+.history-list dl dd{
+	margin-left:100px;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+.history-list dl dd.last {
+    padding-bottom:30px !important;
+}
+.history-list dl dd.first span{
+
+	background: url(https://www.yedaham.co.kr/images/about/history/ic_bul03.png) no-repeat 0px center;
+}
+.history-list dl dd span{
+   display:inline-block;
+  width: 70px;
+  text-align:center;
+   font-size:18px;
+  font-weight:bold;
+  color:#494233;
+	background: url(https://www.yedaham.co.kr/images/about/history/ic_bul02.png) no-repeat 0px center;
+}
+
+ .history-list dl:first-child  dt:after{
+    position:absolute;
+    left:100px;
+    top:0;
+    display:block;
+    content:'';
+    background:#fff;
+	width:10px;
+	height:12px;
+}
+.history-list dl:last-child  dd:last-child:after{
+    position:absolute;
+    left:100px;
+    bottom:0;
+    display:block;
+    content:'';
+    background:#fff;
+	width:10px;
+	height:16px;
+}
+
+ul.ccm_infol_process {overflow:hidden;}
+ul.ccm_infol_process li {position:relative;float:left;width:244px;height:160px;margin:0 0 0 6px;
+    background:url('https://www.yedaham.co.kr/images/common/bg_service_process_line.png') repeat-x left bottom;text-align:center;border-left:1px solid #e9caa5;border-right:1px solid #e9caa5;
+}
+ul.ccm_infol_process li:first-child {margin:0;}
+ul.ccm_infol_process li:before {display:block;width:100%;height:4px;content:'';position:absolute;left:0px;top:0px;
+    background:url('https://www.yedaham.co.kr/images/common/bg_service_process_line.png') repeat-x left top;}
+ul.ccm_infol_process li:after {display:block;width:40px;height:100%;content:'';position:absolute;left:-24px;top:0px;
+    background:url('https://www.yedaham.co.kr/images/about/ccm/bg_ccm_plus.png') no-repeat left center;}
+ul.ccm_infol_process li:first-child:after {display:none;}
+ul.ccm_infol_process li p.pr01 {margin:30px 0 0 0;font-size:16px;color:#412900;font-weight:bold;}
+ul.ccm_infol_process li p.pr01 span {display:block;color:#c87c1e;}
+ul.ccm_infol_process li p.pr02 {padding:15px 0 0 0;font-size:14px;color:#412900;line-height:22px;}
+
+/* 광고 홍보*/
+.ad_wrap {}
+.ad_wrap ul {width:760px;overflow:hidden;}
+.ad_wrap ul li {float:left;width:245px;margin:0 8px 8px 0;}
+.ad_wrap ul li a:hover {text-decoration:underline;}
+.ad_wrap ul li a {color:#494233;}
+.ad_wrap ul li .ad_ex {height:80px;border:1px solid #dedbd8;border-top:none;}
+.ad_wrap ul li .ad_ex p {color:#494233;}
+.ad_wrap ul li .ad_ex p.ad_tit {padding:10px 10px 0 10px;font-size:14px;font-weight:bold;}
+.ad_wrap ul li .ad_ex p.ad_txt {padding:5px 10px 0 10px;overflow:hidden; text-overflow:ellipsis;width:210px;height:36px;font-size:12px;line-height:18px;}
+
+
+#adLayer {display:none;background:#ffffff;width:593px;z-index:1001;}
+#adLayer p.btn_close {position:absolute;top:20px;right:20px;}
+.layer_con {position:relative;}
+.layer_con p.layer_tit {padding:0 0 0 20px;height:60px;background:#ffffff;color:#494233;font-size:16px;font-weight:bold;line-height:60px;}
+.layer_con img.ad_img {width:100%;}
+.layer_con .txt_wrap {max-height:100px;}
+.layer_con .ad_txt {padding:20px;overflow:auto;color:#494233;font-size:13px;line-height:20px;}
+
+/* 온라인 입사 지원*/
+.o_process_img {padding:21px 0 23px 0;border-bottom:2px solid #c87c1e;text-align:center;}
+.com_login {padding:25px 0;border-top:1px solid #e4e3e1;}
+.com_login .log_txt {font-size:14px;color:#494233;line-height:20px;text-align:center;font-weight:bold;}
+.com_login .log_txt span{display:block;font-size:12px;color:#c87c1e;font-weight:normal;}
+.on_login_wrap {position:relative;width:524px;margin:0 auto;margin-top:25px;}
+.on_login_wrap button.btn_login {position:absolute;right:0;top:5px;}
+.se_info {position:relative;padding:20px 0 0 0;font-size:14px;color:#412900;line-height:24px;font-weight:bold;}
+.se_info p{color:#c87c1e;}
+.se_info a {position:absolute;right:0;top:25px;font-weight:normal;}
+.wform, .wform02 {position:relative;}
+.no_tex {position:absolute;right:15px;top:36px;}
+#time_layer {display:none;position:fixed;left:465px;top:250px;background:#ffffff;z-index:1001;}
+#time_layer .lay_wrap {width:346px;}
+#time_layer .lay_wrap h5 {height:50px;background:#c87c1e;color:#ffffff;line-height:50px;font-weight:normal;font-size:20px;text-align:center;}
+#time_layer .lay_wrap .time_txt {padding:20px 0;font-size:14px;line-height:22px;text-align:center;}
+#time_layer .lay_wrap .time_txt span {font-weight:bold;}
+#time_layer .lay_wrap .btns_area {padding:0 0 10px 0;text-align:center;}
+
+table.input_table10 {width:100%;}
+table.input_table10  tr th,table.input_table10  tr td{border:1px solid #dedbd8;}
+table.input_table10  tr th{text-align:center;color:#494233;font-size:14px;font-weight:bold;background:#f8f3ec;min-height:50px;}
+table.input_table10  tr td {padding:5px;height:40px;}
+table.input_table10  tr th span {font-size:11px;font-weight:normal;display:block;}
+table.input_table10  tr td textarea {margin:0;padding:15px;height:90px;border:1px solid #dedbd8;}
+table.input_table10  tr td.join_pic {text-align:center;color:#494233;font-size:14px;font-weight:bold;}
+table.input_table10  tr td .pic_exp {color:#c87c1e;font-size:11px;line-height:18px;}
+table.input_table10  tr .tl {border-left:none;}
+table.input_table10  tr .tr {border-right:none;}
+span.pass_txt {font-size:11px;font-weight:normal;color:#c87c1e;}
+
+table.input_table11 {width:100%;}
+table.input_table11  tr th,table.input_table11  tr td{border:1px solid #dedbd8;}
+table.input_table11  tr th{text-align:center;color:#494233;font-size:14px;font-weight:bold;background:#f6faf4;min-height:50px;}
+table.input_table11  tr td {padding:5px;height:40px;}
+table.input_table11  tr th span {font-size:11px;font-weight:normal;display:block;}
+table.input_table11  tr td textarea {margin:0;padding:15px;height:90px;border:1px solid #dedbd8;}
+table.input_table11  tr td.join_pic {text-align:center;color:#494233;font-size:14px;font-weight:bold;}
+table.input_table11  tr td .pic_exp {color:#c87c1e;font-size:11px;line-height:18px;}
+table.input_table11  tr .tl {border-left:none;}
+table.input_table11  tr .tr {border-right:none;}
+
+.wform {margin:0 0 20px 0;padding:18px 10px 10px 10px;background:#f8f3ec;border:1px solid #dedbd8;}
+.wform .wf_top{margin:0 0 18px 0;overflow:hidden;}
+.wform .wf_top p.wf_tit {float:left;font-size:14px;color:#494233;font-weight:bold;line-height:24px;}
+.wform .wf_top p.wf_exc {float:right;font-size:11px;color:#c87c1e}
+.wform textarea {margin:0;padding:15px;height:180px;border:1px solid #dedbd8}
+
+.wform02 {margin:0 0 20px 0;padding:18px 10px 10px 10px;background:#f6faf4;border:1px solid #dedbd8;}
+.wform02 .wf_top{margin:0 0 18px 0;overflow:hidden;}
+.wform02 .wf_top p.wf_tit {float:left;font-size:14px;color:#494233;font-weight:bold;line-height:24px;}
+.wform02 .wf_top p.wf_exc {float:right;font-size:11px;color:#c87c1e}
+.wform02 textarea {margin:0;padding:15px;height:180px;border:1px solid #dedbd8}
+
+
+div.file-upload {
+    overflow:hidden;
+    width:100%;
+}
+div.file-upload input.text {
+    float:left;
+}
+div.file-upload div.upload-btn {
+    overflow:hidden;
+    position:relative;
+    float:left;
+    width:100px;
+    height:40px;
+    padding-left:4px;
+
+}
+div.file-upload div.upload-btn input.file {
+    position:absolute;
+    top:0;
+    right:0;
+    height:40px;
+    cursor:pointer;
+    opacity:0;
+    filter:alpha(opacity=0);
+    -ms-filter: "alpha(opacity=0)";
+    -khtml-opacity:0;
+    -moz-opacity:0;
+}
+div.file-upload div.upload-btn button {
+    width:100px;
+    height:40px;
+    background:#ffffff;
+    border:1px solid #c87c1e;
+    color:#c87c1e;
+}
+input.text {
+    width:345px;
+    height:40px;
+    line-height:40px;
+    padding:0 0 0 5px;
+    border:1px solid #b5b5b5;
+    cursor:pointer;
+}

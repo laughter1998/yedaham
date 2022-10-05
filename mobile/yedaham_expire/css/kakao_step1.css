@@ -1,0 +1,70 @@
+@charset "UTF-8";
+
+
+.content-exp.kakao-form {
+    height: 320px;
+}
+
+.content-exp.kakao-form img {
+    width: 56px;
+}
+
+.form-group {
+    margin-top: 30px
+}
+.form-group:first-child {
+    margin-top: 00px
+}
+.form-group p.form-title{
+    font-weight: 350;
+    font-size: 1.1rem;
+    color:#a06551;
+}
+.form-group input[type=text], .form-group input[type=number] {
+    width: 100%;
+    height: 48px;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color:#333;
+    font-weight: 350;
+    outline: none;
+    border:none;
+    border-bottom:1px solid #e2e1e1;
+}
+.form-group input[type=text]:disabled, .form-group input[type=number]:disabled {
+    padding-left: 11px;
+}
+.form-group input[type=text]:focus, .form-group input[type=number]:focus  {
+    border-bottom:1px solid #a06551;
+    color:#a06551
+}
+.form-group input[type=text]::placeholder , .form-group input[type=number]::placeholder  {
+    color:#f0f0f0;
+}
+.form-group .form-inline {
+    min-height: 48px;
+    display:flex;
+    align-items: center;
+}
+.form-group .form-inline .email-at {
+    padding: 0 5px;
+}
+
+
+.form-group .form-inline button{
+    flex-shrink: 0;
+    margin-left:15px;
+}
+
+.form-group[data-error].error input{
+    border-bottom: 1px solid #de0615;
+
+
+}
+.form-group[data-error].error::after {
+    content: attr(data-error);
+    font-size: 1.1rem;
+    display:block;
+    color:#de0615;
+
+}

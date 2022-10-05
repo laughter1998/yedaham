@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+
+.content-exp.booking {
+    height: 175px;
+}
+
+article.selected-info {
+    padding: 25px 0 13px 0;
+    border-bottom: 1px solid #e2e1e1;
+}
+article.selected-info p.info-tit {
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+    font-weight: 350;
+    color:#a06551;
+}
+article.selected-info span.info-cotent{
+    font-size: 1.6rem;
+    font-weight: 400;
+}

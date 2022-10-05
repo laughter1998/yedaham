@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>부고</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="The-K 예다함 상조">
+    <meta property="og:description" content="한국교직원공제회가 100% 출자, 설립한 The-K예다함상조">
+    <meta property="og:image" content="https://www.yedaham.com/images/common/logo_withCCM.png">
+    <meta property="og:url" content="https://www.yedaham.com">
+    <link rel="stylesheet" href="./css/mobile_bugo.css">
+
+</head>
+<body id="condolence">
+    <header class="header">
+        <a href="javascript:history.go(-1);" class="page-back">뒤로 가기</a>
+        <h3>부의하기</h3>
+        <a href="./index.html" class="page-home"><img src="./images/icon_home.png"  alt="home"></a>
+    </header>
+    <main>
+        <div class="main-title">고인의 명복을 빕니다.</div>
+        <div class="content-top">
+            <p class="youth">상주와 유가족의 <br /><span>부의금 계좌정보</span>를 안내해 드립니다.</p>
+            <span class="mt-10">계좌정보는 개인정보 보호를 위해 노출하지 않고 있습니다. <br />(개인정보보호법 제 39조 10항 의거)</span>
+
+        </div>
+        <section class="box mtup-18">
+            <ul class="condolence-list">
+                <li>
+                    <p>상주</p>
+                    <div>
+                        <ul class="person-list">
+                            <li>
+                                <span>홍일동</span>
+                                <button type="button" data-cla="상주" data-name="홍일동" data-num="88" data-modal-id="account" id="account88" onclick="madalAccountShow(this)">계좌정보 받기</button>
+                                <!-- 외부에서 모달 띄우기 함수 : onclick="madalAccountShow(account88)" -->
+                            </li>
+                            <li>
+                                <span>김상추</span>
+                                <button type="button" data-cla="상주" data-name="김상추" data-num="393" data-modal-id="account" id="account393" onclick="madalAccountShow(this)">계좌정보 받기</button>
+                            </li>
+                            <li>
+                                <span>배추</span>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <p>자부</p>
+                    <div>
+                        <ul class="person-list">
+                            <li>
+                                <span>오이</span>
+                                <button type="button" data-cla="자부" data-name="오이" data-num="223" data-modal-id="account" id="account223" onclick="madalAccountShow(this)">계좌정보 받기</button>
+                            </li>
+                            <li>
+                                <span>수박</span>
+                            </li>
+                            <li>
+                                <span>홍사과</span>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <p>기타</p>
+                    <div>
+                        <ul class="person-list">
+                            <li>
+                                <span>홍참외</span>
+                                <button type="button" data-cla="기타" data-name="홍참외" data-num="123" data-modal-id="account" id="account123" onclick="madalAccountShow(this)">계좌정보 받기</button>
+                            </li>
+                            <li>
+                                <span>홍망고</span>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+           
+        </section>
+       
+       
+    </main>
+    
+
+    <!-- 계좌정보 받기 모달  -->
+    <div class="modal-popup" id="account">
+        <div class="popup-header youth">
+            <!-- 외부에서 모달 닫는 함수 : modalAccountHide(closeaccount) -->
+            <p class="close-button-wrap"><button class="close-button" data-modal-id="account" id="closeaccount" onclick="modalAccountHide(this)"></button></p> 
+            계좌정보 받기
+        </div>
+        <div class="popup-body">
+            <div class="content">
+                <p><span id="accountName" class="color-brown">[상주] 홍일순</span>님의 계좌정보를 <br />입력한 연락처로 전송됩니다.</p>
+
+                <!-- 파라미터 값 id="infoId"에 저장했습니다. -->
+                <input type="hidden" id="infoId" value="">
+                <div class="form-group mt-30 " data-error="휴대폰 번호를 입력해 주세요.">
+                    <input type="number" id="phoneNumber" name="" placeholder="숫자만 입력해 주세요."/>
+                </div>
+                <div class="form-group form-check agree-chk-wrap mt-30" data-error="개인정보 수집 및 이용동의를 체크해 주세요.">
+                    <span class="unit-check">
+                        <input type="checkbox" name="" id="unit-check11" class="chk1">
+                        <label for="unit-check11">개인정보 수집 및 이용에 동의</label>
+                    </span>
+                    <button type="button" data-modal-target="#modal11" >약관보기</button>
+                <!-- data-modal-target="#modal11" 은 modal 아이디와 동일,     label 도 동일 -->
+                </div>
+            </div>
+        </div>
+        <div class="popup-footer">
+            <button type="button" onclick="mms()">문자(MMS)로 받기</button>
+            <button type="button" onclick="kakao()">카카오톡으로 받기</button>
+        </div>
+    </div>
+     <!-- 계좌정보 받기 모달  -->
+
+
+    <div id="overlay"></div>
+
+    <!-- 약관보기 -->
+    <div class="modal" id="modal11">
+        <div class="modal-header">
+            <div class="title">[필수] <br />개인정보의<br />필수적 수집, 이용에 관한 사항 </div>
+            <p class="pop_close"><button data-close-button class="close-button"><em class="hide_txt">닫기</em></button></p>
+        </div>
+        <div class="modal-body " >
+            <div  class="content">
+                <h5>The-K예다함상조(주)귀중</h5>
+                <p>귀사와의 거래와 관련하여 귀사가 본인의 개인정보를 수집·이용하고자 하는 경우에는 [개인정보보호법] 제 15조 및 제 22조
+                    [정보통신망 이용촉진 및 정보보호에 관한 법률] 에 따라 동의를 얻어야 합니다.<br />
+                    이에 본인은 귀사가 아래의 내용과 같이 본인의 개인정보를 수집·이용하는데 동의합니다.</p>
+                <h5 class="number mt-30">(1) 개인정보의 수집, 이용·목적</h5>
+                <ul class="bar-list">
+                    <li>오프라인 상담 서비스 제공을 위한 연락, 예약완료 및 예약취소, 문자발송, 상담서비스 통계자료 작성</li>
+                </ul>
+                <h5 class="number mt-30">(2) 수집, 이용할 개인정보의 내용</h5>
+                <ul class="bar-list">
+                    <li>필수항목 : 성명, 휴대전화번호, 공제회원 여부, 연령대, 상담내용</li>
+                </ul>
+                <h5 class="number mt-30">(3) 개인정보의 보유, 이용 기간</h5>
+                <ul class="bar-list">
+                    <li>정보제공 동의일로부터 2년 </li>
+                </ul>
+            </div>
+        </div>
+    </div><!-- class="modal" -->
+    <!-- 약관보기 -->
+
+    <script type="text/javascript" src="./js/mobile_bugo_script.js"></script>
+    <script>
+        function mms(){
+            const phoneNumber = document.getElementById('phoneNumber');
+            const check11 = document.getElementById('unit-check11');
+            const phoneNumberValue = phoneNumber.value.trim();
+            const check11Value = check11.checked;
+            // ===== 에러메시지 =====
+            if(phoneNumberValue === '') {
+                setErrorFor(phoneNumber, '휴대폰 번호를 입력해 주세요.');
+                return;
+            }
+            
+            var regPhone = /^01([0|1|6|7|8|9])-?([0-9]{3,4})-?([0-9]{4})$/;
+            if (regPhone.test(phoneNumberValue) !== true) {
+                setErrorFor(phoneNumber, '올바른 휴대폰 번호가 아닙니다.');
+                return;
+            }
+
+            if(check11Value !== true) {
+                setErrorFor(check11, '개인정보 수집 및 이용동의를 체크해 주세요.');
+                return;
+            } 
+            // 모달닫기
+            modalAccountHide(closeaccount);
+        }
+        function kakao(){
+            const phoneNumber = document.getElementById('phoneNumber');
+            const check11 = document.getElementById('unit-check11');
+            const phoneNumberValue = phoneNumber.value.trim();
+            const check11Value = check11.checked;
+            // ===== 에러메시지 =====
+            if(phoneNumberValue === '') {
+                setErrorFor(phoneNumber, '휴대폰 번호를 입력해 주세요.');
+                return;
+            }
+            var regPhone = /^01([0|1|6|7|8|9])-?([0-9]{3,4})-?([0-9]{4})$/;
+            if (regPhone.test(phoneNumberValue) !== true) {
+                setErrorFor(phoneNumber, '올바른 휴대폰 번호가 아닙니다.');
+                return;
+            } 
+            if(check11Value !== true) {
+                setErrorFor(check11, '개인정보 수집 및 이용동의를 체크해 주세요.');
+                return;
+            } 
+            // 모달닫기
+            modalAccountHide(closeaccount);
+        }
+    </script>
+</body>
+</html>
