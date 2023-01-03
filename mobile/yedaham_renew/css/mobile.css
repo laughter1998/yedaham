@@ -1902,6 +1902,7 @@ article.bg-exp {
     line-height: 2.2rem;
     font-weight: 350;
     color: #a06551;
+    word-break: keep-all;
 }
 /* ==========  예다함 제휴카드 ========== */
 
@@ -2103,7 +2104,7 @@ ul.yedaham-number li{
 
 
 ul.number-list {
-
+    word-break: keep-all;
 }
 ul.number-list > li {
     position: relative;
