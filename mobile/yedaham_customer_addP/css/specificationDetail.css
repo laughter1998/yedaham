@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+/* ===== 검색조건 ===== */
+.query-wrap {
+    padding: 20px 12px 40px 12px;
+    background-color: #fcf8f8;
+}
+
+.query-wrap .query-date{
+    display: flex;
+    align-items: center;
+}
+
+.query-period {
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+    
+}
+
+.query-period .period{
+    display: flex;
+    width: 100%;
+    
+}
+.query-period .period button{
+    width: 100%;
+    height: 44px;
+    background-color: #ffffff;
+    border: 1px solid #f2f2f2;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    color: #333333;
+    font-weight: 400;
+}
+
+.query-period .btn-query-wrap{
+   
+    margin-left: 8px;
+}
+.query-period .btn-query-wrap button{
+    width:84px;
+    height:44px;
+    border-radius: 8px;
+    background-color: #a06551;
+    font-size: 1.6rem;
+    letter-spacing: -2px;
+    line-height: 19px;
+    color: #ffffff;
+    font-weight: bold;
+}
+/* ===== 품목 확인 ===== */
+article.selected-prd-info {
+    padding: 25px 0 13px 0;
+    border-bottom: 1px solid #e2e1e1;
+}
+article.selected-prd-info:first-child {
+    padding: 0px 0 13px 0;
+
+}
+article.selected-prd-info p.info-tit {
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+    font-weight: 350;
+    color:#a06551;
+}
+article.selected-prd-info span.info-cotent{
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+
+.query-date select {
+    height: 44px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    border: 1px solid #e2e1e1;
+    padding: 0 10px;
+    font-size: 1.6rem;
+    color: #333333;
+}
+
+.query-date > span {
+    padding: 0 8px;
+}
+

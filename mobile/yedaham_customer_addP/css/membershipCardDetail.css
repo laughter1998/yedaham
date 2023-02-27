@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+
+.content-exp.membershipCardDetail {
+    height: 250px;
+    background: #fcf8f8;
+
+}
+
+.content-exp.membershipCardDetail h2 {
+    font-family: 'Youth';
+    font-size: 2.4rem;
+    color: #a06551;
+    margin-bottom: 15px;
+}
+
+.content-exp.membershipCardDetail > div {
+    font-size: 1.4rem;
+    color: #a06551;
+    font-weight: 300;
+}
+.content-exp.membershipCardDetail > div span{
+    font-family: 'Roboto';
+    font-weight: 400;
+}
+.content-exp.membershipCardDetail button.btn-prd-view {
+    margin-top: 20px;
+    width: 140px;
+    height: 40px;
+    line-height: 38px;
+    border-radius: 20px;
+    letter-spacing: -1px;
+    background-color: #a06551;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.4rem;
+    border: none;
+    outline: none;
+}
+
+.membershipCard-img {
+    position: relative;
+    margin-top:30px;
+    padding: 0 15px;
+}
+.membershipCard-img img{
+    width: 100%;
+}
+.membershipCard-img .card-info {
+    position: absolute;
+    bottom:6%;
+    left:10%;
+    color: #ceba99;
+}
+.membershipCard-img .card-info  span{
+    display: block;
+}

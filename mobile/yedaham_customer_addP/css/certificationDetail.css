@@ -1,0 +1,81 @@
+@charset "UTF-8";
+
+
+.content-exp.certificationDetail {
+    height: 250px;
+    background: #fcf8f8;
+
+}
+
+.content-exp.certificationDetail h2 {
+    font-family: 'Youth';
+    font-size: 2.4rem;
+    color: #a06551;
+    margin-bottom: 15px;
+}
+
+.content-exp.certificationDetail > div {
+    font-size: 1.4rem;
+    color: #a06551;
+    font-weight: 300;
+}
+.content-exp.certificationDetail > div span{
+    font-family: 'Roboto';
+    font-weight: 400;
+}
+.content-exp.certificationDetail button.btn-prd-view {
+    margin-top: 20px;
+    width: 140px;
+    height: 40px;
+    line-height: 38px;
+    border-radius: 20px;
+    letter-spacing: -1px;
+    background-color: #a06551;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.4rem;
+    border: none;
+    outline: none;
+}
+
+/* ===== 품목 확인 ===== */
+article.selected-prd-info {
+    padding: 25px 0 13px 0;
+    border-bottom: 1px solid #e2e1e1;
+}
+article.selected-prd-info:first-child {
+    padding: 0px 0 13px 0;
+
+}
+article.selected-prd-info p.info-tit {
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+    font-weight: 350;
+    color:#a06551;
+}
+article.selected-prd-info span.info-cotent{
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+
+/* ==========  팝업 구성안내  ========== */
+article.item {
+    margin-bottom: 15px;
+    padding: 30px 24px;
+    border:1px solid #f2f2f2;
+    border-radius: 18px;
+    box-shadow: 0 5px 5px rgba(242, 242, 242, 0.5);
+    color:#a06551;
+}
+article.item .item-tit{
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom:5px;
+
+}
+article.item .item-cotent{
+    font-size: 1.4rem;
+    font-weight: 350;
+}
+/* ========== 2. 구성안내  ========== */

@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+
+.content-exp.membershipCard {
+    height: 160px;
+}
+
+.prd-select input[type="radio"]:active + label.prd-item section.box,
+.prd-select input[type="radio"]:checked + label.prd-item section.box {
+    background: #fcf8f8;
+}
