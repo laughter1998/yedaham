@@ -1079,6 +1079,16 @@ p.item_name {
 
 }
 
+.woori {
+	color: #333 !important;
+}
+
+.color-666 {
+	color: #666 !important;
+}
+.color-555 {
+	color: #555 !important;
+}
 .card-list {
 	display: none;
 	color: #666;
@@ -1262,7 +1272,9 @@ h5.attention-tit {
 	text-align: left;
 	border-bottom: 1px solid #ebebeb;
 }
-
+.woori h5.attention-tit {
+	border-bottom: 0;
+}
 ul.attention-list {
 	text-align: left;
 }
@@ -1272,6 +1284,7 @@ ul.attention-list li {
 	font-size: 14px;
 	padding: 6px 0;
 	padding-left: 15px;
+	word-break: keep-all;
 }
 
 ul.attention-list li::before {
@@ -1325,6 +1338,88 @@ ul.attention-list li>div p.circle:before {
 	height: 4px;
 	border-radius: 2px;
 	background-color: #5c6284;
+}
+
+ul.woori-service {
+	text-align: left;
+}
+ul.woori-service li {
+	position: relative;
+	font-size: 14px;
+	padding: 6px 0;
+	padding-left: 15px;
+}
+ul.woori-service li h5 {
+	font-size: 14px;
+	letter-spacing: -1px;
+	line-height: 22px;
+	color: #6db900;
+	font-weight: 600;
+}
+ul.woori-service li p {
+	padding-left: 12px;
+	font-size: 13px;
+	/* letter-spacing: -1px; */
+	padding-top:5px;
+	line-height: 20px;
+	color: #333333;
+	font-weight: 400;
+	word-break: keep-all;
+}
+.woori section.card {
+	display: flex;
+	margin-top: 45px;
+	padding: 30px;
+	border-radius: 16px;
+	filter: drop-shadow(8.485px 8.485px 6.5px rgba(3,4,4,0.1));
+	background-color: #f9fdf3;
+	border: 1px solid #a5db3d;
+}
+.woori section.card .card-left{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	flex-basis: 300px;
+    flex-shrink: 0;
+	text-align: left;
+	font-size: 20px;
+	letter-spacing: -1px;
+	line-height: 30px;
+	color: #333333;
+	
+}
+.woori section.card .card-left p{
+	display: inline-block;
+	background-color: #9dd139;
+	font-weight: 600;
+}
+.woori section.card .card-right{
+	text-align: left;
+}
+.woori section.card .card-right ul {
+
+}
+.woori section.card .card-right ul li{
+	position: relative;
+	padding-bottom: 14px;
+	padding-left:10px;
+	letter-spacing: -1px;
+	font-size: 14px;
+	line-height: 22px;
+	color: #333333;
+	font-weight: 400;
+	word-break: keep-all;
+}
+.woori section.card .card-right ul li:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 9px;
+    width: 4px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #5c6284;
 }
 
 a.btn-card-view {
@@ -1407,16 +1502,18 @@ a.btn-card-view {
 }
 
 .woori .t-color01 {
-	color: #9dd139 !important;
+	color: #6db900 !important;
 }
 
 .woori .t-color02 {
-	color: #9dd139 !important;
+	color: #6db900 !important;
 }
 .woori .b-color {
-	background-color: #9dd139 !important
+	background-color: #6db900 !important
 }
-
+.woori .t-color {
+	color: #6db900 !important;
+}
 .card-list.hana .card-vis {
 	background-color: #7c8b92;
 }
