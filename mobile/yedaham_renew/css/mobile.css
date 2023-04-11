@@ -9,6 +9,9 @@
 .main-color{
     color: #a06551 !important;
 }
+.color-333{
+    color: #333 !important;
+}
 .notoKR {
      font-family: 'NotoSansKR', sans-serif;
  }
@@ -687,7 +690,54 @@ section.box h3 {
     font-size: 1.8rem;
 
 }
-
+.woori section.card {
+    padding: 30px 24px;
+    border-radius: 20px;
+    filter: drop-shadow(0px 1px 2.5px rgba(0,0,0,0.05));
+    background-color: #f9fdf3;
+    border: 1px solid #9dd139;
+}
+.woori section.card .promotion-title {
+    font-size: 18px;
+    color:#333;
+}
+.woori section.card .promotion-title p{ 
+    display: inline-block;
+	background-color: #9dd139;
+	font-weight: 700;
+}
+.woori section.card .img-wrap {
+    padding: 20px 0;
+}
+.woori section.card  ul li{
+	position: relative;
+	padding-bottom: 14px;
+	padding-left:10px;
+	letter-spacing: -1px;
+	font-size: 14px;
+	line-height: 22px;
+	color: #333333;
+	font-weight: 600;
+	word-break: keep-all;
+}
+.woori section.card ul li:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 9px;
+    width: 4px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #333;
+}
+.woori section.card  ul li:nth-child(3){
+    padding-bottom: 0;;
+}
+.woori section.card  ul li .t-color{
+    font-weight: 700;
+    color:#6db900;
+}
 /* ==========  메인 ========== */
 #main .mainContent {
     position: relative;
@@ -1781,7 +1831,7 @@ section.swiper-unit.bg-card04 {
     background:#4776d0;
 }
 section.swiper-unit.bg-card05 {
-    background:#fccb0c;
+    background:#9dd139;
 }
 section.swiper-unit.bg-card06 {
    background:#7c8b92;
@@ -1807,9 +1857,8 @@ section.swiper-unit .card-top img.card {
     width: 244px;
     margin-top:60px;
     box-shadow: 11px 16px 70px 0px rgba(131, 133, 147, 0.2);
+}
 
-}
-}
 section.swiper-unit.partnership {
     background: #fcf8f8;
 }
@@ -1892,6 +1941,15 @@ section.box h5.titB {
     font-size: 1.1rem;
     color: #a06551;
 }
+.card-container .woori {
+    color: #333;
+}
+.card-container .woori .card-text-color{
+    color: #4ca100 !important;
+}
+.card-container .woori .bg-color td {
+    background-color: #f9fdf3;
+}
 article.bg-exp {
     position: relative;
     padding: 20px;
@@ -1902,7 +1960,11 @@ article.bg-exp {
     line-height: 2.2rem;
     font-weight: 350;
     color: #a06551;
-    word-break: keep-all;
+	word-break: keep-all;
+}
+.woori article.bg-exp {
+    color: #333;
+	word-break: keep-all;
 }
 /* ==========  예다함 제휴카드 ========== */
 
@@ -1942,7 +2004,7 @@ footer#footer {
     font-size: 1.2rem;
 }
 #product footer#footer {
-    margin-bottom: 52px;
+    padding-bottom: 92px;
 }
 body#partnership-intro  footer#footer {
     margin-top: -2px;
@@ -2104,7 +2166,7 @@ ul.yedaham-number li{
 
 
 ul.number-list {
-    word-break: keep-all;
+	word-break: keep-all;
 }
 ul.number-list > li {
     position: relative;
@@ -2185,6 +2247,9 @@ ul.circle-list {
     text-align: left;
     margin-top: 20px;
 }
+.woori ul.circle-list > li {
+    color:#333;
+}
 ul.circle-list > li:nth-child(1) {
     margin-top: 0px;
 }
@@ -2202,6 +2267,10 @@ ul.circle-list > li::before {
 
 .bg-exp ul.circle-list > li::before {
     background: #a06551;
+
+}
+.woori .bg-exp ul.circle-list > li::before {
+    background: #333;
 
 }
 ul.star-list {
@@ -2259,6 +2328,26 @@ ul.no-bul-list > li {
     font-size: 1.4rem;
     line-height: 2.2rem;
     text-align: left;
+}
+
+ul.woori-service {
+    margin-top: 10px;
+}
+ul.woori-service li {
+	position: relative;
+	padding: 6px 0;
+}
+ul.woori-service li > h4 {
+	color: #6db900 !important;
+	font-weight: 600;
+}
+ul.woori-service li p {
+	padding-left: 12px;
+	padding-top:5px;
+	line-height: 20px;
+	color: #333333;
+	font-weight: 400;
+	word-break: keep-all;
 }
 /* ========== list  ========== */
 
@@ -2940,7 +3029,7 @@ ul.menu-list > li.has-children ul li.go-back a:after {
     }
     /* ========== 알럿  ========== */
 
-    #overlay {
+    #overlay, #overlay2 {
     position: fixed;
     opacity: 0;
     transition: 200ms ease-in-out;
@@ -2953,9 +3042,9 @@ ul.menu-list > li.has-children ul li.go-back a:after {
     z-index: 10000;
     }
 
-    #overlay.active {
-    opacity: 1;
-    pointer-events: all;
+    #overlay.active, #overlay2.active {
+		opacity: 1;
+		pointer-events: all;
     }
     /* 모달팝업 */
 
