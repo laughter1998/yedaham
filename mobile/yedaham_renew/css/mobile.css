@@ -1211,7 +1211,7 @@ dl.history-list dd {
 dl.history-list dd span {
     position: absolute;
     left:0;
-    top:0
+    top:0;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
 }
@@ -2246,6 +2246,7 @@ ul.circle-list {
     color:#666;
     text-align: left;
     margin-top: 20px;
+    word-break: keep-all;
 }
 .woori ul.circle-list > li {
     color:#333;
@@ -2318,6 +2319,28 @@ ul.etc-list > li::before {
 }
 
 
+ul.bar-list {
+
+}
+ul.bar-list > li {
+    margin-top: 20px;
+    position: relative;
+    font-weight:350;
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    padding-left:16px;
+    text-align: left;
+}
+ul.bar-list > li::before {
+    display: block;
+    content: '- ';
+    position: absolute;
+    left:0;
+    top:-1px;
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+
+}
 
 ul.no-bul-list {
 
