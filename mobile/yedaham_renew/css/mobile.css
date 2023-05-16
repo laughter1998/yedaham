@@ -2585,6 +2585,50 @@ div.event-wrap .event-vis {
     -webkit-filter:grayscale(100%);
 }
 
+section.event-view-box.box {
+    padding-top: 0px;
+    padding-bottom: 10px;
+}
+section.event-view-box article.event-view-content{
+    padding: 40px 12px;
+    border-top:1px solid #ededed;
+}
+section.event-view-box article.event-view-content:first-child{
+    border-top:0px solid #ededed;
+}
+section.event-view-box article.event-view-content h5{
+    font-size: 20px;
+    letter-spacing: -1px;
+    line-height: 26px;
+    color: #333333;
+    font-family: "Youth";
+}
+section.event-view-box article.event-view-content p,
+section.event-view-box article.event-view-content ul > li {
+    line-height: 22px;
+}
+section.event-view-box article.event-view-content p.date {
+    margin-top: 25px;
+    font-size: 26px;
+    letter-spacing: -1.5px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: #333333;
+    
+    
+}
+section.event-view-box article.event-view-content p.date > span {
+    font-weight: 700;
+    font-family: "Roboto";
+}
+
+section.event-view-box article.event-view-content .img-product {
+    text-align: center;
+}
+section.event-view-box article.event-view-content .img-product > img {
+     max-width: 138px;
+}
+
 /* ========== 이벤트 ========== */
 
 /* ========== 사이드 메뉴 ========== */
