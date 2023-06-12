@@ -1864,11 +1864,11 @@ section.swiper-unit.partnership {
 }
 section.swiper-unit.partnership .card-top {
     position: relative;
-    height: 285px;
+    height: 210px;
      color:#333333;
 }
 section.swiper-unit.partnership .card-top h5 {
-     padding-top: 108px;
+     padding-top: 65px;
      font-family: 'Youth', sans-serif;
      font-size: 4rem;
      line-height: 4.8rem;
@@ -1902,6 +1902,23 @@ section.swiper-unit.partnership .card-top p {
 .card-container.card-index .swiper-slide .move-content{
     visibility: hidden;
 }
+.card-container .sub-menu {
+    padding: 35px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 20px;
+    justify-content: space-around;
+}
+.card-container .sub-menu li {
+    text-align: center;
+}
+.card-container .sub-menu li img {
+    width: 65px;
+}
+.card-container .sub-menu li p {
+    margin-top: 8px;
+}
+
 .card-container .swiper-slide {
     border-top-left-radius: 18px;
     border-top-right-radius: 18px;
@@ -1912,6 +1929,7 @@ section.swiper-unit.partnership .card-top p {
     border-top-right-radius: 18px;
     background: #fff;
 }
+
 
 .partnership-wrap section.box h5 {
     font-weight: 350;
