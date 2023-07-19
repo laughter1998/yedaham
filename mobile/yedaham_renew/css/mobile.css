@@ -738,6 +738,24 @@ section.box h3 {
     font-weight: 700;
     color:#6db900;
 }
+a.btn-kb-download {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    margin-left:-15px;
+    margin-right:-15px;
+    line-height: 42px;
+    border-radius: 12px;
+    filter: drop-shadow(0px 1px 2.5px rgba(0,0,0,0.05));
+    background-color: #bb9183;
+    letter-spacing: -0.5px;
+    color: #ffffff;
+    gap: 10px;
+}
+a.btn-kb-download img {
+    width: 14px;
+}
 /* ==========  메인 ========== */
 #main .mainContent {
     position: relative;
