@@ -430,6 +430,31 @@ history.pushState(null, null, location.href);
         <div class="copyright ">Copyright© The-K Yedaham Co. Ltd <br />ALL Right Reserved</div>
         <button id="top-btn" onclick="backToTop()"><img src="../images/common/btn_scroll_top.png"  alt=""></button>
     </footer>
+    <style>
+        #float-banner {
+            position: fixed;
+            right:12px;
+            bottom: 180px;
+            z-index: 2;
+            text-align: right;
+        }
+        #float-banner button {
+            cursor: pointer;
+            outline: none;
+            background: #fff;
+            margin-right: 5px;
+            margin-bottom:5px;
+        }
+       
+
+    </style>
+    <div id="float-banner">
+        <div class="banner-wrap">
+            <button><img src="../images/common/btn_floating_close.png" style="width:12px;" alt=""></button>
+            <div><a href="../event/event230901.html"><img src="../images/common/floating230901.png" style="width:100px;"></a></div>
+        </div>
+    </div>
+
     <nav id="nav-bot" >
         <a href="#">간편가입</a>
         <a href="#">가입상담신청</a>
