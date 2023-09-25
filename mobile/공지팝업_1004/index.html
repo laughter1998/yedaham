@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<style>
+    #layerPop .modal-alert {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%) scale(0);
+        transition: 200ms ease-in-out;
+        z-index: 10001;
+
+        width:300px;
+        border-radius: 25px;
+        overflow:hidden;
+        z-index: 10001;
+    }
+    #layerPop .modal-alert.active {
+    transform: translate(-50%,-50%) scale(1);
+    }
+    #layerPop .modal-body img {
+        vertical-align: top;
+        max-width: 100%;
+        height: auto !important;
+    }
+    #layerPop .modal-alert button.btn-alert {
+        width: 100%;
+        height: 48px;
+        font-weight: 350;
+        font-size: 16px;
+        background:#a06551;
+        color:#fff;
+        font-weight: 350;
+        outline: none;
+        border:none
+    }
+    #layerPop .modal-alert button.btn-alert:nth-child(2) {
+        font-weight:350;
+        border-left:1px solid #b38474;
+        font-weight: 700;
+       
+    }
+   
+
+    #layerPop .flex {
+        display: flex !important;
+    }
+    #layerPop #overlay {
+        position: fixed;
+        opacity: 0;
+        transition: 200ms ease-in-out;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, .5);
+        pointer-events: none;
+        z-index: 10000;
+    }
+
+    #layerPop #overlay.active{
+		opacity: 1;
+		pointer-events: all;
+    }
+</style>
+
+    <img src="./images/bg.jpg" alt="" style="width: 100%;">
+    <div id="layerPop" >
+        <div class="modal-alert active" id="modalAlert">
+            <div class="modal-body" >
+                <img src="./images/popup_231004.png" />
+             </div>
+             <div class="flex">
+                <button  class="btn-alert" onclick="closeWin()">다시보지않기</button>
+                <button  class="btn-alert" onclick="location.href = 'https://service.yedaham.co.kr/';">자세히 보기</button>
+            </div>
+         </div><!-- class="modal" -->
+         <div id="overlay" class="active"  onclick="closeWin()"></div>
+     </div>
+
+
+     
+<script language="Javascript" type="text/javascript">
+   
+    function closeWin() {
+        document.getElementById('layerPop').style.display = "none";
+    }
+   
+</script>
+</body>
+</html>
