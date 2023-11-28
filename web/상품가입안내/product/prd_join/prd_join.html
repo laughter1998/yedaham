@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>예다함</title>
+		<meta http-equiv="Cache-Control" content="no-cache, must-revalidate"/>
+		<meta http-equiv="Expires" content="0"/>
+		<meta http-equiv="Pragma" content="no-cache"/>
+		<script type="text/javascript" src="https://www.yedaham.co.kr/js/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="https://www.yedaham.co.kr/js/common/function.js"></script>
+		<script type="text/javascript" src="https://www.yedaham.co.kr/js/select2.full.js"></script>
+		<script type="text/javascript" src="https://www.yedaham.co.kr/js/script.js"></script>
+		<script type="text/javascript" src="https://www.yedaham.co.kr/js/jquery.placeholder.js"></script>
+		<script type="text/javascript" src="https://www.yedaham.co.kr/js/validate_info.js"></script>
+		<script type="text/javascript" src="https://www.yedaham.co.kr/js/common.js"></script>
+		<script type="text/javascript" src="https://www.yedaham.co.kr/js/commons-validator-1.3.1.js"></script>
+		<script type="text/javascript" src="https://www.yedaham.co.kr/js/menu.js"></script>
+		<link rel="stylesheet" type="text/css" href="https://www.yedaham.co.kr/css/select2.css" />
+		<link rel="stylesheet" type="text/css" href="https://www.yedaham.co.kr/css/styles.css" />
+	</head>
+	<body>
+		<style>
+			ul.tab_navi {
+				display: flex;
+				border-bottom: 2px solid #c87c1e;
+			}
+
+			ul.tab_navi li {
+				width: 100%;
+				height: 42px;
+				text-align: center;
+				border-top: 1px solid #dedbd8;
+				border-left: 1px solid #dedbd8;
+				border-right: 1px solid #dedbd8;
+				font-weight: bold;
+			}
+
+			ul.tab_navi li a {
+				display: flex;
+				width: 100%;
+				height: 100%;
+				justify-content: center;
+				align-items: center;
+				color: #494233;
+			}
+
+			ul.tab_navi li.current {
+				background: #c87c1e;
+				border-top: 1px solid #c87c1e;
+				border-left: 1px solid #c87c1e;
+				border-right: 1px solid #c87c1e;
+			}
+
+			ul.tab_navi li.current a {
+				color: #ffffff;
+			}
+			.prd_join_slider .bx-wrapper {
+				margin: -2px auto 0px;
+			}
+			.prd_join_slider .bx-wrapper .bx-viewport {
+				border-left: 0px solid #fff !important; 
+				border-right: 0px solid #fff !important;
+				border-top: 0px solid #fff !important;
+				border-bottom: 0px solid #fff !important;
+				
+			}
+			.prd_join_slider .bx-wrapper .bx-pager {
+				text-align: center;
+				font-size: .85em;
+				font-family: Arial;
+				font-weight: bold;
+				color: #666;
+				padding-top: 0px;
+			}
+			.prd_join_slider .bx-wrapper .bx-pager.bx-default-pager a {
+				background: #666;
+				text-indent: -9999px;
+				display: block;
+				width: 10px;
+				height: 10px;
+				margin: 0 5px;
+				outline: 0;
+				-moz-border-radius: 5px;
+				-webkit-border-radius: 5px;
+				border-radius: 5px;
+			}
+			.prd_join_slider .bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto {
+				bottom: 20px;
+			}
+			.prd_join_slider .bx-wrapper .bx-pager.bx-default-pager a:hover, 
+			.prd_join_slider .bx-wrapper .bx-pager.bx-default-pager a.active, 
+			.prd_join_slider .bx-wrapper .bx-pager.bx-default-pager a:focus {
+				background: #fff;
+			}
+			.prd_join_slider .bx-wrapper .bx-pager.bx-default-pager a {
+				background: #e4e4f9;
+			}
+
+			.tab_content .phone-title {
+				display: flex;
+				align-items: center;
+				font-size: 24px;
+				letter-spacing: -1px;
+				color: #412900;
+				font-weight: bold;
+			}
+			.tab_content .phone-title span{
+				letter-spacing: 0px;
+				color: #ba8645;
+			}
+			.tab_content .phone-title img {
+				margin-left:10px;
+			}
+			.phone3-wrap {
+				display: grid;
+    			grid-template-columns: 1fr 1fr 1fr;
+				gap: 0px 6px;
+			}
+
+			.accordion {
+
+			}
+			.accordion .accordion-item{
+				border:1px solid #dedbd8;
+				border-top:none;
+			}
+			.accordion .accordion-item:first-child{
+				border-top:1px solid #dedbd8;
+			}
+			.accordion .accordion-item .accordion-header{
+				display: flex;
+				justify-content: space-between;
+				height: 55px;
+				font-size: 14px;
+				color: #444444;
+				padding-left: 20px;
+				letter-spacing: -1px;
+			}
+			.accordion .accordion-item .accordion-header > div {
+				display:flex;
+				align-items: center;
+			}
+			.accordion .input_chk,
+			.accordion .input_radio {
+				margin-right:2px;
+			}
+			.accordion .accordion-item .accordion-header .header-right .agree_select{
+				display: flex;
+				align-items: center;
+				height: 100%;
+				padding-right: 15px;
+				border-right: 1px solid #dedbd8;
+			}
+			.accordion .accordion-item .accordion-header .header-right .header-button {
+				width: 114px;
+				height: 100%;
+			}
+			.accordion .accordion-item .accordion-header .header-right .header-button button{
+				all: unset;
+				width: 100%;
+				height: 100%;
+				position: relative;
+				color: #c87c1e;
+				font-size: 14px;
+				font-weight: bold;
+				padding-left: 20px;
+				
+			}
+			.accordion .accordion-item .accordion-header .header-right .header-button button::after {
+				content: "";
+				display: block;
+				position: absolute;
+				left:80px;
+				top:50%;
+				margin-top: -3px;
+				width: 16px;
+				height: 9px;
+				background-image: url('../../images/product/prd_join/icon_accordion_arrow.png');
+				background-repeat: no-repeat;
+				background-position: center center;
+				transform: rotate(180deg);
+			}
+			.accordion .accordion-item .accordion-header .header-right .header-button button[aria-expanded="true"]::after {
+				transform: rotate(0deg);
+			}
+			.accordion .accordion-item .collapse {
+				overflow: hidden;
+				max-height:0;
+				transition: max-height 0.5s;
+			}
+			.accordion .accordion-item .collapse.show {
+				max-height:110px;
+				
+			}
+			.accordion .accordion-item .accordion-body .popterms {
+				height: 70px;
+				overflow: auto;
+				padding: 20px 30px;
+				color: #111111;
+				background: #ffffff;
+				line-height: 20px;
+				font-size: 14px;
+				border:none;
+				border-top:1px solid #dedbd8;
+			}
+			.accordion .accordion-item .accordion-body .popterms p.title{
+				font-weight: bold;
+			}
+			.steps {
+							display: grid;
+							grid-template-columns: 1fr 1fr 1fr;
+							gap: 30px 56px;
+						}
+						.steps .step {
+							position: relative;
+							height: 214px;
+							border-radius: 20px;
+							background-color: #ffffff;
+							border: 1px solid #ebebeb;
+							text-align: center;
+						}
+						.steps .step::after{
+							content:'';
+							display:block;
+							position: absolute;
+							right:-39px;
+							top:50%;
+							margin-top:-11px;
+							width: 22px;
+							height: 22px;
+							background-image: url('../../images/product/prd_join/icon_step_arrow.png');
+						}
+						.steps .step:nth-child(3n)::after{
+							background-image:none;
+						}
+						.steps .step p.step_img{
+							height: 105px;
+							display: flex;
+							align-items: center;
+							justify-content:center;
+						}
+						.steps .step p.step_tit{
+							font-size: 16px;
+							letter-spacing: -1px;
+							color: #c87c1e;
+							font-weight: bold;
+							text-align: center;
+						}
+						.steps .step p.step_desc{
+							margin-top: 10px;
+							font-size: 14px;
+							letter-spacing: -1px;
+							line-height: 20px;
+							color: #412900;
+							
+							text-align: center;
+						}
+
+			.fs24 {
+				font-size: 24px !important;
+			}
+			.fw-bold {
+				font-weight: bold !important;
+			}
+		</style>
+
+		<div id="sub_wrapper">
+			<div class="sub_container" id="movecontents">
+				
+
+				<div class="sub_box_wrap">
+					<div class="title_area bg_product" >
+						<h3><img src="https://www.yedaham.co.kr/images/product/prd_join/title_prd_join.png" alt="상품가입안내"/></h3>
+						<p>홈페이지 또는 상담원과 의 전화 한통으로<br>원하시는 예다함 상품을 신청 하실 수 있습니다.</p>
+					</div><!-- class="title_area" -->
+
+					<div class="slider_wrap prd_join_slider ">
+						<div class="slider">
+							<div class="slide"><img src="../../images/product/prd_join/banner01.jpg" ></div>
+							<div class="slide"><img src="../../images/product/prd_join/banner01.jpg" ></div>
+							<div class="slide"><img src="../../images/product/prd_join/banner01.jpg" ></div>
+						</div>
+					</div><!-- class="slider_wrap" -->
+
+					<ul class="tab_navi mt30">
+						<li class="current"><a href="javascript:void(0);" onclick="showSection('section1')">가입상담신청</a></li>
+						<li ><a href="javascript:void(0);" onclick="showSection('section2')">다이렉트 상품가입</a></li>
+					</ul>
+				
+					<section id="section1" class="tab_content">
+						<div class="phone-title mt30">
+							가입상담 <img src="../../images/product/prd_join/icon_headphone.png" alt=""><span>1566-6644</span>
+						</div>
+						<div class="fs14 mt25 ">
+							연락주시면 전문상담원에게<br>  친절한 상담을 받으실 수 있습니다.
+						</div>
+
+						<div class="space_line mt35"></div>
+
+						<div class="fs24 yellow fw-bold mt40">
+							상담신청
+						</div>
+
+						<div class="fs14 mt15">
+							아래 입력해주신 기본 정보로 전문상담원이 빠른 시간 내에 연락을 드리겠습니다.
+						</div>
+						<form id="" name="" method="post" action="">
+
+							<table class="input_table mt35">
+								
+								<colgroup><col style="width:398px;"><col width="*"></colgroup>
+								<tbody>
+									<tr>
+										<th>이름</th>
+										<th>휴대전화</th>
+									</tr>
+									<tr>
+										<td class="pt15 "><input type="text" class="form-input " name="personName" maxlength="20" style="width:358px;" value="" /></td>
+										<td class="pt15 ">
+											<div class="phone3-wrap">
+												<input type="text" class="form-input " name="phone1" maxlength="3"  value="" />
+												<input type="text" class="form-input " name="phone2" maxlength="4"   value="" />
+												<input type="text" class="form-input " name="phone3" maxlength="4"   value="" />
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th class="pt35 ">상담희망시간</th>
+									</tr>
+									<tr>
+										<td class="pt15">
+											<select name="time" id="time"  class="select2" style="width:358px;height:30px;" >
+												<option value="상시(아무때나)">상시(아무때나)</option>
+												<option value="am 10:00 ~ am 11:00">am 10:00 ~ am 11:00</option>
+												<option value="am 11:00 ~ am 12:00">am 11:00 ~ am 12:00</option>
+												<option value="am 12:00 ~ pm 01:00">am 12:00 ~ pm 01:00</option>
+												<option value="pm 01:00 ~ pm 02:00">pm 01:00 ~ pm 02:00</option>
+												<option value="pm 02:00 ~ pm 03:00">pm 02:00 ~ pm 03:00</option>
+												<option value="pm 03:00 ~ pm 04:00">pm 03:00 ~ pm 04:00</option>
+												<option value="pm 04:00 ~ pm 05:00">pm 04:00 ~ pm 05:00</option>
+												<option value="pm 05:00 ~ pm 06:00">pm 05:00 ~ pm 06:00</option>
+												<option value="pm 06:00 ~ pm 06:30">pm 06:00 ~ pm 06:30</option>
+											</select>
+											<p class="fs14 yellow mt10">상담운영시간 : 평일 09:30 ~ 18:30 (주말/공유일 휴무)</p>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+
+
+							<div class="fs14 fw-bold mt40">개인정보의 수집 및 이용, 제공에 관한 동의</div>
+							
+							<div class="fs14 mt20">The-K예다함상조(주)는 「개인정보보호법」에 따라 귀하의 개인정보를 다음과 같이 수집ㆍ이용하고자 합니다.</div>
+							
+							
+
+							<div class="accordion mt20">
+								<div class="accordion-item">
+									<div class="accordion-header">
+										<div>[필수] 개인정보 수집 이용에 대한 동의</div>
+										<div class="header-right">
+											<div class="agree_select">
+												<span class="input_radio"><input type="radio" id="new_radio011" name="all01" value="Y"><label id="new_radio011Lb" for="new_radio011"></label></span><span class="agr_txt">동의</span>&nbsp;&nbsp;&nbsp;
+												<span class="input_radio"><input type="radio" id="new_radio012" name="all01" value="N" checked=""><label id="new_radio012Lb" for="new_radio012"></label></span><span class="agr_txt">동의안함</span>
+											</div>
+											<div class="header-button">
+												<button type="button" data-bs-target="#collapse1" aria-expanded="true">전문보기</button>
+											</div>
+										</div>
+									</div>
+									<div id="collapse1" class=" collapse show">
+									  	<div class="accordion-body">
+											<div class="popterms">
+												<p class="title">가. 개인정보 수집, 이용 목적</p>
+												<p>장지서비스 신청의사 확인 및 장지 서비스 제공을 위한 컨설팅</p>
+												<p class="title mt10">나. 수집하는 개인정보 항목</p>
+												<p> 이름, 휴대전화, 상담희망시간</p>
+											</div>
+									  	</div>
+									</div>
+								</div>
+
+								<div class="accordion-item">
+									<div class="accordion-header">
+										<div>[필수] 개인정보 제공에 대한 동의</div>
+										<div class="header-right">
+											<div class="agree_select">
+												<span class="input_radio"><input type="radio" id="new_radio021" name="all02" value="Y"><label id="new_radio021Lb" for="new_radio021"></label></span><span class="agr_txt">동의</span>&nbsp;&nbsp;&nbsp;
+												<span class="input_radio"><input type="radio" id="new_radio022" name="all02" value="N" checked=""><label id="new_radio022Lb" for="new_radio022"></label></span><span class="agr_txt">동의안함</span>
+											</div>
+											<div class="header-button">
+												<button type="button" data-bs-target="#collapse2" aria-expanded="false">전문보기</button>
+											</div>
+										</div>
+									</div>
+									<div id="collapse2" class="collapse">
+									  	<div class="accordion-body">
+											<div class="popterms">
+												<p class="title">가. 개인정보 처리의 위탁</p>
+												<p>1) 위탁받은 업체 : 가람퓨너럴, 바른장례, 선우퓨너럴, 양지, 길안</p>
+												<p>2) 위탁하는 업무 : 장지서비스 제공 컨설팅</p>
+												<p class="mt10">* 개인정보처리 위탁에 대한 동의를 거부할 수 있으나, 동의 거부 시 상담이 불가할 수 있음</p>
+											</div>
+									  	</div>
+									</div>
+								</div>
+
+								<div class="accordion-item">
+									<div class="accordion-header">
+										<div>[선택] 마케팅 정보수집 선택적 동의&nbsp;&nbsp;&nbsp;&nbsp;
+											<span class="input_chk "><input type="checkbox" id="phone" name="" value="Y"><label  for="phone"></label></span><span class="agr_txt">전화</span>&nbsp;&nbsp;&nbsp;
+											<span class="input_chk "><input type="checkbox" id="message" name="" value="Y"><label  for="message"></label></span><span class="agr_txt">문자</span><span class="fs12">(SMS 또는 카카오 알림톡)</span>
+										</div>
+										<div class="header-right">
+											<div class="agree_select">
+												<span class="input_radio"><input type="radio" id="new_radio041" name="all04" value="Y"><label id="new_radio041Lb" for="new_radio041"></label></span><span class="agr_txt">동의</span>&nbsp;&nbsp;&nbsp;
+												<span class="input_radio"><input type="radio" id="new_radio042" name="all04" value="N" checked=""><label id="new_radio042Lb" for="new_radio042"></label></span><span class="agr_txt">동의안함</span>
+											</div>
+											<div class="header-button">
+												<button type="button" data-bs-target="#collapse3" aria-expanded="false">전문보기</button>
+											</div>
+										</div>
+									</div>
+									<div id="collapse3" class="collapse">
+									  	<div class="accordion-body">
+											<div class="popterms">
+												<p>예다함은 고객과 장지 업체간 중개업무를 담당하며, 장지서비스 제공과 관련한 계약은 고객과 장지 업체가 직접 진행합니다.</p>
+											</div>
+									  	</div>
+									</div>
+								</div>
+								
+							</div><!-- // class="accordion" -->
+
+
+						</form>
+						<p class="btn_area mt30">
+							<a href="javascript:history.back();" class="btn_white">취소</a>
+							<a href="javascript:form_submit();" class="btn_type01">상담신청하기</a>
+
+						</p>
+					</section>
+					
+					<section id="section2" class="tab_content" style="display:none;">
+						<div class="steps mt30">
+							<div class="step">
+								<p class="step_img"><img src="../../images/product/prd_join/img_step1.png" alt=""></p>
+								<p class="step_tit">1. 약관동의 및 본인인증</p>
+								<p class="step_desc">온라인 가입 신청을 위해 필요한<br>약관동의 및 본인인증 절차를<br>거쳐주세요.</p>
+							</div>
+							<div class="step">
+								<p class="step_img"><img src="../../images/product/prd_join/img_step2.png" alt=""></p>
+								<p class="step_tit">2. 정보입력</p>
+								<p class="step_desc">연락처, 주소 등 정보를<br>입력해 주세요.</p>
+							</div>
+							<div class="step">
+								<p class="step_img"><img src="../../images/product/prd_join/img_step3.png" alt=""></p>
+								<p class="step_tit">3. 상품 선택</p>
+								<p class="step_desc">원하시는 가격대의 상품을  <br>선택해 주세요.</p>
+							</div>
+							<div class="step">
+								<p class="step_img"><img src="../../images/product/prd_join/img_step4.png" alt=""></p>
+								<p class="step_tit">4. 가입상품 확인</p>
+								<p class="step_desc">선택한 가입상품을<br> 확인해 주세요. </p>
+							</div>
+							<div class="step">
+								<p class="step_img"><img src="../../images/product/prd_join/img_step5.png" alt=""></p>
+								<p class="step_tit">5. 납입방법선택</p>
+								<p class="step_desc">납입기간을 선택하시고 자동이체할 <br> 계좌정보를 입력 후 <br> 청약신청서를 출력하세요.</p>
+							</div>
+							<div class="step">
+								<p class="step_img"><img src="../../images/product/prd_join/img_step6.png" alt=""></p>
+								<p class="step_tit">6. 가입 완료</p>
+								<p class="step_desc">예다함 상품 가입이 <br> 완료되었습니다.</p>
+							</div>
+						</div>
+						<p class="btn_area mt60">
+							
+							<a href="#" class="btn_type01">다이렉트 상품 가입하기</a>
+
+						</p>
+					</section>
+
+					
+				</div><!-- class="sub_box_wrap" -->
+
+
+
+				</div><!-- class="sub_container" -->
+				<!-- 푸터 -->
+
+				<!-- //푸터---->
+			</div><!-- id="sub_wrapper" -->
+			<script src="https://www.yedaham.co.kr/js/jquery.bxslider.js"></script>
+			<link href="https://www.yedaham.co.kr/css/jquery.bxslider.css" rel="stylesheet" />
+			<script type="text/javascript" language="javascript">
+
+				//상단 배너 캐러셀
+				$(document).ready(function(){
+					$('.slider').bxSlider({
+						auto: true,
+						minSlides: 1,
+						moveSlides: 1,
+						slideMargin: 0,
+						pager: true,
+						controls:false
+					});
+				});
+			
+				//탭별 section 보기
+				function showSection(sectionId) {
+				  
+				  const sections = document.querySelectorAll('.tab_content');
+				  sections.forEach(section => section.style.display = 'none' );
+				  document.getElementById(sectionId).style.display = 'block';
+				
+				  // Update the 'current' class on the tab
+				  var tabs = document.querySelector('.tab_navi').children;
+				  for(var i = 0; i < tabs.length; i++) {
+					tabs[i].classList.remove('current');
+				  }
+				  event.currentTarget.parentNode.classList.add('current');
+				}
+
+				//개인정보 수집 accodian 
+				const accordionButtons = document.querySelectorAll('.accordion-item .header-button button');
+				if(accordionButtons){
+
+					// 각 버튼에 대해 이벤트 리스너 설정
+					accordionButtons.forEach(function(button) {
+						button.addEventListener('click', function() {
+							var targetId = button.getAttribute('data-bs-target');
+							var targetElement = document.querySelector(targetId);
+
+							// aria-expanded 속성 토글 및 대상 div의 표시 여부 변경
+							if (button.getAttribute('aria-expanded') === 'true') {
+								button.setAttribute('aria-expanded', 'false');
+								// button.classList.add('rotate');
+								targetElement.classList.remove('show');
+							} else {
+								button.setAttribute('aria-expanded', 'true');
+								// button.classList.remove('rotate');
+								targetElement.classList.add('show');
+							}
+						});
+					});
+				}
+				</script>
+	</body>
+</html>
