@@ -386,6 +386,12 @@ hr, caption, legend, figcaption {
 .flex {
     display: flex !important;
 }
+.flex-img3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+}
+
 .main-color {
     color:var(--main-color) !important;
 }
@@ -2664,7 +2670,25 @@ section.event-view-box article.event-view-content .img-product {
 section.event-view-box article.event-view-content .img-product > img {
      max-width: 138px;
 }
-
+section.event-view-box p.view-box-gubun {
+    position: relative;
+    padding-left: 12px;
+    font-size: 16px;
+    letter-spacing: -0.04em;
+    color: #333333;
+    font-weight: 700; 
+}
+section.event-view-box p.view-box-gubun::before {
+    position: absolute;
+    left:0;
+    top:50%;
+    margin-top: -2px;
+    display: block;
+    content: '';
+    width: 5px;
+    height: 5px;
+    background-color: #333;
+}
 /* ========== 이벤트 ========== */
 
 /* ========== 사이드 메뉴 ========== */
