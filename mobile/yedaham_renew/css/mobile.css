@@ -792,10 +792,10 @@ a.btn-kb-download img {
     }
 }
 .main-swiper  .slide-item  .txt p {
-    margin-top: 20px;
     margin-bottom: 30px;
 }
  .main-swiper  h3 {
+    margin-bottom: 20px;
     font-family: 'Youth', sans-serif;
     font-size: 5.2rem;
     line-height: 6rem;
@@ -2669,6 +2669,28 @@ section.event-view-box article.event-view-content .img-product {
 }
 section.event-view-box article.event-view-content .img-product > img {
      max-width: 138px;
+}
+
+section.event-view-box .badge {
+    display: inline-block;
+    padding: 0 10px;
+    height: 24px;
+    line-height: 24px;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 1.4rem;
+}
+.badge.text-bg-danger {
+    background-color: #f36060;
+}
+.text-event-red {
+    color: #f36060 !important;
+}
+
+section.event-view-box p.view-box-gubun-title {
+    font-size: 20px;
+    letter-spacing: -0.02em;
+    color: #333333;
 }
 section.event-view-box p.view-box-gubun {
     position: relative;
