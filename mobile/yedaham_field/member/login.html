@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumBarunGothic@latest/nanumbarungothicsubset.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="bg-gray">
+    <header>
+        <div class="header-inner">
+            <div class="ci"><img src="../images/common/yedaham-ci.svg" alt=""></div>
+            <div class="logo"><img src="../images/common/logo.svg" alt=""></div>
+        </div>
+    </header>
+    <main id="login" >
+        <div class="main-logo ">
+            <img src="../images/common/logo-large.svg" alt="">
+        </div>
+        <section>
+            <h3>아이디</h3>
+            <label class="label-large" for="id-input">
+                <input type="text" id="id-input" placeholder="사원번호를 입력해 주세요.">
+            </label>
+        </section>
+        <section>
+            <h3>비밀번호</h3>
+            <label class="label-large" for="pw-input">
+                <input type="password" for="id-input" placeholder="비밀번호를 입력해 주세요.">
+            </label>
+            <div class="id-keep">
+                <div class="checkbox-wrap">
+                    <input type="checkbox" id="id-save" class="idSave" value="">
+                    <label for="id-save">아이디 기억</label>
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <h3>OTP 인증</h3>
+            <button type="button" class="btn btn-lg btn-dark">인증번호 재전송</button>
+            <label class="label-large mt-8" for="pw-input">
+                <input type="text" id="pw-input" placeholder="인증번호를 입력해 주세요.">
+            </label>
+            
+            <ul class="list-star">
+                <li>등록된 휴대전화번호로 OTP 인증번호가 발송됩니다.</li>
+                <li>인증번호가 발송이 되지 않거나 로그인이 안될 경우 관리자에게
+                문의해 주시기 바랍니다.(관리자 연락처 : 02-2090-3113)</li>
+            </ul>
+        </section>
+
+        <div class="btn-wrap">
+            <button type="button" onClick="openModalAlert('로그인 실패하였습니다.<br />다시 시도해주시기 바랍니다.');" class="btn btn-lg btn-blue">로그인</button>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-inner">
+            <p class="ci-footer"><img src="../images/common/yedaham-ci-footer.svg" alt=""></p>
+            <p class="util">
+                서울시 마포구 마포대로 86, 16층  (도화동, 창강빌딩) The-K 예다함상조(주)<br />
+                대표이사 : 김형진 | 대표번호 : 1566-6644 <br />
+                사업자등록번호 : 101-86-49300    |   통신판매업 신고번호 : 제 2014-서울마포-0712호<br />
+                전화권유판매업 신고번호 : 제 2014-서울마포-0012호  
+            </p>
+            <p class="copyright">COPYRIGHT 2015 The-K 예다함상조(주) ALL RIGHTS RESERVED.</p>
+        </div>
+    </footer>
+    
+    <div class="modal-alert" id="modalAlert">
+        <div class="modal-body">
+            <div class="modal-content" ></div>
+            <div class="btn-wrap">
+                <button  type="button" class="btn btn-lg btn-blue mt-24" onclick="closeModalAlert();" >확인</button>
+            </div>
+        </div>
+    </div><!-- class="modal" -->
+     <div id="overlay"></div>
+    
+     <script src="../js/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumBarunGothic@latest/nanumbarungothicsubset.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header id="header-sub">
+        <div class="header-sub-inner">
+            <div class="breadcrumb-wrap">
+                <a href="javascript:history.back();"><img src="../images/common/arrow-left.svg" alt=""></a>
+                의전진행문자 조회
+            </div>
+            <div class="menu-home"><a href="../main/main.html"><img src="../images/common/btn-home.svg" alt="home"></a></div>
+        </div>
+    </header>
+    <main>
+        
+        <div class="message-title-area">
+            <h3>의전정보</h3>
+            <button type="button" onclick="location.reload()"><img src="../images/common/btn-reload.svg" alt=""></button>
+        </div>
+
+        <table class="table-message">
+            <colgroup><col style="width:120px;"><col style="width:auto;"></colgroup>
+            <tbody>
+                <tr>
+                    <td>접수일자</td>
+                    <td>2024-01-26</td>
+                </tr>
+                <tr>
+                    <td>고인성명</td>
+                    <td>문명수(남)</td>
+                </tr>
+                <tr>
+                    <td>장례식장명</td>
+                    <td>용인세브란스 병원장례식장 </td>
+                </tr>
+                
+                <tr class="additionalInfoRow d-none">
+                    <td>장례식장 주소</td>
+                    <td>서울특별시 마포구 마포대로00  47-405</td>
+                </tr>
+                <tr class="additionalInfoRow d-none">
+                    <td>장례식장 연락처</td>
+                    <td><a href="tel:02-123-1234" class="tel">02-123-1234</a></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button id="toggleButton" type="button" onclick="toggleRows()">더보기</button>
+                    </td>
+                </tr>
+            </tbody>
+       </table>
+
+        <section class="mt-16 ">
+            <nav class="sub-navi">
+                <button type="button" class="active" onclick="loadTabContent2(receipt, this)">접수 내역</button>
+                <button type="button"  onclick="loadTabContent2(product, this)">상품 내역</button>
+                <button type="button"  onclick="loadTabContent2(partner, this)">협력업체 정보</button>
+                <button type="button"  onclick="loadTabContent2(corporation, this)">법인정보</button>
+            </nav>
+
+            <div id="tab-content">
+                    
+            </div>
+        </section>
+        
+    </main>
+    <div class="floating-menu">
+        <a href="../main/main.html"><img src="../images/common/btn-home-large.svg" alt="home"></a>
+    </div>
+    <script src="../js/scripts.js"></script>  
+    <script src="../js/loadTabData2.js"></script>
+    <script>
+        
+
+         loadTabContent2(receipt);
+    </script>
+</body>
+</html>

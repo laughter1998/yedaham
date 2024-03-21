@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumBarunGothic@latest/nanumbarungothicsubset.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header id="header-sub">
+        <div class="header-sub-inner">
+            <div class="breadcrumb-wrap">
+                <a href="javascript:history.back();"><img src="../images/common/arrow-left.svg" alt=""></a>
+                의전 대기현황
+            </div>
+            <div class="menu-home"><a href="../main/main.html"><img src="../images/common/btn-home.svg" alt="home"></a></div>
+        </div>
+    </header>
+    <main>
+        
+        <div class="d-flex justify-content-between align-items-center ">
+            <div class="d-flex align-items-center"><span class="fw-700 pe-8">UPDATES</span><span class="fs-14 text-gray-deep">2017-07-06 12:00</span></div>
+            <button type="button" onclick="location.reload()"><img src="../images/common/btn-reload.svg" alt=""></button>
+        </div>
+
+        <div class="status-warning">
+            필독, 아래 정보를 확인하기 전 본화면을 새로고침 후 확인하시기 바랍니다.
+        </div>
+
+        <section class="mt-16 ">
+            <nav class="sub-navi">
+                <button type="button" class="active" onclick="loadTabContent('wating.html', this)">대기 현황</button>
+                <button type="button"  onclick="loadTabContent('notice.html', this)">지원 공지</button>
+                <button type="button"  onclick="loadTabContent('number.html', this)">순번설정규칙</button>
+                <button type="button"  onclick="loadTabContent('support.html', this)">지원업무규칙</button>
+            </nav>
+
+            <div id="tab-content">
+
+            </div>
+        </section>
+        
+    </main>
+    <div class="floating-menu">
+        <a href="../main/main.html"><img src="../images/common/btn-home-large.svg" alt="home"></a>
+    </div>
+    <script src="../js/scripts.js"></script>  
+    <script>
+        loadTabContent('wating.html');
+    </script>
+</body>
+</html>

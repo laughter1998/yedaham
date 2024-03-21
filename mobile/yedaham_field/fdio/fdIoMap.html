@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumBarunGothic@latest/nanumbarungothicsubset.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header id="header-sub">
+        <div class="header-sub-inner">
+            <div class="breadcrumb-wrap">
+                <a href="javascript:history.back();"><img src="../images/common/arrow-left.svg" alt=""></a>
+                FD I/o
+            </div>
+            <div class="menu-home"><a href="../main/main.html"><img src="../images/common/btn-home.svg" alt="home"></a></div>
+        </div>
+    </header>
+    <main>
+        
+        <div class="d-flex justify-content-between align-items-center ">
+            <span class="fs-14 text-gray-deep">지도에서 위치를 확인해주세요.</span>
+            <button type="button" onclick="location.reload()"><img src="../images/common/btn-reload.svg" alt=""></button>
+            
+        </div>
+
+        <section id="map" class="mt-16 bg-skeleton">
+            지도
+        </section>
+
+        <div class="btn-wrap pt-16 ">
+            <button type="button" class="btn btn-md bg-blue" onClick="openModalAlert('위 지도상의 위치로<br />저장하시겠습니까?');">저장</button>
+            <button type="button" class="btn btn-md bg-gray-999">닫기</button>
+        </div>
+        
+        
+    </main>
+    <div class="floating-menu">
+        <a href="../main/main.html"><img src="../images/common/btn-home-large.svg" alt="home"></a>
+    </div>
+
+    <div class="modal-alert" id="modalAlert">
+        <div class="modal-body">
+            <div class="modal-content" ></div>
+            <div class="btn-wrap">
+                <button  type="button" class="btn btn-lg btn-blue mt-24"  >확인</button>
+                <button  type="button" class="btn btn-lg btn-gray-deep mt-24" onclick="closeModalAlert();" >취소</button>
+            </div>
+        </div>
+    </div><!-- class="modal" -->
+     <div id="overlay"></div>
+    <script src="../js/scripts.js"></script>  
+</body>
+</html>
