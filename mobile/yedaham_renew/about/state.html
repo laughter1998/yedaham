@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>예다함</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="The-K 예다함 상조">
+    <meta property="og:description" content="한국교직원공제회가 100% 출자, 설립한 The-K예다함상조">
+    <meta property="og:image" content="https://www.yedaham.com/images/common/logo_withCCM.png">
+    <meta property="og:url" content="https://www.yedaham.com">
+    <link rel="stylesheet" href="../css/mobile.css">
+    <link rel="stylesheet" href="../css/slick.css">
+    <link rel="stylesheet" href="../css/slick-theme.css">
+
+</head>
+<body >
+    <header class="header">
+        <a href="javascript:history.go(-1);" class="page-back">뒤로 가기</a>
+        <h2>회사소개</h2>
+        <div>
+            <a href="../main/main.html" style="height:48px;display:inline-block;padding-top:13px;"><img src="../images/common/home.png" style="width:18px;" alt="home"></a>
+            <a href="../main/main.html" style="width:48px;height:48px;display:inline-block;padding-top:15px;"><img src="../images/common/ham.png" style="width:20px;" alt="The-K 예다함 상조"></a>
+        </div>
+    </header>
+
+    <div class="mainContent">
+        <section class="page-title">
+            <h2>경영현황</h2>
+        </section>
+
+        <div class="tab-menu tab-state mt-60">
+            <button class="tablinks active" onclick="openState(event, 'state01')"><p>주요재무현황</p></button>
+            <button class="tablinks" onclick="openState(event, 'state02')"><p>재무정보</p></button>
+            <button class="tablinks" onclick="openState(event, 'state03')"><p>감사보고서</p></button>
+        </div>
+        <!-- Tab content -->
+        <div id="state01" class="tabcontent mt-40" style="display:block;">
+            <div class="sub-tab">
+                <button class="tablinksSub active" onclick="openStateSub(event, 'state011')">재무현황</button>
+                <button class="tablinksSub" onclick="openStateSub(event, 'state012')">선수금현황</button>
+            </div>
+
+            <div id="state011" class="tabcontentSub" style="display:block;">
+                <section class="box-table mt-20">
+                    <table class="normal-table">
+    					<caption>재무 현황 정보 표</caption>
+    					<colgroup><col width="*"><col style="width:90px"><col style="width:130px"></colgroup>
+    					<tbody>
+    						<tr>
+    							<th class="pl-20 no-line" rowspan="3">자산</th>
+    							<th>유동자산</th>
+    							<td><span class="roboto">95,217</span></td>
+    						</tr>
+    						<tr>
+    							<th>비유동자산</th>
+    							<td><span class="roboto">692,455</span></td>
+    						</tr>
+    						<tr>
+    							<th>자산총계</th>
+    							<td><span class="robotoB highlight">787,673</span></td>
+    						</tr>
+    						<tr>
+    							<th class="pl-20 " colspan="2">자본총계</th>
+    							<td><span class="roboto">88,195</span></td>
+    						</tr>
+    						<tr>
+    							<th class="pl-20 no-line" rowspan="2">
+    								지급여력비율(%)<br/>(2023년 12월 기준)
+    							</th>
+    							<th>당사(예다함)</th>
+    							<td><span class="robotoB highlight">111%</span></td>
+                            </tr>
+    						<tr>
+    							<th class="line2">업계평균<!--<br /><span>(2019년 12월 기준)</span>--></th>
+    							<td><span class="roboto">97%</span></td>
+    						</tr>
+    					</tbody>
+    				</table>
+                </section>
+
+                <section class="box-table mt-20">
+                    <table class="normal-table">
+    					<caption>재무 현황 정보 표</caption>
+    					<colgroup><col width="*"><col style="width:90px"><col style="width:130px"></colgroup>
+    					<tbody>
+    						<tr>
+    							<th class="pl-20 no-line" rowspan="3">부채</th>
+    							<th>유동부채</th>
+    							<td><span class="roboto">11,344</span></td>
+    						</tr>
+    						<tr>
+
+    							<th>비유동부채</th>
+    							<td><span class="roboto">688,133</span></td>
+    						</tr>
+    						<tr>
+
+    							<th>부채총계</th>
+    							<td><span class="robotoB ">699,477</span></td>
+    						</tr>
+    						<tr>
+
+    							<th class="pl-20 " colspan="2">자본금</th>
+    							<td><span class="robotoB highlight">50,000</span></td>
+    						</tr>
+    						<tr>
+
+    							<th class="pl-20 no-line" rowspan="2">부채비율(%)<br/>(2023년 12월 기준)</th>
+    							<th>당사(예다함)</th>
+    							<td><span class="robotoB highlight">90%</span></td>
+    						</tr>
+    						<tr>
+    							<th class="line2">업계평균<!--<br /><span>(2019년 12월 기준)</span>--></th>
+    							<td><span class="roboto">103%</span></td>
+    						</tr>
+    					</tbody>
+    				</table>
+                </section>
+
+                <p class="f350 text-right mt-15 color-666 pr-10">(2023년 12월말 기준, 단위 백만원)</p>
+
+                <section class="box mt-30">
+                    <ul class="number-list">
+                        <li>
+                            지급여력비율
+                            <ul class="circle-list  ">
+                                <li>(선수금 + 자본총계) / 선수금 * 100 </li>
+                                <li class="mt-0">비율이 높을수록 부도 폐업 등 상조관련 위협에 대응할 능력이 높음</li>
+                            </ul>
+                        </li>
+                        <li>부채비율
+                            <ul class="circle-list  ">
+                                <li>부채총계 / 자산총계 * 100 </li>
+                                <li class="mt-0">비율이 낮을수록 재무건전성이 우수함</li>
+                            </ul>
+                        </li>
+                        <li>자료출처
+                            <ul class="circle-list  ">
+                                <li>공정거래위원회 홈페이지(www.ftc.go.kr) 정보공개 &gt; 사업자공개 &gt; 선불식할부거래사업자</li>
+
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+
+            <div id="state012" class="tabcontentSub" >
+                <section class="box-table mt-20">
+                    <table class="normal-table" summary="선수금 현황 정보를 나타내는 표입니다.">
+    					<caption>선수금 현황 정보 표</caption>
+    					<colgroup><col width="*"><col width="*"></colgroup>
+    					<tbody>
+    						<tr>
+    							<th class="pl-20 ">총선수금(원)<br>(고객 부금예수금)</th>
+    							<td><span class="roboto">688,223</span></td>
+    						</tr>
+    						<tr>
+                                <th class="pl-20 "> 보전비율(%)</th>
+    							<td><span class="roboto">52%</span></td>
+                            </tr>
+    						<tr>
+    							<th class="pl-20 " rowspan="6">선수금 보전계약<br>체결기관</th>
+    							<td class="left"><p class="bank">신한은행 <span>(여의도 기업금융센터)</span></p></td>
+    						</tr>
+    						<tr>
+    							<td class="left"><p class="bank">우리은행 <span>(여의도 중앙지점)</span></p></td>
+    						</tr>
+    						<tr>
+    							<td class="left"><p class="bank">전북은행  <span>(여의도 지점)</span></p></td>
+    						</tr>
+                            <tr>
+    							<td class="left"><p class="bank">하나은행 <span>(내자동 지점)</span></p></td>
+    						</tr>
+                            <tr>
+    							<td class="left"><p class="bank">SC제일은행  <span>(기업영업부)</span></p></td>
+    						</tr>
+    						<tr>
+    							<td class="left"><p class="bank">수협은행  <span>(강남금융센터)</span></p></td>
+    						</tr>
+    						<tr>
+    							<th class="pl-20 ">계약유형</th>
+    							<td class="left">채무지급보증</td>
+    						</tr>
+
+    					</tbody>
+    				</table>
+                </section>
+                <p class="f350 text-right mt-15 color-666 pr-10">(2023년 12월말 기준, 단위 백만원)</p>
+                <section class="box mt-30">
+                    <ul class="number-list">
+                        <li>선불식 할부거래업자의 폐업 등록 취소 등의 사유로
+                        소비자피해보상이 진행되는 경우, 소비자가 납입한
+                        선수금 중 피해보상기관으로부터 보상 받을 수 있는
+                        비율을 의미함<br>
+                        (할부거래법에서 정한 법정 선수금 보전비율 : 50%)
+                        </li>
+                    </ul>
+                </section>
+
+            </div><!-- id="state012" -->
+        </div><!-- id="state01" -->
+
+        <div id="state02" class="tabcontent mt-40">
+            <div class="sub-tab">
+                <button class="tablinksSub active" onclick="openStateSub(event, 'state021')">재무상태표</button>
+                <button class="tablinksSub" onclick="openStateSub(event, 'state022')">손익계산서</button>
+                <button class="tablinksSub" onclick="openStateSub(event, 'state023')">부금예수금</button>
+            </div>
+            <div id="state021" class="tabcontentSub mt-20" style="display:block;">
+                <section class="box ">
+					<div class="text-center">
+						<img src="../images/about/financial_graph01.png" alt="재무상태표 그래프">
+					</div>
+                    <table class="scope-down-table finance01 mt-50">
+                        <caption>선수금 현황 정보 표</caption>
+    					<colgroup><col width="*"><col width="*"></colgroup>
+                        <thead>
+                            <tr>
+                                <th>구분</th>
+                                <th>자산</th>
+                                <th>부채</th>
+                                <th>자본</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2023년</td>
+                                <td>787,673</td>
+                                <td>699,478</td>
+                                <td>88,195</td>
+                            </tr>
+							<tr>
+                                <td>2022년</td>
+                                <td>705,046</td>
+                                <td>633,851</td>
+                                <td>71,195</td>
+                            </tr>
+							<tr>
+                                <td>2021년</td>
+                                <td>630,577</td>
+                                <td>562,740</td>
+                                <td>67,836</td>
+                            </tr>
+							 <tr>
+                                <td>2020년</td>
+                                <td>552,404</td>
+                                <td>491,414</td>
+                                <td>60,990</td>
+                            </tr>
+                            <tr>
+                                <td>2019년</td>
+                                <td>484,907</td>
+                                <td>426,621</td>
+                                <td>58,285</td>
+                            </tr>
+                            <tr>
+                                <td>2018년</td>
+                                <td>420,529</td>
+                                <td>368,929</td>
+                                <td>51,600</td>
+                            </tr>
+                            <tr>
+                                <td>2017년</td>
+                                <td>351,580	</td>
+                                <td>311,308</td>
+                                <td>40,272</td>
+                            </tr>
+                            <tr>
+                                <td>2016년</td>
+                                <td>291,485</td>
+                                <td>253,761</td>
+                                <td>37,724</td>
+                            </tr>
+                          
+                        </tbody>
+                    </table>
+                    <p class="f350 text-right mt-15 color-666 pr-10">(2023년 12월말 기준, 단위 백만원)</p>
+                </section>
+
+            </div><!-- id="state021" -->
+            <div id="state022" class="tabcontentSub mt-20" >
+                <section class="box ">
+					<div class="text-center">
+						<img src="../images/about/financial_graph02.png" alt="손익계산서 그래프">
+					</div>
+                    <table class="scope-down-table finance02 mt-50">
+                        <caption>손익계산서 표</caption>
+    					<colgroup><col style="width:auto;"><col style="width:auto;"><col style="width:auto;"><col style="width:auto;"><col style="width:auto;"></colgroup>
+                        <thead>
+                            <tr>
+                                <th>구분</th>
+                                <th>영업<br />수익</th>
+                                <th>영업<br />비용</th>
+                                <th>영업외수익<br /><span class="f350">(영업외비용)</span></th>
+                                <th>당기<br />순이익</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                            <tr>
+                                <td>2023년</td>
+                                <td>60,710</td>
+                                <td>71,058</td>
+                                <td><p class="right">27,969<br><span>(9,499)</span></p></td>
+                                <td>5,683</td>
+                            </tr>
+							<tr>
+                                <td>2022년</td>
+                                <td>56,584</td>
+                                <td>68,396</td>
+                                <td><p class="right">27,238<br><span>(7,686)</span></p></td>
+                                <td>5,885</td>
+                            </tr>
+							<tr>
+                                <td>2021년</td>
+                                <td>43,716</td>
+                                <td>55,371</td>
+                                <td><p class="right">21,786<br><span>(5,058)</span></p></td>
+                                <td>666</td>
+                            </tr>
+							 <tr>
+                                <td>2020년</td>
+                                <td>37,715</td>
+                                <td>56,943</td>
+                                <td><p class="right">24,649<br /><span >(284)</span></p></td>
+                                <td>5,137</td>
+                            </tr>
+                            <tr>
+                                <td>2019년</td>
+                                <td>35,541</td>
+                                <td>57,394</td>
+                                <td><p class="right">28,587<br /><span >(49)</span></p></td>
+                                <td>6,685</td>
+                            </tr>
+                            <tr>
+                                <td>2018년</td>
+                                <td>32,676</td>
+                                <td>47,078</td>
+                                <td><p class="right">23,683<br /><span >(359)</span></p></td>
+                                <td>8,922</td>
+                            </tr>
+                            <tr>
+                                <td>2017년</td>
+                                <td>30,022</td>
+                                <td>40,891</td>
+                                <td><p class="right">17,013<br /><span >(2,301)</span></p></td>
+                                <td>3,843</td>
+                            </tr>
+                            <tr>
+                                <td>2016년</td>
+                                <td>27,110</td>
+                                <td>37,654</td>
+                                <td><p class="right">15,009<br /><span >(44)</span></p></td>
+                                <td>4,421</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="f350 text-right mt-15 color-666 pr-10">(2023년 12월말 기준, 단위 백만원)</p>
+                </section>
+
+            </div><!-- id="state022" -->
+            <div id="state023" class="tabcontentSub mt-20" >
+                <section class="box ">
+					<div class="text-center">
+						<img src="../images/about/financial_graph03.png" alt="부금예수금 그래프">
+					</div>
+                    <table class="scope-down-table finance03 mt-50">
+                        <caption>부금예수금</caption>
+    					<colgroup><col style="width:auto;"><col style="width:auto;"></colgroup>
+                        <thead>
+                            <tr>
+                                <th>구분</th>
+                                <th>부금예수금</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2023년</td>
+                                <td>688,223</td>
+                            </tr>
+							 <tr>
+                                <td>2022년</td>
+                                <td>620,712</td>
+                            </tr>
+							 <tr>
+                                <td>2021년</td>
+                                <td>552,163</td>
+                            </tr>
+							  <tr>
+                                <td>2020년</td>
+                                <td>481,704</td>
+                            </tr>
+                            <tr>
+                                <td>2019년</td>
+                                <td>418,306</td>
+                            </tr>
+                            <tr>
+                                <td>2018년</td>
+                                <td>361,649</td>
+                            </tr>
+                            <tr>
+                                <td>2017년</td>
+                                <td>306,645</td>
+                            </tr>
+                            <tr>
+                                <td>2016년</td>
+                                <td>245,340</td>
+                            </tr>
+                            <tr>
+                                <td>2015년</td>
+                                <td>183,769</td>
+                            </tr>
+						</tbody>
+                    </table>
+                    <p class="f350 text-right mt-15 color-666 pr-10">(2023년 12월말 기준, 단위 백만원)</p>
+                </section>
+
+                <section class="box mt-15">
+                    <ul class="number-list">
+                        <li>부금예수금 : 고객이 상조 상품에 납입한 금액</li>
+                    </ul>
+                </section>
+            </div><!-- id="state022" -->
+        </div><!-- id="state02" -->
+
+        <div id="state03" class="tabcontent mt-40">
+            <div id="state031" class="tabcontentSub" style="display:block;">
+                <section class=" ">
+                    <table class="scope-down-table">
+                        <caption>부금예수금</caption>
+    					<colgroup><col style="width:auto;"><col style="width:auto;"><col style="width:auto;"></colgroup>
+                        <thead>
+                            <tr>
+                                <th>년도</th>
+                                <th>회계법인명</th>
+                                <th>다운로드</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+							<tr>
+                                <td>2023년</td>
+                                <td>삼덕회계법인</td>
+                                <td><a href="https://m.yedaham.co.kr/download/report2023.pdf" target="_blank"><img src="../images/about/icon_download.png" alt="다운로드"></a></td>
+                            </tr>
+							<tr>
+                                <td>2022년</td>
+                                <td>삼덕회계법인</td>
+                                <td><a href="https://m.yedaham.co.kr/download/report2022.pdf" target="_blank"><img src="../images/about/icon_download.png" alt="다운로드"></a></td>
+                            </tr>
+							<tr>
+                                <td>2021년</td>
+                                <td>한미회계법인</td>
+                                <td><a href="https://m.yedaham.co.kr/download/report2021.pdf" target="_blank"><img src="../images/about/icon_download.png" alt="다운로드"></a></td>
+                            </tr>
+							 <tr>
+                                <td>2020년</td>
+                                <td>한미회계법인</td>
+                                <td><a href="https://m.yedaham.co.kr/download/report2020.pdf" target="_blank"><img src="../images/about/icon_download.png" alt="다운로드"></a></td>
+                            </tr>
+                            <tr>
+                                <td>2019년</td>
+                                <td>한미회계법인</td>
+                                <td><a href="https://m.yedaham.co.kr/download/report2019.pdf" target="_blank"><img src="../images/about/icon_download.png" alt="다운로드"></a></td>
+                            </tr>
+                            <tr>
+                                <td>2018년</td>
+                                <td>삼덕회계법인</td>
+                                <td><a href="https://m.yedaham.co.kr/download/report2018.pdf" target="_blank"><img src="../images/about/icon_download.png" alt="다운로드"></a></td>
+                            </tr>
+                            <tr>
+                                <td>2017년</td>
+                                <td>삼덕회계법인</td>
+                                <td><a href="https://m.yedaham.co.kr/download/report2017.pdf" target="_blank"><img src="../images/about/icon_download.png" alt="다운로드"></a></td>
+                            </tr>
+                            <tr>
+                                <td>2016년</td>
+                                <td>대주회계법인</td>
+                                <td><a href="https://m.yedaham.co.kr/download/report2016.pdf" target="_blank"><img src="../images/about/icon_download.png" alt="다운로드"></a></td>
+                            </tr>
+                            <tr>
+                                <td>2015년</td>
+                                <td>대주회계법인</td>
+                                <td><a href="https://m.yedaham.co.kr/download/report2015.pdf" target="_blank"><img src="../images/about/icon_download.png" alt="다운로드"></a></td>
+                            </tr>
+                            <tr>
+                                <td>2014년</td>
+                                <td>대주회계법인</td>
+                                <td><a href="https://m.yedaham.co.kr/download/report2014.pdf" target="_blank"><img src="../images/about/icon_download.png" alt="다운로드"></a></td>
+                            </tr>
+                            <tr>
+                                <td>2013년</td>
+                                <td>대주회계법인</td>
+                                <td><a href="https://m.yedaham.co.kr/download/report2013.pdf" target="_blank"><img src="../images/about/icon_download.png" alt="다운로드"></a></td>
+                            </tr>
+                            <tr>
+                                <td>2012년</td>
+                                <td>대주회계법인</td>
+                                <td><a href="https://m.yedaham.co.kr/download/report2012.pdf" target="_blank"><img src="../images/about/icon_download.png" alt="다운로드"></a></td>
+                            </tr>
+                            <tr>
+                                <td>2011년</td>
+                                <td>대주회계법인</td>
+                                <td><a href="https://m.yedaham.co.kr/download/report2011.pdf" target="_blank"><img src="../images/about/icon_download.png" alt="다운로드"></a></td>
+                            </tr>
+                            <tr>
+                                <td>2010년</td>
+                                <td>삼일회계법인</td>
+                                <td><a href="https://m.yedaham.co.kr/download/report2010.pdf" target="_blank"><img src="../images/about/icon_download.png" alt="다운로드"></a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </section>
+            </div><!-- id="state031" -->
+            <div id="state032" class="tabcontentSub" >
+                id="state032"
+            </div><!-- id="state032" -->
+        </div><!-- id="state03" -->
+    </div>
+    <footer id="footer">
+        <div class="sns">
+            <a href="https://www.facebook.com/yedaham.co.kr" target="_blank"><img src="../images/common/icon_facebook.png"  alt="페이스북"></a>
+            <a href="https://www.youtube.com/channel/UCIc7RDIHPg6p8y9Ycxundaw/ " target="_blank"><img src="../images/common/icon_youtube.png"  alt="유튜브"></a>
+            <a href="javascript:alert('카카오톡');" target="_blank"><img src="../images/common/icon_kakao_grey.png"  alt="카카오톡"></a>
+        </div>
+        <div class="utList">
+            <a href="https://www.yedaham.co.kr/customer/agreement/agreement.do" target="_blank">이용약관 </a>
+            <a href="https://www.yedaham.co.kr/customer/agreement/pps.do" target="_blank">개인정보처리방침</a><br />
+            <a href="https://www.yedaham.co.kr/customer/agreement_vod/pps_vod.do " target="_blank">영상정보처리기기 운영관리지침</a>
+            <a href="https://www.yedaham.co.kr/customer/agreement/important.do " target="_blank">중요정보고시사항</a>
+        </div>
+
+        <div class="telList ">
+            <div>
+                대표전화<a href="tel:1566-6644">1566-6644</a>
+            </div>
+            <div>
+                장례접수(상황센터)<a href="tel:1566-0119">1566-0119</a>
+            </div>
+        </div>
+        <div class="yedaham-addr ">
+            서울특별시 마포구 마포대로86, 14층(도화동, 창강빌딩)<br />The-K예다함상조㈜ 대표이사 홍승표
+        </div>
+        <ul class="yedaham-number ">
+            <li>사업자등록번호 101-86-49300</li>
+            <li>통신판매업 신고번호 제2014-서울마포-0712호</li>
+            <li>전화권유판매업 신고번호 제2014-서울마포-0012호</li>
+        </ul>
+
+        <div class="brochure">
+            <div ><a href="https://www.yedaham.co.kr/main.do" target="_blank">BRAND SITE</a></div>
+            <div><a href="../download/200319_yedaham_brochure.pdf">2020 BROCHURE</a></div>
+        </div>
+
+
+        <div class="selectLink-wrap">
+			<a href="javascript:void(0);" onclick="familySite();">We are The-K group</a>
+            <ul>
+                <li><a href="https://www.ktcu.or.kr/"target="_blank" >The-K한국교직원공제회</a></li>
+                <li><a href="http://www.thek-hotel.co.kr/main_sh.asp?" target="_blank" >The-K호텔서울</a></li>
+                <li><a href="http://www.ramadajeju.co.kr/" target="_blank" >라마다 프라자 제주호텔</a></li>
+                <li><a href="http://thek-hotel.co.kr/gyeongju/main_sh.asp?" target="_blank" >The-K호텔경주</a></li>
+                <li><a href="http://thek-hotel.co.kr/jirisan/main_sh.asp?" target="_blank" >The-K지리산가족호텔</a></li>
+                <li><a href="http://thek-hotel.co.kr/seoraksan/main_sh.asp?" target="_blank" >The-K설악산가족호텔</a></li>
+                <li><a href="https://www.thekbank.co.kr/main/main.do" target="_blank" >The-K저축은행</a></li>
+                <li><a href="https://www.sophiagreen.co.kr/index.asp" target="_blank" >The-K소피아그린</a></li>
+                <li><a href="https://www.third-age.co.kr/" target="_blank" >The-K서드에이지</a></li>
+                <li><a href="http://www.thekmall.co.kr/" target="_blank" >The-K교직원나라</a></li>
+            </ul>
+		</div>
+        <div class="copyright ">Copyright© The-K Yedaham Co. Ltd <br />ALL Right Reserved</div>
+        <button id="top-btn" onclick="backToTop()"><img src="../images/common/btn_scroll_top.png"  alt=""></button>
+    </footer>
+
+    <script type="text/javascript" src="../js/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="../js/slick.js"></script>
+    <script type="text/javascript" src="../js/script.js"></script>
+
+
+</body>
+</html>
