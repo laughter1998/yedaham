@@ -190,7 +190,7 @@ main#login .id-keep{
 main#main {
     height: calc(100svh - 61px);
     padding:24px 16px 40px;
-    background: url('../images/common/bg-ci.svg') no-repeat center top 455px;
+    background: url('../images/common/bg-ci.png') no-repeat center top 455px;
 }
 
 
@@ -244,7 +244,8 @@ section#map {
 /* 의전 대기현황*/
 .status-warning {
     margin-top: 16px;
-    background: url('../images/icon/icon-warning.svg') no-repeat left center;
+    background: url('../images/icon/icon-warning.png') no-repeat left center;
+    background-size: 18px 18px;
     padding-left: 32px;
     font-size: 0.75rem;
     color: #666;
@@ -364,7 +365,7 @@ a.tel {
     width: 16px;
     height: 16px;
     content: '';
-    background: url('../images/common/tri-bottom.svg') no-repeat center center;
+    background: url('../images/common/tri-bottom.png') no-repeat center center;
     transition: .3s;
 }
 .accordion .accordion-item.accordion-open .accordion-header .header-wrap::after {
@@ -592,7 +593,7 @@ button#toggleButton::before {
     display: block;
     width: 14px;
     height: 14px;
-    background: url('../images/common/arrow-more.svg') no-repeat left center;
+    background: url('../images/common/arrow-more.png') no-repeat left center;
 }
 button#toggleButton.total::before {
     transform: rotate(180deg);
@@ -858,7 +859,7 @@ ul.field-navi  li.current button.end-up {
       top:8px;
       width: 24px;
       height: 24px;
-      background: url('../images/common/arrow-select.svg') no-repeat;
+      background: url('../images/common/arrow-select.png') no-repeat;
   }
   .custom-select-options {
     position: absolute;
