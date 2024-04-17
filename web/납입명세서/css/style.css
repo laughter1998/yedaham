@@ -5,7 +5,6 @@
 }
 body {
     font-family: 'NanumSquareNeo', 'NanumBarunGothic',Arial, Verdana, sans-serif;
-    font-weight: 300;
     background-color: #f9f9f9;
 }
 table {
@@ -73,6 +72,22 @@ main {
     
 }
 
+main#view {
+    background-image: url('../images/bg_view.png');
+    background-repeat: no-repeat;
+    background-position: right 55px top 45px;
+}
+main#gate1 {
+    background-image: url('../images/bg_gate.png');
+    background-repeat: no-repeat;
+    background-position: right 55px top 75px;
+}
+main#gate2 {
+    background-image: url('../images/bg_gate.png');
+    background-repeat: no-repeat;
+    background-position: right 80px top 45px;
+}
+
 main .date {
     font-family: 'Gilroy', Arial, Verdana, sans-serif;
     font-size: 60px;
@@ -94,14 +109,72 @@ main .title {
 main .title span {
     color: #333333;
 }
+
+main .view-title {
+    margin-top: 0px;
+    font-size: 40px;
+    letter-spacing: -0.03em;
+    color: #05137e;
+    font-weight: 700;
+}
+main .view-title span {
+    color: #333333;
+}
+main .view-title + .text {
+    margin-top: 60px;
+}
+
+main .gate1-title {
+    margin-top: 50px;
+    font-size: 40px;
+    letter-spacing: -0.03em;
+    line-height: 54px;
+    font-weight: 400;
+    color: #333333;
+}
+main .gate1-title span{
+    color: #05137e;
+    font-weight: 700;
+}
+
+main .gate2-title {
+    margin-top: 40px;
+    font-size: 40px;
+    letter-spacing: -0.03em;
+    line-height: 54px;
+    font-weight: 400;
+    color: #333333;
+}
+main .gate2-title span{
+    color: #05137e;
+    font-weight: 700;
+}
 main .text {
     margin-top: 20px;
     font-size: 14px;
     line-height: 24px;
     letter-spacing: -0.03em;
     color: #333333;
+   
+}
+
+ul.star-list {
+    margin-top: 25px;
+}
+ul.star-list  li{
+    padding: 1px 0;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: -0.03em;
+    color: #333333;
     font-weight: 300;
 }
+ul.star-list  li span{
+    font-weight: 700;
+    color: #105efc;
+    text-decoration: underline;
+}
+
 
 main .text span{
     font-weight: 700;
@@ -182,17 +255,147 @@ section.view-table table th{
     color: #494233;
     text-align: center;
 }
+section.view-table table th.rowspaned{
+    border-bottom: 1px solid #bcbcbc;
+}
 section.view-table table td{
     padding: 14px;
     font-size: 12px;
     letter-spacing: -0.03em;
     color: #494233;
     text-align: center;
-    border-top: 1px solid #e5e5e4;
+    border-top: 1px solid #bcbcbc;
 }
 
+section.view-table table:nth-child(2) {
+    margin-top: -2px;
+}
+
+section.contract-board  + section.email-check {
+    margin-top: 40px;
+}
+section.email-check {
+    margin-top: 100px;
+}
+section.email-check h3{
+    font-size: 18px;
+    letter-spacing: -0.03em;
+    color: #333333;
+    font-weight: 400;
+    font-family: 'NanumBarunGothic';
+}
+section.email-check .step-check{
+    margin-top: 15px;
+    border-radius: 20px;
+    filter: drop-shadow(0px 5px 4.5px rgba(0,0,0,0.05));
+    background-color: #ffffff;
+    border: 1px solid #c1c1c1;
+}
+section.email-check .step-check ul {
+    display: flex;
+}
+section.email-check .step-check ul li {
+    position: relative;
+    width: 100%;
+    padding: 40px 0;
+    text-align: center;
+}
+section.email-check .step-check ul li::after {
+    position: absolute;
+    content: '';
+    display: block;
+    right:-8px;
+    top:50%;
+    margin-top:-9px;
+    width: 15px;
+    height: 22px;
+    background: url('../images/icon-arrow.png') no-repeat;
+}
+section.email-check .step-check ul li:last-child::after {
+    display: none;
+}
+section.email-check .step-check ul li p.step{
+    font-size: 12px;
+    color: #666666;
+}
+section.email-check .step-check ul li p.step-content{
+    margin-top: 15px;
+    font-size: 18px;
+    letter-spacing: -0.03em;
+    line-height: 24px;
+    color: #05137e;
+    font-weight: 800;
+}
+section.email-check .step-check ul li p.step-content span{
+    color: #666666;
+    font-weight: 700;
+}
+
+section.etc {
+    margin-top: 30px;
+    padding: 25px 20px;
+    background-color: #f8f8f8;
+}
+
+ul.bar-list {
+
+}
+
+ul.bar-list li {
+    padding: 3px 0;
+    font-size: 14px;
+    line-height: 20px;
+    color: #666666; 
+}
+
+ul.bar-list li span{
+    font-weight: 800;
+}
+
+section.contract-board {
+    margin-top: 110px;;
+}
+section.contract-board .contract-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+section.contract-board .contract-head .contract-title {
+    font-family: 'NanumBarunGothic';
+    font-size: 18px;
+    color: #333333;
+    letter-spacing: -0.02em;
+}
+section.contract-board .contract-head .contract-date {
+    font-size: 14px;
+    letter-spacing: -0.02em;
+    color: #333333;
+    font-weight: 300;
+    font-family: 'NanumBarunGothic';
+}
+section.contract-board  table {
+    margin-top: 15px;
+    width: 100%;
+    font-family: 'NanumBarunGothic';
+}
+section.contract-board  table th,
+section.contract-board  table td{
+    background-color: #f8f8f8;
+}
+section.contract-board  table th {
+    padding: 14px 0px;
+    font-size: 14px;
+    letter-spacing: -0.02em;
+    color: #333333;
+    border-bottom: 2px solid #b9b9b9;
+}
+section.contract-board  table td {
+    padding: 10px 0;
+    text-align: center;
+    font-weight: 300;
+}
 main .benefit {
-    margin-top: 50px;
+    margin-top: 20px;
 }
 main .benefit h3 {
     font-size: 20px;
@@ -206,6 +409,89 @@ main .benefit .banner {
     display: flex;
     justify-content: space-between;
 }
+
+main section.benefit-prev {
+    margin-top: 10px;
+    padding: 30px 35px;
+    border-radius: 20px;
+    background-color: #fffdf7;
+    border: 1px solid #efe9d7;
+}
+
+main section.benefit-prev .section-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main section.benefit-prev .section-header h5{
+    font-size: 26px;
+    letter-spacing: -1px;
+    line-height: 30px;
+    color: #363636;
+    font-weight: 700;
+}
+main section.benefit-prev .section-header h5 span{
+    font-weight: 800;
+    color: #884a00;
+}
+main section.benefit-prev .section-header a{
+    display: block;
+    padding: 17px 30px;
+    border-radius: 10px;
+    background-color: #363636;
+    border: 1px solid #c3c3c3;
+    color: #fff;
+}
+
+main section.benefit-prev ul.benefit-list {
+    
+    display: flex;
+    gap: 8px;
+    margin-top: 20px;
+}
+main section.benefit-prev ul.benefit-list li{
+    width: 100%;
+    padding-bottom: 25px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    border: 1px solid #d5d5d5;
+    text-align: center;
+}
+
+main section.benefit-prev ul.benefit-list li p.img-benefit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6px;
+    height: 110px;
+}
+main section.benefit-prev ul.benefit-list li p.tit-benefit{
+    font-size: 14px;
+    color: #363636;
+}
+main section.benefit-prev ul.benefit-list li p.txt-benefit{
+    display: inline-block;
+    position: relative;
+    margin-top: 5px;
+    font-size: 16px;
+    letter-spacing: -2px;
+    font-weight: 800;
+    color: #363636;
+    z-index: 2;
+}
+main section.benefit-prev ul.benefit-list li p.txt-benefit::after{
+    display: block;
+    content: '';
+    position: absolute;
+    z-index: -2;
+    bottom: -4px;
+    width:100%;
+    height: 10px;
+    background-color: #ffcc71;
+}
+
+
 footer {
     margin-top: 20px;
     margin-left:-20px;
