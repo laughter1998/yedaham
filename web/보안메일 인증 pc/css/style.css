@@ -1,0 +1,228 @@
+* {
+    margin:0; 
+    padding:0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'NanumSquareNeo', 'NanumBarunGothic',Arial, Verdana, sans-serif;
+    background-color: #f9f9f9;
+}
+table {
+    padding:0;
+    border:0;
+    border-spacing:0px;
+    border-collapse:collapse;
+}
+th, td{
+    padding:0;
+}
+
+li, dt, dd {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+img {
+    display: block;
+}
+.wrap {
+    width: 800px;;
+    margin: 0 auto;
+    padding: 40px 20px 0 20px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main {
+    margin-top: 20px;
+    padding: 40px 40px 80px 40px;
+    background-color: #fff;
+    border: 1px solid #e5e5e4;
+    
+}
+
+
+main .img-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+main .title {
+    margin-top: 24px;
+    font-size: 40px;
+    color: #333;
+    letter-spacing: -0.03em;
+    font-weight: 700;
+    text-align: center;
+}
+
+main .text {
+    margin-top: 30px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #666;
+    
+    text-align: center;
+   
+}
+
+.input-wrap {
+    width: 320px;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+.input-wrap label{
+    font-family: 'NanumBarunGothic',Arial, Verdana, sans-serif;
+    display: block;
+    text-align: left;
+    font-size: 18px;
+    letter-spacing: -0.03em;
+    color: #333;
+}
+.input-wrap input{
+    font-family: 'NanumBarunGothic',Arial, Verdana, sans-serif;
+    margin-top: 8px;
+    width:100%;
+    padding: 16px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: solid 1px #c1c1c1;
+    background-color: #fff;
+    cursor: pointer;
+}
+.input-wrap input::placeholder {
+    color: #b5b3b3;
+    opacity: 1; /* Firefox */
+  }
+.input-wrap button{
+    font-family: 'NanumBarunGothic',Arial, Verdana, sans-serif;
+    margin-top: 16px;
+    width:100%;
+    height: 60px;
+    border-radius: 10px;
+    letter-spacing: -0.03em;
+    background-color: #333;
+    font-weight: 700;
+    font-size: 18px;
+    color: #fff;
+
+    border:none;
+}
+
+footer {
+    margin-top: 20px;
+    margin-left:-20px;
+    margin-right:-20px;
+    padding: 45px 60px 40px 60px;
+    background-color: #363636;
+}
+
+footer .footer-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+footer .footer-wrap .footer-left >div a{
+    display: inline-block;
+}
+
+.footer-wrap dl.copyright {
+    margin-top: 20px;
+    font-size: 10px;
+    letter-spacing: -0.04em;
+    line-height: 16px;
+    color: #ffffff;
+    font-family: 'NanumBarunGothic';
+}
+
+.footer-wrap dl.copyright dt,
+.footer-wrap dl.copyright dd{
+    display: inline-block;
+}
+
+.footer-wrap dl.copyright dt{
+    font-weight: 700;
+}
+.footer-wrap dl.copyright dd{
+    margin-right: 6px;
+    font-weight: 200;
+    color: #e3e3e3;
+}
+
+.footer-wrap .footer-left > p {
+    margin-top: 20px;
+    font-size: 10px;
+    color: #aeaeae;
+}
+
+
+/* 모달 팝업 */
+
+
+.modal-alert {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    z-index: 10001;
+    width: 300px;
+    border-radius: 25px;
+    overflow: hidden;
+    z-index: 10001;
+}
+
+.modal-alert.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* ========== 알럿  ========== */
+.modal-alert .modal-body {
+    max-width: 320px;
+    border-radius: 16px;
+    padding: 32px 16px 16px 16px;
+    background-color: #fff;
+}
+.modal-alert .modal-content {
+    font-size: 1rem;
+    line-height: 1.4;
+    text-align: center;
+    color: #333;
+}
+
+.modal-alert  button {
+    margin-top: 24px;
+    width: 100%;
+    height: 48px;
+    border-radius: 8px;
+    background-color: #626262;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+    border:none;
+}
+
+#overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    pointer-events: none;
+    z-index: 10000;
+}
+
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/eunchurn/NanumSquareNeo@0.0.6/nanumsquareneo.css"/>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    
+    <div class="wrap">
+        <header>
+            <a href="https://www.yedaham.co.kr/" target="_blank"><img src="./images/yedaham_logo.png" alt="예다함"></a>
+        </header>
+        <main >
+            <p class="img-wrap"><img src="./images/img_auth.png" alt=""></p>
+            <h3 class="title">보안메일 인증</h3>
+            <p class="text">소유자가 아닐 경우 법적 처벌을 받을 수 있습니다. <br />
+                인증 암호인 생년월일(6자리)을 입력해주세요.
+            </p>
+            <div class="input-wrap">
+                <label >인증번호</label>
+                <input type="text" placeholder="생년월일 앞 6자리를 입력해주세요.">
+                <button type="button" onclick="openModalAlert('보안메일의 비밀번호가<br>일치하지 않습니다.')">인증번호 받기</button>
+            </div>
+        </main>
+        <footer>
+            <div class="footer-wrap">
+                <div><a href="https://www.yedaham.co.kr/" target="_blank"><img src="./images/footer_logo.png" alt=""></a></div>
+                <ul class="copyright">
+                    <li>서울시 마포구 마포대로 86, 16층  (도화동, 창강빌딩) The-K 예다함상조(주)</li>
+                    <li>대표이사 : 곽재환   |   대표번호 : 1566-6644</li>
+                    <li>사업자등록번호 : 101-86-49300   |  통신판매업 신고번호 : 제 2014-서울마포-0712호</li>
+                    <li>전화권유판매업 신고번호 : 제 2014-서울마포-0012호</li>
+                </ul>
+                <p>COPYRIGHT YEDAHAM ALL RIGHTS RESERVED.</p>
+            </div>
+        </footer>
+    </div>
+    <div class="modal-alert" id="modalAlert">
+        <div class="modal-body">
+            <div class="modal-content" ></div>
+            <div class="btn-wrap">
+                <button  type="button"  onclick="closeModalAlert();" >확인</button>
+            </div>
+        </div>
+    </div><!-- class="modal" -->
+     <div id="overlay"></div>
+    <script src="./js/scripts.js"></script>  
+    </body>
+</html>

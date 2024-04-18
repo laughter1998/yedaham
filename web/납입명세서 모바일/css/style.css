@@ -1,0 +1,505 @@
+* {
+    margin:0; 
+    padding:0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'NanumBarunGothic',Arial, Verdana, sans-serif;
+}
+table {
+    padding:0;
+    border:0;
+    border-spacing:0px;
+    border-collapse:collapse;
+}
+th, td{
+    padding:0;
+}
+
+li, dt, dd {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+img {
+    display: block;
+}
+.wrap {
+   width: 100%;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    padding: 0 12px;
+    background-color: #f5f5f5;
+}
+
+header .navi a {
+    position: relative;
+    display: inline-block;
+    margin: 0 8px;
+    font-size: 0.675rem;
+    color: #494233;
+    text-align: center;
+    font-family: 'NanumBarunGothic';
+    font-weight: 700;
+}
+header .navi a::after {
+    position: absolute;
+    top:1px;
+    right:-10px;
+    display: block;
+    content: "";
+    width:1px;
+    height:12px;
+    background-color: #8f8b82;
+}
+header .navi a:last-child{
+    margin-right:0;
+}
+header .navi a:last-child::after{
+    display:none;
+}
+
+main {
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+main#view {
+    background-image: url('../images/bg_view.png');
+    background-repeat: no-repeat;
+    background-position: right 27px top 27px;
+}
+
+
+main .date {
+    font-family: 'Gilroy', Arial, Verdana, sans-serif;
+    font-size: 60px;
+    letter-spacing: -0.04em;
+    line-height: 61px;
+    color: #05137e;
+    font-weight: 300;
+}
+main .date span {
+    font-weight: bold;
+}
+main .title {
+    margin-top: 50px;
+    font-size: 50px;
+    letter-spacing: -0.03em;
+    color: #05137e;
+    font-weight: 700;
+}
+main .title span {
+    color: #333333;
+}
+
+main .view-title {
+    margin-top: 0px;
+    font-size: 2rem;
+    line-height: 1.4;
+    letter-spacing: -0.03em;
+    color: #05137e;
+    font-weight: 700;
+}
+main .view-title span {
+    display: block;
+    color: #333333;
+}
+main .view-title + .text {
+    margin-top: 40px;
+}
+
+main .gate1-title {
+    margin-top: 50px;
+    font-size: 40px;
+    letter-spacing: -0.03em;
+    line-height: 54px;
+    font-weight: 400;
+    color: #333333;
+}
+main .gate1-title span{
+    color: #05137e;
+    font-weight: 700;
+}
+
+main .gate2-title {
+    margin-top: 40px;
+    font-size: 40px;
+    letter-spacing: -0.03em;
+    line-height: 54px;
+    font-weight: 400;
+    color: #333333;
+}
+main .gate2-title span{
+    color: #05137e;
+    font-weight: 700;
+}
+main .text {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #666;
+    font-family: 'NanumBarunGothic';
+   
+}
+main .text .name{
+    margin-bottom: 4px;
+}
+main .text .date2{
+    display: inline-block;
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: #666;
+}
+
+ul.star-list {
+    margin-top: 30px;
+    font-family: 'NanumBarunGothic';
+}
+ul.star-list  li{
+    padding: 5px 0;
+    font-size: 0.75rem;
+    line-height: 1.4;
+    color: #999;
+}
+ul.star-list  li span{
+    font-weight: 700;
+    color: #3e8bff;
+    text-decoration: underline;
+}
+
+
+main .text span{
+    font-weight: 700;
+}
+
+.deed-wrap {
+    margin-top: 30px;
+    font-size: 12px;
+}
+
+.deed-view-wrap {
+    
+}
+.deed-view-wrap .deed-view {
+    margin-bottom: 24px;;
+    padding: 18px 16px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    border: solid 1px rgba(45, 54, 126, 0.4);
+}
+
+.deed-view-wrap .deed-view:last-child {
+    margin-bottom: 0px;
+}
+
+.deed-view-wrap .deed-view section.view-top {
+  
+}
+section.view-top article {
+    margin-bottom: 8px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    border-radius: 14px;
+    border: solid 1px #ddd;
+}
+
+
+section.view-top article h3{
+    font-size: 0.875rem;
+    color: #666;
+}
+
+section.view-top article span{
+    font-size: 1rem;
+    color: #05137e;
+    font-weight: 700;
+}
+section.view-table {
+    margin-top: 10px;
+}
+
+section.view-table table {
+    width: 100%;
+    border-top: 2px solid #d9d9d9;
+    border-bottom: 2px solid #d9d9d9;
+}
+section.view-table table th{
+    padding: 14px;
+    font-size: 0.875rem;
+    color: #666;
+    text-align: center;
+    border-bottom: 1px solid #d9d9d9;
+}
+section.view-table table th.rowspaned{
+    border-bottom: 1px solid #bcbcbc;
+}
+section.view-table table td{
+    padding: 14px;
+    font-size: 0.875rem;
+    color: #666;
+    text-align: center;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+section.view-table table:nth-child(2) {
+    margin-top: -2px;
+}
+
+section.contract-board  + section.email-check {
+    margin-top: 40px;
+}
+section.email-check {
+    margin-top: 100px;
+}
+section.email-check h3{
+    font-size: 18px;
+    letter-spacing: -0.03em;
+    color: #333333;
+    font-weight: 400;
+    font-family: 'NanumBarunGothic';
+}
+section.email-check .step-check{
+    margin-top: 15px;
+    border-radius: 20px;
+    filter: drop-shadow(0px 5px 4.5px rgba(0,0,0,0.05));
+    background-color: #ffffff;
+    border: 1px solid #c1c1c1;
+}
+section.email-check .step-check ul {
+    display: flex;
+}
+section.email-check .step-check ul li {
+    position: relative;
+    width: 100%;
+    padding: 40px 0;
+    text-align: center;
+}
+section.email-check .step-check ul li::after {
+    position: absolute;
+    content: '';
+    display: block;
+    right:-8px;
+    top:50%;
+    margin-top:-9px;
+    width: 15px;
+    height: 22px;
+    background: url('../images/icon-arrow.png') no-repeat;
+}
+section.email-check .step-check ul li:last-child::after {
+    display: none;
+}
+section.email-check .step-check ul li p.step{
+    font-size: 12px;
+    color: #666666;
+}
+section.email-check .step-check ul li p.step-content{
+    margin-top: 15px;
+    font-size: 18px;
+    letter-spacing: -0.03em;
+    line-height: 24px;
+    color: #05137e;
+    font-weight: 800;
+}
+section.email-check .step-check ul li p.step-content span{
+    color: #666666;
+    font-weight: 700;
+}
+
+section.etc {
+    margin-top: 30px;
+    padding: 25px 20px;
+    background-color: #f8f8f8;
+}
+
+ul.bar-list {
+
+}
+
+ul.bar-list li {
+    padding: 3px 0;
+    font-size: 14px;
+    line-height: 20px;
+    color: #666666; 
+}
+
+ul.bar-list li span{
+    font-weight: 800;
+}
+
+section.contract-board {
+    margin-top: 110px;;
+}
+section.contract-board .contract-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+section.contract-board .contract-head .contract-title {
+    font-family: 'NanumBarunGothic';
+    font-size: 18px;
+    color: #333333;
+    letter-spacing: -0.02em;
+}
+section.contract-board .contract-head .contract-date {
+    font-size: 14px;
+    letter-spacing: -0.02em;
+    color: #333333;
+    font-weight: 300;
+    font-family: 'NanumBarunGothic';
+}
+section.contract-board  table {
+    margin-top: 15px;
+    width: 100%;
+    font-family: 'NanumBarunGothic';
+}
+section.contract-board  table th,
+section.contract-board  table td{
+    background-color: #f8f8f8;
+}
+section.contract-board  table th {
+    padding: 14px 0px;
+    font-size: 14px;
+    letter-spacing: -0.02em;
+    color: #333333;
+    border-bottom: 2px solid #b9b9b9;
+}
+section.contract-board  table td {
+    padding: 10px 0;
+    text-align: center;
+    font-weight: 300;
+}
+main .benefit {
+    margin-top: 40px;
+}
+main .benefit h3 {
+    font-size: 1.25rem;
+    color: #333333;
+    font-weight: 700;
+}
+main .benefit .banner {
+    margin-top:16px;
+    display:flex;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+main .benefit .banner img{
+    width: 100%;
+    max-width: 380px;
+}
+
+
+main section.benefit-prev {
+    margin-top: 20px;
+    padding: 24px;
+    border-radius: 24px;
+    background-color: #fffdf7;
+    border: 1px solid #efe9d7;
+}
+
+main section.benefit-prev h5{
+    font-family: 'SCoreDream';
+    font-size: 1.25rem;
+    letter-spacing: -0.03em;
+    line-height: 1.4;
+    color: #363636;
+    font-weight: 500;
+}
+main section.benefit-prev h5 span{
+    font-weight: 600;
+    color: #884a00;
+}
+main section.benefit-prev  a{
+    margin-top: 10px;
+    display: block;
+    padding: 14px 0px;
+    border-radius: 10px;
+    background-color: #505050;
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+main section.benefit-prev ul.benefit-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+}
+main section.benefit-prev ul.benefit-list li{
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 18px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+main section.benefit-prev ul.benefit-list li p.img-benefit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+main section.benefit-prev ul.benefit-list li p.tit-benefit{
+    font-size: 0.875rem;
+    color: #666;
+}
+main section.benefit-prev ul.benefit-list li p.txt-benefit{
+    display: inline-block;
+    position: relative;
+    margin-top: 4px;
+    font-size: 0.875rem;
+    color: #363636;
+    font-weight: 700;
+    z-index: 2;
+}
+main section.benefit-prev ul.benefit-list li p.txt-benefit::after{
+    display: block;
+    content: '';
+    position: absolute;
+    z-index: -2;
+    bottom: -1px;
+    width:100%;
+    height: 11px;
+    background-color: #ffcc71;
+}
+
+
+footer {
+    padding: 24px 16px;
+    background-color: #333;
+}
+
+footer .footer-wrap {
+    
+}
+
+.footer-wrap ul.copyright {
+    margin-top: 8px;
+    font-size: 0.625rem;
+    letter-spacing: -0.04em;
+    line-height: 1.4;
+    color: #f5f5f5;
+}
+
+.footer-wrap ul.copyright + p{
+    margin-top: 8px;
+    font-size: 0.75rem;
+    color: #f5f5f5;
+    text-transform: uppercase;
+     font-family: 'NanumBarunGothic',Arial, Verdana, sans-serif;
+}
+
