@@ -17,20 +17,20 @@
 <!--// head -->
 
 <script language="Javascript" type="text/javascript">
-    <!--
-     function setCookie( name, value, expirehours ) {
-      var todayDate = new Date();
-      todayDate.setHours( todayDate.getHours() + expirehours );
-      document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";"
     
-     }
+    //  function setCookie( name, value, expirehours ) {
+    //   var todayDate = new Date();
+    //   todayDate.setHours( todayDate.getHours() + expirehours );
+    //   document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+    
+    //  }
      function closeWin() {
-      if(document.getElementById("pop_today").checked){
-       setCookie( "ncookie", "done" , 24 );
-      }
-      document.getElementById('layerPop').style.display = "none";
+    //   if(document.getElementById("pop_today").checked){
+    //    setCookie( "ncookie", "done" , 24 );
+    //   }
+      document.getElementById('layerPop2').style.display = "none";
      }
-    -->
+   
     </script>
 
   <body id="main" class="foot-space">
@@ -67,7 +67,7 @@
 				<li class="has-children">
 					<a href="#" class="depthTwoOpen">예다함 상품</a>
 					<ul class="is-hidden">
-						<li class="go-back"><a href="#0">예다함 상품</a></li>
+						<li class="go-back"><a href="#0">예다함 상품愛 </a></li>
 						<li><a href="../product/prd396.html">예다함 秀396</a></li>
 						<li><a href="../product/prd530.html">예다함 秀530</a></li>
 						<li><a href="../product/prdvip.html">예다함 VIP</a></li>
@@ -120,6 +120,15 @@
         <div class="">
             <div class="swiper-container main-swiper" >
                 <div class="swiper-wrapper">
+					<div class="swiper-slide" >
+                        <section class="swiper-unit  slide-item" >
+                            <img src="../images/main/main_img_240502.png" alt=""> 
+                            <div class="txt">
+                                <h3>가정의 달 기념<br />오월 <span class="notoKR">愛</span> 이벤트</h3>
+                                <a href="../event/event240502.html?gubun=noticePopup" class="main-slide-btn"><span>자세히보기</span></a>
+                            </div>
+                        </section>
+                    </div>
                     <div class="swiper-slide" >
                         <section class="swiper-unit  slide-item" >
                             <img src="../images/main/main_img_240304.png" alt="">
@@ -226,13 +235,13 @@
 <div id="layerPop2" >
     <div class="modal-alert active" id="modalAlert">
 		<div class="modal-body" >
-            <img src="../images/main/popup_240304.png" />
+            <img src="../images/main/popup_240502.png" />
 			<input type="checkbox" name="pop_today2" id="pop_today2" checked style="position:fixed;left:-999px;bottom:-999px;width:1px;height:1px;"/>
          </div>
          <div class="flex">
             <button class="btn-alert" onclick="closeWin()" style="font-weight:350;border-right:1px solid #b38474;">오늘보지않기</button>
-			<button class="btn-alert" onclick="closeWin2()" style="font-weight:350;border-right:1px solid #b38474;">닫기</button>
-            <a href="../event/event231101.html?gubun=noticePopup" class="btn-alert">자세히보기</a>
+			<button class="btn-alert" onclick="closeWin()" style="font-weight:350;border-right:1px solid #b38474;">닫기</button>
+            <a href="../event/event240502.html?gubun=noticePopup" class="btn-alert">자세히보기</a>
         </div>
 
         
