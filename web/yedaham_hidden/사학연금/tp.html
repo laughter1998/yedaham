@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>The-K 예다함 상조</title>
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="The-K 예다함 상조">
+    <meta property="og:image" content="https://www.yedaham.co.kr/images/about/yedaham_logo.png">
+    <meta property="og:url" content="https://www.yedaham.com">
+    <meta property="og:description" content="한국교직원공제회가 100% 출자, 설립한 The-K예다함상조">
+    <meta name="description" content="한국교직원공제회가 100% 출자, 설립한 The-K예다함상조">
+
+    <script type="text/javascript" src="https://www.yedaham.co.kr/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="https://www.yedaham.co.kr/js/common/function.js"></script>
+    <script type="text/javascript" src="https://www.yedaham.co.kr/js/select2.full.js"></script>
+
+    <script type="text/javascript" src="https://www.yedaham.co.kr/js/script.js"></script>
+    <script type="text/javascript" src="https://www.yedaham.co.kr/js/jquery.placeholder.js"></script>
+    <script type="text/javascript" src="https://www.yedaham.co.kr/js/validate_info.js"></script>
+    <script type="text/javascript" src="https://www.yedaham.co.kr/js/common.js"></script>
+    <script type="text/javascript" src="https://www.yedaham.co.kr/js/commons-validator-1.3.1.js"></script>
+    <script type="text/javascript" src="https://www.yedaham.co.kr/js/menu.js"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="https://www.yedaham.co.kr/css/select2.css" />
+
+
+    <link rel="stylesheet" type="text/css" href="https://www.yedaham.co.kr/css/styles.css" />
+
+    <link rel="shortcut icon" href="/favicon.ico">
+</head>
+
+<body>
+
+    <style>
+        .hidden_wrap {
+            padding: 25px 0 0 0;
+        }
+
+        .hidden_line {
+            margin: 0 auto;
+            padding: 0 30px 30px 30px;
+            width: 910px;
+            background: #ffffff;
+            border: 1px solid #dedbd8;
+        }
+
+        .hidden_line .header {
+            position: relative;
+            height: 82px;
+            border-bottom: 2px solid #c87c1e;
+        }
+
+        .hidden_line .header .h5_tit {
+            position: absolute;
+            left: 0;
+            top: 24px;
+        }
+
+        .hidden_line .header h1 {
+            position: absolute;
+            right: 0;
+            top: 25px;
+        }
+
+        .hidden_line .tp_con {
+            position: absolute;
+            left: 0px;
+            top: 1120px;
+        }
+
+        .hidden_line table.input_table {
+            margin: 0 0 0 338px;
+        }
+
+        .hidden_line table.input_table tr {}
+
+        .hidden_line table.input_table tr th {
+            font-size: 14px;
+            color: #333333;
+            font-weight: bold;
+            letter-spacing: -0.06em;
+        }
+
+        .hidden_line table.input_table tr td {}
+
+        .hidden_line table.input_table tr td input {
+            height: 40px;
+        }
+
+        .hidden_line table.input_table tr td input,
+        .hidden_line table.input_table tr td select {
+            margin: 2px 0;
+        }
+
+        .hidden_line .counsel_agree {
+            padding: 0;
+            margin: 215px 0 0 228px;
+            border: 0;
+        }
+
+        .hidden_line .counsel_agree .agree_select {
+            text-align: right;
+        }
+
+        .hidden_line .counsel_agree .scroll-box {
+            padding: 15px;
+            width: 456px;
+            height: 210px;
+            font-size: 14px;
+            line-height: 28px;
+            overflow: hidden;
+            overflow-y: auto;
+            border: 1px #ddd solid;
+            box-sizing: border-box;
+            background-color: #fff;
+        }
+
+        .hidden_line .counsel_agree .title {
+            margin-top: 40px;
+
+            font-weight: bold;
+        }
+
+        .hidden_line .counsel_agree .title:first-child {
+            margin: 0;
+        }
+
+
+        .hidden_line p.btn {
+            padding: 50px 0 0 228px;
+        }
+
+        #footer_wrap {
+            width: 100%;
+            background: #494233;
+        }
+
+        .hidden_wrap #footer_h {
+            height: 95px;
+            width: 970px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 99;
+        }
+
+        .hidden_wrap #footer_h h2 {
+            position: absolute;
+            left: 0px;
+            top: 37px;
+        }
+
+        .hidden_wrap #footer_h p.txt {
+            margin: 0 0 0 156px;
+            padding: 20px 0 0 0px;
+            color: #a4a199;
+            font-size: 11px;
+            line-height: 16px;
+        }
+
+        .hidden_wrap #footer_h p.txt span {
+            display: block;
+            margin: 0 0 5px 0;
+            color: #ffffff;
+        }
+
+        .hidden_wrap #footer_h p.txt span a {
+            color: #ffffff;
+        }
+
+        .hidden_wrap #footer_h p.txt span a:hover {
+            text-decoration: underline;
+        }
+
+
+        .hidden_line.tp .input_radio {
+            position: relative;
+            width: 22px;
+            height: 22px;
+            display: inline-block;
+        }
+
+        .hidden_line.tp .input_radio input {
+            position: absolute;
+            left: 4px;
+            top: 4px;
+            vertical-align: middle;
+        }
+
+        .hidden_line.tp .input_radio label {
+            display: inline-block;
+            position: absolute;
+            left: 0;
+            top: 0px;
+            width: 23px;
+            height: 23px;
+            background: url('/images/with/hidden/tp/bg_chk.png') left bottom no-repeat;
+        }
+
+        .hidden_line.tp .input_radio label.on {
+            background: url('/images/with/hidden/tp/bg_chk_on.png') left bottom no-repeat;
+        }
+
+        .hidden_line.tp .input_radio input:checked+label {
+            background: url('/images/with/hidden/tp/bg_chk_on.png') left bottom no-repeat
+        }
+
+        .form-input {
+            padding: 0 5px;
+            -webkit-box-sizing: border-box;
+            /* Safari/Chrome, other WebKit */
+            -moz-box-sizing: border-box;
+            /* Firefox, other Gecko */
+            box-sizing: border-box;
+        }
+    </style>
+    <div class="hidden_wrap">
+        <div class="hidden_line tp">
+
+
+            <div style="position:relative;margin-top:30px;">
+                <div><img src="./images/with/hidden/tp/tp_01.png" alt="" /></div>
+                <div><img src="./images/with/hidden/tp/tp_02.png" alt="" /></div>
+                <div><img src="./images/with/hidden/tp/tp_03.png" alt="" /></div>
+                <div><img src="./images/with/hidden/tp/tp_04.png" alt="" /></div>
+                <div><img src="./images/with/hidden/tp/tp_05.png" alt="" /></div>
+                <div><img src="./images/with/hidden/tp/tp_06.png" alt="" /></div>
+                <div><img src="./images/with/hidden/tp/tp_07.png" alt="" /></div>
+                <div><img src="./images/with/hidden/tp/tp_08.png" alt="" /></div>
+                <div><img src="./images/with/hidden/tp/tp_09.png" alt="" /></div>
+                <div class="tp_con">
+                    <!-- 빠른상담신청 -->
+
+                    <form name="frmMain">
+                        <input type="hidden" name="gubun" id="gubun" value="학평협" />
+                        <table class="input_table" summary="이름,휴대전화,이메일 입력 표입니다.">
+                            <caption>고객 정보 입력 표</caption>
+                            <colgroup>
+                                <col width="344">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <td style="padding:0 0 15px 0;">
+                                        <select name="customer_type" id="customer_type" class="select2"
+                                            onchange="type_change();" style="width:342px;">
+                                            <option value="banana">만 19세 이상</option>
+                                            <option value="noSelect">만 19세 미만 </option>
+                                        </select>
+
+                                    </td>
+                                </tr>
+                                <tr>
+
+                                    <td style="padding:0 0 15px 0;"><input type="text" class="form-input"
+                                            placeholder="이름을 입력하세요" name="name" id="name" style="width:342px;" /></td>
+                                </tr>
+
+                                <tr>
+
+                                    <td style="padding:0 0 15px 0;">
+                                        <select name="tel1" id="tel1" class="select2" style="width:111px;">
+                                            <option value="010">010</option>
+                                            <option value="011">011</option>
+                                            <option value="016">016</option>
+                                            <option value="017">017</option>
+                                            <option value="018">018</option>
+                                            <option value="019">019</option>
+                                        </select>
+                                        <input type="text" class="form-input" name="tel2" id="tel2" maxlength="4"
+                                            onKeyPress="return onlyNumber()" style="width:112px;">
+                                        <input type="text" class="form-input" name="tel3" id="tel3" maxlength="4"
+                                            onKeyPress="return onlyNumber()" style="width:112px">
+                                    </td>
+                                </tr>
+                                <tr>
+
+                                    <td>
+                                        <select name="time" id="time" class="select2" style="width:342px;">
+                                            <option value="상시(아무때나)">상시(아무때나)</option>
+                                            <option value="am 09:00 ~ am 10:00">am 09:00 ~ am 10:00</option>
+                                            <option value="am 10:00 ~ am 11:00">am 10:00 ~ am 11:00</option>
+                                            <option value="am 11:00 ~ am 12:00">am 11:00 ~ am 12:00</option>
+                                            <option value="am 12:00 ~ pm 01:00">am 12:00 ~ pm 01:00</option>
+                                            <option value="pm 01:00 ~ pm 02:00">pm 01:00 ~ pm 02:00</option>
+                                            <option value="pm 02:00 ~ pm 03:00">pm 02:00 ~ pm 03:00</option>
+                                            <option value="pm 03:00 ~ pm 04:00">pm 03:00 ~ pm 04:00</option>
+                                            <option value="pm 04:00 ~ pm 05:00">pm 04:00 ~ pm 05:00</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="counsel_agree tp_agree ">
+                            <section class="">
+                                <div class="agree_select  ">
+                                    <span class="input_radio"><input type="radio" id="new_radio011" name="all01"
+                                            value="Y"><label id="new_radio011Lb" for="new_radio011"></label></span><span
+                                        class="agr_txt">동의</span>&nbsp;&nbsp;&nbsp;
+                                    <span class="input_radio"><input type="radio" id="new_radio012" name="all01"
+                                            value="N" checked=""><label id="new_radio012Lb"
+                                            for="new_radio012"></label></span><span class="agr_txt">동의안함</span>
+                                </div>
+                            </section>
+                            <div class="scroll-box mt15">
+                                <p class="title">가. 개인정보 수집, 이용 목적</p>
+                                <p>: 상조 서비스 가입의사 확인 및 가입상담 목적</p>
+
+                                <p class="title mt10">나. 수집하는 개인정보 항목</p>
+                                <p>: 구분값, 성명, 연락처, 상담희망 시간</p>
+
+                                <p class="title mt10">다. 개인정보 보유 및 이용기간</p>
+                                <p>: 상담신청일로 부터 3개월</p>
+
+                                <p class="mt10">* 개인정보의 수집·이용에 대한 동의를 거부할 수 있으나,<br>&nbsp;&nbsp;&nbsp;&nbsp;동의 거부 시 상담이
+                                    불가할 수 있음</p>
+
+                            </div>
+                            <section class="mt30">
+                                <div class="agree_select ">
+                                    <span class="input_radio"><input type="radio" id="new_radio021" name="all02"
+                                            value="Y"><label id="new_radio021Lb" for="new_radio021"></label></span><span
+                                        class="agr_txt">동의</span>&nbsp;&nbsp;&nbsp;
+                                    <span class="input_radio"><input type="radio" id="new_radio022" name="all02"
+                                            value="N" checked=""><label id="new_radio022Lb"
+                                            for="new_radio022"></label></span><span class="agr_txt">동의안함</span>
+                                </div>
+                            </section>
+                            <div class="scroll-box mt15">
+                                <p class="title">가. 개인정보 처리의 위탁</p>
+
+                                <p>1) 위탁받은 업체 : ㈜유베이스</p>
+
+                                <p>2) 위탁하는 업무 : 가입 상담업무</p>
+
+                                <p class="mt10">* 개인정보처리 위탁에 대한 동의를 거부할 수 있으나,<br>&nbsp;&nbsp;&nbsp;&nbsp;동의 거부 시 상담이
+                                    불가할 수 있음</p>
+
+                            </div>
+                        </div>
+                        <!--// class="counsel_agree" -->
+
+                        <p class="btn"><a href="javascript:fastCounselSave();"><img
+                                    src="./images/with/hidden/tp/btn_reg.png" alt="상담신청하기" /></a></p>
+                    </form>
+                    <!-- //빠른상담신청 --->
+                </div>
+
+
+
+            </div>
+
+
+
+        </div><!-- class="hidden_line" -->
+
+
+
+
+    </div> <!-- class="hidden_wrap" -->
+
+
+
+
+
+</body>
+
+</html>
