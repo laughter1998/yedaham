@@ -281,43 +281,43 @@
     padding-top:60px !important;
 }
 .pb-0 {
-    padding-bottm:0px !important;
+    padding-bottom:0px !important;
 }
 .pb-5 {
-    padding-bottm:5px !important;
+    padding-bottom:5px !important;
 }
 .pb-10 {
-    padding-bottm:10px !important;
+    padding-bottom:10px !important;
 }
 .pb-15 {
-    padding-bottm:15px !important;
+    padding-bottom:15px !important;
 }
 .pb-20 {
-    padding-bottm:20px !important;
+    padding-bottom:20px !important;
 }
 .pb-25 {
-    padding-bottm:25px !important;
+    padding-bottom:25px !important;
 }
 .pb-30 {
-    padding-bottm:30px !important;
+    padding-bottom:30px !important;
 }
 .pb-35 {
-    padding-bottm:35px !important;
+    padding-bottom:35px !important;
 }
 .pb-40 {
-    padding-bottm:40px !important;
+    padding-bottom:40px !important;
 }
 .pb-45 {
-    padding-bottm:45px !important;
+    padding-bottom:45px !important;
 }
 .pb-50 {
-    padding-bottm:50px !important;
+    padding-bottom:50px !important;
 }
 .pb-55 {
-    padding-bottm:55px !important;
+    padding-bottom:55px !important;
 }
 .pb-60 {
-    padding-bottm:60px !important;
+    padding-bottom:60px !important;
 }
 .w-50 {
     width: 50% !important;
@@ -396,6 +396,9 @@ hr, caption, legend, figcaption {
 }
 .color-666 {
     color:#666666 !important;
+}
+.color-555 {
+    color:#555 !important;
 }
 .color-333 {
     color:#333 !important;
@@ -2396,15 +2399,15 @@ ul.no-bul-list > li {
 ul.woori-service {
     margin-top: 10px;
 }
-ul.woori-service li {
+ul.woori-service > li {
 	position: relative;
 	padding: 6px 0;
 }
-ul.woori-service li > h4 {
+ul.woori-service > li > h4 {
 	color: #6db900 !important;
 	font-weight: 600;
 }
-ul.woori-service li p {
+ul.woori-service > li p {
 	padding-left: 12px;
 	padding-top:5px;
 	line-height: 20px;
