@@ -387,7 +387,9 @@ hr, caption, legend, figcaption {
 .fs-big {
     font-size: 4rem;
 }
-
+.fs-11 {
+    font-size: 11px !important;
+}
 .flex {
     display: flex !important;
 }
