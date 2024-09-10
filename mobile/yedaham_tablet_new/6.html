@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1920, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <title>의전진행관리</title>
+    <link rel="stylesheet" href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-neo.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- 상단 고정 영역 -->
+    <header>
+        <div class="header-logo">
+            <img src="./images/header-logo.svg" alt="예다함">
+            의전진행관리
+        </div>
+        <div class="header-title">상품정보</div>
+        <div class="header-menu">
+            <nav>
+                <a href="#" class="current">관리메인</a>
+                <a href="#">업무관리</a>
+                <a href="#">투입관리</a>
+                <a href="#">철수관리</a>
+            </nav>
+            <a href="#" class="logout">로그아웃</a>
+        </div>
+    </header>
+
+
+    <main>
+        <div class="search-section">
+            <div class="input-calendar-wrap">
+                <div class="input-wrap" tabindex="0">
+                    <input type="text" class="form-control" placeholder="">
+                </div>
+                <img src="./images/icon_calendar.png" alt="">
+            </div>
+
+            <div class="select-wrap">
+                <select class="form-select" onchange="handleSelectChange(this)">
+                    <option value="" disabled selected>선택</option>
+                    <option value="option1">옵션 1</option>
+                    <option value="option2">옵션 2</option>
+                    <option value="option3">옵션 3</option>
+                </select>
+            </div>
+
+            <div class="input-wrap input-group ">
+                <input type="text" class="form-control" placeholder="입력">
+                <button type="button" class="btn input-clear">초기화</button>
+            </div>
+            <div style="position:relative;">
+                <input type="text" class="form-control" placeholder="입력" style="padding-left:100px;">
+                <button type="button" class="btn input-clear" style="position:absolute;left:0;top:0;">초기화</button>
+            </div>
+            <!-- 검색 필터 -->
+            <div class="filter-container">
+                <label for="start-date">조회기간:</label>
+                <input type="date" id="start-date" value="2022-12-24">
+                <span>~</span>
+                <input type="date" id="end-date" value="2022-12-24">
+                <!-- 추가 필터 요소들 -->
+                <select>
+                    <option>관할지부: 강서지부</option>
+                    <!-- 다른 옵션들 -->
+                </select>
+                <select>
+                    <option>진행지부: 선택</option>
+                    <!-- 다른 옵션들 -->
+                </select>
+                <!-- 추가 필터들 계속 -->
+                <button class="search-button">조회하기 (999)</button>
+            </div>
+        </div>
+
+
+        <div class="result-section">
+            <p class="no-result-message">조회해주시기 바랍니다.</p>
+        </div>
+    </main>
+
+</body>
+
+</html>
