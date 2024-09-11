@@ -30,7 +30,12 @@ body {
     background-color: #fff;
     padding-top: 56px;
 }
-
+button, input, optgroup, select, textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
 img {
     vertical-align: top;
     max-width: 100%;
@@ -53,14 +58,14 @@ h1, h2, h3, h4, h5 {
     font-weight: 700;
 }
 select {
-    font-family: 'NanumSquareNeoBold' , sans-serif ;
-    font-size: 16px; 
-    color: #000; 
     background-color: #fff;
-    border: 1px solid #ccc;
-    padding: 5px; 
-    border-radius: 4px; 
+    box-shadow: inset 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+    border: solid 1px #999;
+    padding: 8px; 
+    border-radius: 8px; 
     box-sizing: border-box;
+    word-wrap: normal;
+    
 }
 
 .bg-red {
@@ -72,7 +77,9 @@ select {
 .bg-777 {
     background-color: #777 ;
 }
-
+.bg-ddd {
+    background-color: #ddd;
+}
 /* font color */
 .text-white {
     color:#fff;
@@ -170,80 +177,40 @@ main {
    
 }
 
+
+/* 의전징행관리*/
+
+.filter-flex {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+/* display */
+
+
+
 /* form */
-.input-wrap {
-    padding: 8px;
+.form-control {
+    display: block;
+    width: 100%;
+    height: 48px;
+    padding: 0 8px;
+    color: #000;
+    font-size: 24px;
     border-radius: 8px;
+    background-color: #fff;
+    background-clip: padding-box;
     box-shadow: inset 0 4px 4px 0 rgba(0, 0, 0, 0.1);
     border: solid 1px #999;
     background-color: #fff;
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-}
-
-.form-control {
-    display: block;
-    width: 100%;
-    color: #000;
-    font-size: 24px;
-    background-color: #fff;
-    background-clip: padding-box;
-    border:1px solid transparent;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
 }
-.input-wrap:has(.form-control:focus),
-.form-select:focus,
-.form-control:focus{
-    background-color: #fff;
-    border-color: #86b7fe;
-    outline: 0;
-    box-shadow: 0 0 0 .25rem rgba(13, 110, 253, .25);
-  }
 
- 
-.input-group {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: stretch;
-    width: 100%;
-}
-.input-group>.form-control, 
-.input-group>.form-select {
-    position: relative;
-    flex: 1 1 auto;
-    width: 1%;
-    min-width: 0;
-}
-
-.input-calendar-wrap {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    width: 100%;
-    padding-right: 6px;
-}
-
-.input-calendar-wrap > .input-wrap {
-    position: relative;
-    flex: 1 1 auto;
-    width: 1%;
-    min-width: 0;
-    margin-right:12px;
-}
-
-input:focus {
-    outline: none;
-} 
-::placeholder {
-    color: #ccc;
-  }
-
-select {
-    word-wrap: normal;
-}
 .form-select {
     display: block;
     width: 100%;
@@ -265,7 +232,61 @@ select {
 }
 
 
+/* input, select에 focus 스타일 */
+.form-select:focus,
+.form-control:focus{
+    background-color: #fff;
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: 0 0 0 .25rem rgba(13, 110, 253, .25);
+  }
+
+.input-group {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 100%;
+}
+
+.input-group> .form-control {
+    position: relative;
+    flex: 1 1 auto;
+    width: 1%;
+    min-width: 0;
+}
+
+.input-group > span.btn-calendar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    margin-left: 4px;
+    
+}
+
+/* 초기화 button 있는 input에 패딩 */
+.input-group:has(button.btn-input-clear) input {
+    padding-right: 40px; 
+}
+
+
+input:focus {
+    outline: none;
+} 
+::placeholder {
+    color: #ccc;
+  }
+
+
+
+
+
 /* button */
+button {
+    background-color: transparent;
+    cursor: pointer;
+}
 .btn {
     display: inline-block;
     color: inherit;
@@ -278,13 +299,199 @@ select {
     user-select: none;
     background-color: transparent;
     border: 1px solid transparent;
+    height: 48px;
+    border-radius: 8px;
 }
 
-.input-clear {
-    width: 30px;
-    height: 30px;
+.btn-input-clear {
+    position:absolute;
+    right:8px;
+    top:0;
+    width: 32px;
     background-image: url('../images/btn_input_del.png');
     background-position: center center;
     background-repeat: no-repeat;
-    text-indent: -999px;
+    text-indent: -9999px;
+}
+.btn-filter {
+    position: relative;
+    width: 160px;
+    height: 100%;
+    font-size: 32px;
+    line-height: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.1);
+    background-color: #213f9a;
+    color:#fff;
+}
+.btn-filter span {
+    margin-top:25px;
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.8);
+}
+.btn-filter::after {
+    display: block;
+    content: '';
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    top: 50%;
+    margin-top: 2px;
+    height:1px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+
+/* table */
+
+/* 검색 table */
+.filter-group {
+    display: flex;
+    align-items: stretch;
+    gap: 32px;
+    padding: 8px;
+}
+.filter-group > .filter-tables {
+    position: relative;
+    flex: 1 1 auto;
+    width: 1%;
+    min-width: 0;
+}
+
+
+.filter-table th {
+    text-align: left;
+    color:#333;
+}
+
+.filter-table td {
+    padding: 4px ;
+    padding-right: 40px;
+}
+.filter-table tr td:last-child {
+    padding-right: 0;
+}
+.filter-group {
+    display: flex;
+    align-items: stretch;
+}
+
+.filter-group > .filter-button {
+    position: relative;
+}
+.filter-group > .filter-button::before {
+    display: block;
+    content: '';
+    position: absolute;
+    left: -16px;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background-color: #d9d9d9;
+}
+
+/* 리스트 table */
+.list-table {
+
+}
+.list-table th {
+    position: relative;
+    padding: 8px;
+    text-align: center;
+    font-size: 16px;
+    border-bottom: solid 1px #999;
+    border-top: solid 1px #999;
+    background-color: rgba(221, 221, 221, 0.8);
+    color:#333333;
+}
+.list-table th::after {
+    display: block;
+    content: '';
+    position: absolute;
+    right: 0px;
+    top: 9px;
+    bottom: 7px;
+    width: 1px;
+    background-color: #999;
+}
+.list-table th:last-child::after {
+    display: none;
+}
+
+.list-table tbody tr td .no-data-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100svh - 390px);
+    padding:0;
+    background-color: rgba(221, 221, 221, 0.8);
+    color: #666;
+    text-align: center;
+}
+/**** checkbox ****/
+
+/* filter 영역의 checkbox*/
+.checkbox-button {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    
+    user-select: none;
+    
+}
+
+.checkbox-button input[type="checkbox"] {
+    display: none;
+}
+
+
+.checkbox-button input[type="checkbox"] + span {
+    height: 48px;
+    border: solid 1px #ddd;
+    color: #999;
+    background-color: #fff;
+    border-radius: 24px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+.checkbox-button input[type="checkbox"]:checked + span {
+    color: #fff;
+    background-color: #1f8aed;
+    border: 2px solid #1f8aed;
+}
+
+/**** radio button ****/
+
+/* filter 영역의 radio*/
+.radio-button {
+    width:100%;
+    cursor: pointer;
+    user-select: none;
+}
+
+.radio-button input[type="radio"] {
+    display: none;
+}
+
+.radio-button input[type="radio"] + span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    border: solid 1px #ddd;
+    color: #999;
+    background-color: #fff;
+    border-radius: 24px;
+    transition: background-color 0.3s, border-color 0.3s;
+    font-family: 'NanumSquareNeoBold';
+    
+}
+.radio-button input[type="radio"]:checked + span {
+    color: #003fff;
+    background-color: rgba(0, 133, 255, 0.2);
+    border: 2px solid #1f8aed;
+    font-family: 'NanumSquareNeoExtraBold';
+    font-weight: 800;
 }

@@ -32,55 +32,251 @@
 
 
     <main>
-        <div class="search-section">
-            <div class="input-calendar-wrap">
-                <div class="input-wrap" tabindex="0">
-                    <input type="text" class="form-control" placeholder="">
-                </div>
-                <img src="./images/icon_calendar.png" alt="">
-            </div>
+        <section class="filter-group">
+            <div class="filter-tables">
+                <table class=" filter-table">
+                    <colgroup>
+                        <col style="width:108px;" />
+                        <col />
+                        <col style="width:108px;" />
+                        <col />
+                        <col style="width:108px;" />
+                        <col style="width:360px;" />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>조회기간</th>
+                            <td>
+                                <div class="filter-flex">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" value="2022-12-24" placeholder="">
+                                        <span class="btn-calendar"><img src="./images/icon_calendar.png" alt=""></span>
+                                    </div>
+                                    <span>~</span>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="">
+                                        <span class="btn-calendar"><img src="./images/icon_calendar.png" alt=""></span>
+                                    </div>
+                                </div>
+                            </td>
+                            <th>의전일시</th>
+                            <td>
+                                <div class="filter-flex">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="">
+                                        <span class="btn-calendar"><img src="./images/icon_calendar.png" alt=""></span>
+                                    </div>
+                                    <span>~</span>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="">
+                                        <span class="btn-calendar"><img src="./images/icon_calendar.png" alt=""></span>
+                                    </div>
+                                </div>
+                            </td>
+                            <th>의전상태</th>
+                            <td>
+                                <div class="filter-flex">
+                                    <label class="radio-button" for="a1">
+                                        <input type="radio" name="state" id="a1" checked="checked">
+                                        <span>전체</span>
+                                    </label>
+                                    <label class="radio-button" for="a2">
+                                        <input type="radio" name="state" id="a2">
+                                        <span>접수</span>
+                                    </label>
+                                    <label class="radio-button" for="a3">
+                                        <input type="radio" name="state" id="a3">
+                                        <span>진행</span>
+                                    </label>
+                                    <label class="radio-button" for="a4">
+                                        <input type="radio" name="state" id="a4">
+                                        <span>완료</span>
+                                    </label>
+                                    <label class="radio-button" for="a5">
+                                        <input type="radio" name="state" id="a5">
+                                        <span>취소</span>
+                                    </label>
+                                </div>
+                            </td>
 
-            <div class="select-wrap">
-                <select class="form-select" onchange="handleSelectChange(this)">
-                    <option value="" disabled selected>선택</option>
-                    <option value="option1">옵션 1</option>
-                    <option value="option2">옵션 2</option>
-                    <option value="option3">옵션 3</option>
-                </select>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class=" filter-table">
+                    <colgroup>
+                        <col style="width:108px;" />
+                        <col />
+                        <col style="width:108px;" />
+                        <col />
+                        <col style="width:108px;" />
+                        <col />
+                        <col style="width:108px;" />
+                        <col />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>관할지부</th>
+                            <td>
+                                <select class="form-select">
+                                    <option value="" disabled>선택</option>
+                                    <option value="" selected>강서지부</option>
+                                    <option value="">강남지부</option>
+                                    <option value="">강동지부</option>
+                                </select>
+                            </td>
+                            <th>진행지부</th>
+                            <td>
+                                <select class="form-select">
+                                    <option value="" disabled selected>선택</option>
+                                    <option value="">강서지부</option>
+                                    <option value="">강남지부</option>
+                                    <option value="">강동지부</option>
+                                </select>
+                            </td>
+                            <th>인력상태</th>
+                            <td>
+                                <select class="form-select">
+                                    <option value="" disabled selected>선택</option>
+                                    <option value="">인력1</option>
+                                    <option value="">인력2</option>
+                                    <option value="">인력3</option>
+                                </select>
+                            </td>
+                            <th>장법</th>
+                            <td>
+                                <select class="form-select">
+                                    <option value="" disabled selected>선택</option>
+                                    <option value="">장법1</option>
+                                    <option value="">장법2</option>
+                                    <option value="">장법3</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>회원유형</th>
+                            <td>
+                                <select class="form-select">
+                                    <option value="" disabled selected>선택</option>
+                                    <option value="">장법1</option>
+                                    <option value="">장법2</option>
+                                    <option value="">장법3</option>
+                                </select>
+                            </td>
+                            <th>의전번호</th>
+                            <td>
+                                <div class="input-group ">
+                                    <input type="number" class="form-control" placeholder="입력"
+                                        onKeyPress="if(this.value.length==10) return false;">
+                                    <button type="button" class="btn btn-input-clear">초기화</button>
+                                </div>
+                            </td>
+                            <th>장례식장</th>
+                            <td>
+                                <div class="input-group ">
+                                    <input type="text" class="form-control" placeholder="입력" maxlength="20">
+                                    <button type="button" class="btn btn-input-clear">초기화</button>
+                                </div>
+                            </td>
+                            <th>증서번호</th>
+                            <td>
+                                <div class="input-group ">
+                                    <input type="number" class="form-control" placeholder="입력"
+                                        onKeyPress="if(this.value.length==10) return false;">
+                                    <button type="button" class="btn btn-input-clear">초기화</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>의전FD</th>
+                            <td>
+                                <div class="input-group ">
+                                    <input type="text" class="form-control" placeholder="입력">
+                                    <button type="button" class="btn btn-input-clear">초기화</button>
+                                </div>
+                            </td>
+                            <th>발인FD</th>
+                            <td>
+                                <div class="input-group ">
+                                    <input type="text" class="form-control" placeholder="입력">
+                                    <button type="button" class="btn btn-input-clear">초기화</button>
+                                </div>
+                            </td>
+                            <th>고인</th>
+                            <td>
+                                <div class="input-group ">
+                                    <input type="text" class="form-control" placeholder="입력">
+                                    <button type="button" class="btn btn-input-clear">초기화</button>
+                                </div>
+                            </td>
+                            <th>상주</th>
+                            <td>
+                                <div class="input-group ">
+                                    <input type="text" class="form-control" placeholder="입력">
+                                    <button type="button" class="btn btn-input-clear">초기화</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>회원</th>
+                            <td>
+                                <div class="input-group ">
+                                    <input type="text" class="form-control" placeholder="입력">
+                                    <button type="button" class="btn btn-input-clear">초기화</button>
+                                </div>
+                            </td>
+                            <th>접수회원</th>
+                            <td>
+                                <div class="input-group ">
+                                    <input type="text" class="form-control" placeholder="입력">
+                                    <button type="button" class="btn btn-input-clear">초기화</button>
+                                </div>
+                            </td>
+                            <th></th>
+                            <td></td>
+                            <th></th>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
+            <div class="filter-button"><button type="button" class="btn btn-filter">조회하기 <span>(999)</span></button>
+            </div>
+        </section><!-- // class="filter-table-group" -->
 
-            <div class="input-wrap input-group ">
-                <input type="text" class="form-control" placeholder="입력">
-                <button type="button" class="btn input-clear">초기화</button>
-            </div>
-            <div style="position:relative;">
-                <input type="text" class="form-control" placeholder="입력" style="padding-left:100px;">
-                <button type="button" class="btn input-clear" style="position:absolute;left:0;top:0;">초기화</button>
-            </div>
-            <!-- 검색 필터 -->
-            <div class="filter-container">
-                <label for="start-date">조회기간:</label>
-                <input type="date" id="start-date" value="2022-12-24">
-                <span>~</span>
-                <input type="date" id="end-date" value="2022-12-24">
-                <!-- 추가 필터 요소들 -->
-                <select>
-                    <option>관할지부: 강서지부</option>
-                    <!-- 다른 옵션들 -->
-                </select>
-                <select>
-                    <option>진행지부: 선택</option>
-                    <!-- 다른 옵션들 -->
-                </select>
-                <!-- 추가 필터들 계속 -->
-                <button class="search-button">조회하기 (999)</button>
-            </div>
+
+        <div>
+            <table class="list-table">
+                <colgroup></colgroup>
+                <thead>
+                    <tr>
+                        <th>의전(증서)번호</th>
+                        <th>접수일자</th>
+                        <th>의전상태</th>
+                        <th>납입상태</th>
+                        <th>장례식장</th>
+                        <th>상품명</th>
+                        <th>계약자</th>
+                        <th>의전팀장</th>
+                        <th>고인</th>
+                        <th>상주</th>
+                        <th>부고</th>
+                        <th>물품사진</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="12">
+                            <p class="no-data-message">조회해주시기 바랍니다.</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
 
 
-        <div class="result-section">
-            <p class="no-result-message">조회해주시기 바랍니다.</p>
-        </div>
+
+
+
     </main>
 
 </body>
