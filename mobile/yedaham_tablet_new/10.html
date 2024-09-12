@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1920, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <title>의전진행관리</title>
+    <link rel="stylesheet" href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-neo.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- 상단 고정 영역 -->
+    <header>
+        <div class="header-logo">
+            <img src="./images/header-logo.png" alt="예다함">
+            의전진행관리
+        </div>
+        <div class="header-title">상품정보</div>
+        <div class="header-menu">
+            <nav>
+                <a href="#" class="current">관리메인</a>
+                <a href="#">업무관리</a>
+                <a href="#">투입관리</a>
+                <a href="#">철수관리</a>
+            </nav>
+            <a href="#" class="logout">로그아웃</a>
+        </div>
+    </header>
+
+
+    <main>
+        <div>
+            <table class="table view-table">
+                <colgroup></colgroup>
+                <tbody>
+                    <tr>
+                        <th>의전(증서)번호</th>
+                        <td class="text-right">2022009381</td>
+                        <th>장례식장</th>
+                        <td class="text-center">이대목동병원장례식장</td>
+                        <th>계약자</th>
+                        <td>대○협동복지조합</td>
+                    </tr>
+                    <tr>
+                        <th>접수일</th>
+                        <td class="text-right">2022-08-31</td>
+                        <th>상품명</th>
+                        <td class="text-center text-blue">자율선택법인III</td>
+                        <th>고인명</th>
+                        <td>류광풍</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <section class="manage-list-group">
+            <a href="#"><img src="./images/main/icon_prd_info.png" alt="상품정보"><span>상품정보</span></a>
+            <a href="#"><img src="./images/main/icon_funeral_info.png" alt="의전정보"><span>의전정보</span></a>
+            <a href="#"><img src="./images/main/icon_schedule_guide.png" alt="일정안내"><span>일정안내</span></a>
+            <a href="#"><img src="./images/main/icon_contract_info.png" alt="계약정보"><span>계약정보</span></a>
+            <a href="#"><img src="./images/main/icon_obituary_create.png" alt="부고제작"><span>부고제작</span></a>
+            <a href="#"><img src="./images/main/icon_vehicle_dispatch.png" alt="배차등록"><span>배차등록</span></a>
+            <a href="#"><img src="./images/main/icon_burial_facility.png" alt="장지시설"><span>장지시설</span></a>
+            <a href="#"><img src="./images/main/icon_template.png" alt="서식"><span>서식</span></a>
+            <a href="#"><img src="./images/main/icon_dispatch_confirmation.png" alt="출동확인서"><span>출동확인서</span></a>
+            <a href="#"><img src="./images/main/icon_research.png" alt="리서치"><span>리서치</span></a>
+            <a href="#"><img src="./images/main/icon_supplies_order.png" alt="용품주문"><span>용품주문</span></a>
+            <a href="#"><img src="./images/main/icon_supplies_status.png" alt="용품현황"><span>용품현황</span></a>
+            <a href="#"><img src="./images/main/icon_apparel_return.png" alt="상복반납"><span>상복반납</span></a>
+            <a href="#"><img src="./images/main/icon_payment_info.png" alt="납입정보"><span>납입정보</span></a>
+            <a href="#"><img src="./images/main/icon_camera.png" alt="현장사진"><span>현장사진</span></a>
+            <a href="#"><img src="./images/main/icon_supplies_return.png" alt="용품반납"><span>용품반납</span></a>
+        </section>
+
+        <section class="funeral-received">
+            <div id="toggleButton" class="toggle-title show">
+                <!-- 클릭하면 show 를 추가하거나 제거하면 됩니다. -->
+                의전접수
+                <span class="arrow"></span>
+            </div>
+            <div id="toggleContent" class="collapse">
+
+            </div>
+        </section>
+
+
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1920, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <title>의전진행관리</title>
+    <link rel="stylesheet" href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-neo.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- 상단 고정 영역 -->
+    <header>
+        <div class="header-logo">
+            <img src="./images/header-logo.png" alt="예다함">
+            의전진행관리
+        </div>
+        <div class="header-title">상품정보</div>
+        <div class="header-menu">
+            <nav>
+                <a href="#" class="current">관리메인</a>
+                <a href="#">업무관리</a>
+                <a href="#">투입관리</a>
+                <a href="#">철수관리</a>
+            </nav>
+            <a href="#" class="logout">로그아웃</a>
+        </div>
+    </header>
+
+
+    <main>
+        <section class="filter-group">
+            <div class="filter-tables">
+                <table class=" filter-table">
+                    <colgroup>
+                        <col style="width:108px;" />
+                        <col />
+                        <col style="width:108px;" />
+                        <col />
+                        <col style="width:108px;" />
+                        <col style="width:360px;" />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>조회기간</th>
+                            <td>
+                                <div class="filter-flex">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" value="2022-12-24" placeholder="">
+                                        <span class="btn-calendar"><img src="./images/icon_calendar.png" alt=""></span>
+                                    </div>
+                                    <span>~</span>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="">
+                                        <span class="btn-calendar"><img src="./images/icon_calendar.png" alt=""></span>
+                                    </div>
+                                </div>
+                            </td>
+                            <th>의전일시</th>
+                            <td>
+                                <div class="filter-flex">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="">
+                                        <span class="btn-calendar"><img src="./images/icon_calendar.png" alt=""></span>
+                                    </div>
+                                    <span>~</span>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="">
+                                        <span class="btn-calendar"><img src="./images/icon_calendar.png" alt=""></span>
+                                    </div>
+                                </div>
+                            </td>
+                            <th>의전상태</th>
+                            <td>
+                                <div class="filter-flex">
+                                    <label class="radio-button" for="a1">
+                                        <input type="radio" name="state" id="a1" checked="checked">
+                                        <span>전체</span>
+                                    </label>
+                                    <label class="radio-button" for="a2">
+                                        <input type="radio" name="state" id="a2">
+                                        <span>접수</span>
+                                    </label>
+                                    <label class="radio-button" for="a3">
+                                        <input type="radio" name="state" id="a3">
+                                        <span>진행</span>
+                                    </label>
+                                    <label class="radio-button" for="a4">
+                                        <input type="radio" name="state" id="a4">
+                                        <span>완료</span>
+                                    </label>
+                                    <label class="radio-button" for="a5">
+                                        <input type="radio" name="state" id="a5">
+                                        <span>취소</span>
+                                    </label>
+                                </div>
+                            </td>
+
+                        </tr>
+                    </tbody>
+                </table>
+                <table class=" filter-table">
+                    <colgroup>
+                        <col style="width:108px;" />
+                        <col />
+                        <col style="width:108px;" />
+                        <col />
+                        <col style="width:108px;" />
+                        <col />
+                        <col style="width:108px;" />
+                        <col />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>관할지부</th>
+                            <td>
+                                <select class="form-select">
+                                    <option value="" disabled>선택</option>
+                                    <option value="" selected>강서지부</option>
+                                    <option value="">강남지부</option>
+                                    <option value="">강동지부</option>
+                                </select>
+                            </td>
+                            <th>진행지부</th>
+                            <td>
+                                <select class="form-select">
+                                    <option value="" disabled selected>선택</option>
+                                    <option value="">강서지부</option>
+                                    <option value="">강남지부</option>
+                                    <option value="">강동지부</option>
+                                </select>
+                            </td>
+                            <th>인력상태</th>
+                            <td>
+                                <select class="form-select">
+                                    <option value="" disabled selected>선택</option>
+                                    <option value="">인력1</option>
+                                    <option value="">인력2</option>
+                                    <option value="">인력3</option>
+                                </select>
+                            </td>
+                            <th>장법</th>
+                            <td>
+                                <select class="form-select">
+                                    <option value="" disabled selected>선택</option>
+                                    <option value="">장법1</option>
+                                    <option value="">장법2</option>
+                                    <option value="">장법3</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>회원유형</th>
+                            <td>
+                                <select class="form-select">
+                                    <option value="" disabled selected>선택</option>
+                                    <option value="">장법1</option>
+                                    <option value="">장법2</option>
+                                    <option value="">장법3</option>
+                                </select>
+                            </td>
+                            <th>의전번호</th>
+                            <td>
+                                <div class="input-group ">
+                                    <input type="number" class="form-control" placeholder="입력"
+                                        onKeyPress="if(this.value.length==10) return false;">
+                                    <button type="button" class="btn btn-input-clear">초기화</button>
+                                </div>
+                            </td>
+                            <th>장례식장</th>
+                            <td>
+                                <div class="input-group ">
+                                    <input type="text" class="form-control" placeholder="입력" maxlength="20">
+                                    <button type="button" class="btn btn-input-clear">초기화</button>
+                                </div>
+                            </td>
+                            <th>증서번호</th>
+                            <td>
+                                <div class="input-group ">
+                                    <input type="number" class="form-control" placeholder="입력"
+                                        onKeyPress="if(this.value.length==10) return false;">
+                                    <button type="button" class="btn btn-input-clear">초기화</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>의전FD</th>
+                            <td>
+                                <div class="input-group ">
+                                    <input type="text" class="form-control" placeholder="입력">
+                                    <button type="button" class="btn btn-input-clear">초기화</button>
+                                </div>
+                            </td>
+                            <th>발인FD</th>
+                            <td>
+                                <div class="input-group ">
+                                    <input type="text" class="form-control" placeholder="입력">
+                                    <button type="button" class="btn btn-input-clear">초기화</button>
+                                </div>
+                            </td>
+                            <th>고인</th>
+                            <td>
+                                <div class="input-group ">
+                                    <input type="text" class="form-control" placeholder="입력">
+                                    <button type="button" class="btn btn-input-clear">초기화</button>
+                                </div>
+                            </td>
+                            <th>상주</th>
+                            <td>
+                                <div class="input-group ">
+                                    <input type="text" class="form-control" placeholder="입력">
+                                    <button type="button" class="btn btn-input-clear">초기화</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>회원</th>
+                            <td>
+                                <div class="input-group ">
+                                    <input type="text" class="form-control" placeholder="입력">
+                                    <button type="button" class="btn btn-input-clear">초기화</button>
+                                </div>
+                            </td>
+                            <th>접수회원</th>
+                            <td>
+                                <div class="input-group ">
+                                    <input type="text" class="form-control" placeholder="입력">
+                                    <button type="button" class="btn btn-input-clear">초기화</button>
+                                </div>
+                            </td>
+                            <th></th>
+                            <td></td>
+                            <th></th>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="filter-button"><button type="button" class="btn btn-filter">조회하기 <span>(999)</span></button>
+            </div>
+        </section><!-- // class="filter-table-group" -->
+
+
+        <div>
+            <table class="list-table table-striped">
+                <colgroup></colgroup>
+                <thead>
+                    <tr>
+                        <th>의전(증서)번호</th>
+                        <th>접수일자</th>
+                        <th>의전상태</th>
+                        <th>납입상태</th>
+                        <th>장례식장</th>
+                        <th>상품명</th>
+                        <th>계약자</th>
+                        <th>의전팀장</th>
+                        <th>고인</th>
+                        <th>상주</th>
+                        <th>부고</th>
+                        <th>물품사진</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="font-24">2024005373 <p class="num-certificate font-16">(000920512)</p>
+                        </td>
+                        <td class="font-24">
+                            <p class="font-16">2024</p> 05-17
+                        </td>
+                        <td> <span class="badge badge-progress ">진행</span></td>
+                        <td> <span class="badge badge-pending">대기</span></td>
+                        <td class="ellipsis w-280  text-left">
+                            연세대학교 신총병원장례식장
+                        </td>
+                        <td class="text-left text-blue">자율선택법인III</td>
+                        <td class="ellipsis w-250">대○협동 대○협동대○협동대○협동</td>
+                        <td>김동석</td>
+                        <td>김연옥</td>
+                        <td>홍○표</td>
+                        <td><span class="badge badge-obituary-y">Y</span></td>
+                        <td><a href="#" class="btn btn-pic-view">보기</a></td>
+                    </tr>
+                    <tr>
+                        <td class="font-24">2024005373 <p class="num-certificate font-16">(000920512)</p>
+                        </td>
+                        <td class="font-24">
+                            <p class="font-16">2024</p> 05-17
+                        </td>
+                        <td> <span class="badge badge-received">접수</span></td>
+                        <td><span class="badge badge-complete">완료</span></td>
+                        <td class="ellipsis w-280  text-left">
+                            연세대학교 신총병원장례식장
+                        </td>
+                        <td class="text-left text-blue">자율선택법인III</td>
+                        <td class="ellipsis w-250">대○협동 대○협동대○협동대○협동</td>
+                        <td>김동석</td>
+                        <td>김연옥</td>
+                        <td>홍○표</td>
+                        <td><span class="badge badge-obituary-n">N</span></td>
+                        <td><a href="#" class="btn btn-pic-view">보기</a></td>
+                    </tr>
+                    <tr>
+                        <td class="font-24">2024005373 <p class="num-certificate font-16">(000920512)</p>
+                        </td>
+                        <td class="font-24">
+                            <p class="font-16">2024</p> 05-17
+                        </td>
+                        <td> <span class="badge badge-progress ">진행</span></td>
+                        <td> <span class="badge badge-pending">대기</span></td>
+                        <td class="ellipsis w-280  text-left">
+                            연세대학교 신총병원장례식장
+                        </td>
+                        <td class="text-left text-blue">자율선택법인III</td>
+                        <td class="ellipsis w-250">대○협동 대○협동대○협동대○협동</td>
+                        <td>김동석</td>
+                        <td>김연옥</td>
+                        <td>홍○표</td>
+                        <td><span class="badge badge-obituary-y">Y</span></td>
+                        <td><a href="#" class="btn btn-pic-view">보기</a></td>
+                    </tr>
+                    <tr>
+                        <td class="font-24">2024005373 <p class="num-certificate font-16">(000920512)</p>
+                        </td>
+                        <td class="font-24">
+                            <p class="font-16">2024</p> 05-17
+                        </td>
+                        <td> <span class="badge badge-received">접수</span></td>
+                        <td><span class="badge badge-complete">완료</span></td>
+                        <td class="ellipsis w-280  text-left">
+                            연세대학교 신총병원장례식장
+                        </td>
+                        <td class="text-left text-blue">자율선택법인III</td>
+                        <td class="ellipsis w-250">대○협동 대○협동대○협동대○협동</td>
+                        <td>김동석</td>
+                        <td>김연옥</td>
+                        <td>홍○표</td>
+                        <td><span class="badge badge-obituary-n">N</span></td>
+                        <td><a href="#" class="btn btn-pic-view">보기</a></td>
+                    </tr>
+                    <tr>
+                        <td class="font-24">2024005373 <p class="num-certificate font-16">(000920512)</p>
+                        </td>
+                        <td class="font-24">
+                            <p class="font-16">2024</p> 05-17
+                        </td>
+                        <td> <span class="badge badge-progress ">진행</span></td>
+                        <td> <span class="badge badge-pending">대기</span></td>
+                        <td class="ellipsis w-280  text-left">
+                            연세대학교 신총병원장례식장
+                        </td>
+                        <td class="text-left text-blue">자율선택법인III</td>
+                        <td class="ellipsis w-250">대○협동 대○협동대○협동대○협동</td>
+                        <td>김동석</td>
+                        <td>김연옥</td>
+                        <td>홍○표</td>
+                        <td><span class="badge badge-obituary-y">Y</span></td>
+                        <td><a href="#" class="btn btn-pic-view">보기</a></td>
+                    </tr>
+                    <tr>
+                        <td class="font-24">2024005373 <p class="num-certificate font-16">(000920512)</p>
+                        </td>
+                        <td class="font-24">
+                            <p class="font-16">2024</p> 05-17
+                        </td>
+                        <td> <span class="badge badge-received">접수</span></td>
+                        <td><span class="badge badge-complete">완료</span></td>
+                        <td class="ellipsis w-280  text-left">
+                            연세대학교 신총병원장례식장
+                        </td>
+                        <td class="text-left text-blue">자율선택법인III</td>
+                        <td class="ellipsis w-250">대○협동 대○협동대○협동대○협동</td>
+                        <td>김동석</td>
+                        <td>김연옥</td>
+                        <td>홍○표</td>
+                        <td><span class="badge badge-obituary-n">N</span></td>
+                        <td><a href="#" class="btn btn-pic-view">보기</a></td>
+                    </tr>
+                    <tr>
+                        <td class="font-24">2024005373 <p class="num-certificate font-16">(000920512)</p>
+                        </td>
+                        <td class="font-24">
+                            <p class="font-16">2024</p> 05-17
+                        </td>
+                        <td> <span class="badge badge-progress ">진행</span></td>
+                        <td> <span class="badge badge-pending">대기</span></td>
+                        <td class="ellipsis w-280  text-left">
+                            연세대학교 신총병원장례식장
+                        </td>
+                        <td class="text-left text-blue">자율선택법인III</td>
+                        <td class="ellipsis w-250">대○협동 대○협동대○협동대○협동</td>
+                        <td>김동석</td>
+                        <td>김연옥</td>
+                        <td>홍○표</td>
+                        <td><span class="badge badge-obituary-y">Y</span></td>
+                        <td><a href="#" class="btn btn-pic-view">보기</a></td>
+                    </tr>
+                    <tr>
+                        <td class="font-24">2024005373 <p class="num-certificate font-16">(000920512)</p>
+                        </td>
+                        <td class="font-24">
+                            <p class="font-16">2024</p> 05-17
+                        </td>
+                        <td> <span class="badge badge-received">접수</span></td>
+                        <td><span class="badge badge-complete">완료</span></td>
+                        <td class="ellipsis w-280  text-left">
+                            연세대학교 신총병원장례식장
+                        </td>
+                        <td class="text-left text-blue">자율선택법인III</td>
+                        <td class="ellipsis w-250">대○협동 대○협동대○협동대○협동</td>
+                        <td>김동석</td>
+                        <td>김연옥</td>
+                        <td>홍○표</td>
+                        <td><span class="badge badge-obituary-n">N</span></td>
+                        <td><a href="#" class="btn btn-pic-view">보기</a></td>
+                    </tr>
+                    <tr>
+                        <td class="font-24">2024005373 <p class="num-certificate font-16">(000920512)</p>
+                        </td>
+                        <td class="font-24">
+                            <p class="font-16">2024</p> 05-17
+                        </td>
+                        <td> <span class="badge badge-progress ">진행</span></td>
+                        <td> <span class="badge badge-pending">대기</span></td>
+                        <td class="ellipsis w-280  text-left">
+                            연세대학교 신총병원장례식장
+                        </td>
+                        <td class="text-left text-blue">자율선택법인III</td>
+                        <td class="ellipsis w-250">대○협동 대○협동대○협동대○협동</td>
+                        <td>김동석</td>
+                        <td>김연옥</td>
+                        <td>홍○표</td>
+                        <td><span class="badge badge-obituary-y">Y</span></td>
+                        <td><a href="#" class="btn btn-pic-view">보기</a></td>
+                    </tr>
+                    <tr>
+                        <td class="font-24">2024005373 <p class="num-certificate font-16">(000920512)</p>
+                        </td>
+                        <td class="font-24">
+                            <p class="font-16">2024</p> 05-17
+                        </td>
+                        <td> <span class="badge badge-received">접수</span></td>
+                        <td><span class="badge badge-complete">완료</span></td>
+                        <td class="ellipsis w-280  text-left">
+                            연세대학교 신총병원장례식장
+                        </td>
+                        <td class="text-left text-blue">자율선택법인III</td>
+                        <td class="ellipsis w-250">대○협동 대○협동대○협동대○협동</td>
+                        <td>김동석</td>
+                        <td>김연옥</td>
+                        <td>홍○표</td>
+                        <td><span class="badge badge-obituary-n">N</span></td>
+                        <td><a href="#" class="btn btn-pic-view">보기</a></td>
+                    </tr>
+                    <tr>
+                        <td class="font-24">2024005373 <p class="num-certificate font-16">(000920512)</p>
+                        </td>
+                        <td class="font-24">
+                            <p class="font-16">2024</p> 05-17
+                        </td>
+                        <td> <span class="badge badge-progress ">진행</span></td>
+                        <td> <span class="badge badge-pending">대기</span></td>
+                        <td class="ellipsis w-280  text-left">
+                            연세대학교 신총병원장례식장
+                        </td>
+                        <td class="text-left text-blue">자율선택법인III</td>
+                        <td class="ellipsis w-250">대○협동 대○협동대○협동대○협동</td>
+                        <td>김동석</td>
+                        <td>김연옥</td>
+                        <td>홍○표</td>
+                        <td><span class="badge badge-obituary-y">Y</span></td>
+                        <td><a href="#" class="btn btn-pic-view">보기</a></td>
+                    </tr>
+                    <tr>
+                        <td class="font-24">2024005373 <p class="num-certificate font-16">(000920512)</p>
+                        </td>
+                        <td class="font-24">
+                            <p class="font-16">2024</p> 05-17
+                        </td>
+                        <td> <span class="badge badge-received">접수</span></td>
+                        <td><span class="badge badge-complete">완료</span></td>
+                        <td class="ellipsis w-280  text-left">
+                            연세대학교 신총병원장례식장
+                        </td>
+                        <td class="text-left text-blue">자율선택법인III</td>
+                        <td class="ellipsis w-250">대○협동 대○협동대○협동대○협동</td>
+                        <td>김동석</td>
+                        <td>김연옥</td>
+                        <td>홍○표</td>
+                        <td><span class="badge badge-obituary-n">N</span></td>
+                        <td><a href="#" class="btn btn-pic-view">보기</a></td>
+                    </tr>
+                    <tr>
+                        <td class="font-24">2024005373 <p class="num-certificate font-16">(000920512)</p>
+                        </td>
+                        <td class="font-24">
+                            <p class="font-16">2024</p> 05-17
+                        </td>
+                        <td> <span class="badge badge-progress ">진행</span></td>
+                        <td> <span class="badge badge-pending">대기</span></td>
+                        <td class="ellipsis w-280  text-left">
+                            연세대학교 신총병원장례식장
+                        </td>
+                        <td class="text-left text-blue">자율선택법인III</td>
+                        <td class="ellipsis w-250">대○협동 대○협동대○협동대○협동</td>
+                        <td>김동석</td>
+                        <td>김연옥</td>
+                        <td>홍○표</td>
+                        <td><span class="badge badge-obituary-y">Y</span></td>
+                        <td><a href="#" class="btn btn-pic-view">보기</a></td>
+                    </tr>
+                    <tr>
+                        <td class="font-24">2024005373 <p class="num-certificate font-16">(000920512)</p>
+                        </td>
+                        <td class="font-24">
+                            <p class="font-16">2024</p> 05-17
+                        </td>
+                        <td> <span class="badge badge-received">접수</span></td>
+                        <td><span class="badge badge-complete">완료</span></td>
+                        <td class="ellipsis w-280  text-left">
+                            연세대학교 신총병원장례식장
+                        </td>
+                        <td class="text-left text-blue">자율선택법인III</td>
+                        <td class="ellipsis w-250">대○협동 대○협동대○협동대○협동</td>
+                        <td>김동석</td>
+                        <td>김연옥</td>
+                        <td>홍○표</td>
+                        <td><span class="badge badge-obituary-n">N</span></td>
+                        <td><a href="#" class="btn btn-pic-view">보기</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+
+
+
+    </main>
+
+</body>
+
+</html>
