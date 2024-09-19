@@ -139,6 +139,21 @@ header .header-menu > a.logout::before {
     top: 1px;
 }
 main {
+    
+}
+
+/****** login 화면 *****/
+body:has(#login) {
+    padding-top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main#login {
+    display: flex;
+    flex-direction: column;
+    width: 540px;
+    height: 100%;
    
 }
 
@@ -177,6 +192,45 @@ main {
     width: 206px;
     text-align: center;
 }
+
+/* 투입 관리 리스트 */
+section#resource-management {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 24px;
+    border-top: 1px solid #999;
+    margin-top: -2px;
+}
+section#resource-management > div {
+    position: relative;
+}
+section#resource-management > .data-resource {
+    height: calc(100svh - 184px);
+    overflow-y: auto;
+}
+
+#resource-management  .data-resource p.no-data-message {
+    height: calc(100svh - 219px);
+}
+
+#resource-management  .data-map p.no-data-message {
+    height: calc(100svh - 184px);
+}
+
+
+/* 철수 관리 리스트 */
+section#closure-management {
+    border-top: 1px solid #999;
+    margin-top: -2px;
+}
+section#closure-management > div {
+    position: relative;
+    height: calc(100svh - 184px);
+    overflow-y: auto;
+}
+section#closure-management > div p.no-data-message {
+    height: calc(100svh - 219px);
+}
 /***** display ******/
 .block {
 	display: block;
@@ -195,6 +249,78 @@ main {
 }
 .hidden {
 	display: none;
+}
+
+/***** Grid Template Rows *****/
+.grid-rows-1 {
+    grid-template-rows: repeat(1, minmax(0, 1fr));
+}
+.grid-rows-2 {
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+}
+.grid-rows-3 {
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+}
+.grid-rows-4 {
+    grid-template-rows: repeat(4, minmax(0, 1fr));
+}
+.grid-rows-5 {
+    grid-template-rows: repeat(5, minmax(0, 1fr));
+}
+.grid-rows-6 {
+    grid-template-rows: repeat(6, minmax(0, 1fr));
+}
+.grid-rows-7 {
+    grid-template-rows: repeat(7, minmax(0, 1fr));
+}
+.grid-rows-8 {
+    grid-template-rows: repeat(8, minmax(0, 1fr));
+}
+
+/* Grid Template Columns */
+.grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+.grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.grid-cols-5 {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+.grid-cols-6 {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+.grid-cols-7 {
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+.grid-cols-8 {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+}
+
+/* grid gap */
+.gap-0 {
+    gap: 0px;
+}
+.gap-x-0 {
+    column-gap: 0px;
+}
+.gap-y-0 {
+    row-gap: 0px;
+}
+.gap-24 {
+    gap: 24px;
+}
+.gap-x-24 {
+    column-gap: 24px;
+}
+.gap-y-24{
+    row-gap: 24px;
 }
 
 /***** Visibility *****/
@@ -301,6 +427,14 @@ main {
    }
    
 /* form */
+label.form-label{
+    font-size: 24px;
+    color: #333;
+}
+label.form-label + .form-control {
+    margin-top: 8px;
+}
+
 .form-control {
     display: block;
     width: 100%;
@@ -411,6 +545,15 @@ button {
     height: 48px;
     border-radius: 8px;
 }
+.btn.btn-login {
+    width: 100%;
+    height: 100px;
+    background-color: #213f9a;
+    box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.1);
+    color:#fff;
+    font-size: 32px;
+}
+
 
 .btn-input-clear {
     position:absolute;
@@ -426,6 +569,7 @@ button {
     position: relative;
     width: 160px;
     height: 100%;
+    min-height: 112px;
     font-size: 32px;
     line-height: 35px;
     display: flex;
@@ -467,6 +611,16 @@ button {
     color: #333;
 
 }
+
+/* list 의 버튼 - 철수 등록,*/
+.btn-blue-line {
+    width: 146px;
+    border-radius: 100px;
+    border: solid 2px #006dd2;
+    background-color: #0085ff;
+    color:#fff;
+}
+
 
 /***** badge *****/
 .badge {
@@ -544,10 +698,7 @@ button {
 .filter-table tr td:last-child {
     padding-right: 0;
 }
-.filter-group {
-    display: flex;
-    align-items: stretch;
-}
+
 
 .filter-group > .filter-button {
     position: relative;
@@ -565,7 +716,13 @@ button {
 
 /* 리스트 table */
 .list-table {
-
+    border-collapse: separate;
+    border-spacing: 0;
+}
+.list-table thead {
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 .list-table th {
     position: relative;
@@ -573,8 +730,7 @@ button {
     text-align: center;
     font-size: 16px;
     border-bottom: solid 1px #999;
-    border-top: solid 1px #999;
-    background-color: rgba(221, 221, 221, 0.8);
+    background-color: rgba(221, 221, 221);
     color:#333333;
    
 }
@@ -611,7 +767,13 @@ button {
     vertical-align: middle;
     
 }
-.list-table tbody tr td .no-data-message {
+.list-table.list-table-small tbody tr td{
+    padding: 16px 8px;
+    font-size: 24px;
+}
+
+/* 조회 전 */
+p.no-data-message {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -642,9 +804,7 @@ button {
 }
 
 /*  관리 view table */
-.view-table {
 
-}
 .view-table th,
 .view-table td {
     position: relative;
@@ -694,6 +854,52 @@ button {
 .view-table tr:first-child td::before {
     left: 0px;
     right: 16px;
+}
+
+.view-table-small th,
+.view-table-small td {
+    position: relative;
+    padding: 24px 16px;
+    font-size: 24px;
+    text-align: left;
+}
+.view-table-small th {
+    color: #666666;
+}
+.view-table-small td {
+    color: #000;
+}
+.view-table-small td::after {
+    display: block;
+    content: '';
+    position: absolute;
+    right: 0px;
+    top: 8px;
+    bottom: 8px;
+    width: 1px;
+    background-color: #d9d9d9;
+}
+.view-table-small tr:last-child th::after {
+    display: block;
+    content: '';
+    position: absolute;
+    left: 16px;
+    right: 0px;
+    top: 0px;
+    width: auto;
+    height: 1px;
+    background-color: #d9d9d9;
+}
+.view-table-small tr:last-child td::after {
+    display: block;
+    content: '';
+    position: absolute;
+    left: 0px;
+    right: 16px;
+    top: 0px;
+    width: auto;
+    height: 1px;
+    background-color: #d9d9d9;
 }
 /**** checkbox ****/
 
@@ -758,6 +964,40 @@ button {
     font-weight: 800;
 }
 
+
+/* 일반 checkbox*/
+.checkbox-normal input[type="checkbox"] {
+    display: none;
+  }
+  
+.checkbox-normal {
+    cursor: pointer;
+    user-select: none;
+}
+.checkbox-normal label{
+    display: flex;
+    align-items: center;
+}
+.checkbox-normal label::before {
+    content: '';
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    background-image: url('../images/bg_checkbox.png');
+    transition:all 0.3s ease;
+}
+
+/* 체크박스가 체크된 경우 */
+.checkbox-normal input[type="checkbox"]:checked + label::before {
+    background-image: url('../images/bg_checkbox_checked.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+
 /***** 토글 제목 *****/
 .toggle-title {
     display: flex;
@@ -789,6 +1029,12 @@ button {
 }
 .bg-blue {
     background-color: #213F9A  !important;
+}
+.bg-blue-light {
+    background-color: #0085ff  !important;
+}
+.bg-white {
+    background-color: #fff !important;
 }
 .bg-777 {
     background-color: #777 !important;
@@ -934,6 +1180,18 @@ button {
 .mt-0 {
     margin-top: 0px !important;
 }
+.mt-32 {
+    margin-top: 32px !important;
+}
+.mt-40 {
+    margin-top: 40px !important;
+}
+.mt-60 {
+    margin-top: 60px !important;
+}
+.mt-100 {
+    margin-top: 100px !important;
+}
 .mr-0 {
     margin-right: 0px !important;
 }
@@ -962,4 +1220,32 @@ button {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
+}
+
+/* position */
+.position-static {
+    position: static !important;
+}
+.position-relative {
+    position: relative !important;
+}
+.position-absolute {
+    position: absolute !important;
+}
+
+/* border */
+.border {
+    border: 1px solid #999 !important;
+}
+
+
+/* line height */
+.lh-base {
+    line-height: 1.4 !important;
+}
+
+
+/* overflow */
+.overflow-auto {
+    overflow: auto !important;
 }

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1920, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <title>의전진행관리</title>
+    <link rel="stylesheet" href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-neo.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- 상단 고정 영역 -->
+    <header>
+        <div class="header-logo">
+            <img src="./images/header-logo.png" alt="예다함">
+            의전진행관리
+        </div>
+        <div class="header-title">상품정보</div>
+        <div class="header-menu">
+            <nav>
+                <a href="#">관리메인</a>
+                <a href="#">업무관리</a>
+                <a href="#" class="current">투입관리</a>
+                <a href="#">철수관리</a>
+            </nav>
+            <a href="#" class="logout">로그아웃</a>
+        </div>
+    </header>
+
+
+    <main>
+        <section class="filter-group">
+            <div class="filter-tables">
+                <table class=" filter-table">
+                    <colgroup>
+                        <col style="width:108px;" />
+                        <col />
+                        <col style="width:108px;" />
+                        <col style="width:360px;" />
+                        <col style="width:108px;" />
+                        <col style="width:360px;" />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>조회기간</th>
+                            <td>
+                                <div class="filter-flex">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" value="2022-12-24" placeholder="">
+                                        <span class="btn-calendar"><img src="./images/icon_calendar.png" alt=""></span>
+                                    </div>
+                                    <span>~</span>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" value="2022-12-24" placeholder="">
+                                        <span class="btn-calendar"><img src="./images/icon_calendar.png" alt=""></span>
+                                    </div>
+                                </div>
+                            </td>
+
+                            <th>의전번호</th>
+                            <td>
+                                <div class="input-group ">
+                                    <input type="text" class="form-control" placeholder="입력">
+                                    <button type="button" class="btn btn-input-clear">초기화</button>
+                                </div>
+                            </td>
+                            <th>담당팀장</th>
+                            <td>
+                                <div class="input-group ">
+                                    <input type="text" class="form-control" placeholder="입력">
+                                    <button type="button" class="btn btn-input-clear">초기화</button>
+                                </div>
+                            </td>
+
+                        </tr>
+                    </tbody>
+                </table>
+                <table class=" filter-table">
+                    <colgroup>
+                        <col style="width:108px;" />
+                        <col />
+                        <col style="width:58px;" />
+                        <col />
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>장례식장</th>
+                            <td>
+                                <div class="input-group ">
+                                    <input type="text" class="form-control" placeholder="입력">
+                                    <button type="button" class="btn btn-input-clear">초기화</button>
+                                </div>
+                            </td>
+                            <th>지부</th>
+                            <td>
+                                <div class="filter-flex">
+                                    <label class="radio-button" for="a1">
+                                        <input type="radio" name="state" id="a1" checked="checked">
+                                        <span>전체</span>
+                                    </label>
+                                    <label class="radio-button" for="a2">
+                                        <input type="radio" name="state" id="a2">
+                                        <span>서울</span>
+                                    </label>
+                                    <label class="radio-button" for="a3">
+                                        <input type="radio" name="state" id="a3">
+                                        <span>수원</span>
+                                    </label>
+                                    <label class="radio-button" for="a4">
+                                        <input type="radio" name="state" id="a4">
+                                        <span>인천</span>
+                                    </label>
+                                    <label class="radio-button" for="a5">
+                                        <input type="radio" name="state" id="a5">
+                                        <span>대전</span>
+                                    </label>
+                                    <label class="radio-button" for="a6">
+                                        <input type="radio" name="state" id="a6">
+                                        <span>대구</span>
+                                    </label>
+                                    <label class="radio-button" for="a7">
+                                        <input type="radio" name="state" id="a7">
+                                        <span>부산</span>
+                                    </label>
+                                    <label class="radio-button" for="a8">
+                                        <input type="radio" name="state" id="a8">
+                                        <span>광주</span>
+                                    </label>
+                                    <label class="radio-button" for="a9">
+                                        <input type="radio" name="state" id="a9">
+                                        <span>원주</span>
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="filter-button"><button type="button" class="btn btn-filter">조회하기 <span>(999)</span></button>
+            </div>
+        </section><!-- // class="filter-table-group" -->
+
+        <section id="resource-management">
+
+            <div class="data-resource">
+                <table class="list-table table-striped">
+                    <thead>
+                        <tr>
+                            <th>의전번호</th>
+                            <th>진행팀장</th>
+                            <th>장례식장</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <td colspan="3" class="p-0">
+                            <p class="no-data-message  bg-white">조회해주시기 바랍니다.</p>
+                        </td>
+                    </tbody>
+                </table>
+            </div>
+            <div class="data-resource">
+                <table class="list-table table-striped">
+                    <thead>
+                        <tr>
+                            <th>담당팀장</th>
+                            <th>의전일차</th>
+                            <th>투입시간</th>
+                            <th>철수시간</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <td colspan="4" class="p-0">
+                            <p class="no-data-message  bg-white">조회해주시기 바랍니다.</p>
+                        </td>
+                    </tbody>
+                </table>
+            </div>
+            <div class="data-map">
+                <p class="no-data-message data-map bg-white">지도 정보가 존재하지 않습니다.</p>
+            </div>
+        </section>
+
+
+
+
+
+    </main>
+
+</body>
+
+</html>
