@@ -7,6 +7,8 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="format-detection" content="telephone=no">
     <title>의전진행관리</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./js/tailwind-config.js"></script>
     <link rel="stylesheet" href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-neo.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -18,8 +20,9 @@
             <img src="./images/header-logo.png" alt="예다함">
             의전진행관리
         </div>
-        <div class="header-title">상품정보</div>
+        <!-- <div class="header-title">상품정보</div> -->
         <div class="header-menu">
+            <a href="#" class="home">조회</a>
             <nav>
                 <a href="#" class="current">관리메인</a>
                 <a href="#">업무관리</a>
@@ -34,14 +37,14 @@
     <main>
         <section class="filter-group">
             <div class="filter-tables">
-                <table class=" filter-table">
+                <table class="filter-table">
                     <colgroup>
-                        <col style="width:108px;" />
+                        <col class="w-[108px]" />
                         <col />
-                        <col style="width:108px;" />
+                        <col class="w-[108px]" />
                         <col />
-                        <col style="width:108px;" />
-                        <col style="width:360px;" />
+                        <col class="w-[108px]" />
+                        <col class="w-[360px]" />
                     </colgroup>
                     <tbody>
                         <tr>
@@ -104,13 +107,13 @@
                 </table>
                 <table class=" filter-table">
                     <colgroup>
-                        <col style="width:108px;" />
+                        <col class="w-[108px]" />
                         <col />
-                        <col style="width:108px;" />
+                        <col class="w-[108px]" />
                         <col />
-                        <col style="width:108px;" />
+                        <col class="w-[108px]" />
                         <col />
-                        <col style="width:108px;" />
+                        <col class="w-[108px]" />
                         <col />
                     </colgroup>
                     <tbody>
@@ -241,7 +244,8 @@
             </div>
             <div class="filter-button"><button type="button" class="btn btn-filter">조회하기 <span>(999)</span></button>
             </div>
-        </section><!-- // class="filter-table-group" -->
+        </section>
+        <!-- // class="filter-table-group" -->
 
 
         <div>
@@ -265,18 +269,18 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="font-24">2024005373 <p class="num-certificate font-16">(000920512)</p>
+                        <td class="!text-2xl">2024005373 <p class="num-certificate text-base">(000920512)</p>
                         </td>
-                        <td class="font-24">
-                            <p class="font-16">2024</p> 05-17
+                        <td class="!text-2xl">
+                            <p class="text-base">2024</p> 05-17
                         </td>
                         <td> <span class="badge badge-progress ">진행</span></td>
                         <td> <span class="badge badge-pending">대기</span></td>
-                        <td class="ellipsis w-280  text-left">
-                            연세대학교 신총병원장례식장
+                        <td class="truncate max-w-[280px]  !text-left">
+                            연세대학교
                         </td>
                         <td class="text-left text-blue">자율선택법인III</td>
-                        <td class="ellipsis w-250">대○협동 대○협동대○협동대○협동</td>
+                        <td class="truncate max-w-[250px]">대○협동</td>
                         <td>김동석</td>
                         <td>김연옥</td>
                         <td>홍○표</td>
@@ -284,18 +288,18 @@
                         <td><a href="#" class="btn btn-pic-view">보기</a></td>
                     </tr>
                     <tr>
-                        <td class="font-24">2024005373 <p class="num-certificate font-16">(000920512)</p>
+                        <td class="!text-2xl">2024005373 <p class="num-certificate text-base">(000920512)</p>
                         </td>
-                        <td class="font-24">
-                            <p class="font-16">2024</p> 05-17
+                        <td class="!text-2xl">
+                            <p class="text-base">2024</p> 05-17
                         </td>
                         <td> <span class="badge badge-received">접수</span></td>
                         <td><span class="badge badge-complete">완료</span></td>
-                        <td class="ellipsis w-280  text-left">
+                        <td class="truncate max-w-[280px]  !text-left">
                             연세대학교 신총병원장례식장
                         </td>
                         <td class="text-left text-blue">자율선택법인III</td>
-                        <td class="ellipsis w-250">대○협동 대○협동대○협동대○협동</td>
+                        <td class="truncate max-w-[250px]">대○협동 대○협동대○협동대○협동</td>
                         <td>김동석</td>
                         <td>김연옥</td>
                         <td>홍○표</td>
@@ -303,18 +307,18 @@
                         <td><a href="#" class="btn btn-pic-view">보기</a></td>
                     </tr>
                     <tr>
-                        <td class="font-24">2024005373 <p class="num-certificate font-16">(000920512)</p>
+                        <td class="!text-2xl">2024005373 <p class="num-certificate text-base">(000920512)</p>
                         </td>
-                        <td class="font-24">
-                            <p class="font-16">2024</p> 05-17
+                        <td class="!text-2xl">
+                            <p class="text-base">2024</p> 05-17
                         </td>
                         <td> <span class="badge badge-progress ">진행</span></td>
                         <td> <span class="badge badge-pending">대기</span></td>
-                        <td class="ellipsis w-280  text-left">
+                        <td class="truncate max-w-[280px]  !text-left">
                             연세대학교 신총병원장례식장
                         </td>
                         <td class="text-left text-blue">자율선택법인III</td>
-                        <td class="ellipsis w-250">대○협동 대○협동대○협동대○협동</td>
+                        <td class="truncate max-w-[250px]">대○협동 대○협동대○협동대○협동</td>
                         <td>김동석</td>
                         <td>김연옥</td>
                         <td>홍○표</td>
@@ -322,18 +326,18 @@
                         <td><a href="#" class="btn btn-pic-view">보기</a></td>
                     </tr>
                     <tr>
-                        <td class="font-24">2024005373 <p class="num-certificate font-16">(000920512)</p>
+                        <td class="!text-2xl">2024005373 <p class="num-certificate text-base">(000920512)</p>
                         </td>
-                        <td class="font-24">
-                            <p class="font-16">2024</p> 05-17
+                        <td class="!text-2xl">
+                            <p class="text-base">2024</p> 05-17
                         </td>
                         <td> <span class="badge badge-received">접수</span></td>
                         <td><span class="badge badge-complete">완료</span></td>
-                        <td class="ellipsis w-280  text-left">
+                        <td class="truncate max-w-[280px]  !text-left">
                             연세대학교 신총병원장례식장
                         </td>
                         <td class="text-left text-blue">자율선택법인III</td>
-                        <td class="ellipsis w-250">대○협동 대○협동대○협동대○협동</td>
+                        <td class="truncate max-w-[250px]">대○협동 대○협동대○협동대○협동</td>
                         <td>김동석</td>
                         <td>김연옥</td>
                         <td>홍○표</td>
@@ -341,18 +345,18 @@
                         <td><a href="#" class="btn btn-pic-view">보기</a></td>
                     </tr>
                     <tr>
-                        <td class="font-24">2024005373 <p class="num-certificate font-16">(000920512)</p>
+                        <td class="!text-2xl">2024005373 <p class="num-certificate text-base">(000920512)</p>
                         </td>
-                        <td class="font-24">
-                            <p class="font-16">2024</p> 05-17
+                        <td class="!text-2xl">
+                            <p class="text-base">2024</p> 05-17
                         </td>
                         <td> <span class="badge badge-progress ">진행</span></td>
                         <td> <span class="badge badge-pending">대기</span></td>
-                        <td class="ellipsis w-280  text-left">
+                        <td class="truncate max-w-[280px]  !text-left">
                             연세대학교 신총병원장례식장
                         </td>
                         <td class="text-left text-blue">자율선택법인III</td>
-                        <td class="ellipsis w-250">대○협동 대○협동대○협동대○협동</td>
+                        <td class="truncate max-w-[250px]">대○협동 대○협동대○협동대○협동</td>
                         <td>김동석</td>
                         <td>김연옥</td>
                         <td>홍○표</td>
@@ -360,18 +364,18 @@
                         <td><a href="#" class="btn btn-pic-view">보기</a></td>
                     </tr>
                     <tr>
-                        <td class="font-24">2024005373 <p class="num-certificate font-16">(000920512)</p>
+                        <td class="!text-2xl">2024005373 <p class="num-certificate text-base">(000920512)</p>
                         </td>
-                        <td class="font-24">
-                            <p class="font-16">2024</p> 05-17
+                        <td class="!text-2xl">
+                            <p class="text-base">2024</p> 05-17
                         </td>
                         <td> <span class="badge badge-received">접수</span></td>
                         <td><span class="badge badge-complete">완료</span></td>
-                        <td class="ellipsis w-280  text-left">
+                        <td class="truncate max-w-[280px]  !text-left">
                             연세대학교 신총병원장례식장
                         </td>
                         <td class="text-left text-blue">자율선택법인III</td>
-                        <td class="ellipsis w-250">대○협동 대○협동대○협동대○협동</td>
+                        <td class="truncate max-w-[250px]">대○협동 대○협동대○협동대○협동</td>
                         <td>김동석</td>
                         <td>김연옥</td>
                         <td>홍○표</td>
@@ -379,18 +383,18 @@
                         <td><a href="#" class="btn btn-pic-view">보기</a></td>
                     </tr>
                     <tr>
-                        <td class="font-24">2024005373 <p class="num-certificate font-16">(000920512)</p>
+                        <td class="!text-2xl">2024005373 <p class="num-certificate text-base">(000920512)</p>
                         </td>
-                        <td class="font-24">
-                            <p class="font-16">2024</p> 05-17
+                        <td class="!text-2xl">
+                            <p class="text-base">2024</p> 05-17
                         </td>
                         <td> <span class="badge badge-progress ">진행</span></td>
                         <td> <span class="badge badge-pending">대기</span></td>
-                        <td class="ellipsis w-280  text-left">
+                        <td class="truncate max-w-[280px]  !text-left">
                             연세대학교 신총병원장례식장
                         </td>
                         <td class="text-left text-blue">자율선택법인III</td>
-                        <td class="ellipsis w-250">대○협동 대○협동대○협동대○협동</td>
+                        <td class="truncate max-w-[250px]">대○협동 대○협동대○협동대○협동</td>
                         <td>김동석</td>
                         <td>김연옥</td>
                         <td>홍○표</td>
@@ -398,18 +402,18 @@
                         <td><a href="#" class="btn btn-pic-view">보기</a></td>
                     </tr>
                     <tr>
-                        <td class="font-24">2024005373 <p class="num-certificate font-16">(000920512)</p>
+                        <td class="!text-2xl">2024005373 <p class="num-certificate text-base">(000920512)</p>
                         </td>
-                        <td class="font-24">
-                            <p class="font-16">2024</p> 05-17
+                        <td class="!text-2xl">
+                            <p class="text-base">2024</p> 05-17
                         </td>
                         <td> <span class="badge badge-received">접수</span></td>
                         <td><span class="badge badge-complete">완료</span></td>
-                        <td class="ellipsis w-280  text-left">
+                        <td class="truncate max-w-[280px]  !text-left">
                             연세대학교 신총병원장례식장
                         </td>
                         <td class="text-left text-blue">자율선택법인III</td>
-                        <td class="ellipsis w-250">대○협동 대○협동대○협동대○협동</td>
+                        <td class="truncate max-w-[250px]">대○협동 대○협동대○협동대○협동</td>
                         <td>김동석</td>
                         <td>김연옥</td>
                         <td>홍○표</td>
@@ -417,18 +421,18 @@
                         <td><a href="#" class="btn btn-pic-view">보기</a></td>
                     </tr>
                     <tr>
-                        <td class="font-24">2024005373 <p class="num-certificate font-16">(000920512)</p>
+                        <td class="!text-2xl">2024005373 <p class="num-certificate text-base">(000920512)</p>
                         </td>
-                        <td class="font-24">
-                            <p class="font-16">2024</p> 05-17
+                        <td class="!text-2xl">
+                            <p class="text-base">2024</p> 05-17
                         </td>
                         <td> <span class="badge badge-progress ">진행</span></td>
                         <td> <span class="badge badge-pending">대기</span></td>
-                        <td class="ellipsis w-280  text-left">
+                        <td class="truncate max-w-[280px]  !text-left">
                             연세대학교 신총병원장례식장
                         </td>
                         <td class="text-left text-blue">자율선택법인III</td>
-                        <td class="ellipsis w-250">대○협동 대○협동대○협동대○협동</td>
+                        <td class="truncate max-w-[250px]">대○협동 대○협동대○협동대○협동</td>
                         <td>김동석</td>
                         <td>김연옥</td>
                         <td>홍○표</td>
@@ -436,18 +440,18 @@
                         <td><a href="#" class="btn btn-pic-view">보기</a></td>
                     </tr>
                     <tr>
-                        <td class="font-24">2024005373 <p class="num-certificate font-16">(000920512)</p>
+                        <td class="!text-2xl">2024005373 <p class="num-certificate text-base">(000920512)</p>
                         </td>
-                        <td class="font-24">
-                            <p class="font-16">2024</p> 05-17
+                        <td class="!text-2xl">
+                            <p class="text-base">2024</p> 05-17
                         </td>
                         <td> <span class="badge badge-received">접수</span></td>
                         <td><span class="badge badge-complete">완료</span></td>
-                        <td class="ellipsis w-280  text-left">
+                        <td class="truncate max-w-[280px]  !text-left">
                             연세대학교 신총병원장례식장
                         </td>
                         <td class="text-left text-blue">자율선택법인III</td>
-                        <td class="ellipsis w-250">대○협동 대○협동대○협동대○협동</td>
+                        <td class="truncate max-w-[250px]">대○협동 대○협동대○협동대○협동</td>
                         <td>김동석</td>
                         <td>김연옥</td>
                         <td>홍○표</td>
@@ -455,18 +459,18 @@
                         <td><a href="#" class="btn btn-pic-view">보기</a></td>
                     </tr>
                     <tr>
-                        <td class="font-24">2024005373 <p class="num-certificate font-16">(000920512)</p>
+                        <td class="!text-2xl">2024005373 <p class="num-certificate text-base">(000920512)</p>
                         </td>
-                        <td class="font-24">
-                            <p class="font-16">2024</p> 05-17
+                        <td class="!text-2xl">
+                            <p class="text-base">2024</p> 05-17
                         </td>
                         <td> <span class="badge badge-progress ">진행</span></td>
                         <td> <span class="badge badge-pending">대기</span></td>
-                        <td class="ellipsis w-280  text-left">
+                        <td class="truncate max-w-[280px]  !text-left">
                             연세대학교 신총병원장례식장
                         </td>
                         <td class="text-left text-blue">자율선택법인III</td>
-                        <td class="ellipsis w-250">대○협동 대○협동대○협동대○협동</td>
+                        <td class="truncate max-w-[250px]">대○협동 대○협동대○협동대○협동</td>
                         <td>김동석</td>
                         <td>김연옥</td>
                         <td>홍○표</td>
@@ -474,18 +478,18 @@
                         <td><a href="#" class="btn btn-pic-view">보기</a></td>
                     </tr>
                     <tr>
-                        <td class="font-24">2024005373 <p class="num-certificate font-16">(000920512)</p>
+                        <td class="!text-2xl">2024005373 <p class="num-certificate text-base">(000920512)</p>
                         </td>
-                        <td class="font-24">
-                            <p class="font-16">2024</p> 05-17
+                        <td class="!text-2xl">
+                            <p class="text-base">2024</p> 05-17
                         </td>
                         <td> <span class="badge badge-received">접수</span></td>
                         <td><span class="badge badge-complete">완료</span></td>
-                        <td class="ellipsis w-280  text-left">
+                        <td class="truncate max-w-[280px]  !text-left">
                             연세대학교 신총병원장례식장
                         </td>
                         <td class="text-left text-blue">자율선택법인III</td>
-                        <td class="ellipsis w-250">대○협동 대○협동대○협동대○협동</td>
+                        <td class="truncate max-w-[250px]">대○협동 대○협동대○협동대○협동</td>
                         <td>김동석</td>
                         <td>김연옥</td>
                         <td>홍○표</td>
@@ -493,18 +497,18 @@
                         <td><a href="#" class="btn btn-pic-view">보기</a></td>
                     </tr>
                     <tr>
-                        <td class="font-24">2024005373 <p class="num-certificate font-16">(000920512)</p>
+                        <td class="!text-2xl">2024005373 <p class="num-certificate text-base">(000920512)</p>
                         </td>
-                        <td class="font-24">
-                            <p class="font-16">2024</p> 05-17
+                        <td class="!text-2xl">
+                            <p class="text-base">2024</p> 05-17
                         </td>
                         <td> <span class="badge badge-progress ">진행</span></td>
                         <td> <span class="badge badge-pending">대기</span></td>
-                        <td class="ellipsis w-280  text-left">
+                        <td class="truncate max-w-[280px]  !text-left">
                             연세대학교 신총병원장례식장
                         </td>
                         <td class="text-left text-blue">자율선택법인III</td>
-                        <td class="ellipsis w-250">대○협동 대○협동대○협동대○협동</td>
+                        <td class="truncate max-w-[250px]">대○협동 대○협동대○협동대○협동</td>
                         <td>김동석</td>
                         <td>김연옥</td>
                         <td>홍○표</td>
@@ -512,18 +516,18 @@
                         <td><a href="#" class="btn btn-pic-view">보기</a></td>
                     </tr>
                     <tr>
-                        <td class="font-24">2024005373 <p class="num-certificate font-16">(000920512)</p>
+                        <td class="!text-2xl">2024005373 <p class="num-certificate text-base">(000920512)</p>
                         </td>
-                        <td class="font-24">
-                            <p class="font-16">2024</p> 05-17
+                        <td class="!text-2xl">
+                            <p class="text-base">2024</p> 05-17
                         </td>
                         <td> <span class="badge badge-received">접수</span></td>
                         <td><span class="badge badge-complete">완료</span></td>
-                        <td class="ellipsis w-280  text-left">
+                        <td class="truncate max-w-[280px]  !text-left">
                             연세대학교 신총병원장례식장
                         </td>
                         <td class="text-left text-blue">자율선택법인III</td>
-                        <td class="ellipsis w-250">대○협동 대○협동대○협동대○협동</td>
+                        <td class="truncate max-w-[250px]">대○협동 대○협동대○협동대○협동</td>
                         <td>김동석</td>
                         <td>김연옥</td>
                         <td>홍○표</td>

@@ -7,6 +7,8 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="format-detection" content="telephone=no">
     <title>의전진행관리</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./js/tailwind-config.js"></script>
     <link rel="stylesheet" href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-neo.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -18,8 +20,9 @@
             <img src="./images/header-logo.png" alt="예다함">
             의전진행관리
         </div>
-        <div class="header-title">상품정보</div>
+        <!-- <div class="header-title">상품정보</div> -->
         <div class="header-menu">
+            <a href="#" class="home">조회</a>
             <nav>
                 <a href="#">관리메인</a>
                 <a href="#">업무관리</a>
@@ -36,12 +39,12 @@
             <div class="filter-tables">
                 <table class=" filter-table">
                     <colgroup>
-                        <col style="width:108px;" />
+                        <col class="w-[108px]" />
                         <col />
-                        <col style="width:108px;" />
-                        <col style="width:360px;" />
-                        <col style="width:108px;" />
-                        <col style="width:360px;" />
+                        <col class="w-[108px]" />
+                        <col class="w-[360px]" />
+                        <col class="w-[108px]" />
+                        <col class="w-[360px]" />
                     </colgroup>
                     <tbody>
                         <tr>
@@ -80,9 +83,9 @@
                 </table>
                 <table class=" filter-table">
                     <colgroup>
-                        <col style="width:108px;" />
+                        <col class="w-[108px]" />
                         <col />
-                        <col style="width:58px;" />
+                        <col class="w-[58px]" />
                         <col />
                     </colgroup>
                     <tbody>
@@ -156,8 +159,8 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <td colspan="3" class="p-0">
-                            <p class="no-data-message  bg-white">조회해주시기 바랍니다.</p>
+                        <td colspan="3" class="!p-0">
+                            <p class="no-data-message  !bg-white">조회해주시기 바랍니다.</p>
                         </td>
                     </tbody>
                 </table>
@@ -173,14 +176,14 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <td colspan="4" class="p-0">
-                            <p class="no-data-message  bg-white">조회해주시기 바랍니다.</p>
+                        <td colspan="4" class="!p-0">
+                            <p class="no-data-message  !bg-white">조회해주시기 바랍니다.</p>
                         </td>
                     </tbody>
                 </table>
             </div>
             <div class="data-map">
-                <p class="no-data-message data-map bg-white">지도 정보가 존재하지 않습니다.</p>
+                <p class="no-data-message data-map !bg-white">지도 정보가 존재하지 않습니다.</p>
             </div>
         </section>
 

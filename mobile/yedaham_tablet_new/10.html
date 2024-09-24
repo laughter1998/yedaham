@@ -7,6 +7,8 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="format-detection" content="telephone=no">
     <title>의전진행관리</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./js/tailwind-config.js"></script>
     <link rel="stylesheet" href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-neo.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -18,8 +20,9 @@
             <img src="./images/header-logo.png" alt="예다함">
             의전진행관리
         </div>
-        <div class="header-title">상품정보</div>
+        <!-- <div class="header-title">상품정보</div> -->
         <div class="header-menu">
+            <a href="#" class="home">조회</a>
             <nav>
                 <a href="#" class="current">관리메인</a>
                 <a href="#">업무관리</a>
@@ -37,17 +40,17 @@
                 <tbody>
                     <tr>
                         <th>의전(증서)번호</th>
-                        <td class="text-right">2022009381</td>
+                        <td class="!text-right">2022009381</td>
                         <th>장례식장</th>
-                        <td class="text-center">이대목동병원장례식장</td>
+                        <td class="!text-center">이대목동병원장례식장</td>
                         <th>계약자</th>
                         <td>대○협동복지조합</td>
                     </tr>
                     <tr>
                         <th>접수일</th>
-                        <td class="text-right">2022-08-31</td>
+                        <td class="!text-right">2022-08-31</td>
                         <th>상품명</th>
-                        <td class="text-center text-blue">자율선택법인III</td>
+                        <td class="!text-center !text-blue">자율선택법인III</td>
                         <th>고인명</th>
                         <td>류광풍</td>
                     </tr>
@@ -76,19 +79,19 @@
 
         <section class="funeral-received">
             <div id="toggleButton" class="toggle-title show">
-                <!-- 클릭하면 show 를 추가하거나 제거하면 됩니다. -->
+                <!-- show 를 추가하거나 제거하면 화살표 방향이 바뀝니다.. -->
                 의전접수
                 <span class="arrow"></span>
             </div>
-            <div id="toggleContent" class="border">
-                <table class="table view-table-small">
+            <div id="toggleContent">
+                <table class="view-table-small">
                     <colgroup>
-                        <col style="width:200px">
-                        <col style="width:420px">
-                        <col style="width:200px">
-                        <col style="width:420px">
-                        <col style="width:200px">
-                        <col style="width:auto">
+                        <col class="w-[200px]">
+                        <col class="w-[420px]">
+                        <col class="w-[200px]">
+                        <col class="w-[420px]">
+                        <col class="w-[200px]">
+                        <col>
                     </colgroup>
                     <tbody>
                         <tr>
@@ -107,7 +110,7 @@
                         </tr>
                         <tr>
                             <th>접수메모</th>
-                            <td class="lh-base" colspan="5">홍두깨The-K예다함(주)는 사업자 현금영수증 의무발행 제도가 시행됨에 따라 회원님께서 요청하신 등록번호로
+                            <td colspan="5">홍두깨The-K예다함(주)는 사업자 현금영수증 의무발행 제도가 시행됨에 따라 회원님께서 요청하신 등록번호로
                                 현금영수증을 발행해드리며,
                                 발급을 원하지 않으시면
                                 국세청 지정 코드(T. 010-000-1234)로 자진발급 신고됩니다.
@@ -116,7 +119,7 @@
                     </tbody>
                 </table>
             </div>
-        </section>
+        </section><!-- // class="funeral-received"-->
 
 
     </main>

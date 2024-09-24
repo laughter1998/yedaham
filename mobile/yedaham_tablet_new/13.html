@@ -7,6 +7,8 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="format-detection" content="telephone=no">
     <title>의전진행관리</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./js/tailwind-config.js"></script>
     <link rel="stylesheet" href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-neo.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -18,13 +20,14 @@
             <img src="./images/header-logo.png" alt="예다함">
             의전진행관리
         </div>
-        <div class="header-title">상품정보</div>
+        <!-- <div class="header-title">상품정보</div> -->
         <div class="header-menu">
+            <a href="#" class="home">조회</a>
             <nav>
                 <a href="#">관리메인</a>
                 <a href="#">업무관리</a>
-                <a href="#" class="current">투입관리</a>
-                <a href="#">철수관리</a>
+                <a href="#">투입관리</a>
+                <a href="#" class="current">철수관리</a>
             </nav>
             <a href="#" class="logout">로그아웃</a>
         </div>
@@ -52,12 +55,15 @@
                             <th>철수시간</th>
                         </tr>
                     </thead>
+
                     <tbody>
-                        <!--tr>
-                            <td colspan="4" class="p-0">
-                                <p class="no-data-message  bg-white">조회해주시기 바랍니다.</p>
+                        <!--
+                        <tr>
+                            <td colspan="4" class="!p-0">
+                                <p class="no-data-message  !bg-white">조회해주시기 바랍니다.</p>
                             </td>
-                        </tr-->
+                        </tr>
+                    -->
                         <tr>
                             <td>2024005373</td>
                             <td>6</td>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1920, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <title>의전진행관리</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./js/tailwind-config.js"></script>
+    <link rel="stylesheet" href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-neo.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- 상단 고정 영역 -->
+    <header>
+        <div class="header-logo">
+            <img src="./images/header-logo.png" alt="예다함">
+            의전진행관리
+        </div>
+        <div class="header-title">상품정보</div>
+        <div class="header-menu">
+            <!-- <a href="#" class="home">조회</a> -->
+            <nav>
+                <a href="#">관리메인</a>
+                <!--
+                <a href="#">업무관리</a>
+                <a href="#">투입관리</a>
+                <a href="#">철수관리</a>
+                -->
+            </nav>
+            <a href="#" class="logout">로그아웃</a>
+        </div>
+    </header>
+
+
+    <main>
+        <section>
+            <div id="toggleButton" class="toggle-title show">
+                <!-- show 를 추가하거나 제거하면 화살표 방향이 바뀝니다.. -->
+                계약물품
+                <span class="arrow"></span>
+            </div>
+            <div id="toggleContent">
+                <table class="view-table-small">
+                    <colgroup>
+                        <!-- <col class="w-[200px]">
+                        <col class="w-[420px]">
+                        <col class="w-[200px]">
+                        <col class="w-[420px]">
+                        <col class="w-[200px]">
+                        <col> -->
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>의전번호</th>
+                            <td>1231231231</td>
+                            <th>고객명</th>
+                            <td>박*지</td>
+                            <th>상품명</th>
+                            <td>예다함 396</td>
+                        </tr>
+                        <tr>
+                            <th>상품금액(원)</th>
+                            <td>39,900,000</td>
+                            <th>할인금액(원)</th>
+                            <td>39,900,000</td>
+                            <th>계약금액(원)</th>
+                            <td>22,999,000</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="view-table-small">
+                    <colgroup>
+                        <!-- <col class="w-[200px]">
+                        <col class="w-[420px]">
+                        <col class="w-[200px]">
+                        <col class="w-[420px]">
+                        <col class="w-[200px]">
+                        <col> -->
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>납입금액(원)</th>
+                            <td>33,990,000</td>
+                            <th>페이백금액(원)</th>
+                            <td>3,990,000</td>
+                            <th>추가금액(원)</th>
+                            <td>22,999,000</td>
+                            <th>잔여금액(원)</th>
+                            <td>22,999,000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+
+
+
+
+    </main>
+
+</body>
+
+</html>
