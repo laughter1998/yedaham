@@ -11,9 +11,33 @@
     <script src="./js/tailwind-config.js"></script>
     <link rel="stylesheet" href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-neo.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dialog-polyfill@0.5.6/dialog-polyfill.css">
+    <script src="https://cdn.jsdelivr.net/npm/dialog-polyfill@0.5.6/dialog-polyfill.js"></script>
 </head>
 
 <body>
+    <style>
+        dialog {
+            border: 2px solid rgb(80, 140, 230);
+            border-radius: 5px;
+            position: fixed;
+            top: 100px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+        }
+
+        dialog::backdrop {
+            background-color: rgba(0, 0, 0, 0.2);
+            /* backdrop의 필터 속성은 filter가 아닌 backdrop-filter를 사용해야한다. */
+            backdrop-filter: blur(1px);
+        }
+    </style>
+    <dialog open>
+        <h1>
+            Hello world
+        </h1>
+    </dialog>
     <!-- 상단 고정 영역 -->
     <header>
         <div class="header-logo">
@@ -38,12 +62,12 @@
 
     <main>
         <section>
-            <div id="toggleButton" class="toggle-title show">
+            <div id="toggleButton" class="toggle-title ">
                 <!-- show 를 추가하거나 제거하면 화살표 방향이 바뀝니다.. -->
                 계약물품
                 <span class="arrow"></span>
             </div>
-            <div id="toggleContent">
+            <div id="toggleContent" class="hidden">
                 <table class="prd-summary-table">
                     <tbody>
                         <tr>
@@ -407,7 +431,10 @@
                     이동</span></a>
         </section>
     </footer>
-
+    <script>
+        const dialog = document.querySelector('dialog');
+        dialog.show();
+    </script>
 </body>
 
 </html>
