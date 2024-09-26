@@ -19,6 +19,12 @@ tailwind.config = {
         },
         fontSize: {
           '2xl': '32px',
+        },
+        width: {
+          '50' : '200px',
+        },
+        height: {
+          'dialog-calc': 'calc(100svh - 340px)'
         }
       },
     },

@@ -194,12 +194,21 @@ main#login {
 }
 
 /***** modal dialog *****/
-dialog {
+dialog.dialog-base {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 8px;
+    max-width: none;
+    max-height: none;
+    background-color: #fff;
+}
+dialog.dialog-large {
     position: fixed;
     top: 56px;
     left: 0px;
-    right: 0px;
-    bottom: 0px;
     max-width: none;
     max-height: none;
     width: 100%;
@@ -209,6 +218,22 @@ dialog {
 
 dialog::backdrop {
     background-color: rgba(0, 0, 0, 0.5);
+}
+dialog[open] {
+    animation: fade-in 200ms forwards;
+}
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+  
+dialog .dialog-wrap {
+    position: relative;
+    height: 100%;
 }
 /* 의전진행관리*/
 
@@ -587,6 +612,15 @@ a.btn-bottom {
     padding-right: 48px;
     background-image: url('../images/right_arrow.png');
     background-position: right center;
+    background-repeat: no-repeat;
+}
+
+/* modal 닫기 버튼 */
+.btn-modal-close {
+    width: 32px;
+    height: 32px;
+    background-image: url('../images/btn_modal_close.png');
+    background-position: center center;
     background-repeat: no-repeat;
 }
 
@@ -987,6 +1021,45 @@ p.no-data-message {
     background-color: #d9d9d9;
 }
 
+
+/* 상품정보 팝업 table */
+.prd-popup-table th,
+.prd-popup-table td {
+    position: relative;
+    padding: 10px 32px 9px 32px;
+    font-size: 24px;
+}
+.prd-popup-table th {
+    text-align: left;
+    color: #666666;
+    background-color: #f5f5f5;
+}
+.prd-popup-table td {
+    text-align: right;
+    font-family: 'NanumSquareNeoExtraBold';
+    color: #000;
+    background-color: #f5f5f5;
+}
+
+.prd-popup-table td::after {
+    display: block;
+    content: '';
+    position: absolute;
+    right: 0px;
+    top: 16px;
+    bottom: 16px;
+    width: 1px;
+    background-color: #d9d9d9;
+}
+.prd-popup-table td:last-child::after {
+    display: none;
+}
+.prd-popup-table th:first-child {
+    padding-left: 8px;
+}
+.prd-popup-table td:last-child {
+    padding-right: 8px;
+}
 /**** checkbox ****/
 
 /* filter 영역의 checkbox*/

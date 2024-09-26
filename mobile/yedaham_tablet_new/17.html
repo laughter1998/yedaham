@@ -16,28 +16,13 @@
 
 <body>
 
-    <dialog class="modal" id="modal">
-        <div>
-            <div>
-                <h5>관</h5>
-                <button type="button" id="close-button">X</button>
-            </div>
-            <h2>An interesting title</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum esse nisi, laboriosam illum temporibus
-                ipsam?
-            </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, quo.</p>
-            <button class="button close-button">close modal</button>
-            <form class="form" method="dialog">
-                <label>Your name <input type="text"></label>
-                <label>Your email <input type="email"></label>
-                <button class="button" type="submit">submit form</button>
-            </form>
-        </div>
 
-    </dialog>
-    <button id="open-button" type="button"
+    <button type="button" onclick="showLargeDialog()"
         style="position:fixed;left:0;top:70px;height:150px;width:500px;background-color:#fff;z-index:111;border:1px solid #000;">open
+        large modal test 클릭</button>
+
+    <button type="button" onclick="showDialog()"
+        style="position:fixed;left:0;top:270px;height:150px;width:500px;background-color:#fff;z-index:111;border:1px solid #000;">open
         modal test 클릭</button>
     <!-- 상단 고정 영역 -->
     <header>
@@ -435,19 +420,74 @@
         </section>
     </footer>
 
+    <dialog class="dialog-large">
+        <div class="dialog-wrap">
+            <section class="flex justify-between items-center bg-blueOpa1 p-2">
+                <h5 class="text-2xl">관</h5>
+                <button type="button" class="btn-modal-close text-opacity-0" onclick="claseLargeDialog()">X</button>
+            </section>
+
+            <section class="p-2">
+                <div class="flex flex-1 gap-x-4">
+                    <div class="flex-grow">
+                        <p class="text-2xl text-666 py-0.5"><span class="text-333">매장관</span>(매장) 오동나무 1단관 1.5 이하</p>
+                        <table class="prd-popup-table">
+                            <tr>
+                                <th>금액</th>
+                                <td>11,000원</td>
+                                <th>페이백 금액</th>
+                                <td>20,000원</td>
+                                <th>차감 금액</th>
+                                <td>12,333,222원</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="flex flex-col justify-between w-48">
+                        <button type="button" class="btn text-2xl bg-blueMain text-white">매장관</button>
+                        <button type="button" class="btn text-2xl bg-777 text-white">화장관</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="p-2 h-dialog-calc overflow-y-auto">
+                상품 영역
+            </section>
+
+            <section class="bottom-btns absolute left-0 right-0 bottom-0">
+                <button type="button" class="btn btn-bottom bg-666">닫기</button>
+            </section>
+
+        </div>
+        <!--// class="dialog-wrap" -->
+    </dialog>
+
+    <dialog class="dialog-base">
+        <section class="text-right">
+            <button type="button" class="btn-modal-close text-opacity-0	" onclick="claseDialog()">X</button>
+        </section>
+        <section class="p-2">
+            안녕하세요
+
+        </section>
+    </dialog>
 
     <script>
-        const modal = document.querySelector("#modal");
-        const openModal = document.querySelector("#open-button");
-        const closeModal = document.querySelector("#close-button");
+        const dialogLarge = document.querySelector('.dialog-large');
+        const dialog = document.querySelector('.dialog-base');
 
-        openModal.addEventListener("click", () => {
-            modal.showModal();
-        });
+        function showLargeDialog() {
+            dialogLarge.showModal();
+        }
+        function claseLargeDialog() {
+            dialogLarge.close();
+        }
 
-        closeModal.addEventListener("click", () => {
-            modal.close();
-        });
+        function showDialog() {
+            dialog.showModal();
+        }
+        function claseDialog() {
+            dialog.close()
+        }
 
     </script>
 </body>
