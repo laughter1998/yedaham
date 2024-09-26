@@ -193,7 +193,23 @@ main#login {
    
 }
 
+/***** modal dialog *****/
+dialog {
+    position: fixed;
+    top: 56px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    max-width: none;
+    max-height: none;
+    width: 100%;
+    height: calc(100svh - 56px);
+    background-color: #fff;
+}
 
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
 /* 의전진행관리*/
 
 .filter-flex {

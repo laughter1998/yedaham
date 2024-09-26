@@ -11,33 +11,34 @@
     <script src="./js/tailwind-config.js"></script>
     <link rel="stylesheet" href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-neo.css">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dialog-polyfill@0.5.6/dialog-polyfill.css">
-    <script src="https://cdn.jsdelivr.net/npm/dialog-polyfill@0.5.6/dialog-polyfill.js"></script>
+
 </head>
 
 <body>
-    <style>
-        dialog {
-            border: 2px solid rgb(80, 140, 230);
-            border-radius: 5px;
-            position: fixed;
-            top: 100px;
-            left: 0px;
-            right: 0px;
-            bottom: 0px;
-        }
 
-        dialog::backdrop {
-            background-color: rgba(0, 0, 0, 0.2);
-            /* backdrop의 필터 속성은 filter가 아닌 backdrop-filter를 사용해야한다. */
-            backdrop-filter: blur(1px);
-        }
-    </style>
-    <dialog open>
-        <h1>
-            Hello world
-        </h1>
+    <dialog class="modal" id="modal">
+        <div>
+            <div>
+                <h5>관</h5>
+                <button type="button" id="close-button">X</button>
+            </div>
+            <h2>An interesting title</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum esse nisi, laboriosam illum temporibus
+                ipsam?
+            </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, quo.</p>
+            <button class="button close-button">close modal</button>
+            <form class="form" method="dialog">
+                <label>Your name <input type="text"></label>
+                <label>Your email <input type="email"></label>
+                <button class="button" type="submit">submit form</button>
+            </form>
+        </div>
+
     </dialog>
+    <button id="open-button" type="button"
+        style="position:fixed;left:0;top:70px;height:150px;width:500px;background-color:#fff;z-index:111;border:1px solid #000;">open
+        modal test 클릭</button>
     <!-- 상단 고정 영역 -->
     <header>
         <div class="header-logo">
@@ -422,18 +423,32 @@
 
                     </tbody>
                 </table>
+
             </div>
         </section>
     </main>
 
     <footer>
+
         <section class="bottom-btns"><a href="#" class="btn btn-bottom bg-blueMain right-arrow"><span>저장 후 다음 페이지
                     이동</span></a>
         </section>
     </footer>
+
+
     <script>
-        const dialog = document.querySelector('dialog');
-        dialog.show();
+        const modal = document.querySelector("#modal");
+        const openModal = document.querySelector("#open-button");
+        const closeModal = document.querySelector("#close-button");
+
+        openModal.addEventListener("click", () => {
+            modal.showModal();
+        });
+
+        closeModal.addEventListener("click", () => {
+            modal.close();
+        });
+
     </script>
 </body>
 
