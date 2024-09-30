@@ -212,7 +212,7 @@ dialog.dialog-large {
     max-width: none;
     max-height: none;
     width: 100%;
-    height: calc(100svh - 56px);
+    height: calc(100dvh - 56px);
     background-color: #fff;
 }
 
@@ -282,16 +282,16 @@ section#resource-management > div {
     position: relative;
 }
 section#resource-management > .data-resource {
-    height: calc(100svh - 184px);
+    height: calc(100dvh - 184px);
     overflow-y: auto;
 }
 
 #resource-management  .data-resource p.no-data-message {
-    height: calc(100svh - 216px);
+    height: calc(100dvh - 216px);
 }
 
 #resource-management  .data-map p.no-data-message {
-    height: calc(100svh - 184px);
+    height: calc(100dvh - 184px);
 }
 
 
@@ -302,11 +302,11 @@ section#closure-management {
 }
 section#closure-management > div {
     position: relative;
-    height: calc(100svh - 184px);
+    height: calc(100dvh - 184px);
     overflow-y: auto;
 }
 section#closure-management > div p.no-data-message {
-    height: calc(100svh - 216px);
+    height: calc(100dvh - 216px);
 }
 section#closure-management table.list-table.list-table-small tbody tr td {
     height: 64px;
@@ -622,6 +622,7 @@ a.btn-bottom {
     background-image: url('../images/btn_modal_close.png');
     background-position: center center;
     background-repeat: no-repeat;
+    text-indent: -9999px;
 }
 
 /***** badge *****/
@@ -860,7 +861,7 @@ p.no-data-message {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: calc(100svh - 384px);
+    height: calc(100dvh - 384px);
     padding:0;
     background-color: rgba(221, 221, 221, 0.8);
     color: #666;

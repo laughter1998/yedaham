@@ -19,11 +19,8 @@
 
     <button type="button" onclick="showLargeDialog()"
         style="position:fixed;left:0;top:70px;height:150px;width:500px;background-color:#fff;z-index:111;border:1px solid #000;">open
-        large modal test 클릭</button>
+        관보</button>
 
-    <button type="button" onclick="showDialog()"
-        style="position:fixed;left:0;top:270px;height:150px;width:500px;background-color:#fff;z-index:111;border:1px solid #000;">open
-        modal test 클릭</button>
     <!-- 상단 고정 영역 -->
     <header>
         <div class="header-logo">
@@ -423,14 +420,14 @@
     <dialog class="dialog-large">
         <div class="dialog-wrap">
             <section class="flex justify-between items-center bg-blueOpa1 h-12">
-                <h5 class="text-2xl">관</h5>
+                <h5 class="text-2xl">관보</h5>
                 <button type="button" class="btn-modal-close " onclick="claseLargeDialog()">X</button>
             </section>
 
             <section class="p-2">
                 <div class="flex flex-1 gap-x-4">
                     <div class="flex-grow">
-                        <p class="text-2xl text-666 py-0.5"><span class="text-333">매장관</span>(매장) 오동나무 1단관 1.5 이하</p>
+                        <p class="text-2xl text-666 py-0.5"><span class="text-333">관보</span>옥스포드 관보(제작)</p>
                         <table class="prd-popup-table">
                             <tr>
                                 <th>금액</th>
@@ -443,8 +440,7 @@
                         </table>
                     </div>
                     <div class="flex flex-col justify-between gap-y-2 w-48">
-                        <button type="button" class="btn text-2xl bg-blueMain h-full text-white">매장관</button>
-                        <button type="button" class="btn text-2xl bg-777 h-full text-white">화장관</button>
+                        <button type="button" class="btn text-2xl bg-blueMain h-full text-white">선택</button>
                     </div>
                 </div>
             </section>
@@ -461,15 +457,6 @@
         <!--// class="dialog-wrap" -->
     </dialog>
 
-    <dialog class="dialog-base">
-        <section class="text-right">
-            <button type="button" class="btn-modal-close " onclick="claseDialog()">X</button>
-        </section>
-        <section class="p-2">
-            안녕하세요
-
-        </section>
-    </dialog>
 
     <script>
         const dialogLarge = document.querySelector('.dialog-large');

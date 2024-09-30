@@ -11,11 +11,13 @@ tailwind.config = {
           blueLight: '#0085ff',
           blueOpa1: 'rgba(0, 133, 255, 0.1)',
           blueOpa2: 'rgba(0, 133, 255, 0.2)',
-          yellowOpa1: ' rgba(255, 168, 0, 0.2);',
+          yellowOpa1: 'rgba(255, 168, 0, 0.2);',
           333: '#333',
           666: '#666',
           777: '#777',
           ddd: '#ddd',
+          d9: '#d9d9d9',
+          f5: '#f5f5f5',
         },
         fontSize: {
           '2xl': '32px',
@@ -24,7 +26,11 @@ tailwind.config = {
           '50' : '200px',
         },
         height: {
-          'dialog-calc': 'calc(100svh - 340px)'
+          'dialog-calc': 'calc(100svh - 324px)',
+          'prdAdd-calc': 'calc(100svh - 200px)',
+        },
+        letterSpacing: {
+          'custom-2px': '2px',
         }
       },
     },
