@@ -1863,6 +1863,9 @@ section.swiper-unit.bg-card05 {
 section.swiper-unit.bg-card06 {
    background:#7c8b92;
 }
+section.swiper-unit.bg-card07 {
+    background:#3f7ae4;
+}
 section.swiper-unit .card-top {
     color:#fff;
     text-align: center;
@@ -1994,6 +1997,10 @@ section.box h5.titB {
 }
 .card-container .woori .bg-color td {
     background-color: #f9fdf3;
+}
+
+.card-container .lotte .card-text-color{
+    color: #3f7ae4 !important;
 }
 article.bg-exp {
     position: relative;

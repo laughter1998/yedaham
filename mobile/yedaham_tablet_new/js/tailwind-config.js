@@ -26,8 +26,8 @@ tailwind.config = {
           '50' : '200px',
         },
         height: {
-          'dialog-calc': 'calc(100svh - 324px)',
-          'prdAdd-calc': 'calc(100svh - 200px)',
+          'dialog-calc': 'calc(100dvh - 324px)',
+          'prdAdd-calc': 'calc(100dvh - 200px)',
         },
         letterSpacing: {
           'custom-2px': '2px',
