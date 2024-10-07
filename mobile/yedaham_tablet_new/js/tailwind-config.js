@@ -15,12 +15,13 @@ tailwind.config = {
           333: '#333',
           666: '#666',
           777: '#777',
+          999: '#999',
           ddd: '#ddd',
           d9: '#d9d9d9',
           f5: '#f5f5f5',
         },
         fontSize: {
-          '2xl': '32px',
+          '32': '32px',
         },
         width: {
           '50' : '200px',
@@ -28,6 +29,7 @@ tailwind.config = {
         height: {
           'dialog-calc': 'calc(100dvh - 324px)',
           'prdAdd-calc': 'calc(100dvh - 200px)',
+          'information-calc': 'calc(100dvh - 200px)',
         },
         letterSpacing: {
           'custom-2px': '2px',

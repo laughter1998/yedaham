@@ -8,12 +8,20 @@
     border:none;
     vertical-align: baseline;
 }
-html, body {
-    width: 1920px;
-    /* overflow-x: hidden;  */
-}
+
 html {
+    width: 100%;
     height: 100%;
+}
+@media only screen and (min-width: 1281px) {
+    body {
+        width: 1920px;
+    }
+}
+@media only screen and (max-width: 1280px) {
+    body {
+        width: 1280px;
+    }
 }
 /* 
 300 font-family: 'NanumSquareNeoLight';
@@ -23,7 +31,7 @@ html {
 900 font-family: 'NanumSquareNeoHeavy'; 
 */
 body {
-    min-height: 100vh;
+    min-height: 100dvh;
     font-size: 24px;
     font-family: 'NanumSquareNeoBold' , sans-serif !important;
     color:#000;
@@ -163,7 +171,7 @@ header .header-menu > a.home::before {
 
 /***** footer 고정 버튼  *****/
 footer {
-    height: 88px;
+    height: 96px;
 }
 footer section.bottom-btns {
     position: fixed;
@@ -176,6 +184,7 @@ section.bottom-btns {
     display: flex;
     background-color: #fff;
     padding: 8px;
+    gap: 10px;
 }
 
 /****** login 화면 *****/
@@ -312,6 +321,38 @@ section#closure-management table.list-table.list-table-small tbody tr td {
     height: 64px;
     padding: 8px 8px;
 }
+
+/* 상품 정보 - 개인정보 동의 - 서명 추가 table */
+section#add-sign table.list-table {
+    border-collapse: collapse;
+}
+section#add-sign table.list-table thead {
+    position: static;
+}
+section#add-sign table.list-table tbody tr td {
+    padding: 12px 8px;
+}
+
+/* 상품 정보 - 개인정보 동의 서명 table */
+table.sign-table {
+    width: auto;
+}
+table.sign-table th{
+    width: 300px;
+    border-top: solid 1px #999;
+    border-bottom: solid 1px #999;
+    background-color: rgba(221, 221, 221, 0.8);
+}
+table.sign-table td{
+    width: 300px;
+    padding: 8px;
+    border-top: solid 1px #999;
+    border-bottom: solid 1px #999;
+    background-color: #fff;
+}
+/* 개인정보 동의 페이지내의 서명추가 테이블 */
+
+
 
 /* form */
 label.form-label{
@@ -594,6 +635,40 @@ input:focus {
     background-color: #fff;
     transform: translate(0, -50%);
 }
+.btn-view-arrow {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 24px;
+    padding-right: 40px;
+    border: 1px solid #1574cb;
+    background-color: #1f8aed;
+    color: #fff;
+    border-radius: 100px;;
+    box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.1);
+    background-image: url('../images/right_thin_arrow.png');
+    background-position: right 10px center;
+    background-repeat: no-repeat;
+}
+
+/* 서명 추가 버튼 */
+.btn-add-sign {
+    width: 140px;
+    border-radius: 8px;
+    border: solid 2px #213f9a;
+    background-color: #fff;
+    color: #213f9a;
+}
+
+/* 삭제 버튼 */
+.btn-delete {
+    width: 160px;
+    height: 56px;
+    border-radius: 100px;
+    border: solid 2px #999;
+    background-color: #aaa;
+    color: #fff;
+}
 
 /* 하단 고정 버튼 */
 button.btn-bottom,
@@ -612,6 +687,13 @@ a.btn-bottom {
     padding-right: 48px;
     background-image: url('../images/right_arrow.png');
     background-position: right center;
+    background-repeat: no-repeat;
+}
+
+.btn-bottom.left-arrow span{
+    padding-left: 48px;
+    background-image: url('../images/left_arrow.png');
+    background-position: left center;
     background-repeat: no-repeat;
 }
 
@@ -1061,6 +1143,40 @@ p.no-data-message {
 .prd-popup-table td:last-child {
     padding-right: 8px;
 }
+
+
+/* 위약금 안내사항 테이블 */
+.prd-penalty-table th {
+    position: relative;
+    padding: 3px 0 4px 0;
+    border-top: solid 1px #999;
+    border-bottom: solid 1px #999;
+    background-color: rgba(221, 221, 221, 0.8);
+    color:#333;
+    font-size: 16px;
+}
+.prd-penalty-table th::after {
+    display: block;
+    content: '';
+    position: absolute;
+    right: 0px;
+    top: 8px;
+    bottom: 7px;
+    width: 1px;
+    background-color: #999;
+}
+
+.prd-penalty-table td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 9px 0 10px 0;
+    border-bottom: solid 1px #999;
+    color:#666
+}
+
+
+
+
 /**** checkbox ****/
 
 /* filter 영역의 checkbox*/
