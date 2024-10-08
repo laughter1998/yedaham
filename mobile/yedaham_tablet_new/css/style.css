@@ -938,6 +938,13 @@ a.btn-bottom {
     color: #333;
     font-family: "NanumSquareNeoExtraBold";
 }
+
+.service-items-table.service-items-pdf tbody tr td:nth-child(3) {
+    background-color: transparent;
+}
+
+
+
 /* 조회 전 */
 p.no-data-message {
     display: flex;
