@@ -46,7 +46,7 @@ button, input, optgroup, select, textarea {
 
 table{
     width: 100%;
-    
+
     border-collapse:collapse;
     border-spacing:0;
 }
@@ -55,7 +55,7 @@ li{
 }
 a, a:link,  a:visited {
     text-decoration: none;
-    color: inherit; 
+    color: inherit;
 }
 h1, h2, h3, h4, h5 {
     position: relative;
@@ -65,11 +65,11 @@ select {
     background-color: #fff;
     box-shadow: inset 0 4px 4px 0 rgba(0, 0, 0, 0.1);
     border: solid 1px #999;
-    padding: 8px; 
-    border-radius: 8px; 
+    padding: 8px;
+    border-radius: 8px;
     box-sizing: border-box;
     word-wrap: normal;
-    
+
 }
 
 header{
@@ -178,7 +178,7 @@ footer section.bottom-btns {
     left: 0;
     right: 0;
     bottom: 0;
-    
+
 }
 section.bottom-btns {
     display: flex;
@@ -199,7 +199,7 @@ main#login {
     flex-direction: column;
     width: 540px;
     height: 100%;
-   
+
 }
 
 /***** modal dialog *****/
@@ -239,7 +239,7 @@ dialog[open] {
         opacity: 1;
     }
 }
-  
+
 dialog .dialog-wrap {
     position: relative;
     height: 100%;
@@ -411,7 +411,7 @@ label.form-label + .form-control {
     border-color: #86b7fe;
     outline: 0;
     box-shadow: 0 0 0 .25rem rgba(13, 110, 253, .25);
-  }
+}
 
 .input-group {
     position: relative;
@@ -434,21 +434,21 @@ label.form-label + .form-control {
     align-items: center;
     width: 48px;
     margin-left: 4px;
-    
+
 }
 
 /* 초기화 button 있는 input에 패딩 */
 .input-group:has(button.btn-input-clear) input {
-    padding-right: 40px; 
+    padding-right: 40px;
 }
 
 
 input:focus {
     outline: none;
-} 
+}
 ::placeholder {
     color: #ccc;
-  }
+}
 
 
 
@@ -717,7 +717,7 @@ a.btn-bottom {
     font-size: 24px;
     font-family: 'NanumSquareNeoExtraBold';
     border-radius: 100px;
-    
+
 }
 .badge-progress {
     padding-left: 15px;
@@ -825,7 +825,7 @@ a.btn-bottom {
     border-bottom: solid 1px #999;
     background-color: rgba(221, 221, 221);
     color:#333333;
-   
+
 }
 .list-table th::after {
     display: block;
@@ -858,7 +858,7 @@ a.btn-bottom {
     font-size: 32px;
     color: #666;
     vertical-align: middle;
-    
+
 }
 .list-table.list-table-small tbody tr td{
     padding: 10px 8px;
@@ -890,7 +890,7 @@ a.btn-bottom {
     border-bottom: solid 1px #999;
     background-color: rgba(221, 221, 221);
     color:#333333;
-   
+
 }
 .service-items-table th::after {
     display: block;
@@ -973,7 +973,7 @@ p.no-data-message {
     height: 1px;
     background-color: #d9d9d9;
 
-    
+
 }
 
 /*  관리 view table */
@@ -1188,8 +1188,7 @@ p.no-data-message {
 
 /* filter 영역의 checkbox*/
 .checkbox-button {
-    display: flex;
-    align-items: center;
+    width:100%;
     cursor: pointer;
     user-select: none;
 }
@@ -1198,35 +1197,7 @@ p.no-data-message {
     display: none;
 }
 
-
 .checkbox-button input[type="checkbox"] + span {
-    height: 48px;
-    border: solid 1px #ddd;
-    color: #999;
-    background-color: #fff;
-    border-radius: 24px;
-    transition: background-color 0.3s, border-color 0.3s;
-}
-.checkbox-button input[type="checkbox"]:checked + span {
-    color: #fff;
-    background-color: #1f8aed;
-    border: 2px solid #1f8aed;
-}
-
-/**** radio button ****/
-
-/* filter 영역의 radio*/
-.radio-button {
-    width:100%;
-    cursor: pointer;
-    user-select: none;
-}
-
-.radio-button input[type="radio"] {
-    display: none;
-}
-
-.radio-button input[type="radio"] + span {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1237,9 +1208,9 @@ p.no-data-message {
     border-radius: 24px;
     transition: background-color 0.3s, border-color 0.3s;
     font-family: 'NanumSquareNeoBold';
-    
+
 }
-.radio-button input[type="radio"]:checked + span {
+.checkbox-button input[type="checkbox"]:checked + span {
     color: #003fff;
     background-color: rgba(0, 133, 255, 0.2);
     border: 2px solid #1f8aed;
@@ -1251,8 +1222,8 @@ p.no-data-message {
 /* 일반 checkbox*/
 .checkbox-normal input[type="checkbox"] {
     display: none;
-  }
-  
+}
+
 .checkbox-normal {
     cursor: pointer;
     user-select: none;
@@ -1279,6 +1250,42 @@ p.no-data-message {
     background-size: cover;
 }
 
+/**** radio button ****/
+
+/* filter 영역의 radio*/
+.radio-button {
+    width:100%;
+    cursor: pointer;
+    user-select: none;
+}
+
+.radio-button input[type="radio"] {
+    display: none;
+}
+
+.radio-button input[type="radio"] + span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    border: solid 1px #ddd;
+    color: #999;
+    background-color: #fff;
+    border-radius: 24px;
+    transition: background-color 0.3s, border-color 0.3s;
+    font-family: 'NanumSquareNeoBold';
+
+}
+.radio-button input[type="radio"]:checked + span {
+    color: #003fff;
+    background-color: rgba(0, 133, 255, 0.2);
+    border: 2px solid #1f8aed;
+    font-family: 'NanumSquareNeoExtraBold';
+    font-weight: 800;
+}
+
+
+
 
 
 /***** 토글 제목 *****/
@@ -1299,7 +1306,7 @@ p.no-data-message {
     background-image: url('../images/bg_toggle_arrow.png');
     background-position: center center;
     background-repeat: no-repeat;
-    transition: transform 0.3s ease; 
+    transition: transform 0.3s ease;
     transform: rotate(180deg);
 }
 .toggle-title.show .arrow{
