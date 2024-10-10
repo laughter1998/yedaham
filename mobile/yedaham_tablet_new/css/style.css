@@ -417,7 +417,7 @@ label.form-label + .form-control {
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    align-items: stretch;
+    align-items: center;
     width: 100%;
 }
 
@@ -761,7 +761,10 @@ a.btn-bottom {
 }
 
 /***** table *****/
-.table-striped>tbody>tr:nth-of-type(even) {
+.table-striped>tbody>tr:nth-of-type(odd) td{
+    background-color: #fff;
+}
+.table-striped>tbody>tr:nth-of-type(even) td{
     background-color: #f5f5f5;
 }
 /* 검색 table */
@@ -806,6 +809,19 @@ a.btn-bottom {
     height: 100%;
     background-color: #d9d9d9;
 }
+.filter-table2 th,
+.filter-table2 td {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.filter-table2 th {
+    background-color: #ddd;
+
+}
+.filter-table2 td {
+    padding: 4px;
+}
+
 
 /* 리스트 table */
 .list-table {
@@ -815,7 +831,7 @@ a.btn-bottom {
 .list-table thead {
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 11;
 }
 .list-table th {
     position: relative;
@@ -874,6 +890,20 @@ a.btn-bottom {
     width: 1px;
     background-color: #d9d9d9;
 }
+
+.list-table.list-table-small.py-lg thead tr th {
+    padding-left: 12px;
+    padding-right: 12px;
+    white-space: nowrap;
+}
+
+.list-table.list-table-small.py-lg tbody tr td {
+    padding: 16px 12px;
+    font-size: 24px;
+    white-space: nowrap;
+}
+
+
 
 /* 상품정보 서비스 품목 table */
 
@@ -943,7 +973,32 @@ a.btn-bottom {
     background-color: transparent;
 }
 
+.view-table-style2 th {
+    background-color: #ddd;
+    border-bottom: 1px solid #ccc;
+    color:#333;
+    vertical-align: middle;
+}
+.view-table-style2 td {
+    padding: 4px 8px;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    vertical-align: middle;
+}
 
+.view-table-style3 th {
+    background-color: #ddd;
+    border-top: 1px solid #666;
+    border-bottom: 1px solid #666;
+    color:#333;
+    vertical-align: middle;
+}
+.view-table-style3 td {
+    background-color: #fff;
+    border-top: 1px solid #666;
+    border-bottom: 1px solid #666;
+    vertical-align: middle;
+}
 
 /* 조회 전 */
 p.no-data-message {
@@ -1284,7 +1339,9 @@ p.no-data-message {
     font-weight: 800;
 }
 
-
+.radio-button.radio-style2 input[type="radio"] + span {
+    border-radius: 8px;
+}
 
 
 

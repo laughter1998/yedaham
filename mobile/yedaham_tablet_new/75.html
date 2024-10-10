@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <title>의전진행관리</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./js/tailwind-config.js"></script>
+    <link rel="stylesheet" href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-neo.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+
+
+
+    <!-- 상단 고정 영역 -->
+    <header>
+        <div class="header-logo">
+            <img src="./images/header-logo.png" alt="예다함">
+            의전진행관리
+        </div>
+        <div class="header-title">배차등록</div>
+        <div class="header-menu">
+            <!-- <a href="#" class="home">조회</a> -->
+            <nav>
+                <a href="#">관리메인</a>
+                <!--
+                <a href="#">업무관리</a>
+                <a href="#">투입관리</a>
+                <a href="#">철수관리</a>
+                -->
+            </nav>
+            <a href="#" class="logout">로그아웃</a>
+        </div>
+    </header>
+
+
+    <main>
+        <table class="view-table-style2 table-fixed">
+            <colgroup>
+                <col class="w-[180px]" />
+                <col class="w-[246px]" />
+                <col class="w-[180px]" />
+                <col class="w-[246px]"/>
+                <col class="w-[180px]" />
+                <col/>
+            </colgroup>
+            <tr>
+                <th class="h-14">의전번호</th>
+                <td>1212121212</td>
+                <th>차량배정번호</th>
+                <td>121212121212</td>
+                <th>배정기사</th>
+                <td>금*태</td>
+            </tr>
+            <tr>
+                <th class="h-14">물품 추가 대상</th>
+                <td colspan="5">
+                    <button type="button" class="px-2 border-2 rounded-lg h-12  text-333">남여상복</button>
+                    <button type="button" class="px-2 border-2 rounded-lg h-12  text-333">포그니여상복</button>
+                    <button type="button" class="px-2 border-2 rounded-lg h-12  text-333">전통상복</button>
+                    <button type="button" class="px-2 border-2 rounded-lg h-12  text-333">TP여상복</button>
+                    <button type="button" class="px-2 border-2 rounded-lg h-12  text-333">초도용품</button>
+                </td>
+            </tr>
+        </table>
+
+        <section>
+            <div>
+                <table class="list-table list-table-small table-striped ">
+                    <colgroup>
+                        <col/>
+                        <col class="w-[300px]" />
+                    </colgroup>
+
+                    <thead>
+                    <tr>
+                        <th >품목명</th>
+                        <th>수량변경</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td colspan="10" class="!p-0">
+                                <p class="flex h-96 justify-center items-center !bg-white !text-999">대상을 선택 후 수량을 변경하실 수 있습니다.</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <div class="p-2 text-right">
+                <button type="button" class="px-6 rounded-lg h-12 bg-blueMain text-white">선택 품목 대여리스트 추가</button>
+            </div>
+            <div class="flex items-stretch bg-ddd h-14 border-b border-ccc" >
+                <span class="flex justify-center items-center grow ">대여리스트</span>
+                <div class="flex items-center grow-0">
+                    <span class=" shrink-0 px-4 ">물품 도착일시</span>
+                    <div class="input-group w-[316px] h-full px-2 bg-white">
+                        <input type="text" class="form-control " value="2024-07-31 17:00" placeholder="">
+                        <span class="btn-calendar"><img src="./images/icon_calendar.png" alt=""></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div>
+                <table class="list-table list-table-small table-striped ">
+                    <colgroup>
+                        <col/>
+                        <col class="w-[300px]" />
+                    </colgroup>
+
+                    <thead>
+                    <tr>
+                        <th>라인</th>
+                        <th>품목명</th>
+                        <th>사용수량</th>
+                        <th>품목 삭제</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    <tr>
+                        <td colspan="10" class="!p-0">
+                            <p class="flex h-96 justify-center items-center !bg-white !text-999">대여된 품목이 없습니다.</p>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="mt-6  px-2 pb-10">
+            <div class="p-4 text-666  bg-f5 border border-999 rounded-lg">
+                의전번호 : 2024006795 차량배정번호 : 000000055147 배정기사 : 금*태 님은 대여물폼 및 도착시간에 대해 확인하였습니다.
+            </div>
+
+            <table class="view-table-style2 table-fixed w-auto mx-auto mt-6 ">
+                <colgroup>
+                    <col class="w-[220px]" />
+                    <col class="w-[220px]" />
+                    <col class="w-[220px]" />
+                    <col class="w-[220px]" />
+                    <col/>
+                </colgroup>
+                <tr>
+                    <th class="border-y !border-666 h-14">담당 FD</th>
+                    <td class="border-y !border-666"><p class="flex items-center justify-center h-12 text-ccc">서명</p></td>
+                    <th class="border-y !border-666" >물류기사</th>
+                    <td class="border-y !border-666">
+<!--                        <p class="flex items-center justify-center h-12 text-ccc">서명</p>-->
+                        <p class="flex items-center justify-center h-12 ">
+                            <img src="https://cdn.pixabay.com/photo/2014/11/09/08/06/signature-523237_1280.jpg" class="h-full object-contain" alt="">
+                        </p>
+                    </td>
+                </tr>
+
+            </table>
+
+        </section>
+
+
+    </main>
+
+
+
+</body>
+
+</html>
