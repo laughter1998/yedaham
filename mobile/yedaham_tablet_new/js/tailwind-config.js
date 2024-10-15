@@ -7,6 +7,7 @@ tailwind.config = {
           redOpa1: 'rgba(255, 125, 218, 0.1)',
           redOpa2: 'rgba(255, 125, 218, 0.2)',
           blue: '#003fff',
+          blue2 : '#1f8aed',
           blueMain: '#213F9A',
           blueLight: '#0085ff',
           blueOpa1: 'rgba(0, 133, 255, 0.1)',
@@ -28,9 +29,7 @@ tailwind.config = {
           '50' : '200px',
         },
         height: {
-          'dialog-calc': 'calc(100dvh - 324px)',
-          'prdAdd-calc': 'calc(100dvh - 200px)',
-          'information-calc': 'calc(100dvh - 200px)',
+          'calc-200': 'calc(100dvh - 200px)',
           'calc-210': 'calc(100dvh - 210px)',
           'calc-274': 'calc(100dvh - 274px)',
           'calc-306': 'calc(100dvh - 306px)',

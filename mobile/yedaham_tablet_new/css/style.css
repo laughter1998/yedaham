@@ -82,7 +82,7 @@ header{
     color:#fff;
     justify-content: space-between;
     align-items: center;
-    z-index: 11;
+    z-index: 100;
 }
 
 header .header-logo {
@@ -214,7 +214,8 @@ dialog.dialog-base {
     max-height: none;
     background-color: #fff;
 }
-dialog.dialog-large {
+dialog.dialog-large,
+dialog.dialog-large2 {
     position: fixed;
     top: 56px;
     left: 0px;
@@ -761,10 +762,8 @@ a.btn-bottom {
 }
 
 /***** table *****/
-.table-striped>tbody>tr:nth-of-type(odd) td{
-    background-color: #fff;
-}
-.table-striped>tbody>tr:nth-of-type(even) td{
+
+.table-striped>tbody>tr:nth-of-type(even) {
     background-color: #f5f5f5;
 }
 /* 검색 table */
@@ -1270,9 +1269,11 @@ p.no-data-message {
     background-color: rgba(0, 133, 255, 0.2);
     border: 2px solid #1f8aed;
     font-family: 'NanumSquareNeoExtraBold';
-    font-weight: 800;
-}
 
+}
+.checkbox-button.checkbox-style2 input[type="checkbox"] + span {
+    border-radius: 8px;
+}
 
 /* 일반 checkbox*/
 .checkbox-normal input[type="checkbox"] {
@@ -1336,7 +1337,7 @@ p.no-data-message {
     background-color: rgba(0, 133, 255, 0.2);
     border: 2px solid #1f8aed;
     font-family: 'NanumSquareNeoExtraBold';
-    font-weight: 800;
+
 }
 
 .radio-button.radio-style2 input[type="radio"] + span {
