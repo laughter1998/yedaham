@@ -35,6 +35,7 @@ tailwind.config = {
           'calc-306': 'calc(100dvh - 306px)',
           'calc-324': 'calc(100dvh - 324px)',
           'calc-332': 'calc(100dvh - 332px)',
+          'calc-448': 'calc(100dvh - 448px)',
         },
         letterSpacing: {
           'custom-2px': '2px',

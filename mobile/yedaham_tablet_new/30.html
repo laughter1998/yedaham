@@ -16,7 +16,7 @@
 
 <body>
 
-
+<button type="button" onclick="showLargeDialog()"         style="position:fixed;left:0;top:70px;height:150px;width:500px;background-color:#fff;z-index:111;border:1px solid #000;">장사시설정보 조회</button>
 
     <!-- 상단 고정 영역 -->
     <header>
@@ -324,7 +324,7 @@
 
             <h5 class="py-2 px-3 bg-f5 text-333 leading-6 flex justify-between items-center">
                 &#8231;장지정보
-                <button type="button" class="border-2 border-blueMain text-blueMain rounded-lg h-12 px-6">장사시설정보</button>
+                <button type="button" class="border-2 border-blueMain text-blueMain rounded-lg h-12 px-6" onclick="showLargeDialog()">장사시설정보</button>
             </h5>
 
             <table class="view-table-style2 table-fixed border-t-2 border-666">
@@ -529,8 +529,120 @@
         </section>
     </main>
 
+    <dialog class="dialog-large">
+        <div class="dialog-wrap">
+            <section class="flex justify-between items-center bg-blueOpa1 h-12 px-2">
+                <h5 class="text-32">장사시설정보 조회</h5>
+                <button type="button" class="btn-modal-close " onclick="claseLargeDialog()">X</button>
+            </section>
+
+            <section class="px-2">
+                <nav class="sub-navi border-b border-d9 mt-2">
+                    <a href="#" class="w-[300px] current ">고인/상주/장지정보</a>
+                    <a href="#" class="w-[300px]">장례일정</a>
+                </nav>
+            </section>
+
+            <section class="filter-group">
+                <div class="filter-tables">
+                    <table class=" filter-table">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="filter-flex">
+                                        <label class="radio-button radio-style2 " for="da1">
+                                            <input type="radio" name="da" id="da1" checked="checked">
+                                            <span class="!h-16">장례식장</span>
+                                        </label>
+                                        <label class="radio-button radio-style2" for="da2">
+                                            <input type="radio" name="da" id="da2">
+                                            <span class="!h-16">화장시설</span>
+                                        </label>
+                                        <label class="radio-button radio-style2" for="da3">
+                                            <input type="radio" name="da" id="da3">
+                                            <span class="!h-16">화장시설</span>
+                                        </label>
+                                        <label class="radio-button radio-style2" for="da4">
+                                            <input type="radio" name="da" id="da4">
+                                            <span class="!h-16">화장시설</span>
+                                        </label>
+                                        <label class="radio-button radio-style2" for="da5">
+                                            <input type="radio" name="da" id="da5">
+                                            <span class="!h-16">화장시설</span>
+                                        </label>
+
+                                    </div>
+                                </td>
+                            </tr>
+                        <tr>
+
+                            <td>
+                                <div class="input-group ">
+                                    <input type="text" class="form-control" placeholder="주소, 연락처, 업체명 등을 입력해 주세요.">
+                                    <button type="button" class="btn btn-input-clear">초기화</button>
+                                </div>
+                            </td>
+
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="filter-button"><button type="button" class="btn btn-filter">조회하기 <span>(999)</span></button>
+                </div>
+            </section><!-- // class="filter-table-group" -->
+
+            <section >
+                <div class="overflow-y-auto h-calc-332">
+                    <table class="list-table list-table-small table-striped ">
+                        <colgroup>
+                            <col/>
+                            <col/>
+                            <col/>
+                            <col/>
+                        </colgroup>
+
+                        <thead>
+                        <tr>
+                            <th>업체구분</th>
+                            <th>진행팀장</th>
+                            <th>업체정보</th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td colspan="10" class="!p-0">
+                                    <p class="flex h-calc-448 justify-center items-center  text-999">조회해주시기 바랍니다.</p>
+                                </td>
+                            </tr>
 
 
+                        </tbody>
+                    </table>
+                </div>
+
+
+            </section>
+
+            <section class="bottom-btns absolute left-0 right-0 bottom-0">
+                <button type="button" class="btn btn-bottom bg-666" onclick="claseLargeDialog()">닫기</button>
+            </section>
+
+        </div>
+        <!--// class="dialog-wrap" -->
+    </dialog>
+    <script>
+        const dialogLarge = document.querySelector('.dialog-large');
+
+        function showLargeDialog() {
+            dialogLarge.showModal();
+        }
+        function claseLargeDialog() {
+            dialogLarge.close();
+        }
+
+    </script>
 </body>
 
 </html>
