@@ -538,8 +538,8 @@
 
             <section class="px-2">
                 <nav class="sub-navi border-b border-d9 mt-2">
-                    <a href="#" class="w-[300px] current ">일반 검색</a>
-                    <a href="#" class="w-[300px]">도로명주소 검색</a>
+                    <a href="#" class="w-[300px] ">일반 검색</a>
+                    <a href="#" class="w-[300px] current">도로명주소 검색</a>
                 </nav>
             </section>
 
@@ -548,42 +548,14 @@
                     <table class=" filter-table">
                         <tbody>
                             <tr>
-                                <td>
-                                    <div class="filter-flex">
-                                        <label class="radio-button radio-style2 " for="da1">
-                                            <input type="radio" name="da" id="da1" checked="checked">
-                                            <span class="!h-16">장례식장</span>
-                                        </label>
-                                        <label class="radio-button radio-style2" for="da2">
-                                            <input type="radio" name="da" id="da2">
-                                            <span class="!h-16">화장시설</span>
-                                        </label>
-                                        <label class="radio-button radio-style2" for="da3">
-                                            <input type="radio" name="da" id="da3">
-                                            <span class="!h-16">화장시설</span>
-                                        </label>
-                                        <label class="radio-button radio-style2" for="da4">
-                                            <input type="radio" name="da" id="da4">
-                                            <span class="!h-16">화장시설</span>
-                                        </label>
-                                        <label class="radio-button radio-style2" for="da5">
-                                            <input type="radio" name="da" id="da5">
-                                            <span class="!h-16">화장시설</span>
-                                        </label>
 
+                                <td>
+                                    <div class="input-group ">
+                                        <input type="text" class="form-control" placeholder="주소, 연락처, 업체명 등을 입력해 주세요.">
+                                        <button type="button" class="btn btn-input-clear">초기화</button>
                                     </div>
                                 </td>
-                            </tr>
-                        <tr>
 
-                            <td>
-                                <div class="input-group ">
-                                    <input type="text" class="form-control" placeholder="주소, 연락처, 업체명 등을 입력해 주세요.">
-                                    <button type="button" class="btn btn-input-clear">초기화</button>
-                                </div>
-                            </td>
-
-                        </tr>
 
                         </tbody>
                     </table>
@@ -593,35 +565,8 @@
             </section><!-- // class="filter-table-group" -->
 
             <section >
-                <div class="overflow-y-auto "h-calc-418>
-                    <table class="list-table list-table-small py-lg table-striped ">
-                        <colgroup>
-                            <col/>
-                            <col/>
-                            <col/>
-                            <col/>
-                            <col/>
-                            <col/>
-                        </colgroup>
-
-                        <thead>
-                        <tr>
-                            <th>업체구분</th>
-                            <th colspan="2">진행팀장</th>
-                            <th colspan="2">업체정보</th>
-                        </tr>
-                        </thead>
-
-                        <tbody>
-                            <tr>
-                                <td colspan="10" class="!p-0">
-                                    <p class="flex h-calc-448 justify-center items-center  text-999">조회해주시기 바랍니다.</p>
-                                </td>
-                            </tr>
-
-
-                        </tbody>
-                    </table>
+                <div class="overflow-y-auto h-calc-418">
+                    도로명 주소 컴포넌트
                 </div>
 
 

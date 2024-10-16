@@ -17,7 +17,7 @@
 <body>
 
 <button type="button" onclick="showLargeDialog()"         style="position:fixed;left:0;top:70px;height:150px;width:500px;background-color:#fff;z-index:111;border:1px solid #000;">장사시설정보 조회</button>
-
+<button type="button" onclick="showLargeDialog2()"         style="position:fixed;left:0;top:270px;height:150px;width:500px;background-color:#fff;z-index:111;border:1px solid #000;">장사시설정보 조회2</button>
     <!-- 상단 고정 영역 -->
     <header>
         <div class="header-logo">
@@ -593,7 +593,7 @@
             </section><!-- // class="filter-table-group" -->
 
             <section >
-                <div class="overflow-y-auto "h-calc-418>
+                <div class="overflow-y-auto h-calc-418">
                     <table class="list-table list-table-small py-lg table-striped ">
                         <colgroup>
                             <col/>
@@ -605,21 +605,50 @@
                         </colgroup>
 
                         <thead>
-                        <tr>
-                            <th>업체구분</th>
-                            <th colspan="2">진행팀장</th>
-                            <th colspan="2">업체정보</th>
-                        </tr>
+                            <tr>
+                                <th>업체구분</th>
+                                <th colspan="2">진행팀장</th>
+                                <th colspan="2">업체정보</th>
+                            </tr>
                         </thead>
 
                         <tbody>
                             <tr>
-                                <td colspan="10" class="!p-0">
-                                    <p class="flex h-calc-448 justify-center items-center  text-999">조회해주시기 바랍니다.</p>
-                                </td>
+                                <td >장례식장 <br>(1,243)</td>
+                                <td>서울특별시 (87)</td>
+                                <td>남양주시 (3)</td>
+                                <td class="!text-wrap">곤지암추모공원곤지암추모공원
+                                    봉안시설</td>
+                                <td class="!text-wrap">경기도 경기도 광주시 곤지안읍 가마을길
+                                    83-19</td>
                             </tr>
-
-
+                            <tr>
+                                <td ></td>
+                                <td>서울특별시 (87)</td>
+                                <td>남양주시 (3)</td>
+                                <td class="!text-wrap">곤지암추모공원
+                                    봉안시설</td>
+                                <td class="!text-wrap">경기도 광주시 곤지안읍 가마을길
+                                    83-19</td>
+                            </tr>
+                            <tr>
+                                <td ></td>
+                                <td>서울특별시 (87)</td>
+                                <td>남양주시 (3)</td>
+                                <td class="!text-wrap">곤지암추모공원곤지암추모공원
+                                    봉안시설</td>
+                                <td class="!text-wrap">경기도 경기도 광주시 곤지안읍 가마을길
+                                    83-19</td>
+                            </tr>
+                            <tr>
+                                <td ></td>
+                                <td>서울특별시 (87)</td>
+                                <td>남양주시 (3)</td>
+                                <td class="!text-wrap">곤지암추모공원곤지암추모공원
+                                    봉안시설</td>
+                                <td class="!text-wrap">경기도 경기도 광주시 곤지안읍 가마을길
+                                    83-19</td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
@@ -634,14 +663,42 @@
         </div>
         <!--// class="dialog-wrap" -->
     </dialog>
+
+<dialog class="dialog-large2">
+    <div class="dialog-wrap">
+        <section class="flex justify-between items-center bg-blueOpa1 h-12 px-2">
+            <h5 class="text-32">장사시설정보 조회</h5>
+            <button type="button" class="btn-modal-close " onclick="claseLargeDialog2()">X</button>
+        </section>
+
+
+        <section class="p-2 h-calc-200 overflow-y-auto">
+            장사시설정보
+        </section>
+
+        <section class="bottom-btns absolute left-0 right-0 bottom-0">
+            <button type="button" class="btn btn-bottom bg-666" onclick="claseLargeDialog2()">닫기</button>
+        </section>
+
+    </div>
+    <!--// class="dialog-wrap" -->
+</dialog>
     <script>
         const dialogLarge = document.querySelector('.dialog-large');
+        const dialogLarge2 = document.querySelector('.dialog-large2');
 
         function showLargeDialog() {
             dialogLarge.showModal();
         }
         function claseLargeDialog() {
             dialogLarge.close();
+        }
+
+        function showLargeDialog2() {
+            dialogLarge2.showModal();
+        }
+        function claseLargeDialog2() {
+            dialogLarge2.close();
         }
 
     </script>
