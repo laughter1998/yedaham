@@ -86,6 +86,7 @@
             <div>
                 <table class="service-items-table table-striped table-fixed	">
                     <colgroup>
+                        <col class="w-[70px]" /><!-- class="hidden" 추가 -->
                         <col class="w-32" />
                         <col>
                         <col>
@@ -95,6 +96,7 @@
                     </colgroup>
                     <thead>
                         <tr>
+                            <th>구분</th> <!-- class="hidden" 추가 -->
                             <th>구분</th>
                             <th>품목</th>
                             <th>상세설명</th>
@@ -106,6 +108,12 @@
 
                     <tbody>
                         <tr>
+                            <td>
+                                <div class="checkbox-normal ">
+                                    <input type="checkbox" id="chk1">
+                                    <label for="chk1" class="flex flex-col justify-center"><span class="chk-required">필수</span></label>
+                                </div>
+                            </td>
                             <td><img src="./images/serviceItem/icon_funeral_director.png" alt=""></td>
                             <td class="leading-7">장례지도사</td>
                             <td class="leading-7">장례 진행</td>

@@ -1327,6 +1327,18 @@ nav.sub-navi a.current {
         background-position: center;
         background-size: cover;
     }
+    .checkbox-normal span.chk-required {
+        padding: 1px 4px;
+        border: 1px solid #ccc;
+        border-radius: 999px;
+        font-size: 14px;
+        color: #666;
+        background-color: #fff;
+        line-height: 1;
+    }
+    .checkbox-normal span.chk-optional {
+
+    }
 
     /**** radio button ****/
 
