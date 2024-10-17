@@ -87,8 +87,8 @@
                 <table class="service-items-table table-striped table-fixed	">
                     <colgroup>
                         <col class="w-[70px]" /><!-- class="hidden" 추가 -->
-                        <col class="w-32" />
-                        <col>
+                        <col class="w-32 " /><!-- class="hidden" 추가 -->
+                        <col><!-- class="hidden" 추가 -->
                         <col>
                         <col class="w-48">
                         <col class="w-52">
@@ -97,8 +97,8 @@
                     <thead>
                         <tr>
                             <th>구분</th> <!-- class="hidden" 추가 -->
-                            <th>구분</th>
-                            <th>품목</th>
+                            <th>구분</th><!-- class="hidden" 추가 -->
+                            <th>품목</th><!-- class="hidden" 추가 -->
                             <th>상세설명</th>
                             <th>수량</th>
                             <th>변동금액(원)</th>
@@ -108,15 +108,15 @@
 
                     <tbody>
                         <tr>
-                            <td>
-                                <div class="checkbox-normal ">
+                            <td><!-- class="hidden" 추가 -->
+                                <div class="checkbox-normal chk ">
                                     <input type="checkbox" id="chk1">
-                                    <label for="chk1" class="flex flex-col justify-center"><span class="chk-required">필수</span></label>
+                                    <label for="chk1"><span class="border border-ccc text-666 bg-fff">필수</span></label>
                                 </div>
                             </td>
-                            <td><img src="./images/serviceItem/icon_funeral_director.png" alt=""></td>
+                            <td><img src="./images/serviceItem/icon_funeral_director.png"  class="mx-auto" alt=""></td>
                             <td class="leading-7">장례지도사</td>
-                            <td class="leading-7">장례 진행</td>
+                            <td class="leading-7 bg-greenOpa1">장례 진행</td>
                             <td>
                                 <div class="w-40 inline-flex justify-between items-center">
                                     <button type="button"
@@ -130,9 +130,15 @@
                             <td>-</td>
                         </tr>
                         <tr>
-                            <td><img src="./images/serviceItem/icon_funeral_helper.png" alt=""></td>
+                            <td>
+                                <div class="checkbox-normal chk ">
+                                    <input type="checkbox" id="chk2">
+                                    <label for="chk2"><span class="text-white" style="background-color: #ffa800;">선택7</span></label>
+                                </div>
+                            </td>
+                            <td><img src="./images/serviceItem/icon_funeral_helper.png"  class="mx-auto"alt=""></td>
                             <td class="leading-7">장례도우미<br />(주간)</td>
-                            <td class="leading-7">접객도우미</td>
+                            <td class="leading-7 bg-greenOpa1">접객도우미</td>
                             <td>
                                 <div class="w-40 inline-flex justify-between items-center">
                                     <button type="button"
@@ -146,9 +152,15 @@
                             <td>인/8시간</td>
                         </tr>
                         <tr>
-                            <td><img src="./images/serviceItem/icon_coffin.png" alt=""></td>
+                            <td>
+                                <div class="checkbox-normal chk">
+                                    <input type="checkbox" id="chk3">
+                                    <label for="chk3"><span class="text-white" style="background-color: #45b833">선택8</span></label>
+                                </div>
+                            </td>
+                            <td><img src="./images/serviceItem/icon_coffin.png"  class="mx-auto"alt=""></td>
                             <td class="leading-7">화장관</td>
-                            <td class="leading-7">오동나무 1단관 1.0 이하</td>
+                            <td class="leading-7 bg-greenOpa1">오동나무 1단관 1.0 이하</td>
                             <td>
                                 <div class="w-40 inline-flex justify-between items-center">
                                     <button type="button"
@@ -162,9 +174,15 @@
                             <td><button type="button" class="btn btn-service-item">변경</button></td>
                         </tr>
                         <tr>
-                            <td><img src="./images/serviceItem/icon_burial_clothes.png" alt=""></td>
+                            <td>
+                                <div class="checkbox-normal chk ">
+                                    <input type="checkbox" id="chk4" >
+                                    <label for="chk4"><span class="text-white" style="background-color: #33b8b8">선택9</span></label>
+                                </div>
+                            </td>
+                            <td><img src="./images/serviceItem/icon_burial_clothes.png"  class="mx-auto"alt=""></td>
                             <td class="leading-7">수의</td>
-                            <td class="leading-7">오동나무횡대 1.5 이하 또는 <br>금전사송학봉안함</td>
+                            <td class="leading-7 bg-greenOpa1">오동나무횡대 1.5 이하 또는 <br>금전사송학봉안함</td>
                             <td>
                                 <div class="w-40 inline-flex justify-between items-center">
                                     <button type="button"
@@ -178,9 +196,15 @@
                             <td><button type="button" class="btn btn-service-item">상세</button></td>
                         </tr>
                         <tr>
-                            <td><img src="./images/serviceItem/icon_hearse.png" alt=""></td>
+                            <td>
+                                <div class="checkbox-normal chk">
+                                    <input type="checkbox" id="chk5" disabled>
+                                    <label for="chk5"><span class="text-white" style="background-color: #7d33b8">선택10</span></label>
+                                </div>
+                            </td>
+                            <td><img src="./images/serviceItem/icon_hearse.png"  class="mx-auto"alt=""></td>
                             <td class="leading-7">운구이송</td>
-                            <td class="leading-7">오동나무 1단관 1.0 이하</td>
+                            <td class="leading-7 bg-greenOpa1">오동나무 1단관 1.0 이하</td>
                             <td>
                                 <div class="w-40 inline-flex justify-between items-center">
                                     <button type="button"
@@ -194,9 +218,15 @@
                             <td><button type="button" class="btn btn-service-item">변경</button></td>
                         </tr>
                         <tr>
-                            <td><img src="./images/serviceItem/icon_bus.png" alt=""></td>
+                            <td>
+                                <div class="checkbox-normal chk ">
+                                    <input type="checkbox" id="chk6" disabled>
+                                    <label for="chk6"><span class="text-white" style="background-color: #b833aa">선택11</span></label>
+                                </div>
+                            </td>
+                            <td><img src="./images/serviceItem/icon_bus.png"  class="mx-auto" alt=""></td>
                             <td class="leading-7">버스/리무진</td>
-                            <td class="leading-7">오동나무횡대 1.5 이하 또는 <br>금전사송학봉안함</td>
+                            <td class="leading-7 bg-greenOpa1">오동나무횡대 1.5 이하 또는 <br>금전사송학봉안함</td>
                             <td>
                                 <div class="w-40 inline-flex justify-between items-center">
                                     <button type="button"
@@ -210,9 +240,15 @@
                             <td><button type="button" class="btn btn-service-item">상세</button></td>
                         </tr>
                         <tr class="not-selected">
-                            <td><img src="./images/serviceItem/icon_mourning_clothes.png" alt=""></td>
+                            <td>
+                                <div class="checkbox-normal chk ">
+                                    <input type="checkbox" id="chk7" disabled>
+                                    <label for="chk7"><span class="text-white" style="background-color: #d92424">선택12</span></label>
+                                </div>
+                            </td>
+                            <td><img src="./images/serviceItem/icon_mourning_clothes.png"  class="mx-auto" alt=""></td>
                             <td class="leading-7">상복</td>
-                            <td class="leading-7">-</td>
+                            <td class="leading-7 bg-greenOpa1">-</td>
                             <td>
                                 <div class="w-40 inline-flex justify-between items-center">
                                     <button type="button"
@@ -226,9 +262,15 @@
                             <td></td>
                         </tr>
                         <tr>
-                            <td><img src="./images/serviceItem/icon_urn.png" alt=""></td>
+                            <td>
+                                <div class="checkbox-normal chk">
+                                    <input type="checkbox" id="chk8">
+                                    <label for="chk8"><span class="text-white" style="background-color: #f16500">선택13</span></label>
+                                </div>
+                            </td>
+                            <td><img src="./images/serviceItem/icon_urn.png"  class="mx-auto" alt=""></td>
                             <td class="leading-7">봉인함</td>
-                            <td class="leading-7">옥스포드 관보</td>
+                            <td class="leading-7 bg-greenOpa1">옥스포드 관보</td>
                             <td>
                                 <div class="w-40 inline-flex justify-between items-center">
                                     <button type="button"
@@ -242,9 +284,15 @@
                             <td><button type="button" class="btn btn-service-item">초기화</button></td>
                         </tr>
                         <tr class="not-selected">
-                            <td><img src="./images/serviceItem/icon_obituary.png" alt=""></td>
+                            <td>
+                                <div class="checkbox-normal chk opacity-30	">
+                                    <input type="checkbox" id="chk9" disabled>
+                                    <label for="chk9"><span class="text-white" style="background-color: #d92424">선택12</span></label>
+                                </div>
+                            </td>
+                            <td><img src="./images/serviceItem/icon_obituary.png"  class="mx-auto" alt=""></td>
                             <td class="leading-7">관보</td>
-                            <td class="leading-7">-</td>
+                            <td class="leading-7 bg-greenOpa1">-</td>
                             <td>
                                 <div class="w-40 inline-flex justify-between items-center">
                                     <button type="button"
@@ -258,9 +306,15 @@
                             <td></td>
                         </tr>
                         <tr>
-                            <td><img src="./images/serviceItem/icon_crossbar.png" alt=""></td>
+                            <td>
+                                <div class="checkbox-normal chk">
+                                    <input type="checkbox" id="chk10" disabled>
+                                    <label for="chk10"><span class="text-white" style="background-color: #d92424">선택12</span></label>
+                                </div>
+                            </td>
+                            <td><img src="./images/serviceItem/icon_crossbar.png"  class="mx-auto" alt=""></td>
                             <td class="leading-7">횡대</td>
-                            <td class="leading-7">옥스포드 관보</td>
+                            <td class="leading-7 bg-greenOpa1">옥스포드 관보</td>
                             <td>
                                 <div class="w-40 inline-flex justify-between items-center">
                                     <button type="button"
@@ -274,9 +328,15 @@
                             <td><button type="button" class="btn btn-service-item">초기화</button></td>
                         </tr>
                         <tr class="not-selected">
-                            <td><img src="./images/serviceItem/icon_altar_decoration.png" alt=""></td>
+                            <td>
+                                <div class="checkbox-normal chk opacity-30	">
+                                    <input type="checkbox" id="chk11" disabled>
+                                    <label for="chk11"><span class="text-white" style="background-color: #d92424">선택12</span></label>
+                                </div>
+                            </td>
+                            <td><img src="./images/serviceItem/icon_altar_decoration.png"  class="mx-auto" alt=""></td>
                             <td class="leading-7">제단장식</td>
-                            <td class="leading-7">-</td>
+                            <td class="leading-7 bg-greenOpa1">-</td>
                             <td>
                                 <div class="w-40 inline-flex justify-between items-center">
                                     <button type="button"
@@ -290,9 +350,15 @@
                             <td></td>
                         </tr>
                         <tr>
-                            <td><img src="./images/serviceItem/icon_wreath.png" alt=""></td>
+                            <td>
+                                <div class="checkbox-normal chk">
+                                    <input type="checkbox" id="chk12">
+                                    <label for="chk12"><span class="text-white" style="background-color: #d92424">선택12</span></label>
+                                </div>
+                            </td>
+                            <td><img src="./images/serviceItem/icon_wreath.png"  class="mx-auto" alt=""></td>
                             <td class="leading-7">화환/근조</td>
-                            <td class="leading-7">옥스포드 관보</td>
+                            <td class="leading-7 bg-greenOpa1">옥스포드 관보</td>
                             <td>
                                 <div class="w-40 inline-flex justify-between items-center">
                                     <button type="button"
@@ -339,9 +405,9 @@
 
                     <tbody>
                         <tr>
-                            <td><img src="./images/serviceItem/icon_flower_offering.png" alt=""></td>
+                            <td><img src="./images/serviceItem/icon_flower_offering.png"  class="mx-auto" alt=""></td>
                             <td class="leading-7">헌화</td>
-                            <td class="leading-7">장례 진행</td>
+                            <td class="leading-7 bg-greenOpa1">장례 진행</td>
                             <td>
                                 <div class="w-40 inline-flex justify-between items-center">
                                     <button type="button"
@@ -355,9 +421,9 @@
                             <td>-</td>
                         </tr>
                         <tr>
-                            <td><img src="./images/serviceItem/icon_disposable_set.png" alt=""></td>
+                            <td><img src="./images/serviceItem/icon_disposable_set.png"  class="mx-auto" alt=""></td>
                             <td class="leading-7">일회용품<br />세트</td>
-                            <td class="leading-7">접객도우미</td>
+                            <td class="leading-7 bg-greenOpa1">접객도우미</td>
                             <td>
                                 <div class="w-40 inline-flex justify-between items-center">
                                     <button type="button"
@@ -371,9 +437,9 @@
                             <td>인/8시간</td>
                         </tr>
                         <tr>
-                            <td><img src="./images/serviceItem/icon_convenience_items.png" alt=""></td>
+                            <td><img src="./images/serviceItem/icon_convenience_items.png"  class="mx-auto" alt=""></td>
                             <td class="leading-7">상주편의용품</td>
-                            <td class="leading-7">상주편의용품</td>
+                            <td class="leading-7 bg-greenOpa1">상주편의용품</td>
                             <td>
                                 <div class="w-40 inline-flex justify-between items-center">
                                     <button type="button"
@@ -387,9 +453,9 @@
                             <td><button type="button" class="btn btn-service-item">변경</button></td>
                         </tr>
                         <tr>
-                            <td><img src="./images/serviceItem/icon_etc.png" alt=""></td>
+                            <td><img src="./images/serviceItem/icon_etc.png"  class="mx-auto" alt=""></td>
                             <td class="leading-7">기타용품일체</td>
-                            <td class="leading-7">기타용품일체</td>
+                            <td class="leading-7 bg-greenOpa1">기타용품일체</td>
                             <td>
                                 <div class="w-40 inline-flex justify-between items-center">
                                     <button type="button"
@@ -402,8 +468,118 @@
                             <td>0</td>
                             <td><button type="button" class="btn btn-service-item">변경</button></td>
                         </tr>
-
-
+                        <tr>
+                            <td><img src="./images/serviceItem/icon_flower_basket.png"  class="mx-auto" alt=""></td>
+                            <td class="leading-7">꽃바구니</td>
+                            <td class="leading-7 bg-greenOpa1">꽃바구니</td>
+                            <td>
+                                <div class="w-40 inline-flex justify-between items-center">
+                                    <button type="button"
+                                            class="button-counter button-decrease border-redOpa2 bg-redOpa1 invisible">-</button>
+                                    <span>1</span>
+                                    <button type="button"
+                                            class="button-counter button-increase border-blueOpa2 bg-blueOpa1">+</button>
+                                </div>
+                            </td>
+                            <td>0</td>
+                            <td><button type="button" class="btn btn-service-item">변경</button></td>
+                        </tr>
+                        <tr>
+                            <td><img src="./images/serviceItem/icon_funeral_assistant.png"  class="mx-auto" alt=""></td>
+                            <td class="leading-7">운구도우미</td>
+                            <td class="leading-7 bg-greenOpa1">운구도우미</td>
+                            <td>
+                                <div class="w-40 inline-flex justify-between items-center">
+                                    <button type="button"
+                                            class="button-counter button-decrease border-redOpa2 bg-redOpa1 invisible">-</button>
+                                    <span>1</span>
+                                    <button type="button"
+                                            class="button-counter button-increase border-blueOpa2 bg-blueOpa1">+</button>
+                                </div>
+                            </td>
+                            <td>0</td>
+                            <td><button type="button" class="btn btn-service-item">상세</button></td>
+                        </tr>
+                        <tr>
+                            <td><img src="./images/serviceItem/icon_embalming_royal.png"  class="mx-auto" alt=""></td>
+                            <td class="leading-7">궁중염습제</td>
+                            <td class="leading-7 bg-greenOpa1">궁중염습제</td>
+                            <td>
+                                <div class="w-40 inline-flex justify-between items-center">
+                                    <button type="button"
+                                            class="button-counter button-decrease border-redOpa2 bg-redOpa1 invisible">-</button>
+                                    <span>1</span>
+                                    <button type="button"
+                                            class="button-counter button-increase border-blueOpa2 bg-blueOpa1">+</button>
+                                </div>
+                            </td>
+                            <td>0</td>
+                            <td><button type="button" class="btn btn-service-item">상세</button></td>
+                        </tr>
+                        <tr>
+                            <td><img src="./images/serviceItem/icon_graveyard_helper.png"  class="mx-auto" alt=""></td>
+                            <td class="leading-7">장지도우미</td>
+                            <td class="leading-7 bg-greenOpa1">장지도우미</td>
+                            <td>
+                                <div class="w-40 inline-flex justify-between items-center">
+                                    <button type="button"
+                                            class="button-counter button-decrease border-redOpa2 bg-redOpa1 invisible">-</button>
+                                    <span>1</span>
+                                    <button type="button"
+                                            class="button-counter button-increase border-blueOpa2 bg-blueOpa1">+</button>
+                                </div>
+                            </td>
+                            <td>0</td>
+                            <td><button type="button" class="btn btn-service-item">상세</button></td>
+                        </tr>
+                        <tr>
+                            <td><img src="./images/serviceItem/icon_graveyard_helper_night.png"  class="mx-auto" alt=""></td>
+                            <td class="leading-7">장례도우미<br>(야간)</td>
+                            <td class="leading-7 bg-greenOpa1">장지도우미</td>
+                            <td>
+                                <div class="w-40 inline-flex justify-between items-center">
+                                    <button type="button"
+                                            class="button-counter button-decrease border-redOpa2 bg-redOpa1 invisible">-</button>
+                                    <span>1</span>
+                                    <button type="button"
+                                            class="button-counter button-increase border-blueOpa2 bg-blueOpa1">+</button>
+                                </div>
+                            </td>
+                            <td>0</td>
+                            <td><button type="button" class="btn btn-service-item">상세</button></td>
+                        </tr>
+                        <tr>
+                            <td><img src="./images/serviceItem/icon_limousine.png"  class="mx-auto" alt=""></td>
+                            <td class="leading-7">리무진</td>
+                            <td class="leading-7 bg-greenOpa1">리무진</td>
+                            <td>
+                                <div class="w-40 inline-flex justify-between items-center">
+                                    <button type="button"
+                                            class="button-counter button-decrease border-redOpa2 bg-redOpa1 invisible">-</button>
+                                    <span>1</span>
+                                    <button type="button"
+                                            class="button-counter button-increase border-blueOpa2 bg-blueOpa1">+</button>
+                                </div>
+                            </td>
+                            <td>0</td>
+                            <td><button type="button" class="btn btn-service-item">상세</button></td>
+                        </tr>
+                        <tr>
+                            <td><img src="./images/serviceItem/icon_coffin_supplies.png"  class="mx-auto" alt=""></td>
+                            <td class="leading-7">입관용품</td>
+                            <td class="leading-7 bg-greenOpa1">입관용품</td>
+                            <td>
+                                <div class="w-40 inline-flex justify-between items-center">
+                                    <button type="button"
+                                            class="button-counter button-decrease border-redOpa2 bg-redOpa1 invisible">-</button>
+                                    <span>1</span>
+                                    <button type="button"
+                                            class="button-counter button-increase border-blueOpa2 bg-blueOpa1">+</button>
+                                </div>
+                            </td>
+                            <td>0</td>
+                            <td><button type="button" class="btn btn-service-item">상세</button></td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
