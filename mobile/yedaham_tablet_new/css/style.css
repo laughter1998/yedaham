@@ -924,7 +924,14 @@ nav.sub-navi a.current {
         white-space: nowrap;
     }
 
-
+    .list-table.list-table-small.py-lg thead.head-lg tr th {
+        min-height: 64px;
+        padding: 8px;
+        vertical-align: middle;
+    }
+    .list-table.list-table-small.py-lg thead.head-lg tr:first-child th {
+        border-bottom: 1px solid transparent;
+    }
 
     /* 상품정보 서비스 품목 table */
 
@@ -1005,7 +1012,6 @@ nav.sub-navi a.current {
     }
     .view-table-style2 td {
         padding: 4px 8px;
-        background-color: #fff;
         border-bottom: 1px solid #ccc;
         vertical-align: middle;
     }

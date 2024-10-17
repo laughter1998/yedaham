@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <title>의전진행관리</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./js/tailwind-config.js"></script>
+    <link rel="stylesheet" href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-neo.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+
+
+    <!-- 상단 고정 영역 -->
+    <header>
+        <div class="header-logo">
+            <img src="./images/header-logo.png" alt="예다함">
+            의전진행관리
+        </div>
+        <div class="header-title">상품정보</div>
+        <div class="header-menu">
+            <!-- <a href="#" class="home">조회</a> -->
+            <nav>
+                <a href="#">관리메인</a>
+                <!--
+                <a href="#">업무관리</a>
+                <a href="#">투입관리</a>
+                <a href="#">철수관리</a>
+                -->
+            </nav>
+            <a href="#" class="logout">로그아웃</a>
+        </div>
+    </header>
+
+
+    <main>
+        <section class="p-2 text-right">
+            <button type="button" class="w-64 border-2 border-999 rounded-lg h-14 bg-white text-333">상세</button>
+            <button type="button" class="w-64 border-2 border-999 rounded-lg h-14 bg-white text-333">의전상품안내</button>
+            <button type="button" class="w-64 rounded-lg h-14 bg-blueMain text-white">저장</button>
+        </section>
+
+        <section>
+            <nav class="sub-navi">
+                <a href="#" class="w-[205px] grow  ">고인/상주/장지정보</a>
+                <a href="#" class="w-[205px] ">장례일정</a>
+                <a href="#" class="w-[205px] ">진행사항</a>
+                <a href="#" class="w-[205px] current">인력정보</a>
+                <a href="#" class="w-[205px]">의전물품관리</a>
+                <a href="#" class="w-[205px]">의전결산정보</a>
+            </nav>
+            <h5 class="py-2 px-3 bg-f5 text-333 leading-6">&#8231;FD</h5>
+            <article>
+
+            </article>
+            <table class="view-table-style2 table-fixed border-t-2 border-666">
+                <colgroup>
+                    <col class="w-[140px]" />
+                    <col class="w-[180px]" />
+                    <col class="w-[140px]" />
+                    <col class="w-[180px]" />
+                    <col class="w-[140px]" />
+                    <col class="w-[180px]" />
+                    <col class="w-[140px]" />
+                    <col class="w-[180px]" />
+                </colgroup>
+                <tr>
+                    <th>팀장1</th>
+                    <td colspan="3">
+                        <div class="flex items-center gap-2 h-12">
+                            <span class="grow">홍길동</span>
+                            <button><img src="./images/btn_popup.png" alt=""> </button>
+                        </div>
+                    </td>
+                    <th>팀장2</th>
+                    <td colspan="3">
+                        <div class="flex items-center gap-2 h-12">
+                            <span class="grow">홍길동</span>
+                            <button><img src="./images/btn_popup.png" alt=""> </button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="h-16">관할지부</th>
+                    <td>서울시</td>
+                    <th>진행지부</th>
+                    <td>서울시</td>
+                    <th>진행지부장</th>
+                    <td>홍길동</td>
+                    <th>진행업체</th>
+                    <td>서울시</td>
+                </tr>
+
+            </table>
+
+            <h5 class="py-2 px-3 bg-f5 text-333 leading-6">&#8231;인력관리</h5>
+            <div class="overflow-y-auto">
+                <table class="list-table list-table-small py-lg table-fixed table-striped  border-t-2 border-666 !w-auto">
+                    <colgroup>
+                        <col class="min-w-[80px]" />
+                        <col class="min-w-[140px]" />
+                        <col class="min-w-[140px]" />
+                        <col class="min-w-[140px]" />
+                        <col class="min-w-[160px]" />
+                        <col />
+                        <col />
+                        <col class="min-w-[240px]"/>
+                        <col class="min-w-[240px]"/>
+                        <col class="min-w-[140px]"/>
+                        <col class="min-w-[140px]"/>
+                    </colgroup>
+                    <thead class="head-lg">
+                        <tr>
+                            <th rowspan="2">NO</th>
+                            <th>일차</th>
+                            <th>유형</th>
+                            <th>업무</th>
+                            <th>성명</th>
+                            <th>소속지부</th>
+                            <th>업체명</th>
+                            <th>시작일시</th>
+                            <th>종료일시</th>
+                            <th>비용</th>
+                            <th><button type="button" class="h-12 w-40 border-2 border-blue2 rounded-lg bg-blueOpa2 text-blue text-2xl">본인</button></th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <select class="form-select ">
+                                    <option value="" >선택</option>
+                                    <option value="">1</option>
+                                    <option value="">2</option>
+                                    <option value="">3</option>
+                                </select>
+                            </th>
+                            <th>
+                                <select class="form-select ">
+                                    <option value="" >선택</option>
+                                    <option value="">의전진행</option>
+                                    <option value="">의전지원</option>
+                                    <option value="">미출동</option>
+                                    <option value="">취소</option>
+                                </select>
+                            </th>
+                            <th>
+                                <select class="form-select ">
+                                    <option value="" >선택</option>
+                                    <option value="">초도</option>
+                                    <option value="">발인</option>
+                                </select>
+                            </th>
+                            <th>
+                                <div class="flex items-center gap-2 h-12">
+                                    <span class="grow">홍길동</span>
+                                    <button><img src="./images/btn_popup.png" alt=""> </button>
+                                </div>
+                            </th>
+                            <th></th>
+                            <th></th>
+                            <th>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" value="2022-12-24" placeholder="">
+                                    <span class="btn-calendar"><img src="./images/icon_calendar.png" alt=""></span>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" value="2022-12-24" placeholder="">
+                                    <span class="btn-calendar"><img src="./images/icon_calendar.png" alt=""></span>
+                                </div>
+                            </th>
+                            <th>
+                                <select class="form-select ">
+                                    <option value="" >선택</option>
+                                    <option value="">1</option>
+                                    <option value="">2</option>
+                                    <option value="">3</option>
+                                </select>
+                            </th>
+                            <th>
+                                <div class="flex gap-x-1">
+                                    <button type="button" class="h-12  border-2 border-ccc rounded-lg text-333 text-2xl bg-white grow">초기화</button>
+                                    <button type="button" class="h-12  border-2 border-ccc rounded-lg text-333 text-2xl bg-white grow">저장</button>
+                                </div>
+                            </th>
+                        </tr>
+                    </thead>
+                   <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>1일차</td>
+                        <td>의전진행</td>
+                        <td>초도</td>
+                        <td>홍길동</td>
+                        <td>경기지부</td>
+                        <td>상조24</td>
+                        <td><span class="block text-base">2024</span>05-05 20:00</td>
+                        <td><span class="block text-base">2024</span>05-05 20:00</td>
+                        <td>상조24</td>
+                        <td>
+                            <div class="flex gap-x-1">
+                                <button type="button" class="h-12  border-2 border-ccc rounded-lg text-333 text-2xl bg-white grow">수정</button>
+                                <button type="button" class="h-12  border-2 border-ccc rounded-lg text-333 text-2xl bg-white grow">삭제</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>1일차</td>
+                        <td>의전진행</td>
+                        <td>초도</td>
+                        <td>홍길동</td>
+                        <td>경기지부</td>
+                        <td>상조24</td>
+                        <td><span class="block text-base">2024</span>05-05 20:00</td>
+                        <td><span class="block text-base">2024</span>05-05 20:00</td>
+                        <td>상조24</td>
+                        <td>
+                            <div class="flex gap-x-1">
+                                <button type="button" class="h-12  border-2 border-ccc rounded-lg text-333 text-2xl bg-white grow">수정</button>
+                                <button type="button" class="h-12  border-2 border-ccc rounded-lg text-333 text-2xl bg-white grow">삭제</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>1일차</td>
+                        <td>의전진행</td>
+                        <td>초도</td>
+                        <td>홍길동</td>
+                        <td>경기지부</td>
+                        <td>상조24</td>
+                        <td><span class="block text-base">2024</span>05-05 20:00</td>
+                        <td><span class="block text-base">2024</span>05-05 20:00</td>
+                        <td>상조24</td>
+                        <td>
+                            <div class="flex gap-x-1">
+                                <button type="button" class="h-12  border-2 border-ccc rounded-lg text-333 text-2xl bg-white grow">수정</button>
+                                <button type="button" class="h-12  border-2 border-ccc rounded-lg text-333 text-2xl bg-white grow">삭제</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>1일차</td>
+                        <td>의전진행</td>
+                        <td>초도</td>
+                        <td>홍길동</td>
+                        <td>경기지부</td>
+                        <td>상조24</td>
+                        <td><span class="block text-base">2024</span>05-05 20:00</td>
+                        <td><span class="block text-base">2024</span>05-05 20:00</td>
+                        <td>상조24</td>
+                        <td>
+                            <div class="flex gap-x-1">
+                                <button type="button" class="h-12  border-2 border-ccc rounded-lg text-333 text-2xl bg-white grow">수정</button>
+                                <button type="button" class="h-12  border-2 border-ccc rounded-lg text-333 text-2xl bg-white grow">삭제</button>
+                            </div>
+                        </td>
+                    </tr>
+                   </tbody>
+                </table>
+            </div>
+            <h5 class="py-2 px-3 bg-f5 text-333 leading-6 flex justify-between items-center">
+                &#8231;장례도우미 관리
+                <button type="button" class="border-2 border-blueMain text-blueMain rounded-lg h-12 px-6" onclick="showLargeDialog()">장례도우미 조회</button>
+            </h5>
+            <div class="overflow-y-auto">
+                <table class="list-table list-table-small py-lg table-fixed table-striped  border-t-2 border-666 !w-auto">
+                    <colgroup>
+                        <col class="min-w-[80px]" />
+                        <col class="min-w-[140px]" />
+                        <col class="min-w-[140px]" />
+                        <col class="min-w-[160px]" />
+                        <col />
+                        <col />
+                        <col />
+                        <col class="min-w-[240px]"/>
+                        <col class="min-w-[240px]"/>
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                        <col />
+                        <col class="min-w-[140px]"/>
+                        <col class="min-w-[140px]"/>
+                        <col class="min-w-[140px]"/>
+                        <col class="min-w-[176px]"/>
+                    </colgroup>
+                    <thead class="head-lg">
+                    <tr>
+                        <th rowspan="2">NO</th>
+                        <th>유형</th>
+                        <th>업무</th>
+                        <th>성명</th>
+                        <th>생년월일</th>
+                        <th>소속지부</th>
+                        <th>서명여부</th>
+                        <th colspan="3">근무시간</th>
+                        <th>상품기준 <br>(시간)</th>
+                        <th>주간 <br>(시간)</th>
+                        <th>야간<br>(시간)</th>
+                        <th>추가비용 <br>(원)</th>
+                        <th>반영형태</th>
+                        <th>야간항목</th>
+                        <th>추가교통비</th>
+                        <th>비고</th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <select class="form-select ">
+                                <option value="" >선택</option>
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                            </select>
+                        </th>
+                        <th>
+                            <select class="form-select ">
+                                <option value="" >선택</option>
+                                <option value="">의전진행</option>
+                                <option value="">의전지원</option>
+                                <option value="">미출동</option>
+                                <option value="">취소</option>
+                            </select>
+                        </th>
+                        <th>
+                            <div class="flex items-center gap-2 h-12">
+                                <span class="grow">홍길동</span>
+                                <button><img src="./images/btn_popup.png" alt=""> </button>
+                            </div>
+                        </th>
+                        <th>
+
+                        </th>
+                        <th></th>
+                        <th></th>
+                        <th>
+                            <div class="input-group">
+                                <input type="text" class="form-control" value="2022-12-24" placeholder="">
+                                <span class="btn-calendar"><img src="./images/icon_calendar.png" alt=""></span>
+                            </div>
+                        </th>
+                        <th>
+                            <div class="input-group">
+                                <input type="text" class="form-control" value="2022-12-24" placeholder="">
+                                <span class="btn-calendar"><img src="./images/icon_calendar.png" alt=""></span>
+                            </div>
+                        </th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th>
+                            <select class="form-select ">
+                                <option value="" >선택</option>
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                            </select>
+                        </th>
+                        <th>
+                            <select class="form-select ">
+                                <option value="" >선택</option>
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                            </select>
+                        </th>
+                        <th>
+                            <select class="form-select ">
+                                <option value="" >선택</option>
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                            </select>
+                        </th>
+                        <th>
+                            <div class="flex gap-x-1">
+                                <button type="button" class="h-12  border-2 border-ccc rounded-lg text-333 text-2xl bg-white grow">초기화</button>
+                                <button type="button" class="h-12  border-2 border-ccc rounded-lg text-333 text-2xl bg-white grow">저장</button>
+                            </div>
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>의전진행</td>
+                        <td>일반</td>
+                        <td>홍길동</td>
+                        <td>990101</td>
+                        <td>경기지부</td>
+                        <td>완료</td>
+                        <td><span class="block text-base">2024</span>05-05 20:00</td>
+                        <td><span class="block text-base">2024</span>05-05 20:00</td>
+                        <td>24</td>
+                        <td>12</td>
+                        <td>11</td>
+                        <td>11</td>
+                        <td>13,000</td>
+                        <td>귀속1시간</td>
+                        <td>야간시간제</td>
+                        <td>추가교통비10</td>
+                        <td>
+                            <div class="flex gap-x-1">
+                                <button type="button" class="h-12  border-2 border-ccc rounded-lg text-333 text-2xl bg-white grow">수정</button>
+                                <button type="button" class="h-12  border-2 border-ccc rounded-lg text-333 text-2xl bg-white grow">삭제</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>의전진행</td>
+                        <td>일반</td>
+                        <td>홍길동</td>
+                        <td>990101</td>
+                        <td>경기지부</td>
+                        <td>완료</td>
+                        <td><span class="block text-base">2024</span>05-05 20:00</td>
+                        <td><span class="block text-base">2024</span>05-05 20:00</td>
+                        <td>24</td>
+                        <td>12</td>
+                        <td>11</td>
+                        <td>11</td>
+                        <td>13,000</td>
+                        <td>귀속1시간</td>
+                        <td>야간시간제</td>
+                        <td>추가교통비10</td>
+                        <td>
+                            <div class="flex gap-x-1">
+                                <button type="button" class="h-12  border-2 border-ccc rounded-lg text-333 text-2xl bg-white grow">수정</button>
+                                <button type="button" class="h-12  border-2 border-ccc rounded-lg text-333 text-2xl bg-white grow">삭제</button>
+                            </div>
+                        </td>
+                    </tr><tr>
+                        <td>1</td>
+                        <td>의전진행</td>
+                        <td>일반</td>
+                        <td>홍길동</td>
+                        <td>990101</td>
+                        <td>경기지부</td>
+                        <td><button type="button" class="w-20 h-12  border-2 border-ccc rounded-lg text-333 text-2xl bg-white ">서명</button></td>
+                        <td><span class="block text-base">2024</span>05-05 20:00</td>
+                        <td><span class="block text-base">2024</span>05-05 20:00</td>
+                        <td>24</td>
+                        <td>12</td>
+                        <td>11</td>
+                        <td>11</td>
+                        <td>13,000</td>
+                        <td>귀속1시간</td>
+                        <td>야간시간제</td>
+                        <td>추가교통비10</td>
+                        <td>
+                            <div class="flex gap-x-1">
+                                <button type="button" class="h-12  border-2 border-ccc rounded-lg text-333 text-2xl bg-white grow">수정</button>
+                                <button type="button" class="h-12  border-2 border-ccc rounded-lg text-333 text-2xl bg-white grow">삭제</button>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="flex border-t border-b border-666 ">
+            <div class="flex justify-center items-center w-1/2 h-[80px] bg-blueOpa4 text-333">추가비용 총합</div>
+            <div class="flex justify-center items-center w-1/2 h-[80px] text-666">330,000</div>
+        </section>
+    </main>
+
+</body>
+
+</html>
