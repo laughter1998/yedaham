@@ -24,7 +24,7 @@
             <img src="./images/header-logo.png" alt="예다함">
             의전진행관리
         </div>
-        <div class="header-title">상품정보</div>
+        <div class="header-title">의전정보</div>
         <div class="header-menu">
             <!-- <a href="#" class="home">조회</a> -->
             <nav>
@@ -476,7 +476,7 @@
         </section>
     </main>
 
-<dialog class="dialog-large">
+<dialog class="dialog-large z-20">
     <div class="dialog-wrap">
         <section class="flex justify-between items-center bg-blueOpa1 h-12 px-2">
             <h5 class="text-32">장례도우미 인력 투입 현황</h5>
@@ -497,27 +497,29 @@
             </section>
 
             <section class="mt-10 pb-10">
-                <table class="view-table-style2 table-fixed w-auto mx-auto mt-4 ">
+                <table class="view-table-style2 table-fixed">
                     <colgroup>
                         <col class="w-[210px]">
                         <col class="w-[220px]">
                         <col class="w-[210px]">
                         <col class="w-[220px]">
                         <col class="w-[210px]">
-                        <col class="w-[220px]">
-                        <col>
+                        <col >
                     </colgroup>
-                    <tbody><tr>
-                        <th class="border-y !border-666 h-14">성명</th>
-                        <td class="border-y !border-666"><p class="flex items-center justify-center h-12 text-ccc">서명</p></td>
-                        <th class="border-y !border-666">의전 담당자(팀장)</th>
-                        <td class="border-y !border-666">
-                            <!--                        <p class="flex items-center justify-center h-12 text-ccc">서명</p>-->
-                            <p class="flex items-center justify-center h-12 ">
-                                <img src="https://cdn.pixabay.com/photo/2014/11/09/08/06/signature-523237_1280.jpg" class="h-full object-contain" alt="">
-                            </p>
-                        </td>
-                    </tr>
+                    <tbody>
+                        <tr>
+                            <th class="border-y !border-666 h-14">성명</th>
+                            <td class="border-y !border-666"><input type="text" class="form-control" value="" placeholder=""></td>
+                            <th class="border-y !border-666">생년월일</th>
+                            <td class="border-y !border-666"><input type="number" class="form-control" value="" maxlength="8" placeholder=""></td>
+                            <th class="border-y !border-666">서명</th>
+                            <td class="border-y !border-666">
+                                <p class="flex items-center justify-center h-12 text-ccc">서명</p>
+    <!--                            <p class="flex items-center justify-center h-12 ">-->
+    <!--                                <img src="https://cdn.pixabay.com/photo/2014/11/09/08/06/signature-523237_1280.jpg" class="h-full object-contain" alt="">-->
+    <!--                            </p>-->
+                            </td>
+                        </tr>
 
                     </tbody>
                 </table>

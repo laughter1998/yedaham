@@ -16,7 +16,7 @@
 
 <body>
 
-<button type="button" onclick="showLargeDialog()"         style="position:fixed;left:0;top:0px;height:150px;width:500px;background-color:#fff;z-index:111;border:1px solid #000;">사용확인서</button>
+<button type="button" onclick="showLargeDialog()"         style="position:fixed;left:0;top:0px;height:150px;width:500px;background-color:#fff;z-index:111;border:1px solid #000;">의전시작문자발송</button>
 
     <!-- 상단 고정 영역 -->
     <header>
@@ -459,158 +459,301 @@
         </section>
     </main>
 
-<dialog class="dialog-large">
+<dialog class="dialog-large " open style="z-index:1000;">
     <div class="dialog-wrap">
         <section class="flex justify-between items-center bg-blueOpa1 h-12 px-2">
-            <h5 class="text-32">사용확인서</h5>
+            <h5 class="text-32">의전시작문자발송</h5>
             <button type="button" class="btn-modal-close " onclick="claseLargeDialog()">X</button>
         </section>
 
         <div class="overflow-y-auto h-calc-200">
             <section >
-                <h5 class="py-2 px-3 bg-f5 text-333 leading-6">&#8231;의전사항</h5>
-                <table class="view-table-style2 table-fixed border-t-2 border-666">
+                <table class="view-table-style2 table-fixed">
                     <colgroup>
                         <col class="w-[180px]" />
-                        <col/>
+                        <col class="w-[140px]" />
                         <col class="w-[180px]" />
-                        <col/>
+                        <col class="w-[140px]" />
                         <col class="w-[180px]" />
-                        <col/>
+                        <col class="w-[140px]" />
+                        <col class="w-[180px]" />
+                        <col class="w-[140px]" />
                     </colgroup>
                     <tr>
-                        <th>회원명</th>
-                        <td>이*민</td>
-                        <th>증서번호</th>
-                        <td>1079525</td>
+                        <th>의전번호</th>
+                        <td colspan="3">1079525</td>
+                        <th>성명</th>
+                        <td colspan="2">홍길동</td>
+                        <td class="border-l border-ccc" >남</td>
+                    </tr>
+                    <tr>
                         <th>장례식장</th>
-                        <td>강동성심병원장례식장</td>
+                        <td colspan="2">중앙대병원장례식장</td>
+                        <td class=" border-l border-ccc">1호실</td>
+                        <th>주소</th>
+                        <td colspan="3">경기도</td>
                     </tr>
                     <tr>
-                        <th>고인성명</th>
-                        <td>이민</td>
-                        <th>접수일자</th>
-                        <td>2022-12-24</td>
-                        <th>발인일자</th>
-                        <td>2022-12-24</td>
-                    </tr>
-                </table>
-                <h5 class="py-2 px-3 bg-f5 text-333 leading-6">&#8231;사용내역</h5>
-                <table class="view-table-style2 table-fixed border-t-2 border-666">
-                    <colgroup>
-                        <col class="w-[180px]" />
-                        <col/>
-                        <col class="w-[180px]" />
-                        <col/>
-                        <col class="w-[180px]" />
-                        <col/>
-                    </colgroup>
-                    <tr>
-                        <th>대상품목</th>
-                        <td class="bg-blueOpa3" colspan="2">장지안내</td>
-                        <td class="bg-blueOpa3">제공</td>
-                        <th>장례식장</th>
-                        <td>강동성심병원장례식장</td>
+                        <th>입관일시</th>
+                        <td colspan="3">2023-02-15 12:40</td>
+                        <th>발인일시</th>
+                        <td colspan="3">2023-02-15 12:40</td>
                     </tr>
                     <tr>
-                        <th>정가</th>
-                        <td>20,000,000</td>
-                        <th>할인금액(원)</th>
-                        <td>6,000,000</td>
-                        <th>처리방법</th>
-                        <td>현장즉시할인</td>
+                        <th>화장장</th>
+                        <td colspan="2">이하늘화장</td>
+                        <td class="text-base border-l border-ccc">2023-02-15<br>12:40</td>
+                        <th>장지1</th>
+                        <td colspan="3">장지1</td>
                     </tr>
                     <tr>
-                        <td colspan="6"></td>
+                        <th>본관</th>
+                        <td colspan="3">본관</td>
+                        <th>장지2</th>
+                        <td colspan="3">장지2</td>
                     </tr>
                     <tr>
-                        <th>대상품목</th>
-                        <td class="bg-blueOpa3" colspan="2">장지안내</td>
-                        <td class="bg-blueOpa3">제공</td>
-                        <th>장례식장</th>
-                        <td>강동성심병원장례식장</td>
+                        <th>종교</th>
+                        <td colspan="3">종교</td>
+                        <th>직분/세례명</th>
+                        <td colspan="3">직분/세례명</td>
                     </tr>
                     <tr>
-                        <th>정가</th>
-                        <td>20,000,000</td>
-                        <th>할인금액(원)</th>
-                        <td>6,000,000</td>
-                        <th>처리방법</th>
-                        <td>현장즉시할인</td>
+                        <th>리무진</th>
+                        <td colspan="3">리무진</td>
+                        <th>버스</th>
+                        <td colspan="3">버스</td>
                     </tr>
                     <tr>
-                        <td colspan="6"></td>
+                        <th>상품명</th>
+                        <td colspan="3">상품명</td>
+                        <th>팀장1</th>
+                        <td colspan="3">팀장1</td>
                     </tr>
                     <tr>
-                        <th>대상품목</th>
-                        <td class="bg-redLightOpa" colspan="2">장지음식업체</td>
-                        <td class="bg-redLightOpa">미사용</td>
-                        <th>장례식장</th>
-                        <td>강동성심병원장례식장</td>
+                        <th class="leading-6">상품기준<br>(시간)</th>
+                        <td >1</td>
+                        <th class="leading-6">주가<br>(시간)</th>
+                        <td >1</td>
+                        <th class="leading-6">야간<br>(시간)</th>
+                        <td >1</td>
+                        <th class="leading-6">합산<br>(시간)</th>
+                        <td >1</td>
                     </tr>
                     <tr>
-                        <th>정가</th>
-                        <td>해당없음</td>
-                        <th>할인금액(원)</th>
-                        <td class="text-red">할인없음</td>
-                        <th>처리방법</th>
-                        <td>해당없음</td>
-                    </tr>
-                    <tr>
-                        <td colspan="6"></td>
-                    </tr>
-                    <tr>
-                        <th>대상품목</th>
-                        <td class="bg-redLightOpa" colspan="2">장지음식업체</td>
-                        <td class="bg-redLightOpa">미사용</td>
-                        <th>장례식장</th>
-                        <td>강동성심병원장례식장</td>
-                    </tr>
-                    <tr>
-                        <th>정가</th>
-                        <td>해당없음</td>
-                        <th>할인금액(원)</th>
-                        <td class="text-red">할인없음</td>
-                        <th>처리방법</th>
-                        <td>해당없음</td>
+                        <th class="h-48">전달사항</th>
+                        <td colspan="7"></td>
                     </tr>
                 </table>
             </section>
 
-            <section class="mt-10 pb-10">
-                <div class="text-666 text-center">
-                    위 항목의 사용 내역이 맞음을 확인 하였으며, 명기한 혜택을 받았습니다.
+            <nav class="sub-navi mt-4 border-b border-ccc">
+                <a href="#" class="w-[300px]   ">이름별</a>
+                <a href="#" class="w-[300px] current">그룹별</a>
+            </nav>
+            <section class="filter-group">
+                <div class="filter-tables">
+                    <table class=" filter-table">
+                        <colgroup>
+                            <col class="w-1/2">
+                            <col class="w-1/2">
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <td>
+                                <div class="input-group ">
+                                    <label class="w-28">성명</label>
+                                    <select class="form-select flex-1" >
+                                        <option value="">선택</option>
+
+                                    </select>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="input-group ">
+                                    <label class="w-28">주민번호</label>
+                                    <select class="form-select flex-1" >
+                                        <option value="">선택</option>
+
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+
+                            <td>
+                                <div class="input-group ">
+                                    <label class="w-28">전화번호</label>
+                                    <select class="form-select 	flex-1" >
+                                        <option value="">선택</option>
+
+                                    </select>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="input-group ">
+                                    <label class="w-28">전화번호</label>
+                                    <input type="text" class="form-control" placeholder="전화번호를 입력해주세요.">
+                                    <button type="button" class="btn btn-input-clear">초기화</button>
+                                </div>
+                            </td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="filter-button"><button type="button" class="btn btn-filter">조회하기 <span>(999)</span></button>
+                </div>
+            </section><!-- // class="filter-table-group" -->
+
+            <section class="flex gap-x-4 items-stretch">
+                <div>
+                    <table class="list-table list-table-small  table-striped table-fixed ">
+                        <colgroup>
+                            <col class="w-24"/>
+                            <col/>
+                            <col/>
+                            <col class="w-[150px]"/>
+                            <col/>
+                        </colgroup>
+
+                        <thead>
+                            <tr>
+                                <th class="flex  justify-center items-center h-14">
+                                    <div class="checkbox-normal ">
+                                        <input type="checkbox" id="chkAll" >
+                                        <label for="chkAll" >선택</label>
+                                    </div>
+                                </th>
+                                <th>사번</th>
+                                <th>이름</th>
+                                <th>연락처</th>
+                                <th>부서</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="checkbox-normal ">
+                                        <input type="checkbox" id="chk1">
+                                        <label for="chk1" class=" before:!mx-auto "></label>
+                                    </div>
+                                </td>
+                                <td class="!text-base">12121212</td>
+                                <td class="!text-base">김동석</td>
+                                <td class="!text-base">010-2222-3333</td>
+                                <td class="!text-base">영업부</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="checkbox-normal ">
+                                        <input type="checkbox" id="chk2">
+                                        <label for="chk2" class=" before:!mx-auto "></label>
+                                    </div>
+                                </td>
+                                <td class="!text-base">12121212</td>
+                                <td class="!text-base">김동석</td>
+                                <td class="!text-base">010-2222-3333</td>
+                                <td class="!text-base">영업부</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="checkbox-normal ">
+                                        <input type="checkbox" id="chk3">
+                                        <label for="chk3" class=" before:!mx-auto "></label>
+                                    </div>
+                                </td>
+                                <td class="!text-base">12121212</td>
+                                <td class="!text-base">김동석</td>
+                                <td class="!text-base">010-2222-3333</td>
+                                <td class="!text-base">영업부</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="checkbox-normal ">
+                                        <input type="checkbox" id="chk4">
+                                        <label for="chk4" class=" before:!mx-auto "></label>
+                                    </div>
+                                </td>
+                                <td class="!text-base">12121212</td>
+                                <td class="!text-base">김동석</td>
+                                <td class="!text-base">010-2222-3333</td>
+                                <td class="!text-base">영업부</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="checkbox-normal ">
+                                        <input type="checkbox" id="chk5">
+                                        <label for="chk5" class=" before:!mx-auto "></label>
+                                    </div>
+                                </td>
+                                <td class="!text-base">12121212</td>
+                                <td class="!text-base">김동석</td>
+                                <td class="!text-base">010-2222-3333</td>
+                                <td class="!text-base">영업부</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="checkbox-normal ">
+                                        <input type="checkbox" id="chk6">
+                                        <label for="chk6" class=" before:!mx-auto "></label>
+                                    </div>
+                                </td>
+                                <td class="!text-base">12121212</td>
+                                <td class="!text-base">김동석</td>
+                                <td class="!text-base">010-2222-3333</td>
+                                <td class="!text-base">영업부</td>
+                            </tr>
+
+
+
+                        </tbody>
+                    </table>
                 </div>
 
-                <table class="view-table-style2 table-fixed w-auto mx-auto mt-4 ">
-                    <colgroup>
-                        <col class="w-[220px]">
-                        <col class="w-[220px]">
-                        <col class="w-[220px]">
-                        <col class="w-[220px]">
-                        <col>
-                    </colgroup>
-                    <tbody><tr>
-                        <th class="border-y !border-666 h-14">의 서명인(상주)</th>
-                        <td class="border-y !border-666"><p class="flex items-center justify-center h-12 text-ccc">서명</p></td>
-                        <th class="border-y !border-666">의전 담당자(팀장)</th>
-                        <td class="border-y !border-666">
-                            <!--                        <p class="flex items-center justify-center h-12 text-ccc">서명</p>-->
-                            <p class="flex items-center justify-center h-12 ">
-                                <img src="https://cdn.pixabay.com/photo/2014/11/09/08/06/signature-523237_1280.jpg" class="h-full object-contain" alt="">
-                            </p>
-                        </td>
-                    </tr>
+                <div class="flex flex-col justify-center gap-y-4">
+                    <button type="button">> </button>
+                    <button type="button">< </button>
+                </div>
 
-                    </tbody>
-                </table>
+                <div>
+                    <table class="list-table list-table-small  table-striped table-fixed ">
+                        <colgroup>
+                            <col class="w-24"/>
+                            <col/>
+                            <col/>
+                            <col/>
+                        </colgroup>
 
+                        <thead>
+                        <tr>
+                            <th class="flex  justify-center items-center h-14">
+                                <div class="checkbox-normal">
+                                    <input type="checkbox" id="chkAllR" >
+                                    <label for="chkAllR" >선택</label>
+                                </div>
+                            </th>
+                            <th>사번</th>
+                            <th>이름</th>
+                            <th>연락처</th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            <section class="flex items-stretch h-[90px] mt-4 border-y border-ccc">
+                <div class="flex justify-center items-center w-1/2 bg-ddd ">발신번호</div>
+                <div class="flex justify-center items-center w-1/2"></div>
             </section>
         </div>
 
         <section class="bottom-btns absolute left-0 right-0 bottom-0">
             <button type="button" class="btn btn-bottom bg-666" onclick="claseLargeDialog()">닫기</button>
-            <button type="button" class="btn btn-bottom bg-blueMain" >저장</button>
+            <button type="button" class="btn btn-bottom bg-blueMain" >발송하기</button>
         </section>
 
     </div>

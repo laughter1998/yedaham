@@ -862,6 +862,7 @@ nav.sub-navi a.current {
         border-bottom: solid 1px #999;
         background-color: rgba(221, 221, 221);
         color:#333333;
+        vertical-align: middle;
 
     }
     .list-table th::after {
@@ -884,8 +885,8 @@ nav.sub-navi a.current {
         width: 1px;
         background-color: #d9d9d9;
     }
-    .list-table th:last-child::after,
-    .list-table td:last-child::after {
+    .list-table tr th:last-child::after,
+    .list-table tr td:last-child::after {
         display: none;
     }
     .list-table tbody tr td {
@@ -1328,6 +1329,7 @@ nav.sub-navi a.current {
         background-color: #fff;
         background-image: url('../images/bg_checkbox.png');
         transition:all 0.3s ease;
+        border-radius: 6px;
     }
 
     /* 체크박스가 체크된 경우 */
