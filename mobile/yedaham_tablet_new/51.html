@@ -111,56 +111,57 @@
             <table class="view-table-style2 table-fixed border-t-2 border-666">
                 <colgroup>
                     <col class="w-[180px]" />
-                    <col class="w-[460px]" />
+                    <col class="w-[246px]" />
                     <col class="w-[180px]" />
-                    <col class="w-[460px]" />
+                    <col class="w-[32px]" />
                     <col class="w-[180px]" />
-                    <col class="w-[460px]" />
+                    <col />
+                    <col class="w-[180px]" />
+                    <col class="w-[248px]"/>
                 </colgroup>
                     <tr>
                         <th>출금계좌동일</th>
-                        <td></td>
+                        <td>
+                            <div class="flex gap-1">
+                                <label class="radio-button radio-style2" for="a1">
+                                    <input type="radio" name="ae" id="a1" checked="checked">
+                                    <span>동일</span>
+                                </label>
+                                <label class="radio-button radio-style2" for="a2">
+                                    <input type="radio" name="ae" id="a2">
+                                    <span>미동일</span>
+                                </label>
+                            </div>
+                        </td>
                         <th>송금은행</th>
-                        <td></td>
+                        <td colspan="3">
+                            <select class="form-select" disabled>
+                                <option value="">선택</option>
+                            </select>
+                        </td>
                         <th>예금주</th>
-                        <td></td>
+                        <td><input type="text" class="form-control" value="" placeholder="" disabled></td>
                     </tr>
                     <tr>
                         <th>계좌번호</th>
-                        <td></td>
-                        <th>금액(원)</th>
-                        <td></td>
-                                           </tr>
-                    <th>발인식 장소</th>
-                    <td>
-                        <select class="form-select" disabled>
-                            <option value="">선택</option>
-                            <option value="">빈소</option>
-                            <option value="">영결식장</option>
-                            <option value="">발인장</option>
-                            <option value="">안치실</option>
-
-                        </select>
-                    </td>
-                    <th>장지답사</th>
-                    <td>
-                        <div class="flex gap-1">
-                            <label class="radio-button radio-style2" for="e1">
-                                <input type="radio" name="ee" id="e1" checked="checked">
-                                <span>Y</span>
-                            </label>
-                            <label class="radio-button radio-style2" for="e2">
-                                <input type="radio" name="ee" id="e2">
-                                <span>N</span>
-                            </label>
-                        </div>
-                    </td>
-                    <td><input type="text" class="form-control" value="" ><!-- class="hidden" 추가--></td>
+                        <td colspan="3"><input type="text" class="form-control" value="" placeholder="‘-’을 빼고 숫자만 입력해주세요." disabled></td>
+                        <th>생년월일</th>
+                        <td colspan="3"><input type="numer" class="form-control" value="" placeholder="" maxlength="8" disabled></td>
+                    </tr>
                 </tr>
             </table>
 
+            <div class="p-2 text-right">
+                <label for="chk1" class="cursor-pointer">
+                    <input type="checkbox" class="peer hidden" name="chk" id="chk1">
+                    <span class="inline-block w-[360px] leading-loose border border-ddd text-999 text-center rounded-lg transition-colors duration-300 peer-checked:text-white  peer-checked:bg-blue2">
+                        예금주체크 및 송금정보저장
+                    </span>
+                </label>
+            </div>
+
             <h5 class="py-2 px-3 bg-f5 text-333 leading-6 flex justify-between items-center">
-                &#8231;장례식장 사용내역
+                &#8231;가상계좌 발급
                 <button type="button" class="border-2 border-blueMain text-blueMain rounded-lg h-12 px-6">추가</button>
             </h5>
             <table class="list-table list-table-small py-lg table-striped table-fixed border-t-2 border-666">
