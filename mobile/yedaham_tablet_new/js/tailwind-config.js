@@ -50,7 +50,13 @@ tailwind.config = {
           nanumSquare700: ['NanumSquareNeoBold', 'sans-serif'],
           nanumSquare800: ['NanumSquareNeoExtraBold', 'sans-serif'],
           nanumSquare900: ['NanumSquareNeoHeavy', 'sans-serif'],
-        }
+        },
+        backgroundImage: {
+          'custom-gradientGray': `
+          linear-gradient(to top, #fff 0%, rgba(255, 255, 255, 0) 100%),
+          linear-gradient(to bottom, #f5f5f5, #f5f5f5)
+        `,
+        },
       },
     },
   };

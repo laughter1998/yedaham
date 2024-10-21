@@ -120,19 +120,19 @@
                     <col class="w-[248px]"/>
                 </colgroup>
                     <tr>
-                        <th>출금계좌동일</th>
-                        <td>
-                            <div class="flex gap-1">
-                                <label class="radio-button radio-style2" for="a1">
-                                    <input type="radio" name="ae" id="a1" checked="checked">
-                                    <span>동일</span>
-                                </label>
-                                <label class="radio-button radio-style2" for="a2">
-                                    <input type="radio" name="ae" id="a2">
-                                    <span>미동일</span>
-                                </label>
-                            </div>
-                        </td>
+                        <th>출금계좌동일</th><td>
+                        <div class="flex gap-1">
+                            <label class="radio-button radio-style2" for="a1">
+                                <input type="radio" name="ae" id="a1" checked="checked">
+                                <span>동일</span>
+                            </label>
+                            <label class="radio-button radio-style2" for="a2">
+                                <input type="radio" name="ae" id="a2">
+                                <span>미동일</span>
+                            </label>
+                        </div>
+                    </td>
+
                         <th>송금은행</th>
                         <td colspan="3">
                             <select class="form-select" disabled>
@@ -160,212 +160,251 @@
                 </label>
             </div>
 
-            <h5 class="py-2 px-3 bg-f5 text-333 leading-6 flex justify-between items-center">
-                &#8231;가상계좌 발급
-                <button type="button" class="border-2 border-blueMain text-blueMain rounded-lg h-12 px-6">추가</button>
-            </h5>
-            <table class="list-table list-table-small py-lg table-striped table-fixed border-t-2 border-666">
+            <h5 class="py-2 px-3 bg-f5 text-333 leading-6 flex justify-between items-center">&#8231;가상계좌 발급</h5>
+            <table class="view-table-style2 table-fixed border-t-2 border-666">
                 <colgroup>
                     <col class="w-[180px]" />
+                    <col class="w-[246px]"/>
+                    <col class="w-[180px]" />
+                    <col class="w-[246px]"/>
+                    <col class="w-[180px]" />
                     <col/>
-                    <col/>
-                    <col/>
-                    <col/>
-                    <col class="w-[90px]" />
                 </colgroup>
-
-                <thead>
                 <tr>
-                    <th>품목명</th>
-                    <th>업체명</th>
-                    <th>사업자번호</th>
-                    <th>정산비용(원)</th>
-                    <th>비고(사유)</th>
-                    <th>삭제</th>
+                    <th>은행</th>
+                    <td>우리은행</td>
+                    <th>가상계좌번호</th>
+                    <td>1212121212</td>
+                    <td colspan="2">
+                        <div class="flex gap-x-2">
+                            <button type="button" class="h-12 w-1/2 border-2 border-d9 bg-f5 rounded-lg text-333">가상계좌발급</button>
+                            <button type="button" class="h-12 w-1/2 border-2 border-d9 bg-f5 rounded-lg text-333">SMS발송</button>
+                        </div>
+                    </td>
                 </tr>
-                </thead>
-
-                <tbody>
-                <tr>
-                   <td>
-                       <select class="form-select ">
-                           <option value="" >선택</option>
-                           <option value="" selected>품목1</option>
-                           <option value="">품목2</option>
-                           <option value="">품목3</option>
-                       </select>
-                   </td>
-                   <td class="!text-wrap">예다함</td>
-                   <td>010-1111-1111</td>
-                   <td><input type="number" class="form-control"></td>
-                   <td><input type="text" class="form-control" ></td>
-                   <td><button type="button" class="h-12 w-[64px] border-2 border-ccc rounded-lg text-333">삭제</button></td>
-                </tr>
-                </tbody>
             </table>
 
             <h5 class="py-2 px-3 bg-f5 text-333 leading-6 flex justify-between items-center">
-                &#8231;외부업체 사용내역
-                <button type="button" class="border-2 border-blueMain text-blueMain rounded-lg h-12 px-6">추가</button>
+                &#8231;현금영수증
+                <button type="button" class="border-2 border-blueMain bg-white text-blueMain rounded-lg h-12 px-6">추가</button>
             </h5>
+            <div class="overflow-x-auto">
+                <table class="list-table list-table-small py-lg table-striped table-fixed border-t-2 border-666 !w-auto">
+                    <colgroup>
+                        <col class="w-[180px]" />
+                        <col class="w-[180px]" />
+                        <col class="w-[180px]" />
+                        <col class="w-[180px]" />
+                        <col />
+                        <col />
+                        <col />
+                        <col class="w-[90px]" />
+                    </colgroup>
+
+                    <thead>
+                    <tr>
+                        <th>발행금액(원)</th>
+                        <th>발행용도</th>
+                        <th>발행구분</th>
+                        <th>발행번호</th>
+                        <th>승인일</th>
+                        <th>승인번호</th>
+                        <th>발행신청</th>
+                        <th>취소요청</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    <tr>
+                        <td><input type="text" class="form-control w-[180px]" ></td>
+                        <td>
+                            <select class="form-select w-[180px]" >
+                                <option value="">선택</option>
+                                <option value="">소득공제</option>
+                                <option value="">지출증빙</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select class="form-select w-[180px]">
+                                <option value="">선택</option>
+                                <option value="">주민등록번호</option>
+                                <option value="">연락처</option>
+                                <option value="">사업자번호</option>
+                            </select>
+                        </td>
+                        <td><input type="text" class="form-control w-[180px]"></td>
+                        <td>2023-02-15</td>
+                        <td>12121212</td>
+                        <td>
+                            <div class="flex gap-x-2">
+                                <button type="button" class="h-12 px-2 border-2 border-d9 bg-f5 rounded-lg text-333">저장</button>
+                                <button type="button" class="h-12 px-2 border-2 border-d9 bg-f5 rounded-lg text-333">SMS발송</button>
+                            </div>
+                        </td>
+                        <td><button type="button" class="h-12 w-[64px] border-2 border-d9 bg-f5 rounded-lg text-333">취소</button></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <h5 class="py-2 px-3 bg-f5 text-333 leading-6 flex justify-between items-center">
+                &#8231;신용카드내역
+                <button type="button" class="border-2 border-blueMain bg-white text-blueMain rounded-lg h-12 px-6">추가</button>
+            </h5>
+
             <table class="list-table list-table-small py-lg table-striped table-fixed border-t-2 border-666">
                 <colgroup>
-                    <col class="w-[180px]" />
                     <col/>
                     <col/>
                     <col/>
+                    <col class="w-64"/>
                     <col/>
-                    <col class="w-[90px]" />
+                    <col  class="w-24"/>
+                    <col  class="w-24"/>
                 </colgroup>
 
                 <thead>
                 <tr>
-                    <th>품목명</th>
-                    <th>업체명</th>
-                    <th>사업자번호</th>
-                    <th>정산비용(원)</th>
-                    <th>비고(사유)</th>
+                    <th>구분</th>
+                    <th>카드사</th>
+                    <th>승인번호</th>
+                    <th>결제일자</th>
+                    <th>정산금액</th>
+                    <th>저장</th>
                     <th>삭제</th>
                 </tr>
                 </thead>
 
                 <tbody>
+                    <tr>
+                        <td>
+                            <select class="form-select ">
+                                <option value="">선택</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select class="form-select ">
+                                <option value="">선택</option>
+                            </select>
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" placeholder="">
+                        </td>
+                        <td>
+                            <div class="input-group ">
+                                <input type="text" class="form-control " value="2022-12-24" placeholder="">
+                                <span class="btn-calendar"><img src="./images/icon_calendar.png" alt=""></span>
+                            </div>
+                        </td>
+                        <td>12121212</td>
+                        <td><button type="button" class="h-12 px-2 border-2 border-d9 bg-f5 rounded-lg text-333">저장</button></td>
+                        <td><button type="button" class="h-12 px-2 border-2 border-d9 bg-f5 rounded-lg text-333">삭제</button></td>
+                    </tr>
+
+
+                </tbody>
+            </table>
+
+            <article class="flex justify-between py-2 px-3 bg-f5">
+                <div>
+                    <button type="button" class="border-2 border-blueMain bg-white text-blueMain rounded-lg h-12 px-6">입금확인</button>
+                    <button type="button" class="border-2 border-blueMain bg-white text-blueMain rounded-lg h-12 px-6">인수인계(의전인수 확인서)</button>
+                </div>
+                <div>
+                    <button type="button" class="border-2 border-blueMain bg-white text-blueMain rounded-lg h-12 px-6">의전취소정산서</button>
+                    <button type="button" class="border-2 border-blueMain bg-white text-blueMain rounded-lg h-12 px-6">의전정산서</button>
+                </div>
+            </article>
+
+            <table class="view-table-style2 table-fixed border-t-2 border-666">
+                <colgroup>
+                    <col class="w-[180px]" />
+                    <col class="w-[460px]"/>
+                    <col class="w-[180px]" />
+                    <col class="w-[460px]"/>
+                    <col/>
+                </colgroup>
                 <tr>
+                    <th>출동지연요청자</th>
                     <td>
                         <select class="form-select ">
                             <option value="">선택</option>
-                            <option value="" selected>품목1</option>
-                            <option value="">품목2</option>
-                            <option value="">품목3</option>
                         </select>
                     </td>
+                    <th>보고시간</th>
                     <td>
-                        <div class="flex items-center gap-1">
-                            <span class="grow">업체업체</span>
-                            <button><img src="./images/btn_popup.png" alt=""> </button>
+                        <div class="input-group ">
+                            <input type="text" class="form-control " value="2024-07-31 17:00" placeholder="">
+                            <span class="btn-calendar"><img src="./images/icon_calendar.png" alt=""></span>
+                            <button type="button" class="align-middle"><img src="./images/btn_reset.png" alt=""></button>
                         </div>
                     </td>
-                    <td>010-1111-1111</td>
-                    <td><input type="number" class="form-control"></td>
-                    <td><input type="text" class="form-control" ></td>
-                    <td><button type="button" class="h-12 w-[64px] border-2 border-ccc rounded-lg text-333">삭제</button></td>
                 </tr>
-                </tbody>
-            </table>
-            <h5 class="py-2 px-3 bg-f5 text-333 leading-6 flex justify-between items-center">
-                &#8231;주요품목 사용확인
-                <button type="button" class="border-2 border-blueMain text-blueMain rounded-lg h-12 px-6">사용확인서</button>
-            </h5>
-
-            <table class="list-table list-table-small py-lg table-striped table-fixed border-t-2 border-666">
-                <colgroup>
-                    <col/>
-                    <col/>
-                    <col/>
-                    <col/>
-                    <col class="w-[180px]" />
-                    <col class="w-[180px]" />
-                    <col/>
-                    <col/>
-                    <col class="w-[72px]" />
-                </colgroup>
-
-                <thead>
                 <tr>
-                    <th>품목명</th>
-                    <th>현황</th>
-                    <th>업체명</th>
-                    <th>할인기준</th>
-                    <th>정가액(원)</th>
-                    <th>할인금액(원)</th>
-                    <th>처리방법</th>
-                    <th>수령인(성명)</th>
-                    <th>초기화</th>
+                    <th>FD출동시간</th>
+                    <td>
+                        <div class="input-group ">
+                            <input type="text" class="form-control " value="2024-07-31 17:00" placeholder="">
+                            <span class="btn-calendar"><img src="./images/icon_calendar.png" alt=""></span>
+                            <button type="button" class="align-middle"><img src="./images/btn_reset.png" alt=""></button>
+                        </div>
+                    </td>
+
+                    <td colspan="2"><input type="text" class="form-control" placeholder=""></td>
                 </tr>
-                </thead>
-
-                <tbody>
-                    <tr>
-                        <td>장지안내</td>
-                        <td>
-                            <select class="form-select ">
-                                <option value="">미사용</option>
-                                <option value="">예다함</option>
-                            </select>
-                        </td>
-                        <td class="!text-wrap">업체명 업체명</td>
-                        <td class="!text-wrap">할인기준  </td>
-                        <td><input type="text" class="form-control"></td>
-                        <td><input type="text" class="form-control"></td>
-                        <td>
-                            <select class="form-select ">
-                                <option value="">선택</option>
-                                <option value="">현장즉시할인</option>
-                                <option value="">회원전달</option>
-                                <option value="">지부장전달</option>
-                                <option value="">회사계좌입금</option>
-                                <option value="">회사계좌입금</option>
-                            </select>
-                        </td>
-                        <td><input type="number" class="form-control"></td>
-                        <td><button type="button" class="align-middle"><img src="./images/btn_reset.png" alt=""></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>장지안내</td>
-                        <td>
-                            <select class="form-select ">
-                                <option value="">미사용</option>
-                                <option value="">예다함</option>
-                            </select>
-                        </td>
-                        <td class="!text-wrap">업체명</td>
-                        <td class="!text-wrap">할인기준  </td>
-                        <td><input type="text" class="form-control"></td>
-                        <td><input type="text" class="form-control"></td>
-                        <td>
-                            <select class="form-select ">
-                                <option value="">선택</option>
-                                <option value="">현장즉시할인</option>
-                                <option value="">회원전달</option>
-                                <option value="">지부장전달</option>
-                                <option value="">회사계좌입금</option>
-                                <option value="">회사계좌입금</option>
-                            </select>
-                        </td>
-                        <td><input type="number" class="form-control"></td>
-                        <td><button type="button" class="align-middle"><img src="./images/btn_reset.png" alt=""></button>
-                        </td>
-                    </tr><tr>
-                        <td>장지안내</td>
-                        <td>
-                            <select class="form-select ">
-                                <option value="">미사용</option>
-                                <option value="">예다함</option>
-                            </select>
-                        </td>
-                        <td class="!text-wrap">업체명</td>
-                        <td class="!text-wrap">할인기준  </td>
-                        <td><input type="text" class="form-control"></td>
-                        <td><input type="text" class="form-control"></td>
-                        <td>
-                            <select class="form-select ">
-                                <option value="">선택</option>
-                                <option value="">현장즉시할인</option>
-                                <option value="">회원전달</option>
-                                <option value="">지부장전달</option>
-                                <option value="">회사계좌입금</option>
-                                <option value="">회사계좌입금</option>
-                            </select>
-                        </td>
-                        <td><input type="number" class="form-control"></td>
-                        <td><button type="button" class="align-middle"><img src="./images/btn_reset.png" alt=""></button>
-                        </td>
-                    </tr>
-
-                </tbody>
+                <tr>
+                    <th>의전상태</th>
+                    <td>
+                        <div class="flex  gap-x-1">
+                            <button type="button" class="w-full h-12  border-2 border-d9 bg-f5 rounded-lg text-333">완료</button>
+                            <button type="button" class="w-full h-12  border-2 border-d9 bg-f5 rounded-lg text-333">진행</button>
+                            <button type="button" class="w-full h-12  border-2 border-d9 bg-f5 rounded-lg text-333">취소</button>
+                        </div>
+                    </td>
+                    <th>지연사유</th>
+                    <td>
+                        <select class="form-select">
+                            <option value="">선택</option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>접수메모</th>
+                    <td colspan="3"><textarea class="form-control min-h-28"  placeholder="내용을 입력하세요."></textarea></td>
+                </tr>
+                <tr>
+                    <th>위약금대상</th>
+                    <td></td>
+                    <th>취소구분</th>
+                    <td>
+                        <select class="form-select">
+                            <option value="">선택</option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>취소위약금</th>
+                    <td></td>
+                    <th>수령여부</th>
+                    <td>
+                        <div class="flex gap-1">
+                            <label class="radio-button radio-style2" for="b1">
+                                <input type="radio" name="be" id="b1" >
+                                <span>수령</span>
+                            </label>
+                            <label class="radio-button radio-style2" for="b2">
+                                <input type="radio" name="be" id="b2" checked="checked">
+                                <span>미수령</span>
+                            </label>
+                        </div>
+                    </td>
+                </tr>
             </table>
-
 
 
 
