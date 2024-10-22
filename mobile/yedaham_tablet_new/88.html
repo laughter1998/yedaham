@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <title>의전진행관리</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./js/tailwind-config.js"></script>
+    <link rel="stylesheet" href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-neo.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+
+
+    <!-- 상단 고정 영역 -->
+    <header>
+        <div class="header-logo">
+            <img src="./images/header-logo.png" alt="예다함">
+            의전진행관리
+        </div>
+        <div class="header-title">장사시설정보</div>
+        <div class="header-menu">
+            <!-- <a href="#" class="home">조회</a> -->
+            <nav>
+                <a href="#">관리메인</a>
+                <!--
+                <a href="#">업무관리</a>
+                <a href="#">투입관리</a>
+                <a href="#">철수관리</a>
+                -->
+            </nav>
+            <a href="#" class="logout">로그아웃</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="mt-2 px-2 text-right">
+            <button type="button" class="w-[260px] h-14 border-2 border-999 rounded-lg bg-white text-333">사진등록(0)</button>
+            <button type="button" class="w-[260px] h-14 border-2 border-999 rounded-lg bg-white text-333">취소</button>
+            <button type="button" class="w-[300px] h-14 rounded-lg bg-blueMain text-white">저장 후 승인요청</button>
+        </section>
+
+        <section class="mt-2">
+            <table class="view-table-style2 table-fixed border-t-2 border-666">
+                <colgroup>
+                    <col class="w-[140px]" />
+                    <col class="w-[285px]" />
+                    <col class="w-[140px]" />
+                    <col class="w-[285px]" />
+                    <col class="w-[140px]" />
+                    <col />
+                </colgroup>
+                <tr>
+                    <th>업체구분</th>
+                    <td></td>
+                    <th>업체구분</th>
+                    <td></td>
+                    <th>업체구분</th>
+                    <td></td>
+                </tr>
+            </table>
+            <table class="view-table-style2 table-fixed border-t-2 border-666">
+                <colgroup>
+                    <col class="w-[140px]" />
+                    <col class="w-[180px]" />
+                    <col class="w-[140px]" />
+                    <col class="w-[180px]" />
+                    <col class="w-[140px]" />
+                    <col class="w-[180px]" />
+                    <col class="w-[140px]" />
+                    <col class="w-[180px]" />
+                </colgroup>
+                <tr>
+                    <th>업체구분</th>
+                    <td></td>
+                    <th>업체구분</th>
+                    <td></td>
+                    <th>업체구분</th>
+                    <td></td>
+                    <th>업체구분</th>
+                    <td></td>
+                </tr>
+            </table>
+        </section>
+    </main>
+
+
+
+</body>
+
+</html>
