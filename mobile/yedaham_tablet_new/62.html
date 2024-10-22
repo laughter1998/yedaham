@@ -16,7 +16,7 @@
 
 <body>
 
-<button type="button" onclick="showLargeDialog()"         style="position:fixed;left:0;top:0px;height:150px;width:500px;background-color:#fff;z-index:111;border:1px solid #000;">의전취소 정산서 팝업</button>
+<button type="button" onclick="showLargeDialog()"         style="position:fixed;left:0;top:0px;height:150px;width:500px;background-color:#fff;z-index:111;border:1px solid #000;">의전 정산서 팝업 - 정산내역 탭</button>
 
 <!-- 상단 고정 영역 -->
 <header>
@@ -412,10 +412,10 @@
 </main>
 
 
-<dialog class="dialog-large ">
+<dialog class="dialog-large " >
     <div class="dialog-wrap">
         <section class="flex justify-between items-center bg-blueOpa1 h-12 px-2">
-            <h5 class="text-32">의전취소 정산서</h5>
+            <h5 class="text-32">의전 정산서</h5>
             <button type="button" class="btn-modal-close " onclick="claseLargeDialog()">X</button>
         </section>
 
@@ -485,142 +485,368 @@
                         <td>2024-09-10 08:20</td>
                     </tr>
                 </table>
+            </section>
 
-                <h5 class="py-2 px-3 bg-f5 text-333 leading-6">&#8231;정산내역</h5>
-                <div class="relative max-h-[315px] overflow-y-auto">
-                    <table class="list-table list-table-small table-striped table-fixed ">
-                        <colgroup>
-                            <col class="w-[200px]"/>
-                            <col class="w-[200px]"/>
-                            <col class="w-[300px]"/>
-                            <col />
-                        </colgroup>
+            <nav class="sub-navi mt-6 border-b border-ccc">
+                <a href="#" class="w-[300px] current">정산내역</a>
+                <a href="#" class="w-[300px] ">의전정산대금 납입 보증</a>
+            </nav>
 
-                        <thead>
-                        <tr>
-                            <th>분류</th>
-                            <th>구분</th>
-                            <th>금액</th>
-                            <th>내역</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                               <td>변경내역</td>
-                               <td></td>
-                               <td></td>
-                               <td></td>
-                            </tr>
-                        </tbody>
-
-                    </table>
+            <section>
+                <div class="mx-2 mt-6 p-4 text-666  bg-f5 border border-999 rounded-lg">
+                    페이백 가능품목 : 도우미, 버스, 횡대, 수의 <br>
+                    (단, 페이백 가능품목은 상품에 따라 다를 수 있으며, 각 상품별 해당 약관을 참조해주시기 바랍니다.)
                 </div>
-                <table class="list-table list-table-small table-fixed bg-f5 border-b border-ccc">
+
+                <table class="view-table-style2 table-fixed mt-6 border-t border-ccc">
                     <colgroup>
-                        <col class="w-[200px]"/>
-                        <col class="w-[200px]"/>
-                        <col class="w-[300px]"/>
+                        <col class="w-[180px]">
+                        <col>
+                    </colgroup>
+                    <tbody>
+                    <tr>
+                        <th  class="h-14">상품명</th>
+                        <td class="text-center">상품명</td>
+                    </tr>
+
+                    </tbody>
+                </table>
+
+                <table class="table-settlement table-fixed   mt-6 ">
+                    <colgroup>
+                        <col class="w-[150px]" />
+                        <col class="w-[324px]"/>
+                        <col class="w-[70px]"/>
+                        <col class="w-[170px]" />
+                        <col class="w-[160px]" />
                         <col />
+                        <col class="w-[70px]"/>
+                        <col class="w-[170px]"/>
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th colspan="4" class="!bg-blueOpa1">상품구성</th>
+                            <th colspan="4" class="!bg-blueOpa1">변경내역</th>
+                        </tr>
+                        <tr>
+                            <th>품목</th>
+                            <th>사양</th>
+                            <th>수량</th>
+                            <th>금액(원)(a)</th>
+                            <th colspan="2">사양</th>
+                            <th>수량</th>
+                            <th>금액(원)(a)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>의전인력</th>
+                            <td>장례진행</td>
+                            <td class="text-center">1</td>
+                            <td rowspan="30" class="text-right !border-r-2 !border-666" >3,900,000</td>
+                            <td colspan="2"></td>
+                            <td class="text-center"></td>
+                            <td class="text-right"></td>
+                        </tr>
+                        <tr>
+                            <th>접객도우미</th>
+                            <td>장례도우미</td>
+                            <td class="text-center">1</td>
+                            <td colspan="2">장례도우미</td>
+                            <td class="text-center">-4</td>
+                            <td class="text-right">-428,000</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="3">의전차량</th>
+                            <td>리무진(왕복 150km)</td>
+                            <td class="text-center">1</td>
+                            <td colspan="2">리무진(왕복 150km)</td>
+                            <td class="text-center">1</td>
+                            <td class="text-right">3,900,000</td>
+                        </tr>
+                        <tr>
+                            <td>버스(왕복 150km)</td>
+                            <td class="text-center">1</td>
+                            <td colspan="2"></td>
+                            <td class="text-center"></td>
+                            <td class="text-right"> </td>
+                        </tr>
+                        <tr>
+                            <td>고인이송차량</td>
+                            <td class="text-center">1</td>
+                            <td colspan="2"></td>
+                            <td class="text-center"></td>
+                            <td class="text-right"></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="2">상복</th>
+                            <td>여성 개량상복</td>
+                            <td class="text-center">4</td>
+                            <td colspan="2"></td>
+                            <td class="text-center"></td>
+                            <td class="text-right"></td>
+                        </tr>
+                        <tr>
+                            <td>남성 현대상복</td>
+                            <td class="text-center">4</td>
+                            <td colspan="2"></td>
+                            <td class="text-center"></td>
+                            <td class="text-right"></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="2">수의</th>
+                            <td>대마 기계직수의 1호(중국산, 국내 기계직)</td>
+                            <td class="text-center"></td>
+                            <td colspan="2">대마 기계직수의 1호 (중국산, 국내 기계직)</td>
+                            <td class="text-center">-1</td>
+                            <td class="text-right">-193,000</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="text-center"></td>
+                            <td colspan="2">단아 비단수의 (대렴시 2호멧베제공)</td>
+                            <td class="text-center">1</td>
+                            <td class="text-right">2,100,000</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="2">관</th>
+                            <td>옥스포드관보</td>
+                            <td class="text-center"></td>
+                            <td colspan="2"></td>
+                            <td class="text-center"></td>
+                            <td class="text-right"></td>
+                        </tr>
+                        <tr>
+                            <td>오동나무 1단관 1.0 이하</td>
+                            <td class="text-center"></td>
+                            <td colspan="2"></td>
+                            <td class="text-center"></td>
+                            <td class="text-right"></td>
+                        </tr>
+                        <tr>
+                            <th rowspan="2">봉안함</th>
+                            <td class="text-center"></td>
+                            <td></td>
+                            <td colspan="2">금장 종교글 봉안함(기독교)</td>
+                            <td class="text-center">1</td>
+                            <td class="text-right">575,000</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="text-center"></td>
+                            <td colspan="2">각인</td>
+                            <td class="text-center">1</td>
+                            <td class="text-right">50,000</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="2">꽃장식</th>
+                            <td></td>
+                            <td class="text-center"></td>
+                            <td colspan="2">헌화</td>
+                            <td class="text-center">30</td>
+                            <td class="text-right">30,000</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="text-center"></td>
+                            <td colspan="2">제단장식 5호</td>
+                            <td class="text-center">1</td>
+                            <td class="text-right">770,000</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="2">기타</th>
+                            <td>오동나무 횡대 1.5이하 또는 금전사송학 봉안함</td>
+                            <td class="text-center">1</td>
+                            <td colspan="2">오동나무 횡대 1.5이하 또는 금정사송학봉안함</td>
+                            <td class="text-center">-1</td>
+                            <td class="text-right">-75,000</td>
+                        </tr>
+                        <tr>
+                            <td>입관용품 일체</td>
+                            <td class="text-center">1</td>
+                            <td colspan="2"></td>
+                            <td class="text-center"></td>
+                            <td class="text-right"></td>
+                        </tr>
+                    </tbody>
+                    </table>
+                    <table class="table-settlement table-fixed !border-t-0">
+                        <colgroup>
+                            <col class="w-[150px]" />
+                            <col class="w-[324px]"/>
+                            <col class="w-[70px]"/>
+                            <col class="w-[170px]" />
+                            <col class="w-[160px]" />
+                            <col />
+                            <col class="w-[70px]"/>
+                            <col class="w-[170px]"/>
+                        </colgroup>
+                        <tfoot>
+                            <tr>
+                                <th colspan="4" rowspan="2" class="!bg-blueOpa1 !border-r-2 !border-666">변동금액</th>
+                                <th colspan="3">페이백 총액 (b)</th>
+                                <td class="text-right">-696,000</td>
+                            </tr>
+                            <tr>
+                                <th colspan="3">추가 총액 (c)</th>
+                                <td class="text-right">3,525,000</td>
+                            </tr>
+                            <tr>
+                                <th colspan="4" rowspan="3" class="!bg-blueOpa1 !border-r-2 !border-666">할인금액</th>
+                                <th colspan="3">회차할인(3회) (d)</th>
+                                <td class="text-right">-97,500</td>
+                            </tr>
+                            <tr>
+                                <th colspan="3">증서할인 (e)</th>
+                                <td class="text-right">0</td>
+                            </tr>
+                            <tr>
+                                <th colspan="3">기간할인(월납) (f)</th>
+                                <td class="text-right">0</td>
+                            </tr>
+                            <tr>
+                                <th colspan="4" class="!bg-blueOpa1 !border-r-2 !border-666">할증금액</th>
+                                <td colspan="3"></td>
+                                <td class="text-right"></td>
+                            </tr>
+                            <tr>
+                                <th colspan="4" rowspan="2" class="!bg-blueOpa1 !border-r-2 !border-666 !border-b-0">(월납) 기 납입금액(현재까지 납입한 금액) (h)</th>
+                                <th>현금</th>
+                                <td colspan="2" class="text-right">3,250,000</td>
+                                <td rowspan="2" class="text-right">3,250,000</td>
+                            </tr>
+                            <tr>
+                                <th>카드</th>
+                                <td  colspan="2" class="text-right">0</td>
+                            </tr>
+                            <tr>
+                                <th colspan="7" class="!bg-greenOpa1">정산금액(발인일 정산해야할 금액) (a)+(b)+(c)+(d)+(e)+(f)-(h)</th>
+                                <td class="text-right">3,381,500</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+
+                <div class="mx-2 mt-6 p-4 text-666 text-2xl  bg-f5 border border-999 rounded-lg">
+                    현금영수증 의무발급 안내사항 : The-K예다함㈜은 사업자 현금영수증 의무발행 제도가 시행됨에 따라 회원님께서
+                    요청하신 등록번호로 현금영수증을 발행해 드리며, 발급을 원하지 않으시면 국세청 지정코드(010-000-1234)로
+                    자진발급 신고됩니다.
+                </div>
+
+                <table class="view-table-style2 table-fixed mt-6 ">
+                    <colgroup>
+                        <col class="w-[180px]">
+                        <col class="w-[460px]">
+                        <col class="w-[180px]">
+                        <col class="w-[460px]">
+                        <col>
                     </colgroup>
                     <tbody>
                         <tr>
-                            <td class=" h-14" colspan="2">소계(C)</td>
-                            <td class=""></td>
-                            <td class=""></td>
+                            <th colspan="4" class="h-14">현금영수증 발급번호</th>
+                        </tr>
+                        <tr>
+                            <th>성함</th>
+                            <td><input type="text" class="form-control" placeholder="성함을 입력하세요."></td>
+                            <th>연락처</th>
+                            <td><input type="number" class="form-control" placeholder="숫자만 입력하세요."></td>
                         </tr>
                     </tbody>
                 </table>
 
-
-                <h5 class="py-2 px-3 bg-f5 text-333 leading-6">&#8231;취소사유</h5>
-                <table class="view-table-style2 table-fixed border-t-2 border-666">
-                    <colgroup>
-                        <col class="w-[180px]" />
-                        <col/>
-                    </colgroup>
-                    <tr>
-                        <td colspan="2">
-                            <div class="grid grid-cols-5 gap-1">
-                                <label class="radio-button radio-style2" for="d1">
-                                    <input type="radio" name="de" id="d1" >
-                                    <span>장례식장 사용</span>
-                                </label>
-                                <label class="radio-button radio-style2" for="d2">
-                                    <input type="radio" name="de" id="d2">
-                                    <span>타 상조 사용</span>
-                                </label>
-                                <label class="radio-button radio-style2" for="d3">
-                                    <input type="radio" name="de" id="d3">
-                                    <span>가격불만</span>
-                                </label>
-                                <label class="radio-button radio-style2" for="d4">
-                                    <input type="radio" name="de" id="d4">
-                                    <span>가족반대</span>
-                                </label>
-                                <label class="radio-button radio-style2" for="d5">
-                                    <input type="radio" name="de" id="d5">
-                                    <span>종교시설 사용</span>
-                                </label>
-                                <label class="radio-button radio-style2" for="d6">
-                                    <input type="radio" name="de" id="d6">
-                                    <span>회사지원</span>
-                                </label>
-                                <label class="radio-button radio-style2" for="d7">
-                                    <input type="radio" name="de" id="d7">
-                                    <span>도착시간 지연</span>
-                                </label>
-                                <label class="radio-button radio-style2" for="d8">
-                                    <input type="radio" name="de" id="d8">
-                                    <span>시신기증</span>
-                                </label>
-                                <label class="radio-button radio-style2" for="d9">
-                                    <input type="radio" name="de" id="d9">
-                                    <span>기타</span>
-                                </label>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>사유</th>
-                        <td><input type="text" class="form-control" value="" placeholder="내용을 입력해주세요."></td>
-                    </tr>
-                </table>
-            </section>
-
-            <section class="mt-16 px-2">
-                <div class="p-4 text-666 text-3xl  bg-f5 border border-999 rounded-lg">
-                    위 정산 내역에 대한 설명을 들었으며, 상기 총 정산금액을
+                <div class="mt-6 mx-2 p-4 text-666 text-3xl leading-loose	 bg-f5 border border-999 rounded-lg">
+                    하기 본인은 위 정산 금액에 대한
+                    <article class="inline-block w-[250px]">
+                        <input type="text" class="form-control text-center " value="" placeholder="설명을 들었으며,">
+                    </article>
+                    위 정산금액을
+                    <article class="inline-flex gap-1">
+                        <label class="radio-button radio-style3" for="f1">
+                            <input type="radio" name="fe" id="f1">
+                            <span>신용카드</span>
+                        </label>
+                        <label class="radio-button radio-style3" for="f2">
+                            <input type="radio" name="fe" id="f2">
+                            <span>체크카드</span>
+                        </label>
+                        <label class="radio-button radio-style3" for="f3">
+                            <input type="radio" name="fe" id="f3">
+                            <span>현금</span>
+                        </label>
+                        <label class="radio-button radio-style3" for="f4">
+                            <input type="radio" name="fe" id="f4">
+                            <span>기타</span>
+                        </label>
+                    </article>
+                    <article class="inline-block w-[250px]">
+                        <input type="text" class="form-control text-center" value="신용카드" placeholder="">
+                    </article>
+                    로
                     <article class="inline-block w-[300px]">
                         <div class="input-group ">
                             <input type="text" class="form-control " value="2022-12-24 14:00" placeholder="">
                             <span class="btn-calendar"><img src="./images/icon_calendar.png" alt=""></span>
                         </div>
-                    </article>
-                    시 까지 지불하기로 합니다.
+                    </article>시에 납부 완료 하였습니다.
                 </div>
 
-                <table class="view-table-style2 table-fixed w-auto mx-auto mt-16 ">
+                <table class="view-table-style2 table-fixed mt-6 border-t border-ccc">
                     <colgroup>
-                        <col class="w-[220px]">
-                        <col class="w-[220px]">
-                        <col class="w-[220px]">
-                        <col class="w-[220px]">
+                        <col class="w-[180px]">
+                        <col class="w-[250px]">
                         <col>
                     </colgroup>
                     <tbody>
                         <tr>
-                            <th class="border-y !border-666 h-14">의 서명인(상주)</th>
-                            <td class="border-y !border-666"><p class="flex items-center justify-center h-12 text-ccc">서명</p></td>
-                            <th class="border-y !border-666">의전 담당자(팀장)</th>
-                            <td class="border-y !border-666">
-                                <!--                        <p class="flex items-center justify-center h-12 text-ccc">서명</p>-->
-                                <p class="flex items-center justify-center h-12 ">
-                                    <img src="https://cdn.pixabay.com/photo/2014/11/09/08/06/signature-523237_1280.jpg" class="h-full object-contain" alt="">
-                                </p>
-                            </td>
+                            <th rowspan="2" class="h-28">온라인 송금처</th>
+                            <td class="text-center">은행사명</td>
+                            <td class="text-center">신한은행</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">계좌번호</td>
+                            <td class="text-center">11122233322</td>
                         </tr>
                     </tbody>
                 </table>
+
+                <table class="view-table-style2 table-fixed mt-6 border-t border-ccc">
+                    <colgroup>
+                        <col class="w-[300px]">
+                        <col class="w-[325px]">
+                        <col class="w-[350px]">
+                        <col>
+                    </colgroup>
+                    <tbody>
+                    <tr>
+                        <th class="h-14">구분</th>
+                        <th >성명</th>
+                        <th >연락처</th>
+                        <th >서명</th>
+                    </tr>
+                    <tr>
+                        <th class="h-20">위 서명인(상주 또는 가족)</th>
+                        <td class="border-r border-ccc"></td>
+                        <td class="border-r border-ccc"></td>
+                        <td>
+                                                    <p class="flex items-center justify-center h-20 text-ccc">서명</p>
+<!--                            <p class="flex items-center justify-center h-12 ">-->
+<!--                                <img src="https://cdn.pixabay.com/photo/2014/11/09/08/06/signature-523237_1280.jpg" class="h-20 object-contain" alt="">-->
+<!--                            </p>-->
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="h-20">의전담당자(FD)</th>
+                        <td class="border-r border-ccc"></td>
+                        <td class="border-r border-ccc"></td>
+                        <td>
+                            <!--                        <p class="flex items-center justify-center h-20 text-ccc">서명</p>-->
+                            <p class="flex items-center justify-center h-12 ">
+                                <img src="https://cdn.pixabay.com/photo/2014/11/09/08/06/signature-523237_1280.jpg" class="h-20 object-contain" alt="">
+                            </p>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+
             </section>
 
             <section class="mt-16 px-2">

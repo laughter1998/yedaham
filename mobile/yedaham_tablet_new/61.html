@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <title>의전진행관리</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./js/tailwind-config.js"></script>
+    <link rel="stylesheet" href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-neo.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+
+
+
+    <!-- 상단 고정 영역 -->
+    <header>
+        <div class="header-logo">
+            <img src="./images/header-logo.png" alt="예다함">
+            의전진행관리
+        </div>
+        <div class="header-title">납입정보</div>
+        <div class="header-menu">
+            <!-- <a href="#" class="home">조회</a> -->
+            <nav>
+                <a href="#">관리메인</a>
+                <!--
+                <a href="#">업무관리</a>
+                <a href="#">투입관리</a>
+                <a href="#">철수관리</a>
+                -->
+            </nav>
+            <a href="#" class="logout">로그아웃</a>
+        </div>
+    </header>
+
+
+    <main>
+        <section>
+
+            <div class="overflow-y-auto h-calc-56">
+            <table class="list-table list-table-small table-striped ">
+                <colgroup>
+                    <col/>
+                    <col/>
+                    <col/>
+                    <col/>
+                    <col/>
+                    <col/>
+                    <col/>
+                    <col/>
+                    <col/>
+                </colgroup>
+
+                <thead>
+                    <tr>
+                        <th>NO</th>
+                        <th>회차</th>
+                        <th>납입월분</th>
+                        <th>입금일자</th>
+                        <th>납입주기</th>
+                        <th>납입금액(원)</th>
+                        <th>납입방법</th>
+                        <th>납입구분</th>
+                        <th>처리일자</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr class="hidden">
+                        <td colspan="10" class="!p-0">
+                            <p class="flex h-calc-88 justify-center items-center  text-999">정보가 없습니다.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>9</td>
+                        <td>2013-07</td>
+                        <td>2013-07-26</td>
+                        <td>월납</td>
+                        <td>26,900</td>
+                        <td>무통장</td>
+                        <td>정상</td>
+                        <td>2010-08-10</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>9</td>
+                        <td>2013-07</td>
+                        <td>2013-07-26</td>
+                        <td>월납</td>
+                        <td>26,900</td>
+                        <td>무통장</td>
+                        <td>정상</td>
+                        <td>2010-08-10</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>2013-07</td>
+                        <td>2013-07-26</td>
+                        <td>월납</td>
+                        <td>26,900</td>
+                        <td>무통장</td>
+                        <td>정상</td>
+                        <td>2010-08-10</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>9</td>
+                        <td>2013-07</td>
+                        <td>2013-07-26</td>
+                        <td>월납</td>
+                        <td>26,900</td>
+                        <td>무통장</td>
+                        <td>정상</td>
+                        <td>2010-08-10</td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+
+
+        </section>
+    </main>
+
+
+
+</body>
+
+</html>
