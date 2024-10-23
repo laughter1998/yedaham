@@ -46,46 +46,559 @@
         </section>
 
         <section class="mt-2">
+            <h5 class="py-2 px-3 bg-f5 text-333 leading-6">&#8231;기본정보</h5>
             <table class="view-table-style2 table-fixed border-t-2 border-666">
                 <colgroup>
                     <col class="w-[140px]" />
-                    <col class="w-[285px]" />
+                    <col class="w-[180px]" />
+                    <col class="w-[105px]" />
+                    <col class="w-[35px]" />
+                    <col class="w-[105px]" />
+                    <col class="w-[75px]" />
                     <col class="w-[140px]" />
-                    <col class="w-[285px]" />
-                    <col class="w-[140px]" />
+                    <col class="w-[75px]" />
+                    <col class="w-[105px]" />
+                    <col class="w-[35px]" />
+                    <col class="w-[105px]" />
                     <col />
                 </colgroup>
                 <tr>
                     <th>업체구분</th>
-                    <td></td>
-                    <th>업체구분</th>
-                    <td></td>
-                    <th>업체구분</th>
-                    <td></td>
+                    <td colspan="2">
+                        <select class="form-select ">
+                            <option value="">선택</option>
+                            <option value="">장례식장</option>
+                            <option value="">화장시설</option>
+                            <option value="">묘지시설</option>
+                            <option value="">봉안시설</option>
+                            <option value="">자연장지시설</option>
+                        </select>
+                    </td>
+                    <th colspan="2">업체명</th>
+                    <td colspan="3"><input type="text" class="form-control" ></td>
+                    <th colspan="2">전화번호</th>
+                    <td colspan="2"><input type="number" class="form-control" ></td>
+                </tr>
+                <tr>
+                    <th rowspan="2">주소</th>
+                    <td rowspan="2" colspan="7">
+                        <div class="input-group">
+                            <input type="text" class="form-control" value="" placeholder="">
+                            <button type="button" class="h-12 px-2 ml-2 border-2 border-ccc bg-white rounded-lg">검증</button>
+                        </div>
+                    </td>
+                    <th class="h-14" colspan="2" >X</th>
+                    <td colspan="2"></td>
+                </tr>
+                <tr>
+                    <th class="h-14" colspan="2">Y</th>
+                    <td colspan="2"></td>
+                </tr>
+                <tr>
+                    <th>관리지부</th>
+                    <td>
+                        <select class="form-select ">
+                            <option value="">선택</option>
+                            <option value=""></option>
+                            <option value=""></option>
+                            <option value=""></option>
+                        </select>
+                    </td>
+                    <th colspan="2">대표자</th>
+                    <td colspan="2"><input type="text" class="form-control" ></td>
+                    <th>사업자번호</th>
+                    <td colspan="2"><input type="number" class="form-control" placeholder="숫자만 입력"></td>
+                    <th colspan="2">업체코드</th>
+                    <td>2014A0372</td>
                 </tr>
             </table>
+
+            <h5 class="py-2 px-3 bg-f5 text-333 leading-6">&#8231;업체부가정보</h5>
             <table class="view-table-style2 table-fixed border-t-2 border-666">
                 <colgroup>
                     <col class="w-[140px]" />
                     <col class="w-[180px]" />
+                    <col class="w-[105px]" />
+                    <col class="w-[35px]" />
+                    <col class="w-[105px]" />
+                    <col class="w-[75px]" />
                     <col class="w-[140px]" />
-                    <col class="w-[180px]" />
-                    <col class="w-[140px]" />
-                    <col class="w-[180px]" />
-                    <col class="w-[140px]" />
-                    <col class="w-[180px]" />
+                    <col class="w-[75px]" />
+                    <col class="w-[105px]" />
+                    <col class="w-[35px]" />
+                    <col class="w-[105px]" />
+                    <col />
                 </colgroup>
                 <tr>
-                    <th>업체구분</th>
+                    <td class="text-center" colspan="12">시설정보</td>
+                </tr>
+                <tr>
+                    <th>시설구분</th>
+                    <td colspan="2">
+                        <select class="form-select ">
+                            <option value="">선택</option>
+                            <option value="">대학병원</option>
+                            <option value="">일반병원</option>
+                            <option value="">요양병원</option>
+                            <option value="">종교시설</option>
+                            <option value="">전문식장</option>
+                        </select>
+                    </td>
+                    <th colspan="2">식장형태</th>
+                    <td colspan="3">
+                        <select class="form-select ">
+                            <option value="">선택</option>
+                            <option value="">지상</option>
+                            <option value="">지하</option>
+                            <option value="">혼합</option>
+                        </select>
+                    </td>
+                    <th colspan="2">운영여부</th>
+                    <td colspan="2">
+                        <select class="form-select ">
+                            <option value="">선택</option>
+                            <option value=""></option>
+                            <option value=""></option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>시설등급</th>
+                    <td>
+                        <select class="form-select ">
+                            <option value="">선택</option>
+                            <option value=""></option>
+                            <option value=""></option>
+                        </select>
+                    </td>
+                    <th colspan="2">협력등급</th>
+                    <td colspan="2">
+                        <select class="form-select ">
+                            <option value="">선택</option>
+                            <option value=""></option>
+                            <option value=""></option>
+                        </select>
+                    </td>
+                    <th>사용기간</th>
+                    <td colspan="5">
+                        <div class="filter-flex">
+                            <div class="input-group">
+                                <input type="text" class="form-control" value="2022-12-24" placeholder="">
+                                <span class="btn-calendar"><img src="./images/icon_calendar.png" alt=""></span>
+                            </div>
+                            <span>~</span>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="">
+                                <span class="btn-calendar"><img src="./images/icon_calendar.png" alt=""></span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>주차대수(대)</th>
+                    <td colspan="2"><input type="number" class="form-control" placeholder="숫자만 입력"></td>
+                    <th colspan="2">빈소수</th>
+                    <td colspan="3"><input type="number" class="form-control" placeholder="숫자만 입력"></td>
+                    <th colspan="2">안치수</th>
+                    <td colspan="2"><input type="number" class="form-control" placeholder="숫자만 입력"></td>
+                </tr>
+                <tr>
+                    <th colspan="3">도우미교통비 대상</th>
+                    <td colspan="9">
+                        <div class="flex gap-1 w-[410px]">
+                            <label class="radio-button radio-style2" for="a1">
+                                <input type="radio" name="aa" id="a1" checked="checked">
+                                <span>미지급</span>
+                            </label>
+                            <label class="radio-button radio-style2" for="a2">
+                                <input type="radio" name="aa" id="a2">
+                                <span>지급</span>
+                            </label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-center" colspan="12" >할인정보</td>
+                </tr>
+                <tr>
+                    <th class="h-14">이송유무</th>
                     <td></td>
-                    <th>업체구분</th>
-                    <td></td>
-                    <th>업체구분</th>
-                    <td></td>
-                    <th>업체구분</th>
+                    <th colspan="2">상조회주차권</th>
+                    <td colspan="2"></td>
+                    <th>선콜</th>
+                    <td colspan="2"></td>
+                    <th colspan="2">후콜</th>
                     <td></td>
                 </tr>
+                <tr>
+                    <th class="h-14">시설할인(원)</th>
+                    <td></td>
+                    <th colspan="2">식당할인(원)</th>
+                    <td colspan="2"></td>
+                    <th>기타할인(원)</th>
+                    <td colspan="5"></td>
+                </tr>
+                <tr>
+                    <td class="text-center" colspan="12">협조사항</td>
+                </tr>
+                <tr>
+                    <th>초도용품</th>
+                    <td>
+                        <select class="form-select">
+                            <option value="" >선택</option>
+                            <option value="" >반입가능</option>
+                            <option value="">반입불가</option>
+                        </select>
+                    </td>
+                    <th colspan="2">초도용품비용(원)</th>
+                    <td colspan="2"><input type="number" class="form-control" placeholder="숫자만 입력"></td>
+                    <th>비고</th>
+                    <td colspan="5"><input type="text" class="form-control" placeholder="내용을 입력하세요."></td>
+                </tr>
+                <tr>
+                    <th>입관용품</th>
+                    <td>
+                        <select class="form-select">
+                            <option value="" >선택</option>
+                            <option value="" >반입가능</option>
+                            <option value="">반입불가</option>
+                        </select>
+                    </td>
+                    <th colspan="2">입관용품비용(원)</th>
+                    <td colspan="2"><input type="number" class="form-control" placeholder="숫자만 입력"></td>
+                    <th>비고</th>
+                    <td colspan="5"><input type="text" class="form-control" placeholder="내용을 입력하세요."></td>
+                </tr>
+                <tr>
+                    <th>차량</th>
+                    <td>
+                        <select class="form-select">
+                            <option value="" >선택</option>
+                            <option value="" >리무진</option>
+                            <option value="">버스</option>
+                            <option value="">리무진, 버스</option>
+                            <option value="">없음</option>
+                        </select>
+                    </td>
+                    <th colspan="2">차량비용(원)</th>
+                    <td colspan="2"><input type="number" class="form-control" placeholder="숫자만 입력"></td>
+                    <th>비고</th>
+                    <td colspan="5"><input type="text" class="form-control" placeholder="내용을 입력하세요."></td>
+                </tr>
+                <tr>
+                    <th>도우미</th>
+                    <td>
+                        <select class="form-select">
+                            <option value="" >선택</option>
+                            <option value="" >없음</option>
+                            <option value="">자체 있음</option>
+                        </select>
+                    </td>
+                    <th colspan="2">사용형태</th>
+                    <td colspan="2"><input type="text" class="form-control" placeholder=""></td>
+                    <th>비고</th>
+                    <td colspan="5"><input type="text" class="form-control" placeholder="내용을 입력하세요."></td>
+                </tr>
+                <tr>
+                    <th>관</th>
+                    <td>
+                        <select class="form-select">
+                            <option value="" >선택</option>
+                            <option value="" >반입가능</option>
+                            <option value="">1단 0.6</option>
+                            <option value="">1단 1.0</option>
+                            <option value="">1단 1.5</option>
+                            <option value="">2단 0.6</option>
+                            <option value="">2단 1.0</option>
+                            <option value="">2단 1.5</option>
+                        </select>
+                    </td>
+                    <th colspan="2">관비용(원)</th>
+                    <td colspan="2"><input type="number" class="form-control" placeholder="숫자만 입력"></td>
+                    <th>비고</th>
+                    <td colspan="5"><input type="text" class="form-control" placeholder="내용을 입력하세요."></td>
+                </tr>
+                <tr>
+                    <th>제단</th>
+                    <td>
+                        <select class="form-select">
+                            <option value="">선택</option>
+                            <option value="">반입가능</option>
+                            <option value="">반입불가</option>
+                        </select>
+                    </td>
+                    <th colspan="2">제단할인</th>
+                    <td colspan="2"><input type="text" class="form-control" value="RT 50%" placeholder=""></td>
+                    <th>비고</th>
+                    <td colspan="5"><input type="text" class="form-control" placeholder="내용을 입력하세요."></td>
+                </tr>
+                <tr>
+                    <th>상복</th>
+                    <td>
+                        <select class="form-select">
+                            <option value="" >선택</option>
+                            <option value="" >반입가능</option>
+                            <option value="">반입불가</option>
+                        </select>
+                    </td>
+                    <th colspan="2">상복비용(원)</th>
+                    <td colspan="2"><input type="number" class="form-control" placeholder="숫자만 입력"></td>
+                    <th>비고</th>
+                    <td colspan="5"><input type="text" class="form-control" placeholder="내용을 입력하세요."></td>
+                </tr>
+                <tr>
+                    <th>기타</th>
+                    <td>
+                        <select class="form-select">
+                            <option value="" >선택</option>
+                            <option value="" >반입가능</option>
+                            <option value="">반입불가</option>
+                        </select>
+                    </td>
+                    <th colspan="2">비용(원)</th>
+                    <td colspan="2"><input type="number" class="form-control" placeholder="숫자만 입력"></td>
+                    <th>비고</th>
+                    <td colspan="5"><input type="text" class="form-control" placeholder="내용을 입력하세요."></td>
+                </tr>
+                <tr>
+                    <th>기타사항</th>
+                    <td colspan="11"><input type="text" class="form-control" placeholder="내용을 입력하세요."></td>
+                </tr>
+                <tr>
+                    <th>공식협약</th>
+                    <td colspan="11"><input type="text" class="form-control" placeholder="내용을 입력하세요."></td>
+                </tr>
+                <tr>
+                    <th>비공식협약</th>
+                    <td colspan="11"><input type="text" class="form-control" placeholder="내용을 입력하세요."></td>
+                </tr>
             </table>
+
+            <h5 class="py-2 px-3 bg-f5 text-333 leading-6">&#8231;연계업체정보</h5>
+            <div class="overflow-x-auto">
+                <table class="list-table list-table-small table-striped !w-auto">
+                    <thead>
+                    <tr>
+                        <th>업체분류</th>
+                        <th>LIST</th>
+                        <th>담당업체</th>
+                        <th>연락처</th>
+                        <th>번호송출</th>
+                        <th>문자수신</th>
+                        <th>업체관리자</th>
+                        <th>연락처2</th>
+                        <th>번호송출</th>
+                        <th>문자수신</th>
+                        <th>ERP접근 권한 <br><span class="text-sm">(MFS USER ID)</span></th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    <tr >
+                        <td colspan="11" class="!p-0">
+                            <p class="flex h-20 justify-center items-center  text-999">정보가 없습니다.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-nowrap">장지안내</td>
+                        <td>
+                            <select class="form-select !w-auto min-w-[100px]">
+                                <option value="">선택</option>
+                                <option value="">삼포실버드림</option>
+                                <option value=""></option>
+                            </select>
+                        </td>
+                        <td class="text-nowrap">삼포실버드림</td>
+                        <td class="text-nowrap">010-2223-4444</td>
+                        <td>
+                            <select class="form-select !w-[100px]">
+                                <option value="">선택</option>
+                                <option value="">Y</option>
+                                <option value="">N</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select class="form-select !w-[100px]">
+                                <option value="">선택</option>
+                                <option value="">Y</option>
+                                <option value="">N</option>
+                            </select>
+                        </td>
+                        <td class="text-nowrap">삼포실버드림</td>
+                        <td class="text-nowrap">010-2223-4444</td>
+                        <td>
+                            <select class="form-select !w-[100px]">
+                                <option value="">선택</option>
+                                <option value="">Y</option>
+                                <option value="">N</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select class="form-select !w-[100px]">
+                                <option value="">선택</option>
+                                <option value="">Y</option>
+                                <option value="">N</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select class="form-select !w-[100px]">
+                                <option value="">선택</option>
+                                <option value="">Y</option>
+                                <option value="">N</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-nowrap">장지안내</td>
+                        <td>
+                            <select class="form-select !w-auto min-w-[100px]">
+                                <option value="">선택</option>
+                                <option value="">삼포실버드림</option>
+                                <option value=""></option>
+                            </select>
+                        </td>
+                        <td class="text-nowrap">삼포실버드림</td>
+                        <td class="text-nowrap">010-2223-4444</td>
+                        <td>
+                            <select class="form-select !w-[100px]">
+                                <option value="">선택</option>
+                                <option value="">Y</option>
+                                <option value="">N</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select class="form-select !w-[100px]">
+                                <option value="">선택</option>
+                                <option value="">Y</option>
+                                <option value="">N</option>
+                            </select>
+                        </td>
+                        <td class="text-nowrap">삼포실버드림</td>
+                        <td class="text-nowrap">010-2223-4444</td>
+                        <td>
+                            <select class="form-select !w-[100px]">
+                                <option value="">선택</option>
+                                <option value="">Y</option>
+                                <option value="">N</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select class="form-select !w-[100px]">
+                                <option value="">선택</option>
+                                <option value="">Y</option>
+                                <option value="">N</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select class="form-select !w-[100px]">
+                                <option value="">선택</option>
+                                <option value="">Y</option>
+                                <option value="">N</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-nowrap">장지안내</td>
+                        <td>
+                            <select class="form-select !w-auto min-w-[100px]">
+                                <option value="">선택</option>
+                                <option value="">삼포실버드림</option>
+                                <option value=""></option>
+                            </select>
+                        </td>
+                        <td class="text-nowrap">삼포실버드림</td>
+                        <td class="text-nowrap">010-2223-4444</td>
+                        <td>
+                            <select class="form-select !w-[100px]">
+                                <option value="">선택</option>
+                                <option value="">Y</option>
+                                <option value="">N</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select class="form-select !w-[100px]">
+                                <option value="">선택</option>
+                                <option value="">Y</option>
+                                <option value="">N</option>
+                            </select>
+                        </td>
+                        <td class="text-nowrap">삼포실버드림</td>
+                        <td class="text-nowrap">010-2223-4444</td>
+                        <td>
+                            <select class="form-select !w-[100px]">
+                                <option value="">선택</option>
+                                <option value="">Y</option>
+                                <option value="">N</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select class="form-select !w-[100px]">
+                                <option value="">선택</option>
+                                <option value="">Y</option>
+                                <option value="">N</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select class="form-select !w-[100px]">
+                                <option value="">선택</option>
+                                <option value="">Y</option>
+                                <option value="">N</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-nowrap">장지안내</td>
+                        <td>
+                            <select class="form-select !w-auto min-w-[100px]">
+                                <option value="">선택</option>
+                                <option value="">삼포실버드림</option>
+                                <option value=""></option>
+                            </select>
+                        </td>
+                        <td class="text-nowrap">삼포실버드림</td>
+                        <td class="text-nowrap">010-2223-4444</td>
+                        <td>
+                            <select class="form-select !w-[100px]">
+                                <option value="">선택</option>
+                                <option value="">Y</option>
+                                <option value="">N</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select class="form-select !w-[100px]">
+                                <option value="">선택</option>
+                                <option value="">Y</option>
+                                <option value="">N</option>
+                            </select>
+                        </td>
+                        <td class="text-nowrap">삼포실버드림</td>
+                        <td class="text-nowrap">010-2223-4444</td>
+                        <td>
+                            <select class="form-select !w-[100px]">
+                                <option value="">선택</option>
+                                <option value="">Y</option>
+                                <option value="">N</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select class="form-select !w-[100px]">
+                                <option value="">선택</option>
+                                <option value="">Y</option>
+                                <option value="">N</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select class="form-select !w-[100px]">
+                                <option value="">선택</option>
+                                <option value="">Y</option>
+                                <option value="">N</option>
+                            </select>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
         </section>
     </main>
 
