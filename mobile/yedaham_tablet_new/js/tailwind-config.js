@@ -36,6 +36,8 @@ tailwind.config = {
           'calc-88': 'calc(100dvh - 88px)',
           'calc-200': 'calc(100dvh - 200px)',
           'calc-210': 'calc(100dvh - 210px)',
+          'calc-260': 'calc(100dvh - 260px)',
+          'calc-268': 'calc(100dvh - 268px)',
           'calc-274': 'calc(100dvh - 274px)',
           'calc-292': 'calc(100dvh - 292px)',
           'calc-306': 'calc(100dvh - 306px)',

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <title>의전진행관리</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./js/tailwind-config.js"></script>
+    <link rel="stylesheet" href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-neo.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+
+
+    <!-- 상단 고정 영역 -->
+    <header>
+        <div class="header-logo">
+            <img src="./images/header-logo.png" alt="예다함">
+            의전진행관리
+        </div>
+        <div class="header-title">장례도우미 조회/등록</div>
+        <div class="header-menu">
+            <!-- <a href="#" class="home">조회</a> -->
+            <nav>
+                <a href="#">관리메인</a>
+                <!--
+                <a href="#">업무관리</a>
+                <a href="#">투입관리</a>
+                <a href="#">철수관리</a>
+                -->
+            </nav>
+            <a href="#" class="logout">로그아웃</a>
+        </div>
+    </header>
+
+    <main>
+        <h5 class="py-2 px-3 bg-f5 text-333 leading-6 flex justify-between items-center">
+            &#8231;장례도우미 조회
+            <button type="button" class="h-12 px-6 bg-blueMain text-white rounded-lg " >신규등록</button>
+        </h5>
+
+        <section class="filter-group border-t-2 border-666">
+            <div class="filter-tables">
+                <table class=" view-table-style2 table-fixed ">
+                    <colgroup>
+                        <col class="w-[140px]" />
+                        <col class="w-[330px]" />
+                        <col class="w-[140px]" />
+                        <col/>
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th>성명</th>
+                            <td colspan="3">
+                                <div class="input-group ">
+                                    <input type="text" class="form-control" placeholder="">
+                                    <button type="button" class="btn btn-input-clear">초기화</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>생년월일</th>
+                            <td >
+                                <div class="input-group ">
+                                    <input type="number" class="form-control" placeholder="">
+                                    <button type="button" class="btn btn-input-clear">초기화</button>
+                                </div>
+                            </td>
+                            <th>성별</th>
+                            <td>
+                                <select class="form-select">
+                                    <option value="">선택</option>
+                                    <option value="">남</option>
+                                    <option value="">여</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="filter-button flex gap-x-2">
+                <button type="button" class="h-hull w-[154px] border border-ccc rounded-lg bg-white text-666">초기화</button>
+                <button type="button" class="btn btn-filter">조회하기 <span>(999)</span></button>
+            </div>
+        </section><!-- // class="filter-table-group" -->
+
+        <section>
+            <div class="overflow-y-auto h-calc-260">
+                <table class="list-table list-table-small table-striped ">
+                    <colgroup>
+                        <col/>
+                        <col/>
+                        <col/>
+                        <col/>
+                        <col/>
+                        <col/>
+                        <col/>
+                    </colgroup>
+
+                    <thead>
+                        <tr>
+                            <th>성명</th>
+                            <th>장기 미사용 여부</th>
+                            <th>조장유무</th>
+                            <th>은행명</th>
+                            <th>계좌번호</th>
+                            <th>계좌번호</th>
+                            <th>연락처 등록유무</th>
+                            <th>정보변경</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr class="">
+                            <td colspan="7" class="!p-0">
+                                <p class="flex h-calc-292 justify-center items-center  text-999">
+                                    조회된 정보가 없습니다.
+
+                                    <!--
+                                        검색조건 입력 후 조회 시 결과정보가 없을 경우
+
+                                        조회 결과 등록된 대상자가 아닙니다.
+                                      -->
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+
+
+</body>
+
+</html>
