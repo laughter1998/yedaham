@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .content {
+            margin: 0 auto;
+            max-width: 860px;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+        }
+
+        nav {
+            display: flex;
+            position: sticky;
+            top: 0px;
+        }
+
+        nav a {
+            display: block;
+            width: 100%;
+        }
+
+        .tab_content {
+            display: none;
+        }
+
+        .tab_content.active {
+            display: block;
+        }
+    </style>
+    <div class="content">
+        <nav>
+            <a href="#" id="btn_navi01" onclick="showSection('section1')"><img src="./images/btn_navi01_on.jpg"
+                    alt=""></a>
+            <a href="#" id="btn_navi02" onclick="showSection('section2')"><img src="./images/btn_navi02_off.jpg"
+                    alt=""></a>
+        </nav>
+        <main>
+            <section id="section1" class="tab_content active">
+                <img src="https://www.smgtour.com/Upload/Data/Product/41/20241004-102944-89003-1vwaxc5i.534-reduced.jpg"
+                    alt="홋카이도 눈축제 크루즈">
+            </section>
+            <section id="section2" class="tab_content">
+                <img src="https://www.smgtour.com/Upload/Data/Product/51/20240910-185338-11741-qx3kq33t.rbl-reduced.jpg"
+                    alt="설연휴 크루즈">
+            </section>
+        </main>
+    </div>
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.tab_content');
+            sections.forEach(function (section) {
+                section.classList.remove('active');
+            });
+
+            const sectionToShow = document.getElementById(sectionId);
+            sectionToShow.classList.add('active');
+
+            const btnNavi01 = document.getElementById('btn_navi01').getElementsByTagName('img')[0];
+            const btnNavi02 = document.getElementById('btn_navi02').getElementsByTagName('img')[0];
+
+            if (sectionId === 'section1') {
+                btnNavi01.src = './images/btn_navi01_on.jpg';
+                btnNavi02.src = './images/btn_navi02_off.jpg';
+            } else if (sectionId === 'section2') {
+                btnNavi01.src = './images/btn_navi01_off.jpg';
+                btnNavi02.src = './images/btn_navi02_on.jpg';
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

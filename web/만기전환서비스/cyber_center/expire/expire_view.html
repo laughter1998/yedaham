@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>예다함</title>
+		<meta http-equiv="Cache-Control" content="no-cache, must-revalidate"/>
+		<meta http-equiv="Expires" content="0"/>
+		<meta http-equiv="Pragma" content="no-cache"/>
+		<script type="text/javascript" src="https://www.yedaham.co.kr/js/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="https://www.yedaham.co.kr/js/common/function.js"></script>
+		<script type="text/javascript" src="https://www.yedaham.co.kr/js/select2.full.js"></script>
+		<script type="text/javascript" src="https://www.yedaham.co.kr/js/script.js"></script>
+		<script type="text/javascript" src="https://www.yedaham.co.kr/js/jquery.placeholder.js"></script>
+		<script type="text/javascript" src="https://www.yedaham.co.kr/js/validate_info.js"></script>
+		<script type="text/javascript" src="https://www.yedaham.co.kr/js/common.js"></script>
+		<script type="text/javascript" src="https://www.yedaham.co.kr/js/commons-validator-1.3.1.js"></script>
+		<script type="text/javascript" src="https://www.yedaham.co.kr/js/menu.js"></script>
+		<link rel="stylesheet" type="text/css" href="https://www.yedaham.co.kr/css/select2.css" />
+		<link rel="stylesheet" type="text/css" href="https://www.yedaham.co.kr/css/styles.css" />
+	</head>
+	<body>
+		
+		<div id="sub_wrapper">
+			<div class="sub_container" id="movecontents">
+				
+
+				<div class="sub_box_wrap">
+				<div class="title_area bg_supplementary_service">
+					<h3>
+						<img src="https://www.yedaham.co.kr/images/cyber_center/expire/title_expire.png"  alt="예다함 멤버십">
+						
+					</h3>
+					<p>
+						상품 납입이 만기된 고객분들의 가입상품을 <span>다양한 형태의 서비스로 <br>전환해 드리는 혜택
+						</span>입니다.
+					</p>
+				</div>
+				<!-- class="title_area" -->
+
+				<div class="clearfix mt20">
+					<img id="serviceImg1" src="../../images/cyber_center/expire/expire_service02.png" usemap="#Map0"  title="">
+					<map name="Map0"><area shape="rect" coords="40,159,204,199" href="#"  alt="상품 상세정보 보기" /></map>
+				</div>
+
+				<div class="info_title mt20">서비스 유의사항</div>
+				<div class="attention_box mt5">
+					<ul>
+						<li>- 예다함 상품 만기 유지 고객 대상 서비스입니다.</li>
+						<li>- 매월 제휴 혜택이 일부 변경될 수 있습니다.</li>
+						<li>- 여행대금보다 해약환급률이 높을 경우 룸 업그레이드 해드립니다.</li>
+						<li>- 유선 상담(고객센터 1566-6644)으로만 서비스를 안내해드립니다.</li>
+					</ul>
+				</div>
+				<div class="space_line mt25"></div>
+
+
+				<form name="myForm" method="post" action="/cyber_center/expire/fast_counsel_save.do">
+					<input type="hidden" name="name"> 
+					<input type="hidden" name="tel">
+					<input type="hidden" name="time"> 
+					<input type="hidden" name="agree_marketing_flg"> 
+					<input type="hidden" name="counsel_type">
+					<input type="hidden" name="all01">
+					<input type="hidden" name="all02">
+				</form>
+
+				<div class="info_title mt20">만기전환 서비스를 이용하고자 하는 고객님은 아래 상담신청 후
+					유선으로 서비스를 안내해 드립니다.</div>
+				<table class="input_table mt15" summary="법인가입 상담신청 입력표입니다.">
+					<caption>법인가입 상담신청 입력 표</caption>
+					<colgroup>
+						<col width="130">
+						<col width="*">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th>전환서비스</th>
+							<td><select id="counsel_type" name="counsel_type" class="select2 select2-hidden-accessible" style="width: 308px;" tabindex="-1" aria-hidden="true">
+									<!-- <option value="">선택해주세요</option>
+									<option value="1">가전 서비스</option> -->
+									<option value="2">여행 서비스</option>
+							</select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 308px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-autocomplete="list" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-counsel_type-container"><span class="select2-selection__rendered" id="select2-counsel_type-container" title="여행 서비스">여행 서비스</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span></td>
+						</tr>
+						<tr>
+							<th>이름</th>
+							<td><input type="text" class="form-input " id="counsel_name" name="personName" maxlength="20" style="width: 308px;" value=""></td>
+						</tr>
+
+						<tr>
+							<th>휴대전화</th>
+							<td><input type="text" class="form-input " onkeyup="this.value=this.value.replace(/[^0-9]/g,'');" id="tel1" name="phone1" maxlength="3" style="width: 100px;" value=""> <input type="text" class="form-input " onkeyup="this.value=this.value.replace(/[^0-9]/g,'');" id="tel2" name="phone2" maxlength="4" style="width: 100px;" value=""> <input type="text" class="form-input " onkeyup="this.value=this.value.replace(/[^0-9]/g,'');" id="tel3" name="phone3" maxlength="4" style="width: 100px" value=""></td>
+						</tr>
+						<tr>
+							<th>상담희망시간</th>
+							<td><select name="time" id="time" class="select2 select2-hidden-accessible" style="width: 308px; height: 30px;" tabindex="-1" aria-hidden="true">
+									<option value="상시(아무때나)">상시(아무때나)</option>
+									<option value="am 10:00 ~ am 11:00">am 10:00 ~ am
+										11:00</option>
+									<option value="am 11:00 ~ pm 12:00">am 11:00 ~ pm
+										12:00</option>
+									<option value="pm 12:00 ~ pm 01:00">pm 12:00 ~ pm
+										01:00</option>
+									<option value="pm 01:00 ~ pm 02:00">pm 01:00 ~ pm
+										02:00</option>
+									<option value="pm 02:00 ~ pm 03:00">pm 02:00 ~ pm
+										03:00</option>
+									<option value="pm 03:00 ~ pm 04:00">pm 03:00 ~ pm
+										04:00</option>
+									<option value="pm 04:00 ~ pm 05:00">pm 04:00 ~ pm
+										05:00</option>
+									<option value="pm 05:00 ~ pm 06:00">pm 05:00 ~ pm
+										06:00</option>
+									<option value="pm 06:00 ~ pm 06:30">pm 06:00 ~ pm
+										06:30</option>
+							</select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 308px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-autocomplete="list" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-time-container"><span class="select2-selection__rendered" id="select2-time-container" title="상시(아무때나)">상시(아무때나)</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+							</td>
+						</tr>
+						<tr>
+							<th></th>
+							<td><div id="captcha" class="g-recaptcha mt10" data-sitekey="6Lf3LtopAAAAAI4yj-A3YzxtX-nvfSmGmRLoGmWp"><div style="width: 304px; height: 78px;"><div><iframe title="reCAPTCHA" width="304" height="78" role="presentation" name="a-bfpcih7ld0xu" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6Lf3LtopAAAAAI4yj-A3YzxtX-nvfSmGmRLoGmWp&amp;co=aHR0cHM6Ly93d3cueWVkYWhhbS5jby5rcjo0NDM.&amp;hl=ko&amp;v=-ZG7BC9TxCVEbzIO2m429usb&amp;size=normal&amp;cb=ciwz9680343u"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;"></iframe></div></td>
+						</tr>
+				</tbody></table>
+
+				<div class="space_line mt25"></div>
+
+				<div class="info_title mt15">개인정보의 수집 및 이용, 제공에 관한 필수적 동의</div>
+				<div class="write_agree_box">
+					<div class="info_title02 agree_title03">The-K 예다함㈜는
+						「개인정보보호법」에 따라 귀하의 개인정보를 다음과 같이 수집ㆍ이용하고자 합니다.</div>
+
+				</div>
+				<!-- // class="write_agree_box" -->
+
+				<div class="write_agree_box" style="border-top: none;">
+					<div class="process_part_top">
+						<p style="background: none; padding: 0;">
+							<span style="font-size: 14px;">개인정보 수집 이용에 대한 동의</span>
+						</p>
+						<div class="agree_select">
+							<span class="input_radio"><input type="radio" id="new_radio011" name="all01" value="Y"><label id="new_radio011Lb" for="new_radio011"></label></span><span class="agr_txt">동의</span>&nbsp;&nbsp;&nbsp; <span class="input_radio"><input type="radio" id="new_radio012" name="all01" value="N" checked=""><label id="new_radio012Lb" for="new_radio012"></label></span><span class="agr_txt">동의안함</span>
+						</div>
+					</div>
+					<!-- // class="process_part_top" -->
+
+					<div class="pop_terms02 mt10 mCustomScrollbar _mCS_1">
+						<div id="mCSB_1" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside" tabindex="0">
+							<div id="mCSB_1_container" class="mCSB_container" style="position: relative; top: 0; left: 0;" dir="ltr">
+								<p class="title">가. 개인정보 수집, 이용 목적</p>
+								<p>: 상조 전환 서비스 신청 의사 확인 및 전환 상담 목적 </p>
+								<p class="title mt10">나. 수집하는 개인정보 항목</p>
+								<p>: 성명, 연락처, 상담희망시간, 서비스종류</p>
+								<p class="title mt10">다. 개인정보 보유 및 이용기간</p>
+								<p>: 서비스 신청일로 부터 3개월</p>
+								<p class="mt10">
+									* 개인정보의 수집·이용에 대한 동의를 거부할 수 있으나,<br>&nbsp;&nbsp;&nbsp;&nbsp;동의
+									거부 시 상담이 불가할 수 있음
+								</p>
+
+							</div>
+							<div id="mCSB_1_scrollbar_vertical" class="mCSB_scrollTools mCSB_1_scrollbar mCS-light mCSB_scrollTools_vertical" style="display: block;">
+								<div class="mCSB_draggerContainer">
+									<div id="mCSB_1_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; display: block; height: 38px; max-height: 75px;" oncontextmenu="return false;">
+										<div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
+									</div>
+									<div class="mCSB_draggerRail"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- // class="write_agree_box" -->
+
+				<div class="write_agree_box" style="border-top: none;">
+					<div class="process_part_top">
+						<p style="background: none; padding: 0;">
+							<span style="font-size: 14px;">개인정보 제공에 대한 동의</span>
+						</p>
+						<div class="agree_select">
+							<span class="input_radio"><input type="radio" id="new_radio021" name="all02" value="Y"><label id="new_radio021Lb" for="new_radio021"></label></span><span class="agr_txt">동의</span>&nbsp;&nbsp;&nbsp; <span class="input_radio"><input type="radio" id="new_radio022" name="all02" value="N" checked=""><label id="new_radio022Lb" for="new_radio022"></label></span><span class="agr_txt">동의안함</span>
+						</div>
+
+					</div>
+					<!-- // class="process_part_top" -->
+
+					<div class="pop_terms02 mt10 mCustomScrollbar _mCS_2">
+						<div id="mCSB_2" class="mCustomScrollBox mCS-light mCSB_vertical mCSB_inside" tabindex="0">
+							<div id="mCSB_2_container" class="mCSB_container" style="position: relative; top: 0; left: 0;" dir="ltr">
+								<p class="title">가. 개인정보 처리의 위탁</p>
+								<p>1) 위탁받은 업체 : ㈜유베이스</p>
+								<p>2) 위탁하는 업무 : 전환 서비스 안내 업무</p>
+								<p class="mt10">
+									* 개인정보처리 위탁에 대한 동의를 거부할 수 있으나,<br>&nbsp;&nbsp;&nbsp;&nbsp;동의
+									거부 시 상담이 불가할 수 있음
+								</p>
+							</div>
+							<div id="mCSB_2_scrollbar_vertical" class="mCSB_scrollTools mCSB_2_scrollbar mCS-light mCSB_scrollTools_vertical" style="display: block;">
+								<div class="mCSB_draggerContainer">
+									<div id="mCSB_2_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; display: block; height: 66px; max-height: 75px;" oncontextmenu="return false;">
+										<div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
+									</div>
+									<div class="mCSB_draggerRail"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- // class="write_agree_box" -->
+				<p class="btn_area mt30">
+					<a href="javascript:history.back();" class="btn_white">취소</a> 
+					<a href="javascript:fastCounselSave();" class="btn_type01">상담신청하기</a>
+				</p>
+			</div>
+
+
+
+			</div><!-- class="sub_container" -->
+			<!-- 푸터 -->
+
+			<!-- //푸터---->
+		</div><!-- id="sub_wrapper" -->
+			
+	</body>
+</html>
