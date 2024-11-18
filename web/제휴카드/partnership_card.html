@@ -285,7 +285,7 @@
                                 <div>
                                     <h3>예다함 상조엔로카</h3>
                                 </div>
-                                <img src="./images/product/card/card_lotte2.png" alt="예다함 롯데카드">
+                                <img src="https://www.yedaham.co.kr/images/product/card/card_lotte2.png" alt="예다함 롯데카드">
                             </div>
                             <div class="card-info">
                                 <p class="dues-tit ">연회비</p>
@@ -895,11 +895,68 @@
 
 
 
-
-
-
-
     </div><!-- id="sub_wrapper" -->
+
+
+    <!-- 상조엔로카 출시 모달 20241118 -->
+    <style>
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(17, 17, 17, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+        }
+
+
+        .modal.hidden {
+            display: none;
+        }
+
+
+        .modal .modal-content {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+        .modal .close-button {
+            margin-bottom: 8px;
+            text-align: right;
+            cursor: pointer;
+        }
+    </style>
+    <div id="modal" class="modal ">
+        <div class="modal-content">
+            <p class="close-button"><img src="./images/product/card/popup_close.png" alt=""></p>
+            <p><img src="./images/product/card/popup_lotte.png" usemap="#popup_lotte" alt=""></p>
+        </div>
+    </div>
+    <map name="popup_lotte">
+        <area shape="rect" coords="109,422,290,472"
+            href="https://m.lottecard.co.kr/spa/card/booth?bId=95299&vtCdKndC=P15623-A15623" target="_blank" alt="" />
+    </map>
+    <script>
+        const modal = document.getElementById('modal');
+        const closeModalBtn = document.querySelector('.close-button');
+
+        closeModalBtn.addEventListener('click', () => {
+            modal.classList.add('hidden');
+        });
+
+        window.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                modal.classList.add('hidden');
+            }
+        });
+
+    </script>
+    <!-- // 상조엔로카 출시 모달 20241118 -->
 
     <script>
         function close_card() {

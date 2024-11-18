@@ -15,6 +15,24 @@
     <link rel="stylesheet" href="../css/swiper-bundle.css">
 
 </head>
+<script language="Javascript" type="text/javascript">
+    function setCookie(name, value, expirehours) {
+        var todayDate = new Date();
+        todayDate.setHours(todayDate.getHours() + expirehours);
+        document.cookie = name + "=" + escape(value) + "; path=/; expires=" + todayDate.toGMTString() + ";"
+
+    }
+    function closeWin() {
+        if (document.getElementById("pop_today").checked) {
+            setCookie("ncookie", "done", 24);
+        }
+        document.getElementById('layerPop').style.display = "none";
+    }
+    function closeWin2() {
+        document.getElementById('layerPop').style.display = "none";
+    }
+
+</script>
 
 <body id="partnership-intro" class="foot-space">
     <header class="header">
@@ -118,8 +136,8 @@
                                 <img src="../images/card/card06.png" class="card" alt="하나카드">
                             </div>
                             <div class="swiper-btns">
-                                <a href="https://www.hanacard.co.kr/OPI95000040C.web?_frame=no&PCODE=YDHPLUS"
-                                    target="_blank">전화 예약하기</a>
+                                <!-- <a href="https://www.hanacard.co.kr/OPI95000040C.web?_frame=no&PCODE=YDHPLUS"
+                                    target="_blank">전화 예약하기</a> -->
                                 <a href="https://m.hanacard.co.kr/MPACMM101M.web?CD_PD_SEQ=13804" target="_blank">카드
                                     자세히보기</a>
                             </div>
@@ -696,6 +714,8 @@
                                 </table>
 
                                 <ul class="circle-list mt-20">
+                                    <li class="color-333">상품관련 세부사항은 하나카드 고객센터<a href="tel:1800-1111" class="f400"
+                                            target="_blank">(1800-1111)</a>로 문의하여 주시기 바랍니다.</li>
                                     <li class="color-333">카드사는 예다함 상조부금 자동이체 시에만 전월 실적에 따른 청구할인 서비스를 제공하며, 자동이체 신청은 예다함
                                         고객센터<a href="tel:1566-6644" class="f400" target="_blank">(1566-6644)</a>에서
                                         가능합니다. </li>
@@ -919,6 +939,34 @@
         <div class="copyright ">Copyright© The-K Yedaham Co. Ltd <br />ALL Right Reserved</div>
         <button id="top-btn" onclick="backToTop()"><img src="../images/common/btn_scroll_top.png" alt=""></button>
     </footer>
+    <div id="layerPop">
+        <div class="modal-alert active pt-25 " id="modalAlert">
+            <div class="modal-body ">
+                <p class="text-right mb-10"><img src="../images/card/popup_close.png" onclick="closeWin2()"
+                        style="width:20px;" alt=""></p>
+                <img src="../images/card/popup_lotte.png" />
+                <input type="checkbox" name="pop_today" id="pop_today" checked
+                    style="position:fixed;left:-999px;bottom:-999px;width:1px;height:1px;" />
+            </div>
+            <div class="flex">
+                <button class="btn-alert" onclick="closeWin()"
+                    style="font-weight:350;border-right:1px solid #7d4ede; background-color: #5d22d6;">다시 보지않기</button>
+                <a href="#" class="btn-alert" style="background-color: #5d22d6;">자세히 보기 &gt;&gt;</a>
+            </div>
+        </div><!-- class="modal" -->
+        <div id="overlay" class="active" onclick="closeWin2()"></div>
+    </div>
+
+    <script language="Javascript" type="text/javascript">
+
+        cookiedata = document.cookie;
+        if (cookiedata.indexOf("ncookie=done") < 0) {
+            document.getElementById('layerPop').style.display = "block";
+        } else {
+            document.getElementById('layerPop').style.display = "none";
+        }
+
+    </script>
 
     <div class="fixed-btns"></div>
 
