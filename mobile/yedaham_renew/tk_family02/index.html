@@ -1,0 +1,564 @@
+<?
+setcookie("KLIFE_ROBOT","blue",0,"/");
+?>
+<?include_once"../include/top_program.php";?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+<title>예다함</title>
+
+<script type="text/javascript" src="https://m.yedaham.co.kr/tk_family02/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.full.js"></script>
+<link href="./css/style.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="https://m.yedaham.co.kr/tk_family02/css/select2.css">
+<script src="https://m.yedaham.co.kr/js/jquery.mCustomScrollbar.js"></script>
+<link rel="stylesheet" href="https://m.yedaham.co.kr/css/jquery.mCustomScrollbar.css">
+	<script type="text/javascript">
+
+	$(document).ready(function(){
+
+		$('#so2, #so3, #nm, #h1, #h2, #h3, #pw, #nm1, #sos21, #hs11, #hs21, #hs31').click(function(){
+			var agree_confirm01 = $('input[name="all01"]:checked').val();
+			var agree_confirm02 = $('input[name="all02"]:checked').val();
+
+			if (agree_confirm01 == "N") {
+				alert('개인정보 수집 이용 동의 하셔야 합니다.');
+				return false;
+			}
+			if (agree_confirm02 == "N") {
+				alert('개인정보 제공 동의 하셔야 합니다.');
+				return false;
+			}
+		});
+
+		$(".select2").select2({
+			minimumResultsForSearch: Infinity
+		});
+	});
+
+	
+
+	function openStateSub(evt, tabContentName) {
+		evt.preventDefault()
+      let i, tabcontent, tablinks;
+	  console.log(evt.currentTarget);
+      const tabTarget = evt.currentTarget.parentElement.parentElement;
+      tabcontent = tabTarget.getElementsByClassName("tabcontentSub");
+      
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+
+      tablinks = tabTarget.querySelectorAll('.tablinksSub');
+      
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(tabContentName).style.display = "block";
+      evt.currentTarget.className += " active";
+
+    }
+
+
+		var layerno = 1;
+		function clickOK(){
+			layerno++;
+			if(layerno>20){
+				layerno = 20;
+			}
+			else{
+				document.getElementById("gbox"+layerno).style.display="";
+			}
+			document.getElementById("iframe_url_send").src="http://www.theklife.co.kr/with/event/tk_family2.do?height=" + 118 * layerno;
+		}
+
+		function inputOK(){
+			var f = document.input_f;
+            var agree_confirm01 = $('input[name="all01"]:checked').val();
+            var agree_confirm02 = $('input[name="all02"]:checked').val();
+
+            if (agree_confirm01 == "N") {
+                alert('개인정보 수집 이용 동의 하셔야 합니다.');
+                return false;
+            }
+            if (agree_confirm02 == "N") {
+                alert('개인정보 제공 동의 하셔야 합니다.');
+                return false;
+            }
+			if (!f.so2.value){
+				alert('소속사를 써주세요');
+				return;
+			}
+			if (!f.so3.value){
+				alert('부서를 써주세요');
+				f.so3.focus();
+				return;
+			}
+			if (!f.nm.value){
+				alert('성명을 써주세요');
+				f.nm.focus();
+				return;
+			}
+			if (!f.h1.value){
+				alert('휴대전화를 써주세요');
+				return;
+			}
+			if (!f.h2.value){
+				alert('휴대전화를 써주세요');
+				f.h2.focus();
+				return;
+			}
+			if (!f.h3.value){
+				alert('휴대전화를 써주세요');
+				f.h3.focus();
+				return;
+			}
+			if (!f.pw.value){
+				alert('비밀번호를 써주세요');
+				f.pw.focus();
+				return;
+			}
+			if (f.pw.value.length<4){
+				alert('비밀번호를 4자이상 써주세요');
+				f.pw.focus();
+				return;
+			}
+			if (!f.nm1.value){
+				alert('지인의 성명을 써주세요');
+				f.nm1.focus();
+				return;
+			}
+			if (!f.sos21.value){
+				alert('지인의 관계를 써주세요');
+				return;
+			}
+			if (!f.hs11.value){
+				alert('지인의 휴대전화를 써주세요');
+				return;
+			}
+			if (!f.hs21.value){
+				alert('지인의 휴대전화를 써주세요');
+				f.hs21.focus();
+				return;
+			}
+			if (!f.hs31.value){
+				alert('지인의 휴대전화를 써주세요');
+				f.hs31.focus();
+				return;
+			}
+
+			f.submit();
+		}
+
+		function searchOK(){
+			var f = document.search_f;
+
+			if (!f.so2.value){
+				alert('소속사를 써주세요');
+				return;
+			}
+
+			if (!f.nm.value){
+				alert('성명을 써주세요');
+				f.nm.focus();
+				return;
+			}
+			if (!f.h1.value){
+				alert('휴대전화를 써주세요');
+				return;
+			}
+			if (!f.h2.value){
+				alert('휴대전화를 써주세요');
+				f.h2.focus();
+				return;
+			}
+			if (!f.h3.value){
+				alert('휴대전화를 써주세요');
+				f.h3.focus();
+				return;
+			}
+			if (!f.pw.value){
+				alert('비밀번호를 써주세요');
+				f.pw.focus();
+				return;
+			}
+			if (f.pw.value.length<4){
+				alert('비밀번호를 4자이상 써주세요');
+				f.pw.focus();
+				return;
+			}
+
+			iframe_url_send.location.replace('index_list.html?nm='+f.nm.value+'&hp='+f.h1.value+'-'+f.h2.value+'-'+f.h3.value+'&so2='+f.so2.value+'&pw='+f.pw.value);
+
+		}
+		function sos_click(num){
+			var f = document.input_f;
+			if(document.getElementById("sos1"+num).value == "본인"){
+				document.getElementById("nm"+num).value = f.nm.value;
+				document.getElementById("hs1"+num).value = f.h1.value;
+				document.getElementById("hs2"+num).value = f.h2.value;
+				document.getElementById("hs3"+num).value = f.h3.value;
+			}
+			else{
+				//if(document.getElementById("nm").value == document.getElementById("nm"+num).value) document.getElementById("nm"+num).value = "";
+				document.getElementById("hs1"+num).value = "";
+				document.getElementById("hs2"+num).value = "";
+				document.getElementById("hs3"+num).value = "";
+			}
+		}
+
+		function callREQ(num){
+			hiddenfrm.location.replace('indexOK_call.php?num='+num);
+		}
+
+		function openwin(){
+	window.open("popup.html","openwin1a","height=930,width=600,marginwidth=0,marginheight=0,resizable=no,scrollbars=no,toolbar=no, menubar=no, location=no,status=no");
+}
+	
+	</script>
+</head>
+<body>
+<?
+	date_default_timezone_set('Asia/Seoul');
+
+	$ci_now = strtotime(date("Y-m-d H:i:s"));
+	$ci_start = strtotime("2024-08-30 10:00:00");
+
+	$ceo_now = strtotime(date("Y-m-d H:i:s"));
+	$ceo_start = strtotime("2024-09-02 09:00:00");
+?>
+	<iframe name="hiddenfrm" style="display:none";></iframe>
+	<div class="wraper" >
+		<div class="tk_wrap" >
+		<div class="header">
+			<img src="./images/title_event.png" alt="진행중인 이벤트"/>
+			<h1><a href="http://www.yedaham.co.kr" target="blank"><img src="./images/logo.png" alt="예다함"/></a></h1>
+		</div><!-- class="header" -->
+             <div id="contents" class="recruit"><!--컨텐츠 영역 코딩 하시면 됩니다-->
+			<div class="event_top mt30">
+				<img src="images/event_top.png" alt="The-k 가족 추천 캠페인!" />
+			</div>
+
+
+			<div class="event_con_a mt30">
+
+				<div class="event_tab">
+					<button class="tablinksSub active" onclick="openStateSub(event, 't01')">소개자 입력</button>
+					<button class="tablinksSub" onclick="openStateSub(event, 't02')">캠페인 조회</button>
+				</div>
+				<!-- 소개자 입력 -->
+
+				<div class="event_con cl tabcontentSub" id="t01">
+					<form action="indexOK.php" method=post name="input_f">
+
+					
+                    <div class="info_title mt15">개인정보의 수집 이용 제공에 관한 필수적 동의 <a href="http://www.yedaham.co.kr/customer/agreement/pps.do" target="_blank" class="btn_white02 ab_R">전문보기</a></div>
+
+
+                    <!-- 동의서 수정-->
+                    <div class="write_agree_box mt-10" >
+                        <div class="info_title02 agree_title03"><?= $ci_now < $ci_start ? 'The-K 예다함상조는' : 'The-K 예다함은' ?> 「개인정보보호법」에 따라 귀하의 개인정보를 다음과 같이 수집· 이용하고자 합니다.</div>
+
+                    </div><!-- // class="write_agree_box" -->
+
+                    <div class="write_agree_box" style="border-top:none;">
+                        <div class="process_part_top">
+                            <p style="background:none;padding:0;"><span style="font-size:14px;">개인정보 수집 이용에 대한 동의</span></p>
+
+                            <div class="agree_select">
+                                <span class="input_radio"><input type="radio" id="new_radio011" name="all01" value="Y"><label id="new_radio011Lb" for="new_radio011"></label></span><span class="agr_txt">동의</span>&nbsp;&nbsp;&nbsp;
+                                <span class="input_radio"><input type="radio" id="new_radio012" name="all01" value="N" checked=""><label id="new_radio012Lb" for="new_radio012"></label></span><span class="agr_txt">동의안함</span>
+
+                            </div>
+                        </div><!-- // class="process_part_top" -->
+
+                        <div class="pop_terms02 mt10 mCustomScrollbar">
+                            <p class="title">가. 개인정보 수집, 이용 목적</p>
+                            <p class="yellow">: 상조 서비스 가입의사 확인 및 가입상담 목적</p>
+
+                            <p class="title mt10">나. 수집하는 개인정보 항목</p>
+                            <p class="yellow">- 추천인 정보 : 소속사, 부서/지부, 성명, 연락처, 조회비밀번호</p>
+                            <p class="yellow">- 피추천인정보 : 성명, 연락처, 상담희망 시간, 추천인과의 관계</p>
+
+                            <p class="title mt10">다. 개인정보 보유 및 이용기간</p>
+                            <p class="yellow">: 상담신청일로 부터 3개월</p>
+
+                            <p class="mt10">* 개인정보의 수집·이용에 대한 동의를 거부할 수 있으나,  동의 거부 시 상담이 불가할 수 있음</p>
+                        </div>
+                    </div><!-- // class="write_agree_box" -->
+
+                    <div class="write_agree_box" style="border-top:none;">
+                        <div class="process_part_top">
+                            <p style="background:none;padding:0;"><span style="font-size:14px;">개인정보 제공에 대한 동의</span></p>
+                            <div class="agree_select ">
+                                <span class="input_radio"><input type="radio" id="new_radio021" name="all02" value="Y"><label id="new_radio021Lb" for="new_radio021"></label></span><span class="agr_txt">동의</span>&nbsp;&nbsp;&nbsp;
+                                <span class="input_radio"><input type="radio" id="new_radio022" name="all02" value="N" checked=""><label id="new_radio022Lb" for="new_radio022"></label></span><span class="agr_txt">동의안함</span>
+                            </div>
+
+                        </div><!-- // class="process_part_top" -->
+
+                        <div class="pop_terms02 mt10 mCustomScrollbar">
+                            <p class="title">라. 개인정보 처리의 위탁</p>
+                            <p class="yellow">1) 위탁받은 업체 : ㈜유베이스</p>
+                            <p class="yellow">2) 위탁하는 업무 : 가입 상담업무</p>
+                            <p class="mt10">* 개인정보처리 위탁에 대한 동의를 거부할 수 있으나, 동의 거부 시 상담이 불가할 수 있음</p>
+                        </div>
+                    </div><!-- // class="write_agree_box" -->
+                    <!-- 동의서 수정-->
+ 
+					<div class="space_line mt30"></div>
+  
+
+					<div class="info_title mt15">추천인 입력(임직원)  <p class="tit_right ab_R"><span class="star">*</span> 로 표시된 항목은 필수 입력 항목</p></div>
+
+
+
+						<table class="input_table" summary="추천인 입력(임직원)  표입니다.">
+						<caption>추천인 입력(임직원) 표</caption>
+						<colgroup><col width="170"><col width="*"></colgroup>
+						<tbody>
+							<tr>
+								<th>소속사 <span class="star">*</span></th>
+								<td>
+									<select name="so1" id="so1" style="width:220px;" class="select2"onchange="document.getElementById('so2').value=document.getElementById('so1').value">
+									
+									<option value="">직접입력</option>
+									<option value="한국교직원공제회">한국교직원공제회</option>
+									<option value="공제회 FC">재정전문위원 (공제회FC)</option>
+									<option value="The-K 저축은행">The-K 저축은행</option>
+									<option value="The-K 소피아그린">The-K 소피아그린</option>
+									<option value="The-K 교직원나라">The-K 교직원나라</option>
+									<option value="The-K 서울호텔">The-K 서울호텔</option>
+									<option value="The-K 경주호텔">The-K 경주호텔</option>
+									<option value="The-K 지리산가족호텔">The-K 지리산가족호텔</option>
+									<option value="The-K 설악산가족호텔">The-K 설악산가족호텔</option>
+									<option value="The-K 제주호텔">The-K 제주호텔</option>
+									<option value="The-K 원적산터널">원적산터널</option>
+									<option value="만월산터널">만월산터널</option>
+									<option value="부산그린파워">부산그린파워</option>
+									<option value="신공항 하이웨이">신공항 하이웨이</option>
+
+
+								</select>
+								<input type="text" class="form-input"  style="width:220px;" maxlength=30 name="so2" id="so2" />
+								</td>
+							</tr>
+							<tr>
+								<th>부서/지부 <span class="star">*</span></th>
+								<td><input type="text"  class="txt form-input" style="width:443px;"  maxlength=30 name="so3" id="so3"/></td>
+							</tr>
+							<tr>
+								<th>성명 <span class="star">*</span></th>
+								<td><input type="text" class="txt form-input" style="width:443px;"  maxlength=20 name="nm" id="nm"/></td>
+							</tr>
+							<tr>
+								<th>휴대전화 <span class="star">*</span></th>
+								<td>
+									<input type="text" class="txt form-input" style="width:145px;" name="h1" id="h1" maxlength=3 onkeyPress="if (!((event.keyCode>47) && (event.keyCode<58))) event.returnValue=false;" style="ime-mode:disabled"/>
+									<input type="text" class="txt form-input" style="width:146px;" name="h2" id="h2" maxlength=4 onkeyPress="if (!((event.keyCode>47) && (event.keyCode<58))) event.returnValue=false;" style="ime-mode:disabled"/>
+									<input type="text" class="txt form-input" name="h3" style="width:146px;" id="h3" maxlength=4 onkeyPress="if (!((event.keyCode>47) && (event.keyCode<58))) event.returnValue=false;" style="ime-mode:disabled"/>
+
+								</td>
+							</tr>
+							<tr>
+								<th>상담시 참고사항 </th>
+								<td>
+									<input type="text" class="txt form-input"  style="width:443px;" maxlength=160 name="reference"  />
+								</td>
+							</tr>
+							<tr>
+								<th>캠페인 조회 비밀번호 <span class="star">*</span></th>
+								<td>
+									<input type="password" class="txt form-input"  style="width:443px;" maxlength=20 name="pw"  />
+									<!-- input type="password" class="txt form-input"  style="width:443px;" maxlength=20 name="pw"  onclick="javascript:alert('입력하신 비밀번호를 잊어버리면\n조회서비스를 이용하지 못하실 수 있으니 주의하시기 바랍니다.');"/ -->
+								</td>
+							</tr>
+							<tr>
+								<th></th>
+								<td colspan="2" style="color:#999999;">* 입력하신 비밀번호를 잊어버리면 조회서비스를 이용하지 못하실 수 있으니 주의하시기 바랍니다 . </td>
+							</tr>
+
+
+						</tbody>
+					</table>
+					<div class="space_line mt30"></div>
+
+					<div class="info_title mt15">피추천인 입력(지인) <a href="javascript:clickOK()" class="btn_white ab_R">추가 +</a></div>
+
+
+					<?for($i=1;$i<=20;$i++){?>
+					<div class="gbox mt10" id="gbox<?=$i?>" <?if($i>1){?>style="display:none"<?}?>>
+						<table class="input_table" summary="피추천인 입력(지인)   표입니다.">
+						<caption>피추천인 입력(지인)  표</caption>
+						<colgroup><col width="85"><col width="355"><col width="114"><col width="*"></colgroup>
+						<tbody>
+							<tr>
+								<th>성명 <span class="star">*</span></th>
+								<td><input type="text" class="txt form-input" style="width:296px;" name="nm<?=$i?>" id="nm<?=$i?>" maxlength=20/>	</td>
+								<th>관계 <span class="star">*</span></th>
+								<td><select name="sos1<?=$i?>" class="select2"  id="sos1<?=$i?>" style="width:145px;"  onchange="document.getElementById('sos2<?=$i?>').value=document.getElementById('sos1<?=$i?>').value;sos_click(<?=$i?>)">
+									<option value="">직접입력</option>
+									<!--option value="본인">본인</option-->
+									<option value="가족">가족</option>
+									<option value="친구">친구</option>
+									<option value="지인">지인</option>
+									</select>
+								<input type="text" class="txt form-input"  style="width:147px;" name="sos2<?=$i?>" id="sos2<?=$i?>" />
+								</td>
+							</tr>
+							<tr>
+								<th>휴대전화 <span class="star">*</span></th>
+								<td>
+									<input type="text" class="txt form-input" style="width:97px;"  name="hs1<?=$i?>" id="hs1<?=$i?>" maxlength=3 onkeyPress="if (!((event.keyCode>47) && (event.keyCode<58))) event.returnValue=false;" style="ime-mode:disabled"/>
+									<input type="text" class="txt form-input" style="width:96px;"  name="hs2<?=$i?>" id="hs2<?=$i?>" maxlength=4 onkeyPress="if (!((event.keyCode>47) && (event.keyCode<58))) event.returnValue=false;" style="ime-mode:disabled"/>
+									<input type="text"  class="txt form-input" name="hs3<?=$i?>" id="hs3<?=$i?>" style="width:96px;" maxlength=4 onkeyPress="if (!((event.keyCode>47) && (event.keyCode<58))) event.returnValue=false;" style="ime-mode:disabled"/>
+								</td>
+								<th>상담가능시간 <span class="star">*</span></th>
+								<td>
+									<select name="t<?=$i?>" class="select2" style="width:295px;">
+										<option value="상시(아무때나)">상시(아무때나)</option>
+										<option value="AM 09:30 ~ AM 10:00">AM 09:30 ~ AM 10:00</option>
+										<option value="AM 10:00 ~ AM 11:00">AM 10:00 ~ AM 11:00</option>
+										<option value="AM 11:00 ~ PM 12:00">AM 11:00 ~ PM 12:00</option>
+										<option value="PM 12:00 ~ PM 12:30">PM 12:00 ~ PM 12:30</option>
+										<option value="PM 01:30 ~ PM 02:00">PM 01:30 ~ PM 02:00</option>
+										<option value="PM 02:00 ~ PM 03:00">PM 02:00 ~ PM 03:00</option>
+										<option value="PM 03:00 ~ PM 04:00">PM 03:00 ~ PM 04:00</option>
+										<option value="PM 04:00 ~ PM 05:00">PM 04:00 ~ PM 05:00</option>
+										<option value="PM 05:00 ~ PM 06:00">PM 05:00 ~ PM 06:00</option>
+										<option value="PM 06:00 ~ PM 06:30">PM 06:00 ~ PM 06:30</option>
+									</select>
+								</td>
+							</tr>
+
+							<tr>
+								<th></th>
+								<td colspan="3" class="yellow">
+									* 상담운영시간 : 평일 09:30 ~ 18:30<br />
+									&nbsp;&nbsp;(점심시간 : 12:30 ~ 13:30, 주말/공휴일 휴무)
+
+								</td>
+							</tr>
+
+						</tbody>
+					</table>
+
+					</div>
+					<?}?>
+					
+
+					</form>
+					<p class="text_c mt20"><a href="javascript:inputOK()" class="btn_type01">신청하기</a></p>
+					<div class="cau_area">
+						<ul>
+						<ul>
+							<!--li>- 임직원이 임직원을 소개한 건은 목표실적 및 인센티브 지급대상에서 제외됩니다.</li>
+							<li>- 임직원 소개 가입건의 경우에는 가입유지 및 해지와 관련하여 정기적인 모니터링을 시행할 계획입니다.</li>
+							<li>- 피추천인(지인)이 캠페인 추천여부를 인지하고 있어야 합니다.</li>
+							<li>- 피추천인(지인) 등록 시 휴대폰번호와 계약 시 핸드폰 번호가 동일해야 The-K가족 추천캠페인에 등록됩니다.</li-->
+							<li>※ 피추천인(지인)이 캠페인 추천여부를 인지하고 있어야 합니다.</li>
+							<li>※  피추천인(지인) 등록 시 휴대폰번호와 계약자의 휴대폰번호가 동일해야 The-K가족 추천 캠페인에 등록됩니다.</li>
+							<li>※ 인센티브는 계약 이후 3개월 납입이 확인된 건에 한하여 지급되나, 의전 발생 건은 의전 발생 후 익월 지급됩니다.</li>
+							<li  style="font-weight:bold;">※ 긴급을 요하는 TM요청건의 경우 마케팅팀 담당자(02-2090-3155)에게 연락 부탁드립니다.</li>
+
+						</ul>
+					</div>
+
+				</div>
+				<!-- //소개자 입력 -->
+				<!-- 캠페인 조회 -->
+				<div class="event_con cl tabcontentSub" id="t02" style="display:none;">
+
+					<div class="info_title mt15">캠페인 현황 조회</div>
+
+
+						<form action="index_list.html" method=post name="search_f" target="iframe_url_send">
+						<table class="input_table" style="margin:0 0 30px 0;"summary="캠페인 현황 조회)  표입니다.">
+						<caption>캠페인 현황 조회 표</caption>
+						<colgroup><col width="115"><col width="*"></colgroup>
+						<tbody>
+							<tr>
+								<th>소속사</th>
+								<td>
+									<select name="so1" id="so5" class="select2" style="width:220px;" onchange="document.getElementById('so4').value=document.getElementById('so5').value">
+									<option value="">직접입력</option>
+<option value="한국교직원공제회">한국교직원공제회</option>
+<option value="공제회 FC">재정전문위원 (공제회FC)</option>
+<option value="The-K 저축은행">The-K 저축은행</option>
+<option value="The-K 소피아그린">The-K 소피아그린</option>
+<option value="The-K 교직원나라">The-K 교직원나라</option>
+<option value="The-K 서울호텔">The-K 서울호텔</option>
+<option value="The-K 경주호텔">The-K 경주호텔</option>
+<option value="The-K 지리산가족호텔">The-K 지리산가족호텔</option>
+<option value="The-K 설악산가족호텔">The-K 설악산가족호텔</option>
+<option value="The-K 제주호텔">The-K 제주호텔</option>
+<option value="The-K 원적산터널">원적산터널</option>
+<option value="만월산터널">만월산터널</option>
+<option value="부산그린파워">부산그린파워</option>
+<option value="신공항 하이웨이">신공항 하이웨이</option>
+								</select>
+								<input type="text" class="txt form-input" style="width:221px;" maxlength=30 name="so2" id="so4"/>
+								</td>
+							</tr>
+							<tr>
+								<th>성명</th>
+								<td><input type="text" class="txt form-input" style="width:444px;"  maxlength=20 name="nm" id="nms"/></td>
+							</tr>
+							<tr>
+								<th>휴대전화</th>
+								<td>
+									<input type="text" class="txt form-input" style="width:145px;" name="h1" maxlength=3 onkeyPress="if (!((event.keyCode>47) && (event.keyCode<58))) event.returnValue=false;" style="ime-mode:disabled"/>
+									<input type="text" class="txt form-input" style="width:146px;" name="h2" maxlength=4 onkeyPress="if (!((event.keyCode>47) && (event.keyCode<58))) event.returnValue=false;" style="ime-mode:disabled"/>
+									<input type="text" class="txt form-input" name="h3" style="width:146px;" maxlength=4 onkeyPress="if (!((event.keyCode>47) && (event.keyCode<58))) event.returnValue=false;" style="ime-mode:disabled"/>
+								</td>
+							</tr>
+							<tr>
+								<th>비밀번호 </th>
+								<td>
+									<input type="password" class="txt form-input" style="width:341px;" maxlength=20 name="pw"  />
+									<a href="javascript:searchOK()" class="btn_type01" style="width:100px;vertical-align:middle;">조회</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					</form>
+
+
+
+					<div id="result_list">
+					<!--div class="con_no mt05">
+						입력란에 추천인 정보를 기입 후 조회해 주세요
+					</div-->
+					</div>
+
+
+				</div>
+				<!-- //캠페인 조회 -->
+
+			</div>
+
+		</div>
+
+
+		</div> <!-- // class="tk_wrap" -->
+
+<div id="footer_wrap" class="mt25">
+		<div id="footer" >
+			<?if( $ci_now  <  $ci_start){?>
+				<h2><img src="/mail/images/logo_footer.png" alt="The-k 예다함"/></h2>
+				<?} else {?>
+				<h2><img src="/mail/images/logo_footer_new.png" alt="The-k 예다함"/></h2>
+			<?}?>
+			<p>서울시 마포구 마포대로 86, 16층(도화동, 창강빌딩) <?= $ci_now < $ci_start ? 'The-K 예다함상조' : 'The-K 예다함' ?>   대표이사 : 
+			<?= $ceo_now < $ceo_start ? '곽재환' : '김도한' ?>
+			사업자등록번호 : 101-86-49300 <br />
+				통신판매업 신고번호 : 제 2014-서울마포-0712호    전화권유판매업 신고번호 : 제 2014-서울마포-0012호    대표번호 : 1566-6644
+			</p>
+
+		</div>
+	</div><!-- id="footer_wrap" -->
+	</div><!-- // class="wraper" -->
+<iframe id="iframe_url_send" style="display:none" name="iframe_url_send"></iframe>
+</body>
+</html>
