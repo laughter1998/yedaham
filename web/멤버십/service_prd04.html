@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <title>The-K 예다함</title>
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="The-K 예다함">
+    <meta property="og:image" content="https://www.yedaham.co.kr/images/about/yedaham_logo.png">
+    <meta property="og:url" content="https://www.yedaham.com">
+    <meta property="og:description" content="한국교직원공제회가 100% 출자, 설립한 The-K예다함">
+    <meta name="description" content="한국교직원공제회가 100% 출자, 설립한 The-K예다함">
+
+    <script type="text/javascript" src="https://www.yedaham.co.kr/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="https://www.yedaham.co.kr/js/common/function.js"></script>
+    <script type="text/javascript" src="https://www.yedaham.co.kr/js/select2.full.js"></script>
+
+    <script type="text/javascript" src="https://www.yedaham.co.kr/js/script.js"></script>
+    <script type="text/javascript" src="https://www.yedaham.co.kr/js/jquery.placeholder.js"></script>
+    <script type="text/javascript" src="https://www.yedaham.co.kr/js/validate_info.js"></script>
+    <script type="text/javascript" src="https://www.yedaham.co.kr/js/common.js"></script>
+    <script type="text/javascript" src="https://www.yedaham.co.kr/js/commons-validator-1.3.1.js"></script>
+    <script type="text/javascript" src="https://www.yedaham.co.kr/js/menu.js"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="https://www.yedaham.co.kr/css/select2.css" />
+
+
+    <link rel="stylesheet" type="text/css" href="https://www.yedaham.co.kr/css/styles.css" />
+
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+</head>
+
+<style>
+    .the-k-info {
+        position: relative;
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+
+    .the-k-info .module {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+    }
+
+    .the-k-info .item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        color: #fff;
+        font-size: 11px;
+        line-height: 1.5;
+        box-sizing: border-box;
+    }
+
+    .the-k-info .item p.title {
+        display: flex;
+        align-items: center;
+        height: 44px;
+        padding-left: 15px;
+        background-color: #151209;
+        opacity: 0.8;
+    }
+
+    .the-k-info .item section {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-sizing: border-box;
+        padding: 30px 14px 20px 14px;
+        height: 236px;
+        background-color: #000000;
+        opacity: 0.8;
+    }
+
+    .mem_content .the-k-info section ul.mem_service_con {
+        margin: 0px 0 0 0;
+    }
+
+    .mem_content .the-k-info section ul.mem_service_con li p.service_txt {
+        position: absolute;
+        left: 0;
+        top: 30px;
+        width: 100%;
+        color: #ffffff;
+        font-size: 10px;
+        line-height: 14px;
+    }
+
+    .mem_content .the-k-info section ul.mem_service_con li {
+        float: left;
+        position: relative;
+        height: 80px;
+        background: url('https://www.yedaham.co.kr/images/product/service02/bar_line.png') no-repeat right top;
+        text-align: center;
+        width: 33%;
+        font-size: 10px;
+    }
+
+    .mem_content .the-k-info section ul.mem_service_con li.last {
+        background: none;
+    }
+
+    .hotel-list.lahan {
+        display: flex;
+    }
+
+    .hotel-list .item {
+        float: left;
+        position: relative;
+    }
+
+    .hotel-list .item p {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding-left: 10px;
+        height: 30px;
+        line-height: 30px;
+        color: #fff;
+        background-color: rgba(35, 31, 32, .7);
+    }
+
+    .infomation {
+        text-align: left !important;
+        line-height: 22px !important;
+        padding: 15px 10px 15px 10px;
+        color: #cf9547 !important;
+    }
+
+    .infomation span {
+        color: #bc631e;
+        font-size: 15px;
+    }
+
+    .yellow_shadow {
+        color: #fbda78;
+        text-shadow: 1px 1px 8px black;
+    }
+</style>
+
+<body>
+
+
+    <div id="sub_wrapper">
+        <div class="sub_container" id="movecontents">
+
+            <div class="sub_box_wrap">
+
+                <div class="title_area bg_product">
+                    <h3>
+                        <img src="https://www.yedaham.co.kr/images/product/membership/title_membership.png"
+                            alt="예다함 멤버십" />
+                    </h3>
+                    <p>예다함은 <span>The-K가족의 멤버로서 다양한 혜택</span>을 드립니다. 기존 상조업계에서는<br />볼 수 없었던 호텔, 리조트, 할인제휴 서비스와 금융상품혜택을
+                        제공해드립니다.
+                    </p>
+                </div><!-- class="title_area" -->
+
+                <p class="mt3-etc mt30 infomation">
+                    ※ 제휴호텔 및 리조트의 <span>할인적용은 정상가 기준</span>이며, 예다함 멤버십 혜택과는 별개로 제휴처 자체의 특가 행사를 진행할 수 있는 점 참고 바랍니다.
+                    (제휴처의 특가 행사 진행 시에는 예다함 할인 혜택이 중복으로 적용되지 않습니다.)<br />
+                    ※ 제휴사의 사정에 따라 혜택이 일부 변경될 수 있습니다.
+                    <a href="/download/terms/yedaham_membership_terms.pdf" target="_blank"
+                        class="membership_terms_link">멤버십
+                        회원약관</a>
+                </p>
+
+                <div class="membership_wrap">
+                    <ul class="category_list">
+                        <li><a href="javascript:open_cate(1)">
+                                <img src="https://www.yedaham.co.kr/images/product/service02/mem_cate01.png" alt="" />
+                                <p class="cate_btn"></p>
+                            </a></li>
+                        <li><a href="javascript:open_cate(2)">
+                                <img src="https://www.yedaham.co.kr/images/product/service02/mem_cate02.png" alt="" />
+                                <p class="cate_btn"></p>
+                            </a></li>
+                        <li><a href="javascript:open_cate(3)">
+                                <img src="https://www.yedaham.co.kr/images/product/service02/mem_cate03.png" alt="" />
+                                <p class="cate_btn"></p>
+                            </a></li>
+                        <li><a href="javascript:alert('더 나은 서비스를 제공드리기 위해 준비 중에 있습니다.');"><img
+                                    src="https://www.yedaham.co.kr/images/product/service02/mem_cate04.png" alt="" />
+                                <p class="cate_btn"></p>
+                            </a></li>
+                    </ul>
+
+                    <div id="cate1" class="mem_cate mem_category01" style="height: auto; background-size: cover;">
+                        <h5 class="h5_cate_tit">
+                            <img src="https://www.yedaham.co.kr/images/product/service02/tit_mem_hotel.png"
+                                alt="호텔&리조트" />
+                        </h5>
+
+                        <div class="sub_menu_wrap">
+                            <ul class="cate_sub_menu">
+                                <li class="current"><a href="#">The-K 호텔앤리조트</a></li>
+                                <li><a href="#">라마다프라자 제주</a></li>
+                                <li><a href="#">금호리조트</a></li>
+                                <li><a href="#">라한호텔</a></li>
+                            </ul>
+                        </div><!-- // class="sub_menu_wrap" -->
+
+                        <div class="mem_content" id="a1" style="padding-bottom:20px;">
+                            <!-- 호텔 서울-->
+                            <div class="mem_con_top" style="height: 105px;">
+                                <div class="top_left">
+                                    <img src="https://www.yedaham.co.kr/images/product/service02/h5_cate01_thek.png"
+                                        alt="The-k hotel & resort" />
+                                </div>
+                                <a href="http://www.thek-hotel.co.kr" target="_blank"><img
+                                        src="https://www.yedaham.co.kr/images/product/service02/btn_cate_home.png"
+                                        class="top_right" alt="홈페이지 바로가기" /></a>
+                            </div><!-- // class="mem_con_top" -->
+                            <div class="the-k-info">
+                                <img src="./images/product/service02/img_cate01_thek.jpg" alt="" />
+                                <div class="module">
+                                    <div class="item">
+                                        <p class="title">
+                                            <img src="./images/product/service02/the_k_hotel_2.png"
+                                                alt="The-k hotel gyeongju" />
+                                        </p>
+                                        <section>
+                                            <p class="desc">
+                                                신라 천년의 고도인 경주 보문단지에<br />
+                                                위치한 특급호텔로서 부문 호수의 수려한<br />
+                                                자연경관을 즐길 수 있으며 온천 SPA시설<br />
+                                                갖추고 있습니다.
+                                            </p>
+                                            <ul class="mem_service_con ">
+                                                <li>
+                                                    <img src="https://www.yedaham.co.kr/images/product/service02/icon_bed.png"
+                                                        alt="" style="width: 32px;" />
+                                                    <p class="service_txt">객실 &nbsp;할인<br />(주중50%,<br /> 주말40%)</p>
+                                                </li>
+                                                <li>
+                                                    <img src="https://www.yedaham.co.kr/images/product/service02/icon_sauna.png"
+                                                        alt="" style="width: 32px;" />
+                                                    <p class="service_txt">사우나 &nbsp;할인<br />(40%,<br /> 투숙객 &nbsp;대상)
+                                                    </p>
+                                                </li>
+                                                <li class="last">
+                                                    <img src="https://www.yedaham.co.kr/images/product/service02/icon_food.png"
+                                                        alt="" style="width: 30px;" />
+                                                    <p class="service_txt">식음료 &nbsp;할인<br />(10%, <br /> 웰빙뷔페 &nbsp;제외)
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                        </section>
+                                    </div>
+
+                                    <div class="item">
+                                        <p class="title">
+                                            <img src="./images/product/service02/the_k_hotel_4.png"
+                                                alt="The-k 지리산가족호텔" />
+                                        </p>
+                                        <section>
+                                            <p class="desc">
+                                                전남 구례에 위치한 콘도형<br />
+                                                가족호텔로서 134개의 객실을 비롯하여<br />
+                                                온천, 수영장, 컨벤션 홀을 갖추고 있습니다.
+                                            </p>
+                                            <ul class="mem_service_con ">
+                                                <li>
+                                                    <img src="https://www.yedaham.co.kr/images/product/service02/icon_bed.png"
+                                                        alt="" style="width: 32px;" />
+                                                    <p class="service_txt">객실 &nbsp;할인<br />(50%)</p>
+                                                </li>
+                                                <li class="last">
+                                                    <img src="https://www.yedaham.co.kr/images/product/service02/icon_food.png"
+                                                        alt="" style="width: 30px;" />
+                                                    <p class="service_txt">식음료 &nbsp;할인<br />(10%)</p>
+                                                </li>
+                                            </ul>
+                                        </section>
+                                    </div>
+                                    <div class="item">
+                                        <p class="title">
+                                            <img src="./images/product/service02/the_k_hotel_3.png"
+                                                alt="The-k 설악산가족호텔" />
+                                        </p>
+                                        <section>
+                                            <p class="desc">
+                                                국립공원 속초 지구에 위치한 콘도형<br />
+                                                가족호텔로서 설악의 비경과 동해의 일출을<br />
+                                                한 번에 즐길 수 있어 가족단위 휴양과<br />
+                                                수학여행
+                                                코스로 각광받고 있습니다.
+                                            </p>
+                                            <ul class="mem_service_con ">
+                                                <li class="last">
+                                                    <img src="https://www.yedaham.co.kr/images/product/service02/icon_bed.png"
+                                                        alt="" style="width: 32px;" />
+                                                    <p class="service_txt">객실 &nbsp;할인<br />(50%)</p>
+                                                </li>
+                                            </ul>
+                                        </section>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- // class="mem_content" -->
+
+                        <div class="mem_content" id="a2" style="padding-bottom:150px">
+                            <!-- 호텔 라마다 제주-->
+                            <div class="mem_con_top">
+                                <div class="top_left">
+                                    <img src="https://www.yedaham.co.kr/images/product/service02/h5_cate01_a5.png"
+                                        alt="라마다 프라자" />
+                                    <!-- <span>세계적인 호텔체인 라마다인터네셔널사와 프랜차이즈를 통해 국제수준의 서비스를 제공하는 특급호텔.<br />400개의 객실과 1,500명을
+                                        동시에 수용할 수
+                                        있는 컨벤션홀 등 각종 부대시설을 갖추고 있습니다.</span> -->
+                                </div>
+
+                            </div><!-- // class="mem_con_top" -->
+                            <img src="./images/product/service02/img_cate01_a5_notice.jpg" alt="" />
+                            <!-- <ul class="mem_service_con">
+                                <li style="width:220px;">
+                                    <img src="https://www.yedaham.co.kr/images/product/service02/icon_bed.png" alt="" />
+                                    <p class="service_txt">객실 할인 (주중 60%, 주말 50%)<br />(단, 성수기 (7~8월)<br />주중할인율은 주말 50%
+                                        할인율 적용)
+                                    </p>
+                                </li>
+                                <li style="width:150px;">
+                                    <img src="https://www.yedaham.co.kr/images/product/service02/icon_sauna.png"
+                                        alt="" />
+                                    <p class="service_txt">사우나 할인<br />(50%, 투숙객 대상)</p>
+                                </li>
+                                <li class="last" style="width:150px;">
+                                    <img src="https://www.yedaham.co.kr/images/product/service02/icon_food.png"
+                                        alt="" />
+                                    <p class="service_txt">식음료 10% 할인</p>
+                                </li>
+                            </ul> -->
+                        </div><!-- // class="mem_content" -->
+
+                        <div class="mem_content" id="a3">
+                            <!-- 호텔 경주-->
+                            <div class="mem_con_top">
+                                <div class="top_left">
+                                    <img src="https://www.yedaham.co.kr/images/product/service02/h5_cate01_kumho.png"
+                                        alt="금호리조트" />
+                                    <span>참 행복을 체험하는 Eco Tourism을 선보여 사람의 마음을 풍요롭게 하고, 삶을 재충전하기 위한 <br />“Green Resort”의
+                                        패러다임을
+                                        추구한 통합형 리조트</span>
+                                </div>
+                                <a href="https://www.kumhoresort.co.kr/" target="_blank"><img
+                                        src="https://www.yedaham.co.kr/images/product/service02/btn_cate_home.png"
+                                        class="top_right" alt="홈페이지 바로가기" /></a>
+                            </div><!-- // class="mem_con_top" -->
+
+                            <div class="hotel-list" style="height: 288px;">
+                                <div class="item">
+                                    <img src="https://www.yedaham.co.kr/images/product/service02/img_cate01_kumho_1.png"
+                                        alt="" />
+                                    <p class="name">통영마리나</p>
+                                </div>
+                                <div class="item">
+                                    <img src="https://www.yedaham.co.kr/images/product/service02/img_cate01_kumho_2.png"
+                                        alt="" />
+                                    <p class="name">화순리조트</p>
+                                </div>
+                                <div class="item">
+                                    <img src="https://www.yedaham.co.kr/images/product/service02/img_cate01_kumho_3.png"
+                                        alt="" />
+                                    <p class="name">설악리조트</p>
+                                </div>
+                                <div class="item">
+                                    <img src="https://www.yedaham.co.kr/images/product/service02/img_cate01_kumho_4.png"
+                                        alt="" />
+                                    <p class="name">제주리조트</p>
+                                </div>
+                            </div>
+
+                            <ul class="mem_service_con">
+                                <li class="last" style="width:135px;">
+                                    <img src="https://www.yedaham.co.kr/images/product/service02/icon_bed.png" alt="" />
+                                    <p class="service_txt">예다함 회원 특별가</p>
+                                </li>
+                            </ul>
+                        </div><!-- // class="mem_content" -->
+
+                        <div class="mem_content" id="a4">
+                            <!-- 라한호텔 -->
+                            <div class="mem_con_top">
+                                <div class="top_left">
+                                    <img src="https://www.yedaham.co.kr/images/product/service02/h5_cate01_rahan.png"
+                                        alt="라한호텔" />
+                                    <span>지역 고유의 특색에 라한 브랜드만의 통일성 있는 서비스 철학을 더해 각 지역별로 최적화 된 서비스를 제공하며 <br />호텔에
+                                        대한천편일륜적인 기준에서
+                                        벗어난 라한만의 새로운 스탠더드를 제시합니다.</span>
+                                </div>
+                                <a href="https://www.lahanhotels.com" target="_blank"><img
+                                        src="https://www.yedaham.co.kr/images/product/service02/btn_cate_home.png"
+                                        class="top_right" alt="홈페이지 바로가기" /></a>
+                            </div><!-- // class="mem_con_top" -->
+
+                            <div class="hotel-list lahan" style="height: 288px;">
+                                <div class="item-left">
+                                    <div class="item">
+                                        <img src="https://www.yedaham.co.kr/images/product/service02/img_cate01_rahan_6.jpg"
+                                            alt="" />
+                                        <p class="name">라한호텔 전주</p>
+                                    </div>
+                                </div>
+                                <div class="item-right">
+                                    <div class="item">
+                                        <img src="https://www.yedaham.co.kr/images/product/service02/img_cate01_rahan_1.jpg"
+                                            alt="" />
+                                        <p class="name">호텔현대 바이 라한 울산</p>
+                                    </div>
+                                    <div class="item">
+                                        <img src="https://www.yedaham.co.kr/images/product/service02/img_cate01_rahan_2.jpg"
+                                            alt="" />
+                                        <p class="name">호텔현대 바이 라한 목포</p>
+                                    </div>
+                                    <div class="item">
+                                        <img src="https://www.yedaham.co.kr/images/product/service02/img_cate01_rahan_3.jpg"
+                                            alt="" />
+                                        <p class="name">라한호텔 포항</p>
+                                    </div>
+                                    <div class="item">
+                                        <img src="https://www.yedaham.co.kr/images/product/service02/img_cate01_rahan_4.jpg"
+                                            alt="" />
+                                        <p class="name">라한셀렉트 경주</p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <ul class="mem_service_con">
+                                <li class="" style="width:135px;">
+                                    <img src="https://www.yedaham.co.kr/images/product/service02/icon_bed.png" alt="" />
+                                    <p class="service_txt">객실 할인 (최대 40%)<br /><span class="yellow2 fbold">(단, 주말 및 성수기
+                                            제외)</span></p>
+                                </li>
+                                <li class="last" style="width:350px;">
+
+                                    <p class="service_txt" style="top: 0px !important;">※ 전화로 예약하실 수 있습니다.(온라인 예약 불가)
+                                    </p>
+                                </li>
+                            </ul>
+
+                        </div><!-- // class="mem_content" -->
+
+                        <p class="btn_close"><a href="javascript:close_layer();"><img
+                                    src="https://www.yedaham.co.kr/images/product/service02/btn_mem_popup_close.png"
+                                    alt="닫기" /></a></p>
+                    </div><!-- // class="mem_cate" 호텔&리조트-->
+
+                    <div id="cate2" class="mem_cate mem_category02" style="height: auto; min-height: 717px;">
+                        <h5 class="h5_cate_tit">
+                            <img src="https://www.yedaham.co.kr/images/product/service02/tit_mem_finance.png"
+                                alt="금융&쇼핑" />
+                        </h5>
+
+                        <div class="sub_menu_wrap">
+                            <ul class="cate_sub_menu">
+                                <li class="current"><a href="#">The-K 저축은행</a></li>
+                                <li><a href="#">신한은행</a></li>
+                                <!-- <li><a href="#">하나1Q오토리스</a></li> -->
+                                <!-- <li><a href="#">미래에셋대우</a></li> -->
+                                <li><a href="#">더케이몰</a></li>
+                                <!-- <li><a href="#">기억의 책</a></li> -->
+                            </ul>
+                        </div><!-- // class="sub_menu_wrap" -->
+
+                        <div class="mem_content" id="b1">
+                            <!-- The-K 저축은행-->
+                            <div class="mem_con_top">
+                                <div class="top_left">
+                                    <img src="https://www.yedaham.co.kr/images/product/service02/h5_cate02_b1.png"
+                                        alt="The-K 저축은행" />
+                                    <span>
+                                        한국교직원공제회 보증 우량 저축은행<br />
+                                        서울 선릉 본점, 여의도에 여신업무 전문 출장소를 운영하고 있습니다.<br />
+                                        예다함 정기적금은 선릉 본점과 인터넷뱅킹으로 가입하실 수 있습니다.
+                                    </span>
+                                </div>
+                                <a href="http://www.thekbank.co.kr/" target="_blank"><img
+                                        src="https://www.yedaham.co.kr/images/product/service02/btn_cate_home.png"
+                                        class="top_right" alt="홈페이지 바로가기" /></a>
+                            </div><!-- // class="mem_con_top" -->
+                            <img src="https://www.yedaham.co.kr/images/product/service02/img_cate02_b1.png" alt="" />
+                            <dl class="mem_service_con2">
+                                <dt>예다함 정기적금 가입 시 우대금리 적용</dt>
+                                <dd>- 우대사항 : 기간별 약정금리 + 0.2% (우대금리 적용)</dd>
+                                <dd>- 가입기간 : 1년 ~ 3년 이하</dd>
+                                <dd>- 적금한도 : 월 1백만 원 이내 </dd>
+                            </dl>
+
+                        </div><!-- // class="mem_content" -->
+
+                        <div class="mem_content" id="b2">
+                            <!-- 신한은행 내리사랑신탁-->
+                            <div class="mem_con_top">
+                                <div class="top_left">
+                                    <img src="https://www.yedaham.co.kr/images/product/service02/h5_cate02_b4.png"
+                                        alt="신한은행 내리사랑신탁" />
+                                    <span>남겨진 가족에게 신한은행이 따뜻한 마음을 전달해 드립니다<br />남겨진 가족을 위한 따듯한 배려! 신한 미래설계 내리사랑신탁으로
+                                        준비하십시오.
+                                    </span>
+                                </div>
+                                <a href="https://www.shinhan.com/" target="_blank"><img
+                                        src="https://www.yedaham.co.kr/images/product/service02/btn_cate_home.png"
+                                        class="top_right" alt="홈페이지 바로가기" /></a>
+                            </div><!-- // class="mem_con_top" -->
+                            <img src="https://www.yedaham.co.kr/images/product/service02/img_cate02_b4.png" alt="" />
+                            <dl class="mem_service_con2">
+                                <dt>1. 예다함 회원이 신한은행 상속설계 유언대용신탁 상품 가입 시 </dt>
+                                <dd>&nbsp;&nbsp;&nbsp;&nbsp;기본보수 최대 20% 할인 </dd>
+                            </dl>
+                        </div><!-- // class="mem_content" -->
+
+                        <div class="mem_content" id="b5">
+                            <!-- 더케이몰 (TheKmall)-->
+                            <div class="mem_con_top" style="height: 170px;">
+                                <div class="top_left">
+                                    <img src="https://www.yedaham.co.kr/images/product/service02/h5_cate02_b3.png"
+                                        alt="더케이몰 (TheKmall)" />
+                                    <span>예다함 회원 대상(The-K가족 회원가입)으로 한 여행, 숙박, 쇼핑, 생활밀착, 의료 등<br />생활 전반에 걸친 다양한 분야의 온라인
+                                        복지서비스를 제공하고
+                                        있습니다.<br /><br />
+                                        ※ 2022-07-01부터 가입하신 고객님의 경우, 초기 3회 납부 후 회원가입이 가능하며 연체 발생 시 연체 기간
+                                        중<br />&nbsp;&nbsp;&nbsp;&nbsp;혜택 이용이 불가합니다.<br />
+                                        &nbsp;&nbsp;&nbsp;&nbsp;(연체 해소 후 이용 가능)
+                                    </span>
+                                </div>
+                                <a href="http://www.thekmall.co.kr/" target="_blank"><img
+                                        src="https://www.yedaham.co.kr/images/product/service02/btn_cate_home.png"
+                                        class="top_right" alt="홈페이지 바로가기" /></a>
+                            </div><!-- // class="mem_con_top" -->
+                            <img src="https://www.yedaham.co.kr/images/product/service02/img_cate02_b3.png" alt="" />
+                            <ul class="mem_service_con thekmall">
+                                <li style="width:180px;">
+                                    <img src="https://www.yedaham.co.kr/images/product/service02/icon_leaf.png"
+                                        alt="" />
+                                    <p class="service_txt tLeft " style="width:150px;">생활건강(특별 할인가)<br />- 의료(건강검진,
+                                        안과,<br />&nbsp;&nbsp; 치과 등) <br />- 생활(렌터카, 공연, 꽃집,<br />&nbsp;&nbsp; 렌탈서비스 등)
+                                    </p>
+                                </li>
+                                <li style="width:180px;">
+                                    <img src="https://www.yedaham.co.kr/images/product/service02/icon_sale.png"
+                                        alt="" />
+                                    <p class="service_txt tLeft " style="width:150px;">종합쇼핑(특별 할인가)<br />- 최저가몰, 이벤트몰
+                                        <br />-
+                                        전문몰(삼성전자, LG전자)<br />- 임직원몰(AK,LF몰,<br />&nbsp;&nbsp;&nbsp;LG라이프케어 등)<br />-
+                                        휴대폰(KT,
+                                        SKT, LG
+                                        U+)
+                                    </p>
+                                </li>
+                                <li style="width:155px;">
+                                    <img src="https://www.yedaham.co.kr/images/product/service02/icon_air.png" alt="" />
+                                    <p class="service_txt tLeft " style="width:125px;">여행 할인(특별 할인가)<br />- 하나투어<br />-
+                                        모두투어<br />-
+                                        한진관광 등</p>
+                                </li>
+                                <li class="last" style="width:155px;">
+                                    <img src="https://www.yedaham.co.kr/images/product/service02/icon_bed.png" alt="" />
+                                    <p class="service_txt tLeft " style="width:125px;">숙박(특별 할인가)<br />- 금호리조트<br />-
+                                        제주다인오세아노호텔<br />- 여수유탑마리나 등</p>
+                                </li>
+
+
+                            </ul>
+                        </div><!-- // class="mem_content" -->
+                        <p class="btn_close"><a href="javascript:close_layer();">
+                                <img src="https://www.yedaham.co.kr/images/product/service02/btn_mem_popup_close.png"
+                                    alt="닫기" /></a></p>
+                    </div><!-- // class="mem_cate" 금융&쇼핑-->
+
+
+                    <div id="cate3" class="mem_cate mem_category03">
+                        <h5 class="h5_cate_tit">
+                            <img src="https://www.yedaham.co.kr/images/product/service02/tit_mem_medical.png"
+                                alt="의료&건강" />
+                        </h5>
+
+                        <div class="sub_menu_wrap">
+                            <ul class="cate_sub_menu">
+                                <li class="current"><a href="#">(재)한국의학연구소 KMI</a></li>
+                            </ul>
+                        </div><!-- // class="sub_menu_wrap" -->
+
+                        <div class="mem_content" id="c1">
+                            <!-- (재)한국의학연구소 KMI-->
+                            <div class="mem_con_top" style="height:145px;">
+                                <div class="top_left">
+                                    <img src="https://www.yedaham.co.kr/images/product/service02/h5_cate03_c1.png"
+                                        alt="(재)한국의학연구소 KMI" />
+                                    <span>
+                                        전국 최대 규모 - 8개 직영 센터운영(광화문, 여의도, 강남, 수원, 대구, 부산, 광주, 제주)<br />
+                                        중요 질환 의심자발견의 탁월성으로 인한 3차 의료기관으로의 빠른 연계서비스 <br />
+                                        공기관, 삼성그룹, SK그룹, LG그룹, 금융기관 등 다수 기관의 검진 업체로 선정된 신뢰성 높은 기관입니다.
+                                    </span>
+                                </div>
+                                <a href="https://www.kmi.or.kr/index.web"><img
+                                        src="https://www.yedaham.co.kr/images/product/service02/btn_cate_home.png"
+                                        class="top_right" alt="홈페이지 바로가기" /></a>
+                            </div><!-- // class="mem_con_top" -->
+                            <img src="https://www.yedaham.co.kr/images/product/service02/img_cate03_c1.png" alt="" />
+                            <ul class="mem_service_con3">
+                                <li>1. 전국 KMI 센터에서 종합건강검진 예약 및 검진 시 예다함 회원 우대 수가 제공</li>
+                                <li>2. KMI 센터 내원 시 연계 치과 치료를 우대 수가로 이용 가능</li>
+                            </ul>
+                        </div><!-- // class="mem_content" -->
+
+                        <p class="btn_close"><a href="javascript:close_layer();"><img
+                                    src="https://www.yedaham.co.kr/images/product/service02/btn_mem_popup_close.png"
+                                    alt="닫기" /></a></p>
+                    </div><!-- // class="mem_cate" 의료&건강-->
+
+                    <div id="cate4" class="mem_cate mem_category04">
+                        <h5 class="h5_cate_tit">
+                            <img src="https://www.yedaham.co.kr/images/product/service02/tit_leisure.png" alt="레저&요양" />
+                        </h5>
+
+                        <div class="sub_menu_wrap">
+                            <ul class="cate_sub_menu">
+                                <li class="current"><a href="#">부산 엑스 더 스카이 </a></li>
+                            </ul>
+                        </div><!-- // class="sub_menu_wrap" -->
+
+
+                        <div class="mem_content" id="d1">
+                            <!-- 부산 엑스 더 스카이 -->
+                            <div class="mem_con_top">
+                                <div class="top_left">
+                                    <img src="https://www.yedaham.co.kr/images/product/service02/h5_cate04_d2.png"
+                                        alt="The-K 소피아그린" />
+                                    <span>
+                                        부산 최고의 높이 100층, 411.6m 상공에서 즐기는<br />
+                                        해운대 푸른 바다와 보석처럼 반짝이는 부산 도심의 풍경을 볼 수 있는 국내 최고•최대 규모의 전망대
+                                    </span>
+                                </div>
+                                <a href="http://www.busanxthesky.com/" target="_blank"><img
+                                        src="https://www.yedaham.co.kr/images/product/service02/btn_cate_home.png"
+                                        class="top_right" alt="홈페이지 바로가기" /></a>
+                            </div><!-- // class="mem_con_top" -->
+                            <img src="https://www.yedaham.co.kr/images/product/service02/img_cate04_d2.png" alt="" />
+                            <ul class="mem_service_con3">
+                                <li>1. 예다함 회원 특별가 제공(본인 외 동반 3인까지)</li>
+                                <li>2. 멤버십카드 본인 제시 시 적용</li>
+                            </ul>
+                            <!-- <p class="btn_print"><a href="javascript:event_print();">할인쿠폰 출력하기</a></p> -->
+                        </div><!-- // class="mem_content" -->
+
+                        <p class="btn_close"><a href="javascript:close_layer();"><img
+                                    src="https://www.yedaham.co.kr/images/product/service02/btn_mem_popup_close.png"
+                                    alt="닫기" /></a></p>
+                    </div><!-- // class="mem_cate" 레저&요양-->
+                </div><!-- // class="membership_wrap" -->
+
+            </div><!-- class="sub_box_wrap" -->
+        </div>
+        <!--// sub_container-->
+
+    </div>
+    <!--// id="sub_wrapper" -->
+
+
+    <script>
+
+        function close_layer() {
+            $('.mem_cate').hide();
+            $('.category_list').show();
+            $('ul.cate_sub_menu li').removeClass('current');
+        }
+
+        function open_cate(num) {
+            $('.category_list').hide();
+            $('.mem_content').hide();
+            $('#cate' + num).show();
+            $('#cate' + num + ' ul.cate_sub_menu li:eq(0)').addClass('current');
+            $('#cate' + num + ' .mem_content:eq(0)').show();
+        }
+
+        $(document).ready(function () {
+            $('ul.cate_sub_menu li').click(function () {
+                var index = $(this).index();
+                var move_c = $(this).parents().hasClass('mem_category01');
+                var move_02 = $(this).parents().hasClass('mem_category02');
+                if (move_c) {
+                    if (index < 3) {
+                        $(this).parents('ul.cate_sub_menu').animate({
+                            marginLeft: '-15px'
+                        });
+                    }
+                }
+                $(this).addClass('current').siblings().removeClass('current');
+                $(this).parents(".mem_cate").children('.mem_content').hide();
+                $(this).parents(".mem_cate").children('.mem_content:eq(' + index + ')').fadeIn();
+                return false;
+            });
+        });
+    </script>
+</body>
+
+</body>
+
+</html>
