@@ -123,6 +123,10 @@
                             <select
                                 class="w-full h-12 px-3 rounded-lg shadow-input border border-grayAAA appearance-none bg-white placeholder-grayCCC focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50">
                                 <option>선택</option>
+                                <option value="가족">가족</option>
+                                <option value="친구">친구</option>
+                                <option value="지인">지인</option>
+                                <option value="기타">기타</option>
                             </select>
                             <div class="absolute right-4 top-1/2 -translate-y-1/2">
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -153,6 +157,14 @@
                             <select
                                 class="w-full h-12 px-3 rounded-lg shadow-input border border-grayAAA appearance-none bg-white placeholder-grayCCC focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50">
                                 <option>상시(아무때나)</option>
+                                <option value="AM 09:30 ~ AM 10:30">AM 09:30 ~ AM 10:30</option>
+                                <option value="AM 10:30 ~ AM 11:30">AM 10:30 ~ AM 11:30</option>
+                                <option value="AM 11:30 ~ PM 12:30">AM 11:30 ~ PM 12:30</option>
+                                <option value="PM 13:30 ~ PM 14:30">PM 13:30 ~ PM 14:30</option>
+                                <option value="PM 14:30 ~ PM 15:30">PM 14:30 ~ PM 15:30</option>
+                                <option value="PM 15:30 ~ PM 16:30">PM 15:30 ~ PM 16:30</option>
+                                <option value="PM 16:30 ~ PM 17:30">PM 16:30 ~ PM 17:30</option>
+                                <option value="PM 17:30 ~ PM 18:30">PM 17:30 ~ PM 18:30</option>
                             </select>
                             <div class="absolute right-4 top-1/2 -translate-y-1/2">
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -187,10 +199,11 @@
 
                         </div>
                         <div>
-                            <button
-                                class="flex items-center gap-1 h-12 px-6 bg-blue779 shadow-button text-white rounded-lg hover:bg-blue-800 transition">개인정보활용동의서(서면)
+                            <a href="#" download
+                                class="flex items-center gap-1 h-12 px-6 bg-blue779 shadow-button text-white rounded-lg hover:bg-blue-800 transition">
+                                개인정보활용동의서(서면)
                                 <img src="./images/icon_download.png" alt="download">
-                            </button>
+                            </a>
 
                         </div>
                     </div>
@@ -211,7 +224,8 @@
 
                 <!-- 등록하기 버튼 -->
                 <button
-                    class="w-full h-[78px] bg-blue275 shadow-button text-white text-3xl rounded-lg mt-20 hover:bg-blue-800 transition">등록하기</button>
+                    class="w-full h-[78px] bg-blue275 shadow-button text-white text-3xl rounded-lg mt-20 hover:bg-blue-800 transition"
+                    onclick="showDialog()">등록하기</button>
             </article>
         </section>
 
@@ -243,7 +257,36 @@
         </div>
     </footer>
 
+    <dialog class="dialog-base">
+        <div class="dialog-wrap">
+            <div>
+                <p class="text-center text-gray333 px-6 py-5 mb-6">입력된 정보를 등록하였으며,
+                    상담희망고객님께 알림톡을 발송하였습니다.
+                </p>
+                <div class="flex  gap-2 h-11">
+                    <button class="flex-1 basis-0 border border-graAAA text-gray666 rounded-lg "
+                        onclick="claseDialog()">닫기</button>
+                    <button class="flex-1 basis-0 bg-blue779 text-white rounded-lg hover:bg-blue-800 transition"
+                        onclick="claseDialog()">확인</button>
+                </div>
+            </div>
+        </div>
+        <!--// class="dialog-wrap" -->
+    </dialog>
 
+    <script>
+
+        const dialog = document.querySelector('.dialog-base');
+
+
+        function showDialog() {
+            dialog.showModal();
+        }
+        function claseDialog() {
+            dialog.close()
+        }
+
+    </script>
 
 
 </body>
