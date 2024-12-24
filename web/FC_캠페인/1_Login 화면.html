@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예다함_FC(일반) 추천 캠페인</title>
+    <link rel="stylesheet" href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-neo.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./js/tailwind-config.js"></script>
+
+
+</head>
+
+<body class="bg-blueDF flex flex-col min-h-screen">
+
+    <main
+        class="flex-grow w-[1280px] mx-auto mb-[30px]  pt-[217px]  bg-[url('./images/bg_login.png')] bg-top bg-no-repeat">
+        <section class="w-[450px] mx-auto bg-white shadow-card rounded-lg p-10 ">
+            <h1 class="text-2xl font-nanumSquare800 text-center leading-none mb-10">
+                예다함 FC(일반) 추천 캠페인
+            </h1>
+            <!-- 아이디 입력 -->
+            <div class="mb-2">
+                <label for="username" class="block mb-2 text-gray666 leading-none">
+                    아이디(사번)
+                </label>
+                <input id="username" type="text" placeholder="아이디(사번)를 입력해주세요."
+                    class="w-full h-12 shadow-input border border-grayAAA rounded-lg  px-3 placeholder-grayCCC  focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50" />
+            </div>
+            <div class="mb-4">
+                <button
+                    class="w-full h-12 bg-blue779 text-white text-lg rounded-lg shadow-button hover:bg-blue-800 transition">
+                    1회용 비밀번호 발급
+                </button>
+            </div>
+            <!-- 비밀번호 입력 -->
+            <div class="mb-4">
+                <label for="password" class="block mb-2 text-gray666 leading-none">
+                    비밀번호
+                </label>
+                <input id="password" type="password" placeholder="1회용 비밀번호를 입력해주세요."
+                    class="w-full h-12 shadow-input border border-grayAAA rounded-lg  px-3 placeholder-grayCCC  focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50" />
+            </div>
+            <!-- 안내문 -->
+            <div class="flex items-center gap-2 pt-4 border-t border-grayd9 ">
+                <img src="./images/icon_warning.png" alt="warning">
+                <p class="text-xs text-gray666">OTP번호가 발송이 되지 않는 경우에는 담당자에게 문의해주세요.<br>
+                    예다함 담당자 <a href="tel:0220903131" class="text-blue275 ">02-2090-3131</a></p>
+            </div>
+
+            <button
+                class="w-full h-[66px] mt-10 bg-blue275  rounded-lg text-white text-xl shadow-button hover:bg-blue-800 transition">로그인</button>
+
+        </section>
+    </main>
+
+    <footer class="w-full h-[94px] bg-white/70">
+        <div class="flex w-[1280px] h-full mx-auto">
+            <!-- 로고 -->
+            <div class="flex items-center shrink-0 w-[280px] h-full ">
+                <img src=" ./images/logo_footer.png" class="ml-[100px]" alt="The-K 예다함 로고">
+            </div>
+            <!-- 링크 및 회사 정보 -->
+            <div class="flex flex-col justify-between grow py-5">
+                <ul class="flex font-nanumSquare800 text-xs text-gray666">
+                    <li class="pr-2.5 border-r border-gray999 h-3 leading-none"><a href="#">홈페이지
+                            이용약관</a></li>
+                    <li class="px-2.5 border-r border-gray999 h-3 leading-none"><a href="#">중요정보고시사항</a></li>
+                    <li class="pl-2.5 h-3 leading-none"><a href="#">개인정보처리(취급)방침</a></li>
+                </ul>
+                <p class="text-[11px] text-gray666">
+                    서울특별시 마포구 마포대로 86, 16층(도화동, 창강빌딩) The-K 예다함 대표이사 : 김도한 사업자등록번호 : 101-86-49300 <br>
+                    통신판매업 신고번호 : 제 2014-서울마포-0712호 전화권유판매업 신고번호 : 제 2014-서울마포-0012호
+            </div>
+            <!-- 대표번호 -->
+            <div class="flex flex-col justify-between shrink-0 w-[360px] my-5 px-[50px] border-l border-blue779/50">
+                <p class="text-lg text-gray666 leading-none">예다함 대표번호</p>
+                <p class="text-[28px] font-nanumSquare900 text-blue275 leading-none">1566-6644</p>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

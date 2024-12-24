@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예다함_FC(일반) 추천 캠페인</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./js/tailwind-config.js"></script>
+    <link rel="stylesheet" href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-neo.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body class="flex flex-col min-h-screen">
+
+    <main class="flex-grow w-[1280px] mx-auto mb-20 ">
+        <section>
+            <img src="./images/vis_fc.jpg" alt="메인">
+        </section>
+        <section class="px-[100px] pt-20">
+            <!-- 상담 추천인 정보 -->
+            <h2
+                class="flex items-center gap-2.5 font-nanumSquare800 text-3xl text-gray333 mb-[30px]  before:content-['']  before:w-4 before:h-4 before:bg-blue275">
+                상담 추천인 정보</h2>
+            <div class="grid grid-cols-4 gap-4 mb-20">
+                <div class="flex items-center gap-2">
+                    <label class="shrink-0 text-gray666 ">소속</label>
+                    <input type="text"
+                        class="w-full h-12 px-4 rounded-lg bg-grayF1 text-graygray1E border border-grayAAA shadow-input"
+                        value="예다함 FC(일반)" readonly>
+                </div>
+                <div class="flex items-center gap-2">
+                    <label class="shrink-0 text-gray666 ">성명</label>
+                    <input type="text"
+                        class="w-full h-12 px-4 rounded-lg bg-grayF1 text-graygray1E border border-grayAAA shadow-input"
+                        value="이슬비" readonly>
+                </div>
+                <div class="flex items-center gap-2">
+                    <label class="shrink-0 text-gray666 ">지역</label>
+                    <input type="text"
+                        class="w-full h-12 px-4 rounded-lg bg-grayF1 text-graygray1E border border-grayAAA shadow-input"
+                        value="경기도" readonly>
+                </div>
+                <div class="flex items-center gap-2">
+                    <label class="shrink-0 text-gray666 ">연락처</label>
+                    <input type="text"
+                        class="w-full h-12 px-4 rounded-lg bg-grayF1 text-graygray1E border border-grayAAA shadow-input"
+                        value="010-1111-2222" readonly>
+                </div>
+            </div>
+
+            <!-- 개인정보 수집 이용 제공 동의 -->
+            <h2
+                class="flex items-center gap-2.5 font-nanumSquare800 text-3xl text-gray333 mb-[30px]  before:content-['']  before:w-4 before:h-4 before:bg-blue275">
+                개인정보 수집 이용 제공 동의</h2>
+
+            <div class="flex justify-between items-center mb-[30px]">
+                <p class="text-gray333 text-2xl ">개인정보의 수집 이용 제공에 관한 필수적 동의</p>
+                <a href="http://www.yedaham.co.kr/customer/agreement/pps.do" target="_blank"
+                    class="flex items-center justify-center w-[200px] h-[52px] text-center text-xl text-white bg-blue779  hover:bg-blue-800 transition rounded-lg ">전문보기</a>
+            </div>
+            <p class="text-gray333 leading-none mb-[30px]">
+                The-K 예다함은 「개인정보보호법」에 따라 귀하의 개인정보를 다음과 같이 수집·이용하고자 합니다.
+            </p>
+
+            <!-- 개인정보 수집 이용에 대한 동의 -->
+            <div class="bg-grayF1 p-[30px]  mb-4 rounded-lg">
+                <h3 class="font-nanumSquare800  mb-4">개인정보 수집 이용에 대한 동의</h3>
+                <p class="text-gray333  mb-3">
+                    가. 개인정보 수집, 이용 목적 : 상조 서비스 가입의사 확인 및 가입 상담 목적<br>
+                    나. 수집하는 개인정보 항목<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* 상담 추천인 : 소속, 지역, 이름, 연락처<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* 상담 희망 고객 : 이름, 연락처, 상담희망시간, 상담 추천인과의 관계<br>
+                    다. 개인정보 보유 및 이용기간 : 상담신청일로부터 3개월<br>
+                    ※ 개인정보의 수집, 이용에 대한 동의를 거부할 수 있으나 동의 거부 시 상담이 불가할 수 있음.
+                </p>
+            </div>
+
+            <!-- 개인정보 제공에 대한 동의 -->
+            <div class="bg-grayF1 p-[30px]  mb-4 rounded-lg">
+                <h3 class="font-nanumSquare800  mb-4">개인정보 제공에 대한 동의</h3>
+                <p class="text-gray333 ">
+                    가. 위탁받은 업체 : ㈜유베이스<br>
+                    나. 위탁업무 : 가입 상담 업무<br>
+                    ※ 개인정보 처리 위탁에 대한 동의를 거부할 수 있으나 동의 거부 시 상담이 불가할 수 있음.
+                </p>
+            </div>
+
+            <!-- 안내문 -->
+            <div
+                class="flex items-center gap-2 h-[88px] bg-blue769/20 p-4 rounded-lg text-lg font-nanumSquare800 tracking-tighter">
+                <img src="./images/icon_warning.png" alt="warning">
+                <p>상담 희망 고객이 <span class="text-redED">개인정보 수집 이용 제공
+                        동의</span>를 완료해야만 고객센터 전문상담사의 콜백 진행이
+                    가능하오니 이 점 꼭 숙지 바랍니다.</p>
+            </div>
+        </section>
+
+
+        <section class="px-[100px] pt-20">
+            <!-- 상담 희망 고객 등록 폼 -->
+            <div class="flex text-3xl text-white rounded-lg overflow-hidden mb-[30px]">
+                <button class="w-1/2 bg-blue779 py-6 leading-none shadow-button hover:bg-blue-800 transition-colors">상담
+                    희망 고객 등록</button>
+                <button class="w-1/2 bg-blue275 py-6 leading-none shadow-button hover:bg-blue-800 transition-colors">캠페인
+                    실적 조회</button>
+            </div>
+
+            <article>
+                <div class="flex items-center gap-2 mb-6">
+                    <div class="flex items-center gap-2.5">
+                        <label class="shrink-0 text-gray666">등록일</label>
+                        <div class="flex items-center">
+                            <input type="text" value="2024-12-23"
+                                class="w-32 h-12 px-3 rounded-lg shadow-input border border-grayAAA placeholder-grayCCC focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50">
+                            <img src="./images/icon_calendar.png">
+                            <span class="mx-1">~</span>
+                            <input type="text"
+                                class="w-32 h-12 px-3 rounded-lg shadow-input border border-grayAAA placeholder-grayCCC focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50">
+                            <img src="./images/icon_calendar.png">
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2.5">
+                        <label class="shrink-0 text-gray666">성명</label>
+                        <input type="text" placeholder="상담희망고객 조회가능"
+                            class="w-[200px] h-12 px-3 rounded-lg shadow-input border border-grayAAA placeholder-grayCCC focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50">
+                    </div>
+                    <div class="flex items-center gap-2.5 grow">
+                        <label class="shrink-0 text-gray666">청약상태</label>
+                        <div class="relative w-full">
+                            <select
+                                class="w-full h-12 px-3 rounded-lg shadow-input border border-grayAAA appearance-none bg-white placeholder-grayCCC focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50">
+                                <option>선택</option>
+                            </select>
+                            <div class="absolute right-4 top-1/2 -translate-y-1/2">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="1.5" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shrink-0">
+                        <button
+                            class="w-[100px] h-12 text-white bg-blue779 rounded-lg shadow-button hover:bg-blue-800 transition">조회</button>
+                    </div>
+                </div>
+
+
+
+
+                <!-- 안내 텍스트 -->
+                <div class="bg-grayF1 p-[30px]  mb-[30px] rounded-lg">
+                    <p class="text-gray333  ">
+                        ※ 상담 희망 고객이 가입하지 않은 경우에는 3개월만 정보 조회 가능합니다. <br>
+                        ※ 아래의 결과는 청약상태에 대한 결과이며, 최종 계약여부에 따라 인센티브 지급은 달라질 수 있습니다.
+                    </p>
+                </div>
+                <!-- 테이블 -->
+                <table class="w-full border-collapse  text-gray333 leading-none">
+                    <thead class="border-b border-gray999">
+                        <tr class="bg-grayDDD/80">
+                            <th class="py-4 relative after:absolute after:right-0 after:top-4 after:bottom-4 after:w-px after:bg-gray999"
+                                rowspan="2">NO</th>
+                            <th class="py-4 relative after:absolute after:right-0 after:top-4 after:bottom-4 after:w-px after:bg-gray999"
+                                rowspan="2">상담<br>희망고객</th>
+                            <th class="py-4 relative after:absolute after:right-0 after:top-4 after:bottom-4 after:w-px after:bg-gray999"
+                                rowspan="2">등록일시</th>
+                            <th class="py-4 relative after:absolute after:right-0 after:top-4 after:bottom-4 after:w-px after:bg-gray999"
+                                rowspan="2">청약상태</th>
+                            <th class="py-4 relative after:absolute after:right-0 after:top-4 after:bottom-4 after:w-px after:bg-gray999"
+                                rowspan="3">구좌수</th>
+                            <th class="py-4 relative after:absolute after:right-0 after:top-4 after:bottom-4 after:w-px after:bg-gray999"
+                                rowspan="3">증서번호</th>
+                            <th class="pt-4 pb-3" colspan="3">개인정보활용동의</th>
+                            <th class="py-4 relative after:absolute after:left-0 after:top-4 after:bottom-4 after:w-px after:bg-gray999"
+                                rowspan="2">재동화<br>요청</th>
+                        </tr>
+                        <tr class="bg-grayDDD/80">
+                            <th
+                                class="pb-4 relative after:absolute after:right-0 after:top-0 after:bottom-4 after:w-px after:bg-gray999">
+                                동의여부</th>
+                            <th
+                                class="pb-4 relative after:absolute after:right-0 after:top-0 after:bottom-4 after:w-px after:bg-gray999">
+                                재발송</th>
+                            <th class="pb-4">서면</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-center text-lg text-gray666 leading-6 [&>tr:nth-child(even)]:bg-blue769/10">
+                        <tr>
+                            <td
+                                class="py-4 relative after:absolute after:right-0 after:top-4 after:bottom-4 after:w-px after:bg-grayD9">
+                                10</td>
+                            <td
+                                class="py-4 relative after:absolute after:right-0 after:top-4 after:bottom-4 after:w-px after:bg-grayD9">
+                                홍길동</td>
+                            <td
+                                class="py-4 relative after:absolute after:right-0 after:top-4 after:bottom-4 after:w-px after:bg-grayD9">
+                                2024-12-05<br>14:14:14</td>
+                            <td
+                                class="py-4 relative after:absolute after:right-0 after:top-4 after:bottom-4 after:w-px after:bg-grayD9">
+                                가입완료</td>
+                            <td
+                                class="py-4 relative after:absolute after:right-0 after:top-4 after:bottom-4 after:w-px after:bg-grayD9">
+                                1구좌</td>
+                            <td
+                                class="py-4 relative after:absolute after:right-0 after:top-4 after:bottom-4 after:w-px after:bg-grayD9">
+                                <p>123457549</p>
+                            </td>
+                            <td
+                                class="py-4 relative after:absolute after:right-0 after:top-4 after:bottom-4 after:w-px after:bg-grayD9">
+                                Y</td>
+                            <td
+                                class="py-4 relative after:absolute after:right-0 after:top-4 after:bottom-4 after:w-px after:bg-grayD9">
+                            </td>
+                            <td
+                                class="py-4 relative after:absolute after:right-0 after:top-4 after:bottom-4 after:w-px after:bg-grayD9">
+                                <button
+                                    class="w-[88px] h-[52px] text-white bg-blue779 rounded-lg shadow-button hover:bg-blue-800 transition">업로드</button>
+                            </td>
+                            <td class="py-4">
+                                <button
+                                    class="w-[88px] h-[52px] text-white bg-blue779 rounded-lg shadow-button hover:bg-blue-800 transition">재통화</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td
+                                class="py-4 relative after:absolute after:right-0 after:top-4 after:bottom-4 after:w-px after:bg-grayD9">
+                                9</td>
+                            <td
+                                class="py-4 relative after:absolute after:right-0 after:top-4 after:bottom-4 after:w-px after:bg-grayD9">
+                                홍길동</td>
+                            <td
+                                class="py-4 relative after:absolute after:right-0 after:top-4 after:bottom-4 after:w-px after:bg-grayD9">
+                                2024-12-05<br>14:14:14</td>
+                            <td
+                                class="py-4 relative after:absolute after:right-0 after:top-4 after:bottom-4 after:w-px after:bg-grayD9">
+                                가입완료</td>
+                            <td
+                                class="py-4 relative after:absolute after:right-0 after:top-4 after:bottom-4 after:w-px after:bg-grayD9">
+                            </td>
+                            <td
+                                class="py-4 relative after:absolute after:right-0 after:top-4 after:bottom-4 after:w-px after:bg-grayD9">
+                            </td>
+                            <td
+                                class="py-4 relative after:absolute after:right-0 after:top-4 after:bottom-4 after:w-px after:bg-grayD9">
+                                N</td>
+                            <td
+                                class="py-4 relative after:absolute after:right-0 after:top-4 after:bottom-4 after:w-px after:bg-grayD9">
+                                <button
+                                    class="w-[88px] h-[52px] text-white bg-blue779 rounded-lg shadow-button hover:bg-blue-800 transition">재발송</button>
+                            </td>
+                            <td
+                                class="py-4 relative after:absolute after:right-0 after:top-4 after:bottom-4 after:w-px after:bg-grayD9">
+                                <button
+                                    class="w-[88px] h-[52px] text-white bg-blue779 rounded-lg shadow-button hover:bg-blue-800 transition">업로드</button>
+                            </td>
+                            <td class="py-4">
+                                <button
+                                    class="w-[88px] h-[52px] text-white bg-blue779 rounded-lg shadow-button hover:bg-blue-800 transition">재통화</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td
+                                class="py-4 relative after:absolute after:right-0 after:top-4 after:bottom-4 after:w-px after:bg-grayD9">
+                                8</td>
+                            <td
+                                class="py-4 relative after:absolute after:right-0 after:top-4 after:bottom-4 after:w-px after:bg-grayD9">
+                                홍길동</td>
+                            <td
+                                class="py-4 relative after:absolute after:right-0 after:top-4 after:bottom-4 after:w-px after:bg-grayD9">
+                                2024-12-05<br>14:14:14</td>
+                            <td
+                                class="py-4 relative after:absolute after:right-0 after:top-4 after:bottom-4 after:w-px after:bg-grayD9">
+                                가입완료</td>
+                            <td
+                                class="py-4 relative after:absolute after:right-0 after:top-4 after:bottom-4 after:w-px after:bg-grayD9">
+                                3구좌
+                            </td>
+                            <td
+                                class="py-4 relative after:absolute after:right-0 after:top-4 after:bottom-4 after:w-px after:bg-grayD9">
+                                <p>123457549</p>
+                                <p>123457549</p>
+                                <p>123457549</p>
+                            </td>
+                            <td
+                                class="py-4 relative after:absolute after:right-0 after:top-4 after:bottom-4 after:w-px after:bg-grayD9">
+                                N</td>
+                            <td
+                                class="py-4 relative after:absolute after:right-0 after:top-4 after:bottom-4 after:w-px after:bg-grayD9">
+                                <button
+                                    class="w-[88px] h-[52px] text-white bg-blue779 rounded-lg shadow-button hover:bg-blue-800 transition">재발송</button>
+                                <p class="mt-1 text-gray666 text-sm leading-none">2024-12-05<br>14:14:14</p>
+                            </td>
+                            <td
+                                class="py-4 relative after:absolute after:right-0 after:top-4 after:bottom-4 after:w-px after:bg-grayD9">
+                                <p class="mt-1 text-gray666 text-sm leading-none">2024-12-05<br>14:14:14</p>
+                            </td>
+                            <td class="py-4">
+                                <button
+                                    class="w-[88px] h-[52px] text-white bg-blue779 rounded-lg shadow-button hover:bg-blue-800 transition">재통화</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td
+                                class="py-4 relative after:absolute after:right-0 after:top-4 after:bottom-4 after:w-px after:bg-grayD9">
+                                7</td>
+                            <td
+                                class="py-4 relative after:absolute after:right-0 after:top-4 after:bottom-4 after:w-px after:bg-grayD9">
+                                홍길동</td>
+                            <td
+                                class="py-4 relative after:absolute after:right-0 after:top-4 after:bottom-4 after:w-px after:bg-grayD9">
+                                2024-12-05<br>14:14:14</td>
+                            <td
+                                class="py-4 relative after:absolute after:right-0 after:top-4 after:bottom-4 after:w-px after:bg-grayD9">
+                                가입완료</td>
+                            <td
+                                class="py-4 relative after:absolute after:right-0 after:top-4 after:bottom-4 after:w-px after:bg-grayD9">
+                                1구좌
+                            </td>
+                            <td
+                                class="py-4 relative after:absolute after:right-0 after:top-4 after:bottom-4 after:w-px after:bg-grayD9">
+                                <p>123457549</p>
+                            </td>
+                            <td
+                                class="py-4 relative after:absolute after:right-0 after:top-4 after:bottom-4 after:w-px after:bg-grayD9">
+                                N</td>
+                            <td
+                                class="py-4 relative after:absolute after:right-0 after:top-4 after:bottom-4 after:w-px after:bg-grayD9">
+                                <p class="mt-1 text-gray666 text-sm leading-none">2024-12-05<br>14:14:14</p>
+                            </td>
+                            <td
+                                class="py-4 relative after:absolute after:right-0 after:top-4 after:bottom-4 after:w-px after:bg-grayD9">
+                                <p class="mt-1 text-gray666 text-sm leading-none">2024-12-05<br>14:14:14</p>
+                            </td>
+                            <td class="py-4">
+                                <button
+                                    class="w-[88px] h-[52px] text-white bg-blue779 rounded-lg shadow-button hover:bg-blue-800 transition">재통화</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+
+
+        </section>
+
+    </main>
+
+    <footer class="w-full h-[94px] bg-blue769/10">
+        <div class="flex w-[1280px] h-full mx-auto">
+            <!-- 로고 -->
+            <div class="flex items-center shrink-0 w-[280px] h-full ">
+                <img src=" ./images/logo_footer.png" class="ml-[100px]" alt="The-K 예다함 로고">
+            </div>
+            <!-- 링크 및 회사 정보 -->
+            <div class="flex flex-col justify-between grow py-5">
+                <ul class="flex font-nanumSquare800 text-xs text-gray666">
+                    <li class="pr-2.5 border-r border-gray999 h-3 leading-none"><a href="#">홈페이지
+                            이용약관</a></li>
+                    <li class="px-2.5 border-r border-gray999 h-3 leading-none"><a href="#">중요정보고시사항</a></li>
+                    <li class="pl-2.5 h-3 leading-none"><a href="#">개인정보처리(취급)방침</a></li>
+                </ul>
+                <p class="text-[11px] text-gray666">
+                    서울특별시 마포구 마포대로 86, 16층(도화동, 창강빌딩) The-K 예다함 대표이사 : 김도한 사업자등록번호 : 101-86-49300 <br>
+                    통신판매업 신고번호 : 제 2014-서울마포-0712호 전화권유판매업 신고번호 : 제 2014-서울마포-0012호
+            </div>
+            <!-- 대표번호 -->
+            <div class="flex flex-col justify-between shrink-0 w-[360px] my-5 px-[50px] border-l border-blue779/50">
+                <p class="text-lg text-gray666 leading-none">예다함 대표번호</p>
+                <p class="text-[28px] font-nanumSquare900 text-blue275 leading-none">1566-6644</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+</body>
+
+</html>
