@@ -1,0 +1,29 @@
+    /* 체크 박스 선택 */
+    .input_chk2 {
+        position: relative;
+        width: 20px;
+        height: 20px;
+        margin: 0 4px 0 0;
+        display: inline-block;
+    }
+    
+    .input_chk2 input {
+        position: absolute;
+        left: -3333px;
+        top: 3px;
+        vertical-align: middle;
+    }
+    
+    .input_chk2 label {
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        top: 0px;
+        width: 20px;
+        height: 20px;
+        background: url("../images/bg_chk2.png") left bottom no-repeat;
+    }
+    
+    .input_chk2 input:checked + label {
+        background: url("../images/bg_chk2_on.png") left bottom no-repeat;
+    }

@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>상담신청</title>
+<meta charset="UTF-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no" />
+<link rel="stylesheet" href="https://www.yedaham.co.kr/css/mobile/join.css">
+
+</head>
+
+<style type="text/css">
+/* 체크 박스 선택 */
+.input_chk {
+	position: relative;
+	width: 20px;
+	height: 21px;
+	margin: 0 8px 0 0;
+	display: inline-block;
+	top: 4px;
+}
+
+.input_chk input {
+	position: absolute;
+	left: 3px;
+	top: 4px;
+	vertical-align: middle;
+}
+
+.input_chk label {
+	display: inline-block;
+	position: absolute;
+	left: 0;
+	top: 0px;
+	width: 20px;
+	height: 21px;
+	background: url("https://www.yedaham.co.kr/images/common/bg_chk.png") left bottom no-repeat;
+}
+
+.input_chk label.on {
+	background: url("https://www.yedaham.co.kr/images/common/bg_chk_on.png") left bottom no-repeat;
+}
+
+.input_chk input:checked+label {
+	background: url("https://www.yedaham.co.kr/images/common/bg_chk_on.png") left bottom no-repeat;
+}
+
+.logo {
+	margin-bottom: 10px;
+}
+
+</style>
+
+<body>
+	
+	<div class="mainContent">
+		<form method="post" name="counsel" action="/counsel/mobile/fast_counsel_new_save.do">
+			<input type="hidden" name="tel" />
+			<input type="hidden" name="gubun" id="gubun" value="menuCounsel"/>
+			<input type="hidden" name="utm" id="utm" value=""/> 
+
+			<div><img src="./images/vis_counsel_thekMall.jpg"  class="w-100" alt=""></div>
+
+			<section class="box mb-20">
+				<div class="tit-area">
+					<h5>고객입력정보</h5>
+					<p class="txt-require">필수입력 항목입니다.</p>
+				</div>
+				<div class="form-group">
+					<p class="form-title required">이름</p>
+					<input type="text" name="name" id="userName"/>
+				</div>
+
+				<div class="form-group">
+					<p class="form-title required">휴대전화</p>
+					<div class="form-inline">
+						<input type="number" class="center" name="tel1" maxlength="3" id="mobile_no1"
+							oninput="maxLengthCheck(this)" />
+						<div class="pt-10">-</div>
+						<input type="number" class="center" name="tel2" maxlength="4" id="mobile_no2"
+							oninput="maxLengthCheck(this)" />
+						<div class="pt-10">-</div>
+						<input type="number" class="center" name="tel3" maxlength="4" id="mobile_no3"
+							oninput="maxLengthCheck(this)" />
+					</div>
+				</div>
+				<div class="form-group">
+					<p class="form-title">상담희망시간</p>
+
+					<div class="select-box custom-select">
+						<div class="options-container ">
+							<div class="option ">
+								<input type="radio" class="radio" id="time1" name="category" />
+								<label for="time1">상시(아무때나)</label>
+							</div>
+
+							<div class="option ">
+								<input type="radio" class="radio" id="time2" name="category" />
+								<label for="time2">AM 09:00 ~ AM 10:00</label>
+							</div>
+
+							<div class="option ">
+								<input type="radio" class="radio" id="time3" name="category" />
+								<label for="time3">AM 10:00 ~ AM 11:00</label>
+							</div>
+
+							<div class="option ">
+								<input type="radio" class="radio" id="time4" name="category" />
+								<label for="time4">AM 11:00 ~ PM 12:00</label>
+							</div>
+
+							<div class="option ">
+								<input type="radio" class="radio" id="time5" name="category" />
+								<label for="time5">PM 12:00 ~ PM 12:30</label>
+							</div>
+
+							<div class="option ">
+								<input type="radio" class="radio" id="time6" name="category" />
+								<label for="time6">PM 01:30 ~ PM 02:00</label>
+							</div>
+
+							<div class="option ">
+								<input type="radio" class="radio" id="time7" name="category" />
+								<label for="time7">PM 02:00 ~ PM 03:00</label>
+							</div>
+
+							<div class="option ">
+								<input type="radio" class="radio" id="time8" name="category" />
+								<label for="time8">PM 03:00 ~ PM 04:00</label>
+							</div>
+
+							<div class="option ">
+								<input type="radio" class="radio" id="time9" name="category" />
+								<label for="time9">PM 04:00 ~ PM 05:00</label>
+							</div>
+							
+							<div class="option ">
+								<input type="radio" class="radio" id="time10" name="category" />
+								<label for="time10">PM 05:00 ~ PM 06:00</label>
+							</div>
+							
+						</div>
+						
+
+						<div class="selected  ">
+							<input type="text" value="상시(아무때나)" name="time" />
+						</div>
+					</div>
+				</div>
+				
+				
+			</section>
+
+			<section class="box mb-20">
+				<h5 class="main-color">개인정보 수집 이용 제공에 관한 필수적 동의</h5>
+				<div class="text-area">
+					The-K 예다함㈜는 「개인정보보호법」에 따라<br />귀하의 개인정보를 다음과 같이 수집· 이용하고자 합니다.
+				</div>
+
+			</section>
+
+			<section class="box mb-20">
+				<h5>개인정보 수집 이용에 대한 동의</h5>
+				<div class="text-area text-agree">
+					<p class="title-agree">가. 개인정보 수집, 이용 목적</p>
+					<p>: 상조 서비스 가입의사 확인 및 가입상담 목적</p>
+					<p class="title-agree mt-10">나. 수집하는 개인정보 항목</p>
+					<p>: 성명, 연락처, 상담희망시간</p>
+					<p class="title-agree mt-10">다. 개인정보 보유 및 이용기간</p>
+					<p>: 상담신청일로 부터 3개월</p>
+					<p>* 개인정보의 수집·이용에 대한 동의를 거부할 수 있으나,<br /> 동의 거부 시 상담이 불가할 수 있음</p>
+				</div>
+
+				<div class="text-right mt-25">
+					<span class="unit-check inline-block mr-10"> <input
+						type="radio" type="radio" id="new_radio011" name="all01" value="Y" />
+						<label for="new_radio011">동의</label>
+					</span> <span class="unit-check inline-block"> <input type="radio"
+						type="radio" id="new_radio012" name="all01" value="N" checked />
+						<label for="new_radio012">동의안함</label>
+					</span>
+				</div>
+			</section>
+
+			<section class="box mb-20">
+				<h5>개인정보 제공에 대한 동의</h5>
+				<div class="text-area text-agree">
+					<p class="title-agree">가. 개인정보 처리의 위탁</p>
+					<p>1) 위탁받은 업체 : ㈜유베이스</p>
+					<p>2) 위탁하는 업무 : 가입 상담업무</p>
+					<p>* 개인정보처리 위탁에 대한 동의를 거부할 수 있으나, <br />동의 거부 시 상담이 불가할 수 있음</p>
+				</div>
+				<div class="text-right mt-25">
+					<span class="unit-check inline-block mr-10"> <input
+						type="radio" type="radio" id="new_radio021" name="all02" value="Y" />
+						<label for="new_radio021">동의</label>
+					</span> <span class="unit-check inline-block"> <input type="radio"
+						type="radio" id="new_radio022" name="all02" value="N" checked />
+						<label for="new_radio022">동의안함</label>
+					</span>
+				</div>
+			</section>
+
+			<section class="box" style="height: 100%;">
+				<h5>마케팅 정보수집 선택적 동의</h5>
+				<div class="text-area text-agree">
+					<p class="title-agree">가. 마케팅 정보 수신 권유를 위한 수집·이용</p>
+					<p class="title">1) 광고성 정보의 이용목적</p>
+					<p>: The-K 예다함㈜ (이하 ‘예다함’)는 고객의 동의하에 이용자 문자(SMS 또는 카카오 알림톡), 전화를 통해 이용자에게 광고성 정보를 제공합니다.</p>
+					<p class="title">2) 수집 및 이용 항목</p>
+					<p>: 성명, 생년월일, 연락처</p>
+					<p class="title">3) 철회안내</p>
+					<p>: 수신 동의를 철회하고자 할 경우, 고객센터를 통해 동의철회를 요청을 할 수 있습니다.</p>
+					<p class="title">4) 수신동의 변경 및 보유기간</p>
+					<p>: 예다함은 마케팅 정보 수신 동의로부터 24개월, 기간 초과 시 동의 절차를 재진행하며 미동의 시, 즉시 파기합니다. 
+					동의일로부터 수신 동의 해제시까지 광고성 정보 전달을 위하여 보유·이용됩니다.</p>
+					<p class="mt10">※ 마케팅 정보 수신에 대한 동의거부 권리 및 동의 거부에 따른 불이익과 그 내용 마케팅 정보 수신에 대한 동의를 거부할 수 있으나,
+					동의 거부 시 경품행사 참여, 편의제공(사은품, 할인쿠폰), 신상품(서비스소개, 사은행사(할인)) 안내 등을 제공하는 서비스는 받을 수 없습니다.
+					그 밖의 거래와 관련된 불이익은 없습니다.</p>
+				</div>
+
+				<div class="text-right">
+					<div class="agree_select"
+						style="margin-top: -4px; font-size: 15px;">
+						<div class="agree_chk">
+							<div class="text-right mt-25" style="font-size: 13px;">
+								<!-- onClick이 있는 input과 label의 id,for 명은 변경하시면 안됩니다.-->
+								<span class="input_chk" style="margin: 0 -2px 0 0px;"> 
+									<input type="checkbox" id="chk031" onClick="viewAgree();" name="per_agree_yn7_1" id="per_agree_yn7_1" value="1">
+									<label id="chk031Lb" for="chk031"></label>
+								</span> <span class="agr_txt">전화</span>&nbsp; 
+								<span class="input_chk" style="margin: 0 -2px 0 0px;"> 
+									<input type="checkbox" id="chk032" onClick="viewAgree();" name="per_agree_yn7_2" id="per_agree_yn7_2" value="1"> 
+									<label id="chk032Lb" for="chk032"></label>
+								</span> <span class="agr_txt">문자</span><span class="agr_txt" style="font-size: 8px;">(SMS 또는 카카오 알림톡)</span>&nbsp;
+							</div>
+							<div class="text-right mt-20">
+								<span class="unit-check inline-block mr-10">
+									<input type="radio" id="new_radio041" name="per_agree_yn7_3" value="Y">
+									<label id="new_radio041Lb" for="new_radio041">동의</label>
+								</span>
+								<span class="unit-check inline-block">
+									<input type="radio" id="new_radio042" name="per_agree_yn7_3" value="N" checked onclick="setAgree();">
+									<label id="new_radio042Lb" for="new_radio042">미동의</label>
+								</span>
+							</div>
+
+							<div class="text-right mt-25"></div>
+
+						</div>
+
+					</div>
+				</div>
+			</section>
+
+		</form>
+	</div>
+	<!--  class="mainContent" -->
+
+	
+<footer id="footer">
+	<div class="sns">
+		<a href="https://www.facebook.com/yedaham.co.kr" target="_blank"><img src="https://www.yedaham.co.kr/images/mobile/join/icon_facebook.png"  alt="페이스북"></a>
+		<a href="https://www.instagram.com/thek_yedaham_official/" target="_blank"><img src="https://www.yedaham.co.kr/images/mobile/join/icon_instagram.png"  alt="인스타그램"></a>
+		<a href="https://www.youtube.com/channel/UCIc7RDIHPg6p8y9Ycxundaw/" target="_blank"><img src="https://www.yedaham.co.kr/images/mobile/join/icon_youtube.png"  alt="유튜브"></a>		
+	</div>
+	<div class="utList">
+		<a href="https://www.yedaham.co.kr/customer/agreement/agreement.do" target="_blank">이용약관 </a>
+		<a href="https://www.yedaham.co.kr/information/terms/membership_terms_history.do" target="_blank">회원약관 </a>
+		<a href="https://www.yedaham.co.kr/customer/agreement/pps.do" target="_blank">개인정보처리방침</a>
+		<a href="https://www.yedaham.co.kr/customer/agreement/important.do " target="_blank">중요정보고시사항</a>
+	</div>
+
+	<div class="telList ">
+		<div>
+			대표전화<a href="tel:1566-6644">1566-6644</a>
+		</div>
+		<div>
+			장례접수(상황센터)<a href="tel:1566-0119">1566-0119</a>
+		</div>
+	</div>
+	<div class="yedaham-addr ">
+		서울특별시 마포구 마포대로86, 16층(도화동, 창강빌딩)<br />The-K 예다함㈜&nbsp;&nbsp; 대표이사 김도한
+	</div>
+	<ul class="yedaham-number ">
+		<li>사업자등록번호 101-86-49300</li>
+		<li>통신판매업 신고번호 제2014-서울마포-0712호</li>
+		<li>전화권유판매업 신고번호 제2014-서울마포-0012호</li>
+	</ul>
+
+	<div class="brochure">
+		<div><a href="https://www.yedaham.co.kr/main.do" target="_blank">BRAND SITE</a></div>		
+		<div><a href="https://www.yedaham.co.kr/mail/pdf/brosure_form.pdf" target="_blank">ABOUT YEDAHAM</a></div>
+	</div>
+
+
+	<div class="selectLink-wrap">
+		<a href="javascript:void(0);" onclick="familySite();">We are The-K group</a>
+		<ul>
+			<li><a href="https://www.ktcu.or.kr/"target="_blank" >The-K한국교직원공제회</a></li>
+			<li><a href="https://www.thek-hotel.co.kr/skmh/index.do" target="_blank" >The-K호텔서울</a></li>
+			<li><a href="http://www.ramadajeju.co.kr/" target="_blank" >라마다 프라자 제주호텔</a></li>
+			<li><a href="https://www.thek-hotel.co.kr/gjmh/index.do" target="_blank" >The-K호텔경주</a></li>
+			<li><a href="http://www.thek-hotel.co.kr/jrmh/index.do" target="_blank" >The-K지리산가족호텔</a></li>
+			<li><a href="https://www.thek-hotel.co.kr/srmh/index.do" target="_blank" >The-K설악산가족호텔</a></li>
+			<li><a href="http://www.thekbank.co.kr/" target="_blank" >The-K저축은행</a></li>
+			<li><a href="https://www.sophiagreen.co.kr/index.asp" target="_blank" >The-K소피아그린</a></li>
+			<li><a href="http://www.thekmall.co.kr/" target="_blank" >The-K교직원나라</a></li>
+		</ul>
+	</div>
+	<div class="copyright ">Copyright© The-K Yedaham Co. Ltd <br />ALL Right Reserved</div>
+	<button id="top-btn" onclick="backToTop()"><img src="https://www.yedaham.co.kr/images/mobile/join/btn_scroll_top.png"  alt=""></button>
+	
+	
+</footer>
+
+	<nav id="nav-bot">
+		<a href="#" class="nav-back one-btn text-center"
+			onclick="isValidCheck();">상담신청하기</a>
+	</nav>
+
+	<!-- modal -->
+	<div class="modal-alert" id="modalAlert">
+		<div class="modal-content">내용</div>
+		<button class="btn-alert" onclick="closeModalAlert();">확인</button>
+	</div>
+	<div class="modal-alert" id="modalConfirm">
+		<div class="modal-content">내용</div>
+		<p class="flex">
+			<button class="btn-cancel" onclick="closeModalConfirm();">취소</button>
+			<button class="btn-alert" onclick="submit();">확인</button>
+		</p>
+	</div>
+	<div id="overlay"></div>
+	<!-- // modal -->
+
+	<script type="text/javascript" src="https://www.yedaham.co.kr/js/mobile/join_script.js"></script>
+	<script type="text/javascript" src="https://www.yedaham.co.kr/js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="https://www.yedaham.co.kr/js/validate_info.js"></script>
+	<script>
+	
+		function isValidCheck() {
+			let frm = document.counsel;
+
+			var agree_confirm01 = $('input[name="all01"]:checked').val();
+			var agree_confirm02 = $('input[name="all02"]:checked').val();
+			var all04 = $('input[name="per_agree_yn7_3"]:checked').val();
+			var per_agree_yn7_1 = $('input[name="per_agree_yn7_1"]').is(':checked');
+			var per_agree_yn7_2 = $('input[name="per_agree_yn7_2"]').is(':checked');
+			
+
+			if (frm.name.value == "") {
+				openModalAlert("이름을 입력 해주세요.");
+				frm.name.focus();
+				return;
+			} else if(frm.name.value.length <= 1){
+				openModalAlert("이름이 한글자 입니다.");
+				frm.name.focus();
+				return;
+			} 
+
+			if (frm.tel1.value == "" || frm.tel2.value == "" || frm.tel3.value == "") {
+				openModalAlert("전화번호를 입력 해주세요");
+				frm.tel1.focus();
+				return;
+			}
+
+			let fullTelNum = frm.tel1.value.replace(/\s/g, "") + "-" + frm.tel2.value.replace(/\s/g, "") + "-" + frm.tel3.value.replace(/\s/g, "");
+			if (!isValidPhone(fullTelNum)) {
+				openModalAlert("전화번호 형식이 올바르지 않습니다.");
+				frm.tel1.focus();
+				return;
+			} else {
+				frm.tel.value = fullTelNum;
+			}
+			
+			if (agree_confirm01 == "N") {
+				openModalAlert("개인정보 수집 이용 동의 하셔야 합니다.");
+				return;
+			}
+			
+			if (agree_confirm02 == "N") {
+				openModalAlert("개인정보 제공 동의 하셔야 합니다.");
+				return;
+			}
+
+			if(all04 == 'Y' && per_agree_yn7_1 == false && per_agree_yn7_2 == false){
+				openModalAlert("마케팅 수신동의를 체크해주세요.");
+				return;
+			}
+
+			if (!$('#g-recaptcha-response').val()) {
+				alert("자동등록 방지를 반드시 체크해 주세요");
+				return false;
+			}
+
+			openModalConfirm("신청하시겠습니까?");
+		}
+
+		function submit() {
+			var utm = $("#utm").val();
+			var gubun = $("#gubun").val();
+			
+			let frm = document.counsel;
+
+			var agree_confirm01 = $('input[name="all01"]:checked').val();
+			var agree_confirm02 = $('input[name="all02"]:checked').val();
+
+			if (frm.name.value == "") {
+				openModalAlert("이름을 입력 해주세요.");
+				frm.name.focus();
+				return;
+			} else if(frm.name.value.length <= 1){
+				openModalAlert("이름이 한글자 입니다.");
+				frm.name.focus();
+				return;
+			} 
+
+			if (frm.tel1.value == "" || frm.tel2.value == "" || frm.tel3.value == "") {
+				openModalAlert("전화번호를 입력 해주세요");
+				frm.tel1.focus();
+				return;
+			}
+
+			var fullTelNum = frm.tel1.value.replace(/\s/g, "") + "-" + frm.tel2.value.replace(/\s/g, "") + "-" + frm.tel3.value.replace(/\s/g, "");
+			if (!isValidPhone(fullTelNum)) {
+				openModalAlert("전화번호 형식이 올바르지 않습니다.");
+				frm.tel1.focus();
+				return;
+			} else {
+				frm.tel.value = fullTelNum;
+			}
+
+			
+			//마케팅 추가
+			if ($('input[name="per_agree_yn7_1"]').is(':checked') == false) {
+				$('input[name="per_agree_yn7_1"]').val('');
+			} else {
+				$('input[name="per_agree_yn7_1"]').val('1');
+			}
+			
+			if ($('input[name="per_agree_yn7_2"]').is(':checked') == false) {
+				$('input[name="per_agree_yn7_2"]').val('');
+			} else {
+				$('input[name="per_agree_yn7_2"]').val('1');
+			}
+			
+			var per_agree_yn7_1 = $('input[name="per_agree_yn7_1"]').val();
+			var per_agree_yn7_2 = $('input[name="per_agree_yn7_2"]').val();
+			var per_agree_yn7_3 = $('input[name="per_agree_yn7_3"]:checked').val();
+			
+			frm.name.value = frm.name.value.replace(/\s/g, "");
+			frm.tel.value = fullTelNum;
+			frm.all01.value = agree_confirm01;
+			frm.all02.value = agree_confirm02;
+			frm.per_agree_yn7_1.value = per_agree_yn7_1; 
+			frm.per_agree_yn7_2.value = per_agree_yn7_2;
+			frm.per_agree_yn7_3.value = per_agree_yn7_3;
+			frm.submit();
+			$('#userName').val("");
+			$('#mobile_no1').val("");
+			$('#mobile_no2').val("");
+			$('#mobile_no3').val("");
+		}
+
+		/* 개인정보 수집 및 이용에 관한 동의*/
+		function setAgree(){
+			document.getElementById("chk031Lb").className = "";
+			document.getElementById("chk032Lb").className = "";
+			document.getElementById("chk031").checked = false;
+			document.getElementById("chk032").checked = false;
+		
+		}
+	
+		function viewAgree() {
+			var all04 = $('input[name="per_agree_yn7_3"]:checked').val();
+			if(all04 == "N"){
+				alert("마케팅 정보수집 동의에 체크해야만 체크가 가능합니다.");
+				document.getElementById("chk031Lb").className = "";
+				document.getElementById("chk032Lb").className = "";
+				document.getElementById("chk031").checked = false;
+				document.getElementById("chk032").checked = false;					
+				return false;
+			}
+			
+			if (document.getElementById("chk031").checked) {
+				document.getElementById("chk031Lb").className = "on";
+			} else {
+				document.getElementById("chk031Lb").className = "";
+			}
+			if (document.getElementById("chk032").checked) {
+				document.getElementById("chk032Lb").className = "on";
+			} else {
+				document.getElementById("chk032Lb").className = "";
+			}
+			return true;
+
+		}
+
+		function goHome(){
+			window.parent.location.href = "https://m.yedaham.co.kr/main/main.html"
+		} 
+		
+	</script>
+</body>
+</html>
