@@ -178,7 +178,7 @@ body {width:675px;background:#ffffff;}
 		<div style="position:relative;">
 
 			<div><img id="teachi02" src="./images/teachiworld02_new.png" alt=""/></div>
-			<div class="teachiworld_con" >
+			<div class="teachiworld_con mt-30 pl-25 pr-25 position-unset" >
 			<!-- 빠른상담신청 -->
 
 			<form name="frmMain">
@@ -187,7 +187,11 @@ body {width:675px;background:#ffffff;}
 				<caption>고객 정보 입력 표</caption>
 				<colgroup><col width="130"><col width="284"><col width="*"></colgroup>
 				<tbody>
-
+					<tr>
+						<td class="font-bold fs16 pb-5">성명<span class="text-ff0000">*</span></td>
+						<td class="font-bold fs16 pb-5">휴대전화<span class="text-ff0000">*</span></td>
+						<td class="font-bold fs16 pb-5">상담희망시간<span class="text-ff0000">*</span></td>
+					</tr>
 					<tr>
 
 						<td><input type="text" class="form-input" placeholder="이름을 입력하세요" name="name" id="name" style="width:120px;"/></td>
@@ -205,7 +209,7 @@ body {width:675px;background:#ffffff;}
 							<input type="text" class="form-input" name="tel3" id="tel3" maxlength="4" onKeyPress="return onlyNumber()" style="width:90px">
 						</td>
 						<td>
-							<select name="time" id="time"  class="select2" style="width:190px;">
+							<select name="time" id="time"  class="select2" style="width:100%">
 								<option value="상시(아무때나)">상시(아무때나)</option>
 								<option value="am 09:00 ~ am 10:00">am 09:00 ~ am 10:00</option>
 			                    <option value="am 10:00 ~ am 11:00">am 10:00 ~ am 11:00</option>

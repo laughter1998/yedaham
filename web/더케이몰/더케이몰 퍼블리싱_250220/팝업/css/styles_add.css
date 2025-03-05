@@ -27,3 +27,13 @@
     .input_chk2 input:checked + label {
         background: url("../images/bg_chk2_on.png") left bottom no-repeat;
     }
+
+
+
+    /* color */
+    .text-ff0000{
+        color: #ff0000 !important;
+    }
+    .bg-ff0000{
+        background-color: #ff0000 !important;
+    }
