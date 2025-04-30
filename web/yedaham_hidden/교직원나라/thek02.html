@@ -38,19 +38,16 @@
 <body>
 
     <style>
-        .hidden_wrap {
-            padding: 25px 0 0 0;
-        }
-
+        
         .hidden_page {
             margin: 0 auto;
             width: 1024px;
             background: #ffffff;
         }
         .hidden_page.thek article {
-            padding-top: 30px;
-            padding-bottom: 30px;
-            border-bottom: 1px solid red;
+            padding-top: 80px;
+            padding-bottom: 80px;
+            border-bottom: 1px solid #d9d9d9;
         }
 
         .hidden_page.thek article:last-child {
@@ -62,58 +59,30 @@
         }
        
         .hidden_page table.input_table tr th {
-            font-size: 14px;
+            font-size: 16px;
             color: #333333;
             font-weight: bold;
-            letter-spacing: -0.06em;
         }
 
-        .hidden_page table.input_table tr td input {
+        .hidden_page table.input_table tr td input,
+        .hidden_page table.input_table tr td select
+
+         {
             height: 40px;
         }
    
-
-        #footer_wrap {
-            width: 100%;
-            background: #494233;
+        .hidden_page .btn-reg {
+            display: inline-block;
+            padding: 20px 24px;
+            border-radius: 16px;
+            box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.15);
+            background-color: #1851ff;
+            color: #fff;
+            font-size: 24px;
+            font-weight: 800;
         }
-
-        .hidden_wrap #footer_h {
-            height: 95px;
-            width: 970px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 99;
-        }
-
-        .hidden_wrap #footer_h h2 {
-            position: absolute;
-            left: 0px;
-            top: 37px;
-        }
-
-        .hidden_wrap #footer_h p.txt {
-            margin: 0 0 0 156px;
-            padding: 20px 0 0 0px;
-            color: #a4a199;
-            font-size: 11px;
-            line-height: 16px;
-        }
-
-        .hidden_wrap #footer_h p.txt span {
-            display: block;
-            margin: 0 0 5px 0;
-            color: #ffffff;
-        }
-
-        .hidden_wrap #footer_h p.txt span a {
-            color: #ffffff;
-        }
-
-        .hidden_wrap #footer_h p.txt span a:hover {
-            text-decoration: underline;
-        }
-
+    
+    
         .hidden_page.thek .input_radio {
             position: relative;
             width: 23px;
@@ -135,15 +104,15 @@
             top: 0px;
             width: 23px;
             height: 23px;
-            background: url('https://www.yedaham.co.kr/images/with/hidden/poba/bg_chk.png') left bottom no-repeat;
+            background: url('./images/bg_chk.png') left bottom no-repeat;
         }
 
         .hidden_page.thek .input_radio label.on {
-            background: url('https://www.yedaham.co.kr/images/with/hidden/poba/bg_chk_on.png') left bottom no-repeat;
+            background: url('./images/bg_chk_on.png') left bottom no-repeat;
         }
 
         .hidden_page.thek .input_radio input:checked+label {
-            background: url('https://www.yedaham.co.kr/images/with/hidden/poba/bg_chk_on.png') left bottom no-repeat
+            background: url('./images/bg_chk_on.png') left bottom no-repeat
         }
 
         .form-input {
@@ -157,20 +126,19 @@
     </style>
     <div class="hidden_wrap">
         <div class="hidden_page thek">
-            <div class="flex justify-between items-center pl-20 pr-20 pt-10 pb-10">
-                <img src="/images/with/hidden/nonghyup_ilsan/h5_nonghyup_ilsan.png" alt="진행중인 이벤트">
-                <h1><a href="http://www.yedaham.co.kr" target="blank"><img src="/images/with/hidden/logo_yedaham.png" alt="예다함"></a></h1>
+            <div class="flex justify-between items-center pl-60 pr-60 pt-16 pb-9">
+                <img src="./images/logo_thek.png" alt="the-k 교직원나라">
+                <h1><a href="http://www.yedaham.co.kr" target="blank"><img src="./images/logo_yedaham.png" alt="예다함"></a></h1>
             </div>
-            <div style="background-color: aqua;" class="pb-20">
-                <div><img src="./images/with/hidden/thek/thek_1.jpg" alt="" /></div>
+            <div style="background-color: #dfecff;" class="pb-80">
+                <div><img src="./images/visual_thek02.jpg" alt="" /></div>
 
-                <section style="border:1px solid red;background-color: #fff;border-radius: 5px;" class="pl-20 pr-20 ml-20 mr-20" >
+                <section style="background-color: #fff;border-radius: 10px;" class="pl-40 pr-40 ml-60 mr-60" >
                     <article>
                         <!-- 빠른상담신청 -->
-
                         <form name="frmMain">
                             <input type="hidden" name="gubun" id="gubun" value="" />
-                            <div class="flex" style="gap:20px;">
+                            <div class="flex" style="gap:40px;">
                                 <div class="flex-item">
                                     <table class="input_table" summary="이름,휴대전화,이메일 입력 표입니다.">
                                         <caption>고객 정보 입력 표</caption>
@@ -181,15 +149,15 @@
                                         <tbody>
                                             <tr>
                                                 <th>성명</th>
-                                                <td class="pb-15">
+                                                <td>
                                                     <input type="text" class="form-input"
                                                         placeholder="이름을 입력하세요" name="name" id="name" /></td>
                                             </tr>
 
                                             <tr>
                                                 <th>휴대전화</th>
-                                                <td class="flex items-center pb-15" style="gap: 5px;">
-                                                    <select name="tel1" id="tel1" class="select2 flex-item" >
+                                                <td class="flex items-center " style="gap: 5px;">
+                                                    <select name="tel1" id="tel1" class="select2 "  style="width:86px;"  >
                                                         <option value="010">010</option>
                                                         <option value="011">011</option>
                                                         <option value="016">016</option>
@@ -207,7 +175,7 @@
                                                 <th>상담희망시간</th>
 
                                                 <td>
-                                                    <select name="time" id="time" class="select2 w-full" >
+                                                    <select name="time" id="time" class="select2 " style="width: 292px;">
                                                         <option value="상시(아무때나)">상시(아무때나)</option>
                                                         <option value="am 09:00 ~ am 10:00">am 09:00 ~ am 10:00</option>
                                                         <option value="am 10:00 ~ am 11:00">am 10:00 ~ am 11:00</option>
@@ -223,18 +191,22 @@
                                             </tr>
                                         </tbody>
                                     </table>
-                                    <ul>
-                                        <li>* 상담운영시간</li>
-                                        <li>*개인정보의 수집</li>
+                                    <ul class="mt-20" style="color: #555555;line-height:20px;">
+                                        <li>* 상담운영시간 : 평일 09:00 ~ 18:00<br />
+                                            &nbsp;&nbsp;&nbsp;(점심시간 : 12:30 ~ 13:30, 주말/공휴일 휴무)</li>
+                                        <li class="mt-10">* 개인정보의 수집ㆍ이용에 대한 동의 혹은 위탁에 대한 동의를<br />
+                                            &nbsp;&nbsp;&nbsp;거부할 수 있으나, 동의 거부 시 상담이 불가할 수 있음.</li>
                                     </ul>
                                 </div>
 
-                                <div class="flex-item">
+                                <div class="flex-item" style="color:#555;line-height: 19px;">
 
                                     <div class=" ">
-                                        <div>개인정보의 수집및 이용</div>
-                                        <div class="flex justify-between items-center">
-                                            <p>[필수]개인정보 수집 이용에 대한 동의</p>
+                                        <div class="fs16 font-bold" style="color:#333333;">개인정보의 수집 및 이용, 제공에 관한 동의</div>
+                                        <p class="mt-10" >The-K예다함㈜는 『개인정보보호법』에 따라 귀하의 개인정보를 다음과 같이 수집ㆍ이용하고자 합니다.</p>
+                                        <h5 class="mt-20 fs16 font-bold " style="padding: 10px;border-radius: 4px;background-color: rgba(24, 81, 255, 0.6);color:#fff;">개인정보의 수집 및 이용, 제공에 관한 동의</h5>
+                                        <div class="flex justify-between items-center mt-20">
+                                            <p class="fs14">[필수]개인정보 수집 이용에 대한 동의</p>
                                             <section class="">
                                                 <div class="agree_select  ">
                                                     <span class="input_radio"><input type="radio" id="new_radio011" name="all01"
@@ -246,24 +218,33 @@
                                                 </div>
                                             </section>
                                         </div>
-                                        <div>개인정보의 수집및 이용</div>
-
+                                        <ul class="mt-20">
+                                            <li>가. 개인정보 수집, 이용 목적 : 상조 서비스 가입의사 확인 및 가입상담 목적</li>
+                                            <li>나. 수집하는 개인정보 항목 : 성명, 연락처, 상담희망 시간</li>
+                                            <li>다. 개인정보 보유 및 이용기간 : 상담신청일로 부터 1개월</li>
+                                        </ul>
+                                        <h5 class="mt-20 fs16 font-bold " style="padding: 10px;border-radius: 4px;background-color: rgba(24, 81, 255, 0.6);color:#fff;">개인정보 제공에 대한 안내</h5>
+                                        <ul class="mt-20">
+                                            <li> 가. 개인정보 처리의 위탁</li>
+                                            <li> 1) 위탁받은 업체 : ㈜유베이스</li>
+                                            <li>2) 위탁하는 업무 : 가입 상담업무</li>
+                                        </ul>
                                     </div>
-                                    <!--// class="hidden_agree" -->
+                                   
                                 </div>
                                 
                             </div>
-                            <p class="text-center">
-                                <a href="javascript:fastCounselSave();"><img
-                                        src="https://www.yedaham.co.kr/images/with/hidden/thek/btn_ok.jpg"
-                                        alt="상담신청하기" /></a>
+                            <p class="text-center mt-60">
+                                <a href="javascript:fastCounselSave();" class="btn-reg" >가입신청하기</a>
                             </p>
                         </form>
                            
-                        </form>
+                        
                         <!-- //빠른상담신청 --->
                     </article>
-                    <article><img src="./images/with/hidden/thek/thek_2.jpg" alt="" /></article>
+                    <article class="text-center"><img src="./images/thek02_con01.jpg" alt="" /></article>
+                    <article class="text-center"><img src="./images/thek02_con02.jpg" alt="" /></article>
+                    <article class="text-center"><img src="./images/thek02_con03.jpg" alt="" /></article>
                 </section>
             </div>
         </div><!-- class="hidden_page" -->
