@@ -37,26 +37,27 @@
 </head>
 
 <style>
-    
     .infomation {
-	        text-align: left !important;
-	        line-height: 22px !important;
-	        padding: 15px 10px 15px 10px;
-	        color: #cf9547 !important;
-	}
-	
+        text-align: left !important;
+        line-height: 22px !important;
+        padding: 15px 10px 15px 10px;
+        color: #cf9547 !important;
+    }
+
     .infomation span {
         color: #bc631e;
         font-size: 15px;
     }
+
     h4.sub-title {
         display: flex;
         align-items: center;
         font-size: 22px;
         line-height: 34px;
-        color: #412900;  
+        color: #412900;
         gap: 4px;
     }
+
     h4.sub-title::before {
         display: block;
         content: '';
@@ -64,124 +65,139 @@
         height: 8px;
         background-color: #c87c1e;
     }
+
     section.membership-list {
         display: grid;
         grid-template-columns: repeat(3, auto);
         gap: 15px;
     }
+
     section.membership-list button {
         all: unset;
         cursor: pointer;
     }
+
     section.membership-list button:hover {
         filter: drop-shadow(6.217px 5.035px 6.5px rgba(154, 154, 154, 0.16));
     }
-     /* 모달 배경 */
-     .modal-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            align-items: center;
-            justify-content: center;
-        }
 
-        /* 모달 본체 */
-        .modal {
-            
-        }
-        .modal .modal-content-wrap {
-            margin-top:15px;
-            border-radius: 30px;
-            max-width: 670px;
-            width: 670px;
-            box-sizing: border-box;
-            background-color: white;
-            padding: 40px;
-        }
+    /* 모달 배경 */
+    .modal-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        align-items: center;
+        justify-content: center;
+    }
 
-        /* 닫기 버튼 */
-        .close-btn {
-            background-color: transparent;
-            border:none;
-            cursor: pointer;
-        }
-        .modal .head-dec {
-            margin-top: 20px;
-            font-size: 14px;
-            line-height: 20px;
-            color: #747474;
-            letter-spacing: -0.04em;
-        }
-        .modal .homepage-move {
-            margin-top: 20px;
-            display: inline-flex;
-            align-items: center;
-            height: 30px;
-            border-radius: 6px;
-            border: 1px solid #1654f3;
-            font-size: 12px;
-            line-height: 12px;
-            color: #1654f3;
-            padding-left: 15px;
-            padding-right: 15px;
-        }
-        .modal .modal-body {
-            margin-top: 25px;
-            border-top: 1px solid #ddc9ac;
-        }
-        h5.modal-content-title {
-            font-size: 18px;
-            color: #494233;
-            font-weight: bold;
-        }
-        ul.benefit-list-row {
-            display: flex;
-            gap: 10px;
-        }
-        ul.benefit-list-row > li {
-            min-width: 140px;
-        }
-        ul.benefit-list-row > li > p.icon-area {
-            height: 70px;
-            text-align: center;
-        }
-        ul.benefit-list-row > li > div.benefit-dec {
-            font-size: 14px;
-            letter-spacing: 0px;
-            line-height: 17px;
-            color: #747474;
-            text-align: center;
-        }
-        ul.benefit-list-col {
-            display: flex;
-            gap: 10px;
-            flex-direction: column;
-        }
-        ul.benefit-list-col > li {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            padding-top: 20px;
-            padding-bottom: 20px;
-        }
-        ul.benefit-list-col > li figure{
-            width: 130px;
-            margin:0;
-            padding:0;
-            text-align: center;
-        }
-        ul.benefit-list-col > li > ul.benefit-dec{
-            display: grid;
-            flex-grow: 1;
-            font-size: 14px;
-            line-height: 22px;
-            color: #747474;
-            letter-spacing: -0.02em;
-        }
+    /* 모달 본체 */
+    .modal {}
+
+    .modal .modal-content-wrap {
+        margin-top: 15px;
+        border-radius: 30px;
+        max-width: 670px;
+        width: 670px;
+        box-sizing: border-box;
+        background-color: white;
+        padding: 40px;
+    }
+
+    /* 닫기 버튼 */
+    .close-btn {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .modal .head-dec {
+        margin-top: 20px;
+        font-size: 14px;
+        line-height: 20px;
+        color: #747474;
+        letter-spacing: -0.04em;
+    }
+
+    .modal .homepage-move {
+        margin-top: 20px;
+        display: inline-flex;
+        align-items: center;
+        height: 30px;
+        border-radius: 6px;
+        border: 1px solid #1654f3;
+        font-size: 12px;
+        line-height: 12px;
+        color: #1654f3;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .modal .modal-body {
+        margin-top: 25px;
+        border-top: 1px solid #ddc9ac;
+    }
+
+    h5.modal-content-title {
+        font-size: 18px;
+        color: #494233;
+        font-weight: bold;
+    }
+
+    ul.benefit-list-row {
+        display: flex;
+        gap: 10px;
+    }
+
+    ul.benefit-list-row>li {
+        min-width: 140px;
+    }
+
+    ul.benefit-list-row>li>p.icon-area {
+        height: 70px;
+        text-align: center;
+    }
+
+    ul.benefit-list-row>li>div.benefit-dec {
+        font-size: 14px;
+        letter-spacing: 0px;
+        line-height: 17px;
+        color: #747474;
+        text-align: center;
+    }
+
+    ul.benefit-list-col {
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+    }
+
+    ul.benefit-list-col>li {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    ul.benefit-list-col>li figure {
+        width: 130px;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    ul.benefit-list-col>li>ul.benefit-dec {
+        display: grid;
+        flex-grow: 1;
+        font-size: 14px;
+        line-height: 22px;
+        color: #747474;
+        letter-spacing: -0.02em;
+    }
 </style>
 
 <body>
@@ -203,35 +219,46 @@
                 </div><!-- class="title_area" -->
 
                 <p class="mt3-etc mt30 infomation">
-                    ※ 제휴호텔 및 리조트의 <span>할인적용은 정상가 기준</span>이며, 예다함 멤버십 혜택과는 별개로 제휴처 자체의 특가 행사를 진행할 수 있는 점 참고 바랍니다.  
+                    ※ 제휴호텔 및 리조트의 <span>할인적용은 정상가 기준</span>이며, 예다함 멤버십 혜택과는 별개로 제휴처 자체의 특가 행사를 진행할 수 있는 점 참고 바랍니다.
                     (제휴처의 특가 행사 진행 시에는 예다함 할인 혜택이 중복으로 적용되지 않습니다.)<br />
                     ※ 제휴사의 사정에 따라 혜택이 일부 변경될 수 있습니다.
-                    <a href="/download/terms/yedaham_membership_terms.pdf" target="_blank" class="membership_terms_link">멤버십 회원약관</a>
+                    <a href="/download/terms/yedaham_membership_terms.pdf" target="_blank"
+                        class="membership_terms_link">멤버십 회원약관</a>
                 </p>
 
                 <div class="membership_wrap mt-50">
                     <h4 class="sub-title">호텔&리조트</h4>
                     <section class="membership-list mt-20">
-                        <article><button type="button" data-file="category01_01"><img src="./images/banner_category01_01.png" alt="The-K 호텔 경주"></button></article>
-                        <article><button type="button" data-file="category01_02"><img src="./images/banner_category01_02.png" alt="The-K 지리산가족호텔"></button></article>
-                        <article><button type="button" data-file="category01_03"><img src="./images/banner_category01_03.png" alt="The-K 설악산가족호텔"></button></article>
-                        <article><button type="button" data-file="category01_04"><img src="./images/banner_category01_04.png" alt="금호리조트"></button></article>
-                        <article><button type="button" data-file="category01_05"><img src="./images/banner_category01_05.png" alt="라한호텔"></button></article>
-                        <article><button type="button" data-file="category01_06"><img src="./images/banner_category01_06.png" alt="라마다프라자 제주호텔"></button></article>
+                        <article><button type="button" data-file="category01_01"><img
+                                    src="./images/banner_category01_01.png" alt="The-K 호텔 경주"></button></article>
+                        <article><button type="button" data-file="category01_02"><img
+                                    src="./images/banner_category01_02.png" alt="The-K 지리산가족호텔"></button></article>
+                        <article><button type="button" data-file="category01_03"><img
+                                    src="./images/banner_category01_03.png" alt="The-K 설악산가족호텔"></button></article>
+                        <article><button type="button" data-file="category01_04"><img
+                                    src="./images/banner_category01_04.png" alt="금호리조트"></button></article>
+                        <article><button type="button" data-file="category01_05"><img
+                                    src="./images/banner_category01_05.png" alt="라한호텔"></button></article>
+                        <article><button type="button" data-file="category01_07"><img
+                                    src="./images/banner_category01_07.png" alt="라마다프라자 제주호텔"></button></article>
                     </section>
                     <h4 class="sub-title mt-55">금융&쇼핑</h4>
                     <section class="membership-list mt-20">
-                        <article><button type="button" data-file="category02_01"><img src="./images/banner_category02_01.png" alt="The-K 저축은행"></button></article>
-                        <article><button type="button" data-file="category02_02"><img src="./images/banner_category02_02.png" alt="신한은행"></button></article>
-                        <article><button type="button" data-file="category02_03"><img src="./images/banner_category02_03.png" alt="더케이몰"></button></article>
-                        
+                        <article><button type="button" data-file="category02_01"><img
+                                    src="./images/banner_category02_01.png" alt="The-K 저축은행"></button></article>
+                        <article><button type="button" data-file="category02_02"><img
+                                    src="./images/banner_category02_02.png" alt="신한은행"></button></article>
+                        <article><button type="button" data-file="category02_03"><img
+                                    src="./images/banner_category02_03.png" alt="더케이몰"></button></article>
+
                     </section>
                     <h4 class="sub-title mt-55">의료&건강</h4>
                     <section class="membership-list mt-20">
-                        <article><button type="button" data-file="category03_01"><img src="./images/banner_category03_01.png" alt="(재)한국의학연구소 KMI"></button></article>
-                        
+                        <article><button type="button" data-file="category03_01"><img
+                                    src="./images/banner_category03_01.png" alt="(재)한국의학연구소 KMI"></button></article>
+
                     </section>
-                   
+
                 </div><!-- // class="membership_wrap" -->
 
             </div><!-- class="sub_box_wrap" -->
@@ -244,7 +271,8 @@
     <!-- 모달 -->
     <div class="modal-overlay" id="modalOverlay">
         <div class="modal">
-            <div class="text-right"><button class="close-btn" id="closeModal"><img src="./images/btn_modal_close.png" alt="닫기"></button></div>
+            <div class="text-right"><button class="close-btn" id="closeModal"><img src="./images/btn_modal_close.png"
+                        alt="닫기"></button></div>
             <div id="modalContentWrap" class="modal-content-wrap"></div>
         </div>
     </div>
@@ -258,16 +286,16 @@
 
         buttons.forEach(button => {
             button.addEventListener("click", async () => {
-                const fileName = button.getAttribute("data-file") + ".html"; 
+                const fileName = button.getAttribute("data-file") + ".html";
                 try {
-                    modalContentWrap.innerHTML = "로딩 중..."; 
-                    const response = await fetch(fileName); 
+                    modalContentWrap.innerHTML = "로딩 중...";
+                    const response = await fetch(fileName);
                     if (!response.ok) throw new Error("파일을 찾을 수 없습니다.");
                     const html = await response.text();
                     modalContentWrap.innerHTML = html;
-                    modalOverlay.style.display = "flex"; 
+                    modalOverlay.style.display = "flex";
                 } catch (error) {
-                    modalContentWrap.innerHTML = "콘텐츠를 불러올 수 없습니다."; 
+                    modalContentWrap.innerHTML = "콘텐츠를 불러올 수 없습니다.";
                 }
             });
         });
