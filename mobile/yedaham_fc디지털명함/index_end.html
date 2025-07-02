@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모바일 명함</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+
+    <main>
+        <div class="profile-section">
+            <div class="profile-info">
+                <div class="name">홍길동</div>
+                <div class="role-company mt-8">
+                    <span>상조컨설턴트</span>
+                    <span>예다함 FC</span>
+                </div>
+            </div>
+            <div class="profile-image">
+                <img src="./images/logo.png" alt="logo">
+            </div>
+        </div>
+        <section class="info-section">
+            <article class="info-box mt-5">
+                <div class="info-box-inner">
+                    <div class="label">휴대전화</div>
+                    <div class="value">010-1234-5678</div>
+                </div>
+                <div><img src="./images/icon_phone.png" alt="phone"></div>
+            </article>
+            <article class="info-box mt-5">
+                <div class="info-box-inner">
+                    <div class="label">이메일</div>
+                    <div class="value">hong@thekyedaham.co.kr</div>
+                </div>
+                <div><img src="./images/icon_email.png" alt="email"></div>
+            </article>
+            <article class="info-box address mt-5">
+                <div class="info-box-inner">
+                    <div class="label">예다함 본사 주소</div>
+                    <div class="value">서울특별시 마포구 마포대로 86, 14층<br>(도화동, 창강빌딩)</div>
+                </div>
+            </article>
+        </section>
+        <div class="profile-notice mt-15 mb-15">※ 이 명함은 The-K 예다함에서 발급된 공식 디지털 명함입니다.</div>
+
+        <button type="button" class="more-btn"><img src="./images/arrow_more.png"></button>
+
+        <section class="consult-section mt-15">
+            <div class="tab-wrap">
+                <button type="button" class="tab active">상담신청</button>
+                <a href="event-benefits.html" target="_blank" class="tab">고객혜택</a>
+            </div>
+            <div class="auth-box mt-15" style="display: none;">
+                <div class="auth-title">본인인증</div>
+                <div class="auth-desc mt-15">가입상담 신청 서비스를 이용하시려면<br>본인 확인을 위한 인증이 반드시 필요합니다.</div>
+                <div class="auth-methods mt-15">
+                    <a href="#" target="_blank">
+                        <p><img src="./images/img_phone.png" alt="phone"></p>
+                        <span>휴대폰<br>본인인증</span>
+                    </a>
+                    <a href="kakao1.html" target="_blank">
+                        <p><img src="./images/img_kakao.png" alt="kakao"></p>
+                        <span>카카오<br>본인인증</span>
+                    </a>
+                </div>
+                <div class="auth-notice mt-15">
+                    <div class="auth-notice-title">본인인증 안내사항</div>
+                    <ul class="mt-10">
+                        <li><span class="li-num">1.</span><span class="li-text">입력하신 정보는 본인인증용도로만 사용되어 일체 저장되지 않으며, 동의
+                                없이 공개 또는 제 3자에게 제공하지 않습니다.</span></li>
+                        <li class="mt-10"><span class="li-num">2.</span><span class="li-text">본인인증 시, 페이지 이동이 될 수
+                                있습니다.<br>만 14세 미만의
+                                아동일 경우 서비스 이용이 불가합니다.</span></li>
+                    </ul>
+                </div>
+            </div>
+            <form class="consult-form">
+                <div class="consult-notice mt-15">본인인증 완료되었으며, 입력된 성명과 연락처가 자동으로 입력됩니다</div>
+                <div class="form-group mt-15">
+                    <label for="username">성명</label>
+                    <input type="text" id="username" name="username" readonly value="홍*순" />
+                </div>
+
+                <div class="form-group mt-15">
+                    <label for="phone">휴대전화번호</label>
+                    <input type="text" id="phone" name="phone" readonly value="010-****-5678" />
+                </div>
+
+                <div class="form-group mt-15">
+                    <label for="relation">관계 <span class="required">*</span></label>
+                    <select id="relation" name="relation">
+                        <option>선택</option>
+                    </select>
+                </div>
+
+                <div class="form-group mt-15">
+                    <label for="time">상담희망시간 <span class="required">*</span></label>
+                    <select id="time" name="time">
+                        <option>상시(아무때나)</option>
+                    </select>
+                </div>
+
+                <div class="form-group mt-15">
+                    <label for="memo">참고사항 (선택)</label>
+                    <input type="text" id="memo" name="memo" />
+                </div>
+                <div class="form-notice mt-15">
+                    <ul>
+                        <li><span>※</span>
+                            <p>'<span class="required">*</span>'로 표시된 항목은 필수입력 항목입니다.</p>
+                        </li>
+                        <li><span>※</span>
+                            <p>상담 운영시간: 평일 09:30 ~ 17:30<br>(점심 12:30 ~ 13:30 / 주말·공휴일 휴무)</p>
+                        </li>
+                        <li><span>※</span>
+                            <p>입력한 정보는 상담 이외의 목적으로 사용되지 않습니다.</p>
+                        </li>
+                        <li><span>※</span>
+                            <p>신청 완료 후, 담당자가 순차적으로 연락을 드립니다.</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="agree-box mt-15">
+                    <label><input type="radio" name="agree" value="agree" disabled> 개인정보 수집 · 이용 동의 (필수)</label>
+                    <button type="button" class="agree-link" data-modal-target="agreeModal">[전문보기]</button>
+                </div>
+                <button type="submit" class="submit-btn mt-15" disabled>상담신청</button>
+            </form>
+        </section>
+        <div class="scroll-down"></div>
+    </main>
+    <footer class="footer">
+        <div class="footer-text">
+            <img src="./images/logo_footer.png" alt="logo">
+            <div class="mt-4">
+                The-K 예다함(주)<br>
+                서울시 마포구 마포대로 86 14층(도화동, 창강빌딩)<br>
+                예다함 고객센터 <a href="tel:1566-6644">1566-6644</a>
+            </div>
+        </div>
+        <div>
+            <img src="./images/ccm.png" alt="ccm">
+        </div>
+    </footer>
+    <div>
+        <button id="toTopBtn" class="to-top">
+            <div class="to-top-inner">
+                <img src="./images/arrow_top.png"> TOP
+            </div>
+        </button>
+    </div>
+
+
+    <!-- 개인정보 수집 · 이용 동의 팝업 -->
+
+    <div class="agree-modal" id="agreeModal" style="display: none;">
+        <div class="agree-modal-content">
+            <h2 class="agree-modal-title">개인정보 수집 · 이용 동의 안내</h2>
+            <p class="agree-modal-desc mt-30">상담 신청을 위해 아래와 같이 개인정보를 수집·이용합니다.<br>내용을 확인하신 후 동의해 주세요.</p>
+            <hr class="mt-30 mb-30">
+            <div class="agree-modal-section">
+                <strong>[수집 및 이용 항목]</strong>
+                <p>· 성명, 휴대전화번호, 상담희망시간, 상담 추천인과의 관계</p>
+            </div>
+            <div class="agree-modal-section">
+                <strong>[수집 · 이용 목적]</strong>
+                <p>· 상조 서비스 가입의사 확인 및 상담 안내</p>
+            </div>
+            <div class="agree-modal-section">
+                <strong>[보유 및 이용 기간]</strong>
+                <p>· 미가입 시 : 상담 신청일로부터 1개월<br>· 가입 시 : 개인정보처리방침에 명시된 기간</p>
+            </div>
+            <hr style="border-color:#ddd;">
+            <div class="agree-modal-section mt-15 mb-15">
+                <strong>[개인정보 처리 위탁 안내]</strong>
+                <p>· 위탁업체 : (주)유베이스<br>· 위탁업무 : 상담 안내<br>- 동의를 거부할 수 있으나, 거부 시 상담이 제한될 수 있습니다.</p>
+            </div>
+            <hr style="border-color:#ddd;">
+            <div class="agree-modal-bottom mt-15">
+                ※ 상담 신청을 위해 개인정보 수집·이용 및 제공 동의가 필요합니다.
+            </div>
+
+        </div>
+        <div class="agree-modal-actions">
+            <button type="button" class="btn agree-modal-confirm">동의하고 계속</button>
+            <button type="button" class="btn agree-modal-close">닫기</button>
+        </div>
+    </div>
+
+    <script src="./js/scripts.js"></script>
+</body>
+
+</html>
