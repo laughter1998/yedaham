@@ -1,25 +1,12 @@
 // 상단 버튼 클릭 이벤트
 const toTopBtn = document.getElementById("toTopBtn");
-const footer = document.querySelector("footer");
 
 if (toTopBtn) {
     window.addEventListener("scroll", () => {
         // 1. 버튼 보이기/숨기기
         toTopBtn.style.display = window.scrollY > 100 ? "block" : "none";
 
-        // 2. 푸터와 겹치면 버튼을 위로 이동
-        const footerRect = footer?.getBoundingClientRect();
-        const windowHeight = window.innerHeight;
 
-        if (footerRect && footerRect.top < windowHeight) {
-            // footer가 화면에 들어온 경우
-            const overlap = windowHeight - footerRect.top;
-            const bottomValue = Math.min(160, 20 + overlap); // 최대 160px
-            toTopBtn.style.bottom = `${bottomValue}px`;
-        } else {
-            // footer가 아직 아래에 있는 경우
-            toTopBtn.style.bottom = "20px";
-        }
     });
 
     // 3. 스크롤 맨 위로 이동
@@ -30,26 +17,55 @@ if (toTopBtn) {
 
 const moreBtn = document.querySelector('.more-btn');
 const moreArrow = moreBtn ? moreBtn.querySelector('img') : null;
-const consultSection = document.querySelector('.consult-section');
 const infoSection = document.querySelector('.info-section');
 
-if (moreBtn && consultSection && infoSection && moreArrow) {
+function slideToggle(section, open) {
+    section.classList.remove('hide');
+    if (open) {
+        section.classList.add('open');
+        section.style.maxHeight = section.scrollHeight + 'px';
+        section.style.opacity = '1';
+    } else {
+        section.classList.remove('open');
+        section.style.maxHeight = '0px';
+        section.style.opacity = '0';
+        section.addEventListener('transitionend', function handler(e) {
+            if (!section.classList.contains('open')) {
+                section.classList.add('hide');
+            }
+            section.removeEventListener('transitionend', handler);
+        });
+    }
+}
+
+// 초기 상태에서 hide 클래스 제거
+infoSection.classList.remove('hide');
+
+// 초기 상태 설정
+if (infoSection.classList.contains('open')) {
+    infoSection.style.maxHeight = infoSection.scrollHeight + 'px';
+    infoSection.style.opacity = '1';
+}
+
+if (moreBtn && infoSection && moreArrow) {
+    // 초기 방향 설정
+    if (infoSection.classList.contains('open')) {
+        moreArrow.style.transform = 'rotate(0deg)';
+    } else {
+        moreArrow.style.transform = 'rotate(180deg)';
+    }
+    moreArrow.style.transition = 'transform 0.2s';
+
     moreBtn.addEventListener('click', function () {
-        const isOpen = consultSection.classList.contains('open');
+        const isOpen = infoSection.classList.contains('open');
+        slideToggle(infoSection, !isOpen);
+        // 화살표 방향 토글
         if (isOpen) {
-            consultSection.classList.remove('open');
-            infoSection.classList.add('open');
-            moreArrow.style.transform = 'rotate(0deg)';
-        } else {
-            consultSection.classList.add('open');
-            infoSection.classList.remove('open');
             moreArrow.style.transform = 'rotate(180deg)';
+        } else {
+            moreArrow.style.transform = 'rotate(0deg)';
         }
     });
-    // 초기 상태 설정
-    consultSection.classList.remove('open');
-    infoSection.classList.add('open');
-    moreArrow.style.transition = 'transform 0.2s';
 }
 
 // 개인정보 동의 모달 관련
@@ -143,4 +159,53 @@ if (agree1 && agree2 && agreeAll && nextBtn) {
     });
     // 초기 상태 동기화
     syncAgreeCheckboxes();
+}
+
+// 이메일 아이콘 클릭 시 data-email 값 복사
+const copyEmailBtn = document.getElementById('copyEmailBtn');
+if (copyEmailBtn) {
+    copyEmailBtn.addEventListener('click', function () {
+        const email = copyEmailBtn.getAttribute('data-email');
+        if (email) {
+            navigator.clipboard.writeText(email).then(function () {
+                alert("이메일 주소가 복사되었습니다: " + email);
+            }, function (err) {
+                alert("복사에 실패했습니다. 다시 시도해주세요.");
+            });
+        } else {
+            alert("이메일 주소가 없습니다.");
+        }
+    });
+}
+
+// 탭 기능 구현
+const tabWrap = document.querySelector('.tab-wrap');
+const tabBtns = tabWrap ? tabWrap.querySelectorAll('.tab') : [];
+const tabContents = document.querySelectorAll('.tab-content');
+
+if (tabWrap && tabBtns.length && tabContents.length) {
+    tabBtns.forEach((btn, idx) => {
+        btn.addEventListener('click', function () {
+            // 모든 버튼에서 active 제거
+            tabBtns.forEach(b => b.classList.remove('active'));
+            // 클릭한 버튼에 active 추가
+            btn.classList.add('active');
+            // 모든 탭 콘텐츠 숨김
+            tabContents.forEach((content, cidx) => {
+                if (cidx === idx) {
+                    content.style.display = '';
+                } else {
+                    content.style.display = 'none';
+                }
+            });
+        });
+    });
+    // 초기 상태: 첫 번째 탭만 보이게
+    tabContents.forEach((content, cidx) => {
+        if (cidx === 0) {
+            content.style.display = '';
+        } else {
+            content.style.display = 'none';
+        }
+    });
 }

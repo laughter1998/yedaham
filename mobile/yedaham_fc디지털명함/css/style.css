@@ -51,7 +51,7 @@ hr {
 
 main {
     flex: 1 0 auto;
-    padding: 20px;
+    padding: 10px;
 
 }
 
@@ -59,7 +59,7 @@ header {
     display: block;
     align-items: center;
     justify-content: space-between;
-    padding: 10px;
+    padding: 10px 20px;
 }
 
 
@@ -72,20 +72,20 @@ header {
     align-items: center;
     justify-content: space-between;
     border: 1px solid #7798ff;
-    border-radius: 5px;
-    padding: 15px;
+    border-radius: 10px;
+    padding: 16px;
     color: #333;
 }
 
 .profile-info .name {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: 800;
 }
 
 .role-company {
     display: flex;
     align-items: center;
-    font-size: 0.875rem;
+    font-size: 1rem;
     font-weight: 700;
     line-height: 1;
 }
@@ -114,21 +114,21 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-radius: 5px;
-    padding: 15px;
+    border-radius: 10px;
+    padding: 16px;
     color: #fff;
     background-image: linear-gradient(to right, #547fff, #7698ff);
 
 }
 
 .info-box .label {
-    font-size: 0.625rem;
+    font-size: 0.875rem;
     font-weight: 700;
 
 }
 
 .info-box .value {
-    font-size: 0.825rem;
+    font-size: 1rem;
     font-weight: 800;
     margin-top: 8px;
 }
@@ -137,69 +137,69 @@ header {
     line-height: 1.5;
 }
 
-.profile-notice {
-    color: #666;
-    font-size: 0.75rem;
-}
 
-.consult-section,
+
+
 .info-section {
     overflow: hidden;
     max-height: 0;
     opacity: 0;
-    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s;
-    will-change: max-height, opacity;
+    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s;
 }
 
 .info-section.open {
-    max-height: 500px;
-    opacity: 1;
-}
-
-.consult-section.open {
     max-height: 1500px;
+    /* 충분히 큰 값 */
     opacity: 1;
 }
 
 
+.info-section.hide {
+    display: none !important;
+}
+
+.hidden {
+    display: none !important;
+}
 
 
 .tab-wrap {
     display: flex;
-    gap: 4px;
+    gap: 8px;
 }
 
 .tab {
     flex: 1;
-    padding: 12px 0;
+    padding: 16px 0;
     border: none;
     background: #fff;
     color: #333;
-    border-radius: 5px;
-    border: 1px solid #dbe2f2;
+    border-radius: 10px;
+    border: 1px solid #666;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 1.25rem;
     font-weight: 700;
     line-height: 1;
     text-align: center;
 }
 
 .tab.active {
+    border: 1px solid #2758eb;
     background-color: #2758eb;
     color: #fff;
 }
 
 .auth-box {
     background-color: rgba(119, 152, 255, 0.1);
-    border-radius: 15px;
-    padding: 25px 15px 15px 15px;
+    border-radius: 16px;
+    padding: 30px 10px 10px 10px;
 
 }
 
 .auth-title {
     color: #2758EB;
     text-align: center;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: 800;
     line-height: 1;
 }
@@ -207,13 +207,13 @@ header {
 .auth-desc {
     color: #666;
     text-align: center;
-    font-size: 0.875rem;
+    font-size: 1rem;
     line-height: 1.5;
 }
 
 .auth-methods {
     display: flex;
-    gap: 5px;
+    gap: 10px;
 }
 
 .auth-methods a {
@@ -221,27 +221,34 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 15px;
-    border: solid 1px rgba(119, 152, 255, 0.5);
-    padding: 20px 0;
-    background-color: #fff;
-    font-size: 13px;
+    border-radius: 30px;
+    border: 2px solid rgba(119, 152, 255, 0.50);
+    background-color: #FFF;
+    padding: 40px 8px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 700;
     line-height: 1.2;
     color: #333;
     cursor: pointer;
-    gap: 10px;
+    gap: 20px;
 }
 
 
 .auth-notice {
     background: #fff;
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 10px;
+
 }
 
 .auth-notice-title {
+    border-radius: 4px;
+    background: rgba(119, 152, 255, 0.05);
+    padding: 14px 10px;
+
     text-align: center;
-    font-size: 13px;
+    font-size: 1rem;
     line-height: 1;
     font-weight: 700;
     color: #333;
@@ -251,7 +258,7 @@ header {
     display: flex;
     align-items: flex-start;
     gap: 4px;
-    font-size: 11px;
+    font-size: 0.875rem;
     line-height: 1.5;
     color: #666;
 
@@ -262,7 +269,7 @@ header {
 .consult-notice {
     padding: 10px;
     background-color: #f1f1f1;
-    font-size: 13px;
+    font-size: 1rem;
     line-height: 1.5;
     color: #666;
 }
@@ -270,11 +277,11 @@ header {
 .form-group {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 8px;
 }
 
 label {
-    font-size: 13px;
+    font-size: 1rem;
     line-height: 1;
     font-weight: 700;
     color: #666;
@@ -282,9 +289,9 @@ label {
 
 input,
 select {
-    padding: 4px 10px;
-    border-radius: 5px;
-    box-shadow: inset 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+    padding: 8px 12px;
+    border-radius: 6px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.10) inset;
     border: solid 1px #aaa;
     outline: none;
     font-size: 1rem;
@@ -297,6 +304,8 @@ select:focus {
     border-color: #547fff;
     box-shadow: 0 0 0 2px rgba(84, 127, 255, 0.2);
 }
+
+
 
 input::placeholder {
     color: #ccc;
@@ -312,7 +321,7 @@ input:read-only {
 }
 
 select {
-    height: 34px;
+    height: 42px;
 }
 
 .required {
@@ -322,7 +331,7 @@ select {
 }
 
 .form-notice {
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 10px;
     border: solid 1px #ddd;
 
@@ -332,9 +341,10 @@ select {
     display: flex;
     align-items: flex-start;
     gap: 4px;
-    font-size: 11px;
+    font-size: 0.875rem;
     color: #666;
     line-height: 1.5;
+    letter-spacing: -0.28px;
 }
 
 .form-notice li span {
@@ -349,9 +359,9 @@ select {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px 10px;
-    font-size: 13px;
-    border-radius: 5px;
+    padding: 16px 10px;
+    font-size: 1rem;
+    border-radius: 10px;
     border: 1px solid #AAA;
 
 }
@@ -360,6 +370,13 @@ select {
     display: flex;
     align-items: center;
     gap: 4px;
+    color: #555;
+    font-weight: 700;
+}
+
+.agree-box label input {
+    width: 20px;
+    height: 20px;
 }
 
 .agree-box label:has(input[type="radio"]:disabled) {
@@ -369,6 +386,7 @@ select {
 
 .agree-link {
     color: #1851FF;
+    font-size: 1rem;
 }
 
 .agree-title,
@@ -381,7 +399,7 @@ select {
 
 .agree-title h6 {
     color: #333;
-    font-size: 0.8125rem;
+    font-size: 1rem;
     font-weight: 800;
     line-height: 1;
 }
@@ -391,7 +409,7 @@ select {
     align-items: center;
     gap: 4px;
     color: #555;
-    font-size: 0.8125rem;
+    font-size: 1rem;
     font-weight: 700;
     line-height: 1;
 }
@@ -401,14 +419,14 @@ select {
     align-items: center;
     gap: 4px;
     color: #555;
-    font-size: 0.8125rem;
+    font-size: 1rem;
     font-weight: 700;
     line-height: 1;
 }
 
 input[type="checkbox"] {
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
 
 
 }
@@ -418,10 +436,10 @@ input[type="checkbox"] {
     background: #1851FF;
     color: #fff;
     border: none;
-    border-radius: 8px;
-    padding: 10px 0;
-    font-size: 16px;
-    margin-top: 10px;
+    border-radius: 10px;
+    padding: 14px 0;
+    font-size: 1.25rem;
+
     cursor: pointer;
 }
 
@@ -444,6 +462,15 @@ input[type="checkbox"] {
 
 }
 
+.arrow-up {
+    transform: rotate(0deg);
+    transition: transform 0.2s;
+}
+
+.arrow-down {
+    transform: rotate(180deg);
+    transition: transform 0.2s;
+}
 
 /* 카카오 인증 */
 .kakao-auth-container {
@@ -457,21 +484,20 @@ input[type="checkbox"] {
 
 section.kakao-auth-section {
     flex: 1 0 auto;
-    padding: 0 15px 15px 15px;
-    border-radius: 15px;
-    border: solid 1px rgba(119, 152, 255, 0.5);
+    padding: 80px 20px 20px 20px;
+    border-radius: 10px;
+    border: 2px solid rgba(119, 152, 255, 0.50);
 }
 
 section.kakao-auth-section .kakao-logo {
     display: flex;
     justify-content: center;
-    margin-top: 80px;
 }
 
 section.kakao-auth-section h5 {
     color: #333;
     text-align: center;
-    font-size: 1.25rem;
+    font-size: 1.75rem;
     font-weight: 800;
     line-height: 1;
 }
@@ -479,7 +505,7 @@ section.kakao-auth-section h5 {
 section.kakao-auth-section .kakao-desc {
     color: #333;
     text-align: center;
-    font-size: 0.8125rem;
+    font-size: 1rem;
     line-height: 1.5
 }
 
@@ -488,7 +514,7 @@ section.kakao-auth-section .kakao-desc {
 .kakao-footer-btns {
     flex-shrink: 0;
     display: flex;
-    gap: 4px;
+    gap: 8px;
 }
 
 /* 혜택안내 */
@@ -523,15 +549,15 @@ section.kakao-auth-section .kakao-desc {
 .benefit-main-title {
     color: #333;
     text-align: center;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: 800;
-    line-height: 1;
+    line-height: 1.5;
 }
 
 .benefit-desc {
     color: #333;
     text-align: center;
-    font-size: 13px;
+    font-size: 1rem;
     font-weight: 700;
     line-height: 1.5;
 }
@@ -541,7 +567,7 @@ section.kakao-auth-section .kakao-desc {
 .benefit-table-title {
     color: #666;
     text-align: center;
-    font-size: 13px;
+    font-size: 1rem;
     font-weight: 700;
     line-height: 1;
 }
@@ -553,12 +579,12 @@ section.kakao-auth-section .kakao-desc {
 .benefit-table {
     width: 100%;
     border-collapse: collapse;
-    font-size: 11px;
+    font-size: 0.8125rem;
 }
 
 .benefit-table {
     border-top: 1px solid #7798FF;
-    border-bottom: 1px solid #7798FF;
+    border-bottom: 2px solid #7798FF;
 }
 
 .benefit-table th,
@@ -588,12 +614,12 @@ section.kakao-auth-section .kakao-desc {
 .btn-benefit {
     display: block;
     background: #2758EB;
-    border-radius: 5px;
+    border-radius: 10px;
     color: #fff;
-    padding: 7px 0;
+    padding: 14px 0;
     color: #FFF;
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.25rem;
     font-weight: 700;
 }
 
@@ -601,21 +627,21 @@ section.kakao-auth-section .kakao-desc {
     display: flex;
     gap: 4px;
     color: #666;
-    font-size: 11px;
+    font-size: 0.875rem;
     line-height: 1.5;
 }
 
 
 
 .why-box {
-    padding: 20px;
-    background-color: rgba(118, 152, 255, 0.1);
+    padding: 40px 10px;
+    background-color: rgba(118, 152, 255, 0.10);
 }
 
 .why-title {
     color: #666;
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: 700;
     line-height: 1;
 }
@@ -623,23 +649,23 @@ section.kakao-auth-section .kakao-desc {
 .why-badges {
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    margin-bottom: 10px;
+    gap: 36px;
 }
 
 .why-badge {
     display: flex;
-    padding: 20px 0px;
+    padding: 30px 0px;
     flex-direction: column;
     align-items: center;
-    gap: 13px;
-    border-radius: 15px;
+    gap: 18px;
+    border-radius: 20px;
     border: 1px solid #D9D9D9;
     background: #FFF;
     color: #333;
-    font-size: 20px;
+    font-size: 1.5rem;
     font-weight: 800;
     line-height: 1;
+    letter-spacing: -2px;
 }
 
 .why-badge span {
@@ -662,43 +688,72 @@ section.kakao-auth-section .kakao-desc {
     background-image: linear-gradient(to bottom, rgba(4, 228, 195, 0.2), rgba(4, 228, 195, 0.2));
 }
 
-.why-desc {
-    font-size: 0.95rem;
+.system-box {
+    padding: 40px 10px;
+}
+
+.system-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-size: 1.5rem;
     color: #333;
-    margin-bottom: 10px;
     font-weight: 700;
 }
 
-.why-list {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 10px 0;
+ul.system-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 30px;
+    border: 1px solid rgba(156, 35, 248, 0.15);
+    background: rgba(156, 35, 248, 0.02);
+    padding: 30px 20px;
 }
 
-.why-list li {
-    margin-bottom: 10px;
-    text-align: left;
+.system-list li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
 
-.why-list-title {
-    font-weight: 700;
-    color: #1851FF;
-    font-size: 0.95rem;
-    margin-right: 4px;
+.system-list-title {
+    font-weight: 800;
+    color: #9C23F8;
+    font-size: 1rem;
+    line-height: 1;
 }
 
-.why-list-desc {
+.system-list-desc {
     color: #666;
-    font-size: 0.92rem;
-    margin-left: 2px;
-    display: block;
+    font-size: 0.875rem;
+    line-height: 1.5;
+
 }
 
-.why-footer {
-    font-size: 0.98rem;
-    color: #1851FF;
+section.membership-box {
+    padding: 0px 10px 20px 10px;
+}
+
+.membership-title {
+    font-size: 1.5rem;
+    color: #2758EB;
+    font-weight: 800;
+    line-height: 1.5;
+    text-align: center;
+
+}
+
+.membership-desc {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.5;
     font-weight: 700;
-    margin: 12px 0 10px 0;
+    text-align: center;
 }
 
 .btn-benefit.main {
@@ -779,13 +834,15 @@ footer .footer-text>div>a {
 
 .agree-modal-content {
     flex: 1 0 auto;
-    border-radius: 15px;
-    padding: 50px 15px 15px 15px;
-    border: 1px solid rgba(119, 152, 255, 0.50);
+    border-radius: 10px;
+    padding: 40px 20px 30px 20px;
+    border: 2px solid rgba(119, 152, 255, 0.50);
+    height: calc(100dvh - 80px);
+    overflow-y: auto;
 }
 
 .agree-modal-title {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: 800;
     line-height: 1;
     color: #333;
@@ -796,18 +853,18 @@ footer .footer-text>div>a {
 .agree-modal-desc {
     color: #333;
     text-align: center;
-    font-size: 11px;
+    font-size: 1rem;
     line-height: 1.5;
 }
 
 .agree-modal-section {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .agree-modal-section strong {
     display: block;
     color: #333;
-    font-size: 13px;
+    font-size: 0.875rem;
     font-weight: 700;
     line-height: 1;
     margin-bottom: 8px;
@@ -815,15 +872,15 @@ footer .footer-text>div>a {
 
 .agree-modal-section p {
     color: #666;
-    font-size: 11px;
+    font-size: 0.875rem;
     line-height: 1.3;
 }
 
 .agree-modal-bottom {
     color: #666;
-    font-size: 11px;
+    font-size: 0.875rem;
     line-height: 1.5;
-    letter-spacing: -0.44px;
+    letter-spacing: -0.28px;
 }
 
 .agree-modal-actions {
@@ -839,10 +896,10 @@ footer .footer-text>div>a {
 
 .btn {
     flex: 1;
-    padding: 12px 0;
-    border-radius: 5px;
+    padding: 14px 0;
+    border-radius: 10px;
     border: none;
-    font-size: 1rem;
+    font-size: 1.25rem;
     line-height: 1;
     font-weight: 700;
     text-align: center;
@@ -880,17 +937,18 @@ footer .footer-text>div>a {
 
 .kakao-guide-box {
     background: #F8F8F8;
-    border-radius: 5px;
+    border-radius: 10px;
     padding: 10px;
 }
 
 .kakao-guide-title {
-    padding: 7px;
+    padding: 14px;
     color: #333;
     text-align: center;
-    font-size: 13px;
+    font-size: 1rem;
     font-weight: 700;
     line-height: 1;
+    border-radius: 4px;
     background-color: #fff;
 
 }
@@ -899,15 +957,13 @@ footer .footer-text>div>a {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    font-size: 0.95rem;
-    color: #666;
 }
 
 .kakao-guide-list li {
     display: flex;
     gap: 4px;
     color: #666;
-    font-size: 11px;
+    font-size: 0.9375rem;
     line-height: 1.5;
 }
 
@@ -1060,6 +1116,10 @@ footer .footer-text>div>a {
 
 .mt-35 {
     margin-top: 35px;
+}
+
+.mt-40 {
+    margin-top: 40px;
 }
 
 .mt-50 {
