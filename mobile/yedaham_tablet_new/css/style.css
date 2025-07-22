@@ -13,7 +13,7 @@ html {
     width: 100%;
     height: 100%;
 }
-@media only screen and (min-width: 1281px) {
+/* @media only screen and (min-width: 1281px) {
     body {
         width: 1920px;
     }
@@ -22,7 +22,7 @@ html {
     body {
         width: 1280px;
     }
-}
+} */
 /* 
 300 font-family: 'NanumSquareNeoLight';
 400 font-family: 'NanumSquareNeo';
@@ -729,6 +729,18 @@ nav.sub-navi a.current {
         text-indent: -9999px;
     }
 
+    .btn-prd-select {
+        width: 100%;
+        height: 56px;
+        border-radius: 12px;
+        background: #D9D9D9;
+        color: #333;
+        transition: background-color 0.3s ease; 
+    }
+    .btn-prd-select.selected {
+        background-color: rgba(0, 133, 255, 0.3);
+    }
+
     /***** badge *****/
     .badge {
         min-width:46px;
@@ -853,6 +865,11 @@ nav.sub-navi a.current {
         top: 0;
         z-index: 11;
     }
+    .list-table thead.no-sticky {
+        position: static;
+        top: auto;
+        z-index: auto;
+    }
     .list-table th {
         position: relative;
         padding: 3px 0 4px 0;
@@ -897,6 +914,16 @@ nav.sub-navi a.current {
         vertical-align: middle;
 
     }
+
+    .list-table tfoot tr td {
+        padding: 16px 0;
+        border-top: 1px solid rgba(153, 153, 153, 0.60);
+        border-bottom: 1px solid rgba(153, 153, 153, 0.60);
+        background: rgba(221, 221, 221, 0.80);
+        color: #666;
+        text-align: center;
+    }
+
     .list-table.list-table-small tbody tr td{
         padding: 10px 8px;
         font-size: 24px;
@@ -931,6 +958,84 @@ nav.sub-navi a.current {
     }
     .list-table.list-table-small.py-lg thead.head-lg tr:first-child th {
         border-bottom: 1px solid transparent;
+    }
+
+     /* 사용물품검수 table */
+     .used-item-inspection-table {
+        border-collapse: separate;
+        border-spacing: 0;
+    }
+    .used-item-inspection-table thead {
+        position: sticky;
+        top: 0;
+        z-index: 11;
+    }
+    
+    .used-item-inspection-table th {
+        
+        padding: 0.5rem 0rem;
+        text-align: center;
+        font-size: 1rem;
+        line-height: 1;
+        border: solid 1px #999;
+        background-color: rgba(221, 221, 221);
+        color:#333333;
+        vertical-align: middle;
+
+    }
+  
+ 
+    .used-item-inspection-table tbody tr td {
+        position: relative;
+        padding: 0.5rem 0.25rem;
+        text-align: center;
+        font-size: 1.5rem;
+        line-height: 1;
+        color: #666;
+        vertical-align: middle;
+        border: 1px solid #d9d9d9;
+
+    }
+    .wrap-text {
+    white-space: normal !important;
+    word-break: break-word;
+    }
+    .used-item-inspection-table thead tr:first-child th {
+        border-top: none;
+    }
+    .used-item-inspection-table th,
+    .used-item-inspection-table tbody tr td:first-child ,
+    .used-item-inspection-table tbody tr td:nth-last-child(1),
+    .used-item-inspection-table tbody tr td:nth-last-child(2),
+    .used-item-inspection-table tbody tr td:nth-last-child(3),
+    .used-item-inspection-table tbody tr td:nth-last-child(4),
+    .used-item-inspection-table tbody tr td:nth-last-child(5) {
+    
+        white-space: nowrap;
+    }
+    
+    .used-item-inspection-table tbody tr td:nth-last-child(4) {
+        font-family: 'NanumSquareNeoExtraBold';
+    }
+    .used-item-inspection-table tbody tr td:nth-last-child(3) {
+        border-left: 2px solid #666;
+    }
+
+    .used-item-inspection-table tbody tr:has(td:nth-child(9)) td {
+        border-top: 2px solid #666;
+    }
+    .used-item-inspection-table tbody tr:has(td:nth-child(9)):first-of-type td {
+        border-top: none ;
+    }
+    .used-item-inspection-table tbody tr td:nth-last-child(7) {
+    
+        text-align: left;
+    }
+    .used-item-inspection-table tbody tr.cell-red td{
+        background-color: rgba(224, 108, 0, 0.1);
+    }
+    .used-item-inspection-table tbody tr.cell-green td{
+        background-color: rgba(69, 184, 51, 0.10);
     }
 
     /* 상품정보 서비스 품목 table */
@@ -1199,10 +1304,13 @@ nav.sub-navi a.current {
         font-family: 'NanumSquareNeoExtraBold';
         color: #000;
     }
-    .prd-summary-table tr:first-child th,
-    .prd-summary-table tr:first-child td {
+  
+    .prd-summary-table tr:nth-child(odd) th,
+    .prd-summary-table tr:nth-child(odd) td {
         background-color: rgba(0, 133, 255, 0.05);
     }
+
+
     .prd-summary-table tr:nth-child(2) th,
     .prd-summary-table tr:nth-child(2) td {
         background-color: rgba(0, 133, 255, 0.15);
@@ -1384,6 +1492,28 @@ nav.sub-navi a.current {
         color: #666;
         background-color: #fff;
     }
+
+    /* large checkbox*/
+     input[type="checkbox"].checkbox-large {
+        width: 41px;
+        height: 40px;
+        background-image: url('../images/bg_checkbox_large.png');
+        transition:all 0.3s ease;
+        border-radius: 6px;
+        cursor: pointer;
+        user-select: none;
+        appearance: none;
+        vertical-align: middle; 
+    }
+
+
+     input[type="checkbox"].checkbox-large:checked  {
+        background-image: url('../images/bg_checkbox_checked_large.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
 
 
     /**** radio button ****/
