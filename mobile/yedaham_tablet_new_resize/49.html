@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <title>의전진행관리</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./js/tailwind-config.js"></script>
+    <link rel="stylesheet" href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-neo.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+
+<button type="button" onclick="showLargeDialog()"         style="position:fixed;left:0;top:0px;height:150px;width:500px;background-color:#fff;z-index:111;border:1px solid #000;">의전시작문자발송</button>
+
+    <!-- 상단 고정 영역 -->
+    <header>
+        <div class="header-logo">
+            <img src="./images/header-logo.png" alt="예다함">
+            의전진행관리
+        </div>
+        <div class="header-title">의전정보</div>
+        <div class="header-menu">
+            <!-- <a href="#" class="home">조회</a> -->
+            <nav>
+                <a href="#">관리메인</a>
+                <!--
+                <a href="#">업무관리</a>
+                <a href="#">투입관리</a>
+                <a href="#">철수관리</a>
+                -->
+            </nav>
+            <a href="#" class="logout">로그아웃</a>
+        </div>
+    </header>
+
+
+    <main>
+        <section class="p-2 text-right">
+            <button type="button" class="w-64 border-2 border-999 rounded-lg h-14 bg-white text-333">상세</button>
+            <button type="button" class="w-64 border-2 border-999 rounded-lg h-14 bg-white text-333">의전상품안내</button>
+            <button type="button" class="w-64 rounded-lg h-14 bg-blueMain text-white">저장</button>
+        </section>
+
+        <section>
+            <nav class="sub-navi">
+                <a href="#" class="w-[205px] grow  ">고인/상주/장지정보</a>
+                <a href="#" class="w-[205px] ">장례일정</a>
+                <a href="#" class="w-[205px] ">진행사항</a>
+                <a href="#" class="w-[205px] current">인력정보</a>
+                <a href="#" class="w-[205px]">의전물품관리</a>
+                <a href="#" class="w-[205px]">의전결산정보</a>
+            </nav>
+            <h5 class="py-2 px-3 bg-f5 text-333 leading-6">&#8231;입관현황</h5>
+
+            <table class="view-table-style2 table-fixed border-t-2 border-666">
+                <colgroup>
+                    <col class="w-[1030px]" />
+                    <col class="w-[250px]" />
+                </colgroup>
+                <tr>
+                    <td>
+                        <div class="flex gap-1">
+                            <label class="radio-button radio-style2" for="a1">
+                                <input type="radio" name="ae" id="a1" checked="checked">
+                                <span>소렴</span>
+                            </label>
+                            <label class="radio-button radio-style2" for="a2">
+                                <input type="radio" name="ae" id="a2">
+                                <span>대렴</span>
+                            </label>
+                            <label class="radio-button radio-style2" for="a3">
+                                <input type="radio" name="ae" id="a3">
+                                <span>자체입관</span>
+                            </label>
+                            <label class="radio-button radio-style2" for="a4">
+                                <input type="radio" name="ae" id="a4">
+                                <span>미입관</span>
+                            </label>
+                        </div>
+                    </td>
+                    <td>
+                        <select class="form-select " ><!-- class="hidden" 추가-->
+                            <option value="">선택</option>
+
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="flex gap-1">
+                            <label class="radio-button radio-style2" for="b1">
+                                <input type="radio" name="be" id="b1" checked="checked">
+                                <span>전체참관</span>
+                            </label>
+                            <label class="radio-button radio-style2" for="b2">
+                                <input type="radio" name="be" id="b2">
+                                <span>소렴 후 참관</span>
+                            </label>
+                            <label class="radio-button radio-style2" for="b3">
+                                <input type="radio" name="be" id="b3">
+                                <span>입관꽃장식</span>
+                            </label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="flex gap-1"><!-- class="hidden" 추가-->
+                            <label class="radio-button radio-style2" for="c1">
+                                <input type="radio" name="ce" id="c1" checked="checked">
+                                <span>배송</span>
+                            </label>
+                            <label class="radio-button radio-style2" for="c2">
+                                <input type="radio" name="ce" id="c2">
+                                <span>구매</span>
+                            </label>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+            <h5 class="py-2 px-3 bg-f5 text-333 leading-6">&#8231;의례정보</h5>
+            <table class="view-table-style2 table-fixed border-t-2 border-666">
+                <colgroup>
+                    <col class="w-[180px]" />
+                    <col class="w-[460px]" />
+                    <col class="w-[180px]" />
+                    <col class="w-[280px]" />
+                    <col class="w-[180px]" />
+                </colgroup>
+                <tr>
+                    <td colspan="5">
+                       <div class="grid grid-cols-5 gap-1">
+                            <label class="checkbox-button checkbox-style2" for="d1">
+                                <input type="checkbox" name="de" id="d1" checked="checked">
+                                <span>초제</span>
+                            </label>
+                            <label class="checkbox-button checkbox-style2" for="d2">
+                                <input type="checkbox" name="de" id="d2">
+                                <span>성복제</span>
+                            </label>
+                            <label class="checkbox-button checkbox-style2" for="d3">
+                                <input type="checkbox" name="de" id="d3">
+                                <span>상식(저녁)</span>
+                            </label>
+                            <label class="checkbox-button checkbox-style2" for="d4">
+                                <input type="checkbox" name="de" id="d4">
+                                <span>상식(오전)</span>
+                            </label>
+                            <label class="checkbox-button checkbox-style2" for="d5">
+                                <input type="checkbox" name="de" id="d5">
+                                <span>중식</span>
+                            </label>
+                            <label class="checkbox-button checkbox-style2" for="d6">
+                                <input type="checkbox" name="de" id="d6">
+                                <span>발인제</span>
+                            </label>
+                            <label class="checkbox-button checkbox-style2" for="d7">
+                                <input type="checkbox" name="de" id="d7">
+                                <span>노제</span>
+                            </label>
+                            <label class="checkbox-button checkbox-style2" for="d8">
+                                <input type="checkbox" name="de" id="d8">
+                                <span>화구제</span>
+                            </label>
+                            <label class="checkbox-button checkbox-style2" for="d9">
+                                <input type="checkbox" name="de" id="d9">
+                                <span>산신제</span>
+                            </label>
+                            <label class="checkbox-button checkbox-style2" for="d10">
+                                <input type="checkbox" name="de" id="d10">
+                                <span>봉분(평토)제</span>
+                            </label>
+                            <label class="checkbox-button checkbox-style2" for="d11">
+                                <input type="checkbox" name="de" id="d11" checked="checked">
+                                <span>임종예배</span>
+                            </label>
+                            <label class="checkbox-button checkbox-style2" for="d12">
+                                <input type="checkbox" name="de" id="d12">
+                                <span>입관예배</span>
+                            </label>
+                            <label class="checkbox-button checkbox-style2" for="d13">
+                                <input type="checkbox" name="de" id="d13">
+                                <span>발인예배</span>
+                            </label>
+                            <label class="checkbox-button checkbox-style2" for="d14">
+                                <input type="checkbox" name="de" id="d14">
+                                <span>화장예배</span>
+                            </label>
+                            <label class="checkbox-button checkbox-style2" for="d15">
+                                <input type="checkbox" name="de" id="d15">
+                                <span>하관예배</span>
+                            </label>
+                            <label class="checkbox-button checkbox-style2" for="d16">
+                                <input type="checkbox" name="de" id="d16">
+                                <span>연도</span>
+                            </label>
+                            <label class="checkbox-button checkbox-style2" for="d17">
+                                <input type="checkbox" name="de" id="d17">
+                                <span>입관예절</span>
+                            </label>
+                            <label class="checkbox-button checkbox-style2" for="d18">
+                                <input type="checkbox" name="de" id="d18">
+                                <span>화장예절</span>
+                            </label>
+                            <label class="checkbox-button checkbox-style2" for="d19">
+                                <input type="checkbox" name="de" id="d19">
+                                <span>하관예절</span>
+                            </label>
+                            <label class="checkbox-button checkbox-style2" for="d20">
+                                <input type="checkbox" name="de" id="d20">
+                                <span>안치예절</span>
+                            </label>
+							 <label class="checkbox-button checkbox-style2" for="d21">
+                                <input type="checkbox" name="de" id="d21">
+                                <span>사도예절</span>
+                            </label>
+							<label class="checkbox-button checkbox-style2" for="d22">
+                                <input type="checkbox" name="de" id="d22">
+                                <span>장례미사</span>
+                            </label>
+							<label class="checkbox-button checkbox-style2" for="d23">
+                                <input type="checkbox" name="de" id="d23">
+                                <span>초우(반혼)제</span>
+                            </label>
+							<label class="checkbox-button checkbox-style2" for="d24">
+                                <input type="checkbox" name="de" id="d24">
+                                <span>탈상제</span>
+                            </label>
+							<label class="checkbox-button checkbox-style2" for="d25">
+                                <input type="checkbox" name="de" id="d25">
+                                <span>시다림</span>
+                            </label>
+							<label class="checkbox-button checkbox-style2" for="d26">
+                                <input type="checkbox" name="de" id="d26">
+                                <span>49재 엄수(사찰)</span>
+                            </label>
+							<label class="checkbox-button checkbox-style2" for="d27">
+                                <input type="checkbox" name="de" id="d27">
+                                <span>49재</span>
+                            </label>							
+							<label class="checkbox-button checkbox-style2" for="d28">
+                                <input type="checkbox" name="de" id="d28">
+                                <span>삼우제</span>
+                            </label>							
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>발인식 장소</th>
+                    <td>
+                        <select class="form-select" disabled>
+                            <option value="">선택</option>
+                            <option value="">빈소</option>
+                            <option value="">영결식장</option>
+                            <option value="">발인장</option>
+                            <option value="">안치실</option>
+
+                        </select>
+                    </td>
+                    <th>장지답사</th>
+                    <td>
+                        <div class="flex gap-1">
+                            <label class="radio-button radio-style2" for="e1">
+                                <input type="radio" name="ee" id="e1" checked="checked">
+                                <span>Y</span>
+                            </label>
+                            <label class="radio-button radio-style2" for="e2">
+                                <input type="radio" name="ee" id="e2">
+                                <span>N</span>
+                            </label>
+                        </div>
+                    </td>
+                    <td><input type="text" class="form-control" value="" ><!-- class="hidden" 추가--></td>
+                </tr>
+            </table>
+
+            <h5 class="py-2 px-3 bg-f5 text-333 leading-6 flex justify-between items-center">
+                &#8231;장례식장 사용내역
+                <button type="button" class="border-2 border-blueMain text-blueMain rounded-lg h-12 px-6">추가</button>
+            </h5>
+            <table class="list-table list-table-small py-lg table-striped table-fixed border-t-2 border-666">
+                <colgroup>
+                    <col class="w-[180px]" />
+                    <col/>
+                    <col/>
+                    <col/>
+                    <col/>
+                    <col class="w-[90px]" />
+                </colgroup>
+
+                <thead>
+                <tr>
+                    <th>품목명</th>
+                    <th>업체명</th>
+                    <th>사업자번호</th>
+                    <th>정산비용(원)</th>
+                    <th>비고(사유)</th>
+                    <th>삭제</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                   <td>
+                       <select class="form-select ">
+                           <option value="" >선택</option>
+                           <option value="" selected>품목1</option>
+                           <option value="">품목2</option>
+                           <option value="">품목3</option>
+                       </select>
+                   </td>
+                   <td class="!text-wrap">예다함</td>
+                   <td>010-1111-1111</td>
+                   <td><input type="number" class="form-control"></td>
+                   <td><input type="text" class="form-control" ></td>
+                   <td><button type="button" class="h-12 w-[64px] border-2 border-ccc rounded-lg text-333">삭제</button></td>
+                </tr>
+                </tbody>
+            </table>
+
+            <h5 class="py-2 px-3 bg-f5 text-333 leading-6 flex justify-between items-center">
+                &#8231;외부업체 사용내역
+                <button type="button" class="border-2 border-blueMain text-blueMain rounded-lg h-12 px-6">추가</button>
+            </h5>
+            <table class="list-table list-table-small py-lg table-striped table-fixed border-t-2 border-666">
+                <colgroup>
+                    <col class="w-[180px]" />
+                    <col/>
+                    <col/>
+                    <col/>
+                    <col/>
+                    <col class="w-[90px]" />
+                </colgroup>
+
+                <thead>
+                <tr>
+                    <th>품목명</th>
+                    <th>업체명</th>
+                    <th>사업자번호</th>
+                    <th>정산비용(원)</th>
+                    <th>비고(사유)</th>
+                    <th>삭제</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                    <td>
+                        <select class="form-select ">
+                            <option value="">선택</option>
+                            <option value="" selected>품목1</option>
+                            <option value="">품목2</option>
+                            <option value="">품목3</option>
+                        </select>
+                    </td>
+                    <td>
+                        <div class="flex items-center gap-1">
+                            <span class="grow">업체업체</span>
+                            <button><img src="./images/btn_popup.png" alt=""> </button>
+                        </div>
+                    </td>
+                    <td>010-1111-1111</td>
+                    <td><input type="number" class="form-control"></td>
+                    <td><input type="text" class="form-control" ></td>
+                    <td><button type="button" class="h-12 w-[64px] border-2 border-ccc rounded-lg text-333">삭제</button></td>
+                </tr>
+                </tbody>
+            </table>
+            <h5 class="py-2 px-3 bg-f5 text-333 leading-6 flex justify-between items-center">
+                &#8231;주요품목 사용확인
+                <button type="button" class="border-2 border-blueMain text-blueMain rounded-lg h-12 px-6">사용확인서</button>
+            </h5>
+
+            <table class="list-table list-table-small py-lg table-striped table-fixed border-t-2 border-666">
+                <colgroup>
+                    <col/>
+                    <col/>
+                    <col/>
+                    <col/>
+                    <col class="w-[180px]" />
+                    <col class="w-[180px]" />
+                    <col/>
+                    <col/>
+                    <col class="w-[72px]" />
+                </colgroup>
+
+                <thead>
+                <tr>
+                    <th>품목명</th>
+                    <th>현황</th>
+                    <th>업체명</th>
+                    <th>할인기준</th>
+                    <th>정가액(원)</th>
+                    <th>할인금액(원)</th>
+                    <th>처리방법</th>
+                    <th>수령인(성명)</th>
+                    <th>초기화</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>장지안내</td>
+                        <td>
+                            <select class="form-select ">
+                                <option value="">미사용</option>
+                                <option value="">예다함</option>
+                            </select>
+                        </td>
+                        <td class="!text-wrap">업체명 업체명</td>
+                        <td class="!text-wrap">할인기준  </td>
+                        <td><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td>
+                            <select class="form-select ">
+                                <option value="">선택</option>
+                                <option value="">현장즉시할인</option>
+                                <option value="">회원전달</option>
+                                <option value="">지부장전달</option>
+                                <option value="">회사계좌입금</option>
+                                <option value="">회사계좌입금</option>
+                            </select>
+                        </td>
+                        <td><input type="number" class="form-control"></td>
+                        <td><button type="button" class="align-middle"><img src="./images/btn_reset.png" alt=""></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>장지안내</td>
+                        <td>
+                            <select class="form-select ">
+                                <option value="">미사용</option>
+                                <option value="">예다함</option>
+                            </select>
+                        </td>
+                        <td class="!text-wrap">업체명</td>
+                        <td class="!text-wrap">할인기준  </td>
+                        <td><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td>
+                            <select class="form-select ">
+                                <option value="">선택</option>
+                                <option value="">현장즉시할인</option>
+                                <option value="">회원전달</option>
+                                <option value="">지부장전달</option>
+                                <option value="">회사계좌입금</option>
+                                <option value="">회사계좌입금</option>
+                            </select>
+                        </td>
+                        <td><input type="number" class="form-control"></td>
+                        <td><button type="button" class="align-middle"><img src="./images/btn_reset.png" alt=""></button>
+                        </td>
+                    </tr><tr>
+                        <td>장지안내</td>
+                        <td>
+                            <select class="form-select ">
+                                <option value="">미사용</option>
+                                <option value="">예다함</option>
+                            </select>
+                        </td>
+                        <td class="!text-wrap">업체명</td>
+                        <td class="!text-wrap">할인기준  </td>
+                        <td><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td>
+                            <select class="form-select ">
+                                <option value="">선택</option>
+                                <option value="">현장즉시할인</option>
+                                <option value="">회원전달</option>
+                                <option value="">지부장전달</option>
+                                <option value="">회사계좌입금</option>
+                                <option value="">회사계좌입금</option>
+                            </select>
+                        </td>
+                        <td><input type="number" class="form-control"></td>
+                        <td><button type="button" class="align-middle"><img src="./images/btn_reset.png" alt=""></button>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+
+
+
+        </section>
+    </main>
+
+<dialog class="dialog-large ">
+    <div class="dialog-wrap">
+        <section class="flex justify-between items-center bg-blueOpa1 h-12 px-2">
+            <h5 class="text-32">의전시작문자발송</h5>
+            <button type="button" class="btn-modal-close " onclick="claseLargeDialog()">X</button>
+        </section>
+
+        <div class="overflow-y-auto h-calc-200">
+            <section >
+                <table class="view-table-style2 table-fixed">
+                    <colgroup>
+                        <col class="w-[180px]" />
+                        <col class="w-[140px]" />
+                        <col class="w-[180px]" />
+                        <col class="w-[140px]" />
+                        <col class="w-[180px]" />
+                        <col class="w-[140px]" />
+                        <col class="w-[180px]" />
+                        <col class="w-[140px]" />
+                    </colgroup>
+                    <tr>
+                        <th>의전번호</th>
+                        <td colspan="3">1079525</td>
+                        <th>고인성명</th>
+                        <td colspan="2">홍길동</td>
+                        <td class="border-l border-ccc" >남</td>
+                    </tr>
+                    <tr>
+                        <th>장례식장</th>
+                        <td colspan="2">중앙대병원장례식장</td>
+                        <td class=" border-l border-ccc">1호실</td>
+                        <th>주소</th>
+                        <td colspan="3">경기도</td>
+                    </tr>
+                    <tr>
+                        <th>입관일시</th>
+                        <td colspan="3">2023-02-15 12:40</td>
+                        <th>발인일시</th>
+                        <td colspan="3">2023-02-15 12:40</td>
+                    </tr>
+                    <tr>
+                        <th>화장장</th>
+                        <td colspan="2">이하늘화장</td>
+                        <td class="text-base border-l border-ccc">2023-02-15<br>12:40</td>
+                        <th>장지1</th>
+                        <td colspan="3">장지1</td>
+                    </tr>
+                    <tr>
+                        <th>본관</th>
+                        <td colspan="3">본관</td>
+                        <th>장지2</th>
+                        <td colspan="3">장지2</td>
+                    </tr>
+                    <tr>
+                        <th>종교</th>
+                        <td colspan="3">종교</td>
+                        <th>직분/세례명</th>
+                        <td colspan="3">직분/세례명</td>
+                    </tr>
+                    <tr>
+                        <th>리무진</th>
+                        <td colspan="3">미사용</td>
+                        <th>버스</th>
+                        <td colspan="3">사용</td>
+                    </tr>
+                    <tr>
+                        <th>상품명</th>
+                        <td colspan="3">상품명</td>
+                        <th>팀장1</th>
+                        <td colspan="3">팀장1</td>
+                    </tr>
+                     <tr>
+                        <th class="h-48">전달사항</th>
+                        <td colspan="7"></td>
+                    </tr>
+                </table>
+            </section>
+
+            <nav class="sub-navi mt-4 border-b border-ccc">
+                <a href="#" class="w-[300px]  current">이름별</a>
+                <a href="#" class="w-[300px] ">그룹별</a>
+            </nav>
+            <section class="filter-group">
+                <div class="filter-tables">
+                    <table class=" filter-table">
+                        <colgroup>
+                            <col class="w-1/2">
+                            <col class="w-1/2">
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <td>
+                                <div class="input-group ">
+                                    <label class="w-28">부서</label>
+                                    <select class="form-select flex-1" >
+                                        <option value="">선택</option>
+
+                                    </select>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="input-group ">
+                                    <label class="w-28">직급</label>
+                                    <select class="form-select flex-1" >
+                                        <option value="">선택</option>
+
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+
+                            <td>
+                                <div class="input-group ">
+                                    <label class="w-28">직군</label>
+                                    <select class="form-select 	flex-1" >
+                                        <option value="">선택</option>
+
+                                    </select>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="input-group ">
+                                    <label class="w-28">사원명</label>
+                                    <input type="text" class="form-control">
+                                </div>
+                            </td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="filter-button"><button type="button" class="btn btn-filter">조회하기 <span>(999)</span></button>
+                </div>
+            </section><!-- // class="filter-table-group" -->
+
+            <section class="flex gap-x-4 items-stretch">
+                <div>
+                    <table class="list-table list-table-small  table-striped table-fixed ">
+                        <colgroup>
+                            <col class="w-24"/>
+                            <col/>
+                            <col/>
+                            <col class="w-[150px]"/>
+                            <col/>
+                        </colgroup>
+
+                        <thead>
+                            <tr>
+                                <th class="flex  justify-center items-center h-14">
+                                    <div class="checkbox-normal ">
+                                        <input type="checkbox" id="chkAll" >
+                                        <label for="chkAll" >선택</label>
+                                    </div>
+                                </th>
+                                <th>사번</th>
+                                <th>이름</th>
+                                <th>연락처</th>
+                                <th>부서</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="checkbox-normal ">
+                                        <input type="checkbox" id="chk1">
+                                        <label for="chk1" class=" before:!mx-auto "></label>
+                                    </div>
+                                </td>
+                                <td class="!text-base">12121212</td>
+                                <td class="!text-base">김동석</td>
+                                <td class="!text-base">010-2222-3333</td>
+                                <td class="!text-base">영업부</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="checkbox-normal ">
+                                        <input type="checkbox" id="chk2">
+                                        <label for="chk2" class=" before:!mx-auto "></label>
+                                    </div>
+                                </td>
+                                <td class="!text-base">12121212</td>
+                                <td class="!text-base">김동석</td>
+                                <td class="!text-base">010-2222-3333</td>
+                                <td class="!text-base">영업부</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="checkbox-normal ">
+                                        <input type="checkbox" id="chk3">
+                                        <label for="chk3" class=" before:!mx-auto "></label>
+                                    </div>
+                                </td>
+                                <td class="!text-base">12121212</td>
+                                <td class="!text-base">김동석</td>
+                                <td class="!text-base">010-2222-3333</td>
+                                <td class="!text-base">영업부</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="checkbox-normal ">
+                                        <input type="checkbox" id="chk4">
+                                        <label for="chk4" class=" before:!mx-auto "></label>
+                                    </div>
+                                </td>
+                                <td class="!text-base">12121212</td>
+                                <td class="!text-base">김동석</td>
+                                <td class="!text-base">010-2222-3333</td>
+                                <td class="!text-base">영업부</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="checkbox-normal ">
+                                        <input type="checkbox" id="chk5">
+                                        <label for="chk5" class=" before:!mx-auto "></label>
+                                    </div>
+                                </td>
+                                <td class="!text-base">12121212</td>
+                                <td class="!text-base">김동석</td>
+                                <td class="!text-base">010-2222-3333</td>
+                                <td class="!text-base">영업부</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="checkbox-normal ">
+                                        <input type="checkbox" id="chk6">
+                                        <label for="chk6" class=" before:!mx-auto "></label>
+                                    </div>
+                                </td>
+                                <td class="!text-base">12121212</td>
+                                <td class="!text-base">김동석</td>
+                                <td class="!text-base">010-2222-3333</td>
+                                <td class="!text-base">영업부</td>
+                            </tr>
+
+
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="flex flex-col justify-center gap-y-4">
+                    <button type="button" class="flex items-center justify-center w-8 h-[100px] rounded border border-999 bg-custom-gradientGray transition duration-300  active:shadow-lg active:scale-95  "><img src="./images/btn_next.png" alt=""> </button>
+                    <button type="button" class="flex items-center justify-center w-8 h-[100px] rounded border border-999 bg-custom-gradientGray transition duration-300  active:shadow-lg active:scale-95  "><img src="./images/btn_prev.png" alt=""> </button>
+                </div>
+
+                <div>
+                    <table class="list-table list-table-small  table-striped table-fixed ">
+                        <colgroup>
+                            <col class="w-24"/>
+                            <col/>
+                            <col/>
+                            <col/>
+                        </colgroup>
+
+                        <thead>
+                        <tr>
+                            <th class="flex  justify-center items-center h-14">
+                                <div class="checkbox-normal">
+                                    <input type="checkbox" id="chkAllR" >
+                                    <label for="chkAllR" >선택</label>
+                                </div>
+                            </th>
+                            <th>사번</th>
+                            <th>이름</th>
+                            <th>연락처</th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            <section class="flex items-stretch h-[90px] mt-4 border-y border-ccc">
+                <div class="flex justify-center items-center w-1/2 bg-ddd ">발신번호</div>
+                <div class="flex justify-center items-center w-1/2"></div>
+            </section>
+        </div>
+
+        <section class="bottom-btns absolute left-0 right-0 bottom-0">
+            <button type="button" class="btn btn-bottom bg-666" onclick="claseLargeDialog()">닫기</button>
+            <button type="button" class="btn btn-bottom bg-blueMain" >발송하기</button>
+        </section>
+
+    </div>
+    <!--// class="dialog-wrap" -->
+</dialog>
+<script>
+    const dialogLarge = document.querySelector('.dialog-large');
+
+    function showLargeDialog() {
+        dialogLarge.showModal();
+    }
+    function claseLargeDialog() {
+        dialogLarge.close();
+    }
+
+</script>
+
+</body>
+
+</html>

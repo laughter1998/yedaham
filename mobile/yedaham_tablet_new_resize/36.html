@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <title>의전진행관리</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./js/tailwind-config.js"></script>
+    <link rel="stylesheet" href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-neo.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+
+<button type="button" onclick="showLargeDialog()"         style="position:fixed;left:0;top:70px;height:150px;width:500px;background-color:#fff;z-index:111;border:1px solid #000;">이송차량 업체정보</button>
+
+    <!-- 상단 고정 영역 -->
+    <header>
+        <div class="header-logo">
+            <img src="./images/header-logo.png" alt="예다함">
+            의전진행관리
+        </div>
+        <div class="header-title">의전정보</div>
+        <div class="header-menu">
+            <!-- <a href="#" class="home">조회</a> -->
+            <nav>
+                <a href="#">관리메인</a>
+                <!--
+                <a href="#">업무관리</a>
+                <a href="#">투입관리</a>
+                <a href="#">철수관리</a>
+                -->
+            </nav>
+            <a href="#" class="logout">로그아웃</a>
+        </div>
+    </header>
+
+
+    <main>
+        <section class="p-2 text-right">
+            <button type="button" class="w-64 border-2 border-999 rounded-lg h-14 bg-white text-333">상세</button>
+            <button type="button" class="w-64 border-2 border-999 rounded-lg h-14 bg-white text-333">의전상품안내</button>
+            <button type="button" class="w-64 rounded-lg h-14 bg-blueMain text-white">저장</button>
+        </section>
+
+        <section>
+            <nav class="sub-navi">
+                <a href="#" class="w-[205px] grow  ">고인/상주/장지정보</a>
+                <a href="#" class="w-[205px] ">장례일정</a>
+                <a href="#" class="w-[205px] ">진행사항</a>
+                <a href="#" class="w-[205px]">인력정보</a>
+                <a href="#" class="w-[205px]">의전물품관리</a>
+                <a href="#" class="w-[205px]">의전결산정보</a>
+            </nav>
+            <h5 class="py-2 px-3 bg-f5 text-333 leading-6">&#8231;장례식장정보</h5>
+            <table class="view-table-style2 table-fixed border-t-2 border-666">
+                <colgroup>
+                    <col class="w-[180px]" />
+                    <col class="w-[460px]" />
+                    <col class="w-[180px]" />
+                    <col class="w-[460px]" />
+                    <col/>
+                </colgroup>
+                <tr>
+                    <th>장례식장</th>
+                    <td>
+                        <div class="flex items-center gap-2">
+                            <span class="grow">화장장</span>
+                            <button><img src="./images/btn_popup.png" alt=""> </button>
+                        </div>
+                    </td>
+                    <th>관내기준</th>
+                    <td>
+                        <div class="flex items-center gap-x-2.5">
+                            <input type="text" class="form-control" value="" ><span class="shrink-0">(호)실</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="h-14">주소</th>
+                    <td>서울시 서울시서울시</td>
+                    <th>연락처</th>
+                    <td>010-1111-1111</td>
+                </tr>
+            </table>
+
+            <h5 class="py-2 px-3 bg-f5 text-333 leading-6">&#8231;이송현황</h5>
+            <table class="view-table-style2 table-fixed border-t-2 border-666">
+                <colgroup>
+                    <col class="w-[180px]" />
+                    <col class="w-[460px]" />
+                    <col class="w-[180px]" />
+                    <col class="w-[460px]" />
+                </colgroup>
+                <tr>
+                    <th>이송차량</th>
+                    <td>
+                        <div class="flex gap-1">
+                            <label class="radio-button radio-style2" for="a1">
+                                <input type="radio" name="ae" id="a1" checked="checked">
+                                <span>사용</span>
+                            </label>
+                            <label class="radio-button radio-style2" for="a2">
+                                <input type="radio" name="ae" id="a2">
+                                <span>미사용</span>
+                            </label>
+                        </div>
+                    </td>
+                    <th>사유</th>
+                    <td>
+                        <select class="form-select" disabled>
+                            <option value="">선택</option>
+                            <option value="">빈소차림</option>
+                            <option value="">임종병원</option>
+                            <option value="">장례식장 요청</option>
+                            <option value="">자체이송</option>
+                            <option value="">기타</option>
+                            <option value="">FD이관</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <th>비용발생유무</th>
+                    <td>
+                        <div class="flex gap-1">
+                            <label class="radio-button radio-style2" for="b1">
+                                <input type="radio" name="be" id="b1" checked="checked">
+                                <span>발생</span>
+                            </label>
+                            <label class="radio-button radio-style2" for="b2">
+                                <input type="radio" name="be" id="b2">
+                                <span>미발생</span>
+                            </label>
+                        </div>
+                    </td>
+                    <th>금액(원)</th>
+                    <td><input type="text" class="form-control" value="" ></td>
+                </tr>
+                <tr>
+                <!-- tr class="hidden"  이면 해당 라인 안보입니다.-->
+                    <th>업체명(연락처)</th>
+                    <td>
+                        <div class="flex items-center gap-2">
+                            <span class="grow">업체</span>
+                            <button><img src="./images/btn_popup.png" alt=""> </button>
+                        </div>
+                    </td>
+                    <th>결제대상자</th>
+                    <td>
+                        <div class="flex gap-1">
+                            <label class="radio-button radio-style2" for="c1">
+                                <input type="radio" name="ce" id="c1" checked="checked">
+                                <span>예다함</span>
+                            </label>
+                            <label class="radio-button radio-style2" for="c2">
+                                <input type="radio" name="ce" id="c2">
+                                <span>고객</span>
+                            </label>
+                            <label class="radio-button radio-style2" for="c3">
+                                <input type="radio" name="ce" id="c3">
+                                <span>예다함+고객</span>
+                            </label>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+            <h5 class="py-2 px-3 bg-f5 text-333 leading-6">&#8231;진행일정</h5>
+            <table class="view-table-style2 table-fixed border-t-2 border-666">
+                <colgroup>
+                    <col class="w-[180px]" />
+                    <col class="w-[140px]" />
+                    <col class="w-[180px]" />
+                    <col class="w-[140px]" />
+                    <col class="w-[180px]" />
+                    <col class="w-[460px]" />
+                    <col/>
+                </colgroup>
+                <tr>
+                    <th>빈소차림일시</th>
+                    <td colspan="3">
+                        <div class="input-group">
+                            <input type="text" class="form-control" value="2024-07-31 17:00" placeholder="">
+                            <span class="btn-calendar"><img src="./images/icon_calendar.png" alt=""></span>
+                            <span class="btn-calendar"><img src="./images/btn_reset.png" alt=""></span>
+                        </div>
+                    </td>
+                    <th>접수일시</th>
+                    <td>2024-07-31 17:00</td>
+                </tr>
+                <tr>
+                    <th>입관일시</th>
+                    <td colspan="3">
+                        <div class="input-group">
+                            <input type="text" class="form-control" value="2024-07-31 17:00" placeholder="">
+                            <span class="btn-calendar"><img src="./images/icon_calendar.png" alt=""></span>
+                            <span class="btn-calendar"><img src="./images/btn_reset.png" alt=""></span>
+                        </div>
+                    </td>
+                    <th>사망일시</th>
+                    <td>
+                        <div class="input-group">
+                            <input type="text" class="form-control" value="2024-07-31 17:00" placeholder="">
+                            <span class="btn-calendar"><img src="./images/icon_calendar.png" alt=""></span>
+                            <span class="btn-calendar"><img src="./images/btn_reset.png" alt=""></span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>발인일시</th>
+                    <td colspan="3">
+                        <div class="input-group">
+                            <input type="text" class="form-control" value="2024-07-31 17:00" placeholder="">
+                            <span class="btn-calendar"><img src="./images/icon_calendar.png" alt=""></span>
+                            <span class="btn-calendar"><img src="./images/btn_reset.png" alt=""></span>
+                        </div>
+                    </td>
+                    <th>최초통화일시</th>
+                    <td>
+                        <div class="input-group">
+                            <input type="text" class="form-control" value="2024-07-31 17:00" placeholder="">
+                            <span class="btn-calendar"><img src="./images/icon_calendar.png" alt=""></span>
+                            <span class="btn-calendar"><img src="./images/btn_reset.png" alt=""></span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>종료일시</th>
+                    <td colspan="3">
+                        <div class="input-group">
+                            <input type="text" class="form-control" value="2024-07-31 17:00" placeholder="">
+                            <span class="btn-calendar"><img src="./images/icon_calendar.png" alt=""></span>
+                            <span class="btn-calendar"><img src="./images/btn_reset.png" alt=""></span>
+                        </div>
+                    </td>
+                    <th>도착일시</th>
+                    <td>
+                        <div class="input-group">
+                            <input type="text" class="form-control" value="2024-07-31 17:00" placeholder="">
+                            <span class="btn-calendar"><img src="./images/icon_calendar.png" alt=""></span>
+                            <span class="btn-calendar"><img src="./images/btn_reset.png" alt=""></span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>의전일수(일)</th>
+                    <td>100</td>
+                    <th>전체일수(일)</th>
+                    <td>100</td>
+                    <th>대면상담일시</th>
+                    <td>
+                        <div class="input-group">
+                            <input type="text" class="form-control" value="2024-07-31 17:00" placeholder="">
+                            <span class="btn-calendar"><img src="./images/icon_calendar.png" alt=""></span>
+                            <span class="btn-calendar"><img src="./images/btn_reset.png" alt=""></span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>발인지원가능</th>
+                    <td colspan="3">
+                        <div class="flex gap-1">
+                            <label class="radio-button radio-style2" for="d1">
+                                <input type="radio" name="de" id="d1" checked="checked">
+                                <span>지원</span>
+                            </label>
+                            <label class="radio-button radio-style2" for="d2">
+                                <input type="radio" name="de" id="d2">
+                                <span>미지원</span>
+                            </label>
+                        </div>
+                    </td>
+                    <td colspan="2" > <!-- td colspan="2" class="hidden"  미지원 클릭시 추가-->
+                        <div class="flex gap-1">
+                            <label class="radio-button radio-style2" for="e1">
+                                <input type="radio" name="ee" id="e1" checked="checked">
+                                <span>VIP</span>
+                            </label>
+                            <label class="radio-button radio-style2" for="e2">
+                                <input type="radio" name="ee" id="e2">
+                                <span>컴플레인</span>
+                            </label>
+                            <label class="radio-button radio-style2" for="e3">
+                                <input type="radio" name="ee" id="e3">
+                                <span>팀장 변경의전</span>
+                            </label>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+            <h5 class="py-2 px-3 bg-f5 text-333 leading-6 flex justify-between items-center">
+                &#8231;차량
+                <p>
+                    <button type="button" class="border-2 border-blueMain text-blueMain rounded-lg h-12 px-6">리무진 추가</button>
+                    <button type="button" class="border-2 border-blueMain text-blueMain rounded-lg h-12 px-6">버스 추가</button>
+                </p>
+            </h5>
+
+            <table class="view-table-style2 table-fixed border-t-2 border-666">
+                <colgroup>
+                    <col class="w-[110px]" />
+                    <col class="w-[70px]" />
+                    <col class="w-[43px]" />
+                    <col class="w-[110px]" />
+                    <col class="w-[103px]" />
+                    <col class="w-[64]" />
+                    <col class="w-[46px]" />
+                    <col class="w-[104px]" />
+
+                    <col class="w-[110px]" />
+                    <col class="w-[70px]" />
+                    <col class="w-[43px]" />
+                    <col class="w-[110px]" />
+                    <col class="w-[103px]" />
+                    <col class="w-[110px]" />
+                    <col class="w-[104px]" />
+<!--                    <col class="w-[180px]" />-->
+<!--                    <col class="w-[143px]" />-->
+<!--                    <col class="w-[167px]" />-->
+<!--                    <col class="w-[150px]" />-->
+<!--                    <col class="w-[180px]" />-->
+<!--                    <col class="w-[460px]" />-->
+
+                </colgroup>
+                <tr>
+                    <th colspan="2">리무진</th>
+                    <td colspan="6">
+                        <div class="flex gap-1">
+                            <label class="radio-button radio-style2" for="f1">
+                                <input type="radio" name="fe" id="f1" checked="checked">
+                                <span>사용</span>
+                            </label>
+                            <label class="radio-button radio-style2" for="f2">
+                                <input type="radio" name="fe" id="f2">
+                                <span>미사용</span>
+                            </label>
+                            <label class="radio-button radio-style2" for="f3">
+                                <input type="radio" name="fe" id="f3">
+                                <span>페이백</span>
+                            </label>
+                        </div>
+                    </td>
+                    <th colspan="2">승무원</th>
+                    <td colspan="5">
+                        <div class="flex justify-between">
+                            <span>김김김</span>
+                            <span>010-1111-1111</span>
+
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="2">거리(km)</th>
+                    <td colspan="2">13km</td>
+                    <th colspan="2">추가비용(원)</th>
+                    <td colspan="2">1,000,000</td>
+                    <th colspan="2">탑승인원(명)</th>
+                    <td colspan="5"><input type="text" class="form-control" value="" ></td>
+
+                <tr>
+                    <th colspan="2">시작일시</th>
+                    <td colspan="6">
+                        <div class="input-group">
+                            <input type="text" class="form-control" value="2024-07-31 17:00" placeholder="">
+                            <span class="btn-calendar"><img src="./images/icon_calendar.png" alt=""></span>
+                            <span class="btn-calendar"><img src="./images/btn_reset.png" alt=""></span>
+                        </div>
+                    </td>
+                    <th colspan="2">종료일시</th>
+                    <td colspan="5">
+                        <div class="input-group">
+                            <input type="text" class="form-control" value="2024-07-31 17:00" placeholder="">
+                            <span class="btn-calendar"><img src="./images/icon_calendar.png" alt=""></span>
+                            <span class="btn-calendar"><img src="./images/btn_reset.png" alt=""></span>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>경유지1</th>
+                    <td colspan="2">13km</td>
+                    <th>화장장</th>
+                    <td>13km</td>
+                    <th colspan="2">회차</th>
+                    <td>13km</td>
+                    <th>경유지2</th>
+                    <td colspan="2">13km</td>
+                    <th>장지1</th>
+                    <td>13km</td>
+                    <th>장지2</th>
+                    <td>13km</td>
+                </tr>
+            </table>
+        </section>
+    </main>
+
+    <dialog class="dialog-large">
+    <div class="dialog-wrap">
+        <section class="flex justify-between items-center bg-blueOpa1 h-12 px-2">
+            <h5 class="text-32">이송차량 업체정보</h5>
+            <button type="button" class="btn-modal-close " onclick="claseLargeDialog()">X</button>
+        </section>
+
+        <section class="filter-group">
+            <div class="filter-tables">
+                <table class=" filter-table">
+                    <tbody>
+                        <tr>
+
+                            <td>
+                                <div class="input-group ">
+                                    <input type="text" class="form-control" placeholder="업체명을 입력해 주세요.">
+                                    <button type="button" class="btn btn-input-clear">초기화</button>
+                                </div>
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="filter-button"><button type="button" class="btn btn-filter">조회하기 <span>(999)</span></button>
+            </div>
+        </section><!-- // class="filter-table-group" -->
+
+        <section >
+            <div class="overflow-y-auto h-calc-332">
+                <table class="list-table list-table-small py-lg table-striped ">
+                    <colgroup>
+                        <col/>
+                        <col/>
+                        <col/>
+                        <col/>
+                        <col/>
+                        <col/>
+                    </colgroup>
+
+                    <thead>
+                    <tr>
+                        <th>업체코드</th>
+                        <th>업체명</th>
+                        <th>연락처</th>
+                        <th>주소</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                        <!--tr>
+                            <td colspan="10" class="!p-0">
+                                <p class="flex h-calc-332 justify-center items-center  text-999">조회해주시기 바랍니다.</p>
+                            </td>
+                        </tr-->
+
+                        <tr>
+                            <td >2014G0021</td>
+                            <td class="!text-wrap">신성특수여객</td>
+                            <td>010-5290-6781</td>
+                            <td class="!text-wrap">경기도 경기도 광주시 곤지안읍 가마을길
+                                83-19</td>
+                        </tr>
+                        <tr>
+                            <td >2014G0021</td>
+                            <td class="!text-wrap">금오장의덕산운수</td>
+                            <td>010-5290-6781</td>
+                            <td class="!text-wrap">경기도 포천시 소흘읍솔모루로3번길 52-05</td>
+                        </tr>
+                        <tr>
+                            <td >2014G0021</td>
+                            <td class="!text-wrap">신성특수여객</td>
+                            <td>010-5290-6781</td>
+                            <td class="!text-wrap">경기도 경기도 광주시 곤지안읍 가마을길
+                                83-19</td>
+                        </tr>
+                        <tr>
+                            <td >2014G0021</td>
+                            <td class="!text-wrap">신성특수여객</td>
+                            <td>010-5290-6781</td>
+                            <td class="!text-wrap">경기도 경기도 광주시 곤지안읍 가마을길
+                                83-19</td>
+                        </tr>
+                        <tr>
+                            <td >2014G0021</td>
+                            <td class="!text-wrap">신성특수여객</td>
+                            <td>010-5290-6781</td>
+                            <td class="!text-wrap">경기도 경기도 광주시 곤지안읍 가마을길
+                                83-19</td>
+                        </tr>
+
+
+                    </tbody>
+                </table>
+            </div>
+
+
+        </section>
+
+        <section class="bottom-btns absolute left-0 right-0 bottom-0">
+            <button type="button" class="btn btn-bottom bg-666" onclick="claseLargeDialog()">닫기</button>
+        </section>
+
+    </div>
+    <!--// class="dialog-wrap" -->
+</dialog>
+    <script>
+        const dialogLarge = document.querySelector('.dialog-large');
+
+        function showLargeDialog() {
+            dialogLarge.showModal();
+        }
+        function claseLargeDialog() {
+            dialogLarge.close();
+        }
+
+    </script>
+
+</body>
+
+</html>

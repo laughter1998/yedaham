@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <title>의전진행관리</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./js/tailwind-config.js"></script>
+    <link rel="stylesheet" href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-neo.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+
+
+
+    <!-- 상단 고정 영역 -->
+    <header>
+        <div class="header-logo">
+            <img src="./images/header-logo.png" alt="예다함">
+            의전진행관리
+        </div>
+        <div class="header-title">상품정보</div>
+        <div class="header-menu">
+            <!-- <a href="#" class="home">조회</a> -->
+            <nav>
+                <a href="#">관리메인</a>
+                <!--
+                <a href="#">업무관리</a>
+                <a href="#">투입관리</a>
+                <a href="#">철수관리</a>
+                -->
+            </nav>
+            <a href="#" class="logout">로그아웃</a>
+        </div>
+    </header>
+
+
+    <main>
+        <h3 class="flex justify-center items-center bg-blueOpa1 h-12 px-2 text-32">의전진행 • 현금영수증 • 위약금 안내사항</h3>
+        <section class="px-2">
+
+            <div class="flex justify-between items-center pt-2">
+                <div class="checkbox-normal">
+                    <input type="checkbox" id="chk">
+                    <label for="chk" class="text-333">의전진행 안내사항<span class="text-red">(필수)</span></label>
+                </div>
+
+                <button type="button" class="btn btn-view-arrow">안내사항보기</button>
+            </div>
+
+            <h5 class="mt-10 text-333 text-32">현금영수증 의무발급 안내사항</h5>
+            <div class="mt-4 p-4 text-666 text-32 bg-f5 border border-999 rounded-lg">
+                The-K 예다함(주)은 사업자 현금영수증 의무발행 제도가 시행됨에 따라
+                회원님께서 요청하신 등록번호로 현금영수증을 발행해드리며, 발급을 원하지 않으시면 국세청 지정 코드(T. 010-000-1234)로 자진발급 신고됩니다.
+            </div>
+
+            <h5 class="mt-10 text-333 text-32">위약금 안내사항</h5>
+            <table class="mt-4 prd-penalty-table">
+                <thead>
+                    <tr>
+                        <th colspan="2">구분</th>
+                        <th>내용</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>의전접수 취소</td>
+                        <td>의전접수 후, 회원이 의전 취소 시</td>
+                        <td>의전취소 위약금 및 실비(인건비 포함) 발생</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3">장의차량 배차 취소</td>
+                        <td>의전접수~발인전날 17시까지</td>
+                        <td>위약금 없음</td>
+                    </tr>
+                    <tr>
+                        <td>발인전날 17시 ~ 24시까지</td>
+                        <td>위약금 발생(1대 기준 15만원)</td>
+                    </tr>
+                    <tr>
+                        <td>발인당일</td>
+                        <td>배차 취소 불가</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p class="text-666 mt-2">※ 일부품목 투입 후 의전 취소 시 위약금 외 추가비용이 발생될 수 있으며, 이는 현가(당해연도 가격) 기준으로 적용 받습니다.</p>
+            <div class="mt-2 p-4 text-666 text-32 bg-f5 border border-999 rounded-lg">
+                위 정산 내역에 대한 설명을 들었으며, 현재까지 납입한 금액을 제외한 잔여납부금은
+                상조 서비스 종료일(발인일)인
+                <div class="inline-flex">
+                    <div class="input-group w-[300px]">
+                        <input type="text" class="form-control" value="2022-12-24 14:00" placeholder="">
+                        <span class="btn-calendar"><img src="./images/icon_calendar.png" alt=""></span>
+                    </div>
+                </div>
+                시 까지 납부하기로 합니다.
+            </div>
+        </section>
+
+        <section class="mt-10 px-2">
+            <h3 class="flex justify-center items-center bg-blueOpa1 h-12 mb-4 px-2 text-32">개인정보 수집 • 이용 • 제공에 관한 동의
+            </h3>
+            <div class="flex justify-between items-center py-2">
+                <div class="checkbox-normal">
+                    <input type="checkbox" id="agree1">
+                    <label for="agree1" class="text-333">개인정보 수집 • 이용에 관한<span class="text-red">(필수)</span></label>
+                </div>
+                <button type="button" class="btn btn-view-arrow">약관보기</button>
+            </div>
+            <div class="flex justify-between items-center py-2">
+                <div class="checkbox-normal">
+                    <input type="checkbox" id="agree2">
+                    <label for="agree2" class="text-333">개인정보의 제공[처리 위탁]에 관한<span class="text-red">(필수)</span></label>
+                </div>
+                <button type="button" class="btn btn-view-arrow">약관보기</button>
+            </div>
+            <div class="flex justify-between items-center py-2">
+                <div class="checkbox-normal">
+                    <input type="checkbox" id="agree3">
+                    <label for="agree3" class="text-333">개인정보의 제공[처리 위탁]에 관한<span class="text-red">(필수)</span></label>
+                </div>
+                <button type="button" class="btn btn-view-arrow">약관보기</button>
+            </div>
+        </section>
+
+        <section id="add-sign" class="mt-10 px-2">
+            <div class="text-right">
+                <button type="button" class="btn btn-add-sign">서명추가</button>
+            </div>
+            <table class="list-table list-table-small mt-4">
+                <colgroup>
+                    <col class="w-[95px]" />
+                    <col class="w-[160px]" />
+                    <col class="w-[320px]" />
+                    <col class="w-[180px]" />
+                    <col />
+                    <col class="w-[240px]" />
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>계약자</th>
+                        <th>전화번호</th>
+                        <th>회원관계</th>
+                        <th>서명</th>
+                        <th>삭제</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td><input type="text" class="form-control" ></td>
+                        <td><input type="tel" class="form-control" ></td>
+                        <td><input type="text" class="form-control" ></td>
+                        <td >
+                            <p class="flex items-center justify-center h-12 text-ccc">서명</p>
+<!--                            <p class="flex items-center justify-center h-12 text-ccc">-->
+<!--                                <img src="https://cdn.pixabay.com/photo/2014/11/09/08/06/signature-523237_1280.jpg" class="h-full object-contain" alt="">-->
+<!--                            </p>-->
+                        </td>
+                        <td><button type="button" class="btn btn-delete">삭제</button></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td><input type="text" class="form-control" ></td>
+                        <td><input type="tel" class="form-control" ></td>
+                        <td><input type="text" class="form-control" ></td>
+                        <td >
+                            <!-- <p class="flex items-center justify-center h-12 text-ccc">서명</p>-->
+                            <p class="flex items-center justify-center h-12 text-ccc">
+                                <img src="https://cdn.pixabay.com/photo/2014/11/09/08/06/signature-523237_1280.jpg" class="h-full object-contain" alt="">
+                            </p>
+                        </td>
+                        <td><button type="button" class="btn btn-delete">삭제</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="mt-10 mb-20 ">
+                <table class="view-table-style3 table-fixed w-auto ml-auto">
+                    <colgroup>
+                        <col class="w-[300px]" />
+                        <col class="w-[300px]" />
+                        <col/>
+                    </colgroup>
+                    <tr>
+                        <th>위 서명인</th>
+                        <td >
+                            <p class="flex items-center justify-center h-12 text-ccc">서명</p>
+<!--                            <p class="flex items-center justify-center h-12 text-ccc">-->
+<!--                                <img src="https://cdn.pixabay.com/photo/2014/11/09/08/06/signature-523237_1280.jpg" class="h-full object-contain" alt="">-->
+<!--                            </p>-->
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>위 서명인</th>
+                        <td >
+<!--                            <p class="flex items-center justify-center h-12 text-ccc">서명</p>-->
+                            <p class="flex items-center justify-center h-12 text-ccc">
+                                <img src="https://cdn.pixabay.com/photo/2014/11/09/08/06/signature-523237_1280.jpg" class="h-full object-contain" alt="">
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+
+        <section class="bottom-btns">
+            <a href="#" class="btn btn-bottom bg-666 left-arrow"><span>이전 페이지 이동</span></a>
+            <a href="#" class="btn btn-bottom bg-blueMain right-arrow"><span>저장 후 다음 페이지 이동</span></a>
+        </section>
+    </footer>
+
+
+</body>
+
+</html>

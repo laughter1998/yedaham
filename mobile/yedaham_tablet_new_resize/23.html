@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <title>의전진행관리</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./js/tailwind-config.js"></script>
+    <link rel="stylesheet" href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-neo.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+
+
+    <button type="button" onclick="showLargeDialog()"  style="position:fixed;left:0;top:70px;height:150px;width:500px;background-color:#fff;z-index:111;border:1px solid #000;">open  상품정보 안내사항 팝업</button>
+
+
+    <!-- 상단 고정 영역 -->
+    <header>
+        <div class="header-logo">
+            <img src="./images/header-logo.png" alt="예다함">
+            의전진행관리
+        </div>
+        <div class="header-title">상품정보</div>
+        <div class="header-menu">
+            <!-- <a href="#" class="home">조회</a> -->
+            <nav>
+                <a href="#">관리메인</a>
+                <!--
+                <a href="#">업무관리</a>
+                <a href="#">투입관리</a>
+                <a href="#">철수관리</a>
+                -->
+            </nav>
+            <a href="#" class="logout">로그아웃</a>
+        </div>
+    </header>
+
+
+    <main>
+
+    ...
+
+
+    </main>
+
+    <footer>
+
+        <section class="bottom-btns">
+            <a href="#" class="btn btn-bottom bg-blueMain right-arrow"><span>저장 후 다음 페이지 이동</span></a>
+        </section>
+    </footer>
+
+    <dialog class="dialog-large">
+        <div class="dialog-wrap">
+            <section class="flex justify-between items-center bg-blueOpa1 h-12 px-2">
+                <h5 class="text-32">[필수] 의전진행 안내 사항</h5>
+                <button type="button" class="btn-modal-close " onclick="claseLargeDialog()">X</button>
+            </section>
+
+             <section class="m-2 p-2 h-calc-200 overflow-y-auto  bg-f5">
+                전문내용
+            </section>
+
+            <section class="bottom-btns absolute left-0 right-0 bottom-0">
+                <button type="button" class="btn btn-bottom bg-666" onclick="claseLargeDialog()">동의하지 않음</button>
+                <button type="button" class="btn btn-bottom bg-blueMain" onclick="claseLargeDialog()">동의하기</button>
+            </section>
+
+        </div>
+        <!--// class="dialog-wrap" -->
+    </dialog>
+
+
+
+    <script>
+        const dialogLarge = document.querySelector('.dialog-large');
+        const dialog = document.querySelector('.dialog-base');
+
+        function showLargeDialog() {
+            dialogLarge.showModal();
+        }
+        function claseLargeDialog() {
+            dialogLarge.close();
+        }
+
+        function showDialog() {
+            dialog.showModal();
+        }
+        function claseDialog() {
+            dialog.close()
+        }
+
+    </script>
+</body>
+
+</html>

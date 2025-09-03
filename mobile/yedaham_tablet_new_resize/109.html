@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <title>의전진행관리</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./js/tailwind-config.js"></script>
+    <link rel="stylesheet" href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-neo.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+
+
+    <!-- 상단 고정 영역 -->
+    <header>
+        <div class="header-logo">
+            <img src="./images/header-logo.png" alt="예다함">
+            의전진행관리
+        </div>
+        <div class="header-title">리서치</div>
+        <div class="header-menu">
+            <!-- <a href="#" class="home">조회</a> -->
+            <nav>
+                <a href="#">관리메인</a>
+                <!--
+                <a href="#">업무관리</a>
+                <a href="#">투입관리</a>
+                <a href="#">철수관리</a>
+                -->
+            </nav>
+            <a href="#" class="logout">로그아웃</a>
+        </div>
+    </header>
+
+
+    <main>
+        <section>
+            <nav class="sub-navi mt-2">
+                <a href="#" class="w-[300px] current">버스</a>
+                <a href="#" class="w-[300px] ">리무진</a>
+            </nav>
+           
+            
+            <table class="filter-table2">
+                <colgroup>
+                    <col class="w-[210px]" />
+                    <col />
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th>버스 사용여부</th>
+                        <td >
+                            <div class="flex gap-1 w-[410px]">
+                                <label class="radio-button radio-style2" for="a1">
+                                    <input type="radio" name="aa" id="a1" checked="checked">
+                                    <span>미사용</span>
+                                </label>
+                                <label class="radio-button radio-style2" for="a2">
+                                    <input type="radio" name="aa" id="a2">
+                                    <span>사용</span>
+                                </label>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+                
+            <p class="p-2 text-666 bg-f5">- 주의사항에 포함되지 않아도, 의전팀장의 판단 하에 감점가능</p>
+
+            <table class="list-table list-table-small  table-striped table-fixed ">
+                <colgroup>
+                    <col class="w-14"/>
+                    <col class="w-28"/>
+                    <col />
+                    <col />
+                    <col class="w-14"/>
+                    <col class="w-14"/>
+                </colgroup>
+
+                <thead >
+                    <tr>
+                        <th >No.</th>
+                        <th >구분</th>
+                        <th>내용</th>
+                        <th>주의사항</th>
+                        <th>배점</th>
+                        <th>득점</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>편리성</td>
+                        <td class="!text-left">의전팀장에게 배차보고(전일), 도착보고(발인 1시간 전)</td>
+                        <td class="!text-left">미보고 시 0점 처리, 지각보고 시 매 5분마다 -1점</td>
+                        <td>10</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>편리성</td>
+                        <td class="!text-left">차량운전직 복장 상태(임의 탈의 등), 차량(내/외부) 시설 세차 상태</td>
+                        <td class="!text-left">정장 미착용(임의 탈의) -1점, 세차불량 -2점
+                            구두 미착용(슬리퍼 착용 등) -1점, 그 외 복장 불량 -1점</td>
+                        <td>10</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>편리성</td>
+                        <td class="!text-left">상주(가족, 친지 포함) 조문객 앞에서 흡연, 전화통화 여부 <br/>
+                            상주 요청사항에 대한 응대<br/>
+                            출발 및 도착 시 고객서비스(고객안내, 편의장치 조작 능숙도 등)</td>
+                        <td class="!text-left">흡연, 전화통화 1회당 –1점, 불만스런 표정 -2점, 불친절 -3점<br>
+                            안정사항(벨트, 소화기, 구급약 등) 미안내 -2점<br>
+                            정차요청 거부 -3점</td>
+                        <td>10</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>편리성</td>
+                        <td class="!text-left">급출발, 급제동 급작스런 차선변경, 교통법규 위반 등 여부</td>
+                        <td class="!text-left">건당 -1점(신호위반, 과속 등 법규위반시 건당 -3점)</td>
+                        <td>10</td>
+                        <td>0</td>
+                    </tr>
+                    
+                    
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4">총합계</td>
+                        <td>50</td>
+                        <td>0</td>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <h5 class="mt-4 py-2 px-3 bg-f5 text-333 leading-6">&#8231;의견사항</h5>
+            <div class="p-2">
+                <textarea class="form-control p-2 h-52 placeholder-ccc " name=""  rows="10" placeholder="기타 자유롭게 의견 부탁드립니다. (2020년 3월 1일 접수 건부터 입력)"></textarea>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+
+        <section class="bottom-btns">
+            <a href="#" class="btn btn-bottom bg-666 "><span>취소</span></a>
+            <a href="#" class="btn btn-bottom bg-blueMain "><span>저장</span></a>
+        </section>
+    </footer>
+
+
+</body>
+
+</html>

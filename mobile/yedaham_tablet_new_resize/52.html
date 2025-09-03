@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <title>의전진행관리</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./js/tailwind-config.js"></script>
+    <link rel="stylesheet" href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-neo.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+
+
+    <!-- 상단 고정 영역 -->
+    <header>
+        <div class="header-logo">
+            <img src="./images/header-logo.png" alt="예다함">
+            의전진행관리
+        </div>
+        <div class="header-title">의전정보</div>
+        <div class="header-menu">
+            <!-- <a href="#" class="home">조회</a> -->
+            <nav>
+                <a href="#">관리메인</a>
+                <!--
+                <a href="#">업무관리</a>
+                <a href="#">투입관리</a>
+                <a href="#">철수관리</a>
+                -->
+            </nav>
+            <a href="#" class="logout">로그아웃</a>
+        </div>
+    </header>
+
+
+    <main>
+        <section class="p-2 text-right">
+            <button type="button" class="w-64 border-2 border-999 rounded-lg h-14 bg-white text-333">의전종료문자발송</button>
+            <button type="button" class="w-64 border-2 border-999 rounded-lg h-14 bg-white text-333">의전상품안내</button>
+            <button type="button" class="w-64 rounded-lg h-14 bg-blueMain text-white">저장</button>
+        </section>
+
+        <section>
+            <nav class="sub-navi">
+                <a href="#" class="w-[205px] grow  ">고인/상주/장지정보</a>
+                <a href="#" class="w-[205px] ">장례일정</a>
+                <a href="#" class="w-[205px] ">진행사항</a>
+                <a href="#" class="w-[205px] ">인력정보</a>
+                <a href="#" class="w-[205px] current">의전물품관리</a>
+                <a href="#" class="w-[205px] ">의전결산정보</a>
+            </nav>
+           
+            <div class="flex p-2 gap-2 bg-f5 border-t-2 border-d9">
+                <button type="button" class="border-2 border-solid boder-999 bg-white w-full rounded-lg py-2.5 text-333 ">사용물품등록</button>
+                <button type="button" class="border-2 border-solid boder-999 bg-white w-full rounded-lg py-2.5 text-333 ">사용물품검수</button>
+                <button type="button" class="border-2 border-solid boder-999 bg-white w-full rounded-lg py-2.5 text-333 ">재고현황</button>
+                <button type="button" class="border-2 border-solid boder-999 bg-white w-full rounded-lg py-2.5 text-333 ">용품주문현황</button>
+                <button type="button" class="border-2 border-solid boder-999 bg-white w-full rounded-lg py-2.5 text-333 ">용품주문</button>
+            </div>
+
+            <table class="prd-summary-table">
+                <tbody>
+                    <tr>
+                        <th>의전번호</th>
+                        <td>1231231231</td>
+                        <th>고객명</th>
+                        <td>박*지</td>
+                        <th>상품명</th>
+                        <td>예다함 396</td>
+                    </tr>
+                    <tr>
+                        <th>상품금액<span class="text-base">(원)</span></th>
+                        <td><span class="text-blueMain">39,900,000</span></td>
+                        <th>할인금액<span class="text-base">(원)</span></th>
+                        <td><span class="text-blueMain">39,900,000</span></td>
+                        <th>계약금액<span class="text-base">(원)</span></th>
+                        <td><span class="text-blueMain">22,999,000</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="prd-summary-table">
+                <tbody>
+                    <tr>
+                        <th>납입금액<span class="text-base">(원)</span></th>
+                        <td>33,990,000</td>
+                        <th>페이백금액<span class="text-base">(원)</span></th>
+                        <td>3,990,000</td>
+                        <th>추가금액<span class="text-base">(원)</span></th>
+                        <td>22,999,000</td>
+                        <th>잔여금액<span class="text-base">(원)</span></th>
+                        <td>22,999,000</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="list-table list-table-small  table-striped table-fixed ">
+                <colgroup>
+                    <col />
+                    <col class="w-40"/>
+                    <col class="w-72"/>
+                    <col class="w-20"/>
+                    <col class="w-20"/>
+                </colgroup>
+
+                <thead class="no-sticky">
+                    <tr>
+                        <th >상품내역</th>
+                        <th >수량</th>
+                        <th>총금액(원)</th>
+                        <th>페이백</th>
+                        <th>삭제</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>리무진(왕복 200km)</td>
+                        <td>5</td>
+                        <td>20,000,000</td>
+                        <td><button type="button" class="align-middle"><img src="./images/btn_minus.png" alt=""></button></td>
+                        <td><button type="button" class="align-middle"><img src="./images/btn_reset.png" alt=""></button></td>
+                    </tr>
+                    <tr>
+                        <td>고인이송차량</td>
+                        <td>5</td>
+                        <td>20,000,000</td>
+                        <td><button type="button" class="align-middle"><img src="./images/btn_minus.png" alt=""></button></td>
+                        <td><button type="button" class="align-middle"><img src="./images/btn_reset.png" alt=""></button></td>
+                    </tr>
+                    <tr>
+                        <td>고인이송차량</td>
+                        <td>1</td>
+                        <td>20,000,000</td>
+                        <td><button type="button" class="align-middle"><img src="./images/btn_minus.png" alt=""></button></td>
+                        <td><button type="button" class="align-middle"><img src="./images/btn_reset.png" alt=""></button></td>
+                    </tr>
+                    <tr>
+                        <td>고인이송차량</td>
+                        <td>1</td>
+                        <td>20,000,000</td>
+                        <td><button type="button" class="align-middle"><img src="./images/btn_minus.png" alt=""></button></td>
+                        <td><button type="button" class="align-middle"><img src="./images/btn_reset.png" alt=""></button></td>
+                    </tr>
+                    
+                    
+                </tbody>
+            </table>
+
+            <table class="list-table list-table-small  table-striped table-fixed ">
+                <colgroup>
+                    <col />
+                    <col />
+                    <col/>
+                    <col class="w-20"/>
+                    
+                </colgroup>
+
+                <thead class="no-sticky">
+                    <tr>
+                        <th >만기케어분류</th>
+                        <th >제공내역</th>
+                        <th>제공(시간/수량/금액)</th>
+                        <th>선택</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>리무진(왕복 200km)</td>
+                        <td></td>
+                        <td>20,000,000</td>
+                        <td><input type="checkbox"  class="checkbox-large"></td>
+                    </tr>
+
+                    <tr>
+                        <td>남성 현대상복</td>
+                        <td></td>
+                        <td>20,000,000</td>
+                        <td><input type="checkbox"  class="checkbox-large"></td>
+                    </tr>
+
+                    <tr>
+                        <td>리무진(왕복 200km)</td>
+                        <td></td>
+                        <td>20,000,000</td>
+                        <td><input type="checkbox"  class="checkbox-large"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table class="list-table list-table-small  table-striped table-fixed ">
+                <colgroup>
+                    <col />
+                    <col />
+                    <col class="w-72"/>
+                    <col class="w-20"/>
+                    
+                </colgroup>
+
+                <thead class="no-sticky">
+                    <tr>
+                        <th >추가품목</th>
+                        <th >수량</th>
+                        <th>선택금액(원)</th>
+                        <th>취소</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>리무진(왕복 200km)</td>
+                        <td>5</td>
+                        <td>20,000,000</td>
+                        <td><button type="button" class="align-middle"><img src="./images/btn_cancel.png" alt=""></button></td>
+                    </tr>
+
+                    <tr>
+                        <td>남성 현대상복</td>
+                        <td>5</td>
+                        <td>20,000,000</td>
+                        <td><button type="button" class="align-middle"><img src="./images/btn_cancel.png" alt=""></button></td>
+                    </tr>
+
+                    <tr>
+                        <td>리무진(왕복 200km)</td>
+                        <td>5</td>
+                        <td>20,000,000</td>
+                        <td><button type="button" class="align-middle"><img src="./images/btn_cancel.png" alt=""></button></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            
+
+        </section>
+    </main>
+
+    <footer>
+
+        <section class="bottom-btns">
+            <a href="#" class="btn btn-bottom bg-666 "><span>닫기</span></a>
+            <a href="#" class="btn btn-bottom bg-blueMain "><span>저장</span></a>
+        </section>
+    </footer>
+
+</body>
+
+</html>

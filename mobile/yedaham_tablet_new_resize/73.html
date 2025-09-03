@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <title>의전진행관리</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./js/tailwind-config.js"></script>
+    <link rel="stylesheet" href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-neo.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+
+
+
+    <!-- 상단 고정 영역 -->
+    <header>
+        <div class="header-logo">
+            <img src="./images/header-logo.png" alt="예다함">
+            의전진행관리
+        </div>
+        <div class="header-title">배차등록</div>
+        <div class="header-menu">
+            <!-- <a href="#" class="home">조회</a> -->
+            <nav>
+                <a href="#">관리메인</a>
+                <!--
+                <a href="#">업무관리</a>
+                <a href="#">투입관리</a>
+                <a href="#">철수관리</a>
+                -->
+            </nav>
+            <a href="#" class="logout">로그아웃</a>
+        </div>
+    </header>
+
+
+    <main>
+        <table class="view-table-style2 table-fixed">
+            <colgroup>
+                <col class="w-[180px]" />
+                <col class="w-[460px]" />
+                <col class="w-[180px]" />
+                <col/>
+            </colgroup>
+            <tr>
+                <th class="h-14">의전번호</th>
+                <td>1212121212</td>
+                <th>상복반납</th>
+                <td>N</td>
+            </tr>
+        </table>
+        <section class="p-2 flex justify-between">
+            <button type="button" class="px-6 rounded-lg h-12 bg-blueMain text-white">조회</button>
+            <div class="flex gap-x-2">
+                <button type="button" class="px-6 rounded-lg h-12 bg-blueMain text-white">배차현황조회</button>
+                <button type="button" class="px-6 rounded-lg h-12 bg-blueMain text-white">배차신청</button>
+                <button type="button" class="px-6 rounded-lg h-12 bg-blueMain text-white">반납 및 현황</button>
+            </div>
+        </section>
+        <section>
+            <div class="overflow-x-auto">
+                <table class="list-table list-table-small table-striped">
+                    <thead>
+                    <tr>
+                        <th>차량배정번호</th>
+                        <th>팀장(FD)</th>
+                        <th>배차접수일시</th>
+                        <th>배차희망일시</th>
+                        <th>배정기사명</th>
+                        <th>지연시간(분)</th>
+                        <th>실제도착일시</th>
+                        <th>차량구분</th>
+                        <th>배차구분</th>
+                        <th>배차실장 확인일시</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td colspan="10" class="!p-0">
+                                <p class="flex h-calc-306 justify-center items-center text-999">조회해주시기 바랍니다.</p>
+                            </td>
+                        </tr>
+                        </tbody>
+                </table>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <section class="bottom-btns">
+            <a href="#" class="btn btn-bottom bg-666">닫기</a>
+        </section>
+    </footer>
+
+
+</body>
+
+</html>

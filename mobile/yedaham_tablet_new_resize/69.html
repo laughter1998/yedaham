@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <title>의전진행관리</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./js/tailwind-config.js"></script>
+    <link rel="stylesheet" href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-neo.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+
+
+
+    <!-- 상단 고정 영역 -->
+    <header>
+        <div class="header-logo">
+            <img src="./images/header-logo.png" alt="예다함">
+            의전진행관리
+        </div>
+        <div class="header-title">계약정보</div>
+        <div class="header-menu">
+            <!-- <a href="#" class="home">조회</a> -->
+            <nav>
+                <a href="#">관리메인</a>
+                <!--
+                <a href="#">업무관리</a>
+                <a href="#">투입관리</a>
+                <a href="#">철수관리</a>
+                -->
+            </nav>
+            <a href="#" class="logout">로그아웃</a>
+        </div>
+    </header>
+
+
+    <main>
+
+
+        <section>
+            <h5 class="py-2 px-3 bg-f5 text-333 leading-6 flex justify-between items-center">
+                &#8231;고객정보
+                <button type="button" class="bg-blueMain text-white rounded-lg h-12 px-6">계약가입정보</button>
+            </h5>
+            <table class="view-table-style2 table-fixed border-t-2 border-666">
+                <colgroup>
+                    <col class="w-[180px]" />
+                    <col class="w-[245px]" />
+                    <col class="w-[180px]" />
+                    <col class="w-[245px]" />
+                    <col class="w-[180px]" />
+                    <col />
+                </colgroup>
+                <tr>
+                    <th class="h-14">계약자</th>
+                    <td>예******</td>
+                    <th>생년월일 <br>(사업자등록번호)</th>
+                    <td>751102-1234567 <br>(101-86-49300)</td>
+                    <th>증서번호</th>
+                    <td>001022647</td>
+                </tr>
+                <tr>
+                    <th class="h-14">주소</th>
+                    <td colspan="5">(137180) 광주광역시 남구 월광1길 17 서초3동</td>
+                </tr>
+                <tr>
+                    <th class="h-14">계약일자</th>
+                    <td>2024-07-17</td>
+                    <th>계약금액(원)</th>
+                    <td>3,060,000</td>
+                    <th>잔여금액(원)</th>
+                    <td>3,060,000</td>
+                </tr>
+                <tr>
+                    <th class="h-14">고객구분</th>
+                    <td>법인</td>
+                    <th>연락처</th>
+                    <td>010-****-1234</td>
+                    <th>접수자</th>
+                    <td>라***</td>
+                </tr>
+                <tr>
+                    <th class="h-14">상품명</th>
+                    <td colspan="3">라이프원코리아 고급형 <br>라이프월코리아코리아 고급형</td>
+                    <th>관계</th>
+                    <td>회원</td>
+                </tr>
+                <tr>
+                    <th class="h-14">취소위약금</th>
+                    <td colspan="3">Y</td>
+                    <th>취소위약금(원)</th>
+                    <td>0</td>
+                </tr>
+                <tr class="border-t-2 border-666">
+                    <th class="h-14">계약일자</th>
+                    <td></td>
+                    <th>계약자</th>
+                    <td></td>
+                    <th>납입주기</th>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th class="h-14">가입팀</th>
+                    <td colspan="3"></td>
+                    <th>최종납입월</th>
+                    <td></td>
+                </tr>
+                <tr class="border-t-2 border-666">
+                    <th class="h-14">계약금액(원)</th>
+                    <td>3,737,500</td>
+                    <th>월납입금액(원)</th>
+                    <td>3,737,500</td>
+                    <th>연체금액(원)</th>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <th class="h-14">할인금액(원)</th>
+                    <td>162,500</td>
+                    <th>할인내역(회)</th>
+                    <td>5</td>
+                    <th>할인구분</th>
+                    <td>법인</td>
+                </tr>
+                <tr>
+                    <th class="h-14">납입합계(원)</th>
+                    <td>0</td>
+                    <th>납입횟수</th>
+                    <td>0/1</td>
+                    <th>잔여금액(원)</th>
+                    <td>3,060,000</td>
+                </tr>
+                <tr>
+                    <th class="h-14">예금주</th>
+                    <td>홍*동</td>
+                    <th>관계</th>
+                    <td>조부</td>
+                    <th>납입방법</th>
+                    <td>무통장</td>
+                </tr>
+                <tr>
+                    <th class="h-14">계좌은행</th>
+                    <td>우리은행</td>
+                    <th>계좌번호</th>
+                    <td>3333000055555</td>
+                    <th>이체일자</th>
+                    <td>말일</td>
+                </tr>
+            </table>
+
+            <h5 class="py-2 px-3 bg-f5 text-333 leading-6">&#8231;법인정보</h5>
+            <table class="view-table-style2 table-fixed border-t-2 border-666">
+                <colgroup>
+                    <col class="w-[180px]" />
+                    <col class="w-[245px]" />
+                    <col class="w-[180px]" />
+                    <col class="w-[245px]" />
+                    <col class="w-[180px]" />
+                    <col />
+                </colgroup>
+                <tr>
+                    <th class="h-14">결제방법</th>
+                    <td></td>
+                    <th>3단근조화환문구</th>
+                    <td></td>
+                    <th>일회용품</th>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th class="h-14"> 주의사항</th>
+                    <td colspan="3"></td>
+                </tr>
+            </table>
+
+
+        </section>
+    </main>
+
+
+
+</body>
+
+</html>
