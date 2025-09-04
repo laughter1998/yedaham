@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=1280, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="format-detection" content="telephone=no">
     <title>의전진행관리</title>
@@ -14,16 +14,16 @@
 
 </head>
 
-<body>
+<body id="rsize">
 
 
-    <button type="button" onclick="showLargeDialog()"  style="position:fixed;left:0;top:70px;height:150px;width:500px;background-color:#fff;z-index:111;border:1px solid #000;">open  상품정보 안내사항 팝업</button>
+    <button type="button" onclick="showLargeDialog()"  style="position:fixed;left:0;top:70px;height:150px;width:500px;background-color:#fff;z-index:111;border:1px solid #000;">open  개인정보 수집.이용 제공에 관한 동의</button>
 
 
     <!-- 상단 고정 영역 -->
     <header>
         <div class="header-logo">
-            <img src="./images/header-logo.png" alt="예다함">
+            <img src="./images/header-logo_resize.png" alt="예다함">
             의전진행관리
         </div>
         <div class="header-title">상품정보</div>
@@ -57,17 +57,29 @@
     </footer>
 
     <dialog class="dialog-large">
-        <div class="dialog-wrap">
-            <section class="flex justify-between items-center bg-blueOpa1 h-12 px-2">
-                <h5 class="text-32">[필수] 의전진행 안내 사항</h5>
+        <div class="dialog-wrap flex flex-col">
+            <section class="flex justify-between items-center bg-blueOpa1 h-8 px-1">
+                <h5 class="text-base">[필수] 개인정보 수집.이용 제공에 관한 동의</h5>
                 <button type="button" class="btn-modal-close " onclick="claseLargeDialog()">X</button>
             </section>
 
-             <section class="m-2 p-2 h-calc-200 overflow-y-auto  bg-f5">
-                전문내용
+             <section class="flex-1 m-2 p-2  overflow-y-auto  bg-f5">
+                <div class="text-333 leading-5">
+                    &lt; 개인정보 수집 ‧ 이용 ‧ 제공에 관한 동의 &gt; <br>
+                    The-K예다함상조(주)는 「개인정보보호법」 에 따라 귀하의 개인정보를 다음과 같이 수집 ‧ 이용하고자 합니다.<br>
+                    • 개인정보의 수집 ‧ 이용에 관한 필수적 동의<br>
+                    1. 개인정보의 수집 ‧ 이용 목적<br>
+                    - 장레서비스 및 관련서비스 제공, 의전용품 물류배송 업무, 장레서비스 만족도 조사, 고객 상담업무, 요금결제‧정산, 채권추심 <br>
+                    2. 수집하는 개인정보의 항목<br>
+                    - 성명, 연락처, 음성DATA, 상복사이즈, 카드납부 시 : 카드사, 카드번호, 유효기간, 계좌정보 : 은행명, 계좌번호, 생년월일<br>
+                    3. 개인정보의 보유 및 이용 기간<br>
+                    - 장례서비스 종료일로부터 5년(단, 관련법령의 별도 규정이 명시되어 있는 경우 그 기간을 따름)<br>
+                    4. 동의거부 권리 및 동의 거부에 따른 불이익과 그 내용<br>
+                    - 개인정보의 수집•이용에 대한 동의를 거부할 수 있으며, 동의 거부 시 장례서비스 제공이 불가할 수 있습니다.
+                </div>
             </section>
 
-            <section class="bottom-btns absolute left-0 right-0 bottom-0">
+            <section class="bottom-btns">
                 <button type="button" class="btn btn-bottom bg-666" onclick="claseLargeDialog()">동의하지 않음</button>
                 <button type="button" class="btn btn-bottom bg-blueMain" onclick="claseLargeDialog()">동의하기</button>
             </section>

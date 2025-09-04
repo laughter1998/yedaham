@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <title>의전진행관리</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./js/tailwind-config.js"></script>
+    <link rel="stylesheet" href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-neo.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body id="rsize">
+
+
+    <button type="button" onclick="showLargeDialog()"  style="position:fixed;left:0;top:70px;height:150px;width:500px;background-color:#fff;z-index:111;border:1px solid #000;">open  [필수] 개인정보의 제공[처리 위탁]에 관한 필수적 동의</button>
+
+
+    <!-- 상단 고정 영역 -->
+    <header>
+        <div class="header-logo">
+            <img src="./images/header-logo_resize.png" alt="예다함">
+            의전진행관리
+        </div>
+        <div class="header-title">상품정보</div>
+        <div class="header-menu">
+            <!-- <a href="#" class="home">조회</a> -->
+            <nav>
+                <a href="#">관리메인</a>
+                <!--
+                <a href="#">업무관리</a>
+                <a href="#">투입관리</a>
+                <a href="#">철수관리</a>
+                -->
+            </nav>
+            <a href="#" class="logout">로그아웃</a>
+        </div>
+    </header>
+
+
+    <main>
+
+    ...
+
+
+    </main>
+
+    <footer>
+
+        <section class="bottom-btns">
+            <a href="#" class="btn btn-bottom bg-blueMain right-arrow"><span>저장 후 다음 페이지 이동</span></a>
+        </section>
+    </footer>
+
+    <dialog class="dialog-large">
+        <div class="dialog-wrap flex flex-col">
+            <section class="flex justify-between items-center bg-blueOpa1 h-8 px-1">
+                <h5 class="text-base">[필수] 개인정보의 제공[처리 위탁]에 관한 필수적 동의</h5>
+                <button type="button" class="btn-modal-close " onclick="claseLargeDialog()">X</button>
+            </section>
+
+             <section class="flex-1 m-2 p-2  overflow-y-auto  bg-f5">
+                <div class="text-333 leading-5">
+                    &lt; 개인정보의 제공(처리의 위탁)에 관한 고지사항 &gt;<br>
+                    1. 위탁받은 업체<br>
+                    - 고객 상담업무, 고객 만족도 조사, 부가서비스 제공 등: (주)유베이스<br>
+                    - 모바일 상품권 발송위탁 : 우리에스티엠 주식회사<br>
+                    - 의전용품물류배송 업무 : 벽제원, 별헤는밤, (주)삼포실버드림, (주)영광토탈써비스<br>
+                    - (주)휴머니아, 전국응급환자이송센터, 주식회사 다운, 선진특수여객,하늘특수여객, 명일특수여객, 유민특수, 창선특수, 전주리무진, FD장례, 충남129환자이송센터, 미래특수, 바뜸장 레문화원, 가람장례컨설팅, 대구장의이송, 원주장의리무진, 강원특수여객, 강원장의사, 동일장의운수, 에덴꽃양복, 부산상례복, 에코장레서비스, 주안예복, 아띠, 황제예복, 예원, 대성 | 장묘, 창원의전, 에프앤에스, 대광장묘개발, 일향장레서비스, (주)상조이십사의전, (주)씨앤지라이프, 제주천국의전, 채움스토리, 선영장례, 참다운장례이야기, 케이티의전, 부창의전, 시민 의전, 소백장례토탈, (주)원더풀라이프, 이(e)라이프, (주)아너워스, (주)나눔인, (주)가온장례토탈서비스, (주)피티상조, 평등, 장서, 한결에스피씨, 송종, 대광, (주)에프앤에스, 밥차의신, 유담<br>
+                    - 문자발송(SMS, LMS, MMS) : 아이하트(주)<br>
+                    - 한국교직원공제회 회원여부 확인 : The -K한국교직원공제회<br>
+                    - 전산시스템 구축활동 : (주)오픈베이스<br>
+                    - 고객납입금 전자지급 결제대행 : 나이스페이먼츠(주)<br>
+                    개인정보의 제3자 제공<br>
+                    ①The-K예다함상조(주)는 정보주체의 개인정보를 개인정보의 처리 목적에서 명시한 범위 내에서만 처리하며, 정보 주체의 동의,법률의 특별한 규정 등 「개인정보 보호법」 제17조 및 제18조에 해당하는 경우에만 개인정보를 제3자에게 제공합니다.<br>
+                    &lt;법령상 의무 이행을 위한 경우&gt;
+                </div>
+            </section>
+
+            <section class="bottom-btns">
+                <button type="button" class="btn btn-bottom bg-666" onclick="claseLargeDialog()">동의하지 않음</button>
+                <button type="button" class="btn btn-bottom bg-blueMain" onclick="claseLargeDialog()">동의하기</button>
+            </section>
+
+        </div>
+        <!--// class="dialog-wrap" -->
+    </dialog>
+
+
+
+    <script>
+        const dialogLarge = document.querySelector('.dialog-large');
+        const dialog = document.querySelector('.dialog-base');
+
+        function showLargeDialog() {
+            dialogLarge.showModal();
+        }
+        function claseLargeDialog() {
+            dialogLarge.close();
+        }
+
+        function showDialog() {
+            dialog.showModal();
+        }
+        function claseDialog() {
+            dialog.close()
+        }
+
+    </script>
+</body>
+
+</html>

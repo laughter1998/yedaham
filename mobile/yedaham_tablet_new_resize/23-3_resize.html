@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <title>의전진행관리</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./js/tailwind-config.js"></script>
+    <link rel="stylesheet" href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-neo.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body id="rsize">
+
+
+    <button type="button" onclick="showLargeDialog()"  style="position:fixed;left:0;top:70px;height:150px;width:500px;background-color:#fff;z-index:111;border:1px solid #000;">open  [선택] 개인정보 수집 이용에 관한 선택적 동의</button>
+
+
+    <!-- 상단 고정 영역 -->
+    <header>
+        <div class="header-logo">
+            <img src="./images/header-logo_resize.png" alt="예다함">
+            의전진행관리
+        </div>
+        <div class="header-title">상품정보</div>
+        <div class="header-menu">
+            <!-- <a href="#" class="home">조회</a> -->
+            <nav>
+                <a href="#">관리메인</a>
+                <!--
+                <a href="#">업무관리</a>
+                <a href="#">투입관리</a>
+                <a href="#">철수관리</a>
+                -->
+            </nav>
+            <a href="#" class="logout">로그아웃</a>
+        </div>
+    </header>
+
+
+    <main>
+
+    ...
+
+
+    </main>
+
+    <footer>
+
+        <section class="bottom-btns">
+            <a href="#" class="btn btn-bottom bg-blueMain right-arrow"><span>저장 후 다음 페이지 이동</span></a>
+        </section>
+    </footer>
+
+    <dialog class="dialog-large">
+        <div class="dialog-wrap flex flex-col">
+            <section class="flex justify-between items-center bg-blueOpa1 h-8 px-1">
+                <h5 class="text-base">[선택] 개인정보 수집 이용에 관한 선택적 동의</h5>
+                <button type="button" class="btn-modal-close " onclick="claseLargeDialog()">X</button>
+            </section>
+
+             <section class="flex-1 m-2 p-2  overflow-y-auto  bg-f5">
+                <div class="text-333 leading-5">
+                    &lt; 개인정보 수집 ‧ 이용에 대한 동의 &gt; <br>
+                    1. 개인정보 수집 ‧ 이용 목적<br>
+                    ① 마케팅 및 광고에 활용<br>
+                    - 고객의 동의하에 이벤트 및 마케팅의 시행, 상품/서비스 안내 및 이용 권유, 시장조사 및 상품/서비스 연구개발, 서비스 만족도 조사, 판촉활동, 사은품 발송 등의 목적으로 개인정보를 처리합니다.<br>
+                    2. 수집하는 개인정보의 항목<br>
+                    ① The-K예다함상조(주)는 다음의 개인정보 항목을 처리하고 있습니다.<br>
+
+                    <table class="mt-5 mb-5 prd-penalty-table">
+                        <thead>
+                            <tr>
+                                <th>구분</th>
+                                <th>처리업무</th>
+                                <th>처리항목</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>마케팅 및 광고활동</td>
+                                <td>성명, 연락처</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    3. 개인정보의 보유 및 이용 기간<br>
+                    ① The-K예다함상조(주)는 법령에 따른 개인정보 보유 ‧ 이용 기간 또는 정보주체로부터 개인정보를 수집 시에 동의받은 개인정보 보유 ‧ 이용 기간 내에서 개인정보를 처리 ‧ 보유합니다.<br>
+                    ② 개인정보 처리 및 보유 기간은 다음과 같습니다:<br>
+                    - 표시 ‧ 광고에 관한 기록: 6개월<br>
+                    - 관계 법령 위반 시 수사 종료 시까지 보유<br>
+                </div>
+            </section>
+
+            <section class="bottom-btns">
+                <button type="button" class="btn btn-bottom bg-666" onclick="claseLargeDialog()">동의하지 않음</button>
+                <button type="button" class="btn btn-bottom bg-blueMain" onclick="claseLargeDialog()">동의하기</button>
+            </section>
+
+        </div>
+        <!--// class="dialog-wrap" -->
+    </dialog>
+
+
+
+    <script>
+        const dialogLarge = document.querySelector('.dialog-large');
+        const dialog = document.querySelector('.dialog-base');
+
+        function showLargeDialog() {
+            dialogLarge.showModal();
+        }
+        function claseLargeDialog() {
+            dialogLarge.close();
+        }
+
+        function showDialog() {
+            dialog.showModal();
+        }
+        function claseDialog() {
+            dialog.close()
+        }
+
+    </script>
+</body>
+
+</html>

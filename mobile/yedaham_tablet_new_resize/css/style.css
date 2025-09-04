@@ -1630,11 +1630,6 @@ body#rsize header{
     padding: 0 8px;
 }
 
-body#rsize .text-base {
-    font-size: 0.5rem;
-    line-height: 0.875rem;
-}
-
 body#rsize header .header-menu  nav a {
     padding: 0 10px;
 }
@@ -1651,27 +1646,7 @@ body#rsize header .header-menu > a.logout::before {
     top: 10px;
     bottom: 10px;
 }
-body#rsize header .header-menu > a.home{
-    display: flex;
-    align-items: center;
-    position: relative;
-    height: 100%;
-    margin-right: 40px;
-    padding: 0 24px 0 32px;
-    background-image: url('../images/icon_home.png');
-    background-repeat: no-repeat;
-    background-position: left center;
-}
-body#rsize header .header-menu > a.home::before {
-    display: block;
-    content: '';
-    width: 1px;
-    background-color: #fff;
-    position: absolute;
-    right: -20px;
-    top: 16px;
-    bottom: 16px;
-}
+
 
   /***** footer 고정 버튼  *****/
 body#rsize  footer {
@@ -1689,7 +1664,6 @@ body#rsize button.btn-bottom,
 body#rsize a.btn-bottom {
     height: 40px;
     font-size: 16px;
-    box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.1);
 }
 
 body#rsize .btn-bottom.right-arrow span{
@@ -1702,6 +1676,28 @@ body#rsize .btn-bottom.left-arrow span{
     background-image: url('../images/left_arrow_resize.png');
 }
 
+/***** modal dialog *****/
+body#rsize dialog.dialog-base {
+    padding: 10px;
+    border-radius: 4px;
+}
+body#rsize dialog.dialog-large,
+body#rsize dialog.dialog-large2 {
+    top: 32px;
+    height: calc(100dvh - 32px);
+}
+body#rsize dialog.dialog-large button,
+body#rsize dialog.dialog-large2  button{
+    border-radius: 4px;
+}
+
+
+/* modal 닫기 버튼 */
+.btn-modal-close {
+    width: 16px;
+    height: 16px;
+    background-image: url('../images/btn_modal_close_resize.png');
+}
 
 /***** 토글 제목 *****/
 body#rsize .toggle-title {
@@ -1723,11 +1719,12 @@ body#rsize .prd-summary-table td {
     padding: 6px 8px;
     font-size: 12px;
 }
-
+body#rsize .prd-summary-table span.unit {
+    font-size: 8px;
+}
 
 body#rsize .prd-summary-table tr:nth-child(2) th,
 body#rsize .prd-summary-table tr:nth-child(2) td {
-    background-color: rgba(0, 133, 255, 0.15);
     border-top: 2px solid rgba(31, 138, 237, 0.3);
     border-bottom: 2px solid rgba(31, 138, 237, 0.3);
 }
@@ -1805,7 +1802,7 @@ body#rsize .btn-service-item {
 body#rsize .checkbox-normal label::before {
     width: 15px;
     height: 15px;
-    margin-right: 10px;
+    margin-right: 5px;
     background-image: url('../images/bg_checkbox_resize.png');
     border-radius: 3px;
 }
@@ -1830,7 +1827,6 @@ body#rsize .checkbox-normal.chk span {
 
 /* 상품정보 품목추가 버튼 */
 body#rsize .btn-add-item {
-    
     padding-left: 10px;
     padding-right: 10px;
     width: 107px;
@@ -1839,32 +1835,122 @@ body#rsize .btn-add-item {
     font-size: 16px;
 }
 body#rsize .btn-add-item::before {
-    
     left: 14px;
-    
     width: 12px;
     height: 2px;
-    
-    transform: translate(0, -50%);
 }
 body#rsize .btn-add-item::after {
-    
     left: 19px;
     top: 50%;
     width: 2px;
     height: 12px;
-    
-    transform: translate(0, -50%);
 }
+
 body#rsize .btn-view-arrow {
+    padding-left: 12px;
+    padding-right: 20px;
+    background-image: url('../images/right_thin_arrow_resize.png');
+    background-position: right 5px center;
+}
+
+/* 상품정보 팝업 table */
+body#rsize .prd-popup-table th,
+body#rsize .prd-popup-table td {
+    padding: 5px 12px 5px 12px;
+    font-size: 12px;
+}
+
+body#rsize .prd-popup-table td::after {
+    top: 8px;
+    bottom: 8px;
+}
+
+body#rsize .prd-popup-table th:first-child {
+    padding-left: 4px;
+}
+body#rsize .prd-popup-table td:last-child {
+    padding-right: 4px;
+}
+
+
+
+/* 위약금 안내사항 테이블 */
+body#rsize .prd-penalty-table th {
+    padding: 4px 0;
+    font-size: 10px;
+    line-height: 1;
+}
+body#rsize .prd-penalty-table th::after {
+    top: 4px;
+    bottom: 4px;
+}
+
+body#rsize .prd-penalty-table th:last-child::after{
+    display: none;
+}
+
+body#rsize .prd-penalty-table td {
+    padding: 8px 0 8px 0;
+    line-height: 1;
     
-    padding-left: 24px;
-    padding-right: 40px;
+}
+
+body#rsize .form-control {
+    height: 24px;
+    padding: 0 8px;
+    font-size: 12px;
+    border-radius: 4px;
+}
+
+body#rsize .input-group > span.btn-calendar {
+
+    width: 24px;
+    margin-left: 4px;
+
+}
+
+ /* 서명 추가 버튼 */
+ body#rsize .btn-add-sign {
+    width: 70px;
+    border-radius: 4px;
+    border: solid 1px #213f9a;
+}
+/* 삭제 버튼 */
+body#rsize .btn-delete {
+    width: 80px;
+    height: 28px;
+    border: solid 1px #999;
     
-    border-radius: 100px;;
-    box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.1);
-    background-image: url('../images/right_thin_arrow.png');
-    background-position: right 10px center;
-    background-repeat: no-repeat;
+}
+/* 리스트 table */
+
+body#rsize .list-table th {
+    padding: 4px 0 4px 0;
+    font-size: 10px;
+    line-height: 1;
+}
+body#rsize .list-table th::after {
+    right: 0px;
+    top: 4px;
+    bottom: 4px;
+    width: 1px;
+    
+}
+body#rsize .list-table td::after {
+    display: block;
+    content: '';
+    position: absolute;
+    right: 0px;
+    top: 8px;
+    bottom: 8px;
+    width: 1px;
+    background-color: #d9d9d9;
+}
+
+
+body#rsize .list-table.list-table-small tbody tr td{
+    padding: 0 8px;
+    font-size: 12px;
+    line-height: 1;
 }
 

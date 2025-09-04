@@ -17,6 +17,8 @@ tailwind.config = {
           blueOpa4: 'rgba(0, 133, 255, 0.15)',
           yellowOpa1: 'rgba(255, 168, 0, 0.2)',
           greenOpa1: 'rgba(69, 184, 51, 0.1)',
+          skyblue: "#1c9df3",
+          pink: "#f966a8",
           333: '#333',
           666: '#666',
           777: '#777',

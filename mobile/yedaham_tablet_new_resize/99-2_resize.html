@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <title>의전진행관리</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./js/tailwind-config.js"></script>
+    <link rel="stylesheet" href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-neo.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body id="rsize">
+    <button type="button" onclick="showLargeDialog()"
+        style="position:fixed;left:0;top:70px;height:150px;width:500px;background-color:#fff;z-index:111;border:1px solid #000;">open
+        상품변경</button>
+
+
+    <!-- 상단 고정 영역 -->
+    <header>
+        <div class="header-logo">
+            <img src="./images/header-logo_resize.png" alt="예다함">
+            의전진행관리
+        </div>
+        <div class="header-title">상품정보</div>
+        <div class="header-menu">
+            <!-- <a href="#" class="home">조회</a> -->
+            <nav>
+                <a href="#">관리메인</a>
+                <!--
+                <a href="#">업무관리</a>
+                <a href="#">투입관리</a>
+                <a href="#">철수관리</a>
+                -->
+            </nav>
+            <a href="#" class="logout">로그아웃</a>
+        </div>
+    </header>
+
+
+    <main>
+        ...
+    </main>
+
+    <footer>
+        <section class="bottom-btns"><a href="#" class="btn btn-bottom bg-blueMain right-arrow"><span>저장 후 다음 페이지
+                    이동</span></a>
+        </section>
+    </footer>
+    <dialog class="dialog-large">
+        <div class="dialog-wrap flex flex-col	">
+            <section class="flex justify-between items-center bg-blueOpa1 h-8 px-1">
+                <h5 class="text-base">상품변경</h5>
+                <button type="button" class="btn-modal-close " onclick="claseLargeDialog()">X</button>
+            </section>
+
+            <section class="p-2">
+                <div class="flex flex-1 gap-x-2">
+                    <div class="flex-grow">
+                        <p class="text-666 py-0.5"><span class="text-333">매장관</span>(매장) 오동나무 1단관 1.5 이하</p>
+                        <table class="prd-popup-table">
+                            <tr>
+                                <th>금액</th>
+                                <td>11,000원</td>
+                                <th>페이백 금액</th>
+                                <td>20,000원</td>
+                                <th>차감 금액</th>
+                                <td>12,333,222원</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section class="p-2 flex-1 overflow-y-auto">
+                상품 영역
+            </section>
+
+            <section class="bottom-btns">
+                <button type="button" class="btn btn-bottom bg-666" onclick="claseLargeDialog()">닫기</button>
+            </section>
+
+        </div>
+        <!--// class="dialog-wrap" -->
+    </dialog>
+
+  
+
+    <script>
+        const dialogLarge = document.querySelector('.dialog-large');
+        
+
+        function showLargeDialog() {
+            dialogLarge.showModal();
+        }
+        function claseLargeDialog() {
+            dialogLarge.close();
+        }
+
+     
+
+    </script>
+</body>
+
+</html>

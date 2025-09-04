@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=1280, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="format-detection" content="telephone=no">
     <title>의전진행관리</title>
@@ -11,20 +11,18 @@
     <script src="./js/tailwind-config.js"></script>
     <link rel="stylesheet" href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-neo.css">
     <link rel="stylesheet" href="./css/style.css">
-
 </head>
 
-<body>
-
-
+<body id="rsize">
     <button type="button" onclick="showLargeDialog()"
         style="position:fixed;left:0;top:70px;height:150px;width:500px;background-color:#fff;z-index:111;border:1px solid #000;">open
-        품목추가</button>
+        관보</button>
+
 
     <!-- 상단 고정 영역 -->
     <header>
         <div class="header-logo">
-            <img src="./images/header-logo.png" alt="예다함">
+            <img src="./images/header-logo_resize.png" alt="예다함">
             의전진행관리
         </div>
         <div class="header-title">상품정보</div>
@@ -62,11 +60,11 @@
                             <td>예다함 396</td>
                         </tr>
                         <tr>
-                            <th>상품금액<span class="text-base">(원)</span></th>
+                            <th>상품금액<span class="unit">(원)</span></th>
                             <td><span class="text-blueMain">39,900,000</span></td>
-                            <th>할인금액<span class="text-base">(원)</span></th>
+                            <th>할인금액<span class="unit">(원)</span></th>
                             <td><span class="text-blueMain">39,900,000</span></td>
-                            <th>계약금액<span class="text-base">(원)</span></th>
+                            <th>계약금액<span class="unit">(원)</span></th>
                             <td><span class="text-blueMain">22,999,000</span></td>
                         </tr>
                     </tbody>
@@ -74,13 +72,13 @@
                 <table class="prd-summary-table">
                     <tbody>
                         <tr>
-                            <th>납입금액<span class="text-base">(원)</span></th>
+                            <th>납입금액<span class="unit">(원)</span></th>
                             <td>33,990,000</td>
-                            <th>페이백금액<span class="text-base">(원)</span></th>
+                            <th>페이백금액<span class="unit">(원)</span></th>
                             <td>3,990,000</td>
-                            <th>추가금액<span class="text-base">(원)</span></th>
+                            <th>추가금액<span class="unit">(원)</span></th>
                             <td>22,999,000</td>
-                            <th>잔여금액<span class="text-base">(원)</span></th>
+                            <th>잔여금액<span class="unit">(원)</span></th>
                             <td>22,999,000</td>
                         </tr>
                     </tbody>
@@ -91,14 +89,14 @@
         <section>
 
             <div>
-                <table class="service-items-table table-striped table-fixed	">
+                <table class="service-items-table table-striped ">
                     <colgroup>
-                        <col class="w-32" />
+                        <col class="w-[40px]">
+                        <col class="w-[120px]">
                         <col>
-                        <col>
-                        <col class="w-48">
-                        <col class="w-52">
-                        <col class="w-48">
+                        <col class="w-[88px]">
+                        <col class="w-[88px]">
+                        <col class="w-[88px]">
                     </colgroup>
                     <thead>
                         <tr>
@@ -113,11 +111,11 @@
 
                     <tbody>
                         <tr>
-                            <td><img src="./images/serviceItem/icon_funeral_director.png" alt=""></td>
-                            <td class="leading-7">장례지도사</td>
-                            <td class="leading-7">장례 진행</td>
+                            <td><img src="./images/serviceItem/icon_funeral_director_resize.png"  class="mx-auto" alt=""></td>
+                            <td class="">장례지도사</td>
+                            <td class=" bg-greenOpa1">장례 진행</td>
                             <td>
-                                <div class="w-40 inline-flex justify-between items-center">
+                                <div class=" flex justify-between items-center">
                                     <button type="button"
                                         class="button-counter button-decrease border-redOpa2 bg-redOpa1">-</button>
                                     <span>1</span>
@@ -129,11 +127,11 @@
                             <td>-</td>
                         </tr>
                         <tr>
-                            <td><img src="./images/serviceItem/icon_funeral_helper.png" alt=""></td>
-                            <td class="leading-7">장례도우미<br />(주간)</td>
-                            <td class="leading-7">접객도우미</td>
+                            <td><img src="./images/serviceItem/icon_funeral_helper_resize.png"  class="mx-auto" alt=""></td>
+                            <td class="">장례도우미<br />(주간)</td>
+                            <td class=" bg-greenOpa1">접객도우미</td>
                             <td>
-                                <div class="w-40 inline-flex justify-between items-center">
+                                <div class=" flex justify-between items-center">
                                     <button type="button"
                                         class="button-counter button-decrease border-redOpa2 bg-redOpa1">-</button>
                                     <span>999</span>
@@ -145,11 +143,11 @@
                             <td>인/8시간</td>
                         </tr>
                         <tr>
-                            <td><img src="./images/serviceItem/icon_coffin.png" alt=""></td>
-                            <td class="leading-7">화장관</td>
-                            <td class="leading-7">오동나무 1단관 1.0 이하</td>
+                            <td><img src="./images/serviceItem/icon_coffin_resize.png"  class="mx-auto" alt=""></td>
+                            <td class="">화장관</td>
+                            <td class=" bg-greenOpa1">오동나무 1단관 1.0 이하</td>
                             <td>
-                                <div class="w-40 inline-flex justify-between items-center">
+                                <div class=" flex justify-between items-center">
                                     <button type="button"
                                         class="button-counter button-decrease border-redOpa2 bg-redOpa1 invisible">-</button>
                                     <span>1</span>
@@ -161,11 +159,11 @@
                             <td><button type="button" class="btn btn-service-item">변경</button></td>
                         </tr>
                         <tr>
-                            <td><img src="./images/serviceItem/icon_burial_clothes.png" alt=""></td>
-                            <td class="leading-7">수의</td>
-                            <td class="leading-7">오동나무횡대 1.5 이하 또는 <br>금전사송학봉안함</td>
+                            <td><img src="./images/serviceItem/icon_burial_clothes_resize.png"  class="mx-auto" alt=""></td>
+                            <td class="">수의</td>
+                            <td class=" bg-greenOpa1">오동나무횡대 1.5 이하 또는 <br>금전사송학봉안함</td>
                             <td>
-                                <div class="w-40 inline-flex justify-between items-center">
+                                <div class=" flex justify-between items-center">
                                     <button type="button"
                                         class="button-counter button-decrease border-redOpa2 bg-redOpa1 invisible">-</button>
                                     <span>1</span>
@@ -177,11 +175,11 @@
                             <td><button type="button" class="btn btn-service-item">상세</button></td>
                         </tr>
                         <tr>
-                            <td><img src="./images/serviceItem/icon_hearse.png" alt=""></td>
-                            <td class="leading-7">운구이송</td>
-                            <td class="leading-7">오동나무 1단관 1.0 이하</td>
+                            <td><img src="./images/serviceItem/icon_hearse_resize.png"  class="mx-auto" alt=""></td>
+                            <td class="">운구이송</td>
+                            <td class=" bg-greenOpa1">오동나무 1단관 1.0 이하</td>
                             <td>
-                                <div class="w-40 inline-flex justify-between items-center">
+                                <div class=" flex justify-between items-center">
                                     <button type="button"
                                         class="button-counter button-decrease border-redOpa2 bg-redOpa1 invisible">-</button>
                                     <span>1</span>
@@ -193,11 +191,11 @@
                             <td><button type="button" class="btn btn-service-item">변경</button></td>
                         </tr>
                         <tr>
-                            <td><img src="./images/serviceItem/icon_bus.png" alt=""></td>
-                            <td class="leading-7">버스/리무진</td>
-                            <td class="leading-7">오동나무횡대 1.5 이하 또는 <br>금전사송학봉안함</td>
+                            <td><img src="./images/serviceItem/icon_bus_resize.png"  class="mx-auto" alt=""></td>
+                            <td class="">버스/리무진</td>
+                            <td class=" bg-greenOpa1">오동나무횡대 1.5 이하 또는 <br>금전사송학봉안함</td>
                             <td>
-                                <div class="w-40 inline-flex justify-between items-center">
+                                <div class=" flex justify-between items-center">
                                     <button type="button"
                                         class="button-counter button-decrease border-redOpa2 bg-redOpa1 invisible">-</button>
                                     <span>1</span>
@@ -209,11 +207,11 @@
                             <td><button type="button" class="btn btn-service-item">상세</button></td>
                         </tr>
                         <tr class="not-selected">
-                            <td><img src="./images/serviceItem/icon_mourning_clothes.png" alt=""></td>
-                            <td class="leading-7">상복</td>
-                            <td class="leading-7">-</td>
+                            <td><img src="./images/serviceItem/icon_mourning_clothes_resize.png"  class="mx-auto" alt=""></td>
+                            <td class="">상복</td>
+                            <td class=" bg-greenOpa1">-</td>
                             <td>
-                                <div class="w-40 inline-flex justify-between items-center">
+                                <div class=" flex justify-between items-center">
                                     <button type="button"
                                         class="button-counter button-decrease border-redOpa2 bg-redOpa1 invisible">-</button>
                                     <span>0</span>
@@ -225,11 +223,11 @@
                             <td></td>
                         </tr>
                         <tr>
-                            <td><img src="./images/serviceItem/icon_urn.png" alt=""></td>
-                            <td class="leading-7">봉인함</td>
-                            <td class="leading-7">옥스포드 관보</td>
+                            <td><img src="./images/serviceItem/icon_urn_resize.png"  class="mx-auto" alt=""></td>
+                            <td class="">봉인함</td>
+                            <td class=" bg-greenOpa1">옥스포드 관보</td>
                             <td>
-                                <div class="w-40 inline-flex justify-between items-center">
+                                <div class=" flex justify-between items-center">
                                     <button type="button"
                                         class="button-counter button-decrease border-redOpa2 bg-redOpa1 invisible">-</button>
                                     <span>1</span>
@@ -241,11 +239,11 @@
                             <td><button type="button" class="btn btn-service-item">초기화</button></td>
                         </tr>
                         <tr class="not-selected">
-                            <td><img src="./images/serviceItem/icon_obituary.png" alt=""></td>
-                            <td class="leading-7">관보</td>
-                            <td class="leading-7">-</td>
+                            <td><img src="./images/serviceItem/icon_obituary_resize.png"  class="mx-auto" alt=""></td>
+                            <td class="">관보</td>
+                            <td class=" bg-greenOpa1">-</td>
                             <td>
-                                <div class="w-40 inline-flex justify-between items-center">
+                                <div class=" flex justify-between items-center">
                                     <button type="button"
                                         class="button-counter button-decrease border-redOpa2 bg-redOpa1 invisible">-</button>
                                     <span>0</span>
@@ -257,11 +255,11 @@
                             <td></td>
                         </tr>
                         <tr>
-                            <td><img src="./images/serviceItem/icon_crossbar.png" alt=""></td>
-                            <td class="leading-7">횡대</td>
-                            <td class="leading-7">옥스포드 관보</td>
+                            <td><img src="./images/serviceItem/icon_crossbar_resize.png"  class="mx-auto" alt=""></td>
+                            <td class="">횡대</td>
+                            <td class=" bg-greenOpa1">옥스포드 관보</td>
                             <td>
-                                <div class="w-40 inline-flex justify-between items-center">
+                                <div class=" flex justify-between items-center">
                                     <button type="button"
                                         class="button-counter button-decrease border-redOpa2 bg-redOpa1 invisible">-</button>
                                     <span>1</span>
@@ -273,11 +271,11 @@
                             <td><button type="button" class="btn btn-service-item">초기화</button></td>
                         </tr>
                         <tr class="not-selected">
-                            <td><img src="./images/serviceItem/icon_altar_decoration.png" alt=""></td>
-                            <td class="leading-7">제단장식</td>
-                            <td class="leading-7">-</td>
+                            <td><img src="./images/serviceItem/icon_altar_decoration_resize.png"  class="mx-auto" alt=""></td>
+                            <td class="">제단장식</td>
+                            <td class=" bg-greenOpa1">-</td>
                             <td>
-                                <div class="w-40 inline-flex justify-between items-center">
+                                <div class=" flex justify-between items-center">
                                     <button type="button"
                                         class="button-counter button-decrease border-redOpa2 bg-redOpa1 invisible">-</button>
                                     <span>0</span>
@@ -289,11 +287,11 @@
                             <td></td>
                         </tr>
                         <tr>
-                            <td><img src="./images/serviceItem/icon_wreath.png" alt=""></td>
-                            <td class="leading-7">화환/근조</td>
-                            <td class="leading-7">옥스포드 관보</td>
+                            <td><img src="./images/serviceItem/icon_wreath_resize.png"  class="mx-auto" alt=""></td>
+                            <td class="">화환/근조</td>
+                            <td class=" bg-greenOpa1">옥스포드 관보</td>
                             <td>
-                                <div class="w-40 inline-flex justify-between items-center">
+                                <div class=" flex justify-between items-center">
                                     <button type="button"
                                         class="button-counter button-decrease border-redOpa2 bg-redOpa1 invisible">-</button>
                                     <span>1</span>
@@ -311,19 +309,20 @@
 
 
         <section>
-            <div class="flex justify-between items-center p-2 bg-yellowOpa1">
-                <h5 class="text-32">추가품목</h5>
-                <button type="button" class="btn btn-add-item" onclick="showLargeDialog()">품목추가</button>
+            <div class="flex justify-between items-center p-1 bg-yellowOpa1">
+                <h5>추가품목</h5>
+                <button type="button" class="btn btn-add-item">품목추가</button>
             </div>
             <div>
-                <table class="service-items-table table-striped table-fixed	">
+                <table class="service-items-table table-striped ">
                     <colgroup>
-                        <col class="w-32" />
+                        <col class="w-[40px]">
+                        <col class="w-[120px]">
                         <col>
-                        <col>
-                        <col class="w-48">
-                        <col class="w-52">
-                        <col class="w-48">
+                        <col class="w-[88px]">
+                        <col class="w-[88px]">
+                        <col class="w-[88px]">
+                        <col class="w-[88px]">
                     </colgroup>
                     <thead>
                         <tr>
@@ -333,16 +332,17 @@
                             <th>수량</th>
                             <th>변동금액(원)</th>
                             <th>변경</th>
+                            <th>서명</th>
                         </tr>
                     </thead>
 
                     <tbody>
                         <tr>
-                            <td><img src="./images/serviceItem/icon_flower_offering.png" alt=""></td>
-                            <td class="leading-7">헌화</td>
-                            <td class="leading-7">장례 진행</td>
+                            <td><img src="./images/serviceItem/icon_flower_offering_resize.png"  class="mx-auto" alt=""></td>
+                            <td class="">헌화</td>
+                            <td class=" bg-greenOpa1">장례 진행</td>
                             <td>
-                                <div class="w-40 inline-flex justify-between items-center">
+                                <div class=" flex justify-between items-center">
                                     <button type="button"
                                         class="button-counter button-decrease border-redOpa2 bg-redOpa1">-</button>
                                     <span>1</span>
@@ -352,13 +352,19 @@
                             </td>
                             <td>100,000</td>
                             <td>-</td>
+                            <td>
+                                <p class="flex items-center justify-center h-10 text-ccc">서명</p>
+                                <!--                            <p class="flex items-center justify-center h-10 text-ccc">-->
+                                <!--                                <img src="https://cdn.pixabay.com/photo/2014/11/09/08/06/signature-523237_1280.jpg" class="h-full object-contain" alt="">-->
+                                <!--                            </p>-->
+                            </td>
                         </tr>
                         <tr>
-                            <td><img src="./images/serviceItem/icon_disposable_set.png" alt=""></td>
-                            <td class="leading-7">일회용품<br />세트</td>
-                            <td class="leading-7">접객도우미</td>
+                            <td><img src="./images/serviceItem/icon_disposable_set_resize.png"  class="mx-auto" alt=""></td>
+                            <td class="">일회용품<br />세트</td>
+                            <td class=" bg-greenOpa1">접객도우미</td>
                             <td>
-                                <div class="w-40 inline-flex justify-between items-center">
+                                <div class=" flex justify-between items-center">
                                     <button type="button"
                                         class="button-counter button-decrease border-redOpa2 bg-redOpa1">-</button>
                                     <span>999</span>
@@ -368,13 +374,19 @@
                             </td>
                             <td>129,999,000</td>
                             <td>인/8시간</td>
+                            <td>
+                                <p class="flex items-center justify-center h-10 text-ccc">서명</p>
+                                <!--                            <p class="flex items-center justify-center h-10 text-ccc">-->
+                                <!--                                <img src="https://cdn.pixabay.com/photo/2014/11/09/08/06/signature-523237_1280.jpg" class="h-full object-contain" alt="">-->
+                                <!--                            </p>-->
+                            </td>
                         </tr>
                         <tr>
-                            <td><img src="./images/serviceItem/icon_convenience_items.png" alt=""></td>
-                            <td class="leading-7">상주편의용품</td>
-                            <td class="leading-7">상주편의용품</td>
+                            <td><img src="./images/serviceItem/icon_convenience_items_resize.png"  class="mx-auto" alt=""></td>
+                            <td class="">상주편의용품</td>
+                            <td class=" bg-greenOpa1">상주편의용품</td>
                             <td>
-                                <div class="w-40 inline-flex justify-between items-center">
+                                <div class=" flex justify-between items-center">
                                     <button type="button"
                                         class="button-counter button-decrease border-redOpa2 bg-redOpa1 invisible">-</button>
                                     <span>1</span>
@@ -384,13 +396,19 @@
                             </td>
                             <td>0</td>
                             <td><button type="button" class="btn btn-service-item">변경</button></td>
+                            <td>
+                                <!-- p class="flex items-center justify-center h-10 text-ccc">서명</p-->
+                                <p class="flex items-center justify-center h-10 text-ccc">
+                                    <img src="https://cdn.pixabay.com/photo/2014/11/09/08/06/signature-523237_1280.jpg" class="h-full object-contain" alt="">
+                                </p>
+                            </td>
                         </tr>
                         <tr>
-                            <td><img src="./images/serviceItem/icon_etc.png" alt=""></td>
-                            <td class="leading-7">기타용품일체</td>
-                            <td class="leading-7">기타용품일체</td>
+                            <td><img src="./images/serviceItem/icon_etc_resize.png"  class="mx-auto" alt=""></td>
+                            <td class="">기타용품일체</td>
+                            <td class=" bg-greenOpa1">기타용품일체</td>
                             <td>
-                                <div class="w-40 inline-flex justify-between items-center">
+                                <div class=" flex justify-between items-center">
                                     <button type="button"
                                         class="button-counter button-decrease border-redOpa2 bg-redOpa1 invisible">-</button>
                                     <span>1</span>
@@ -400,105 +418,60 @@
                             </td>
                             <td>0</td>
                             <td><button type="button" class="btn btn-service-item">변경</button></td>
+                            <td>
+                                <!-- p class="flex items-center justify-center h-10 text-ccc">서명</p-->
+                                <p class="flex items-center justify-center h-10 text-ccc">
+                                    <img src="https://cdn.pixabay.com/photo/2014/11/09/08/06/signature-523237_1280.jpg" class="h-full object-contain" alt="">
+                                </p>
+                            </td>
                         </tr>
 
 
                     </tbody>
                 </table>
-
             </div>
         </section>
     </main>
 
     <footer>
-
         <section class="bottom-btns"><a href="#" class="btn btn-bottom bg-blueMain right-arrow"><span>저장 후 다음 페이지
                     이동</span></a>
         </section>
     </footer>
-
     <dialog class="dialog-large">
-        <div class="dialog-wrap">
-            <section class="flex justify-between items-center bg-blueOpa1 h-12 px-2">
-                <h5 class="text-32">품목 추가</h5>
+        <div class="dialog-wrap flex flex-col	">
+            <section class="flex justify-between items-center bg-blueOpa1 h-8 px-1">
+                <h5 class="text-base">관보</h5>
                 <button type="button" class="btn-modal-close " onclick="claseLargeDialog()">X</button>
             </section>
 
-
-
-            <section class="h-calc-200">
-                <div class="flex gap-x-2 h-full bg-f5">
-                    <article class="flex flex-col gap-y-2 w-2/5 h-full overflow-y-auto">
-                        <p class="sticky top-0 py-1 text-center bg-ddd text-base">대분류</p>
-                        <button
-                            class="border border-solid boder-d9 bg-white w-full rounded-lg py-2.5 text-333 tracking-custom-2px">의전진행</button>
-                        <button
-                            class="border border-solid boder-d9 bg-white w-full rounded-lg py-2.5 text-333 tracking-custom-2px">장례도우미</button>
-                        <button
-                            class="border border-solid boder-d9 bg-white w-full rounded-lg py-2.5 text-333 tracking-custom-2px">관</button>
-                        <button
-                            class="border border-solid boder-d9 bg-white w-full rounded-lg py-2.5 text-333 tracking-custom-2px">횡대</button>
-                        <button
-                            class="border border-solid boder-d9 bg-white w-full rounded-lg py-2.5 text-333 tracking-custom-2px">봉인함</button>
-                        <button
-                            class="border border-solid boder-d9 bg-white w-full rounded-lg py-2.5 text-333 tracking-custom-2px">관보</button>
-                        <button
-                            class="border border-solid boder-d9 bg-white w-full rounded-lg py-2.5 text-333 tracking-custom-2px">의전진행</button>
-                        <button
-                            class="border border-solid boder-d9 bg-white w-full rounded-lg py-2.5 text-333 tracking-custom-2px">장례도우미</button>
-                        <button
-                            class="border border-solid boder-d9 bg-white w-full rounded-lg py-2.5 text-333 tracking-custom-2px">관</button>
-                        <button
-                            class="border border-solid boder-d9 bg-white w-full rounded-lg py-2.5 text-333 tracking-custom-2px">횡대</button>
-                        <button
-                            class="border border-solid boder-d9 bg-white w-full rounded-lg py-2.5 text-333 tracking-custom-2px">봉인함</button>
-                        <button
-                            class="border border-solid boder-d9 bg-white w-full rounded-lg py-2.5 text-333 tracking-custom-2px">관보</button>
-                        <button
-                            class="border border-solid boder-d9 bg-white w-full rounded-lg py-2.5 text-333 tracking-custom-2px">의전진행</button>
-                        <button
-                            class="border border-solid boder-d9 bg-white w-full rounded-lg py-2.5 text-333 tracking-custom-2px">장례도우미</button>
-                        <button
-                            class="border border-solid boder-d9 bg-white w-full rounded-lg py-2.5 text-333 tracking-custom-2px">관</button>
-                        <button
-                            class="border border-solid boder-d9 bg-white w-full rounded-lg py-2.5 text-333 tracking-custom-2px">횡대</button>
-                        <button
-                            class="border border-solid boder-d9 bg-white w-full rounded-lg py-2.5 text-333 tracking-custom-2px">봉인함</button>
-                        <button
-                            class="border border-solid boder-d9 bg-white w-full rounded-lg py-2.5 text-333 tracking-custom-2px">관보</button>
-                        <button
-                            class="border border-solid boder-d9 bg-white w-full rounded-lg py-2.5 text-333 tracking-custom-2px">의전진행</button>
-                        <button
-                            class="border border-solid boder-d9 bg-white w-full rounded-lg py-2.5 text-333 tracking-custom-2px">장례도우미</button>
-                        <button
-                            class="border border-solid boder-d9 bg-white w-full rounded-lg py-2.5 text-333 tracking-custom-2px">관</button>
-                        <button
-                            class="border border-solid boder-d9 bg-white w-full rounded-lg py-2.5 text-333 tracking-custom-2px">횡대</button>
-                        <button
-                            class="border border-solid boder-d9 bg-white w-full rounded-lg py-2.5 text-333 tracking-custom-2px">봉인함</button>
-                        <button
-                            class="border border-solid boder-d9 bg-white w-full rounded-lg py-2.5 text-333 tracking-custom-2px">관보</button>
-                    </article>
-                    <article class="flex flex-col gap-y-2 w-3/5 h-full overflow-y-auto">
-                        <p class="sticky top-0 py-1 text-center bg-ddd text-base">대분류 선택 후 품목을 선택하실 수 있습니다.</p>
-                        <button
-                            class="border border-solid boder-d9 bg-white w-full rounded-lg py-2.5 text-333 tracking-custom-2px">(공용)
-                            소형관</button>
-                        <button
-                            class="border border-solid boder-d9 bg-white w-full rounded-lg py-2.5 text-333 tracking-custom-2px">(화장)
-                            오동나무 1단관 1.0 이하</button>
-                        <button
-                            class="border border-solid boder-d9 bg-white w-full rounded-lg py-2.5 text-333 tracking-custom-2px">(화장)
-                            오동나무 2단관 1.0 이하</button>
-                        <button
-                            class="border border-solid boder-d9 bg-white w-full rounded-lg py-2.5 text-333 tracking-custom-2px">(화장)
-                            오동나무 1단관 1.5 이하</button>
-                    </article>
+            <section class="p-2">
+                <div class="flex flex-1 gap-x-2">
+                    <div class="flex-grow">
+                        <p class="text-666 py-0.5"><span class="text-333">관보</span>옥스포드 관보(제작)</p>
+                        <table class="prd-popup-table">
+                            <tr>
+                                <th>금액</th>
+                                <td>11,000원</td>
+                                <th>페이백 금액</th>
+                                <td>20,000원</td>
+                                <th>차감 금액</th>
+                                <td>12,333,222원</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="flex flex-col justify-between w-24">
+                        <button type="button" class="btn text-base bg-blueMain h-16 leading-none text-white">매장관</button>
+                        <button type="button" class="btn text-base bg-777 h-16 leading-none text-white">화장관</button>
+                    </div>
                 </div>
-
             </section>
 
-            <section class="bottom-btns absolute left-0 right-0 bottom-0">
+            <section class="p-2 flex-1 overflow-y-auto">
+                상품 영역
+            </section>
+
+            <section class="bottom-btns">
                 <button type="button" class="btn btn-bottom bg-666" onclick="claseLargeDialog()">닫기</button>
             </section>
 
@@ -506,10 +479,11 @@
         <!--// class="dialog-wrap" -->
     </dialog>
 
+  
 
     <script>
         const dialogLarge = document.querySelector('.dialog-large');
-        const dialog = document.querySelector('.dialog-base');
+        
 
         function showLargeDialog() {
             dialogLarge.showModal();
@@ -518,12 +492,7 @@
             dialogLarge.close();
         }
 
-        function showDialog() {
-            dialog.showModal();
-        }
-        function claseDialog() {
-            dialog.close()
-        }
+     
 
     </script>
 </body>
