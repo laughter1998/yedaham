@@ -1,0 +1,78 @@
+## tailwind-config.js
+// 추가
+skyblue: "#1c9df3",
+pink: "#f966a8",
+
+
+## style.css
+// 1626 줄부터 추가
+/*=============== resize ===================*/
+
+body#rsize header{
+    height: 32px;
+    padding: 0 8px;
+}
+...
+
+
+## 1. 공통
+
+// viewPort 수정
+<!-- 수정 전 -->
+<meta name="viewport" content="width=1280, user-scalable=no">
+
+<!-- 수정 후 -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+
+
+
+
+// body id 추가
+<body id="rsize">
+
+
+
+// 이미지 파일명에 "_resize" 추가
+<!-- 수정 전 -->
+"./images/header-logo.png"
+
+<!-- 수정 후 -->
+"./images/header-logo_resize.png"
+
+
+
+// table class 에서 "table-fixed"	 삭제
+<!-- 수정 전 -->
+<table class="... table-fixed	">
+
+<!-- 수정 후 -->
+<table class="... ">
+
+
+
+// 수량 버튼 class
+<!-- 수정 전 -->
+<div class="~~w-40 inline-flex~~ justify-between items-center">
+
+<!-- 수정 후 -->
+<div class="flex justify-between items-center">
+
+
+## 2. 14_resize.html , 16_resize.html
+
+
+<!-- 수정 전 -->
+<span class="text-base">(원)</span>
+
+<!-- 수정 후 -->
+<span class="unit">(원)</span>
+
+
+
+// "p-2"를 "p-1"로 변경
+
+<!-- 수정 전 -->
+<div class="flex justify-between items-center p-2 bg-yellowOpa1">
+
+<!-- 수정 후 -->
+<div class="flex justify-between items-center p-1 bg-yellowOpa1">
