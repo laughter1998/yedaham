@@ -68,7 +68,7 @@
 
     section.membership-list {
         display: grid;
-        grid-template-columns: repeat(3, auto);
+        grid-template-columns: repeat(3, 1fr);
         gap: 15px;
     }
 
@@ -140,7 +140,11 @@
         margin-top: 25px;
         border-top: 1px solid #ddc9ac;
     }
-
+    .modal .modal-footer {
+        margin-top: 10px;
+        padding-top: 25px;
+        border-top: 1px solid #ddc9ac;
+    }
     h5.modal-content-title {
         font-size: 18px;
         color: #494233;
@@ -198,6 +202,14 @@
         color: #747474;
         letter-spacing: -0.02em;
     }
+    p.footer-info {
+        font-size: 14px;
+        line-height: 20px;
+        color: #747474; 
+    }
+    .bg-gene {
+        background: url('./images/bg_gene.png') no-repeat right 25px top;
+    }
 </style>
 
 <body>
@@ -254,8 +266,11 @@
                     </section>
                     <h4 class="sub-title mt-55">의료&건강</h4>
                     <section class="membership-list mt-20">
+                        <article><button type="button" data-file="category03_02"><img
+                            src="./images/banner_category03_02.png" alt="(재)한국의학연구소 KMI"></button></article>
                         <article><button type="button" data-file="category03_01"><img
                                     src="./images/banner_category03_01.png" alt="(재)한국의학연구소 KMI"></button></article>
+                        
 
                     </section>
 
