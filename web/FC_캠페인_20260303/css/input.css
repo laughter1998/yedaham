@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+/* npx @tailwindcss/cli -i ./css/input.css -o ./css/style.css --watch */
+@theme {
+    --color-gray333: #333333;
+    --color-gray666: #666666;
+    --color-gray999: #999999;
+    --color-grayCCC: #CCCCCC;
+    --color-grayDDD: #DDDDDD;
+    --color-grayAAA: #AAAAAA;
+    --color-grayD9: #D9D9D9;
+    --color-grayd9: #D9D9D9;
+    --color-blue214: #21409A;
+    --color-blue779: #7798FF;
+    --color-blue275: #2758EB;
+    --color-blue769: #7698ff;
+    --color-blueDF: #DFEEFF;
+    --color-grayF1: #F1F1F1;
+    --color-gray1E: #1E1E1E;
+    --color-redED: #ED1B2F;
+  
+    --shadow-card: 0 4px 20px 0 rgba(39, 88, 235, 0.2);
+    --shadow-input: inset 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+    --shadow-button: 2px 2px 4px 0 rgba(0, 0, 0, 0.15);
+  
+    --font-sans: NanumSquareNeoBold, sans-serif;
+    --font-nanumSquare300: NanumSquareNeoLight, sans-serif;
+    --font-nanumSquare400: NanumSquareNeo, sans-serif;
+    --font-nanumSquare700: NanumSquareNeoBold, sans-serif;
+    --font-nanumSquare800: NanumSquareNeoExtraBold, sans-serif;
+    --font-nanumSquare900: NanumSquareNeoHeavy, sans-serif;
+  }
+
+
+  @layer base {
+    select,
+    textarea,
+    input,
+    button {
+      @apply outline-none;
+    }
+  }
+
+  @layer components {
+    dialog.dialog-base {
+      @apply fixed top-1/2 left-1/2
+             -translate-x-1/2 -translate-y-1/2
+             w-[360px] p-6 rounded-2xl
+             shadow-[5px_5px_20px_0_rgba(0,0,0,0.25)]
+             border border-gray999
+             bg-white;
+  
+      margin: 0;
+      max-width: none;
+      max-height: none;
+  
+      /* open 상태 */
+      &[open] {
+        animation: fade-in 200ms forwards;
+      }
+  
+      /* 내부 요소 */
+      .dialog-wrap {
+        @apply relative h-full;
+      }
+  
+      /* backdrop */
+      &::backdrop {
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
