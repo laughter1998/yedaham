@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/style_new.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="page-container">
+
+        <header class="header">
+            <button type="button" class="btn-back" id="backButton" data-action="back">
+                <img src="./images/common/btn-back-new.png" alt="뒤로가기">
+            </button>
+            <h1 class="header-title">의전용품 주문</h1>
+            <a href="#" class="btn-home"><img src="./images/common/btn-home-new.png" alt="home"></a>
+        </header>
+    
+        <main>
+            <div class="content-area">
+              <section class="accordion-section ">
+                <div class="card accordion-card is-open" data-accordion>
+                  <div class="accordion-title" data-accordion-trigger>
+                    <div class="title-group">
+                        <img src="./images/icon/icon-title.png" alt="">
+                        <h2>기본정보</h2>
+                    </div>
+                    <button class="btn-toggle"><img src="./images/common/btn-toggle.png" alt=""></button>
+                  </div>
+                  <div class="accordion-body" data-accordion-body>
+                    <table class="info-table">
+                      <colgroup>
+                        <col className="w-20" />
+                        <col />
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <th>의전번호</th>
+                          <td>
+                            <div class="value-group">
+                              <span >2026001261</span>
+                              <span class="badge badge-green">의전완료</span>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>상품명</th>
+                          <td>예다함 480</td>
+                        </tr>
+                        <tr>
+                          <th>고인성명</th>
+                          <td>홍길동</td>
+                        </tr>
+                        <tr>
+                          <th>장례식장</th>
+                          <td>서울특별시 서울의료원 장례식장</td>
+                        </tr>
+                        <tr>
+                          <th>주소</th>
+                          <td>서울특별시 중랑구 신내로 156</td>
+                        </tr>
+                        <tr>
+                          <th>연락처</th>
+                          <td>02-1234-5678</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                </div>
+              </section>
+
+              <section class="tab-section mt-2">
+                <nav class="tab-menu">
+                    <button class="tab-item active">협력업체 정보</button>
+                    <button class="tab-item">상품내역</button>
+                    <button class="tab-item">발주현황</button>
+                </nav>
+                <div class="tab-content">
+                    <div class="tab-panel active">
+                        <table class="vendor-table">
+                          <thead>
+                            <tr>
+                              <th>업체구분</th>
+                              <th><p>공급업체</p>연락처(정/부)</th>
+                              <th>발주</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>상복업체</td>
+                              <td><p>(주)아띠</p>010-5678-1234(정)/010-5678-5678(부)</td>
+                              <td><button class="btn-order"><img src="./images/common/btn-order.png" alt="발주하기"></button></td>
+                            </tr>
+                            <tr>
+                              <td>상복업체</td>
+                              <td><p>(주)아띠</p>010-5678-1234(정)/010-5678-5678(부)</td>
+                              <td><button class="btn-order"><img src="./images/common/btn-order.png" alt="발주하기"></button></td>
+                            </tr>
+                            <tr>
+                              <td>상복업체</td>
+                              <td><p>(주)아띠</p>010-5678-1234(정)/010-5678-5678(부)</td>
+                              <td><button class="btn-order"><img src="./images/common/btn-order.png" alt="발주하기"></button></td>
+                            </tr>
+                            <tr>
+                              <td>상복업체</td>
+                              <td><p>(주)아띠</p>010-5678-1234(정)/010-5678-5678(부)</td>
+                              <td><button class="btn-order"><img src="./images/common/btn-order.png" alt="발주하기"></button></td>
+                            </tr>
+                            <tr>
+                              <td>상복업체</td>
+                              <td><p>(주)아띠</p>010-5678-1234(정)/010-5678-5678(부)</td>
+                              <td><button class="btn-order"><img src="./images/common/btn-order.png" alt="발주하기"></button></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-panel">
+                        상품내역내용
+                    </div>
+                    <div class="tab-panel">
+                        발주현황내용
+                    </div>
+                </div>
+              </section>
+            </div>
+        </main>
+    
+    </div>
+    <script src="./js/scripts_new.js"></script>
+</body>
+</html>
