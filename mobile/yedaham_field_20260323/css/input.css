@@ -164,7 +164,7 @@
             .accordion-title {
                 @apply flex items-center justify-between px-2 py-3;
                 .title-group {
-                    @apply flex items-center gap-1;
+                    @apply flex items-center flex-1 gap-1;
                 
                     h2 {
                         @apply text-sm font-bold;
@@ -176,8 +176,9 @@
                 .title-right {
                     @apply flex items-center gap-4;
                     .btn-add-item {
-                        @apply border border-navy-deep rounded-md px-2 py-1 leading-none text-xs font-semibold text-navy-deep;
-                        @apply inline-flex items-center justify-center gap-1.5;
+                        display: none;
+                        @apply   border border-navy-deep rounded-md px-2 py-1 leading-none text-xs font-semibold text-navy-deep;
+                        @apply  items-center justify-center gap-1.5 ;
                         &::before {
                         content: "";
                         @apply w-3.5 h-3.5;
@@ -190,10 +191,19 @@
                 }
             }
             &.is-open {
+                .accordion-title {
+                    .title-right {
+                        .btn-add-item {
+                            display: inline-flex;
+                        }
+                    }
+                }
+
                 .btn-toggle img {
                     @apply rotate-180;
                 }
             }
+            
             .accordion-body {
                 @apply h-0 overflow-hidden transition-all duration-300 ease-in-out;
                 .btn-area {
@@ -231,6 +241,55 @@
           
         }
     }
+
+    section.search-section {
+        @apply bg-blue-mist p-2;
+        .search-box {
+            @apply flex items-center gap-2;
+            input {
+                @apply text-sm;
+            }
+           
+        }
+    }
+
+    section.result-section {
+        
+        .result-info {
+            @apply text-white text-xs font-medium;
+            
+        }
+        .result-list {
+            @apply overflow-hidden bg-white rounded-lg mt-2;
+            .result-table {
+                @apply w-full table-fixed border-t border-b border-blue-mist mb-4;
+                tr {
+                    @apply border-b border-blue-mist;
+                    &:has(input[type="checkbox"]:checked) {
+                        @apply bg-gray-light; 
+                    }
+                    th {
+                        @apply py-2  text-center font-medium text-blue-periwinkle border-b border-blue-periwinkle;
+                    }
+                    td {
+                        @apply p-2 ;
+                         &:last-child {
+                            @apply text-[0.6875rem] font-medium;
+                        }
+                    }
+                    &:last-child {
+                        @apply border-b-0;
+                    }
+                }
+            
+            }
+        }
+        .no-result {
+            min-height: calc(100dvh - 270px);
+            @apply flex items-center justify-center text-sm ;
+        }
+    }
+
     .info-table {
         @apply w-full border-t border-b border-blue-mist mb-4;
         tr {
@@ -408,44 +467,31 @@
   }
 
   .photo-upload-zone {
-    /* 기본 레이아웃: 4:3 비율 및 둥근 모서리 */
-    @apply relative w-full aspect-[4/3] rounded-3xl overflow-hidden border border-slate-100;
-    
-    /* [상태 1] 사진 없음 */
-    &.empty {
-      @apply bg-[#f8faff] cursor-pointer;
-      .upload-placeholder { @apply flex; }
-      .upload-preview { @apply hidden; }
-    }
-
-    /* [상태 2] 사진 있음 */
-    &.has-photo {
-      @apply bg-white border-slate-200;
-      .upload-placeholder { @apply hidden; }
-      .upload-preview { @apply block; }
-    }
-
-    /* 가이드 영역 중앙 정렬 */
-    .upload-placeholder {
-      @apply absolute inset-0 flex flex-col items-center justify-center gap-3 p-4;
-      
-      .icon-album {
-        @apply w-12 h-12 text-[#7b87c4]; /* 이미지 보라색 톤 */
-      }
-      .guide-text {
-        @apply text-sm text-[#4a5a96] font-medium;
-      }
-    }
-
-    /* 사진 미리보기 영역 */
-    .upload-preview {
-      @apply w-full h-full;
-      img {
-        @apply w-full h-full object-cover; /* 비율 맞춰 꽉 채움 */
+    @apply p-2 border-t border-blue-mist;
+    p.empty-photo {
+      @apply w-full h-50 rounded-md flex flex-col items-center justify-center gap-2 bg-gray-soft border border-blue-mist;
+      span {
+        @apply text-sm text-blue-periwinkle font-normal;
       }
     }
   }
-    
+
+  .footer-btn-group {
+    @apply flex items-center gap-2 w-full p-2;
+    .btn {
+      @apply flex-1;
+    }
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center py-4 rounded-lg text-base font-bold leading-none;
+    &.btn-primary {
+      @apply bg-navy-deep text-white;
+    }
+    &.btn-secondary {
+      @apply bg-gray-medium text-navy-deep;
+    }
+  }
    
 }
 
