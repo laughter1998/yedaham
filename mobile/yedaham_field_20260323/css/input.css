@@ -417,6 +417,7 @@
 
     .search-box {
         @apply flex items-center gap-1;
+   
         input {
             @apply flex-1;
         }
@@ -449,7 +450,7 @@
         }
     }
 
-  input[type="checkbox"] {
+  input[type="checkbox"], input[type="radio"] {
     @apply appearance-none w-6 h-6 border border-blue-periwinkle rounded-md bg-blue-mist cursor-pointer transition-all duration-200 relative;
     
     &:checked {

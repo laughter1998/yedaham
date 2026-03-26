@@ -213,8 +213,18 @@
     text-overflow: ellipsis;
     white-space: nowrap;
   }
+  .text-center {
+    text-align: center;
+  }
   .text-right {
     text-align: right;
+  }
+  .font-normal {
+    --tw-font-weight: var(--font-weight-normal);
+    font-weight: var(--font-weight-normal);
+  }
+  .text-blue-periwinkle {
+    color: var(--color-blue-periwinkle);
   }
 }
 @font-face {
@@ -899,7 +909,7 @@
       color: var(--color-white);
     }
   }
-  input[type="checkbox"] {
+  input[type="checkbox"], input[type="radio"] {
     position: relative;
     height: calc(var(--spacing) * 6);
     width: calc(var(--spacing) * 6);
