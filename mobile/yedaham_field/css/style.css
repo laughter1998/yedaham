@@ -1,18 +1,21 @@
-* {
+.old-app * {
     margin: 0;
 	padding: 0;
 	border: 0;
 	font-size: 100%;
 	vertical-align: baseline;
     box-sizing: border-box;
+    line-height: normal
 }
-body {
+body.old-app {
     font-family: 'NanumBarunGothic', sans-serif; 
     font-size: 1rem;
     font-weight: 400;
     color: #666;
+    margin:0;
 }
 
+.old-app {
 ol, ul {
 	list-style: none;
 }
@@ -37,6 +40,7 @@ button {
     margin: 0;
     padding: 0;
     background: transparent;
+    font: revert;
 }
 
 /* button */
@@ -88,6 +92,9 @@ button {
 input[type="text"],
 input[type="password"] {
     width: 100%;
+    font: revert;
+    font-size: 1rem;
+    color: #000;
 }
 input::placeholder {
     color: #bababa;
@@ -1522,4 +1529,5 @@ nav button.active::after{
 
 .h-56 {
     height: 56px !important;
+}
 }
