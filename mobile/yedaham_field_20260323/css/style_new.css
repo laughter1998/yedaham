@@ -193,6 +193,12 @@
   .mb-0 {
     margin-bottom: calc(var(--spacing) * 0);
   }
+  .flex {
+    display: flex;
+  }
+  .table {
+    display: table;
+  }
   .w-10 {
     width: calc(var(--spacing) * 10);
   }
@@ -208,10 +214,23 @@
   .w-25 {
     width: calc(var(--spacing) * 25);
   }
+  .flex-shrink {
+    flex-shrink: 1;
+  }
+  .border-collapse {
+    border-collapse: collapse;
+  }
+  .resize {
+    resize: both;
+  }
   .truncate {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+  }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
   }
   .text-center {
     text-align: center;
@@ -219,12 +238,23 @@
   .text-right {
     text-align: right;
   }
+  .text-sm {
+    font-size: var(--text-sm);
+    line-height: var(--tw-leading, var(--text-sm--line-height));
+  }
   .font-normal {
     --tw-font-weight: var(--font-weight-normal);
     font-weight: var(--font-weight-normal);
   }
   .text-blue-periwinkle {
     color: var(--color-blue-periwinkle);
+  }
+  .underline {
+    text-decoration-line: underline;
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
   }
 }
 @font-face {
@@ -620,7 +650,7 @@
             }
             td {
               padding: calc(var(--spacing) * 2);
-              &:last-child {
+              &:nth-child(3) {
                 font-size: 0.6875rem;
                 --tw-font-weight: var(--font-weight-medium);
                 font-weight: var(--font-weight-medium);
@@ -1001,11 +1031,16 @@
     }
   }
 }
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @property --tw-font-weight {
   syntax: "*";
   inherits: false;
 }
-@property --tw-border-style {
+@property --tw-outline-style {
   syntax: "*";
   inherits: false;
   initial-value: solid;
@@ -1105,8 +1140,9 @@
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
-      --tw-font-weight: initial;
       --tw-border-style: solid;
+      --tw-font-weight: initial;
+      --tw-outline-style: solid;
       --tw-duration: initial;
       --tw-shadow: 0 0 #0000;
       --tw-shadow-color: initial;
