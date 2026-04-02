@@ -1,4 +1,4 @@
-.old-app * {
+* {
     margin: 0;
 	padding: 0;
 	border: 0;
@@ -7,7 +7,7 @@
     box-sizing: border-box;
     line-height: normal
 }
-body.old-app {
+body{
     font-family: 'NanumBarunGothic', sans-serif; 
     font-size: 1rem;
     font-weight: 400;
@@ -15,7 +15,7 @@ body.old-app {
     margin:0;
 }
 
-.old-app {
+
 ol, ul {
 	list-style: none;
 }
@@ -1529,5 +1529,4 @@ nav button.active::after{
 
 .h-56 {
     height: 56px !important;
-}
 }

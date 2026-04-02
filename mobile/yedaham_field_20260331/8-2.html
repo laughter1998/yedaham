@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/style.css" rel="stylesheet">
+    <link href="./css/style_new.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    
+
+        <header class="new-app">
+            <button type="button" class="btn-back" id="backButton" data-action="back">
+                <img src="./images/common/btn-back-new.png" alt="뒤로가기">
+            </button>
+            <h1 class="header-title">공급업체 검색</h1>
+            <a href="#" class="btn-home"><img src="./images/common/btn-home-new.png" alt="home"></a>
+        </header>
+    
+        <main class="new-app">
+            <section class="search-section">
+              <div class="filter-box">
+                <input type="text" placeholder="업체명을 입력하세요." />
+                <button type="button" class="search-btn">
+                  <img src="./images/common/btn-search-new.png"   alt="검색">
+                </button>
+              </div>
+            </section>
+            <div class="content-area">
+              <section class="result-section">
+                <div class="result-info">
+                  총 <span>10</span> 건
+                </div>
+                <div class="result-list">
+                  <article class="scroll-area" id="scroll-container">
+                    <table class="result-table">
+                      <colgroup>
+                        <col class="w-10">
+                        <col>
+                        <col class="w-25">
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th>선택</th>
+                          <th>공급업체</th>
+                          <th>연락처</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><input type="radio" name="company" checked /></td>
+                          <td><div class="truncate">주식회사 영광</div></td>
+                          <td>010-1234-5678</td>
+                        </tr>
+                        <tr>
+                          <td><input type="radio"  name="company"/></td>
+                          <td><div class="truncate">주식회사 아브라카타브라</div></td>
+                          <td>010-1234-5678</td>
+                        </tr>
+                        <tr>
+                          <td><input type="radio"  name="company"/></td>
+                          <td><div class="truncate">주식회사 바야흐로</div></td>
+                          <td>010-1234-5678</td>
+                        </tr>
+                        <tr>
+                          <td><input type="radio"  name="company"/></td>
+                          <td><div class="truncate">주식회사 가시나무</div></td>
+                          <td>010-1234-5678</td>
+                        </tr>
+                        <tr>
+                          <td><input type="radio"  name="company"/></td>
+                          <td><div class="truncate">영창피아노(주)</div></td>
+                          <td>010-1234-5678</td>
+                        </tr>
+                        
+                      </tbody>
+                    </table>
+                    <button type="button" class="btn-top" onclick="document.getElementById('scroll-container').scrollTo({top:0, behavior:'smooth'})">
+                      <img src="./images/common/btn-top_new.png" />
+                    </button>
+                  </article>  
+                </div>
+              </section>
+             
+
+              
+            </div>
+            <footer>
+              <div class="footer-btn-group">
+                  <button type="button" class="btn btn-primary">선택</button>
+                  <button type="button" class="btn btn-secondary">닫기</button>
+              </div>
+            </footer>
+        </main>
+        
+    
+    <script src="./js/scripts_new.js"></script>
+</body>
+</html>

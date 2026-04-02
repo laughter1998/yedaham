@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/style.css" rel="stylesheet">
+    <link href="./css/style_new.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    
+
+        <header class="new-app">
+            <button type="button" class="btn-back" id="backButton" data-action="back">
+                <img src="./images/common/btn-back-new.png" alt="뒤로가기">
+            </button>
+            <h1 class="header-title">의전용품 주문</h1>
+            <a href="#" class="btn-home"><img src="./images/common/btn-home-new.png" alt="home"></a>
+        </header>
+    
+        <main class="new-app" >
+            <div class="content-area" >
+              <article class="scroll-area" id="scroll-container">
+              <section class="accordion-section " >
+                <div class="card accordion-card " data-accordion>
+                  <div class="accordion-title" >
+                    <div class="title-group" data-accordion-trigger>
+                        <img src="./images/icon/icon-title.png" alt="">
+                        <h2>의전정보</h2>
+                    </div>
+                    <button type="button" class="btn-toggle" ><img src="./images/common/btn-toggle.png" alt=""></button>
+                  </div>
+                  <div class="accordion-body" data-accordion-body>
+                    <table class="info-table">
+                      <colgroup>
+                        <col className="w-20" />
+                        <col />
+                        <col className="w-15" />
+                        <col />
+                      </colgroup>
+                      <tbody>
+                          <tr>
+                              <th>의전번호</th>
+                              <td>2026001261</td>
+                              <th>접수일자</th>
+                              <td>26-03-09</td>
+                          </tr>
+                          <tr>
+                              <th>관할지부</th>
+                              <td>서울북부</td>
+                              <th>담당팀장</th>
+                              <td>고윤정</td>
+                          </tr>
+                          <tr>
+                              <th>장례식장</th>
+                              <td colspan="3">세브란스병원 장례식장 3호실</td>
+                          </tr>
+                          <tr>
+                              <th>장법</th>
+                              <td>화장</td>
+                              <th>종교</th>
+                              <td>천주교</td>
+                          </tr>
+                          <tr>
+                              <th>입관일시</th>
+                              <td colspan="3">
+                                  <span class="date">26-03-09</span>
+                                  <span class="time">19:00</span>
+                              </td>
+                          </tr>
+                          <tr>
+                              <th>발인일시</th>
+                              <td colspan="3">
+                                  <span class="date">26-03-09</span>
+                                  <span class="time">19:00</span>
+                              </td>
+                          </tr>
+                        </tbody>
+                    </table>
+                  </div>
+
+                </div>
+
+                <div class="card accordion-card " data-accordion>
+                  <div class="accordion-title" >
+                    <div class="title-group" data-accordion-trigger>
+                        <img src="./images/icon/icon-title.png" alt="">
+                        <h2>공급업체 정보</h2>
+                    </div>
+                    <button type="button" class="btn-toggle" ><img src="./images/common/btn-toggle.png" alt=""></button>
+                  </div>
+                  <div class="accordion-body" data-accordion-body>
+                    <table class="form-table">
+                      <colgroup>
+                        <col class="w-22" /> 
+                        <col />
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <th >공급업체</th>
+                          <td>
+                            <div class="filter-box">
+                              <input type="text" placeholder="업체명을 입력하세요." />
+                              <button type="button" class="search-btn">
+                                <img src="./images/common/btn-search-new.png"   alt="검색">
+                              </button>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>담당자 연락처</th>
+                          <td>
+                            <input type="text" placeholder="'-'을 빼고 입력해주세요" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>납품 희망일시</th>
+                          <td>
+                            <label class="datetime-box">
+                              <input type="text" placeholder="00-00-00"  readonly/>
+                              <span>
+                                <img src="./images/icon/icon-calendar-new.png" alt="달력">
+                              </span>
+                            </label>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>  
+                  </div>
+
+                </div>
+
+                <div class="card accordion-card " data-accordion>
+                  <div class="accordion-title" >
+                    <div class="title-group" data-accordion-trigger>
+                        <img src="./images/icon/icon-title.png" alt="">
+                        <h2>공급 방식</h2>
+                    </div>
+                    <button type="button" class="btn-toggle" ><img src="./images/common/btn-toggle.png" alt=""></button>
+                  </div>
+                  <div class="accordion-body" data-accordion-body>
+                    <table class="form-table table-fixed">
+                      <colgroup>
+                        <col><col class="w-10">
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <th>상복/용품업체 구매</th>
+                          <td>
+                              <input type="checkbox" />
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>상복/용품업체 구매</th>
+                          <td>
+                            <input type="checkbox" checked />
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>                  
+                  </div>
+
+                </div>
+
+                <div class="card accordion-card " data-accordion>
+                  <div class="accordion-title" >
+                    <div class="title-group" data-accordion-trigger>
+                        <img src="./images/icon/icon-title.png" alt="">
+                        <h2>발주품목 정보</h2>
+                    </div>
+                    <div class="title-right">
+                      <button type="button" class="btn-add-item">품목추가</button>
+                      <button type="button" class="btn-toggle" ><img src="./images/common/btn-toggle.png" alt=""></button>
+                    </div>
+                  </div>
+                  <div class="accordion-body" data-accordion-body>
+                    <table class="item-selection-table mb-0">
+                      <thead>
+                        <tr>
+                          <th>번호</th>
+                          <th><p>품목명</p>금액(원)</th>
+                          <th class="w-15">수량(개)<p>사용구분</p></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            <div class="group-number">
+                              <span class="num">1</span>
+                              <input type="checkbox" checked />
+                            </div>
+                          </td>
+                          <td colspan="2">
+                            <div class="item-row">
+                              <div class="item-unit">
+                                <input type="text" value="강매 오동나무 1.5관" class="item-name"  />
+                                <input type="number" value="1"  class="item-qty"/>
+                              </div>
+                              <div class="item-price">
+                                <input type="text" class="price-input" placeholder="숫자만 입력" value="50,000" />
+                                <select>
+                                  <option>재고분사용</option>
+                                  <option>선택</option>
+                                </select>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="group-number">
+                              <span class="num">2</span>
+                              <input type="checkbox" />
+                            </div>
+                          </td>
+                          <td colspan="2">
+                            <div class="item-row">
+                              <div class="item-unit">
+                                <input type="text" value="강매 오동나무 1.5관" class="item-name"  />
+                                <input type="number" value="1"  class="item-qty"/>
+                              </div>
+                              <div class="item-price">
+                                <input type="text" class="price-input" placeholder="숫자만 입력" value="50,000" />
+                                <select>
+                                  <option>재고분사용</option>
+                                  <option>선택</option>
+                                </select>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                            <div class="group-number">
+                              <span class="num">2</span>
+                              <input type="checkbox" />
+                            </div>
+                          </td>
+                          <td colspan="2">
+                            <div class="item-row">
+                              <div class="item-unit">
+                                <input type="text" value="" class="item-name"  />
+                                <input type="number" value="0"  class="item-qty"/>
+                              </div>
+                              <div class="item-price">
+                                <input type="text" class="price-input" placeholder="숫자만 입력"  />
+                                <select>
+                                  <option>선택</option>
+                                  <option>재고분사용</option>
+                                </select>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        
+                      </tbody>
+                    </table>
+                    <div class="btn-area">
+                      <button type="button"><img src="./images/icon/icon-trash-new.png" alt=""> 품목 삭제 <span>2개</span></button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card accordion-card " data-accordion>
+                  <div class="accordion-title" >
+                    <div class="title-group" data-accordion-trigger>
+                        <img src="./images/icon/icon-title.png" alt="">
+                        <h2>영수증 첨부</h2>
+                    </div>
+                    <button type="button" class="btn-toggle" ><img src="./images/common/btn-toggle.png" alt=""></button>
+                  </div>
+                  <div class="accordion-body" data-accordion-body>
+                    <article class="photo-upload-zone">
+                      <p class="empty-photo">
+                          <img src="./images/icon/icon-pic-new.png" alt="">
+                          <span>사진을 촬영해서 등록하세요</span>
+                      </p>
+                  </article>
+                    <div class="btn-area">
+                      <button type="button"><img src="./images/icon/icon-camera-new.png" alt=""> 사진 촬영</button>
+                    </div>
+                  </div>
+
+                </div>
+
+              </section>
+
+              <button type="button" class="btn-top" onclick="document.getElementById('scroll-container').scrollTo({top:0, behavior:'smooth'})">
+                <img src="./images/common/btn-top_new.png" />
+              </button>
+              </article>
+              
+            </div>
+            
+        </main>
+        
+    
+    <script src="./js/scripts_new.js"></script>
+</body>
+</html>
