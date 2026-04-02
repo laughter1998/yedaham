@@ -17,6 +17,18 @@ document.querySelectorAll('.tab-item').forEach(tab => {
   });
 });
 
+document.querySelectorAll('.scroll-tab-item').forEach(tab => {
+  tab.addEventListener('click', () => {
+    const target = tab.dataset.tab;
+
+    // 탭 active
+    document.querySelectorAll('.scroll-tab-item').forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+
+  });
+});
+
+
 function initAccordion() {
   const accordions = document.querySelectorAll('[data-accordion]');
 

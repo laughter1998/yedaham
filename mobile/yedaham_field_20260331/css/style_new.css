@@ -32,6 +32,8 @@
   --color-gray-medium: #dddddd;
   --color-gray-dark: #999999;
   --color-green: #1db812;
+  --color-orange: #fca800;
+  
   --color-white: #fff;
 }
 
@@ -92,7 +94,6 @@ main.new-app {
 
   table {
     width: 100%;
-    table-layout: fixed;
     tbody {
       tr {
         border-bottom: 1px solid var(--color-blue-mist);
@@ -165,6 +166,34 @@ main.new-app {
     border-radius: var(--radius-lg);
     background-color: var(--color-white);
   }
+
+   .btn-area {
+      margin-bottom: calc(var(--spacing) * 2);
+      padding: calc(var(--spacing) * 2);
+
+      & button {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        gap: calc(var(--spacing) * 2);
+        border-radius: var(--radius-md);
+        border: 1px solid var(--color-navy-deep);
+        padding-inline: calc(var(--spacing) * 2);
+        padding-block: calc(var(--spacing) * 2);
+        font-size: var(--text-sm);
+        line-height: var(--text-sm--line-height);
+        font-weight: var(--font-weight-semibold);
+        color: var(--color-navy-deep);
+
+        & span {
+          font-size: var(--text-xs);
+          line-height: var(--text-xs--line-height);
+          font-weight: var(--font-weight-normal);
+          color: var(--color-blue-periwinkle);
+        }
+      }
+    }
 
   
   section.search-section {
@@ -325,32 +354,7 @@ main.new-app {
         
         }
 
-        & .btn-area {
-          margin-bottom: calc(var(--spacing) * 2);
-          padding: calc(var(--spacing) * 2);
-
-          & button {
-            display: flex;
-            width: 100%;
-            align-items: center;
-            justify-content: center;
-            gap: calc(var(--spacing) * 2);
-            border-radius: var(--radius-md);
-            border: 1px solid var(--color-navy-deep);
-            padding-inline: calc(var(--spacing) * 2);
-            padding-block: calc(var(--spacing) * 2);
-            font-size: var(--text-sm);
-            line-height: var(--text-sm--line-height);
-            font-weight: var(--font-weight-semibold);
-            color: var(--color-navy-deep);
-
-            & span {
-              font-size: var(--text-xs);
-              line-height: var(--text-xs--line-height);
-              font-weight: var(--font-weight-normal);
-            }
-          }
-        }
+        
       }
     }
   }
@@ -405,12 +409,13 @@ main.new-app {
     }
 
     & .tab-content {
-      flex: 1;        
+      
       display: flex;  
       flex-direction: column;
       min-height: 0;  
       background-color: var(--color-white);
-
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
       & .tab-panel {
         display: none;
         flex: 1;
@@ -586,7 +591,7 @@ main.new-app {
           
           padding: calc(var(--spacing) * 2);
           text-align: center;
-          font-weight: var(--font-weight-medium);
+          font-weight: var(--font-weight-normal);
           color: var(--color-blue-periwinkle);
 
           & p {
@@ -606,7 +611,7 @@ main.new-app {
           border-bottom: 1px solid var(--color-blue-mist);
           padding: calc(var(--spacing) * 2);
           text-align: center;
-
+          font-weight: var(--font-weight-normal);
           &:nth-child(2) {
             text-align: left;
             font-size: 0.6875rem;
@@ -616,8 +621,16 @@ main.new-app {
             & p {
               font-size: var(--text-sm);
               line-height: var(--text-sm--line-height);
+              font-weight: var(--font-weight-bold);
               color: var(--color-navy-deep);
             }
+          }
+          span.date-block {
+            display: block;
+            font-size: 11px;
+            color: var(--color-blue-periwinkle);
+            line-height:1.4;
+            
           }
         }
       }
@@ -793,6 +806,10 @@ main.new-app {
       background-color: var(--color-green);
       color: var(--color-white);
     }
+    &.badge-orange {
+      background-color: var(--color-orange);
+      color: var(--color-white);
+    }
   }
 
   input[type="checkbox"], 
@@ -894,6 +911,7 @@ main.new-app {
     
     
     .selected-list {
+      table-layout: fixed;
       padding-inline: calc(var(--spacing) * 2);
       overflow-y: auto;
       table.selected-table {
@@ -1147,39 +1165,46 @@ main.new-app {
 }
 
   .btn-top {
-    position: sticky; 
-    bottom: 16px;
-    left: 100%;
-    transform: translate(-8px, 10px);
-    z-index: 10;
-    border: none;
-    cursor: pointer;
-    background: transparent;
-    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.1);
-    border-radius: 24px;
+  position: sticky;
+  bottom: 16px;
+  left: 100%;
+  transform-origin: bottom right; 
+  width: 48px;  
+  height: 0;    
+  margin-top: -48px; 
+  
+  z-index: 10;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  
+  /* 애니메이션 설정 */
+  opacity: 0;
+  transform: scale(0); 
+  pointer-events: none;
+  
+  animation-name: show-top-btn;
+  animation-duration: 1s; /* timeline 사용 시 duration은 속도 비율에 영향 */
+  animation-fill-mode: both;
+  animation-timeline: --list-scroll;
+  animation-range: 10% 30%;
+}
+
+@keyframes show-top-btn {
+  from {
+    margin-top: -48px;
     opacity: 0;
-    pointer-events: none;
-    
-    animation-name: show-top-btn;
-    animation-duration: 2s;
-    animation-timing-function: linear;
-    animation-fill-mode: both;
-
-    animation-timeline: --list-scroll;
-    animation-range: 10% 30%;
+    height: 0;
+    transform: scale(0) translate(-8px, 0);
   }
-
-  @keyframes show-top-btn {
-      from { 
-          opacity: 0; 
-          translate: 0 10px;
-      }
-      to { 
-          opacity: 1; 
-          translate: 0 0;
-          pointer-events: auto; 
-      }
+  to {
+    opacity: 1;
+    height: 48px; /* 버튼의 원래 높이 */
+    transform: scale(1) translate(-8px, 0);
+    pointer-events: auto;
+    margin-top: 16px;
   }
+}
   @supports not (animation-timeline: auto) {
     .btn-top {
       opacity: 1;

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/style.css" rel="stylesheet">
+    <link href="./css/style_new.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    
+
+        <header class="new-app">
+            <button type="button" class="btn-back" id="backButton" data-action="back">
+                <img src="./images/common/btn-back-new.png" alt="뒤로가기">
+            </button>
+            <h1 class="header-title">의전용품 주문</h1>
+            <a href="#" class="btn-home"><img src="./images/common/btn-home-new.png" alt="home"></a>
+        </header>
+    
+        <main class="new-app">
+            <div class="content-area">
+              <section class="accordion-section ">
+                <div class="card accordion-card " data-accordion>
+                  <div class="accordion-title" >
+                    <div class="title-group" data-accordion-trigger>
+                        <img src="./images/icon/icon-title.png" alt="">
+                        <h2>기본정보</h2>
+                    </div>
+                    <button class="btn-toggle"><img src="./images/common/btn-toggle.png" alt=""></button>
+                  </div>
+                  <div class="accordion-body" data-accordion-body>
+                    <table class="info-table">
+                      <colgroup>
+                        <col className="w-20" />
+                        <col />
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <th>의전번호</th>
+                          <td>
+                            <div class="value-group">
+                              <span >2026001261</span>
+                              <span class="badge badge-green">의전완료</span>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>상품명</th>
+                          <td>예다함 480</td>
+                        </tr>
+                        <tr>
+                          <th>고인성명</th>
+                          <td>홍길동</td>
+                        </tr>
+                        <tr>
+                          <th>장례식장</th>
+                          <td>서울특별시 서울의료원 장례식장</td>
+                        </tr>
+                        <tr>
+                          <th>주소</th>
+                          <td>서울특별시 중랑구 신내로 156</td>
+                        </tr>
+                        <tr>
+                          <th>연락처</th>
+                          <td>02-1234-5678</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                </div>
+              </section>
+
+              <section class="tab-section mt-2">
+                <nav class="tab-menu">
+                    <button class="tab-item ">협력업체 정보</button>
+                    <button class="tab-item">상품내역</button>
+                    <button class="tab-item active">발주현황</button>
+                </nav>
+                <div class="tab-content">
+                  <div class="tab-panel">
+                        협력업체 정보
+                    </div>
+                    <div class="tab-panel">
+                        상품내역
+                    </div>
+                    <div class="tab-panel active" >
+                      <article class="scroll-area" id="scroll-container">
+                        <table class="vendor-table">
+                          <colgroup>
+                            <col class="w-10">
+                            <col>
+                            <col class="w-20">
+                          </colgroup>
+                          <thead>
+                            <tr>
+                              <th>번호</th>
+                              <th>업체구분<p>공급업체</p></th>
+                              <th>발주일<p>상태</p></th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>1</td>
+                              <td class="text-blue-periwinkle">상복업체<p>주식회사 영광</p></td>
+                              <td class="text-right"><span class="date-block">26-03-09</span> <span class="badge badge-green">수령 완료</span></td>
+                            </tr>
+                            <tr>
+                              <td>2</td>
+                              <td class="text-blue-periwinkle">상복업체<p>주식회사 영광</p></td>
+                              <td class="text-right"><span class="date-block">26-03-09</span> <span class="badge badge-orange">발주 완료</span></td>
+                            </tr>
+                            <tr>
+                              <td>3</td>
+                              <td class="text-blue-periwinkle">상복업체<p>주식회사 영광</p></td>
+                              <td class="text-right"><span class="date-block">26-03-09</span> <span class="badge badge-green">수령 완료</span></td>
+                            </tr>
+                            <tr>
+                              <td>4</td>
+                              <td class="text-blue-periwinkle">상복업체<p>주식회사 영광</p></td>
+                              <td class="text-right"><span class="date-block">26-03-09</span> <span class="badge badge-green">수령 완료</span></td>
+                            </tr>
+                            <tr>
+                              <td>5</td>
+                              <td class="text-blue-periwinkle">상복업체<p>주식회사 영광</p></td>
+                              <td class="text-right"><span class="date-block">26-03-09</span> <span class="badge badge-green">수령 완료</span></td>
+                            </tr>
+                            
+                          </tbody>
+                        </table>
+                        <div class="btn-area mb-0">
+                      <button type="button"><img src="./images/icon/icon-check-new.png" alt="">검수완료 <span>26-03-09 15:00</span></button>
+                    </div>
+                        <button type="button" class="btn-top" onclick="document.getElementById('scroll-container').scrollTo({top:0, behavior:'smooth'})">
+                          <img src="./images/common/btn-top_new.png" />
+                        </button>
+                        </article>
+                        
+                    </div>
+                    
+              </div>
+          </section>
+        </div>
+      </main>
+    
+    
+    <script src="./js/scripts_new.js"></script>
+</body>
+</html>
