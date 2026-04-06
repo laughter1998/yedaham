@@ -76,5 +76,23 @@ function toggleBottomSheet() {
   main.classList.toggle('is-open');
 }
 
-// DOM 로드 후 실행
+// 발주목록 전체 펼쳐보기
+document.querySelector('.btn-all-view')?.addEventListener('click', function() {
+  const accordions = document.querySelectorAll('.card.accordion-card');
+  
+  accordions.forEach(card => {
+    if (card.classList.contains('is-open')) return;
+    
+    card.classList.add('is-open');
+    const body = card.querySelector('[data-accordion-body]');
+    if (body) {
+      body.style.height = body.scrollHeight + 'px';
+      body.addEventListener('transitionend', () => {
+        body.style.height = 'auto';
+      }, { once: true });
+    }
+  });
+});
+
+
 document.addEventListener('DOMContentLoaded', initAccordion);
