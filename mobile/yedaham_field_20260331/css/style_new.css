@@ -187,8 +187,13 @@ main.new-app {
   }
 
    .btn-area {
-      margin-bottom: calc(var(--spacing) * 2);
+      display: flex;
+      width: 100%;
+      align-items: center;
+      gap: calc(var(--spacing) * 2);
       padding: calc(var(--spacing) * 2);
+      margin-bottom: calc(var(--spacing) * 2);
+      
 
       & button {
         display: flex;
