@@ -892,6 +892,7 @@ main.new-app {
       .btn-area {
         margin-bottom:0;
         padding-right:0;
+        width: unset;
         button {
         width: 60px;
       }
