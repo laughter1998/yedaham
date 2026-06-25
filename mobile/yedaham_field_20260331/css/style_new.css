@@ -33,7 +33,10 @@
   --color-gray-dark: #999999;
   --color-green: #1db812;
   --color-orange: #fca800;
-  
+  --color-red: #ef4444;
+  --color-blue: #3b82f6;
+  --color-purple: #8b5cf6;
+  --color-blue-cyan: #06b6d4;
   --color-white: #fff;
 
   --leading-tight-extra: 1.2;
@@ -705,6 +708,7 @@ main.new-app {
               color: var(--color-navy-deep);
             }
           }
+       
           span.date-block {
             display: block;
             font-size: 11px;
@@ -970,10 +974,29 @@ main.new-app {
       background-color: var(--color-orange);
       color: var(--color-white);
     }
+    &.badge-red {
+      background-color: var(--color-red);
+      color: var(--color-white);
+    }
+    &.badge-blue {
+      background-color: var(--color-blue);
+      color: var(--color-white);
+    }
+    &.badge-purple {
+      background-color: var(--color-purple);
+      color: var(--color-white);
+    }
+    &.badge-blue-cyan {
+      background-color: var(--color-blue-cyan);
+      color: var(--color-white);
+    }
+
+    
     &.gray-dark {
       background-color: var(--color-gray-dark);
       color: var(--color-white);
     }
+    
   }
 
   input[type="checkbox"], 
@@ -1421,6 +1444,12 @@ main.new-app {
     table-layout: fixed;
   }
   
+  .text-right {
+    text-align: right !important;
+  }
+  .text-left {
+    text-align: left !important;
+  }
 
 #scroll-container {
   overflow-y: auto;

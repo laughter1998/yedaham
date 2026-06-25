@@ -1,0 +1,46 @@
+@import url("https://hangeul.pstatic.net/hangeul_static/css/nanum-square-neo.css");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+@import "tailwindcss";
+/* 
+tailwindcss 빌드하기
+npx @tailwindcss/cli -i ./css/input.css -o ./css/style.css --watch 
+*/
+
+@theme {
+  --font-noto: "Noto Sans KR", sans-serif;
+  --font-sans: "NanumSquareNeo", sans-serif;
+  --font-nanum-light: "NanumSquareNeoLight", sans-serif;
+  --font-nanum: "NanumSquareNeo", sans-serif;
+  --font-nanum-bold: "NanumSquareNeoBold", sans-serif;
+  --font-nanum-extrabold: "NanumSquareNeoExtraBold", sans-serif;
+  --font-nanum-heavy: "NanumSquareNeoHeavy", sans-serif;
+  --default-font-family: var(--font-noto);
+
+  --color-333: #333333;
+  --color-232527: #232527;
+  --color-666: #666666;
+  --color-777: #777777;
+  --color-5c5550: #5c5550;
+  --color-6b4e1e: #6b4e1e;
+  --color-af5b27: #af5b27;
+  --color-d17b47: #d17b47;
+  --color-e0312e: #e0312e;
+  --color-e94543: #e94543;
+  --color-1e56a8: #1e56a8;
+  --color-2d367e: #2d367e;
+  --color-438aff: #438aff;
+  --color-baba: #bababa;
+  --color-ddd: #dddddd;
+  --color-e4c8b4: #e4c8b4;
+  --color-f5: #f5f5f5;
+  --color-f7dfb5: #f7dfb5;
+  --color-f8eee8: #f8eee8;
+  --color-fbf3e6: #fbf3e6;
+  --color-fffdfb: #fffdfb;
+}
+
+@layer base {
+  body {
+    @apply text-666;
+  }
+}
